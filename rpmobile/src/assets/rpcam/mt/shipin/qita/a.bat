@@ -1,0 +1,1 @@
+for %%B in (*.png) do convert -resize "40x40>" "%%B" "%%B" 

@@ -1,0 +1,181 @@
+<!--livedocs:no-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<title>Timed Text Tags (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Timed Text Tags - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?TimedTextTags.html&amp;all-classes.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">  </td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("  "); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+
+--></script>
+<div class="MainContent">
+	<div style="height:15px;" width="100%"></div>
+   <p>The following is a precise subset of Timed Text XML tags supported by the FLVPlaybackCaptioning component.</p>
+    <ul>
+     <li><strong>tt tag - Top level tag</strong></li>
+       <ul>
+	 <li>All attributes of tt tag are ignored.</li>
+	 <li>The metadata tag is allowed, but ignored at any level of the document</li>
+	 <li>The set tag is allowed,  but ignored at any level of the document</li>
+	 <li>The following time values are supported:</li>
+	  <ul>
+	   <li>full clock format (e.g. 00:03:00.1)</li>
+	   <li>partial clock format (e.g. 03:00.1)</li>
+	   <li>offset time (e.g. 100.1s or 20h).</li>
+	   <li>Note: Offset times without units (for example, <code>10</code>) are assumed to be seconds.</li>
+	    <ul>
+	      <li>Notes</li>
+	        <ul>
+	          <li>There is no support for any time format that include frames or ticks, 
+	          for example: <code>00:03:00:05</code>, 00:03:00:05.1, 30f, 30t).</li>
+	          <li>begin, dur and end are allowed in p tag only, therefore, all times given are relative to the media.</li>
+	        </ul> 
+	    </ul>
+	  </ul>
+	 <li>xml:lang attributes are ignored</li>
+	 <li>xml:space attributes are ignored, the FLVPlaybackCaptioning component assumes xml:space=<code>default</code></li>
+	 <li>head tag is optional, use one or none</li>
+    <ul>
+     <li><strong>styling tag</strong></li> 
+       <ul>
+	 <li>Requires an id attribute; support for one or more style tags inside</li>
+	  <ul>
+	   <li>Supported attributes:</li>
+	    <ul> 
+	     <li>tts:backgroundColor</li>
+	       <ul>
+                 <li>The entire text area has the same background color.  You can set it at 
+                 any supported tag leve, but it will effect every paragraph, span, and so on in the
+                 currently visible captioning text.</li>
+	         <li>Support for all legal color representations, however, the alpha component
+	         is ignored unless set to <code>0</code>. If alpha is <code>0</code>, no background color
+	 	 displays.  A value of <code>transparent</code> is treated as alpha 0.</li>
+	       </ul>
+	     <li>tts:color</li>
+               <ul>
+	         <li>Support for all legal color representations, however, the alpha component is
+	         ignored.  A value of <code>transparent</code> is treated as black.</li>
+	       </ul>
+	     <li>tts:fontFamily</li>
+	     <li>tts:fontSize</li>
+	       <ul>
+	         <li>Support for the first (vertical) value only (if two fontSizes exist)</li> 
+	         <li>Units are optional (assumed to be in pixels).  
+	         Support for absolute (for example, 12) and relative (for example +2)</li>
+	         <li>Percentage values are not supported</li>
+	       </ul>
+	     <li>tts:fontStyle</li>
+	     <li>tts:fontWeight</li>
+	     <li>tts:textAlign</li>
+	     <li>tts:wrapOption</li>
+	       <ul>
+	         <li>The wrapOption applies to the entire text area (for example, every
+	         paragraph, span, and so on that is currently visible.</li>
+	       </ul>
+	    </ul>
+	   <li>Non-supported attributes:</li>
+	    <ul>
+	     <li>tts:direction</li>
+	     <li>tts:display</li>
+	     <li>tts:displayAlign</li>
+	     <li>tts:dynamicFlow</li>
+	     <li>tts:extent</li>
+	     <li>tts:lineHeight</li>
+	     <li>tts:opacity</li>
+	     <li>tts:origin</li>
+	     <li>tts:overflow</li>
+	     <li>tts:padding</li>
+	     <li>tts:showBackground</li>
+	     <li>tts:textOutline</li>
+	     <li>tts:unicodeBidi</li>
+	     <li>tts:visibility</li>
+	     <li>tts:writingMode</li>
+	     <li>tts:zIndex</li>
+	    </ul>
+	   </ul>
+	 </ul>
+	</ul>
+	   <li>The layout tag is ignored, including any region tags included therein.</li>
+	   </ul>
+	   <ul>
+      <li><strong>The body tag is required</strong>, one body tag permitted only </li>
+	 <ul>
+	    <li>The body tag supports the attributes style and any style attributes.</li>
+	    <li>The attributes begin, dur, end, id, region,
+	    timeContainer and any others are ignored in the body tag.</li>
+	    <li>The div tag is supported; support for the first div tag found, all other ignored.</li>
+	      <ul>
+	        <li>Support for the attributes style and any style attributes in the div tag</li>
+	        <li>The attributes begin, dur, end, id, region,
+	        timeContainer and any others are ignored in the div tag.</li>
+	        <li>Support for zero or more p tags</li>
+	          <ul>
+	           <li>Support for the attributes begin, dur, end, style and 
+	           any style attributes in the p tag.</li>
+	           <li>The attributes id, region, timeContainer and any others are ignored in the p tag.</li>
+	           <li>The attribute begin is required. If the begin attribute is omitted, a silent failure occurs.</li>
+	           <li>If there is no dur or end attribute, then the caption is dismissed by the next caption.</li>
+	           <li>If both dur and end attributes are encountered, then the end attribute is used.</li>
+                   <li>The p tag supports a mix of span tags, br tags and text (per the W3C specification).</li>
+                   <li>The metadata and set tags are allowed, but ignored.</li>
+                       <li>span tag</li>
+	                  <ul>
+	                    <li>No support for nexted spans</li>
+	                    <li>Support for attribute style and any style
+	                    attributes in the span tag</li> 
+                            <li>The attributes begin, dur, end, id, region, timeContainer and any others
+                            are ignored in the span tag.</li>
+                          </ul>
+                       <li>br tag</li>
+	                   <ul>
+	                     <li>All attributes and contents of a br tag are ignored</li>
+	                   </ul>
+	                 </ul>
+	               </ul>
+	             </ul>
+	          </ul>
+	         </ul>
+	<p>When the FLVPlaybackCaptioning component parses the Timed Text XML file, turns the begin captioning timing
+	 information into ActionScript cue points,  which are added to the FLVPlayback instance's list.
+	 The cue points use the naming convention of beginning with the prefix "fl.video.caption2.0.".  Do not 
+	 create any cue points with these prefix names unless you want them to be used for captioning.</p>  
+<div style="height:20px;" width="100%"></div>
+	<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 1:09 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 1:09 PM GMT-07:00 -->

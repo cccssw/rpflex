@@ -1,0 +1,3858 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="NativeWindow,flash.display.NativeWindow,accessibilityProperties,ACTIONSCRIPT2,ACTIONSCRIPT3,actionScriptVersion,active,ADD,align,ALPHA,alpha,ALPHA,ALWAYS,alwaysInFront,applicationDomain,AUTO,BEST,BEVEL,bitmapData,blendMode,BLUE,BOTTOM_LEFT,BOTTOM_LEFT,BOTTOM_RIGHT,BOTTOM_RIGHT,BOTTOM,BOTTOM,BOTTOM,bounds,bounds,buttonMode,bytesLoaded,bytes,bytesTotal,cacheAsBitmap,checked,childAllowsParent,childSandboxBridge,closed,colorDepth,content,contentLoaderInfo,content,contentType,contextMenu,currentFrame,currentLabels,currentLabel,currentScene,DARKEN,data,DIFFERENCE,displayState,displayState,doubleClickEnabled,downState,dropTarget,enabled,enabled,enabled,ERASE,EXACT_FIT,filters,FLASH1,FLASH2,FLASH3,FLASH4,FLASH5,FLASH6,FLASH7,FLASH8,FLASH9,focusRect,focus,frameRate,frameRate,framesLoaded,frame,FULL_SCREEN_INTERACTIVE,FULL_SCREEN,fullScreenHeight,fullScreenSourceRect,fullScreenWidth,graphics,graphics,GREEN,HARDLIGHT,height,height,height,height,height,HIGH,hitArea,hitTestState,HORIZONTAL,INVERT,isSeparator,items,keyEquivalentModifiers,keyEquivalent,labels,label,LAYER,LEFT,LEFT,LIGHTEN,LIGHTWEIGHT,LINEAR_RGB,LINEAR,loaderInfo,loader,loaderURL,LOW,mainScreen,mask,maximizable,maximizable,MAXIMIZED,maxSize,MEDIUM,menu,menu,minimizable,minimizable,MINIMIZED,minSize,MITER,mnemonicIndex,mouseChildren,mouseChildren,mouseEnabled,mouseX,mouseY,MULTIPLY,name,name,name,name,nativeWindow,NEVER,NO_BORDER,NO_SCALE,NONE,NONE,NONE,NONE,NONE,NORMAL,NORMAL,NORMAL,NORMAL,NORMAL,numChildren,numChildren,numFrames,numItems,opaqueBackground,OVERLAY,overState,PAD,parameters,parentAllowsChild,parent,parentSandboxBridge,parent,pixelSnapping,quality,RADIAL,rect,RED,REFLECT,REPEAT,resizable,resizable,RGB,RIGHT,RIGHT,root,rotation,ROUND,ROUND,sameDomain,scale9Grid,scaleMode,scaleX,scaleY,scenes,SCREEN,screens,scrollRect,sharedEvents,SHOW_ALL,showDefaultContextMenu,smoothing,soundTransform,soundTransform,SQUARE,stageFocusRect,stageHeight,stage,stage,stageWidth,STANDARD,submenu,SUBTRACT,supportsMenu,supportsNotification,swfVersion,systemChrome,systemChrome,systemMaxSize,systemMinSize,tabChildren,tabChildren,tabEnabled,tabIndex,textSnapshot,textSnapshot,title,TOP_LEFT,TOP_LEFT,TOP_RIGHT,TOP_RIGHT,TOP,TOP,TOP,totalFrames,trackAsMenu,trackAsMenu,transform,transparent,transparent,transparent,type,type,upState,url,useHandCursor,useHandCursor,UTILITY,VERTICAL,visibleBounds,visible,visible,width,width,width,width,width,x,x,y,y,activate,addChild,addChildAt,addChildAt,addChild,addEventListener,addItem,addItemAt,addSubmenu,addSubmenuAt,applyFilter,areInaccessibleObjectsUnderPoint,assignFocus,beginBitmapFill,beginFill,beginGradientFill,clear,clone,clone,clone,close,close,colorTransform,compare,contains,containsItem,copyChannel,copyPixels,curveTo,dispatchEvent,display,dispose,drawCircle,draw,drawEllipse,drawRect,drawRoundRect,endFill,fillRect,floodFill,generateFilterRect,getBounds,getChildAt,getChildByName,getChildIndex,getColorBoundsRect,getItemAt,getItemByName,getItemIndex,getLoaderInfoByDefinition,getObjectsUnderPoint,getPixel32,getPixel,getPixels,getRect,getScreensForRectangle,globalToLocal,globalToScreen,gotoAndPlay,gotoAndStop,hasEventListener,hitTestObject,hitTest,hitTestPoint,invalidate,isFocusInaccessible,lineGradientStyle,lineStyle,lineTo,loadBytes,load,localToGlobal,lock,maximize,merge,minimize,moveTo,nextFrame,nextScene,noise,notifyUser,orderInBackOf,orderInFrontOf,orderToBack,orderToFront,paletteMap,perlinNoise,pixelDissolve,play,prevFrame,prevScene,removeChildAt,removeChildAt,removeChild,removeItemAt,removeItem,restore,scroll,setChildIndex,setChildIndex,setItemIndex,setPixel32,setPixels,setPixel,startDrag,startMove,startResize,stopDrag,stop,swapChildrenAt,swapChildrenAt,swapChildren,threshold,toString,unload,unlock,willTrigger" name="keywords">
+<title>flash.display.NativeWindow (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'NativeWindow - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/display/NativeWindow.html&amp;flash/display/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">NativeWindow</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("NativeWindow"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<div class="annotation">(AIR only)</div>
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.display</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  NativeWindow</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">NativeWindow  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The NativeWindow class provides an interface for creating and controlling native desktop windows.
+  
+ <p>A reference to the NativeWindow instance is returned by the window constructor. 
+ A reference to a NativeWindow instance can also be accessed using the <code>stage.nativeWindow</code> 
+ property of any display object on that window's stage:
+ </p>
+ 
+ <pre>var window:NativeWindow = displayObject.stage.nativeWindow;</pre>
+ 
+ 
+ 
+ <p>The properties of a NativeWindow instance can only be accessed by application
+ content. If non-application content attempts to access the NativeWindow object, a
+ security error will be thrown.</p>
+ 
+ <p>Content can be added to a window using the 
+ DisplayObjectContainer methods of the Stage object such as <code>addChild()</code>.</p>
+ 
+ <p>You cannot not add Flex components directly to the display list of a 
+ NativeWindow instance. Instead, use the Flex mx:WindowedApplication
+ and mx:Window components to create your windows and add the other Flex
+ components as children of those objects. You can add Flex-based SWF content directly 
+ to a NativeWindow window as long as the SWF file is loaded into its own 
+ application domain and is application content.
+ </p>
+ 
+ <p>To create a root HTML window for displaying HTML content it is typically
+ easier to create the window with <code>HTMLLoader.createRootContent()</code>.
+ Windows created in this way will have an HTMLLoader object added automatically.
+  (From JavaScript code, you can also use the JavaScript
+ <code>window.open()</code> function. However, this method gives you less control
+ over the window appearance and behavior.)</p>
+ 
+ <p>
+ The following operations on NativeWindow objects are asynchronous: <code>close()</code>, 
+ <code>maximize()</code>, <code>minimize()</code>, <code>restore()</code>, and <code>bounds</code> changes.
+ An application can detect when these operations have completed by listening 
+ for the appropriate events.
+ </p>
+ 
+ <p>
+ If the <code>NativeApplication.autoExit</code> property is <code>true</code>, which is the default, 
+ the application will close when its last window is closed (and all <code>close</code> event 
+ handlers have returned). 
+ If <code>autoExit</code> is <code>false</code>, then <code>NativeApplication.nativeApplication.exit()</code> 
+ must be called to terminate the application.
+ </p>
+ <p>
+ NativeWindow objects will not be garbage collected after the window constructor has been called 
+ and before <code>close()</code>
+ has been called.  It is the responsibility of the application to close its own windows.
+ </p>
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Stage.html#nativeWindow" target="">flash.display.Stage.nativeWindow</a>
+<br>
+<a href="NativeWindowInitOptions.html" target="">flash.display.NativeWindowInitOptions</a>
+<br>
+<a href="../../flash/desktop/NativeApplication.html" target="">flash.desktop.NativeApplication</a>
+<br>
+<a href="../../flash/system/ApplicationDomain.html" target="">flash.system.ApplicationDomain</a>
+<br>
+<a href="../../flash/html/HTMLLoader.html#createRootWindow()" target="">flash.html.HTMLLoader.createRootWindow()</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#active">active</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+      Indicates whether this window is the active application window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#alwaysInFront">alwaysInFront</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+      Specifies whether this window will always be in front of other windows (including
+      those of other applications).</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#bounds">bounds</a> : <a href="../../flash/geom/Rectangle.html">Rectangle</a>
+<div class="summaryTableDescription">
+      The size and location of this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#closed">closed</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+      Indicates whether this window has been closed.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#displayState">displayState</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+     The display state of this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#height">height</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+      The height of this window in pixels.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#maximizable">maximizable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the maximizable setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#maxSize">maxSize</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+      The maximum size for this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#menu">menu</a> : <a href="../../flash/display/NativeMenu.html">NativeMenu</a>
+<div class="summaryTableDescription">
+      The native menu for this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#minimizable">minimizable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the minimizable setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#minSize">minSize</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+      The minimum size for this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#resizable">resizable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the resizable setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#stage">stage</a> : <a href="../../flash/display/Stage.html">Stage</a>
+<div class="summaryTableDescription">[read-only] 
+      The Stage object for this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#supportsMenu">supportsMenu</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only]  
+      Indicates whether AIR supports native window menus on the current computer system.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#supportsNotification">supportsNotification</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only]  
+      Indicates whether AIR supports window notification cueing on the current computer system.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#systemChrome">systemChrome</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the system chrome setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#systemMaxSize">systemMaxSize</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The largest window size allowed by the operating system.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#systemMinSize">systemMinSize</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The smallest window size allowed by the operating system.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#title">title</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+      The window title.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#transparent">transparent</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the transparency setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#type">type</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+  Reports the window type setting used to create this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#visible">visible</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription"> 
+      Specifies whether this window is visible.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#width">width</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+      The width of this window in pixels.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#x">x</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+      The horizontal axis coordinate of this window's top left corner relative to the 
+      origin of the operating system desktop.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#y">y</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+      The vertical axis coordinate of this window's top left corner relative to the  
+      upper left corner of the operating system's desktop.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#NativeWindow()">NativeWindow</a>(initOptions:<a href="../../flash/display/NativeWindowInitOptions.html">NativeWindowInitOptions</a>)</div>
+<div class="summaryTableDescription">
+    Creates a new NativeWindow instance and a corresponding operating system window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#activate()">activate</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Activates this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#close()">close</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Closes this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#globalToScreen()">globalToScreen</a>(globalPoint:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a>
+</div>
+<div class="summaryTableDescription">
+      Converts a point in pixel coordinates relative to the origin of the window stage 
+      (a global point in terms of the display list), to a point on the virtual desktop.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#maximize()">maximize</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Maximizes this native window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#minimize()">minimize</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Minimizes this native window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#notifyUser()">notifyUser</a>(type:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Triggers a visual cue through the operating system that an event of 
+      interest has occurred.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#orderInBackOf()">orderInBackOf</a>(window:<a href="../../flash/display/NativeWindow.html">NativeWindow</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Sends this window directly behind the specified window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#orderInFrontOf()">orderInFrontOf</a>(window:<a href="../../flash/display/NativeWindow.html">NativeWindow</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Brings this window directly in front of the specified window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#orderToBack()">orderToBack</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Sends this window behind any other visible windows.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#orderToFront()">orderToFront</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Brings this window in front of any other visible windows.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#restore()">restore</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Restores this window from either a minimized or a maximized state.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#startMove()">startMove</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Starts a system-controlled move of this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#startResize()">startResize</a>(edgeOrCorner:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+      Starts a system-controlled resize operation of this window.</div>
+</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window has been activated.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:close">close</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window has been closed.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:closing">closing</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object immediately before the window is to be closed.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window has been deactivated.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:displayStateChange">displayStateChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window's displayState property has changed.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:displayStateChanging">displayStateChanging</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object immediately before the window changes its display state.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:move">move</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window has been moved on the desktop.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:moving">moving</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by the NativeWindow object immediately before the window is to be moved on the desktop.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:resize">resize</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object after the window has been resized.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:resizing">resizing</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeWindow object immediately before the window is to be resized on the desktop.</td><td class="summaryTableOwnerCol">NativeWindow</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="active"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;active</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>active:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Indicates whether this window is the active application window.
+            <p>Use the <code>activate()</code> method to make a window active.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get active():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#activate" target="">flash.display.NativeWindow.activate</a>
+<br>
+<a href="../../flash/desktop/NativeApplication.html#activate" target="">flash.desktop.NativeApplication.activate</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="alwaysInFront"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;alwaysInFront</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>alwaysInFront:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Specifies whether this window will always be in front of other windows (including
+      those of other applications).
+            <p>There are two groups of windows in the system depth order.  Windows in the 
+      <code>alwaysInFront</code> group are always displayed in front of all other
+      windows. Depth ordering between windows within the same group is determined normally. 
+      In other words, activating a window will bring it in front of other windows 
+      in its group.</p>
+      
+      <p>Changing <code>alwaysInFront</code> from <code>false</code> to <code>true</code> will
+      bring the window to the top of all other windows. Changing the property from <code>true</code> 
+      to <code>false</code> will send the window to the back of "alwaysInFront" windows, but still 
+      in front of other windows. Setting the property to its current value will not change the window 
+      depth order.</p>
+      
+      <p>The <code>alwaysInFront</code> property should rarely be set to <code>true</code> since
+      windows with this setting will appear in front of the windows of other applications
+      even when the other application is active.</p>
+      
+      <p><b>Note:</b> On Mac<sup>&reg;</sup> OS X, setting <code>alwaysInFront</code> to <code>true</code> will
+      have no effect when the <code>displayState</code> property of the window stage
+      is <code>fullScreen</code> or <code>fullScreenInteractive</code>.</p> 
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alwaysInFront():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set alwaysInFront(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples force a window to be displayed in front
+ of all other windows (that are not similarly forced to the front):<div class="listing"><pre>
+windowObj.alwaysInFront = true;
+</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObject.stage.nativeWindow.alwaysInFront=true;
+</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the 
+ window (or a root HTML window):<div class="listing"><pre>
+window.nativeWindow.alwaysInFront = true;</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="bounds"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;bounds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bounds:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The size and location of this window.  
+      <p>
+      The dimensions of a window include any system chrome. The dimensions of a window's stage are equal to the
+      dimensions of the window, minus the size of any system chrome. Changing
+      the width and height of the window will change the stage's <code>stageWidth</code> and <code>stageHeight</code>.
+      The reverse also applies; changing the stage dimensions will change the window size.
+      </p>
+      <p>In a root HTML window, the <code>outerWidth</code> and <code>outerHeigth</code> properties
+      are equivalent to the window <code>height</code> and <code>width</code> properties. 
+      The <code>innerWidth</code> and <code>innerHeight</code> properties equal
+      the <code>stage.stageWidth</code> and <code>stage.stageHeight</code>
+      properties minus the thickness of any automatic scrollbars displayed
+      by the window.</p>
+      <p>
+      A <code>resize</code> event is dispatched whenever the width or height of this window 
+      changes. Likewise, a <code>move</code> event is dispatched whenever the origin (x,y) of this window 
+      changes. Setting the <code>bounds</code> property directly will not dispatch a <code>moving</code> 
+      or <code>resizing</code> event. To allow other components to prepare for or cancel an impending 
+      move or resize operation, your bounds-changing logic can dispatch <code>moving</code> and 
+      <code>resizing</code> events with the NativeWindow <code>dispatchEvent()</code>
+      method and then check whether the event was canceled by a registered listener. 
+      </p>
+      <p>
+      Setting the <code>bounds</code> property of a window is equivalent to setting its 
+      <code>x</code>, <code>y</code>, <code>width</code>, and <code>height</code> properties.
+      Likewise, setting any of the individual dimensions is equivalent to setting the 
+      <code>bounds</code> property. When you set all the dimensions at the same time by using the 
+      <code>bounds</code> property, fewer events are displatched. 
+      </p>
+      
+      <p>If the width and the height specified are less than the minimum or greater than the maximum allowed size, 
+      because of the <code>minSize</code> and <code>maxSize</code> properties of the window 
+      or the minimum and maximum operating system limits, then the window dimensions are set 
+      to the closest legal size.
+      The minimum width and height of any displayed system chrome may also 
+      result in a window that is larger than the specified size.</p>
+       
+   </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bounds():<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set bounds(value:<a href="../../flash/geom/Rectangle.html">Rectangle</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the rectangle is null or contains invalid values.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the bounds property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html#resizable" target="">flash.display.NativeWindowInitOptions.resizable</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples set the bounds of a window with a 
+ reference to a NativeWindow object:<div class="listing"><pre>
+windowObj.bounds = new Rectangle(200, 200, 1000, 800);
+</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObject.stage.nativeWindow.bounds = new Rectangle(20, 20, 800, 600);
+</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window (or a root HTML window):<div class="listing"><pre>
+window.nativeWindow.bounds = new air.Rectangle(20, 20, 800, 600);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="closed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;closed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>closed:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Indicates whether this window has been closed.  
+            <p>Accessing the following properties on a closed window will 
+      throw an illegal operation error:</p>
+      <ul> 
+      <li><code>title</code></li>
+      <li><code>bounds</code></li>
+      <li><code>x</code>, <code>y</code>, <code>width</code>, <code>height</code></li>
+      <li><code>displayState</code></li>
+      <li><code>visible</code></li>
+      </ul>
+      <p>Likewise, calling the following methods on a closed window will 
+      also throw an illegal operation error:</p>
+      <ul>
+      <li><code>minimize()</code></li>
+      <li><code>maximize()</code></li>
+      <li><code>restore()</code></li>
+      <li><code>startResize()</code></li>
+      <li><code>startMove()</code></li>
+      </ul>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get closed():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to access the <code>closed</code> property
+ of a window:<div class="listing"><pre>
+var isWindowClosed:Boolean = windowObj.closed;</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+var isWindowClosed:Boolean = displayObject.stage.nativeWindow.closed;</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window
+ (or root HTML window):<div class="listing"><pre>
+var isWindowClosed = window.nativeWindow.closed;</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="displayState"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;displayState</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>displayState:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The display state of this window.
+     <p>
+     Constants for the possible values are defined in the NativeWindowDisplayState class: 
+     </p>
+     <ul>
+     <li><code>NativeWindowDisplayState.NORMAL</code></li>
+     <li><code>NativeWindowDisplayState.MINIMIZED</code></li>
+     <li><code>NativeWindowDisplayState.MAXIMIZED</code></li>
+     </ul> 
+     
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get displayState():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the <code>displayState</code> property is accessed 
+     after this window has been closed.
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowDisplayState.html" target="">flash.display.NativeWindowDisplayState</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how to get the current window
+ display state given a reference to the window object:<div class="listing"><pre>
+var state:String = windowObj.displayState;
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="height"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;height</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>height:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The height of this window in pixels.
+            <p>The dimensions of a window include any system window chrome that is displayed.
+      The height of the usable display area inside a window is available from the 
+      <code>Stage.stageHeight</code> property.</p>
+            <p>Changing the <code>height</code> property of a window is equivalent to changing the
+      height through the <code>bounds</code> property.</p>
+      
+      <p>If the height specified is less than the minimum or greater than the maximum allowed height, 
+      because of the <code>minSize</code> and <code>maxSize</code> properties of the window 
+      or the minimum and maximum operating system limits, then the window height is set 
+      to the closest legal size.</p>
+     
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get height():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set height(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value set is <code>null</code> or invalid.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#bounds" target="">flash.display.NativeWindow.bounds</a>
+<br>
+<a href="Stage.html#stageHeight" target="">flash.display.Stage.stageHeight</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="maximizable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;maximizable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>maximizable:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the <code>maximizable</code> setting used to create this window.
+   
+  <p>The <code>maximizable</code> setting cannot be changed after a window is created.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get maximizable():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html#maximizable" target="">flash.display.NativeWindowInitOptions.maximizable</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="maxSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;maxSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>maxSize:<a href="../../flash/geom/Point.html">Point</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The maximum size for this window.  
+      
+      <p>The size limit is specified as the coordinates of a Point object. 
+      The point <code>x</code> property corresponds to the window width, 
+      the <code>y</code> property to the window height.</p>
+            <p>
+      The <code>maxSize</code> restriction is enforced for window resizing operations
+      invoked both through <span>ActionScript</span> 
+    code and through the operating system.
+      </p>
+      <p>
+      Setting <code>maxSize</code> will change the window bounds if the 
+      current bounds are larger than the new maximum size.
+      </p>
+      <p>
+      <b>Note:</b> Maximizing a window will only enlarge the window to the <code>maxSize</code> value even if  
+      the maximized window will be smaller than the operating system screen. The window will still be
+      in the maximized display state.
+      </p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get maxSize():<a href="../../flash/geom/Point.html">Point</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set maxSize(value:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If assigned size is not within the 
+      operating system minimum and maximum window sizes. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; If size is forbidden for the content's current privilege.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the size is <code>null</code> or contains invalid values.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the <code>maxSize</code> property is accessed after this window has been closed.
+            </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#systemMinSize" target="">flash.display.NativeWindow.systemMinSize</a>
+<br>
+<a href="NativeWindow.html#systemMaxSize" target="">flash.display.NativeWindow.systemMaxSize</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to set the maximum allowed
+ size for a window.
+<div class="listing"><pre>
+windowObj.maxSize = new Point(1040,920);
+</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:
+<div class="listing"><pre>
+displayObject.stage.nativeWindow.maxSize = new Point(800,600);</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in a window
+ (or in a root HTML window):
+<div class="listing"><pre>
+window.nativeWindow.maxSize = new air.Point(960,960);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="menu"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;menu</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>menu:<a href="../../flash/display/NativeMenu.html">NativeMenu</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The native menu for this window. 
+            <p>When a NativeMenu object is assigned to the window <code>menu</code> 
+      property, a native menu will be displayed for a window if 
+      <code>NativeWindow.supportsMenu</code> is <code>true</code>, unless the window
+      <code>systemChrome</code> property is <code>NativeWindowSystemChrome.NONE</code>.</p>
+      
+      <p><b>Note:</b> Assigning a menu to a window when <code>NativeWindow.supportsMenu</code>
+      is <code>false</code> or when the window <code>systemChrome</code> property is 
+      <code>NativeWindowSystemChrome.NONE</code> is allowed, but does nothing.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get menu():<a href="../../flash/display/NativeMenu.html">NativeMenu</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set menu(value:<a href="../../flash/display/NativeMenu.html">NativeMenu</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#supportsMenu" target="">flash.display.NativeWindow.supportsMenu</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="minimizable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;minimizable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>minimizable:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the <code>minimizable</code> setting used to create this window.
+  
+  <p>The <code>minimizable</code> setting cannot be changed after a window is created.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get minimizable():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html#minimizable" target="">flash.display.NativeWindowInitOptions.minimizable</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="minSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;minSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>minSize:<a href="../../flash/geom/Point.html">Point</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0icon</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The minimum size for this window. 
+       
+      <p>The size limit is specified as the coordinates of a Point object. 
+      The point <code>x</code> property corresponds to the window width, 
+      the <code>y</code> property to the window height.</p>
+      <p>
+      Setting <code>minSize</code>, will change the window bounds if the 
+      current bounds are smaller than the new minimum size.
+      </p>
+      <p>
+      The <code>minSize</code> restriction is enforced for window resizing operations
+      invoked both through <span>ActionScript</span> 
+    code and through the operating system.
+      </p>
+      <p>
+      <b>Note:</b> The width and height of any displayed system chrome may
+      make it impossible to set a window as small as the specified minimum size. 
+      </p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get minSize():<a href="../../flash/geom/Point.html">Point</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set minSize(value:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the assigned size is not within the 
+      operating system minimum and maximum window sizes. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; If size is forbidden for the content's current privilege.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the size is <code>null</code> or contains invalid values.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; if the <code>minSize</code> property is accessed after this window has been closed.
+            </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#systemMinSize" target="">flash.display.NativeWindow.systemMinSize</a>
+<br>
+<a href="NativeWindow.html#systemMaxSize" target="">flash.display.NativeWindow.systemMaxSize</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to set the minimum allowed
+ size for a window:
+<div class="listing"><pre>
+windowObj.minSize = new Point(200,80);
+</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:
+<div class="listing"><pre>
+displayObject.stage.nativeWindow.minSize = new Point(120,60);</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in a window
+ (or in a root HTML window):
+<div class="listing"><pre>
+window.nativeWindow.minSize = new air.Point(80,60);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="resizable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;resizable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>resizable:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the <code>resizable</code> setting used to create this window.
+  
+  <p>The <code>resizable</code> setting cannot be changed after a window is created.</p>
+  
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get resizable():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html#resizable" target="">flash.display.NativeWindowInitOptions.resizable</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="stage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;stage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stage:<a href="../../flash/display/Stage.html">Stage</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The Stage object for this window. <span>The 
+   Stage object is the root object in the display list architecture used in ActionScript
+   3.0-based SWF content.</span>
+      
+      <p>
+      The stage is the root of the display list for the window. Add visual display objects to a window by
+      adding them to the stage or to another object already in the display list of this stage. The stage 
+      dimensions are those of the window client area when the window uses system chrome. The stage 
+      dimensions are equal to the dimensions of the window if system chrome is not used.
+      </p>
+      
+      
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stage():<a href="../../flash/display/Stage.html">Stage</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Stage.html" target="">flash.display.Stage</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how to set stage properties for a 
+ NativeWindow instance:<div class="listing"><pre>
+import flash.display.StageAlign;
+
+windowObj.stage.align = StageAlign.TOP_LEFT;
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="supportsMenu"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;supportsMenu</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>supportsMenu:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+      Indicates whether AIR supports native window menus on the current computer system.
+      
+      <p>When <code>NativeWindow.supportsMenu</code> is <code>true</code>, 
+      a native menu will be displayed for a window when a NativeMenu
+      object is assigned to the window <code>menu</code> property (unless the window
+      <code>systemChrome</code> property is <code>NativeWindowSystemChrome.NONE</code>).</p>
+      
+      <p><b>Note:</b> Assigning a menu to a window when <code>NativeWindow.supportsMenu</code>
+      is <code>false</code> or when the window <code>systemChrome</code> property is 
+      <code>NativeWindowSystemChrome.NONE</code> is allowed, but does nothing.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get supportsMenu():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeMenu.html" target="">flash.display.NativeMenu</a>
+<br>
+<a href="../../flash/desktop/NativeApplication.html#supportsMenu" target="">flash.desktop.NativeApplication.supportsMenu</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="supportsNotification"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;supportsNotification</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>supportsNotification:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+      Indicates whether AIR supports window notification cueing on the current computer system.
+      
+      <p>When <code>NativeWindow.supportsNotification</code> is <code>true</code>, 
+      calling the window's <code>notify()</code> method will result in a
+      visual cue to the user that an event of interest has occurred. This visual
+      cue will conform to the operating system convention of the native system.
+      For example, on Windows<sup>&reg;</sup>, the task bar icon will flash.</p>
+      
+      <p><b>Note:</b> Calling <code>notify()</code> when 
+      <code>NativeWindow.supportsNotification</code> is <code>false</code> 
+      is allowed, but does nothing.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get supportsNotification():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#notify" target="">flash.display.NativeWindow.notify</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="systemChrome"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;systemChrome</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>systemChrome:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the system chrome setting used to create this window.
+  
+  <p>The values returned by <code>NativeWindow.systemChrome</code> will be
+  one of the constants defined in the NativeWindowSystemChrome class.</p>
+  
+  <p>The system chrome setting cannot be changed after a window is created.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get systemChrome():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowSystemChrome.html" target="">flash.display.NativeWindowSystemChrome</a>
+<br>
+<a href="NativeWindowInitOptions.html#systemChrome" target="">flash.display.NativeWindowInitOptions.systemChrome</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example :<div class="listing"><pre>
+</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+var sysChromeType:String = displayObject.stage.nativeWindow.systemChrome;</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window
+ (or root HTML window):<div class="listing"><pre>
+var sysChromeType = window.nativeWindow.systemChrome;</pre></div></div>
+<br>
+<div class="detailBody"> The following example shows how to change the apparent
+ system chrome and transparency settings by creating a new window and moving all child
+ display objects to the new window:<div class="listing"><pre>
+import flash.display.NativeWindow;
+import flash.display.NativeWindowSystemChrome;
+import flash.display.NativeWindowInitOptions;
+
+public function deChromeWindow(oldWindow:NativeWindow):NativeWindow{
+    if(oldWindow.systemChrome != NativeWindowSystemChrome.NONE){
+        var newOptions:NativeWindowInitOptions = new NativeWindowInitOptions();
+        newOptions.systemChrome = NativeWindowSystemChrome.NONE;
+        newOptions.transparent = true;
+        
+        var newWindow:NativeWindow = new NativeWindow(newOptions);
+        newWindow.stage.stageWidth = oldWindow.stage.stageWidth;
+        newWindow.stage.stageHeight = oldWindow.stage.stageHeight;
+        newWindow.stage.align = oldWindow.stage.align;
+        newWindow.stage.scaleMode = oldWindow.stage.scaleMode;
+        
+        for(var i:int = 0; i &lt; oldWindow.stage.numChildren; i++){
+            newWindow.stage.addChild(oldWindow.stage.getChildAt(i));
+        }
+        newWindow.activate();
+        oldWindow.close();
+        
+        return newWindow;
+    }
+    return oldWindow;
+}
+
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="systemMaxSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;systemMaxSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>systemMaxSize:<a href="../../flash/geom/Point.html">Point</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0icon</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The largest window size allowed by the operating system.
+  
+      <p>The size limit is specified as the coordinates of a Point object. 
+      The point <code>x</code> property corresponds to the window width, 
+      the <code>y</code> property to the window height.</p>
+  
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get systemMaxSize():<a href="../../flash/geom/Point.html">Point</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="systemMinSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;systemMinSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>systemMinSize:<a href="../../flash/geom/Point.html">Point</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0icon</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The smallest window size allowed by the operating system.
+  
+      <p>The size limit is specified as the coordinates of a Point object. 
+      The point <code>x</code> property corresponds to the window width, 
+      the <code>y</code> property to the window height.</p>
+      
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get systemMinSize():<a href="../../flash/geom/Point.html">Point</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="title"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;title</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>title:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The window title.  
+      <p>
+      The title will appear in the system chrome for the window, if displayed, as well as in other system-dependent
+      locations (such as the task bar).
+      </p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get title():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set title(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example sets the title of a window object:<div class="listing"><pre>
+windowObj.title = "Window Title";
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="transparent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;transparent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>transparent:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the transparency setting used to create this window.
+  
+     <p>The <code>transparent</code> property cannot be changed after a window is created.
+     Transparency affects both the visual appearance and the mouse behavior of
+     the window. If the alpha value of a pixel is below a certain threshold,
+     which varies between about .06 and .01 depending on the operating
+     system, then the window will not capture mouse events above that pixel.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get transparent():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html#transparent" target="">flash.display.NativeWindowInitOptions.transparent</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="type"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;type</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>type:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reports the window <code>type</code> setting used to create this window.
+  
+  <p>The values returned by <code>NativeWindow.type</code> will be
+  one of the constants defined in the NativeWindowType class.</p>
+  
+  <p>The <code>type</code> setting cannot be changed after a window is created.</p>
+  
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get type():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowType.html" target="">flash.display.NativeWindowType</a>
+<br>
+<a href="NativeWindowInitOptions.html#type" target="">flash.display.NativeWindowInitOptions.type</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="visible"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;visible</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>visible:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+      Specifies whether this window is visible.  
+      
+      <p>
+      An invisible window is not displayed on the desktop, but all window 
+      properties and methods are valid.
+      </p> 
+      <p>
+      By default, <code>visible</code> is set to <code>false</code>. To display
+      a window, set <code>visible</code> to <code>true</code> or call 
+      <code>NativeWindow.activate()</code>.
+      </p>
+      <p>
+      <b>Note:</b> On Mac OS X, setting <code>visible=false</code> on a 
+      minimized window will not remove the window icon from the dock. If a
+      user subsequently clicks the dock icon, the window will return to the
+      visible state and be displayed on the desktop.
+      </p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get visible():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set visible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; When trying to set to <code>false</code> without sufficient privilege.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#activate()" target="">activate()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to access the <code>visible</code> property
+ of a window:<div class="listing"><pre>
+windowObj.visible = true;</pre></div></div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObj.stage.nativeWindow.visible = true;</pre></div></div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window
+ (or root HTML window):<div class="listing"><pre>
+window.nativeWindow.visible = true;</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="width"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;width</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>width:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The width of this window in pixels.
+            <p>The dimensions reported for a native window include any system window chrome 
+      that is displayed.
+      The width of the usable display area inside a window is available from the 
+      <code>Stage.stageWidth</code> property.</p>
+            <p>Changing the <code>width</code> property of a window is equivalent to changing the
+      width through the <code>bounds</code> property.</p>
+      
+      <p>If the width specified is less than the minimum or greater than the maximum allowed width, 
+      because of the <code>minSize</code> and <code>maxSize</code> properties of the window, or the minimum and maximum operating system
+      limits, then the window width is set to the closest legal size.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get width():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set width(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value set is <code>null</code> or invalid.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#bounds" target="">flash.display.NativeWindow.bounds</a>
+<br>
+<a href="Stage.html#stageWidth" target="">flash.display.Stage.stageWidth</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="x"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>x:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The horizontal axis coordinate of this window's top left corner relative to the 
+      origin of the operating system desktop.
+      
+      <p>On systems with more than one monitor, <code>x</code> can be negative. If you
+      save the value, perhaps to reposition a window at its previous location, you
+      should always verify that the window is placed in a usable location when the
+      position is restored. Changes in screen resolution or monitor arrangement can
+      can result in a window being placed off screen. Use the Screen class to obtain
+      information about the desktop geometry.</p> 
+      
+      <p>Changing the <code>x</code> property of a window is equivalent to changing the
+      location through the <code>bounds</code> property.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get x():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set x(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value set is <code>null</code> or invalid.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#bounds" target="">flash.display.NativeWindow.bounds</a>
+<br>
+<a href="Screen.html" target="">flash.display.Screen</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>y:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      The vertical axis coordinate of this window's top left corner relative to the  
+      upper left corner of the operating system's desktop.
+      
+      <p>On systems with more than one monitor, <code>y</code> can be negative. If you
+      save the value, perhaps to reposition a window at its previous location, you
+      should always verify that the window is placed in a usable location when the
+      position is restored. Changes in screen resolution or monitor arrangement can
+      can result in a window being placed off screen. Use the Screen class to obtain
+      information about the desktop geometry.</p> 
+      
+      <p>Changing the <code>y</code> property of a window is equivalent to changing the
+      location through the <code>bounds</code> property.</p>
+      
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get y():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set y(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value set is <code>null</code> or invalid.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the property is accessed after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#bounds" target="">flash.display.NativeWindow.bounds</a>
+<br>
+<a href="Screen.html" target="">flash.display.Screen</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="NativeWindow()"></a><a name="NativeWindow(flash.display.NativeWindowInitOptions)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;NativeWindow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function NativeWindow(initOptions:<a href="../../flash/display/NativeWindowInitOptions.html">NativeWindowInitOptions</a>)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Creates a new NativeWindow instance and a corresponding operating system window.
+    <p>
+    The settings defined in the <code>initOptions</code> parameter cannot be changed after the
+    window is created. Invalid <code>initOptions</code> settings will cause an illegal operation error 
+    to be thrown. Settings that are valid but not available on the current system will not throw an exception.
+    The window capabilities specific to the current operating system can be 
+    detected, if desired, using the static NativeWindow members
+    such as <code>systemMaxSize</code>.
+    </p>
+    
+    <p>The default window size is determined by the operating system, but can be
+    changed by setting the window bounds. The change will not be visible if the
+    window <code>visible</code> property is <code>false</code>.</p>
+    
+    </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">initOptions</span>:<a href="../../flash/display/NativeWindowInitOptions.html">NativeWindowInitOptions</a></code> &mdash; An object containing the initialization properties for this window.
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the <code>initOptions</code> parameter is invalid.
+    
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowInitOptions.html" target="">flash.display.NativeWindowInitOptions</a>
+<br>
+<a href="../../flash/html/HTMLLoader.html#createRootWindow()" target="">flash.html.HTMLLoader.createRootWindow()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates and activates a new NativeWindow instance:<div class="listing"><pre>
+import flash.display.NativeWindowInitOptions;
+import flash.display.NativeWindowSystemChrome;
+import flash.display.NativeWindowType;
+import flash.display.NativeWindow;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.geom.Rectangle;
+
+var windowOptions:NativeWindowInitOptions = new NativeWindowInitOptions();
+windowOptions.systemChrome = NativeWindowSystemChrome.STANDARD;
+windowOptions.type = NativeWindowType.NORMAL;
+
+var newWindow:NativeWindow = new NativeWindow(windowOptions);
+newWindow.stage.scaleMode = StageScaleMode.NO_SCALE;
+newWindow.stage.align = StageAlign.TOP_LEFT;
+newWindow.bounds = new Rectangle(100, 100, 800, 800);
+
+newWindow.activate();</pre></div></div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="activate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;activate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function activate():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Activates this window. 
+  
+  <p>Activating a window will:</p>
+<ul>
+<li>Make the window visible</li>
+<li>Bring the window to the front</li>
+<li>Give the window keyboard and mouse focus</li>
+</ul>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#visible" target="">visible</a>
+<br>
+<a href="NativeWindow.html#orderToFront" target="">orderToFront</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to activate a window.
+  
+ <p>With a reference to a display object on the window stage:</p>
+<div class="listing"><pre>
+displayObject.stage.nativeWindow.activate();
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> With a reference to an instance of the NativeWindow class:<div class="listing"><pre>
+windowObj.activate();
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From JavaScript in an HTML page rendered in the window
+ (where <code>window</code> is the global JavaScript window object):<div class="listing"><pre>
+window.nativeWindow.activate();</pre></div>
+</div>
+</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Closes this window. 
+      
+      <p>A <code>close</code> event is dispatched as soon as the close operation is complete. 
+      A <code>closing</code> event will not be dispatched. If cancellation of the close operation should
+      be allowed, dispatch a <code>closing</code> event and check whether any registered listeners cancel
+      the default behavior before calling the <code>close()</code> method.
+      </p>
+<p>
+      If display object instances that are currently in the window are not referenced elsewhere 
+      they will be garbage collected and destroyed, except on the initial application window
+      created by AIR. To allow display objects on the initial window to be garbage collected,
+      remove them from the window stage.
+      </p>
+<p>
+      After being closed, the NativeWindow object is still a valid reference, but accessing most
+      properties and methods will throw an illegal operation error.
+      </p>
+<p>
+      Closed windows cannot be reopened. If the window is already closed, no action is taken and 
+      no events are dispatched.
+      </p>
+<p>Note: to hide a window without closing it, set the window's <code>visible</code> property to
+      <code>false</code>.
+      </p>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindow.html#closed" target="">flash.display.NativeWindow.closed</a>
+<br>
+<a href="../../flash/html/HTMLLoader.html" target="">flash.html.HTMLLoader</a>
+<br>
+<a href="../../flash/html/HTMLHost.html" target="">flash.html.HTMLHost</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to close a window:
+  
+ <p>With a reference to the NativeWindow instance (<code>windowObj</code>):</p>
+<div class="listing"><pre>
+windowObj.close();
+
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObj.stage.nativeWindow.close();
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object
+ (or HTML root window):<div class="listing"><pre>
+window.close(); //overriddable in HTMLHost</pre></div>
+</div>
+<br>
+<div class="detailBody"> Or:<div class="listing"><pre>
+window.nativeWindow.close(); //not overriddable
+</pre></div>
+</div>
+<br>
+<div class="detailBody">  
+ The following example illustrates how to allow cancellation of a close operation
+ (where <code>windowObj</code> is the NativeWindow instance to be closed):<div class="listing"><pre>
+public function closeCommand():Boolean{
+    var closeEvent:Event = new Event(Event.CLOSING,true,true);
+    windowObj.dispatchEvent(closeEvent);
+    if(!closeEvent.isDefaultPrevented()){
+        windowObj.close();
+        return true;
+    } else {
+      return false;
+    }
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following example illustrates how to close a window from a
+ JavaScript routine running in an HTMLLoader object (or HTML root window), while 
+ allowing the operation to be canceled:<div class="listing"><pre>
+&lt;script src="AIRAliases.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    var dirtyData = false;
+    function closeWindow(){
+            var closingEvent = new air.Event(air.Event.CLOSING,true,true);
+            window.nativeWindow.dispatchEvent(closingEvent);
+               if(!closingEvent.isDefaultPrevented()){
+                   window.nativeWindow.close();
+                //or use: window.close(); 
+               return true;
+           } else {
+               return false;
+        }
+    }
+        
+    function onClosing(event){
+        if(dirtyData){
+            event.preventDefault();
+            //Save data...
+        }
+    }    
+
+    window.nativeWindow.addEventListener(air.Event.CLOSING,onClosing);        
+&lt;/script&gt;</pre></div>
+</div>
+</div>
+<a name="globalToScreen()"></a><a name="globalToScreen(flash.geom.Point)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;globalToScreen</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function globalToScreen(globalPoint:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Converts a point in pixel coordinates relative to the origin of the window stage 
+      (a global point in terms of the display list), to a point on the virtual desktop.
+      
+      <p>Virtual desktop coordinates are relative to the upper, lefthand corner of the primary 
+      monitor.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">globalPoint</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The point on the stage to convert to a point on the screen.
+      </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Point.html">Point</a></code> &mdash; The specified global point relative to the desktop.
+            </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Screen.html" target="">flash.display.Screen</a>
+</div>
+</div>
+<a name="maximize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;maximize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function maximize():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Maximizes this native window.  
+      <p>
+      Calling <code>maximize()</code> method dispatches a <code>displayStateChange</code> 
+      event, and, if applicable, a <code>move</code> and a <code>resize</code> event. 
+      Whereas system chrome will dispatch a <code>displayStateChanging</code> event 
+      that can be canceled when a maximize command is initiated by a user, your maximize 
+      logic must implement this behavior, if desired.
+      </p>
+<p>
+      The <code>maximize()</code> method executes asynchronously. To detect the completion 
+      of the state change, listen for the <code>displayStateChange</code> event.
+      </p>
+<p>If the window is already maximized, no action is taken and no events are dispatched.</p>
+<p>
+<b>Note:</b> On operating systems, such as Mac OS X, in which maximizing
+      a window does not also prevent resizing, calling <code>maximize()</code> will zoom the window
+   to fill the screen, but will not prevent subsequent resizing of the window.
+   Resizing a zoomed window will also restore the display state.</p>
+</p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the <code>maximizable</code> property of this window 
+      is <code>false</code> or 
+      if the method is called after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowDisplayState.html" target="">flash.display.NativeWindowDisplayState</a>
+<br>
+<a href="../../flash/events/NativeWindowDisplayStateEvent.html" target="">flash.events.NativeWindowDisplayStateEvent</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody">  
+ The following example illustrates how to allow cancelation of a maximize operation:  <div class="listing"><pre>
+public function maximizeWindow(nativeWin:NativeWindow):Boolean{
+  if(nativeWin.displayState != NativeWindowDisplayState.MAXIMIZED){
+    var beforeState:String = nativeWin.displayState;
+    var afterState:String = NativeWindowDisplayState.MAXIMIZED;
+    var displayStateEvent:NativeWindowDisplayStateEvent = 
+        new NativeWindowDisplayStateEvent(NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+    nativeWin.dispatchEvent(displayStateEvent);
+    if(!displayStateEvent.isDefaultPrevented()){
+        nativeWin.maximize();
+        return true;
+    } else {
+      return false;
+    }
+  }
+  return false;
+}</pre></div>
+</div>
+<br>
+<div class="detailBody">  
+ The following example illustrates how to allow cancelation of a maximize operation
+ from a JavaScript routine running in an HTMLLoader object on the window (or an HTML window):  <div class="listing"><pre>
+function maximizeWindow(nativeWin){
+    if(nativeWin.displayState != air.NativeWindowDisplayState.MAXIMIZED){
+        var beforeState = nativeWin.displayState;
+        var afterState = air.NativeWindowDisplayState.MAXIMIZED;
+        var displayStateEvent = 
+            new air.NativeWindowDisplayStateEvent(air.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+        nativeWin.dispatchEvent(displayStateEvent);
+        if(!displayStateEvent.isDefaultPrevented()){
+            nativeWin.maximize();
+            return true;
+        } else {
+          return false;
+        }
+     }
+     return false;
+}</pre></div>
+</div>
+</div>
+<a name="minimize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;minimize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function minimize():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Minimizes this native window. 
+      <p>
+      Calling <code>minimize()</code> dispatches a <code>displayStateChange</code> event, 
+      and, if applicable, a <code>move</code> and a <code>resize</code> event. 
+      Whereas system chrome will dispatch a <code>displayStateChanging</code> event 
+      that can be canceled when a minimize command is initiated by a user, 
+      calling <code>minimize()</code> directly does not. Your minimize logic may 
+      implement this behavior, if desired.
+      </p>
+<p>
+      The <code>minimize()</code> method executes asynchronously.  To detect the completion of the state change, listen for
+      the <code>displayStateChange</code> event.
+      </p>
+<p>If the window is already minimized, no action is taken and no events are dispatched.</p>
+</p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the <code>minimizable</code> property of this window 
+      is <code>false</code> or 
+      if the method is called after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowDisplayState.html" target="">flash.display.NativeWindowDisplayState</a>
+<br>
+<a href="../../flash/events/NativeWindowDisplayStateEvent.html" target="">flash.events.NativeWindowDisplayStateEvent</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example illustrates how to allow cancelation of a call to
+ <code>minimize()</code> by dispatching a <code>displayStateChanging</code> event: <div class="listing"><pre>
+public function minimizeWindow(nativeWin:NativeWindow):Boolean{
+    if(nativeWin.displayState != NativeWindowDisplayState.MINIMIZED){
+        var beforeState:String = nativeWin.displayState;
+        var afterState:String = NativeWindowDisplayState.MINIMIZED;
+        var displayStateEvent:NativeWindowDisplayStateEvent = 
+            new NativeWindowDisplayStateEvent(NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+        nativeWin.dispatchEvent(displayStateEvent);
+        if(!displayStateEvent.isDefaultPrevented()){
+            nativeWin.minimize();
+            return true;
+        } else {
+          return false;
+        }
+     }
+     return false;
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following example illustrates how to allow cancelation of a call to
+ <code>minimize()</code> in JavaScript running in an HTMLLoader object (or HTML window): <div class="listing"><pre> 
+function minimizeWindow(){
+    if(window.nativeWindow.displayState != air.NativeWindowDisplayState.MINIMIZED){
+        var beforeState = window.nativeWindow.displayState;
+        var afterState = air.NativeWindowDisplayState.MINIMIZED;
+        var displayStateEvent = 
+            new air.NativeWindowDisplayStateEvent(air.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+        window.nativeWindow.dispatchEvent(displayStateEvent);
+        if(!displayStateEvent.isDefaultPrevented()){
+            window.nativeWindow.minimize();
+            return true;
+        } else {
+          return false;
+        }
+     }
+     return false;
+}</pre></div>
+</div>
+</div>
+<a name="notifyUser()"></a><a name="notifyUser(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;notifyUser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function notifyUser(type:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<p></p>
+<p></p><p>
+      Triggers a visual cue through the operating system that an event of 
+      interest has occurred.
+      
+      <p>When <code>NativeWindow.supportsNotification</code> is <code>true</code>,
+      the visual cue will conform to the operating system convention of the 
+      native system. For example, on Windows, the task bar icon will flash.</p>
+<p>The <code>type</code> parameter determines the intensity of the cue.
+      Constants for the permitted values are defined in the NotificationType 
+      class, and may be:</p>
+<ul>
+<li>
+<code>NotificationType.INFORMATIONAL</code>
+</li>
+<li>
+<code>NotificationType.CRITICAL</code>
+</li>
+</ul>
+<p>The cues provided for informational notifications are of short duration;
+      those provided for critical notifications will last until the user activates
+      this window.</p>
+<p>
+<b>Note:</b> Calling <code>notifyUser()</code> when 
+      <code>NativeWindow.supportsNotification</code> is <code>false</code> 
+      is allowed, but does nothing.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; A string representing the urgency of the notification.   
+   </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="orderInBackOf()"></a><a name="orderInBackOf(flash.display.NativeWindow)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;orderInBackOf</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function orderInBackOf(window:<a href="../../flash/display/NativeWindow.html">NativeWindow</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Sends this window directly behind the specified window.
+      
+      <p>Does not activate or acquire the focus for the window or the application.
+      Minimized or hidden (<code>visible</code> is <code>false</code>) windows cannot be
+      reordered.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">window</span>:<a href="../../flash/display/NativeWindow.html">NativeWindow</a></code> &mdash; An application window.
+      
+      </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if this window was succesfully sent to the 
+      back; <code>false</code> if this window is invisible or minimized.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to move a window just below another
+ window with references to the NativeWindow instances:<div class="listing"><pre>
+windowBehind.orderInBackOf(windowFront);</pre></div>
+</div>
+<br>
+<div class="detailBody"> With references to display objects on the window stages:<div class="listing"><pre>
+displayObjBehind.stage.nativeWindow.orderInBackOf(displayObjectFront.stage.nativeWindow);
+
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object (or HTML root window)
+ using references to two JavaScript Window objects:<div class="listing"><pre>
+jsWindowObjBehind.nativeWindow.orderInBackOf(jsWindowObjFront.nativeWindow);</pre></div>
+</div>
+</div>
+<a name="orderInFrontOf()"></a><a name="orderInFrontOf(flash.display.NativeWindow)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;orderInFrontOf</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function orderInFrontOf(window:<a href="../../flash/display/NativeWindow.html">NativeWindow</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Brings this window directly in front of the specified window.
+      
+      <p>Does not activate or acquire the focus for the window or the application.
+      Minimized or hidden (<code>visible</code> is <code>false</code>) windows cannot be
+      reordered.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">window</span>:<a href="../../flash/display/NativeWindow.html">NativeWindow</a></code> &mdash; An application window.
+      
+      </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if this window was succesfully brought to the 
+      front; <code>false</code> if this window is invisible or minimized.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to move a window just above another
+ window with references to the NativeWindow instances:<div class="listing"><pre>
+windowFront.orderInFrontOf(windowBehind);
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> With references to display objects on the window stages:<div class="listing"><pre>
+displayObjFront.stage.nativeWindow.orderInFrontOf(displayObjectBehind.stage.nativeWindow);
+
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object (or HTML root window)
+ using references to two JavaScript window objects:<div class="listing"><pre>
+jsWindowObjFront.nativeWindow.orderInFrontOf(jsWindowObjBehind.nativeWindow);
+
+</pre></div>
+</div>
+</div>
+<a name="orderToBack()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;orderToBack</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function orderToBack():<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Sends this window behind any other visible windows.
+      
+      <p>Does not activate or acquire the focus for this window or the application.
+      Minimized or hidden (<code>visible</code> is <code>false</code>) windows cannot be
+      reordered.</p>
+<p>If <code>alwaysInFront</code> is <code>true</code>, then calling this method will not 
+      send this window behind any windows which have 
+      <code>alwaysInFront</code> set to <code>false</code>.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if this window was succesfully sent to the 
+      back; <code>false</code> if this window is invisible or minimized.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to move a window behind all other
+ windows in the application (with the same <code>alwaysInFront</code> setting):<div class="listing"><pre>
+windowObj.orderToBack();
+
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObj.stage.nativeWindow.orderToBack();
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window
+ (or a root HTML window):<div class="listing"><pre>
+window.nativeWindow.orderToBack();
+
+</pre></div>
+</div>
+</div>
+<a name="orderToFront()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;orderToFront</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function orderToFront():<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Brings this window in front of any other visible windows. 
+      
+      <p>Does not activate or acquire the focus for this window or the application.
+      Minimized or hidden (<code>visible</code> is <code>false</code>) windows cannot be
+      reordered.</p>
+<p>If <code>alwaysInFront</code> is <code>false</code>, then calling this method will not 
+      send this window in front of any windows which have 
+      <code>alwaysInFront</code> set to <code>true</code>.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if this window was succesfully brought to the 
+      front; <code>false</code> if this window is invisible or minimized.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following examples show how to move a window in front of all other
+ windows in the application (with the same <code>alwaysInFront</code> setting):<div class="listing"><pre>
+windowObj.orderToFront();
+
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> With a reference to a display object on the window stage:<div class="listing"><pre>
+displayObj.stage.nativeWindow.orderToFront();
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> From a JavaScript routine running in an HTMLLoader object in the window
+ (or a root HTML window):<div class="listing"><pre>
+window.nativeWindow.orderToFront();
+
+</pre></div>
+</div>
+</div>
+<a name="restore()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;restore</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function restore():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Restores this window from either a minimized or a maximized state.
+      
+      <p>Calling <code>restore()</code> dispatches a <code>displayStateChange</code> event, 
+      and, if applicable, a <code>move</code> and a <code>resize</code> event. 
+      Whereas system chrome will dispatch a <code>displayStateChanging</code> event that can 
+      be canceled when a restore command is initiated by a user, your restore logic must 
+      implement this behavior, if desired.
+      </p>
+<p>
+      The <code>restore()</code> method executes asynchronously. To detect the completion 
+      of the state change, listen for the <code>displayStateChange</code> event.
+      </p>
+<p>If the window is already in the <code>NativeWindowDisplayState.NORMAL</code> state, 
+      no action is taken and no events are dispatched.</p>
+</p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the method is called after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NativeWindowDisplayState.html" target="">flash.display.NativeWindowDisplayState</a>
+<br>
+<a href="../../flash/events/NativeWindowDisplayStateEvent.html" target="">flash.events.NativeWindowDisplayStateEvent</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody">  
+ The following example illustrates how to allow cancelation of a restore operation: <div class="listing"><pre>
+public function restoreWindow(nativeWin:NativeWindow):Boolean{
+    if(nativeWin.displayState != NativeWindowDisplayState.NORMAL){
+        var beforeState:String = nativeWin.displayState;
+        var afterState:String = NativeWindowDisplayState.NORMAL;
+        var displayStateChangingEvent:NativeWindowDisplayStateEvent = 
+            new NativeWindowDisplayStateEvent(NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+        nativeWin.dispatchEvent(displayStateChangingEvent);
+        if(!displayStateChangingEvent.isDefaultPrevented()){
+            nativeWin.restore();
+            return true;
+        } else {
+          return false;
+        }
+     }
+     return false;
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following example illustrates how to allow cancelation of a restore operation from
+ a JavaScript routine running in an HTMLLoader object on the window (or an HTML window): <div class="listing"><pre>
+function restoreWindow(nativeWin){
+    if(window.nativeWindow.displayState != air.NativeWindowDisplayState.NORMAL){
+        var beforeState = window.nativeWindow.displayState;
+        var afterState = air.NativeWindowDisplayState.NORMAL;
+        var displayStateEvent = 
+            new air.NativeWindowDisplayStateEvent(air.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING,
+                                              true,true,beforeState,afterState);
+        window.nativeWindow.dispatchEvent(displayStateEvent);
+        if(!displayStateEvent.isDefaultPrevented()){
+            window.nativeWindow.restore();
+            return true;
+        } else {
+          return false;
+        }
+     }
+     return false;
+}</pre></div>
+</div>
+</div>
+<a name="startMove()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;startMove</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function startMove():<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Starts a system-controlled move of this window.
+      <p>
+      When called from a <code>mouseDown</code> event, this method begins a mouse-driven move
+      sequence that continues until a <code>mouseUp</code> event occurs. 
+      </p>
+<p>
+      When called from other code this method begins a keyboard- or mouse-driven move sequence 
+      consistent with the operating system's default sequence.
+      </p>
+<p>During a move sequence, a series of events will be dispatched as the window origin moves. For
+      each incremental move, first a <code>moving</code> event is dispatched and then, if the 
+      <code>moving</code> event is not canceled, the window location is updated and a 
+      <code>move</code> event is dispatched. If a <code>moving</code> event is
+      canceled, the move sequence is immediately terminated.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if the move was succesfully initiated and 
+       <code>false</code> if the window is maximized.
+      </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the method is called after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how to move a window in response to a 
+ <code>mouseDown</code> event:<div class="listing"><pre>
+import flash.display.NativeWindow;
+import flash.events.MouseEvent;
+
+public class MovableWindow extends NativeWindow{
+    private function MovableWindow():void{
+        super(new NativeWindowInitOptions());
+        this.stage.addEventListener(MouseEvent.MOUSE_DOWN, onMoveCommand);
+        this.activate();
+    }
+    
+    private function onMoveCommand(event:MouseEvent):void{
+        this.startMove();
+    }
+}</pre></div>
+</div>
+</div>
+<a name="startResize()"></a><a name="startResize(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;startResize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function startResize(edgeOrCorner:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Starts a system-controlled resize operation of this window.
+      <p>
+      When called from a <code>mouseDown</code> event handler this method begins a mouse-driven resizing
+      sequence that continues until a <code>mouseUp</code> event occurs.  
+      </p>
+<p>
+      When called from other code this method begins a keyboard- or mouse-driven resizing sequence consistent 
+      with the operating system's default sequence.
+      </p>
+<p>During the resize sequence, a series of events will be dispatched as the 
+      window dimensions change. For each incremental change, first a <code>resizing</code> 
+      event is dispatched and then, if the <code>resizing</code> event is not
+      canceled, the window dimensions are updated and a <code>resize</code> event is dispatched. 
+      If a <code>resizing</code> event is canceled, the the sequence is immediately terminated.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">edgeOrCorner</span>:<a href="../../String.html">String</a></code> (default = <code>NaN</code>)<code></code> &mdash; A constant from the NativeWindowResize class that specifies
+      which edge or corner of this window to resize. The following are
+      valid values:
+            <p>
+<table class="innertable" ><tr>
+<th>Value</th><th>Vertical alignment</th><th>Horizontal alignment</th>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.TOP</code>
+</td><td>Top</td><td>Center</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.BOTTOM</code>
+</td><td>Bottom</td><td>Center</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.LEFT</code>
+</td><td>Center</td><td>Left</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.RIGHT</code>
+</td><td>Center</td><td>Right</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.TOP_LEFT</code>
+</td><td>Top</td><td>Left</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.TOP_RIGHT</code>
+</td><td>Top</td><td>Right</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.BOTTOM_LEFT</code>
+</td><td>Bottom</td><td>Left</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.BOTTOM_RIGHT</code>
+</td><td>Bottom</td><td>Right</td>
+</tr>
+<tr>
+<td>
+<code>NativeWindowResize.NONE</code>
+</td><td>Bottom</td><td>Right</td>
+</tr></table>
+</p>
+</td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if the resize was succesfully initiated and 
+       <code>false</code> if the window is maximized.
+
+      </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the method is called after this window has been closed.
+      
+      </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how to resize a window in response to a 
+ <code>mouseDown</code> event:<div class="listing"><pre>
+public class ResizableWindow extends NativeWindow
+{
+    public function ResizableWindow()
+    {
+        var options:NativeWindowInitOptions = new NativeWindowInitOptions();
+        super(options);
+        this.stage.align = StageAlign.TOP_LEFT;
+        this.stage.scaleMode = StageScaleMode.NO_SCALE;
+        this.stage.addEventListener(MouseEvent.MOUSE_DOWN, onResizeCommand);
+        this.activate();
+    }
+
+    private function onResizeCommand(event:MouseEvent):void{
+        var resizeFrom:String = "";
+        if(event.localY &lt; this.height * .33){resizeFrom = "T";}
+        else if(event.localY &gt; this.height * .66){resizeFrom = "B";}
+        if(event.localX &lt; this.width * .33){resizeFrom += "L";}
+        else if(event.localX &gt; this.width * .66){resizeFrom += "R";}
+        
+        this.startResize(resizeFrom);
+    }    
+}</pre></div>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:activate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;activate</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#ACTIVATE"><code>flash.events.Event.ACTIVATE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window has been activated.
+ 
+ </p>
+ The <code>Event.ACTIVATE</code> constant defines the value of the <code>type</code> property of an <code>activate</code> event object. 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the ACTIVATE event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:close"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;close</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window has been closed.
+  </p>
+ The <code>Event.CLOSE</code> constant defines the value of the <code>type</code> property of a <code>close</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object whose connection has been closed.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:closing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;closing</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CLOSING"><code>flash.events.Event.CLOSING</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object immediately before the window is to be closed.
+ This event can be canceled to prevent the window from being closed.
+  </p>
+ The <code>Event.CLOSING</code> constant defines the value of the 
+ <code>type</code> property of a <code>closing</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>true</code>; canceling this event object stops the close operation.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+                                                object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object whose connection is to be closed.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:deactivate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deactivate</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#DEACTIVATE"><code>flash.events.Event.DEACTIVATE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window has been deactivated.
+  </p>
+ The <code>Event.DEACTIVATE</code> constant defines the value of the <code>type</code> property of a <code>deactivate</code> event object. 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the DEACTIVATE event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:displayStateChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;displayStateChange</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowDisplayStateEvent.html"><code>flash.events.NativeWindowDisplayStateEvent</code></a>
+<br>
+<span class="label">NativeWindowDisplayStateEvent.type property = </span><a href="../../flash/events/NativeWindowDisplayStateEvent.html#DISPLAY_STATE_CHANGE"><code>flash.events.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window's <code>displayState</code> property has changed.
+  </p>
+    Defines the value of the <code>type</code> property of a <code>displayStateChange</code> event object. 
+        This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterDisplayState</code></td><td>The old display state of the window.</td>
+</tr>
+<tr>
+<td><code>beforeDisplayState</code></td><td>The new display state of the window.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow instance that has just changed state. 
+    </td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; There is no default behavior to cancel.</td>
+</tr></table>
+    
+    </div>
+<a name="event:displayStateChanging"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;displayStateChanging</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowDisplayStateEvent.html"><code>flash.events.NativeWindowDisplayStateEvent</code></a>
+<br>
+<span class="label">NativeWindowDisplayStateEvent.type property = </span><a href="../../flash/events/NativeWindowDisplayStateEvent.html#DISPLAY_STATE_CHANGING"><code>flash.events.NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object immediately before the window changes its display state.
+ This event can be canceled to prevent the change.
+ 
+ </p>
+    Defines the value of the <code>type</code> property of a <code>displayStateChanging</code> event object. 
+    
+    This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterDisplayState</code></td><td>The display state of the window before the pending change.</td>
+</tr>
+<tr>
+<td><code>beforeDisplayState</code></td><td>The display state of the window after the pending change.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow instance that has just changed state. 
+    </td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>true</code>; canceling the event will prevent the change.</td>
+</tr></table>
+    
+    <br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example demonstrates how to cancel a <code>displayStateChanging</code> event.<div class="listing"><pre>
+function displayStateChanging_handler(displayStateEvent:NativeWindowDisplayStateEvent):void
+{
+  //shouldStopStateChange is an application-defined Boolean indicating 
+  //that display state changes should be canceled
+  if (displayStateEvent.type == NativeWindowDisplayStateEvent.DISPLAY_STATE_CHANGING 
+                                  &amp;&amp;    shouldStopStateChange)
+  {
+    displayStateEvent.preventDefault();
+  }
+}</pre></div></div>
+</div>
+<a name="event:move"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;move</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowBoundsEvent.html"><code>flash.events.NativeWindowBoundsEvent</code></a>
+<br>
+<span class="label">NativeWindowBoundsEvent.type property = </span><a href="../../flash/events/NativeWindowBoundsEvent.html#MOVE"><code>flash.events.NativeWindowBoundsEvent.MOVE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window has been moved on the desktop.
+ <p>
+ A <code>move</code> event is dispatched whenever the origin (<code>x</code> or <code>y</code> properties) of the window
+ changes, which can occur because of a system-controlled window move; minimizing, maximizing,
+ or restoring the window; or changing the window location by setting the <code>x</code>, 
+ <code>y</code>, or <code>bounds</code> properties.
+ </p>
+ <p><b>Note:</b> Avoid actions that may open simultaneous operating system dialogs boxes
+ in the handler functions for both the <code>moving</code> and <code>move</code> events 
+ of a NativeWindow object. This may occur, for example, if both handler functions throw an error.
+ If it does occur, the second dialog box opened will not
+ register mouse clicks and must be closed using the keyboard.</p>
+ 
+ </p>
+    Defines the value of the <code>type</code> property of a <code>move</code> event object. 
+        This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterBounds</code></td><td>The new bounds of the window.</td>
+</tr>
+<tr>
+<td><code>beforeBounds</code></td><td>The old bounds of the window.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow object that has just changed state. 
+    </td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; There is no default behavior to cancel.</td>
+</tr></table>
+    
+    </div>
+<a name="event:moving"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;moving</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowBoundsEvent.html"><code>flash.events.NativeWindowBoundsEvent</code></a>
+<br>
+<span class="label">NativeWindowBoundsEvent.type property = </span><a href="../../flash/events/NativeWindowBoundsEvent.html#MOVING"><code>flash.events.NativeWindowBoundsEvent.MOVING</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by the NativeWindow object immediately before the window is to be moved on
+ the desktop. This event can be canceled to prevent or modify the move.
+  <p><b>Note:</b> Avoid actions that may open simultaneous operating system dialogs boxes
+ in the handler functions for both the <code>moving</code> and <code>move</code> events 
+ of a NativeWindow object. This may occur, for example, if both handler functions throw an error.
+ If it does occur, the second dialog box opened will not
+ register mouse clicks and must be closed using the keyboard.</p>
+ 
+ </p>
+    Defines the value of the <code>type</code> property of a <code>moving</code> event object. 
+        This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterBounds</code></td><td>The bounds of the window after the pending change.</td>
+</tr>
+<tr>
+<td><code>beforeBounds</code></td><td>The bounds of the window before the pending change.</td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>true</code>; cancelling the event will prevent the window move.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow object that has just changed state.</td>
+</tr></table>
+    
+    </div>
+<a name="event:resize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;resize</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowBoundsEvent.html"><code>flash.events.NativeWindowBoundsEvent</code></a>
+<br>
+<span class="label">NativeWindowBoundsEvent.type property = </span><a href="../../flash/events/NativeWindowBoundsEvent.html#RESIZE"><code>flash.events.NativeWindowBoundsEvent.RESIZE</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object after the window has been resized.
+  A <code>resize</code> event is dispatched whenever the size (<code>width</code> or <code>height</code> properties) of the window
+ changes, which can occur because of a system-controlled window resize; minimizing, maximizing,
+ or restoring the window; or changing the window size by setting the <code>width</code>, 
+ <code>height</code>, or <code>bounds</code> properties.
+ 
+ NativeWindow <code>resize</code> events are dispatched during system-controled resize loops. In contrast,
+ Stage object <code>resize</code> events are dispatched when the Stage is ready for drawing.
+ 
+ </p>
+    Defines the value of the <code>type</code> property of a <code>resize</code> event object. 
+        This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterBounds</code></td><td>The new bounds of the window.</td>
+</tr>
+<tr>
+<td><code>beforeBounds</code></td><td>The old bounds of the window.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow object that has just changed state. 
+    </td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; There is no default behavior to cancel.</td>
+</tr></table>
+        <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Stage.html#resize" target="">flash.display.Stage.resize</a>
+</div>
+</div>
+<a name="event:resizing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;resizing</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NativeWindowBoundsEvent.html"><code>flash.events.NativeWindowBoundsEvent</code></a>
+<br>
+<span class="label">NativeWindowBoundsEvent.type property = </span><a href="../../flash/events/NativeWindowBoundsEvent.html#RESIZING"><code>flash.events.NativeWindowBoundsEvent.RESIZING</code></a>
+<br>
+<p></p>
+<p></p>
+<p></p><p>
+ Dispatched by this NativeWindow object immediately before the window is to be resized on
+ the desktop. This event can be canceled to prevent or modify the resize.
+ 
+ </p>
+    Defines the value of the <code>type</code> property of a <code>resizing</code> event object. 
+        This event has the following properties:
+    <table class="innertable" ><tr>
+<th>Properties</th><th>Values</th>
+</tr>
+<tr>
+<td><code>afterBounds</code></td><td>The bounds of the window after the pending change.</td>
+</tr>
+<tr>
+<td><code>beforeBounds</code></td><td>The bounds of the window before the pending change.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NativeWindow object that has just changed state. 
+    </td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>No.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>Indicates the object that is actively processing the Event 
+    object with an event listener.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>true</code>; cancelling the event will prevent the window move.</td>
+</tr></table>
+    
+    <br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example demonstrates how to cancel a <code>resizing</code> event.<div class="listing"><pre>
+function boundsChanging_handler(boundsEvent:NativeWindowBoundsEvent):void
+{
+  //shouldStopResize is an application-defined Boolean indicating 
+  //that resize operations should be canceled
+  if (boundsEvent.type == NativeWindowBoundsEvent.RESIZING &amp;&amp; shouldStopResize)
+  {
+    boundsEvent.preventDefault();
+  }
+}</pre></div></div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

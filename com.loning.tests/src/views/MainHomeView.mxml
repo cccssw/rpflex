@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="com.loning.controls.*"
+		xmlns:spark="flex.utils.spark.*"
+		xmlns:controls2="com.loning.image.controls.*"
+		xmlns:aaronhardy="com.aaronhardy.*"
+		xmlns:resize="flex.utils.spark.resize.*"
+		actionBarVisible="true" creationComplete="view1_creationCompleteHandler(event)"
+		overlayControls="false" tabBarVisible="true" title="HomeView">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.loning.controls.PopupMenu;
+			
+			import mx.core.BitmapAsset;
+			import mx.events.FlexEvent;
+			
+			import spark.components.Application;
+			
+			private var popup:PopupMenu=new PopupMenu();
+			
+			[Embed( 'assets/4a01bcb1ef907.jpg' )]
+			private var src:Class;
+			
+			[Bindable]
+			private var bitmapData:BitmapData;
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				var a:BitmapAsset =new src();
+				bitmapData=a.bitmapData;
+				zoomer.bitmapData=zoomer.rotateLeft(a.bitmapData);
+				this.navigator.pushView(SelectionView);
+				//this.navigator.pushView(ElementSettingsView);
+			}
+			
+		]]>
+	</fx:Script>
+	<aaronhardy:ImageZoomer id="zoomer" x="0" y="0" width="475" height="356">
+	</aaronhardy:ImageZoomer>
+</s:View>

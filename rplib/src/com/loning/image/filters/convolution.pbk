@@ -1,0 +1,54 @@
+<languageVersion : 1.0;>
+
+kernel NewFilter
+<   namespace : "com.om-labs.filters.convolution";
+    vendor : "Om Labs";
+    version : 1;
+    description : "Allows defining of convolution matrices for blur, edge tracing, embossing, crayonify";
+>
+{
+
+    parameter float divider<
+        minValue: 0.0;
+        maxValue:9.0;
+        defaultValue:1.0;
+    >;
+
+
+    parameter float4 bias<
+        minValue: float4(-1.0);
+        maxValue:float4(1.0);
+        defaultValue:float4(0.0);
+    >;
+    
+    parameter float3x3 matrix<
+        defaultValue: float3x3(1.0);
+    >;
+
+
+
+
+    input image4 src;
+    output pixel4 dst;
+
+    void evaluatePixel(){
+        float2 curPt = outCoord();
+        float4 tot = float4(0.0);
+        
+        tot += matrix[0][0] * sampleNearest(src,float2(curPt.x-1.0,curPt.y-1.0));
+        tot += matrix[0][1] * sampleNearest(src,float2(curPt.x-1.0,curPt.y    ));
+        tot += matrix[0][2] * sampleNearest(src,float2(curPt.x-1.0,curPt.y+1.0));
+        
+        tot += matrix[1][0] * sampleNearest(src,float2(curPt.x    ,curPt.y-1.0));
+        tot += matrix[1][1] * sampleNearest(src,float2(curPt.x    ,curPt.y    ));
+        tot += matrix[1][2] * sampleNearest(src,float2(curPt.x    ,curPt.y+1.0));
+        
+        tot += matrix[2][0] * sampleNearest(src,float2(curPt.x+1.0,curPt.y-1.0));
+        tot += matrix[2][1] * sampleNearest(src,float2(curPt.x+1.0,curPt.y    ));
+        tot += matrix[2][2] * sampleNearest(src,float2(curPt.x+1.0,curPt.y+1.0));
+        
+        dst = tot/divider + bias;
+        
+
+    }
+}

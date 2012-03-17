@@ -1,0 +1,1215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Animator,fl.motion.Animator,a,AUTO,autoRewind,blank,blendMode,brightness,b,cacheAsBitmap,CCW,color,c,CW,dimensions,d,duration,ease,easingFunction,elementType,filters,filters,firstFrame,frameRate,functionName,index,instanceName,isPlaying,keyframes,keyframes,keyframesCompact,label,linkageID,loop,MOTION_END,MOTION_START,MOTION_UPDATE,motion,NONE,orientToPath,orientToPath,parameters,points,points,points,points,positionMatrix,repeatCount,rotateDirection,rotateTimes,ROTATION,rotation,rotation,SCALE_X,SCALE_Y,scaleX,scaleX,scaleY,scaleY,SKEW_X,SKEW_Y,skewX,skewX,skewY,skewY,source,symbolName,target,target,target,target,target,target,TIME_CHANGE,time,tintColor,tintMultiplier,transformationPoint,transformationPoint,tweens,tweens,tweenScale,tweenSnap,tweenSync,X,x,x,Y,y,y,addKeyframe,affectsTweenable,easeNone,easeQuadPercent,end,fromXML,fromXMLString,fromXMLString,getColorTransform,getCubicCoefficients,getCubicRoots,getCurrentKeyframe,getFilters,getNextKeyframe,getQuadraticRoots,getRotation,getRotationRadians,getScaleX,getScaleY,getSingleValue,getSkewX,getSkewXRadians,getSkewY,getSkewYRadians,getTween,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getYForX,interpolateColor,interpolateFilter,interpolateFilters,interpolateTransform,matchInternalPointWithExternal,nextFrame,pause,play,resume,rewind,rotateAroundExternalPoint,rotateAroundInternalPoint,setRotation,setRotationRadians,setScaleX,setScaleY,setSkewX,setSkewXRadians,setSkewY,setSkewYRadians,setTint,setValue,setValue,stop" name="keywords">
+<title>fl.motion.Animator (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Animator - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/motion/Animator.html&amp;fl/motion/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Animator</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Animator"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.motion</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Animator</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Animator  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Animator class applies an XML description of a motion tween to a display object.
+ The properties and methods of the Animator class control the playback of the motion,
+ and Flash Player broadcasts events in response to changes in the motion's status.
+ The Animator class is primarily used by the Copy Motion as ActionScript command in
+ Flash CS3. You can then edit the ActionScript using the application programming interface
+ (API) or construct your own custom animation.
+ <p>If you plan to call methods of the Animator class within a function, declare the Animator 
+ instance outside of the function so the scope of the object is not restricted to the 
+ function itself. If you declare the instance within a function, Flash Player deletes the 
+ Animator instance at the end of the function as part of Flash Player's routine "garbage collection"
+ and the target object will not animate.</p>
+ 
+ <p></p>
+<p>
+<span class="classHeaderTableLabel">Default MXML Property</span><code>motion</code>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#autoRewind">autoRewind</a> : <a href="../../Boolean.html">Boolean</a> = false<div class="summaryTableDescription">
+     Sets the animation to restart after it finishes.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isPlaying">isPlaying</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the animation is currently playing.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#motion">motion</a> : <a href="../../fl/motion/Motion.html">Motion</a>
+<div class="summaryTableDescription">
+     The object that contains the motion tween properties for the animation.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#orientToPath">orientToPath</a> : <a href="../../Boolean.html">Boolean</a> = false<div class="summaryTableDescription">
+     Sets the position of the display object along the motion path.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#positionMatrix">positionMatrix</a> : <a href="../../flash/geom/Matrix.html">Matrix</a>
+<div class="summaryTableDescription">
+     The Matrix object that applies an overall transformation to the motion path.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#repeatCount">repeatCount</a> : <a href="../../int.html">int</a> = 1<div class="summaryTableDescription">
+      Number of times to repeat the animation.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#target">target</a> : <a href="../../flash/display/DisplayObject.html">DisplayObject</a>
+<div class="summaryTableDescription">
+     The display object being animated.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#time">time</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">
+     A zero-based integer that indicates and controls the time in the current animation.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#transformationPoint">transformationPoint</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     The point of reference for rotating or scaling a display object.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Animator()">Animator</a>(xml:<a href="../../XML.html">XML</a> = null, target:<a href="../../flash/display/DisplayObject.html">DisplayObject</a> = null)</div>
+<div class="summaryTableDescription">
+     Creates an Animator object to apply the XML-based motion tween description to a display object.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#end()">end</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Stops the animation and Flash Player goes immediately to the last frame in the animation sequence.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fromXMLString()">fromXMLString</a>(xmlString:<a href="../../String.html">String</a>, target:<a href="../../flash/display/DisplayObject.html">DisplayObject</a> = null):<a href="../../fl/motion/Animator.html">Animator</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     Creates an Animator object from a string of XML.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#nextFrame()">nextFrame</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Advances Flash Player to the next frame in the animation sequence.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pause()">pause</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Pauses the animation until you call the resume() method.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#play()">play</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Begins the animation.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resume()">resume</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Resumes the animation after it has been paused 
+      by the pause() method.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rewind()">rewind</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets Flash Player to the first frame of the animation.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#stop()">stop</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Stops the animation and Flash Player goes back to the first frame in the animation sequence.</div>
+</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:motionEnd">motionEnd</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the motion finishes playing, either when it reaches the end, or when the motion has been interrupted by a call to the stop() or end() methods.</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:motionStart">motionStart</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the motion starts playing.</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:motionUpdate">motionUpdate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the motion has changed and the screen has been updated.</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:timeChange">timeChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the Animator's time value has changed, but the screen has not yet been updated (i.e., the motionUpdate event).</td><td class="summaryTableOwnerCol">Animator</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="autoRewind"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">autoRewind</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var autoRewind:<a href="../../Boolean.html">Boolean</a> = false</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sets the animation to restart after it finishes.
+     </p></div>
+<a name="propertyDetail"></a><a name="isPlaying"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isPlaying</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isPlaying:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the animation is currently playing.
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isPlaying():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="motion"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">motion</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>motion:<a href="../../fl/motion/Motion.html">Motion</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The object that contains the motion tween properties for the animation. 
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get motion():<a href="../../fl/motion/Motion.html">Motion</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set motion(value:<a href="../../fl/motion/Motion.html">Motion</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="orientToPath"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">orientToPath</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var orientToPath:<a href="../../Boolean.html">Boolean</a> = false</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sets the position of the display object along the motion path. If set to <code>true</code>
+     the baseline of the display object orients to the motion path; otherwise the registration
+     point orients to the motion path.
+     </p></div>
+<a name="propertyDetail"></a><a name="positionMatrix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">positionMatrix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var positionMatrix:<a href="../../flash/geom/Matrix.html">Matrix</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The Matrix object that applies an overall transformation to the motion path. 
+     This matrix allows the path to be shifted, scaled, skewed or rotated, 
+     without changing the appearance of the display object.
+     </p></div>
+<a name="propertyDetail"></a><a name="repeatCount"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">repeatCount</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var repeatCount:<a href="../../int.html">int</a> = 1</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Number of times to repeat the animation.
+      Possible values are any integer greater than or equal to <code>0</code>.
+      A value of <code>1</code> means to play the animation once.
+      A value of <code>0</code> means to play the animation indefinitely
+      until explicitly stopped (by a call to the <code>end()</code> method, for example).
+          </p><p> The default value is <code>1</code>.</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#end()" target="">end()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="target"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">target</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>target:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The display object being animated. 
+     Any subclass of flash.display.DisplayObject can be used, such as a <code>MovieClip</code>, <code>Sprite</code>, or <code>Bitmap</code>.
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get target():<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set target(value:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/DisplayObject.html" target="">flash.display.DisplayObject</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="time"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">time</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>time:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     A zero-based integer that indicates and controls the time in the current animation. 
+     At the animation's first frame <code>time</code> is <code>0</code>. 
+     If the animation has a duration of 10 frames, at the last frame <code>time</code> is <code>9</code>. 
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get time():<a href="../../int.html">int</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set time(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="transformationPoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">transformationPoint</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var transformationPoint:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The point of reference for rotating or scaling a display object. The transformation point is 
+     relative to the display object's bounding box.
+     The point's coordinates must be scaled to a 1px x 1px box, where (1, 1) is the object's lower-right corner, 
+     and (0, 0) is the object's upper-left corner.  
+     </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="Animator()"></a><a name="Animator(XML,flash.display.DisplayObject)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Animator</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Animator(xml:<a href="../../XML.html">XML</a> = null, target:<a href="../../flash/display/DisplayObject.html">DisplayObject</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Creates an Animator object to apply the XML-based motion tween description to a display object.
+          </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">xml</span>:<a href="../../XML.html">XML</a></code> (default = <code>null</code>)<code></code> &mdash; An E4X object containing an XML-based motion tween description.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code> (default = <code>null</code>)<code></code> &mdash; The display object using the motion tween.
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="end()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">end</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function end():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Stops the animation and Flash Player goes immediately to the last frame in the animation sequence. 
+      If the <code>autoRewind</code> property is set to <code>true</code>, Flash Player goes to the first
+     frame in the animation sequence. 
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#autoRewind" target="">autoRewind</a>
+</div>
+</div>
+<a name="fromXMLString()"></a><a name="fromXMLString(String,flash.display.DisplayObject)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fromXMLString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function fromXMLString(xmlString:<a href="../../String.html">String</a>, target:<a href="../../flash/display/DisplayObject.html">DisplayObject</a> = null):<a href="../../fl/motion/Animator.html">Animator</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Creates an Animator object from a string of XML. 
+     This method is an alternative to using the Animator constructor, which accepts an E4X object instead.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">xmlString</span>:<a href="../../String.html">String</a></code> &mdash; A string of XML describing the motion tween.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code> (default = <code>null</code>)<code></code> &mdash; The display object using the motion tween.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../fl/motion/Animator.html">Animator</a></code> &mdash; An Animator instance that applies the specified <code>xmlString</code> to the specified <code>target</code>.
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+</div>
+<a name="nextFrame()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">nextFrame</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function nextFrame():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Advances Flash Player to the next frame in the animation sequence.
+     </p></div>
+<a name="pause()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pause():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Pauses the animation until you call the <code>resume()</code> method.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#resume()" target="">resume()</a>
+</div>
+</div>
+<a name="play()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">play</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function play():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Begins the animation. Call the <code>end()</code> method 
+      before you call the <code>play()</code> method to ensure that any previous 
+      instance of the animation has ended before you start a new one.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#end()" target="">end()</a>
+</div>
+</div>
+<a name="resume()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function resume():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Resumes the animation after it has been paused 
+      by the <code>pause()</code> method.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#pause()" target="">pause()</a>
+</div>
+</div>
+<a name="rewind()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rewind</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rewind():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sets Flash Player to the first frame of the animation. 
+     If the animation was playing, it continues playing from the first frame. 
+     If the animation was stopped, it remains stopped at the first frame.
+     </p></div>
+<a name="stop()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stop</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function stop():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Stops the animation and Flash Player goes back to the first frame in the animation sequence.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Animator.html#end()" target="">end()</a>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:motionEnd"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">motionEnd</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/motion/MotionEvent.html"><code>fl.motion.MotionEvent</code></a>
+<br>
+<span class="label">MotionEvent.type property = </span><a href="../../fl/motion/MotionEvent.html#MOTION_END"><code>fl.motion.MotionEvent.MOTION_END</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when the motion finishes playing,
+  either when it reaches the end, or when the motion has 
+  been interrupted by a call to the <code>stop()</code> or <code>end()</code> methods.
+   </p>
+     Indicates that the motion has stopped, 
+     whether by an explicit call to <code>Animator.stop()</code> or <code>Animator.end()</code>,
+     or by reaching the end of the Motion instance.
+      <p>The properties of the event object have the following values:</p>
+      <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that defines the 
+           event listener that handles the event. For example, if you use 
+           <code>myButton.addEventListener()</code> to register an event listener, 
+           <code>myButton</code> is the value of the <code>currentTarget</code>. </td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event; 
+           it is not always the object listening for the event. 
+           Use the <code>currentTarget</code> property to always access the 
+           object listening for the event.</td>
+</tr></table>     
+     </div>
+<a name="event:motionStart"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">motionStart</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/motion/MotionEvent.html"><code>fl.motion.MotionEvent</code></a>
+<br>
+<span class="label">MotionEvent.type property = </span><a href="../../fl/motion/MotionEvent.html#MOTION_START"><code>fl.motion.MotionEvent.MOTION_START</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when the motion starts playing.
+   </p>
+     Indicates that the Motion instance has started playing. 
+      <p>The properties of the event object have the following values:</p>
+      <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that defines the 
+           event listener that handles the event. For example, if you use 
+           <code>myButton.addEventListener()</code> to register an event listener, 
+           <code>myButton</code> is the value of the <code>currentTarget</code>. </td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event; 
+           it is not always the object listening for the event. 
+           Use the <code>currentTarget</code> property to always access the 
+           object listening for the event.</td>
+</tr></table>
+     </div>
+<a name="event:motionUpdate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">motionUpdate</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/motion/MotionEvent.html"><code>fl.motion.MotionEvent</code></a>
+<br>
+<span class="label">MotionEvent.type property = </span><a href="../../fl/motion/MotionEvent.html#MOTION_UPDATE"><code>fl.motion.MotionEvent.MOTION_UPDATE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when the motion has changed and the screen has been updated.
+   </p>
+     Indicates that the Motion instance has changed and the screen has been updated.
+      <p>The properties of the event object have the following values:</p>
+      <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that defines the 
+           event listener that handles the event. For example, if you use 
+           <code>myButton.addEventListener()</code> to register an event listener, 
+           <code>myButton</code> is the value of the <code>currentTarget</code>. </td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event; 
+           it is not always the object listening for the event. 
+           Use the <code>currentTarget</code> property to always access the 
+           object listening for the event.</td>
+</tr></table>     
+     </div>
+<a name="event:timeChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">timeChange</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/motion/MotionEvent.html"><code>fl.motion.MotionEvent</code></a>
+<br>
+<span class="label">MotionEvent.type property = </span><a href="../../fl/motion/MotionEvent.html#TIME_CHANGE"><code>fl.motion.MotionEvent.TIME_CHANGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when the Animator's <code>time</code> value has changed, 
+  but the screen has not yet been updated (i.e., the <code>motionUpdate</code> event).
+ 
+  </p>
+     Indicates that the Animator instance's <code>time</code> value has changed, 
+     but the screen has not yet been updated (Flash Player has not dispatched the <code>motionUpdate</code> event).
+      <p>The properties of the event object have the following values:</p>
+      <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td>false</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that defines the 
+           event listener that handles the event. For example, if you use 
+           <code>myButton.addEventListener()</code> to register an event listener, 
+           <code>myButton</code> is the value of the <code>currentTarget</code>. </td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event; 
+           it is not always the object listening for the event. 
+           Use the <code>currentTarget</code> property to always access the 
+           object listening for the event.</td>
+</tr></table>     
+     </div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

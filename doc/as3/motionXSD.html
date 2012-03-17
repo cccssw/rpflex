@@ -1,0 +1,540 @@
+<!--livedocs:no-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<title>Motion XML Elements (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Motion XML Elements - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?motionXSD.html&amp;all-classes.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">  </td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("  "); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+
+--></script>
+<div class="MainContent">
+		<div style="height:15px;" width="100%"></div>
+		<p>You can describe a motion tween using XML and the ActionScript classes in the fl.motion package. Adobe Flash CS3 has a Copy Motion as ActionScript command that generates XML and ActionScript based on a motion tween on the Timeline for use on other symbols or in other projects. You can also script your own motion tween. As long as you have the fl.motion classes in your classpath at compile time, the motion tween will be applied to your specified display object. For more information on the motion classes, see the <a href="fl/motion/package-detail.html">fl.motion</a> package. The elements of the supporting XML correspond to classes and properties in the <em>ActionScript 3.0 Language and Components Reference</em>.</p>
+        <p><a href="#examples">View the examples.</a></p>
+        <p>The XML element hierarchy is as follows:</p>
+<listing>
+&lt;Motion&gt;
+  &lt;source&gt;
+    &lt;Source&gt;
+      &lt;dimensions&gt;
+        &lt;geom:Rectangle /&gt;
+      &lt;/dimensions&gt;
+      &lt;transformationPoint&gt;
+        &lt;geom:Point /&gt;
+      &lt;/transformationPoint&gt;
+    &lt;/Source&gt;
+  &lt;/source&gt;
+  &lt;Keyframe&gt;
+    &lt;color&gt;  
+      &lt;Color /&gt; 
+    &lt;/color&gt; 	
+    &lt;tweens&gt;
+      &lt;SimpleEase /&gt;
+      &lt;CustomEase&gt;
+        &lt;geom:Point /&gt;
+      &lt;/CustomEase&gt;
+    &lt;/tweens&gt;
+    &lt;filters&gt;  
+      &lt;filters /&gt; 
+    &lt;/filters&gt; 	
+  &lt;/Keyframe&gt;
+&lt;/Motion&gt;
+</listing>				
+					
+<p>The following table briefly summarizes the XML elements and attributes that can be assigned to a Motion object. For more details about each entry, see the properties listed in the classes that correspond to each element:</p>
+		<table cellpadding="3" cellspacing="0" class="summaryTable">
+			<tr>
+				<th width="100px">Element</th>
+				<th width="100px">Attribute</th>
+				<th width="100px">Type</th>
+				<th width="500px">Description</th>
+			</tr>
+			<tbody>
+				<tr>
+                    <td><code>Motion</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>Defines the Motion instance so Flash can assign properties that characterize the motion tween. See the <a href="fl/motion/Motion.html">fl.motion.Motion</a> class.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>duration</code></td>
+					<td>Number</td>
+					<td>Number of frames for the selected motion tween. See the <a href="fl/motion/Motion.html#duration">fl.motion.Motion.duration</a> property.</td>
+				</tr>	
+                <tr>
+                    <td><code>source</code></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Required parent tag for the Source element. This tag has no attributes, but it is required by the compiler to process the Source element and its attributes.</td>
+                </tr>                
+				<tr>
+                    <td><code>Source</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>Contains the properties of the original visual object associated with the motion. See the <a href="fl/motion/Source.html">fl.motion.Source</a> class.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>frameRate</code></td>
+					<td>Number</td>
+					<td>The frames per second (fps) setting for the SWF file containing the original animation copied from Flash CS3. This value does not have any effect on the ActionScript implementation in a different SWF fle. See the <a href="fl/motion/Source.html#frameRate">fl.motion.Source.frameRate</a> property.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>x</code></td>
+					<td>Number</td>
+					<td>The x coordinate of the transformation point of the symbol instance at the beginning of the original motion tween copied from Flash CS3.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>y</code></td>
+					<td>Number</td>
+					<td>The y coordinate of the transformation point of the symbol instance at the beginning of the original motion tween copied from Flash CS3.
+					</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>scaleX</code></td>
+					<td>Number</td>
+                    <td>The percentage of horizontal scale as a decimal value. The value is often between 0 and 1, but can be greater than 1 or less than 0. For example, you can set <code>scaleX</code> to -1 to flip the object, or to 3 to make it 3 times the original size.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>scaleY</code></td>
+					<td>Number</td>
+                    <td>The percentage of vertical scale as a decimal value. The value is often between 0 and 1, but can be greater than 1 or less than 0. For example, you can set <code>scaleY</code> to -1 to flip the object, or to 3 to make it 3 times the original size.</td>
+				</tr>	
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>skewX</code></td>
+                    <td>Number</td>
+                    <td>The angle (in degrees) of shearing along the horizontal axis. If the <code>skewX</code> and <code>skewY</code> values are equal, they are replaced by the <code>rotation</code> attribute.</td>
+                </tr>                   
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>skewY</code></td>
+                    <td>Number</td>
+                    <td>The angle (in degrees) of shearing along the vertical axis.If the <code>skewX</code> and <code>skewY</code> values are equal, they are replaced by the <code>rotation</code> attribute.</td>
+                </tr>                    
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>rotation</code></td>
+					<td>Number</td>
+					<td>The degrees of rotation for the initial frame.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>elementType</code></td>
+					<td>String</td>
+                    <td>The type of visual object used in the motion tween. Possible values are: "movie clip", "button", "graphic", "rectangle object", "oval object", "drawing object", "group", "bitmap", "compiled clip", "video", or "text".</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>symbolName</code></td>
+					<td>String</td>
+					<td>Name of the symbol in the Adobe Flash CS3 document's library, if it exists (since the original visual object may not be a symbol instance).</td>
+				</tr>																																		
+				<tr>
+                    <td><code>dimensions</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+                    <td>Contains a tag using the <code>geom</code> namespace for describing the bounding box for the tweened symbol.</td>
+				</tr>
+				<tr>
+                    <td><code>geom:Rectangle</code></td>
+					<td>&nbsp;</td>
+                    <td>An object from the <a href="flash/geom/package-detail.html">flash.geom</a> package.</td>
+                    <td>Defines the bounding box. You can add attributes that correspond to the properties of the flash.geom.Rectangle object. For example: <p><code>&lt;geom:Rectangle left="7" top="9" width="151.95" height="151.95" /&gt;</code></p><p>The <code>top</code> and <code>left</code> values are relative to the parent object's registration point (<code>top</code> and <code>left</code> are defined in the parent object's coordinate space.</p></td>
+				</tr>	
+                <tr>
+                    <td><code>transformationPoint</code></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Contains a tag using the <code>geom</code> namespace for describing the transformation point for the tweened symbol.</td>
+                </tr>                
+				<tr>
+                    <td><code>geom:Point</code></td>
+					<td>&nbsp;</td>
+                    <td>An object from the <a href="flash/geom/package-detail.html">flash.geom</a> package.</td>
+                    <td>The coordinates of the transformation point are defined as a percentage of the bounding box's dimensions (<code>geom:Rectangle</code> element's values). If the transformation point is the upper-left corner of the bounding box, the coordinates are (0, 0). If the transformation point is the lower-right corner of the bounding box the coordinates are (1, 1). These values allow the transformation point to be applied consistently to objects of different proportions and registration points. The transformation point can lie outside of the bounding box, in which case the coordinates may be less than 0 or greater than 1.</td>
+				</tr>									
+				<tr>
+                    <td><code>Keyframe</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>Contains information corresponding to a keyframe on the Timeline.</td>
+				</tr>	
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>blank</code></td>
+                    <td>Boolean</td>
+                    <td>Indicates that the keyframe is empty.</td>
+                </tr>                
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>index</code></td>
+					<td>Number</td>
+                    <td>A unique integer value for the keyframe. The first keyframe index is always 0. Keyframes in the XML must be specified in ascending order of the index value.</td>
+				</tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>label</code></td>
+                    <td>String</td>
+                    <td>An optional string that describes the keyframe and corresponds to a frame label on the Timeline.</td>
+                </tr>                
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>tweenSync</code></td>
+					<td>Boolean</td>
+                    <td>Toggles the sync setting on (<code>"true"</code>) and off (<code>"false"</code>). Sync recalculates the number of frames in a tween to match the number of frames allotted to it on the Timeline. This attribute has no effect on ActionScript animation, because ActionScript cannot control graphic symbols. The XML attribute is only used by Adobe Flash CS3's Copy Motion and Paste Motion commands. Defaults to <code>true</code> if omitted from the XML.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>tweenSnap</code></td>
+					<td>Boolean</td>
+                    <td>Toggles the Snap setting on (<code>"true"</code>) and off (<code>"false"</code>). Snap attaches a symbol to the motion path by its registration point. This attribute has no effect on ActionScript animation, because ActionScript cannot control graphic symbols. The XML attribute is only used by Adobe Flash CS3's Copy Motion and Paste Motion commands. Defaults to <code>true</code> if omitted from the XML.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>x</code></td>
+					<td>Number</td>
+					<td>The x coordinate of the center point of the symbol instance at the current keyframe.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>y</code></td>
+					<td>Number</td>
+					<td>The y coordinate of the center point of the symbol instance at the current keyframe.
+					</td>
+				</tr>					
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>scaleX</code></td>
+					<td>Number</td>
+                    <td>The percentage of horizontal scale as a decimal value between 0 and 1. The value is often between 0 and 1, but can be greater than 1 or less than 0. For example, you can set <code>scaleX</code> to -1 to flip the object, or to 3 to make it 3 times the original size.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>scaleY</code></td>
+					<td>Number</td>
+                    <td>The percentage of vertical scale as a decimal value between 0 and 1.  The value is often between 0 and 1, but can be greater than 1 or less than 0. For example, you can set <code>scaleY</code> to -1 to flip the object, or to 3 to make it 3 times the original size.</td>
+				</tr>           
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>skewX</code></td>
+                    <td>Number</td>
+                    <td>The angle (in degrees) of shearing along the horizontal axis. If the <code>skewX</code> and <code>skewY</code> values are equal, they are replaced by the <code>rotation</code> attribute.</td>
+                </tr>                   
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>skewY</code></td>
+                    <td>Number</td>
+                    <td>The angle (in degrees) of shearing along the vertical axis.If the <code>skewX</code> and <code>skewY</code> values are equal, they are replaced by the <code>rotation</code> attribute.</td>
+                </tr>    
+                <tr>
+					<td>&nbsp;</td>
+                    <td><code>rotation</code></td>
+					<td>Number</td>
+					<td>The degrees of rotation for the current frame.</td>
+				</tr>	
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>rotateDirection</code></td>
+                    <td>String</td>
+                    <td>Specifies how the tweened element rotates. Possible values are "auto", "none", "cw", "ccw". Defaults to "auto" if omitted from the XML.</td>
+                </tr>   
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>rotateTimes</code></td>
+                    <td>uint</td>
+                    <td>Adds rotation to the tweened element, in addition to any existing rotation. This rotation is dependent on the value of the rotateDirection attribute, which must be set to "cw" or "ccw". The <code>rotateTimes</code> value must be an integer that is zero or greater. See the <a href="fl/motion/Keyframe.html#rotateTimes">fl.motion.Keyframe.rotateTimes</a> property.</td>
+                </tr>                   
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>tweenScale</code></td>
+                    <td>Boolean</td>
+                    <td>If <code>false</code>, prevents the scale from changing during a tween. Defaults to <code>true</code> if omitted from the XML.</td>
+                </tr>                  
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>cacheAsBitmap</code></td>
+                    <td>Boolean</td>
+                    <td>Defaults to <code>false</code> if omitted from the XML.</td>
+                </tr>    
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>blendMode</code></td>
+                    <td>String</td>
+                    <td>Possible values are "normal", "layer", "multiply", "screen", "overlay", "hardlight", "lighten", "darken", "difference", "add", "subtract", "invert", "alpha", and "erase". Defaults to "normal" if omitted from the XML.</td>
+                </tr>  
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>orientToPath</code></td>
+                    <td>Boolean</td>
+                    <td>Defaults to <code>false</code> if omitted from the XML.</td>
+                </tr>  
+                <tr>
+                    <td><code>color</code></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>Required parent tag for the Color element. This tag has no attributes, but it is required by the compiler to process the Color element and its attributes.</td>
+                </tr>                              
+				<tr>
+                    <td><code>Color</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+                    <td>Contains settings for color variations. Flash symbol instances have five color modes: <code>none</code>, <code>alpha</code>, <code>tint</code>, <code>brightness</code> and <code>advanced</code>. <p>For no transformation (<code>none</code>), the <code>Color</code> tag is empty, indicating the normal appearance.</p><p>For <code>alpha</code> transformations, set the <code>alphaMultiplier</code> and <code>alphaOffset</code> attributes.</p><p>For <code>tint</code> transformations, set the <code>tintColor</code> and <code>tintMultiplier</code> attributes.</p><p>For <code>brightness</code> transformations, use the <code>brightness</code> attribute.</p><p>For <code>advanced</code> transformations, use the <code>redMultiplier</code>, <code>greenMultiplier</code>, <code>blueMultiplier</code>, <code>alphaMultiplier</code>, <code>redOffset</code>, <code>greenOffset</code>, <code>blueOffset</code>, and <code>alphaOffset</code> attributes.</p></td>
+				</tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>brightness</code></td>
+                    <td>Number</td>
+                    <td>The percentage to apply the brightness channel between -1 and 1, where -1 is completely black and 1 is completely white</td>
+                </tr>                
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>tintColor</code></td>
+                    <td>Hexadecimal</td>
+                    <td>A hexadecimal color value representing the color to apply.</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>alphaMultiplier</code></td>
+                    <td>Number</td>
+                    <td>The percentage to apply the alpha channel, as a decimal value between 0 and 1.</td>
+                </tr>                   
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>redMultiplier</code></td>
+					<td>Number</td>
+					<td>The percentage to apply the color, as a decimal value between 0 and 1.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>greenMultiplier</code></td>
+					<td>Number</td>
+					<td>The percentage to apply the color, as a decimal value between 0 and 1.</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>blueMultiplier</code></td>
+					<td>Number</td>
+					<td>The percentage to apply the color, as a decimal value between 0 and 1.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>alphaMultiplier</code></td>
+					<td>Number</td>
+					<td>A decimal value between 0 and 1 representing a percentage to apply the alpha transparency channel.</td>
+				</tr>	
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>tintMultiplier</code></td>
+                    <td>Number</td>
+                    <td>A decimal value between 0 and 1 representing a percentage to apply with the <code>tintColor</code> value.</td>
+                </tr>                   
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>redOffset</code></td>
+					<td>Number</td>
+                    <td>A number from -255 to 255 that is added to the red channel value after it has been multiplied by the <code>redMultiplier</code> value.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>greenOffset</code></td>
+					<td>Number</td>
+                    <td>A number from -255 to 255 that is added to the green channel value after it has been multiplied by the <code>greenMultiplier</code> value.</td>
+				</tr>
+				<tr>
+                    <td>&nbsp;</td>
+                    <td><code>blueOffset</code></td>
+					<td>Number</td>
+                    <td>A number from -255 to 255 that is added to the blue channel value after it has been multiplied by the <code>blueMultiplier</code> value.</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>alphaOffset</code></td>
+					<td>Number</td>
+                    <td>A number from -255 to 255 that is added to the alpha channel value after it has been multiplied by the <code>alphaMultiplier</code> value.</td>
+				</tr>																																						
+				<tr>
+                    <td><code>tweens</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>Contains settings for easing variations.</td>
+				</tr>		
+				<tr>
+                    <td><code>SimpleEase</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td>Defines an easing setting with a single value throughout the motion tween for all easing properties.</td>
+				</tr>		
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>ease</code></td>
+					<td>Number</td>
+                    <td>The easing value to apply to all properties of the motion tween. The ease attribute is a percentage value  between -1 (100% ease in or acceleration) and 1 (100% ease out or deceleration). The default value is 0, which means that the tween animates at a constant speed, without acceleration or deceleration.</td>
+				</tr>		
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><code>target</code></td>
+                    <td>Number</td>
+                    <td>When using Adobe Flash CS3's Copy Motion and Paste Motion commands, the authoring tool generates XML that does not include a <code>target</code> attribute for the <code>SimpleEase</code> element because Flash CS3 applies the same value to all ease properties. However, the ActionScript 3.0 classes allow you to apply different <code>SimpleEase</code> values to individual properties at the same time. The possible values for <code>target</code> are the same as for CustomEase: "position", "scale", "rotation", "color", "filters", "x", "y", "scaleX", "scaleY", "skewX", and "skewY".</td>
+                </tr>                               
+				<tr>
+                    <td><code>CustomEase</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+                    <td>Defines a custom easing curve composed of cubic Bezier curves. It can be applied to all properties at once, or you can define different curves for different properties.<p>For more information about the curves that represent custom ease properties, see the <a href="fl/motion/CustomEase.html">CustomEase</a> class.</p></td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+                    <td><code>target</code></td>
+					<td>Number</td>
+                    <td>The property that is assigned a custom value. When using Adobe Flash CS3's Copy Motion and Paste Motion commands, the authoring tool generates these possible values for <code>target</code>: "position", "scale", "rotation", "color", "filters". The ActionScript 3.0 motion classes allow even more flexibility, you can define individual curves for: "x", "y", "scaleX", "scaleY", "skewX", and "skewY". If the "target" attribute is omitted from the XML, all ease properties are targeted together.<p><strong>Note:</strong>The XML omits the first and last points on the custom easing curve. The first point must always be (0, 0) (the starting value of the tweened property), and the last point must be (1, 1) (the ending value of the tweened property). To keep the code efficient, and to avoid possible errors these values are omitted from the XML and assumed to be implicit.</p></td>
+				</tr>							
+				<tr>
+                    <td><code>filters</code></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+                    <td>Defines an object from the flash.filters package to use as an element (for example: <code>filters:GlowFilter</code>). You can add attributes that correspond to the properties of the specified flash.filters object. For example: <p><code>&lt;filters:DropShadowFilter quality="1" inner="false" knockout="false" hideObject="false" distance="0" angle="45" color="0x000000" alpha="1" blurX="0" blurY="0" strength="0" /&gt;</code></p><p>See the <a href="flash/filters/package-detail.html">flash.filters</a> package.</p></td>
+				</tr>													
+			</tbody>
+		</table>
+		<a name="examples"></a>
+<p>The following example shows the ActionScript with inline XML describing the motion tween of a <code>moveShape</code> MovieClip instance for the symbol <code>myShape</code> as it rotates, moves, uses a custom ease setting and changes alpha values over ten frames:</p>
+<listing>
+import fl.motion.Animator;
+var moveShape_xml:XML = &lt;Motion duration="10" xmlns="fl.motion.*" xmlns:geom="flash.geom.*" xmlns:filters="flash.filters.*"&gt;
+    &lt;source&gt;
+        &lt;Source frameRate="12" x="140.35" y="142.35" scaleX="1" scaleY="1" rotation="0" elementType="movie clip" instanceName="moveShape" symbolName="myShape"&gt;
+            &lt;dimensions&gt;
+                &lt;geom:Rectangle left="13" top="5" width="125.5" height="125.5"/&gt;
+            &lt;/dimensions&gt;
+            &lt;transformationPoint&gt;
+                &lt;geom:Point x="0.5" y="0.5"/&gt;
+            &lt;/transformationPoint&gt;
+        &lt;/Source&gt;
+    &lt;/source&gt;
+
+    &lt;Keyframe index="0" rotateDirection="cw" rotateTimes="1" tweenSnap="false" scaleX="1" scaleY="1" rotation="0"&gt;
+        &lt;color&gt;
+            &lt;Color alphaMultiplier="0.4"/&gt;
+        &lt;/color&gt;
+        &lt;tweens&gt;
+            &lt;CustomEase target="position"&gt;
+                &lt;geom:Point x="0.09500906065407433" y="0.09500906065407433"/&gt;
+                &lt;geom:Point x="0.460384258177029" y="0.11105020134567312"/&gt;
+                &lt;geom:Point x="0.5441860465116279" y="0.22916666666666663"/&gt;
+                &lt;geom:Point x="0.685859138879818" y="0.42885124660440044"/&gt;
+                &lt;geom:Point x="0.5417057701316985" y="0.7393801887363497"/&gt;
+                &lt;geom:Point x="0.7023255813953488" y="0.8999999999999999"/&gt;
+                &lt;geom:Point x="0.7800300428109576" y="0.9777044614156086"/&gt;
+                &lt;geom:Point x="0.9222955385843912" y="0.9222955385843913"/&gt;
+            &lt;/CustomEase&gt;
+            &lt;CustomEase target="scale"&gt;
+                &lt;geom:Point x="0.3333333333333333" y="0.3333333333333333"/&gt;
+                &lt;geom:Point x="0.6666666666666666" y="0.6666666666666666"/&gt;
+            &lt;/CustomEase&gt;
+            &lt;CustomEase target="rotation"&gt;
+                &lt;geom:Point x="0.19132280349731443" y="0.19132280349731445"/&gt;
+                &lt;geom:Point x="0.4753438631693523" y="0.13159386316935218"/&gt;
+                &lt;geom:Point x="0.6666666666666667" y="0.32291666666666663"/&gt;
+                &lt;geom:Point x="0.8086771965026857" y="0.46492719650268555"/&gt;
+                &lt;geom:Point x="0.8579894701639811" y="0.8579894701639811"/&gt;
+            &lt;/CustomEase&gt;
+            &lt;CustomEase target="color"&gt;
+                &lt;geom:Point x="0.3333333333333333" y="0.3333333333333333"/&gt;
+                &lt;geom:Point x="0.6666666666666666" y="0.6666666666666666"/&gt;
+            &lt;/CustomEase&gt;
+            &lt;CustomEase target="filters"&gt;
+                &lt;geom:Point x="0.3333333333333333" y="0.3333333333333333"/&gt;
+                &lt;geom:Point x="0.6666666666666666" y="0.6666666666666666"/&gt;
+            &lt;/CustomEase&gt;
+        &lt;/tweens&gt;
+    &lt;/Keyframe&gt;
+
+    &lt;Keyframe index="9" x="304.95" y="122"&gt;
+        &lt;color&gt;
+            &lt;Color/&gt;
+        &lt;/color&gt;
+    &lt;/Keyframe&gt;
+&lt;/Motion&gt;;
+
+var moveShape_animator:Animator = new Animator(moveShape_xml, moveShape);
+moveShape_animator.play();
+</listing>
+<p>The following example shows a simpler motion tween with an event from the <a href="fl/motion/MotionEvent.html">fl.motion.MotionEvent</a> class added to display a message when the animation for symbol instance named <code>abox</code> is finished:</p>
+<listing>
+import fl.motion.Animator;
+import fl.motion.MotionEvent;
+var abox_xml:XML = &lt;Motion duration="10" xmlns="fl.motion.*" xmlns:geom="flash.geom.*" xmlns:filters="flash.filters.*"&gt;
+    &lt;source&gt;
+        &lt;Source frameRate="12" x="186.45" y="120.45" scaleX="1" scaleY="1" rotation="0" elementType="movie clip" symbolName="Symbol 1"&gt;
+            &lt;dimensions&gt;
+                &lt;geom:Rectangle left="0" top="0" width="86.95" height="86.95"/&gt;
+            &lt;/dimensions&gt;
+            &lt;transformationPoint&gt;
+                &lt;geom:Point x="0.49971247843588273" y="0.49971247843588273"/&gt;
+            &lt;/transformationPoint&gt;
+        &lt;/Source&gt;
+    &lt;/source&gt;
+
+    &lt;Keyframe index="0" rotateDirection="cw" rotateTimes="1"&gt;
+        &lt;tweens&gt;
+            &lt;SimpleEase ease="0.8"/&gt;
+        &lt;/tweens&gt;
+    &lt;/Keyframe&gt;
+
+    &lt;Keyframe index="9" x="198" y="123"/&gt;
+&lt;/Motion&gt;;
+
+var abox_animator:Animator = new Animator(abox_xml, abox);
+abox_animator.play();
+abox_animator.addEventListener(MotionEvent.MOTION_END,afterMotion);
+function afterMotion(e:MotionEvent) {
+            trace("animation complete!");
+        }
+</listing>
+		<div style="height:20px;" width="100%"></div>
+	<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 1:09 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 1:09 PM GMT-07:00 -->

@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="InteractionInputType,fl.events.InteractionInputType,ADD,BUTTON_DOWN,CANCELLED,CHANGE,CHANGE,CHANGE,changeType,clickTarget,color,COLUMN_STRETCH,columnIndex,DATA_CHANGE,dataField,delta,direction,endIndex,ENTER,ENTER,HEADER_RELEASE,HIDE,index,INVALIDATE_ALL,INVALIDATE,ITEM_CLICK,ITEM_DOUBLE_CLICK,ITEM_EDIT_BEGINNING,ITEM_EDIT_BEGIN,ITEM_EDIT_END,ITEM_FOCUS_IN,ITEM_FOCUS_OUT,ITEM_ROLL_OUT,ITEM_ROLL_OUT,ITEM_ROLL_OVER,ITEM_ROLL_OVER,item,itemRenderer,items,KEYBOARD,keyCode,LABEL_CHANGE,MOUSE,MOVE,NEW_COLUMN,NEW_ROW,OTHER,position,PRE_DATA_CHANGE,reason,REMOVE_ALL,REMOVE,REPLACE,RESIZE,rowIndex,SCROLL,SHOW,SORT,startIndex,THUMB_DRAG,THUMB_PRESS,THUMB_RELEASE,THUMB,TRACK,triggerEvent,value" name="keywords">
+<title>fl.events.InteractionInputType (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'InteractionInputType - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/events/InteractionInputType.html&amp;fl/events/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">InteractionInputType</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("InteractionInputType"); titleBar_setSubNav(true,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.events</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  InteractionInputType</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">InteractionInputType  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+  The InteractionInputType class defines constants for the values of the
+  <code>triggerEvent</code> property of the SliderEvent object. These constants define strings
+  to identify the sources of input that can trigger an event: the mouse and the keyboard.
+          <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SliderEvent.html#triggerEvent" target="">SliderEvent.triggerEvent</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#KEYBOARD">KEYBOARD</a> : <a href="../../String.html">String</a> = "keyboard"<div class="summaryTableDescription">[static] 
+         The InteractionInputType.KEYBOARD constant defines the value of 
+         the type property of a keyboard event object.</div>
+</td><td class="summaryTableOwnerCol">InteractionInputType</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#MOUSE">MOUSE</a> : <a href="../../String.html">String</a> = "mouse"<div class="summaryTableDescription">[static] 
+         The InteractionInputType.MOUSE constant defines the value of 
+         the type property of a mouse event object.</div>
+</td><td class="summaryTableOwnerCol">InteractionInputType</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Constant Detail</div>
+<a name="constantDetail"></a><a name="KEYBOARD"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">KEYBOARD</td><td class="detailHeaderType">Constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const KEYBOARD:<a href="../../String.html">String</a> = "keyboard"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         The <code>InteractionInputType.KEYBOARD</code> constant defines the value of 
+         the <code>type</code> property of a <code>keyboard</code> event object.  
+                  </p></div>
+<a name="constantDetail"></a><a name="MOUSE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">MOUSE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const MOUSE:<a href="../../String.html">String</a> = "mouse"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         The <code>InteractionInputType.MOUSE</code> constant defines the value of 
+         the <code>type</code> property of a <code>mouse</code> event object. 
+                  </p></div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">InteractionInputTypeExample.as</div>
+<br>
+<div class="detailBody"> This example demonstrates how to determine whether a Slider instance has been moved with the keyboard or the mouse.
+  <p>To run the example, follow these steps:</p>
+    <ol>
+		<li>Drag a Slider onto the Stage and name it <code>slider</code>.</li>
+		<li>Drag a Label component onto the Stage and name it <code>sliderLabel</code>.</li>
+		<li>Save this code as InteractionInputTypeExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to InteractionInputTypeExample.</li>
+	</ol>
+<div class="listing"><pre>
+package
+{
+    import fl.events.InteractionInputType;    
+    import fl.events.SliderEvent;
+    import flash.display.Sprite;
+    import flash.text.TextFieldAutoSize;
+    
+    public class InteractionInputTypeExample extends Sprite    
+    {
+        public function InteractionInputTypeExample() {
+            slider.addEventListener(SliderEvent.CHANGE, analyzeSliderInput);
+            slider.addEventListener(SliderEvent.THUMB_DRAG, analyzeSliderInput);
+            sliderLabel.autoSize = TextFieldAutoSize.LEFT;
+            sliderLabel.text = "Select and move slider with keyboard or mouse";
+            myLabel.autoSize = TextFieldAutoSize.LEFT;
+            myLabel.text = "Lorem ipsum lorem ipsum lorem ipsum.";                        
+        }
+        private function analyzeSliderInput(e:SliderEvent):void {
+            switch(e.triggerEvent) {
+                case InteractionInputType.MOUSE:
+                    sliderLabel.text = "Slider has been moved with mouse";                
+                    break;
+                case InteractionInputType.KEYBOARD:
+                    sliderLabel.text = "Slider has been moved with keyboard";
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/InteractionInputTypeExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

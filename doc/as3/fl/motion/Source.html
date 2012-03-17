@@ -1,0 +1,693 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Source,fl.motion.Source,a,AUTO,autoRewind,blank,blendMode,brightness,b,cacheAsBitmap,CCW,color,c,CW,dimensions,d,duration,ease,easingFunction,elementType,filters,filters,firstFrame,frameRate,functionName,index,instanceName,isPlaying,keyframes,keyframes,keyframesCompact,label,linkageID,loop,MOTION_END,MOTION_START,MOTION_UPDATE,motion,NONE,orientToPath,orientToPath,parameters,points,points,points,points,positionMatrix,repeatCount,rotateDirection,rotateTimes,ROTATION,rotation,rotation,SCALE_X,SCALE_Y,scaleX,scaleX,scaleY,scaleY,SKEW_X,SKEW_Y,skewX,skewX,skewY,skewY,source,symbolName,target,target,target,target,target,target,TIME_CHANGE,time,tintColor,tintMultiplier,transformationPoint,transformationPoint,tweens,tweens,tweenScale,tweenSnap,tweenSync,X,x,x,Y,y,y" name="keywords">
+<title>fl.motion.Source (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Source - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/motion/Source.html&amp;fl/motion/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Source</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Source"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.motion</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Source</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Source  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Source class stores information about the context in which a Motion instance was generated.
+ Many of its properties do not affect animation created using ActionScript with the Animator class 
+ but are present to store data from the Motion XML.
+ The <code>transformationPoint</code> property is the most important for an ActionScript Motion instance.
+ <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dimensions">dimensions</a> : <a href="../../flash/geom/Rectangle.html">Rectangle</a>
+<div class="summaryTableDescription">
+     Indicates the position and size of the bounding box of the object from which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#elementType">elementType</a> : <a href="../../String.html">String</a> = ""<div class="summaryTableDescription">
+     Indicates the type of object from which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#frameRate">frameRate</a> : <a href="../../Number.html">Number</a> = NaN<div class="summaryTableDescription">
+     Indicates the frames per second of the movie in which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#instanceName">instanceName</a> : <a href="../../String.html">String</a> = ""<div class="summaryTableDescription">
+     Indicates the instance name given to the movie clip from which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#linkageID">linkageID</a> : <a href="../../String.html">String</a> = ""<div class="summaryTableDescription">
+     Indicates the library linkage identifier for the symbol from which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotation">rotation</a> : <a href="../../Number.html">Number</a> = 0<div class="summaryTableDescription">
+     Indicates the rotation value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scaleX">scaleX</a> : <a href="../../Number.html">Number</a> = 1<div class="summaryTableDescription">
+     Indicates the scaleX value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scaleY">scaleY</a> : <a href="../../Number.html">Number</a> = 1<div class="summaryTableDescription">
+     Indicates the scaleY value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#skewX">skewX</a> : <a href="../../Number.html">Number</a> = 0<div class="summaryTableDescription">
+     Indicates the skewX value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#skewY">skewY</a> : <a href="../../Number.html">Number</a> = 0<div class="summaryTableDescription">
+     Indicates the skewY value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#symbolName">symbolName</a> : <a href="../../String.html">String</a> = ""<div class="summaryTableDescription">
+     Indicates the name of the symbol from which the Motion instance was generated.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#transformationPoint">transformationPoint</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     Specifies the location of the transformation or "pivot" point of the original object, 
+     from which transformations are applied.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#x">x</a> : <a href="../../Number.html">Number</a> = 0<div class="summaryTableDescription">
+     Indicates the x value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#y">y</a> : <a href="../../Number.html">Number</a> = 0<div class="summaryTableDescription">
+     Indicates the y value of the original object.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Source()">Source</a>(xml:<a href="../../XML.html">XML</a> = null)</div>
+<div class="summaryTableDescription">
+     Constructor for Source instances.</div>
+</td><td class="summaryTableOwnerCol">Source</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="dimensions"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dimensions</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var dimensions:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the position and size of the bounding box of the object from which the Motion instance was generated.
+     This property stores data from Motion XML but does not affect Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="elementType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">elementType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var elementType:<a href="../../String.html">String</a> = ""</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the type of object from which the Motion instance was generated.
+     Possible values are <code>"rectangle object"</code>, <code>"oval object"</code>, <code>"drawing object"</code>, <code>"group"</code>, <code>"bitmap"</code>, <code>"compiled clip"</code>, <code>"video"</code>, <code>"text"</code>
+     </p></div>
+<a name="propertyDetail"></a><a name="frameRate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">frameRate</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var frameRate:<a href="../../Number.html">Number</a> = NaN</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the frames per second of the movie in which the Motion instance was generated.
+     This property stores data from Motion XML but does not affect Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="instanceName"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">instanceName</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var instanceName:<a href="../../String.html">String</a> = ""</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the instance name given to the movie clip from which the Motion instance was generated.
+     This property stores data from Motion XML but does not affect Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="linkageID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">linkageID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var linkageID:<a href="../../String.html">String</a> = ""</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the library linkage identifier for the symbol from which the Motion instance was generated.
+     This property stores data from Motion XML but does not affect Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="rotation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var rotation:<a href="../../Number.html">Number</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>rotation</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#rotation" target="">fl.motion.Keyframe.rotation</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="scaleX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scaleX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var scaleX:<a href="../../Number.html">Number</a> = 1</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>scaleX</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#scaleX" target="">fl.motion.Keyframe.scaleX</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="scaleY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scaleY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var scaleY:<a href="../../Number.html">Number</a> = 1</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>scaleY</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#scaleY" target="">fl.motion.Keyframe.scaleY</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="skewX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">skewX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var skewX:<a href="../../Number.html">Number</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>skewX</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#skewX" target="">fl.motion.Keyframe.skewX</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="skewY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">skewY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var skewY:<a href="../../Number.html">Number</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>skewY</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#skewY" target="">fl.motion.Keyframe.skewY</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="symbolName"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">symbolName</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var symbolName:<a href="../../String.html">String</a> = ""</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the name of the symbol from which the Motion instance was generated.
+     This property stores data from Motion XML but does not affect Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="transformationPoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">transformationPoint</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var transformationPoint:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Specifies the location of the transformation or "pivot" point of the original object, 
+     from which transformations are applied.
+     The coordinates of the transformation point are defined as a percentage of the visual object's dimensions (its bounding box). If the transformation point is at the upper-left
+     corner of the bounding box, the coordinates are (0, 0). The lower-right corner of the 
+     bounding box is (1, 1). This property allows the transformation point to be applied
+     consistently to objects of different proportions 
+     and registration points. The transformation point can lie outside of the bounding box, 
+     in which case the coordinates may be less than 0 or greater than 1.
+     This property has a strong effect on Motion instances created using ActionScript.
+     </p></div>
+<a name="propertyDetail"></a><a name="x"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var x:<a href="../../Number.html">Number</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>x</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#x" target="">fl.motion.Keyframe.x</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var y:<a href="../../Number.html">Number</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <code>y</code> value of the original object.
+     </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Keyframe.html#y" target="">fl.motion.Keyframe.y</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="Source()"></a><a name="Source(XML)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Source</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Source(xml:<a href="../../XML.html">XML</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Constructor for Source instances.
+          </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">xml</span>:<a href="../../XML.html">XML</a></code> (default = <code>null</code>)<code></code> &mdash; Optional E4X XML object defining a Source instance in Motion XML format.
+     </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

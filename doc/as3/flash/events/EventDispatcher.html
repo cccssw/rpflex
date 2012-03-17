@@ -1,0 +1,849 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="EventDispatcher,flash.events.EventDispatcher,addEventListener,addEventListener,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,clone,dispatchEvent,dispatchEvent,formatToString,hasEventListener,hasEventListener,isDefaultPrevented,preventDefault,removeEventListener,removeEventListener,stopImmediatePropagation,stopPropagation,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,updateAfterEvent,updateAfterEvent,updateAfterEvent,willTrigger,willTrigger" name="keywords">
+<title>flash.events.EventDispatcher (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'EventDispatcher - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/events/EventDispatcher.html&amp;flash/events/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">EventDispatcher</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("EventDispatcher"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.events</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  EventDispatcher</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">EventDispatcher  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td> <a href="../../flash/events/IEventDispatcher.html">IEventDispatcher</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td> <a href="../../fl/motion/Animator.html">Animator</a>,  <a href="../../flash/media/Camera.html">Camera</a>,  <a href="../../fl/data/DataProvider.html">DataProvider</a>,  <a href="../../flash/display/DisplayObject.html">DisplayObject</a>,  <a href="../../flash/net/FileReference.html">FileReference</a>,  <a href="../../flash/net/FileReferenceList.html">FileReferenceList</a>,  <a href="../../flash/filesystem/FileStream.html">FileStream</a>,  <a href="../../flash/desktop/Icon.html">Icon</a>,  <a href="../../flash/system/IME.html">IME</a>,  <a href="../../flash/display/LoaderInfo.html">LoaderInfo</a>,  <a href="../../flash/net/LocalConnection.html">LocalConnection</a>,  <a href="../../fl/lang/Locale.html">Locale</a>,  <a href="../../flash/media/Microphone.html">Microphone</a>,  <a href="../../flash/desktop/NativeApplication.html">NativeApplication</a>,  <a href="../../flash/display/NativeMenu.html">NativeMenu</a>,  <a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>,  <a href="../../flash/display/NativeWindow.html">NativeWindow</a>,  <a href="../../flash/net/NetConnection.html">NetConnection</a>,  <a href="../../flash/net/NetStream.html">NetStream</a>,  <a href="../../flash/printing/PrintJob.html">PrintJob</a>,  <a href="../../fl/controls/RadioButtonGroup.html">RadioButtonGroup</a>,  <a href="../../flash/display/Screen.html">Screen</a>,  <a href="../../air/net/ServiceMonitor.html">ServiceMonitor</a>,  <a href="../../flash/net/SharedObject.html">SharedObject</a>,  <a href="../../flash/net/Socket.html">Socket</a>,  <a href="../../flash/media/Sound.html">Sound</a>,  <a href="../../flash/media/SoundChannel.html">SoundChannel</a>,  <a href="../../flash/data/SQLConnection.html">SQLConnection</a>,  <a href="../../flash/data/SQLStatement.html">SQLStatement</a>,  <a href="../../flash/text/StyleSheet.html">StyleSheet</a>,  <a href="../../flash/utils/Timer.html">Timer</a>,  <a href="../../fl/transitions/Transition.html">Transition</a>,  <a href="../../fl/transitions/TransitionManager.html">TransitionManager</a>,  <a href="../../fl/transitions/Tween.html">Tween</a>,  <a href="../../flash/net/URLLoader.html">URLLoader</a>,  <a href="../../flash/net/URLStream.html">URLStream</a>,  <a href="../../flash/security/XMLSignatureValidator.html">XMLSignatureValidator</a>,  <a href="../../flash/net/XMLSocket.html">XMLSocket</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+The EventDispatcher class is the base class for all  classes that dispatch events.
+<span>The EventDispatcher class implements the IEventDispatcher interface and is the base class for 
+the DisplayObject class. The EventDispatcher class allows any object on the display list to be 
+an event target and as such, to use the methods of the IEventDispatcher interface.</span>
+
+<p>Event targets are an important part of the Flash<sup>&reg;</sup> Player and 
+Adobe<sup>&reg;</sup> AIR&trade; event model. The event target serves 
+as the focal point for how events flow through the display list hierarchy. 
+When an event such as a mouse click or a keypress occurs, Flash Player or the AIR application dispatches an event 
+object into the event flow from the root of the display list. The event object then makes its 
+way through the display list until it reaches the event target, at which point it begins its 
+return trip through the display list. This round-trip journey to the event target is 
+conceptually divided into three phases: the capture phase comprises the journey from the 
+root to the last node before the event target's node, the target phase comprises only the 
+event target node, and the bubbling phase comprises any subsequent nodes encountered on 
+the return trip to the root of the display list.</p>
+
+<p>In general, the easiest way for a user-defined class to gain event dispatching 
+capabilities is to extend EventDispatcher.  If this is impossible (that is, if the class is already extending 
+another class), you can instead implement the IEventDispatcher interface, create an EventDispatcher member, 
+and write simple hooks to route calls into the aggregated EventDispatcher.</p>
+
+
+<p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#EventDispatcher()">EventDispatcher</a>(target:<a href="../../flash/events/IEventDispatcher.html">IEventDispatcher</a> = null)</div>
+<div class="summaryTableDescription">
+ Aggregates an instance of the EventDispatcher class.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol">EventDispatcher</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="EventDispatcher()"></a><a name="EventDispatcher(flash.events.IEventDispatcher)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">EventDispatcher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function EventDispatcher(target:<a href="../../flash/events/IEventDispatcher.html">IEventDispatcher</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Aggregates an instance of the EventDispatcher class.
+ 
+    <p>The EventDispatcher class is generally used as a base class, which means that <span>most</span> 
+  developers do not need to use 
+    this constructor function. <span>However, advanced developers who are implementing 
+ the IEventDispatcher interface need to use this constructor. 
+ If you are unable to extend the EventDispatcher class and must
+ instead implement the IEventDispatcher interface, use this constructor to aggregate an instance of the EventDispatcher class.</span></p>
+ 
+ </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:<a href="../../flash/events/IEventDispatcher.html">IEventDispatcher</a></code> (default = <code>null</code>)<code></code> &mdash; The target object for events dispatched to the EventDispatcher object. 
+ <span>This parameter is used when the EventDispatcher instance is aggregated by a class that implements IEventDispatcher; it is necessary so that the containing object can be the target for events.
+ Do not use this parameter in simple cases in which a class extends EventDispatcher.</span>
+    
+ 
+ </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event. <span>You can register event listeners on all nodes in the 
+ display list for a specific type of event, phase, and priority.</span>
+<p>After you successfully register an event listener, you cannot change its priority
+ through additional calls to <code>addEventListener()</code>. To change a listener's
+ priority, you must first call <code>removeListener()</code>. Then you can register the
+ listener again with the new priority level. </p>
+<p>Keep in mind that after the listener is registered, subsequent calls to
+ <code>addEventListener()</code> with a different <code>type</code> or
+ <code>useCapture</code> value result in the creation of a separate listener registration. 
+ <span>For example, if you first register a listener with <code>useCapture</code> set to 
+ <code>true</code>, it listens only during the capture phase. If you call 
+ <code>addEventListener()</code> again using the same listener object, but with
+ <code>useCapture</code> set to <code>false</code>, you have two separate listeners: one
+ that listens during the capture phase and another that listens during the target and
+ bubbling phases.</span>
+</p>
+<p>You cannot register an event listener for only the target phase or the bubbling 
+ phase. Those phases are coupled during registration because bubbling 
+ applies only to the ancestors of the target node.</p>
+<p>If you no longer need an event listener, remove it by calling 
+ <code>removeEventListener()</code>, or memory problems could result. Objects with
+ registered event listeners are not automatically removed from memory because the garbage
+ collector does not remove objects that still have references.</p>
+<p>Copying an EventDispatcher instance does not copy the event listeners attached to it. 
+ (If your newly created node needs an event listener, you must attach the listener after
+    creating the node.) However, if you move an EventDispatcher instance, the event listeners 
+    attached to it move along with it.</p>
+<p>If the event listener is being registered on a node while an event is being processed
+ on this node, the event listener is not triggered during the current phase but can be 
+ triggered during a later phase in the event flow, such as the bubbling phase.</p>
+<p>If an event listener is removed from a node while an event is being processed on the node,
+ it is still triggered by the current actions. After it is removed, the event listener is
+ never invoked again (unless registered again for future processing). </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; The listener function that processes the event. This function must accept
+    an Event object as its only parameter and must return nothing<span>, as this example shows:</span>
+<div class="listing"><pre>function(evt:Event):void</pre></div>
+<p>The function can have any name.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+<span>Determines whether the listener works in the capture phase or the 
+ target and bubbling phases. If <code>useCapture</code> is set to <code>true</code>, 
+ the listener processes the event only during the capture phase and not in the 
+ target or bubbling phase. If <code>useCapture</code> is <code>false</code>, the
+ listener processes the event only during the target or bubbling phase. To listen for
+ the event in all three phases, call <code>addEventListener</code> twice, once with 
+ <code>useCapture</code> set to <code>true</code>, then again with
+ <code>useCapture</code> set to <code>false</code>.</span>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; The priority level of the event listener. The priority is designated by
+ a signed 32-bit integer. The higher the number, the higher the priority. All listeners
+ with priority <i>n</i> are processed before listeners of priority <i>n</i>-1. If two
+ or more listeners share the same priority, they are processed in the order in which they
+ were added. The default priority is 0.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useWeakReference</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Determines whether the reference to the listener is strong or
+ weak. A strong reference (the default) prevents your listener from being garbage-collected.
+    A weak reference does not. <p>Class-level member functions are not subject to garbage 
+    collection, so you can set <code>useWeakReference</code> to <code>true</code> for 
+    class-level member functions without subjecting them to garbage collection. If you set
+    <code>useWeakReference</code> to <code>true</code> for a listener that is a nested inner 
+    function, the function will be garbage-collected and no longer persistent. If you create 
+    references to the inner function (save it in another variable) then it is not 
+    garbage-collected and stays persistent.</p>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The <code>listener</code> specified is not a function.
+ </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000139.html" target="_top">Event listeners</a>
+</div>
+</div>
+<a name="dispatchEvent()"></a><a name="dispatchEvent(flash.events.Event)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispatchEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispatchEvent(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatches an event into the event flow. The event target is the EventDispatcher 
+ object upon which the <code>dispatchEvent()</code> method is called.
+  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:<a href="../../flash/events/Event.html">Event</a></code> &mdash; The Event object that is dispatched into the event flow.
+ If the event is being redispatched, a clone of the event is created automatically.
+ After an event is dispatched, its <code>target</code> property cannot be changed, so you
+ must create a new copy of the event for redispatching to work.
+ 
+ </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; A value of <code>true</code> if the event was successfully dispatched. A value of <code>false</code> indicates failure or that <code>preventDefault()</code> was called 
+ on the event.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; The event dispatch recursion limit has been reached.
+ </td>
+</tr>
+</table>
+</div>
+<a name="hasEventListener()"></a><a name="hasEventListener(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hasEventListener(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event. This allows you to determine where an EventDispatcher object has altered
+ handling of an event type in the event flow hierarchy. To determine whether a specific
+ event type actually triggers an event listener, use <code>willTrigger()</code>.
+ 
+ <p>The difference between <code>hasEventListener()</code> and <code>willTrigger()</code> 
+ is that <code>hasEventListener()</code> examines only the object to 
+ which it belongs, whereas <code>willTrigger()</code> examines the entire 
+    event flow for the event specified by the <code>type</code> parameter.
+ 
+ </p>
+<p>When <code>hasEventListener()</code> is called from a LoaderInfo object, only the 
+ listeners that the caller can access are considered.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; A value of <code>true</code> if a listener of the specified type is registered; 
+ <code>false</code> otherwise.
+ </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="EventDispatcher.html#willTrigger()" target="">willTrigger()</a>
+</div>
+</div>
+<a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+ 
+ </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; The listener object to remove.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+<span>Specifies whether the listener was registered for the capture phase or the 
+ target and bubbling phases. If the listener was registered for both the capture phase and the
+ target and bubbling phases, two calls to <code>removeEventListener()</code> are required 
+ to remove both, one call with <code>useCapture()</code> set to <code>true</code>, and another 
+ call with <code>useCapture()</code> set to <code>false</code>.</span>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000139.html" target="_top">Event listeners</a>
+</div>
+</div>
+<a name="willTrigger()"></a><a name="willTrigger(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">willTrigger</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function willTrigger(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type. This method returns <code>true</code> if an 
+ event listener is triggered during any phase of the event flow when an event of the 
+ specified type is dispatched to this EventDispatcher object or any of its descendants.
+ 
+ <p>The difference between the <code>hasEventListener()</code> and the <code>willTrigger()</code> 
+ methods is that <code>hasEventListener()</code> examines only the object to which it belongs, 
+ whereas the <code>willTrigger()</code> method examines the entire event flow for the event specified by the
+    <code>type</code> parameter. </p>
+<p>When <code>willTrigger()</code> is called from a LoaderInfo object, only the 
+ listeners that the caller can access are considered.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; A value of <code>true</code> if a listener of the specified type will be triggered; <code>false</code> otherwise.
+ </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:activate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">activate</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#ACTIVATE"><code>flash.events.Event.ACTIVATE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.
+ </p>
+ The <code>Event.ACTIVATE</code> constant defines the value of the <code>type</code> property of an <code>activate</code> event object. 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the ACTIVATE event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:deactivate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deactivate</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#DEACTIVATE"><code>flash.events.Event.DEACTIVATE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when Flash Player or an AIR application loses operating system focus and is 
+ becoming inactive. 
+ </p>
+ The <code>Event.DEACTIVATE</code> constant defines the value of the <code>type</code> property of a <code>deactivate</code> event object. 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the DEACTIVATE event.</td>
+</tr></table>
+ 
+ </div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">EventDispatcherExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the classes <code>EventDispatcherExample</code> and 
+ <code>CustomDispatcher</code>, a subclass of <code>EventDispatcher</code>, to show how a 
+ custom event is created and dispatched.  The example carries out the following tasks:
+ <ol>
+     <li>The constructor of <code>EventDispatcherExample</code> creates a local variable
+ 	<code>dispatcher</code> and assigns it to a new CustomDispatcher instance.</li>
+ 	<li>Inside <code>CustomDispatcher</code>, a string is set so that the event has
+ 	the name <code>action</code>, and the <code>doAction()</code> method is declared. When called, this method creates the <code>action</code>
+ 	event and dispatches it using <code>EventDispatcher.dispatchEvent()</code>.</li>
+ 	<li>The <code>dispatcher</code> property is then used to add the <code>action</code>
+ 	event listener and associated subscriber method <code>actionHandler()</code>, which simply
+ 	prints information about the event when it is dispatched.</li>
+ 	<li>The <code>doAction()</code> method is invoked, dispatching the <code>action</code>
+ 	event.</li>
+ </ol>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.events.Event;
+
+    public class EventDispatcherExample extends Sprite {
+
+        public function EventDispatcherExample() {
+            var dispatcher:CustomDispatcher = new CustomDispatcher();
+            dispatcher.addEventListener(CustomDispatcher.ACTION, actionHandler);
+            dispatcher.doAction();
+        }
+
+        private function actionHandler(event:Event):void {
+            trace("actionHandler: " + event);
+        }
+    }
+}
+
+import flash.events.EventDispatcher;
+import flash.events.Event;
+
+class CustomDispatcher extends EventDispatcher {
+    public static var ACTION:String = "action";
+
+    public function doAction():void {
+        dispatchEvent(new Event(CustomDispatcher.ACTION));
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

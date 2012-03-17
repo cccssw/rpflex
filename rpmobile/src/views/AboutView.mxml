@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="{resourceManager.getString('view','aboutView')}">
+	
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		
+		.listFormItemRenderer
+		{
+			borderStyle: rounded;
+			cornerRadius: 20;
+		}
+		
+		
+	</fx:Style>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.ElementSettings;
+			
+			import controls.ResultView;
+			
+			import mx.events.FlexEvent;
+			
+			import spark.events.IndexChangeEvent;
+			private var resultView:ResultView=ResultView.instance;
+			protected function list_changeHandler(event:IndexChangeEvent):void
+			{
+				trace(list.selectedItem.title);
+				
+				switch(list.selectedItem.cmd){
+					case "version":
+						navigateToURL(new URLRequest('http://funclick.sinaapp.com/'));
+						break;
+					case "website":
+						navigateToURL(new URLRequest('http://funclick.sinaapp.com/'));
+						break;
+					/*
+					case "email":
+						sendToURL(new URLRequest('mailto:lifame@163.com'));
+						break;*/
+				}
+			}
+			
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:ArrayCollection id="listData">
+			<fx:Object cmd="version" title="{resourceManager.getString('view','version')}" description="v1.2.2" />
+			<fx:Object cmd="website" title="{resourceManager.getString('view','website')}" description="http://funclick.sinaapp.com" />
+			<fx:Object cmd="email" title="{resourceManager.getString('view','email')}" description="lifame@163.com" />
+			<fx:Object cmd="authors" title="{resourceManager.getString('view','authors')}" description="Loning &amp; Alex" />
+		</s:ArrayCollection>
+	</fx:Declarations>
+	<s:navigationContent>
+		<s:Button id="backButton" label="{resourceManager.getString('view','back')}" click="this.navigator.popView();"/>
+	</s:navigationContent>  
+	<s:List id="list" top="10"
+			height="100%"
+			width="100%"
+			dataProvider="{listData}" change="list_changeHandler(event)"
+			skinClass="com.loning.mobile.controls.MobileSkinnableDataContainerSkin"
+			>
+		<s:layout>
+			<s:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="0"/>
+		</s:layout>
+		<s:itemRenderer>
+			<fx:Component>
+				<!-- Custom IconItemRenderer with arbitrary UIComponent content -->
+				<s:FocusFormItemRenderer width="96%" labelField="title" messageField="description" styleName="listFormItemRenderer">
+				</s:FocusFormItemRenderer>
+				
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+	
+</s:View>

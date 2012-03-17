@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+						   xmlns:s="library://ns.adobe.com/flex/spark" 
+						   xmlns:mx="library://ns.adobe.com/flex/mx"
+						   styleName="popup">
+	<s:layout>
+		<s:HorizontalLayout verticalAlign="middle"/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:Scroller id="scroller" height="100%" width="100%">
+		<s:DataGroup dataProvider="{buttons}">
+			<s:layout>
+				<s:VerticalLayout verticalAlign="middle" horizontalAlign="center"/>
+			</s:layout>
+		</s:DataGroup>
+	</s:Scroller>
+	
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace mx "library://ns.adobe.com/flex/mx";
+		
+	</fx:Style>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.managers.PopUpManager;
+			
+			import spark.components.Button;
+			import spark.components.Application;
+			import mx.core.FlexGlobals;
+			
+			public var buttonDefaultWidth:int=400;
+			public var buttonDefaultHeight:int=150;
+			
+			[Bindable]
+			public var buttons:ArrayCollection=new ArrayCollection();
+			
+			
+			
+			
+			public function addButton(label:String,func:Function,icon:String=null):void{
+				var btn:Button=this.createButton(label,func,icon);
+				buttons.addItem(btn);
+			}
+			protected function createButton(label:String,func:Function,icon:String=null):Button{
+				var btn:Button=new Button();
+				btn.styleName="alertbutton";
+				btn.label=label;
+				btn.addEventListener(MouseEvent.CLICK,func);
+				
+				if(icon)
+					btn.setStyle("icon",icon);
+				btn.width=buttonDefaultWidth;
+				btn.height=buttonDefaultHeight;
+				return btn;
+			}
+			override public function open(owner:DisplayObjectContainer, modal:Boolean = false):void{
+				
+				this.width=FlexGlobals.topLevelApplication.width;
+				this.height=FlexGlobals.topLevelApplication.height;
+				super.open(owner,modal);
+				PopUpManager.centerPopUp(this);
+			}
+		]]>
+	</fx:Script>
+</s:SkinnablePopUpContainer>

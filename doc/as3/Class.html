@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<meta content="Class,globalClassifier.Class" name="keywords">
+<title>Class (ActionScript 3.0)</title>
+<script type="text/javascript" src="AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Class - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?Class.html&amp;" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">Top Level</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public dynamic   class  Class</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Class  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="images/inherit-arrow.gif"> <a href="Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ A Class object is created for each class definition in a program. Every Class object is an instance
+ of the Class class. The Class object contains the static properties and methods of the class. The
+ class object creates instances of the class when invoked using the <code>new</code> operator.
+  <p>Some methods, such as <code>flash.net.getClassByAlias()</code>, return an object of type Class. 
+ Other methods may have a parameter of type Class, such as <code>flash.net.registerClassAlias()</code>. </p>
+ <p>The class name is the reference to the Class object, as this example shows:</p>
+ <pre> 
+ class Foo {
+ }
+ </pre> 
+ <p>The <code>class Foo{}</code> statement is the class definition that creates the Class object Foo. Additionally,
+ the statement <code>new Foo()</code> will create a new instance of class Foo, and the result will be of type Foo.</p>
+ <p>Use the <code>class</code> statement to declare your classes. Class objects are useful for advanced 
+ techniques, such as assigning classes to an existing instance object at runtime, as shown in the "Examples" 
+ section below.</p>
+ <p>Any static properties and methods of a class live on the class's Class object. Class, itself, declares 
+ <code>prototype</code>.</p>
+ 
+ <p>Generally, you do not need to declare or create variables of type Class manually. However, in the following 
+ code, a class is assigned as a public Class property <code>circleClass</code>, and you can refer to this Class property
+ as a property of the main Library class:</p>
+ <div class="listing"><pre>
+ package {
+  import flash.display.Sprite;
+  public class Library extends Sprite {
+      
+      public var circleClass:Class = Circle;
+      public function Library() {
+      }
+  }
+ }
+  
+ import flash.display.Shape;
+ class Circle extends Shape {
+  public function Circle(color:uint = 0xFFCC00, radius:Number = 10) {
+      graphics.beginFill(color);
+      graphics.drawCircle(radius, radius, radius);
+  }
+ }
+ </pre></div>
+ 
+ <p>Another SWF file can load the resulting Library.swf file and then instantiate objects of type Circle. The
+ following example shows one way to get access to a child SWF file's assets. (Other techniques include using
+ <code>flash.utils.getDefnitionByName()</code> or importing stub definitions of the child SWF file.)</p>
+ 
+ <div class="listing"><pre>
+ package {
+  import flash.display.Sprite;
+  import flash.display.Shape;
+  import flash.display.Loader;
+  import flash.net.URLRequest;
+  import flash.events.Event;
+  public class LibaryLoader extends Sprite {
+      public function LibaryLoader() {
+          var ldr:Loader = new Loader();
+          var urlReq:URLRequest = new URLRequest("Library.swf");
+          ldr.load(urlReq);
+          ldr.contentLoaderInfo.addEventListener(Event.COMPLETE, loaded);
+      }
+      private function loaded(event:Event):void {
+          var library:Object = event.target.content;
+          var circle:Shape = new library.circleClass();
+          addChild(circle);
+      }
+  }
+ }
+ </pre></div>
+ <p>In ActionScript 3.0, you can create embedded classes for external assets (such as images, sounds, or fonts) that are 
+ compiled into SWF files. In earlier versions of ActionScript, you associated those assets using a linkage ID with the 
+ <code>MovieClip.attachMovie()</code> method. In ActionScript 3.0, each embedded asset is represented by a unique embedded 
+ asset class. Therefore, you can use the <code>new</code> operator to instantiate the asset's associated class and call 
+ methods and properties on that asset.</p>
+ 
+ 
+ 
+ 
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Object.html#prototype" target="">Object.prototype</a>
+<br>
+<a href="operators.html#new" target="">new operator</a>
+<br>
+<a href="../main/00000060.html" target="_top">Classes</a>
+<br>
+<a href="../main/00000069.html" target="_top">Advanced topics</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Object.html#constructor">constructor</a> : <a href="Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="Object.html#prototype">prototype</a> : <a href="Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="String.html">String</a>, isEnum:<a href="Boolean.html">Boolean</a> = true):<a href="specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#toString()">toString</a>():<a href="String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="Object.html#valueOf()">valueOf</a>():<a href="Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">Class.1.as</div>
+<br>
+<div class="detailBody"> The following example shows how to use Class objects to defer until runtime 
+ the decision about which class to instantiate using the following steps:
+ <ol>
+     <li>Declare two classes as <code>ClassA</code> and <code>ClassB</code>. </li>
+ 	<li>Declare a variable of type Class named <code>classToConstruct</code> and one of type
+ 	Boolean <code>chooseClassA</code>, which is set to <code>true</code> in this case, 
+  but your code could use a custom test expression to set the value of that variable. </li>
+ </ol>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    
+    public class ClassExample extends Sprite {
+        public function ClassExample() {
+            var classToConstruct:Class;            
+            var classInstance:Object;
+
+            classToConstruct = ClassA;
+            classInstance = new classToConstruct();
+            trace(classInstance);    // [object ClassA]
+
+            classToConstruct = ClassB;
+            classInstance = new classToConstruct();
+            trace(classInstance);    // [object ClassB]
+        }
+    }
+}
+
+class ClassA {
+}
+    
+class ClassB {
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

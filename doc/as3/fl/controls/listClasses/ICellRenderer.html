@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="ICellRenderer,fl.controls.listClasses.ICellRenderer,column,data,data,icon,index,label,listData,listData,listData,owner,row,selected,selected,source,source,getStyleDefinition,getStyleDefinition,setMouseState,setSize,setSize" name="keywords">
+<title>fl.controls.listClasses.ICellRenderer (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'ICellRenderer - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../../index.html?fl/controls/listClasses/ICellRenderer.html&amp;fl/controls/listClasses/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">ICellRenderer</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ICellRenderer"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.controls.listClasses</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ICellRenderer</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../fl/controls/listClasses/CellRenderer.html">CellRenderer</a>,  <a href="../../../fl/controls/dataGridClasses/DataGridCellEditor.html">DataGridCellEditor</a>,  <a href="../../../fl/controls/listClasses/ImageCell.html">ImageCell</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+     The ICellRenderer interface provides the methods and properties that a cell renderer requires.
+  All user defined cell renderers should implement this interface. All user defined cell renderers
+  must extend either the UIComponent class or a subclass of the UIComponent class.
+    <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="CellRenderer.html" target="">CellRenderer</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#data">data</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">
+         Gets or sets an Object that represents the data that is 
+   associated with a component.</div>
+</td><td class="summaryTableOwnerCol">ICellRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#listData">listData</a> : <a href="../../../fl/controls/listClasses/ListData.html">ListData</a>
+<div class="summaryTableDescription">
+         Gets or sets the list properties that are applied to the cell--for example,
+   the index and selected values.</div>
+</td><td class="summaryTableOwnerCol">ICellRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#selected">selected</a> : <a href="../../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+         Gets or sets a Boolean value that indicates whether the
+   current cell is selected.</div>
+</td><td class="summaryTableOwnerCol">ICellRenderer</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMouseState()">setMouseState</a>(state:<a href="../../../String.html">String</a>):<a href="../../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Sets the current cell to a specific mouse state.</div>
+</td><td class="summaryTableOwnerCol">ICellRenderer</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setSize()">setSize</a>(width:<a href="../../../Number.html">Number</a>, height:<a href="../../../Number.html">Number</a>):<a href="../../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Sets the size of the data according to the pixel values specified by the width
+   and height parameters.</div>
+</td><td class="summaryTableOwnerCol">ICellRenderer</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="data"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">data</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>data:<a href="../../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets or sets an Object that represents the data that is 
+   associated with a component. When this value is set, the 
+   component data is stored and the containing component is 
+   invalidated. The invalidated component is then automatically 
+   redrawn.
+      <p>The data property represents an object containing the item
+   in the DataProvider that the cell represents.  Typically, the
+   data property contains standard properties, depending on the
+   component type. In CellRenderer in a List or ComboBox component
+   the data contains a label, icon, and data properties; a TileList: a 
+   label and a source property; a DataGrid cell contains values
+   for each column.  The data property can also contain user-specified
+   data relevant to the specific cell. Users can extend a CellRenderer
+   for a component to utilize different properties of the data 
+   in the rendering of the cell.</p>
+      <p>Additionally, the <code>labelField</code>, <code>labelFunction</code>, 
+   <code>iconField</code>, <code>iconFunction</code>, <code>sourceField</code>, 
+   and <code>sourceFunction</code> elements can be used to specify which properties 
+   are used to draw the label, icon, and source respectively.</p>
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get data():<a href="../../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set data(value:<a href="../../../Object.html">Object</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="listData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">listData</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>listData:<a href="../../../fl/controls/listClasses/ListData.html">ListData</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets or sets the list properties that are applied to the cell--for example,
+   the <code>index</code> and <code>selected</code> values. These list properties
+   are automatically updated after the cell is invalidated.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get listData():<a href="../../../fl/controls/listClasses/ListData.html">ListData</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set listData(value:<a href="../../../fl/controls/listClasses/ListData.html">ListData</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="selected"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">selected</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>selected:<a href="../../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets or sets a Boolean value that indicates whether the
+   current cell is selected. A value of <code>true</code> indicates
+   that the current cell is selected; a value of <code>false</code> 
+   indicates that it is not.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get selected():<a href="../../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set selected(value:<a href="../../../Boolean.html">Boolean</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="setMouseState()"></a><a name="setMouseState(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMouseState</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMouseState(state:<a href="../../../String.html">String</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Sets the current cell to a specific mouse state.  This method 
+   is necessary for the DataGrid to set the mouse state on an entire
+         row when the user interacts with a single cell.
+                  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">state</span>:<a href="../../../String.html">String</a></code> &mdash; A string that specifies a mouse state, such as "up" or "over". 
+                  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="setSize()"></a><a name="setSize(Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setSize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setSize(width:<a href="../../../Number.html">Number</a>, height:<a href="../../../Number.html">Number</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Sets the size of the data according to the pixel values specified by the <code>width</code>
+   and <code>height</code> parameters.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:<a href="../../../Number.html">Number</a></code> &mdash; The width to display the cell renderer at, in pixels.
+            </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:<a href="../../../Number.html">Number</a></code> &mdash; The height to display the cell renderer at, in pixels.
+                  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">ICellRendererExample.as</div>
+<br>
+<div class="detailBody"> This example creates a custom cell renderer by implementing the ICellRenderer class.
+  <p>To run the example, follow these steps:</p>
+	<ol>
+		<li>Add the List and Button components to the library.</li>
+		<li>Save this code as ICellRendererExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to ICellRendererExample.</li>
+	</ol>
+<div class="listing"><pre>
+package
+{ 
+    import fl.controls.List;
+    import fl.data.DataProvider;
+    import fl.events.ListEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    
+    public class ICellRendererExample extends Sprite
+    {
+        public function ICellRendererExample() {
+            var dp:DataProvider = new DataProvider();
+            var totalEntries:Number = 42;
+            var i:Number;
+            for(i=0; i&lt;totalEntries; i++) {
+                dp.addItem( { label:Math.random(), data:null } );            
+            }
+            
+            var myList = new List();
+            myList.setSize(300,300);
+            myList.move(10,10);
+            myList.setStyle('cellRenderer', MyRenderer);    
+            myList.dataProvider = dp;
+            addChild(myList);
+        }
+    }
+}</pre></div></div>
+<div class="exampleHeader">MyRenderer.as</div>
+<br>
+<div class="detailBody"> Save the following code as MyRenderer.as in the same directory as your FLA file:
+<div class="listing"><pre>
+package
+{
+    import fl.controls.LabelButton;
+    import fl.controls.listClasses.ICellRenderer;
+    import fl.controls.listClasses.ListData;
+    
+    public class MyRenderer extends LabelButton implements ICellRenderer {
+        private var _listData:ListData;
+        private var _data:Object;
+        
+        public function MyRenderer() {
+        }
+
+        public function set listData(newListData:ListData):void {
+            _listData = newListData;
+            label = "Random: " + _listData.label;
+            drawRandomColor();
+        }
+
+        private function drawRandomColor():void {
+            graphics.beginFill(Math.random()*0xFFFFFF);
+            graphics.drawRect(0,0,20,20);
+            graphics.endFill();            
+        }
+
+        public function get listData():ListData {
+            return _listData;
+        }
+
+        public function set data(newData:Object):void {
+            _data = newData;
+        }
+
+        public function get data():Object {
+            return _data;
+        }
+    }
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/MyRenderer",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example2",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example2",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

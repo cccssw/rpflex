@@ -1,0 +1,202 @@
+/* CSS file */
+@namespace "library://ns.adobe.com/flex/spark";
+
+/* default sizes apply to application-dpi: 160 */
+/*
+@media (os-platform: "ios")
+{*/
+    /* don't use the back button style for cancel buttons in a modal view */
+    .cancelStyle
+    {
+        skinClass: ClassReference("spark.skins.ios.BeveledActionButtonSkin");
+    }
+    
+    .dialogDefaultButton:up
+    {
+        chromeColor: #535D78;
+    }
+    
+    ActionBar
+    {
+        paddingTop: 0;
+        paddingBottom: 0;
+        paddingLeft: 0;
+        paddingRight: 0;
+        chromeColor: #6D84A2;
+        defaultButtonAppearance: beveled;
+        skinClass: ClassReference("spark.skins.ios.ActionBarSkin");
+    }
+    
+    ActionBar.beveled Group#navigationGroup Button
+    {
+        fontSize: 12;
+        skinClass: ClassReference("spark.skins.ios.BeveledBackButtonSkin");
+    }
+    
+    ActionBar.beveled Group#actionGroup Button
+    {
+        fontSize: 12;
+        skinClass: ClassReference("spark.skins.ios.BeveledActionButtonSkin");
+    }
+    
+    ActionBar #titleDisplay
+    {
+        fontSize: 20;
+    }
+    
+    Panel
+    {
+        color: #FFFFFF;
+        skinClass: ClassReference("spark.skins.ios.PanelSkin");
+    }
+    
+    Panel #titleDisplay
+    {
+        fontSize: 20;
+    }
+    
+    Panel Button
+    {
+        chromeColor: #0C1C41;
+        textShadowColor: #000000;
+        skinClass: ClassReference("spark.skins.ios.ViewMenuItemSkin");
+    }
+    
+    Panel Button:down
+    {
+        chromeColor: #000000;
+    }
+    
+    HScrollBar
+    {
+        chromeColor: #000000;
+        skinClass: ClassReference("spark.skins.ios.HScrollBarSkin");
+    }
+    
+    TabbedViewNavigator #tabBar
+    {
+        chromeColor: #000000;
+        color: #FFFFFF;
+        fontSize: 11;
+        fontWeight: bold;
+        iconPlacement: top;
+        interactionMode: mouse;
+        skinClass: ClassReference("spark.skins.ios.TabbedViewNavigatorTabBarSkin");
+        textShadowAlpha: 0;
+    }
+    
+    TabbedViewNavigator ButtonBarButton:up
+    {
+    	color: #CCCCCC;
+    }
+    
+    View
+    {
+        skinClass: ClassReference("spark.skins.ios.ViewSkin");
+    }
+    
+    ViewMenu
+    {
+        color: #FFFFFF;
+        contentBackgroundColor: #000000;
+        contentBackgroundAlpha: 0.6;
+        fontSize: 20;
+        fontWeight: bold;
+        textShadowColor: #666666;
+        skinClass: ClassReference("spark.skins.ios.ViewMenuSkin");
+    }
+    
+    ViewMenu #cancelButton
+    {
+        color: #FFFFFF;
+        chromeColor: #000000;
+    }
+    
+    ViewMenu #cancelButton:down
+    {
+        chromeColor: #0000FF;
+    }
+    
+    ViewMenuItem
+    {
+        iconPlacement: left;
+        color: #000000;
+        textShadowColor: #FFFFFF;
+        skinClass: ClassReference("spark.skins.ios.ViewMenuItemSkin");
+    }
+    
+    ViewMenuItem:down
+    {
+        chromeColor: #0000FF;
+        color: #FFFFFF;
+        textShadowColor: #000000;
+    }
+    
+    VScrollBar
+    {
+        chromeColor: #000000;
+        skinClass: ClassReference("spark.skins.ios.VScrollBarSkin");
+    }
+    
+    List
+    {
+        alternatingItemColors: #FFFFFF;
+        contentBackgroundColor: #FFFFFF;
+        downColor: #015DE6;
+        selectionColor: #FFFFFF;
+    }
+/*}*/
+
+/*
+@media (os-platform: "ios") AND (application-dpi: 320)
+{*/
+@media (application-dpi: 320)
+{
+    ActionBar #titleDisplay
+    {
+        fontSize: 36;
+    }
+    
+    ActionBar.beveled Group#navigationGroup Button, ActionBar.beveled Group#actionGroup Button
+    {
+        fontSize: 24;
+    }
+    
+    ViewMenuItem
+    {
+        fontSize: 36;
+    }
+    
+    TabbedViewNavigator #tabBar
+    {
+        fontSize: 20;
+    }
+}
+
+
+
+
+/*
+@media (application-dpi: 240)
+{
+    ActionBar #titleDisplay
+    {
+        fontSize: 28;
+    }
+    
+    ActionBar.beveled Group#navigationGroup Button, ActionBar.beveled Group#actionGroup Button
+    {
+        fontSize: 18;
+    }
+    
+    ViewMenuItem
+    {
+        fontSize: 28;
+    }
+    
+    TabbedViewNavigator #tabBar
+    {
+        fontSize: 16;
+    }
+}
+/*/

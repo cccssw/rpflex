@@ -1,0 +1,88 @@
+<languageVersion: 1.0;>
+
+kernel stretch
+
+<   
+    namespace:          "pt.strat";
+    vendor:             "Strat Web";
+    version:            1;
+    description:        "Stretch an image between an origin pixel coordinate to a new destination coordinate";
+>
+
+ {
+
+    parameter float2 origin
+    <
+        minValue:float2(0.0, 0.0);
+        maxValue:float2(800.0,600.0);
+        defaultValue:float2(150.0, 150.0);
+    >;
+    
+     parameter float2 destination
+    <
+        minValue:float2(0.0, 0.0);
+        maxValue:float2(800.0,600.0);
+        defaultValue:float2(150.0, 150.0);
+    >;
+    
+     // the larger this value, greater is the deformation
+     // good default 20
+     // never use 0!
+     parameter float displacementCoeff
+    <
+        minValue:float(1.0);
+        maxValue:float(200.0);
+        defaultValue:float(20.0);
+    >;
+    
+     // the larger this value, broader is the area affected
+     // good default 50
+     // never use 0!
+     parameter float radialCoeff
+    <
+        minValue:float(1.0);
+        maxValue:float(200.0);
+        defaultValue:float(50.0);
+    >;
+    
+    
+    input image4 src;
+    output pixel4 pxl; 
+    
+    void
+    evaluatePixel() 
+    {
+    
+        // prevents division by 0
+        if(displacementCoeff > 0.0 && radialCoeff > 0.0)
+        {
+            // displacement: the vector between the original position and the new position (destination)
+            float2 displacement = destination - origin;
+            
+            // distance: the distance (vector length) between the current pixel and the origin
+            float2 relativePos =  origin - outCoord();
+            float distance = length( relativePos );
+        
+            // correctedDisplacement decreases in proportion to displacement increase (f(x) = 1/(1+x/a))
+            //      and equals to displacement value when this reaches 0 (the origin is never actually moved to destination, but is somewhere along the way)
+            //      Consider this as a sort of friction...
+            float2 correctedDisplacement = (displacement / (1.0 + abs(displacement) / displacementCoeff));
+        
+            // the correctedDisplacement is further changed by a factor that decreases in proportion to distance increase
+            //      If the current pixel is over the origin (distance equals 0) than no change occurs.
+            float relativeDisplacement = (1.0 + distance / radialCoeff);
+            
+            float2 pos;
+            pos = outCoord() - correctedDisplacement / relativeDisplacement;
+            pxl = sampleLinear( src, pos);
+        
+        }else{
+            pxl = sampleLinear( src, outCoord());
+        }
+        
+    
+        
+  
+    }    
+    
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="com.loning.mobile.controls.*"
+		creationComplete="view1_creationCompleteHandler(event)" title="SelectionView">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			[Bindable]
+			private var arraycollection:ArrayCollection;
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				arraycollection=new ArrayCollection();
+				var o:Object=new Object();
+				o.title="1";
+				o.description="1";
+				o.selected=true;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="2";
+				o.description="1";
+				o.selected=true;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+				o=new Object();
+				o.title="3";
+				o.description="1";
+				o.selected=false;
+				arraycollection.addItem(o);
+			}
+			
+		]]>
+	</fx:Script>
+	<controls:MobileDataContainer dataProvider="{this.arraycollection}" x="0" y="0" width="100%" height="100%"/>
+</s:View>

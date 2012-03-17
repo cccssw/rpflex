@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/3/trunk/src/com/adobe/crypto
+END
+HMAC.as
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/trunk/src/com/adobe/crypto/HMAC.as
+END
+SHA1.as
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/3/trunk/src/com/adobe/crypto/SHA1.as
+END

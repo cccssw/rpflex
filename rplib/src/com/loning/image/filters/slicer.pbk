@@ -1,0 +1,102 @@
+
+/////////////////////////////////////////////////////
+//  slicer
+//
+//	author 	   : frank reitberger
+//	blog 	   : http://www.prinzipiell.com
+//  copyright 2008
+//
+/////////////////////////////////////////////////////
+
+<languageVersion: 1.0;>
+
+kernel slicer
+
+<   
+    namespace:          "slicer";
+    vendor:             "Frank Reitberger";
+    version:            1;
+    description:        "generates sliced images";
+>
+
+ {
+    parameter float amount
+    <
+        minValue:     float(0.0);
+        maxValue:     float(20.0);
+        defaultValue: float(5.0);
+        description:  "amount";
+    >;
+    
+    parameter int modus
+    <
+        minValue:     int(0);
+        maxValue:     int(3);
+        defaultValue: int(0);
+        description:  "amount";
+    >; 
+    
+    parameter float size
+    <
+        minValue:     float(1.0);
+        maxValue:     float(10.0);
+        defaultValue: float(6.0);
+        description:  "amount";
+    >;    
+    
+    input image4 src;
+    output pixel4 dst; 
+    
+    void
+    evaluatePixel()
+    {
+        float2 pos   = outCoord();
+        
+        float x      = pos.x;
+        float y      = pos.y;
+        
+        float nx,ny;
+        
+        if ( modus == 0 ) {
+        
+             nx     = pos.x;
+             ny     = pos.y;
+             
+            dst = sampleNearest( src, outCoord()  ); 
+             
+        }
+        
+        if ( modus == 1 ) {
+        
+             nx     = amount * sign(cos(pos.y / size));
+             ny     = amount * sign(cos(pos.x / size));
+             
+             float2 pnt   = float2(  nx , ny  );
+             dst = sampleNearest( src, outCoord() + pnt  );              
+        
+        }
+        
+        if ( modus == 2 ) {
+        
+             nx     = amount / sign(cos(pos.y * size));
+             ny     = amount / sign(cos(pos.x * size));
+             
+             float2 pnt   = float2(  nx , ny  );
+             dst = sampleNearest( src, outCoord() + pnt  );              
+        
+        }
+        
+         if ( modus == 3 ) {
+        
+             nx     = mod( sign(cos(pos.y / size)), size / amount);
+             ny     = mod( sign(cos(pos.x / size)), size / amount);
+             
+             float2 pnt   = float2(  nx , ny  );
+             dst = sampleNearest( src, outCoord() + pnt );              
+        
+        }       
+
+                
+    }    
+    
+}

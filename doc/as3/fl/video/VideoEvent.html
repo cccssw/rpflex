@@ -1,0 +1,1642 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="VideoEvent,fl.video.VideoEvent,ACTIONSCRIPT,activeVideoPlayerIndex,added,align,align,ALL,AUTO_LAYOUT,AUTO_REWOUND,autoLayout,autoPlay,autoRewind,autoRewind,backButton,bitrate,bitrate,bitrate,BOTTOM_LEFT,BOTTOM_RIGHT,BOTTOM,BUFFERING_STATE_ENTERED,buffering,bufferingBar,bufferingBarHidesAndDisablesOthers,BUFFERING,bufferTime,bufferTime,bytesLoaded,bytesLoaded,bytesTotal,bytesTotal,CAPTION_CHANGE,CAPTION_TARGET_CREATED,captionButton,captionCuePointObject,captionTargetName,captionTarget,captionTarget,CENTER,CLOSE,code,COMPLETE,CONNECTION_ERROR,CUE_POINT,cuePoints,DEFAULT_TIMEOUT,DELETE_DEFAULT_PLAYER,DISCONNECTED,EVENT,EXACT_FIT,fallbackServerName,FAST_FORWARD,FLV,flvPlaybackName,flvPlayback,forwardButton,fullScreenBackgroundColor,fullScreenButton,fullScreenSkinDelay,fullScreenTakeOver,height,height,idleTimeout,idleTimeout,ILLEGAL_CUE_POINT,INCMANAGER_CLASS_UNSET,iNCManagerClass,info,INVALID_SEEK,INVALID_SOURCE,INVALID_XML,isLive,isLive,isRTMP,isRTMP,isRTMP,isRTMP,LAYOUT,LEFT,LOADING,MAINTAIN_ASPECT_RATIO,METADATA_RECEIVED,metadata,metadata,metadataLoaded,MISSING_SKIN_STYLE,muteButton,NAVIGATION,ncMgr,ncMgr,netConnection,netConnection,netConnection,NETSTREAM_CLIENT_CLASS_UNSET,netStream,netStreamClientClass,NO_BITRATE_MATCH,NO_CONNECTION,NO_SCALE,NULL_URL_LOAD,oldBounds,oldRegistrationBounds,pauseButton,PAUSED_STATE_ENTERED,paused,PAUSED,playButton,PLAYHEAD_UPDATE,playheadPercentage,playheadTime,playheadTime,playheadTime,playheadUpdateInterval,playheadUpdateInterval,PLAYING_STATE_ENTERED,playing,PLAYING,playPauseButton,preferredHeight,preferredWidth,preview,PROGRESS,progressInterval,progressInterval,READY,registrationHeight,registrationHeight,registrationWidth,registrationWidth,registrationX,registrationX,registrationY,registrationY,RESIZING,REWIND,REWINDING,RIGHT,scaleMode,scaleMode,scaleX,scaleX,scaleY,scaleY,SCRUB_FINISH,SCRUB_START,scrubbing,seekBarInterval,seekBarScrubTolerance,seekBar,SEEKED,SEEKING,seekToPrevOffset,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,showCaptions,simpleFormatting,SKIN_ERROR,SKIN_LOADED,skin,skinAutoHide,skinBackgroundAlpha,skinBackgroundColor,skinFadeTime,skinScaleMaximum,SOUND_UPDATE,soundTransform,soundTransform,soundTransform,source,source,source,STATE_CHANGE,state,state,state,stateResponsive,stateResponsive,stopButton,STOPPED_STATE_ENTERED,stopped,STOPPED,streamHeight,streamHeight,streamLength,streamLength,streamLength,streamName,streamName,streamWidth,streamWidth,timeout,timeout,TOP_LEFT,TOP_RIGHT,TOP,totalTime,totalTime,track,type,UNSUPPORTED_PROPERTY,VERSION,VERSION,VERSION,VERSION,VERSION,VERSION,videoHeight,videoPlayer,videoPlayerIndex,videoPlayer,videoWidth,visible,visibleVideoPlayerIndex,volume,volume,volumeBarInterval,volumeBarScrubTolerance,volumeBar,vp,vp,vp,vp,vp,width,width,x,x,y,y" name="keywords">
+<title>fl.video.VideoEvent (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'VideoEvent - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/video/VideoEvent.html&amp;fl/video/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">VideoEvent</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("VideoEvent"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.video</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  VideoEvent</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">VideoEvent  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/Event.html">Event</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td> <a href="../../fl/video/IVPEvent.html">IVPEvent</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+     Flash<sup>&reg;</sup> Player dispatches a VideoEvent object when the user 
+     plays a video.
+          <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#bubbles">bubbles</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+ Indicates whether an event is a bubbling event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#cancelable">cancelable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+ Indicates whether the behavior associated with the event can be prevented.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#currentTarget">currentTarget</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+ The object that is actively processing the Event object with an event listener.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#eventPhase">eventPhase</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+ The current phase in the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#playheadTime">playheadTime</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+         A number that is the current playhead time or position, measured in seconds, 
+         which can be a fractional value.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#state">state</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+         A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#target">target</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+ The event target.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#type">type</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+ The type of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#vp">vp</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">
+         The index of the VideoPlayer object involved in this event.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#VideoEvent()">VideoEvent</a>(type:<a href="../../String.html">String</a>, bubbles:<a href="../../Boolean.html">Boolean</a> = false, cancelable:<a href="../../Boolean.html">Boolean</a> = false, state:<a href="../../String.html">String</a> = null, playheadTime:<a href="../../Number.html">Number</a> = NaN, vp:<a href="../../uint.html">uint</a> = 0)</div>
+<div class="summaryTableDescription">
+         Creates an Event object that contains information about video events.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#clone()">clone</a>():<a href="../../flash/events/Event.html">Event</a>
+</div>
+<div class="summaryTableDescription">
+  Duplicates an instance of an Event subclass.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#formatToString()">formatToString</a>(className:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  A utility function for implementing the toString() method in custom 
+  ActionScript 3.0 Event classes.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#isDefaultPrevented()">isDefaultPrevented</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the preventDefault() method has been called on the event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#preventDefault()">preventDefault</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Cancels an event's default behavior if that behavior can be canceled.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#stopImmediatePropagation()">stopImmediatePropagation</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Prevents processing of any event listeners in the current node and any subsequent nodes in 
+ the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#stopPropagation()">stopPropagation</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Prevents processing of any event listeners in nodes subsequent to the current node in the 
+ event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+ Returns a string containing all the properties of the Event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedConstant" id="hideInheritedConstant">
+<a onclick="javascript:setInheritedVisible(false,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Constants</a>
+</div>
+<div class="showInheritedConstant" id="showInheritedConstant">
+<a onclick="javascript:setInheritedVisible(true,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Constants</a>
+</div>
+</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ACTIVATE">ACTIVATE</a> : <a href="../../String.html">String</a> = "activate"<div class="summaryTableDescription">[static] 
+ The Event.ACTIVATE constant defines the value of the type property of an activate event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ADDED">ADDED</a> : <a href="../../String.html">String</a> = "added"<div class="summaryTableDescription">[static] 
+ The Event.ADDED constant defines the value of the type property of 
+ an added event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ADDED_TO_STAGE">ADDED_TO_STAGE</a> : <a href="../../String.html">String</a> = "addedToStage"<div class="summaryTableDescription">[static] 
+ The Event.ADDED_TO_STAGE constant defines the value of the type 
+ property of an addedToStage event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#AUTO_REWOUND">AUTO_REWOUND</a> : <a href="../../String.html">String</a> = "autoRewound"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of an autoRewound 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#BUFFERING_STATE_ENTERED">BUFFERING_STATE_ENTERED</a> : <a href="../../String.html">String</a> = "bufferingStateEntered"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a bufferingStateEntered 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CANCEL">CANCEL</a> : <a href="../../String.html">String</a> = "cancel"<div class="summaryTableDescription">[static] 
+ The Event.CANCEL constant defines the value of the type property of a cancel event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CHANGE">CHANGE</a> : <a href="../../String.html">String</a> = "change"<div class="summaryTableDescription">[static] 
+ The Event.CHANGE constant defines the value of the type property of a change event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CLOSE">CLOSE</a> : <a href="../../String.html">String</a> = "close"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a close 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#CLOSING">CLOSING</a> : <a href="../../String.html">String</a> = "closing"<div class="summaryTableDescription">[static] 
+ The Event.CLOSING constant defines the value of the 
+ type property of a closing event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#COMPLETE">COMPLETE</a> : <a href="../../String.html">String</a> = "complete"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a complete event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CONNECT">CONNECT</a> : <a href="../../String.html">String</a> = "connect"<div class="summaryTableDescription">[static] 
+ The Event.CONNECT constant defines the value of the type property of a connect event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#DEACTIVATE">DEACTIVATE</a> : <a href="../../String.html">String</a> = "deactivate"<div class="summaryTableDescription">[static] 
+ The Event.DEACTIVATE constant defines the value of the type property of a deactivate event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#DISPLAYING">DISPLAYING</a> : <a href="../../String.html">String</a> = "displaying"<div class="summaryTableDescription">[static] 
+  Defines the value of the type property of a displaying event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ENTER_FRAME">ENTER_FRAME</a> : <a href="../../String.html">String</a> = "enterFrame"<div class="summaryTableDescription">[static] 
+ The Event.ENTER_FRAME constant defines the value of the type property of 
+ an enterFrame event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#EXITING">EXITING</a> : <a href="../../String.html">String</a> = "exiting"<div class="summaryTableDescription">[static] 
+ The Event.EXITING constant defines the value of the type property of an exiting event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FAST_FORWARD">FAST_FORWARD</a> : <a href="../../String.html">String</a> = "fastForward"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a fastForward 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#FULLSCREEN">FULLSCREEN</a> : <a href="../../String.html">String</a> = "fullScreen"<div class="summaryTableDescription">[static] 
+ The Event.FULL_SCREEN constant defines the value of the type property of a fullScreen event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_BOUNDS_CHANGE">HTML_BOUNDS_CHANGE</a> : <a href="../../String.html">String</a> = "htmlBoundsChange"<div class="summaryTableDescription">[static] 
+ The Event.HTML_BOUNDS_CHANGE constant defines the value of the type property of an htmlBoundsChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_DOM_INITIALIZE">HTML_DOM_INITIALIZE</a> : <a href="../../String.html">String</a> = "htmlDOMInitialize"<div class="summaryTableDescription">[static] 
+ The Event.HTML_DOM_INITIALIZE constant defines the value of the type property 
+ of an htmlDOMInitialize event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_RENDER">HTML_RENDER</a> : <a href="../../String.html">String</a> = "htmlRender"<div class="summaryTableDescription">[static] 
+ The Event.HTML_RENDER constant defines the value of the type property of an htmlRender event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ID3">ID3</a> : <a href="../../String.html">String</a> = "id3"<div class="summaryTableDescription">[static] 
+ The Event.ID3 constant defines the value of the type property of an id3 event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#INIT">INIT</a> : <a href="../../String.html">String</a> = "init"<div class="summaryTableDescription">[static] 
+ The Event.INIT constant defines the value of the type property of an init event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#LOCATION_CHANGE">LOCATION_CHANGE</a> : <a href="../../String.html">String</a> = "locationChange"<div class="summaryTableDescription">[static] 
+ The Event.LOCATION_CHANGE constant defines the value of the type property of a locationChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#MOUSE_LEAVE">MOUSE_LEAVE</a> : <a href="../../String.html">String</a> = "mouseLeave"<div class="summaryTableDescription">[static] 
+ The Event.MOUSE_LEAVE constant defines the value of the type property of a mouseLeave event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#NETWORK_CHANGE">NETWORK_CHANGE</a> : <a href="../../String.html">String</a> = "networkChange"<div class="summaryTableDescription">[static] 
+ The Event.NETWORK_CHANGE constant defines the value of the type property of a networkChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#OPEN">OPEN</a> : <a href="../../String.html">String</a> = "open"<div class="summaryTableDescription">[static] 
+ The Event.OPEN constant defines the value of the type property of an open event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PAUSED_STATE_ENTERED">PAUSED_STATE_ENTERED</a> : <a href="../../String.html">String</a> = "pausedStateEntered"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a pausedStateEntered 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PLAYHEAD_UPDATE">PLAYHEAD_UPDATE</a> : <a href="../../String.html">String</a> = "playheadUpdate"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a playheadUpdate 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PLAYING_STATE_ENTERED">PLAYING_STATE_ENTERED</a> : <a href="../../String.html">String</a> = "playingStateEntered"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a playingStateEntered 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#READY">READY</a> : <a href="../../String.html">String</a> = "ready"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a ready 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#REMOVED">REMOVED</a> : <a href="../../String.html">String</a> = "removed"<div class="summaryTableDescription">[static] 
+ The Event.REMOVED constant defines the value of the type property of
+ a removed event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#REMOVED_FROM_STAGE">REMOVED_FROM_STAGE</a> : <a href="../../String.html">String</a> = "removedFromStage"<div class="summaryTableDescription">[static] 
+ The Event.REMOVED_FROM_STAGE constant defines the value of the type 
+ property of a removedFromStage event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#RENDER">RENDER</a> : <a href="../../String.html">String</a> = "render"<div class="summaryTableDescription">[static] 
+ The Event.RENDER constant defines the value of the type property of a render event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#RESIZE">RESIZE</a> : <a href="../../String.html">String</a> = "resize"<div class="summaryTableDescription">[static] 
+ The Event.RESIZE constant defines the value of the type property of a resize event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#REWIND">REWIND</a> : <a href="../../String.html">String</a> = "rewind"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a rewind 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SCROLL">SCROLL</a> : <a href="../../String.html">String</a> = "scroll"<div class="summaryTableDescription">[static] 
+ The Event.SCROLL constant defines the value of the type property of a scroll event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SCRUB_FINISH">SCRUB_FINISH</a> : <a href="../../String.html">String</a> = "scrubFinish"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a scrubFinish 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SCRUB_START">SCRUB_START</a> : <a href="../../String.html">String</a> = "scrubStart"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a scrubStart 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SEEKED">SEEKED</a> : <a href="../../String.html">String</a> = "seeked"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a seeked event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SELECT">SELECT</a> : <a href="../../String.html">String</a> = "select"<div class="summaryTableDescription">[static] 
+ The Event.SELECT constant defines the value of the type property of a select event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SKIN_LOADED">SKIN_LOADED</a> : <a href="../../String.html">String</a> = "skinLoaded"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a skinLoaded event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SOUND_COMPLETE">SOUND_COMPLETE</a> : <a href="../../String.html">String</a> = "soundComplete"<div class="summaryTableDescription">[static] 
+ The Event.SOUND_COMPLETE constant defines the value of the type property of a soundComplete event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STATE_CHANGE">STATE_CHANGE</a> : <a href="../../String.html">String</a> = "stateChange"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a stateChange event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STOPPED_STATE_ENTERED">STOPPED_STATE_ENTERED</a> : <a href="../../String.html">String</a> = "stoppedStateEntered"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a stoppedStateEntered 
+   event object.</div>
+</td><td class="summaryTableOwnerCol">VideoEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_CHILDREN_CHANGE">TAB_CHILDREN_CHANGE</a> : <a href="../../String.html">String</a> = "tabChildrenChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_CHILDREN_CHANGE constant defines the value of the type 
+ property of a tabChildrenChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_ENABLED_CHANGE">TAB_ENABLED_CHANGE</a> : <a href="../../String.html">String</a> = "tabEnabledChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_ENABLED_CHANGE constant defines the value of the type 
+ property of a tabEnabledChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_INDEX_CHANGE">TAB_INDEX_CHANGE</a> : <a href="../../String.html">String</a> = "tabIndexChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_INDEX_CHANGE constant defines the value of the 
+ type property of a tabIndexChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#UNLOAD">UNLOAD</a> : <a href="../../String.html">String</a> = "unload"<div class="summaryTableDescription">[static] 
+ The Event.UNLOAD constant defines the value of the type property of an unload event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#USER_IDLE">USER_IDLE</a> : <a href="../../String.html">String</a> = "userIdle"<div class="summaryTableDescription">[static] 
+ The Event.USER_IDLE constant defines the value of the type property of a userIdle event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#USER_PRESENT">USER_PRESENT</a> : <a href="../../String.html">String</a> = "userPresent"<div class="summaryTableDescription">[static] 
+ The Event.USER_PRESENT constant defines the value of the type property of a userPresent event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="playheadTime"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playheadTime</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>playheadTime:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         A number that is the current playhead time or position, measured in seconds, 
+         which can be a fractional value. Setting this property triggers a seek and 
+         has all the restrictions of a seek.
+         
+         <p>When the playhead time changes, which occurs once every .25 seconds 
+         while the FLV file plays, the component dispatches the <code>playheadUpdate</code>
+         event.</p>
+         
+         <p>For several reasons, the <code>playheadTime</code> property might not have the expected 
+         value immediately after you call one of the seek methods or set <code>playheadTime</code> 
+         to cause seeking. First, for a progressive download, you can seek only to a 
+         keyframe, so a seek takes you to the time of the first keyframe after the 
+         specified time. (When streaming, a seek always goes to the precise specified 
+         time even if the source FLV file doesn't have a keyframe there.) Second, 
+         seeking is asynchronous, so if you call a seek method or set the 
+         <code>playheadTime</code> property, <code>playheadTime</code> does not update immediately. 
+         To obtain the time after the seek is complete, listen for the <code>seek</code> event, 
+         which does not fire until the <code>playheadTime</code> property has updated.</p>
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get playheadTime():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set playheadTime(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#playheadTime" target="">FLVPlayback.playheadTime</a>
+<br>
+<a href="FLVPlayback.html#seek()" target="">FLVPlayback.seek()</a>
+<br>
+<a href="VideoPlayer.html#playheadTime" target="">VideoPlayer.playheadTime</a>
+<br>
+<a href="VideoPlayer.html#seek()" target="">VideoPlayer.seek()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="state"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">state</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>state:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         A string identifying the constant from the VideoState 
+         class that describes the playback state of the component. This property is set by the 
+         <code>load()</code>, <code>play()</code>, <code>stop()</code>, <code>pause()</code>, 
+         and <code>seek()</code> methods. 
+         
+         <p>The possible values for the state property are: <code>buffering</code>, <code>connectionError</code>, 
+         <code>disconnected</code>, <code>loading</code>, <code>paused</code>, <code>playing</code>, 
+   <code>rewinding</code>, <code>seeking</code>, and <code>stopped</code>. You can use the properties of  
+   the FLVPlayback class to test for these states. </p>
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get state():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set state(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html#DISCONNECTED" target="">VideoState.DISCONNECTED</a>
+<br>
+<a href="VideoState.html#STOPPED" target="">VideoState.STOPPED</a>
+<br>
+<a href="VideoState.html#PLAYING" target="">VideoState.PLAYING</a>
+<br>
+<a href="VideoState.html#PAUSED" target="">VideoState.PAUSED</a>
+<br>
+<a href="VideoState.html#BUFFERING" target="">VideoState.BUFFERING</a>
+<br>
+<a href="VideoState.html#LOADING" target="">VideoState.LOADING</a>
+<br>
+<a href="VideoState.html#CONNECTION_ERROR" target="">VideoState.CONNECTION_ERROR</a>
+<br>
+<a href="VideoState.html#REWINDING" target="">VideoState.REWINDING</a>
+<br>
+<a href="VideoState.html#SEEKING" target="">VideoState.SEEKING</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="vp"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">vp</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>vp:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         The index of the VideoPlayer object involved in this event.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get vp():<a href="../../uint.html">uint</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set vp(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="VideoEvent()"></a><a name="VideoEvent(String,Boolean,Boolean,String,Number,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">VideoEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function VideoEvent(type:<a href="../../String.html">String</a>, bubbles:<a href="../../Boolean.html">Boolean</a> = false, cancelable:<a href="../../Boolean.html">Boolean</a> = false, state:<a href="../../String.html">String</a> = null, playheadTime:<a href="../../Number.html">Number</a> = NaN, vp:<a href="../../uint.html">uint</a> = 0)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Creates an Event object that contains information about video events. 
+         Event objects are passed as parameters to event listeners.
+         
+         </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of the event. Event listeners can access this information 
+         through the inherited <code>type</code> property. Possible values are 
+   <code>VideoEvent.AUTO_REWOUND</code>, <code>VideoEvent.BUFFERING_STATE_ENTERED</code>, 
+   <code>VideoEvent.CLOSE</code>, <code>VideoEvent.COMPLETE</code>, <code>VideoEvent.FAST_FORWARD</code>, 
+         <code>VideoEvent.PAUSED_STATE_ENTERED</code>, <code>VideoEvent.PLAYHEAD_UPDATE</code>, 
+   <code>VideoEvent.PLAYING_STATE_ENTERED</code>, <code>VideoEvent.READY</code>, 
+   <code>VideoEvent.REWIND</code>, <code>VideoEvent.SCRUB_FINISH</code>, <code>VideoEvent.SCRUB_START</code>, 
+         <code>VideoEvent.SEEKED</code>, <code>VideoEvent.SKIN_LOADED</code>, <code>VideoEvent.STATE_CHANGE</code>, 
+   <code>VideoEvent.STOPPED_STATE_ENTERED</code>, and <code>VideoEvent.VOLUME_UPDATE</code>.
+         
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bubbles</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Determines whether the Event object participates in the bubbling 
+         stage of the event flow. Event listeners can access this information through the 
+         inherited <code>bubbles</code> property.
+         
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">cancelable</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Determines whether the Event object can be canceled. Event listeners can 
+         access this information through the inherited <code>cancelable</code> property.
+         
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">state</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.
+         
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">playheadTime</span>:<a href="../../Number.html">Number</a></code> (default = <code>NaN</code>)<code></code> &mdash; A number that is the current playhead time or position.
+         
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vp</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; Determines the index of the VideoPlayer object.     
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<div class="detailSectionHeader">Constant Detail</div>
+<a name="constantDetail"></a><a name="AUTO_REWOUND"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AUTO_REWOUND</td><td class="detailHeaderType">Constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const AUTO_REWOUND:<a href="../../String.html">String</a> = "autoRewound"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of an <code>autoRewound</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="BUFFERING_STATE_ENTERED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">BUFFERING_STATE_ENTERED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const BUFFERING_STATE_ENTERED:<a href="../../String.html">String</a> = "bufferingStateEntered"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>bufferingStateEntered</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="CLOSE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">CLOSE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const CLOSE:<a href="../../String.html">String</a> = "close"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>close</code> 
+   event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="COMPLETE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">COMPLETE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const COMPLETE:<a href="../../String.html">String</a> = "complete"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="FAST_FORWARD"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FAST_FORWARD</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const FAST_FORWARD:<a href="../../String.html">String</a> = "fastForward"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>fastForward</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PAUSED_STATE_ENTERED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PAUSED_STATE_ENTERED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PAUSED_STATE_ENTERED:<a href="../../String.html">String</a> = "pausedStateEntered"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>pausedStateEntered</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PLAYHEAD_UPDATE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PLAYHEAD_UPDATE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PLAYHEAD_UPDATE:<a href="../../String.html">String</a> = "playheadUpdate"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>playheadUpdate</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PLAYING_STATE_ENTERED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PLAYING_STATE_ENTERED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PLAYING_STATE_ENTERED:<a href="../../String.html">String</a> = "playingStateEntered"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>playingStateEntered</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="READY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">READY</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const READY:<a href="../../String.html">String</a> = "ready"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>ready</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="REWIND"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">REWIND</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const REWIND:<a href="../../String.html">String</a> = "rewind"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>rewind</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="SCRUB_FINISH"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SCRUB_FINISH</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SCRUB_FINISH:<a href="../../String.html">String</a> = "scrubFinish"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>scrubFinish</code> 
+   event object. 
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="SCRUB_START"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SCRUB_START</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SCRUB_START:<a href="../../String.html">String</a> = "scrubStart"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>scrubStart</code> 
+   event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="SEEKED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SEEKED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SEEKED:<a href="../../String.html">String</a> = "seeked"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>seeked</code> event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="SKIN_LOADED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SKIN_LOADED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SKIN_LOADED:<a href="../../String.html">String</a> = "skinLoaded"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>skinLoaded</code> event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="STATE_CHANGE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STATE_CHANGE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STATE_CHANGE:<a href="../../String.html">String</a> = "stateChange"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>stateChange</code> event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+                     class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="STOPPED_STATE_ENTERED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STOPPED_STATE_ENTERED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STOPPED_STATE_ENTERED:<a href="../../String.html">String</a> = "stoppedStateEntered"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>stoppedStateEntered</code> 
+   event object.
+                  <p>This event has the following properties:</p>
+         <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>state</code></td><td>A string identifying the constant from the VideoState 
+         class that describes the playback state of the component.</td>
+</tr>
+<tr>
+<td><code>playheadTime</code></td><td>A number that is the current playhead time or position.</td>
+</tr>
+<tr>
+<td><code>vp</code></td><td>The index of the VideoPlayer object.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoState.html" target="">VideoState</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

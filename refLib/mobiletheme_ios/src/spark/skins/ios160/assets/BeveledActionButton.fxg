@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="4" scaleGridRight="26" scaleGridTop="4" scaleGridBottom="25">
+  
+      <Path y="1" winding="nonZero" data="M25.9995 1C27.6558 1 28.9995 2.34375 28.9995 4L28.9995 25C28.9995 26.6562 27.6558 28 25.9995 28L4 28C2.34375 28 1 26.6562 1 25L1 4C1 2.34375 2.34375 1 4 1L25.9995 1ZM25.9995 0 4 0C1.79443 0 0 1.79443 0 4L0 25C0 27.2061 1.79443 29 4 29L25.9995
+ 29C28.2051 29 29.9995 27.2061 29.9995 25L29.9995 4C29.9995 1.79443 28.2051 0 25.9995 0L25.9995 0Z">
+        <fill>
+          <SolidColor color="#FFFFFF" alpha="0.15"/>
+        </fill>
+      </Path>
+      <Path winding="nonZero" data="M25.9995 1C27.6558 1 28.9995 2.34375 28.9995 4L28.9995 25C28.9995 26.6562 27.6558 28 25.9995 28L4 28C2.34375 28 1 26.6562 1 25L1 4C1 2.34375 2.34375 1 4 1L25.9995 1ZM25.9995 0 4 0C1.79443 0 0 1.79443 0 4L0 25C0 27.2061 1.79443 29 4 29L25.9995
+ 29C28.2051 29 29.9995 27.2061 29.9995 25L29.9995 4C29.9995 1.79443 28.2051 0 25.9995 0L25.9995 0Z">
+        <fill>
+          <LinearGradient x="20" y="0" scaleX="27.0967" rotation="90">
+            <GradientEntry ratio="0" color="#323232" alpha="0.9"/>
+            <GradientEntry ratio="0.1" color="#313131" alpha="0.8"/>
+            <GradientEntry ratio="0.2" color="#444444" alpha="0.8"/>
+            <GradientEntry ratio="1" color="#7D7D7D" alpha="0.8"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Rect width="30" height="30">
+        <fill>
+          <SolidColor alpha="0"/>
+        </fill>
+      </Rect>
+
+</Graphic>

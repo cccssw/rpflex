@@ -1,0 +1,80 @@
+<languageVersion: 1.0;>
+ 
+kernel pixelate
+<   namespace : "com.rphelan";
+    vendor : "Ryan Phelan";
+    version : 1;
+    description : "Creates a magnified circle about the center point.  If the outerRadius is larger than the innerRadius, the magnification beween these regions will be interpolated along a cosine curve.  You may set innerRadius to 0 to create a 'bubble' effect, or set it equal to or greater than outerRadius for a precise circle of magnification."; >
+{
+    // center point of the magnification
+    parameter float2 center
+    <
+        minValue: float2(0.0, 0.0);
+        maxValue: float2(2048.0, 2048.0);
+        defaultValue: float2(150.0, 100.0);
+    >;
+    
+    // radius of the inner portion (fully magnified)
+    parameter float innerRadius
+    <
+        minValue:0.0;
+        maxValue:500.0;
+        defaultValue:50.0;
+    >;
+    
+    // radius of the outer portion
+    // pixels between the innerRadius and outerRaius will
+    // be partly magnified
+    parameter float outerRadius
+    <
+        minValue:0.0;
+        maxValue:500.0;
+        defaultValue:80.0;
+    >;
+    
+    // amount of magnification to apply
+    parameter float magnification
+    <
+        minValue:1.0;
+        maxValue:50.0;
+        defaultValue:5.0;
+    >;    
+
+    input image4 inputImage;
+    output pixel4 outputPixel;
+
+    void
+    evaluatePixel()
+    {
+        float2 targetPixel;
+        float2 coord = outCoord();
+        float2 centerVector = coord - center;
+        float distance = length(centerVector);        
+        
+        if( distance < outerRadius ) // we're inside the affected area
+        {
+            float2 maxMagnification = center + (centerVector / magnification);
+        
+            if( distance < innerRadius ) // we're in the innermost region
+            {
+                // do a simple magnification
+                targetPixel = maxMagnification;
+            }
+            else // we're in between the inner and outer radius
+            {
+                // interpolate the magnification amount along a cosine curve between the two radii
+                float ratio = (distance - innerRadius) / (outerRadius - innerRadius); // gives a value between 0 and 1
+                float trigRatio = (cos(ratio * 3.14159265258979) + 1.0) / 2.0;
+                targetPixel = maxMagnification * (trigRatio) + coord * (1.0 - trigRatio);
+            }
+        }
+        else // we're ouside of the affected area
+        {
+            // don't change this pixel
+            targetPixel = coord;
+        }
+        
+        // sample linear will smooth out the magnification quite nicely
+        outputPixel = sampleLinear(inputImage, targetPixel);
+    }
+}

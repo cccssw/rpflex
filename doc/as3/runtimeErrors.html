@@ -1,0 +1,990 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Runtime Errors (ActionScript 3.0)</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Runtime Errors - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?runtimeErrors.html&amp;all-classes.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Runtime Errors</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="compilerErrors.html">Compiler Errors</a> | <a href="compilerWarnings.html">Compiler Warnings</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Runtime Errors"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+
+--></script>
+<div class="MainContent">
+<br>
+<p>The following errors can occur at run time. Run-time type checking occurs in ActionScript 3.0 whether
+        you compile in strict mode or warning mode.</p>
+<br>
+<a name="runtimeErrorSummary"></a>
+<table class="summaryTable" cellspacing="0" cellpadding="3">
+<tr>
+<th>&nbsp;</th><th>Code</th><th width="35%">Message</th><th>Description</th>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2000"></a><b>2000</b></td><td valign="top" class="summaryTableCol">No active security context.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2001"></a><b>2001</b></td><td valign="top" class="summaryTableCol">Too few arguments were specified; got _, _ expected.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2002"></a><b>2002</b></td><td valign="top" class="summaryTableCol">Operation attempted on invalid socket.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2003"></a><b>2003</b></td><td valign="top" class="summaryTableCol">Invalid socket port number specified.
+      </td><td class="summaryTableLastCol">
+	The valid range is 0 to 65535. For more information, see Socket Connections in this language reference.
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2004"></a><b>2004</b></td><td valign="top" class="summaryTableCol">One of the parameters is invalid.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2005"></a><b>2005</b></td><td valign="top" class="summaryTableCol">Parameter _ is of the incorrect type. Should be type _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2006"></a><b>2006</b></td><td valign="top" class="summaryTableCol">The supplied index is out of bounds.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2007"></a><b>2007</b></td><td valign="top" class="summaryTableCol">Parameter _ must be non-null.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2008"></a><b>2008</b></td><td valign="top" class="summaryTableCol">Parameter _ must be one of the accepted values.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2009"></a><b>2009</b></td><td valign="top" class="summaryTableCol">This method cannot be used on a text field with a style sheet.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2010"></a><b>2010</b></td><td valign="top" class="summaryTableCol">Local-with-filesystem SWF files are not permitted to use sockets.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2011"></a><b>2011</b></td><td valign="top" class="summaryTableCol">Socket connection failed to _:_.
+        </td><td class="summaryTableLastCol">
+		There is a network problem. Possibly a DNS name is not resolving or a TCP socket is not connecting.
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2012"></a><b>2012</b></td><td valign="top" class="summaryTableCol">_ class cannot be instantiated.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2013"></a><b>2013</b></td><td valign="top" class="summaryTableCol">Feature can only be used in Flash Authoring.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2014"></a><b>2014</b></td><td valign="top" class="summaryTableCol">Feature is not available at this time.
+        </td><td class="summaryTableLastCol">
+		The feature is not supported on this system.
+	</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2015"></a><b>2015</b></td><td valign="top" class="summaryTableCol">Invalid BitmapData.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2017"></a><b>2017</b></td><td valign="top" class="summaryTableCol">Only trusted local files may cause the Flash Player to exit.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2018"></a><b>2018</b></td><td valign="top" class="summaryTableCol">System.exit is only available in the standalone Flash Player.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2019"></a><b>2019</b></td><td valign="top" class="summaryTableCol">Depth specified is invalid.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2020"></a><b>2020</b></td><td valign="top" class="summaryTableCol">MovieClips objects with different parents cannot be swapped.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2021"></a><b>2021</b></td><td valign="top" class="summaryTableCol">Object creation failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2022"></a><b>2022</b></td><td valign="top" class="summaryTableCol">Class _ must inherit from DisplayObject to link to a symbol.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2023"></a><b>2023</b></td><td valign="top" class="summaryTableCol">Class _ must inherit from Sprite to link to the root.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2024"></a><b>2024</b></td><td valign="top" class="summaryTableCol">An object cannot be added as a child of itself.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2025"></a><b>2025</b></td><td valign="top" class="summaryTableCol">The supplied DisplayObject must be a child of the caller.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2026"></a><b>2026</b></td><td valign="top" class="summaryTableCol">An error occurred navigating to the URL _.
+        </td><td class="summaryTableLastCol">
+		Possibly the URL does not exist, the network connection has a problem, or the URL is outside the security sandbox.
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2027"></a><b>2027</b></td><td valign="top" class="summaryTableCol">Parameter _ must be a non-negative number; got _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2028"></a><b>2028</b></td><td valign="top" class="summaryTableCol">Local-with-filesystem SWF file _ cannot access Internet URL _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2029"></a><b>2029</b></td><td valign="top" class="summaryTableCol">This URLStream object does not have a stream opened.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2030"></a><b>2030</b></td><td valign="top" class="summaryTableCol">End of file was encountered.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2031"></a><b>2031</b></td><td valign="top" class="summaryTableCol">Socket Error.
+        </td><td class="summaryTableLastCol">
+	A socket error occurred. For more information, see Socket Connections in this language reference.
+	</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2032"></a><b>2032</b></td><td valign="top" class="summaryTableCol">Stream Error.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2033"></a><b>2033</b></td><td valign="top" class="summaryTableCol">Key Generation Failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2034"></a><b>2034</b></td><td valign="top" class="summaryTableCol">An invalid digest was supplied.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2035"></a><b>2035</b></td><td valign="top" class="summaryTableCol">URL Not Found.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2036"></a><b>2036</b></td><td valign="top" class="summaryTableCol">Load Never Completed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2037"></a><b>2037</b></td><td valign="top" class="summaryTableCol">Functions called in incorrect sequence, or earlier call was unsuccessful.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2038"></a><b>2038</b></td><td valign="top" class="summaryTableCol">File I/O Error.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2039"></a><b>2039</b></td><td valign="top" class="summaryTableCol">Invalid remote URL protocol. The remote URL protocol must be HTTP or HTTPS.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2041"></a><b>2041</b></td><td valign="top" class="summaryTableCol">Only one file browsing session may be performed at a time.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2042"></a><b>2042</b></td><td valign="top" class="summaryTableCol">The digest property is not supported by this load operation.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2044"></a><b>2044</b></td><td valign="top" class="summaryTableCol">Unhandled _:.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2045"></a><b>2045</b></td><td valign="top" class="summaryTableCol">The digest property is not supported by this load operation.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2046"></a><b>2046</b></td><td valign="top" class="summaryTableCol">The loaded file did not have a valid signature.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2047"></a><b>2047</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _: _ cannot access _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2048"></a><b>2048</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot load data from _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2049"></a><b>2049</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot upload data to _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2051"></a><b>2051</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot evaluate scripting URLs within _ (allowScriptAccess is _). Attempted URL was _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2052"></a><b>2052</b></td><td valign="top" class="summaryTableCol">Only String arguments are permitted for allowDomain and allowInsecureDomain.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2053"></a><b>2053</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot clear an interval timer set by _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2054"></a><b>2054</b></td><td valign="top" class="summaryTableCol">The value of Security.exactSettings cannot be changed after it has been used.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2055"></a><b>2055</b></td><td valign="top" class="summaryTableCol">The print job could not be started.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2056"></a><b>2056</b></td><td valign="top" class="summaryTableCol">The print job could not be sent to the printer.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2057"></a><b>2057</b></td><td valign="top" class="summaryTableCol">The page could not be added to the print job.
+        </td><td class="summaryTableLastCol">
+		The <code>addPage()</code> method is not used correctly. See the addPage() entry in this language reference.
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2058"></a><b>2058</b></td><td valign="top" class="summaryTableCol">There was an error decompressing the data.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2059"></a><b>2059</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot overwrite an ExternalInterface callback added by _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2060"></a><b>2060</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: ExternalInterface caller _ cannot access _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2061"></a><b>2061</b></td><td valign="top" class="summaryTableCol">No ExternalInterface callback _ registered.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2062"></a><b>2062</b></td><td valign="top" class="summaryTableCol">Children of Event must override clone() {return new MyEventClass (...);}.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2063"></a><b>2063</b></td><td valign="top" class="summaryTableCol">Error attempting to execute IME command.
+        </td><td class="summaryTableLastCol">
+		One of the IME services has failed.
+		<ul>
+		<li>If you are using the <code>setConversionMode()</code> or <code>setEnabled()</code> method, ActionScript 3.0 replaces these
+		methods with the <code>access</code> property.</li>
+		<li>If you are using the <code>doConversion()</code> or <code>setComposition()</code> 
+		method, these methods are not supported for Macintosh OSX and Macintosh Classic.</li>
+		</ul>	
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2065"></a><b>2065</b></td><td valign="top" class="summaryTableCol">The focus cannot be set for this target.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2066"></a><b>2066</b></td><td valign="top" class="summaryTableCol">The Timer delay specified is out of range.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2067"></a><b>2067</b></td><td valign="top" class="summaryTableCol">The ExternalInterface is not available in this container. ExternalInterface requires Internet Explorer ActiveX, Firefox, Mozilla 1.7.5 and greater, or other browsers that support NPRuntime.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2068"></a><b>2068</b></td><td valign="top" class="summaryTableCol">Invalid sound.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2069"></a><b>2069</b></td><td valign="top" class="summaryTableCol">The Loader class does not implement this method.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2070"></a><b>2070</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: caller _ cannot access Stage owned by _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2071"></a><b>2071</b></td><td valign="top" class="summaryTableCol">The Stage class does not implement this property or method.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2074"></a><b>2074</b></td><td valign="top" class="summaryTableCol">The stage is too small to fit the download ui.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2075"></a><b>2075</b></td><td valign="top" class="summaryTableCol">The downloaded file is invalid.
+        </td><td class="summaryTableLastCol">
+	Possibly the file decompression failed, the file format is invalid, or the signature validation failed.	
+	</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2077"></a><b>2077</b></td><td valign="top" class="summaryTableCol">This filter operation cannot be performed with the specified input parameters.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2078"></a><b>2078</b></td><td valign="top" class="summaryTableCol">The name property of a Timeline-placed object cannot be modified.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2079"></a><b>2079</b></td><td valign="top" class="summaryTableCol">Classes derived from Bitmap can only be associated with defineBits characters (bitmaps).</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2082"></a><b>2082</b></td><td valign="top" class="summaryTableCol">Connect failed because the object is already connected.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2083"></a><b>2083</b></td><td valign="top" class="summaryTableCol">Close failed because the object is not connected.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2084"></a><b>2084</b></td><td valign="top" class="summaryTableCol">The AMF encoding of the arguments cannot exceed 40K.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2085"></a><b>2085</b></td><td valign="top" class="summaryTableCol">Parameter _ must be non-empty string.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2086"></a><b>2086</b></td><td valign="top" class="summaryTableCol">A setting in the mms.cfg file prohibits this FileReference request.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2087"></a><b>2087</b></td><td valign="top" class="summaryTableCol">The FileReference.download() file name contains prohibited characters.
+        </td><td class="summaryTableLastCol">
+		The filename cannot contain spaces or any of the following characters: &#47, &#92, &#58, &#42, &#63, &#34, &#60, &#62, &#124, &#37, or the ASCII control 
+		characters 0 through 31 (0x00 through 0X1F). Also, filenames longer than 256 characters may fail on some browsers or servers.
+	
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2088"></a><b>2088</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement getProperty. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2089"></a><b>2089</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement setProperty. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2090"></a><b>2090</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement callProperty. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2091"></a><b>2091</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement hasProperty. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2092"></a><b>2092</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement deleteProperty. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2093"></a><b>2093</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement getDescendants. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2094"></a><b>2094</b></td><td valign="top" class="summaryTableCol">Event dispatch recursion overflow.
+        </td><td class="summaryTableLastCol">
+		The recursion exceeds the maximum recursion depth. (The default maximum is 256.)
+	</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2095"></a><b>2095</b></td><td valign="top" class="summaryTableCol">_ was unable to invoke callback _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2096"></a><b>2096</b></td><td valign="top" class="summaryTableCol">The HTTP request header _ cannot be set via ActionScript.
+        </td><td class="summaryTableLastCol">
+		You are adding a disallowed HTTP header to an HTTP request. The following headers are disallowed:
+		<ul>
+		<li>NULL header string</li>
+		<li>Accept-Charset</li>
+		<li>Accept-Encoding</li>
+		<li>Accept-Ranges</li>
+		<li>Age</li>
+		<li>Allow</li>
+		<li>Allowed</li>
+		<li>Connection</li>
+		<li>Content-Length</li>
+		<li>Content-Location</li>
+		<li>Content-Range</li>
+		<li>Date</li>
+		<li>ETag</li>
+		<li>Expect</li>
+		<li>Host</li>
+		<li>Keep-Alive</li>
+		<li>Last-Modified</li>
+		<li>Location</li>
+		<li>Max-Forwards</li>
+		<li>Proxy-Authenticate</li>
+		<li>Proxy-Authorization</li>
+		<li>Public</li>
+		<li>Range</li>
+		<li>Referer</li>
+		<li>Retry-After</li>
+		<li>Server</li>
+		<li>TE</li>
+		<li>Trailer</li>
+		<li>Transfer-Encoding</li>
+		<li>Upgrade</li>
+		<li>URI</li>
+		<li>User-Agent</li>
+		<li>Vary</li>
+		<li>Via</li>
+		<li>Warning</li>
+		<li>WWW-Authenticate</li>
+		<li>x-flash-version</li>
+		</ul>
+
+	</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2097"></a><b>2097</b></td><td valign="top" class="summaryTableCol">The FileFilter Array is not in the correct format.
+          </td><td class="summaryTableLastCol">
+		There are two valid formats:
+		<ul>
+		<li>A description with Windows file extensions only</li>
+		<li>A description with Windows file extensions and Macintosh file formats.</li>
+		</ul>
+		<p>The two file formats and not interchangeable; you must use one or the other. 
+		For more information, see the FileFilter class in this language reference.
+		
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2098"></a><b>2098</b></td><td valign="top" class="summaryTableCol">The loading object is not a .swf file, you cannot request SWF properties from it.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2099"></a><b>2099</b></td><td valign="top" class="summaryTableCol">The loading object is not sufficiently loaded to provide this information.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2100"></a><b>2100</b></td><td valign="top" class="summaryTableCol">The ByteArray parameter in Loader.loadBytes() must have length greater than 0.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2101"></a><b>2101</b></td><td valign="top" class="summaryTableCol">The String passed to URLVariables.decode() must be a URL-encoded query string containing name/value pairs.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2102"></a><b>2102</b></td><td valign="top" class="summaryTableCol">The before XMLNode parameter must be a child of the caller.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2103"></a><b>2103</b></td><td valign="top" class="summaryTableCol">XML recursion failure: new child would create infinite loop.
+            </td><td class="summaryTableLastCol">
+			Possibly you are trying to make objects child objects of each other. For example, the following code generates this error because a and b both try to add the other as a child object.
+			<pre>a.addChild(b);
+b.addChild(a);</pre>
+	</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2105"></a><b>2105</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement nextNameIndex. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2106"></a><b>2106</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement nextName. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2107"></a><b>2107</b></td><td valign="top" class="summaryTableCol">The Proxy class does not implement nextValue. It must be overridden by a subclass.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2108"></a><b>2108</b></td><td valign="top" class="summaryTableCol">Scene _ was not found.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2109"></a><b>2109</b></td><td valign="top" class="summaryTableCol">Frame label _ not found in scene _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2110"></a><b>2110</b></td><td valign="top" class="summaryTableCol">The value of Security.disableAVM1Loading cannot be set unless the caller can access the stage and is in an ActionScript 3.0 SWF file.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2111"></a><b>2111</b></td><td valign="top" class="summaryTableCol">Security.disableAVM1Loading is true so the current load of the ActionScript 1.0/2.0 SWF file has been blocked.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2112"></a><b>2112</b></td><td valign="top" class="summaryTableCol">Provided parameter LoaderContext.ApplicationDomain is from a disallowed domain.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2113"></a><b>2113</b></td><td valign="top" class="summaryTableCol">Provided parameter LoaderContext.SecurityDomain is from a disallowed domain.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2114"></a><b>2114</b></td><td valign="top" class="summaryTableCol">Parameter _ must be null.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2115"></a><b>2115</b></td><td valign="top" class="summaryTableCol">Parameter _ must be false.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2116"></a><b>2116</b></td><td valign="top" class="summaryTableCol">Parameter _ must be true.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2118"></a><b>2118</b></td><td valign="top" class="summaryTableCol">The LoaderInfo class does not implement this method.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2119"></a><b>2119</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: caller _ cannot access LoaderInfo.applicationDomain owned by _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2121"></a><b>2121</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _: _ cannot access _. This may be worked around by calling Security.allowDomain.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2122"></a><b>2122</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _: _ cannot access _. A policy file is required, but the checkPolicyFile flag was not set when this media was loaded.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2123"></a><b>2123</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _: _ cannot access _. No policy files granted access.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2124"></a><b>2124</b></td><td valign="top" class="summaryTableCol">Loaded file is an unknown type.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2125"></a><b>2125</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot use Runtime Shared Library _ because crossing the boundary between ActionScript 3.0 and ActionScript 1.0/2.0 objects is not allowed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2126"></a><b>2126</b></td><td valign="top" class="summaryTableCol">NetConnection object must be connected.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2127"></a><b>2127</b></td><td valign="top" class="summaryTableCol">FileReference POST data cannot be type ByteArray.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2129"></a><b>2129</b></td><td valign="top" class="summaryTableCol">Connection to _ failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2130"></a><b>2130</b></td><td valign="top" class="summaryTableCol">Unable to flush SharedObject.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2131"></a><b>2131</b></td><td valign="top" class="summaryTableCol">Definition _ cannot be found.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2132"></a><b>2132</b></td><td valign="top" class="summaryTableCol">NetConnection.connect cannot be called from a netStatus event handler.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2133"></a><b>2133</b></td><td valign="top" class="summaryTableCol">Callback _ is not registered.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2134"></a><b>2134</b></td><td valign="top" class="summaryTableCol">Cannot create SharedObject.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2136"></a><b>2136</b></td><td valign="top" class="summaryTableCol">The SWF file _ contains invalid data.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2137"></a><b>2137</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot navigate window _ within _ (allowScriptAccess is _). Attempted URL was _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2138"></a><b>2138</b></td><td valign="top" class="summaryTableCol">Rich text XML could not be parsed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2139"></a><b>2139</b></td><td valign="top" class="summaryTableCol">SharedObject could not connect.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2140"></a><b>2140</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot load _. Local-with-filesystem and local-with-networking SWF files cannot load each other.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2141"></a><b>2141</b></td><td valign="top" class="summaryTableCol">Only one PrintJob may be in use at a time.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2142"></a><b>2142</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: local SWF files cannot use the LoaderContext.securityDomain property. _ was attempting to load _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2143"></a><b>2143</b></td><td valign="top" class="summaryTableCol">AccessibilityImplementation.get_accRole() must be overridden from its default.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2144"></a><b>2144</b></td><td valign="top" class="summaryTableCol">AccessibilityImplementation.get_accState() must be overridden from its default.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2145"></a><b>2145</b></td><td valign="top" class="summaryTableCol">Cumulative length of requestHeaders must be less than 8192 characters.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2146"></a><b>2146</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot call _ because the HTML/container parameter allowNetworking has the value _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2147"></a><b>2147</b></td><td valign="top" class="summaryTableCol">Forbidden protocol in URL _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2148"></a><b>2148</b></td><td valign="top" class="summaryTableCol">SWF file _ cannot access local resource _. Only local-with-filesystem and trusted local SWF files may access local resources.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2149"></a><b>2149</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot make fscommand calls to _ (allowScriptAccess is _).</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2150"></a><b>2150</b></td><td valign="top" class="summaryTableCol">An object cannot be added as a child to one of it's children (or children's children, etc.).</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2151"></a><b>2151</b></td><td valign="top" class="summaryTableCol">You cannot enter full screen mode when the settings dialog is visible.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2152"></a><b>2152</b></td><td valign="top" class="summaryTableCol">Full screen mode is not allowed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2153"></a><b>2153</b></td><td valign="top" class="summaryTableCol">The URLRequest.requestHeaders array must contain only non-NULL URLRequestHeader objects.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2154"></a><b>2154</b></td><td valign="top" class="summaryTableCol">The NetStream Object is invalid.  This may be due to a failed NetConnection.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2155"></a><b>2155</b></td><td valign="top" class="summaryTableCol">The ExternalInterface.call functionName parameter is invalid.  Only alphanumeric characters are supported.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2156"></a><b>2156</b></td><td valign="top" class="summaryTableCol">Port _ may not be accessed using protocol _. Calling SWF was _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2157"></a><b>2157</b></td><td valign="top" class="summaryTableCol">Rejecting URL _ because the 'asfunction:' protocol may only be used for link targets, not for networking APIs.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2158"></a><b>2158</b></td><td valign="top" class="summaryTableCol">The NetConnection Object is invalid.  This may be due to a dropped NetConnection.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2159"></a><b>2159</b></td><td valign="top" class="summaryTableCol">The SharedObject Object is invalid.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2169"></a><b>2169</b></td><td valign="top" class="summaryTableCol">The method _ may not be used for browser scripting.  The URL _ requested by _ is being ignored.  If you intend to call browser script, use navigateToURL instead.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="2170"></a><b>2170</b></td><td valign="top" class="summaryTableCol">Security sandbox violation: _ cannot send HTTP headers to _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3000"></a><b>3000</b></td><td valign="top" class="summaryTableCol">Illegal path name.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3001"></a><b>3001</b></td><td valign="top" class="summaryTableCol">File or directory access denied.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3002"></a><b>3002</b></td><td valign="top" class="summaryTableCol">File or directory exists.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3003"></a><b>3003</b></td><td valign="top" class="summaryTableCol">File or directory does not exist.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3004"></a><b>3004</b></td><td valign="top" class="summaryTableCol">Insufficient file space.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3005"></a><b>3005</b></td><td valign="top" class="summaryTableCol">Insufficient system resources.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3006"></a><b>3006</b></td><td valign="top" class="summaryTableCol">Not a file.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3007"></a><b>3007</b></td><td valign="top" class="summaryTableCol">Not a directory.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3008"></a><b>3008</b></td><td valign="top" class="summaryTableCol">Read-only or write-protected media.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3009"></a><b>3009</b></td><td valign="top" class="summaryTableCol">Cannot move file or directory to a different device.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3010"></a><b>3010</b></td><td valign="top" class="summaryTableCol">Directory is not empty.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3011"></a><b>3011</b></td><td valign="top" class="summaryTableCol">Move or copy destination already exists.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3012"></a><b>3012</b></td><td valign="top" class="summaryTableCol">Cannot delete file or directory.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3013"></a><b>3013</b></td><td valign="top" class="summaryTableCol">File or directory is in use.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3014"></a><b>3014</b></td><td valign="top" class="summaryTableCol">Cannot copy or move a file or directory to overwrite a containing directory.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3015"></a><b>3015</b></td><td valign="top" class="summaryTableCol">Loader.loadBytes() is not permitted load content with executable code. See documentation for Loader.loadBytes().</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3100"></a><b>3100</b></td><td valign="top" class="summaryTableCol">A SQLConnection cannot be closed while statements are still executing.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3101"></a><b>3101</b></td><td valign="top" class="summaryTableCol">Database connection is already open.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3102"></a><b>3102</b></td><td valign="top" class="summaryTableCol">Name argument specified was invalid. It must not be null or empty a blank string.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3103"></a><b>3103</b></td><td valign="top" class="summaryTableCol">Operation cannot be performed while there is an open transaction on this connection.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3104"></a><b>3104</b></td><td valign="top" class="summaryTableCol">A SQLConnection must be open to perform this operation.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3105"></a><b>3105</b></td><td valign="top" class="summaryTableCol">Operation is only allowed if a connection has an open transaction.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3106"></a><b>3106</b></td><td valign="top" class="summaryTableCol">Property cannot be changed while SQLStatement.executing is true.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3107"></a><b>3107</b></td><td valign="top" class="summaryTableCol">_ may not be called unless SQLResult.complete is false.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3108"></a><b>3108</b></td><td valign="top" class="summaryTableCol">Operation is not permitted when the SQLStatement.text property is not set.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3109"></a><b>3109</b></td><td valign="top" class="summaryTableCol">Operation is not permitted when the SQLStatement.sqlConnection property is not set.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3110"></a><b>3110</b></td><td valign="top" class="summaryTableCol">Operation cannot be performed while SQLStatement.executing is true.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3111"></a><b>3111</b></td><td valign="top" class="summaryTableCol">
+    An invalid schema type was specified.
+    </td><td class="summaryTableLastCol">
+      
+           Valid values are:
+             <ul>
+               <li>SQLIndexSchema</li>
+               <li>SQLTableSchema</li> 
+               <li>SQLTriggerSchema</li>
+               <li>SQLViewSchema</li>
+            </ul>
+        
+    </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3112"></a><b>3112</b></td><td valign="top" class="summaryTableCol">
+    An invalid transaction lock type was specified.
+    </td><td class="summaryTableLastCol">
+        
+         Valid values are:
+         <ul>
+            <li>SQLTransactionLockType.DEFERRED</li>
+            <li>SQLTransactionLockType.IMMEDIATE</li> 
+            <li>SQLTransactionLockType.EXCLUSIVE</li>
+        </ul>
+     
+    </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3113"></a><b>3113</b></td><td valign="top" class="summaryTableCol">Reference specified is not of type File.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3114"></a><b>3114</b></td><td valign="top" class="summaryTableCol">
+      An invalid open mode was specified.
+      </td><td class="summaryTableLastCol">
+          
+           Valid values are:
+             <ul>
+               <li>SQLMode.READ</li>
+               <li>SQLMode.UPDATE</li> 
+               <li>SQLMode.CREATE</li>
+            </ul>
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3115"></a><b>3115</b></td><td valign="top" class="summaryTableCol">SQL Error.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3116"></a><b>3116</b></td><td valign="top" class="summaryTableCol">An internal logic error occurred.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3117"></a><b>3117</b></td><td valign="top" class="summaryTableCol">Access permission denied.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation failed because a SQL statement attempted to
+	       perform an operation that it didn't have permission to perform, such as
+	       specifying an <code>INSERT</code> operation to be performed on a view.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3118"></a><b>3118</b></td><td valign="top" class="summaryTableCol">Operation aborted.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that a SQL statement execution failed because execution was aborted.
+	       This error occurs when code in a trigger cancels the operation using the SQL
+	       <code>RAISE()</code> function, or if the <code>SQLConnection.cancel()</code>
+	       or <code>SQLStatement.cancel()</code> methods are called when a statement is
+	       executed using <code>SQLStatement.execute()</code> or <code>SQLStatement.next()</code>
+	       with a prefetch argument specified, and not all of the results have
+	       been returned.
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3119"></a><b>3119</b></td><td valign="top" class="summaryTableCol">Database file is currently locked.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3120"></a><b>3120</b></td><td valign="top" class="summaryTableCol">Table is locked.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that an operation could not be completed because another
+	       AIR application was holding a lock on a table involved in the operation. This
+	       can occur when a statement executing through a SQLConnection attempts to write to a table when another
+	       SQLConnection (in the same application or a different application) has an open transaction and is writing to the table, or if a
+	       SQLConnection attempts to read from or write to a table while another
+	       SQLConnection has an exclusive-locked transaction.
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3121"></a><b>3121</b></td><td valign="top" class="summaryTableCol">Out of memory.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3122"></a><b>3122</b></td><td valign="top" class="summaryTableCol">Attempt to write a readonly database.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that an operation could not be completed because the database
+	       is read only. This can occur if the database file is designated as read only
+	       in the operating system, if the database is opened in read-only mode, 
+		   or if an older version of Adobe AIR accesses a database
+	       file created with a newer version of the runtime.
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3123"></a><b>3123</b></td><td valign="top" class="summaryTableCol">Database disk image is malformed.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation failed because the specified file
+	       is a database file whose data has become corrupted.
+           This can happen when the application is force
+	       quit while in a transaction or any other time that a database file is left in
+		   the state of having an open transaction that can't be rolled back when reopening
+		   the file.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3124"></a><b>3124</b></td><td valign="top" class="summaryTableCol">Insertion failed because database is full.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3125"></a><b>3125</b></td><td valign="top" class="summaryTableCol">Unable to open the database file.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the connection could not be completed because the database file
+	       could not be opened. This can happen if <code>SQLConnection.open()</code>
+	       or <code>SQLConnection.openAsync()</code>is called with the <code>openMode</code> 
+		   parameter set to <code>SQLMode.UPDATE</code>
+	       and the database file doesn't exist. It can also happen if the operating
+	       system returns an error when the runtime attempts to access the database file.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3126"></a><b>3126</b></td><td valign="top" class="summaryTableCol">Database lock protocol error.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3127"></a><b>3127</b></td><td valign="top" class="summaryTableCol">Database is empty.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3128"></a><b>3128</b></td><td valign="top" class="summaryTableCol">Disk I/O error occurred.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that an operation could not be completed because of a disk
+	       I/O error. This can happen if the runtime is attempting to delete a
+	       temporary file and another program (such as a virus protection application)
+	       is holding a lock on the file. This can also happen if the runtime is
+	       attempting to write data to a file and the data can't be written.
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3129"></a><b>3129</b></td><td valign="top" class="summaryTableCol">The database schema changed.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation could not be completed because of a schema error.
+	       This occurs when the schema of the database changes after a statement
+	       is prepared but before it finishes executing, such as if two SQLConnection instances are
+	       connected to the same database, and one instance changes the schema
+	       while another one is reading it.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3130"></a><b>3130</b></td><td valign="top" class="summaryTableCol">Too much data for one row of a table.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3131"></a><b>3131</b></td><td valign="top" class="summaryTableCol">Abort due to constraint violation.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation could not be completed because the statement caused
+	       a violation of one or more data integrity constraints. These are constraints
+	       that are defined in the table structure when it is created. For more information,
+	       see the <a href="localDatabaseSQLSupport.html#createTable">CREATE TABLE</a>
+	       section in the appendix
+	       <a href="localDatabaseSQLSupport.html">SQL support in local databases</a>.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3132"></a><b>3132</b></td><td valign="top" class="summaryTableCol">Data type mismatch.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation could not be completed because of a data type
+	       mismatch error. This occurs when the data type of a value doesn't match the
+	       expected or required type. For more information,
+	       see the <a href="localDatabaseSQLSupport.html#dataTypes">Data type support</a>
+		   section in the appendix <a href="localDatabaseSQLSupport.html">SQL support in
+	       local databases</a>.
+        
+      </td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3133"></a><b>3133</b></td><td valign="top" class="summaryTableCol">An internal error occurred.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3134"></a><b>3134</b></td><td valign="top" class="summaryTableCol">Feature not supported on this operating system.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3135"></a><b>3135</b></td><td valign="top" class="summaryTableCol">Authorization denied.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3136"></a><b>3136</b></td><td valign="top" class="summaryTableCol">Auxiliary database format error.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3137"></a><b>3137</b></td><td valign="top" class="summaryTableCol">An index specified for a parameter was out of range.
+      </td><td class="summaryTableLastCol">
+          
+           Indicates that the operation could not be completed because a parameter
+	       index was not valid, such as if a parameter is specified with an index less than 0,
+	       or if a parameter is specified with index 7 but the statement text only
+	       includes five parameters.
+        
+      </td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3138"></a><b>3138</b></td><td valign="top" class="summaryTableCol">File opened is not a database file.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3139"></a><b>3139</b></td><td valign="top" class="summaryTableCol">The page size specified was not valid for this operation.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3200"></a><b>3200</b></td><td valign="top" class="summaryTableCol">Cannot perform operation on closed window.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3201"></a><b>3201</b></td><td valign="top" class="summaryTableCol">Adobe Reader cannot be found.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3202"></a><b>3202</b></td><td valign="top" class="summaryTableCol">Adobe Reader 8.1 or later cannot be found.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3203"></a><b>3203</b></td><td valign="top" class="summaryTableCol">Default Adobe Reader must be version 8.1 or later.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3204"></a><b>3204</b></td><td valign="top" class="summaryTableCol">An error ocurred trying to load Adobe Reader.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3205"></a><b>3205</b></td><td valign="top" class="summaryTableCol">Only application-sandbox content can access this feature.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3206"></a><b>3206</b></td><td valign="top" class="summaryTableCol">Caller _ cannot set LoaderInfo property _.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3207"></a><b>3207</b></td><td valign="top" class="summaryTableCol">Application-sandbox content cannot access this feature.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3300"></a><b>3300</b></td><td valign="top" class="summaryTableCol">Voucher is invalid.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3301"></a><b>3301</b></td><td valign="top" class="summaryTableCol">User authentication failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3302"></a><b>3302</b></td><td valign="top" class="summaryTableCol">FMRMS is not supporting SSL.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3303"></a><b>3303</b></td><td valign="top" class="summaryTableCol">Content expired.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3304"></a><b>3304</b></td><td valign="top" class="summaryTableCol">User authorization failed (e.g. user haven't purchase the content).</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3305"></a><b>3305</b></td><td valign="top" class="summaryTableCol">Can't connect to the server.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3306"></a><b>3306</b></td><td valign="top" class="summaryTableCol">Client update required (FMRMS requires new DRM client engine).</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3307"></a><b>3307</b></td><td valign="top" class="summaryTableCol">Generic internal DRM failure.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3308"></a><b>3308</b></td><td valign="top" class="summaryTableCol">Wrong license key.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3309"></a><b>3309</b></td><td valign="top" class="summaryTableCol">FLV content is corrupted.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3310"></a><b>3310</b></td><td valign="top" class="summaryTableCol">ApplicationID doesn't match what's specified in the policy.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3311"></a><b>3311</b></td><td valign="top" class="summaryTableCol">Application version doesn't match what's specified in the policy.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3312"></a><b>3312</b></td><td valign="top" class="summaryTableCol">Voucher integrity check failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3313"></a><b>3313</b></td><td valign="top" class="summaryTableCol">Write to Microsafe failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3314"></a><b>3314</b></td><td valign="top" class="summaryTableCol">FLV header integrity check failed.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3315"></a><b>3315</b></td><td valign="top" class="summaryTableCol">Attempt to access invalid clipboard.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a name="3316"></a><b>3316</b></td><td valign="top" class="summaryTableCol">Attempt to access dead clipboard.</td><td class="summaryTableLastCol">&nbsp;</td>
+</tr>
+</table>
+<br>
+<br>
+<p>
+<a name="note"></a>* Note: This error indicates that the ActionScript in the SWF is invalid. If you believe that the file has not been corrupted, please report the problem to Adobe.</p>
+<br>
+<div align="right" class="topLinks" width="100%">
+<span><a href="compilerErrors.html">Compiler Errors</a> | <a href="compilerWarnings.html">Compiler Warnings</a></span>
+</div>
+<div style="padding-bottom:5px" align="right" class="topLinks" width="100%">
+<span style="display:none;font-size:14px;font-weight:bold" id="navigationCell2"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;| <a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;| <a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>&nbsp;| <a href="appendixes.html">Appendixes</a>&nbsp;| <a href="conventions.html">Conventions</a>&nbsp;| <a href="index.html?runtimeErrors.html&amp;all-classes.html" id="framesLink2">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink2"> No Frames </a></span>
+</div>
+<p></p>
+<div>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 1:10 PM GMT-07:00 </center>
+</div>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 1:10 PM GMT-07:00 -->

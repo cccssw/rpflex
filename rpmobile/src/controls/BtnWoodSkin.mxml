@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+    ADOBE SYSTEMS INCORPORATED
+    Copyright 2008 Adobe Systems Incorporated
+    All Rights Reserved.
+
+    NOTICE: Adobe permits you to use, modify, and distribute this file
+    in accordance with the terms of the license agreement accompanying it.
+
+-->
+
+<!--- The default skin class for the Spark Button component.  
+
+       @see spark.components.Button
+        
+      @langversion 3.0
+      @playerversion Flash 10
+      @playerversion AIR 1.5
+      @productversion Flex 4
+-->
+<s:SparkButtonSkin xmlns:fx="http://ns.adobe.com/mxml/2009" 
+             xmlns:s="library://ns.adobe.com/flex/spark" 
+             xmlns:fb="http://ns.adobe.com/flashbuilder/2009"
+             minWidth="21" minHeight="21" 
+             alpha.disabled="0.5">
+	<fx:Metadata>[HostComponent("controls.ImgButton")]</fx:Metadata>
+	<!-- states -->
+	<s:states>
+		<s:State name="up" />
+		<s:State name="over" />
+		<s:State name="down" />
+		<s:State name="disabled" />
+	</s:states>
+	
+	<fx:Script fb:purpose="styling">
+		<![CDATA[
+			/* Define the skin elements that should not be colorized.
+			For button, the graphics are colorized but the label is not. */
+			static private const exclusions:Array = ["labelDisplay"];
+			
+			override public function get colorizeExclusions():Array {
+				return exclusions;
+			}
+			
+			override protected function initializationComplete():void {
+				useChromeColor = true;
+				
+				trace("width:"+this.woodskin.width.valueOf());
+				trace("height:"+this.woodskin.height);
+				//this.woodskin.height = 100;
+				super.initializationComplete();
+				
+			}
+		]]>
+	</fx:Script>
+	
+	<s:BitmapImage id="woodskin" source="@Embed('assets/ui/BtnSmoothNormal.png')"
+				   left.disabled="-14" right.disabled="-14" top.disabled="-11" bottom.disabled="-16"
+				   left.down="-14" right.down="-14" top.down="-11" bottom.down="-16"
+				   horizontalCenter.down="0"
+				   source.down="@Embed('assets/ui/BtnSmoothNormal_Down.png')"
+				   verticalCenter.down="2"
+				   left.over="-14" right.over="-14" top.over="-11" bottom.over="-16"
+				   horizontalCenter.over="0"
+				   source.over="@Embed('assets/ui/BtnSmoothNormal_Over.png')"
+				   verticalCenter.over="2"
+				   left.up="-14" right.up="-14" top.up="-11" bottom.up="-16"/>
+	
+	<!-- layer 8: text -->
+	<s:Label id="labelDisplay" left="10" right="10" top="2" bottom="2" horizontalCenter="0" 
+			 maxDisplayedLines="1" textAlign="center" verticalAlign="middle" verticalCenter="1"/>
+</s:SparkButtonSkin>

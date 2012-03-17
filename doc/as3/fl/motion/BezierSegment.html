@@ -1,0 +1,808 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="BezierSegment,fl.motion.BezierSegment,a,AUTO,autoRewind,blank,blendMode,brightness,b,cacheAsBitmap,CCW,color,c,CW,dimensions,d,duration,ease,easingFunction,elementType,filters,filters,firstFrame,frameRate,functionName,index,instanceName,isPlaying,keyframes,keyframes,keyframesCompact,label,linkageID,loop,MOTION_END,MOTION_START,MOTION_UPDATE,motion,NONE,orientToPath,orientToPath,parameters,points,points,points,points,positionMatrix,repeatCount,rotateDirection,rotateTimes,ROTATION,rotation,rotation,SCALE_X,SCALE_Y,scaleX,scaleX,scaleY,scaleY,SKEW_X,SKEW_Y,skewX,skewX,skewY,skewY,source,symbolName,target,target,target,target,target,target,TIME_CHANGE,time,tintColor,tintMultiplier,transformationPoint,transformationPoint,tweens,tweens,tweenScale,tweenSnap,tweenSync,X,x,x,Y,y,y,addKeyframe,affectsTweenable,easeNone,easeQuadPercent,end,fromXML,fromXMLString,fromXMLString,getColorTransform,getCubicCoefficients,getCubicRoots,getCurrentKeyframe,getFilters,getNextKeyframe,getQuadraticRoots,getRotation,getRotationRadians,getScaleX,getScaleY,getSingleValue,getSkewX,getSkewXRadians,getSkewY,getSkewYRadians,getTween,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getYForX,interpolateColor,interpolateFilter,interpolateFilters,interpolateTransform,matchInternalPointWithExternal,nextFrame,pause,play,resume,rewind,rotateAroundExternalPoint,rotateAroundInternalPoint,setRotation,setRotationRadians,setScaleX,setScaleY,setSkewX,setSkewXRadians,setSkewY,setSkewYRadians,setTint,setValue,setValue,stop" name="keywords">
+<title>fl.motion.BezierSegment (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'BezierSegment - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/motion/BezierSegment.html&amp;fl/motion/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">BezierSegment</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("BezierSegment"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.motion</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  BezierSegment</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">BezierSegment  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ A Bezier segment consists of four Point objects that define a single cubic Bezier curve.
+ The BezierSegment class also contains methods to find coordinate values along the curve.
+ <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#a">a</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     The first point of the Bezier curve.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#b">b</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     The second point of the Bezier curve.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#c">c</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     The third point of the Bezier curve.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#d">d</a> : <a href="../../flash/geom/Point.html">Point</a>
+<div class="summaryTableDescription">
+     The fourth point of the Bezier curve.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#BezierSegment()">BezierSegment</a>(a:<a href="../../flash/geom/Point.html">Point</a>, b:<a href="../../flash/geom/Point.html">Point</a>, c:<a href="../../flash/geom/Point.html">Point</a>, d:<a href="../../flash/geom/Point.html">Point</a>)</div>
+<div class="summaryTableDescription">
+     Constructor for BezierSegment instances.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCubicCoefficients()">getCubicCoefficients</a>(a:<a href="../../Number.html">Number</a>, b:<a href="../../Number.html">Number</a>, c:<a href="../../Number.html">Number</a>, d:<a href="../../Number.html">Number</a>):<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     Calculates the coefficients for a cubic polynomial equation,
+     given the values of the corresponding cubic Bezier equation.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCubicRoots()">getCubicRoots</a>(a:<a href="../../Number.html">Number</a> = 0, b:<a href="../../Number.html">Number</a> = 0, c:<a href="../../Number.html">Number</a> = 0, d:<a href="../../Number.html">Number</a> = 0):<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     Finds the real solutions, if they exist, to a cubic polynomial equation of the form: at^3 + bt^2 + ct + d.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getQuadraticRoots()">getQuadraticRoots</a>(a:<a href="../../Number.html">Number</a>, b:<a href="../../Number.html">Number</a>, c:<a href="../../Number.html">Number</a>):<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     Finds the real solutions, if they exist, to a quadratic equation of the form: at^2 + bt + c.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSingleValue()">getSingleValue</a>(t:<a href="../../Number.html">Number</a>, a:<a href="../../Number.html">Number</a> = 0, b:<a href="../../Number.html">Number</a> = 0, c:<a href="../../Number.html">Number</a> = 0, d:<a href="../../Number.html">Number</a> = 0):<a href="../../Number.html">Number</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     Calculates the value of a one-dimensional cubic Bezier equation at a specific time.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getValue()">getValue</a>(t:<a href="../../Number.html">Number</a>):<a href="../../flash/geom/Point.html">Point</a>
+</div>
+<div class="summaryTableDescription">
+     Calculates the location of a two-dimensional cubic Bezier curve at a specific time.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getYForX()">getYForX</a>(x:<a href="../../Number.html">Number</a>, coefficients:<a href="../../Array.html">Array</a> = null):<a href="../../Number.html">Number</a>
+</div>
+<div class="summaryTableDescription">
+     Finds the y value of a cubic Bezier curve at a given x coordinate.</div>
+</td><td class="summaryTableOwnerCol">BezierSegment</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="a"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">a</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var a:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The first point of the Bezier curve.
+     It is a node, which means it falls directly on the curve.
+     </p></div>
+<a name="propertyDetail"></a><a name="b"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">b</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var b:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The second point of the Bezier curve. 
+     It is a control point, which means the curve moves toward it,
+     but usually does not pass through it.
+     </p></div>
+<a name="propertyDetail"></a><a name="c"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">c</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var c:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The third point of the Bezier curve. 
+     It is a control point, which means the curve moves toward it,
+     but usually does not pass through it.
+     </p></div>
+<a name="propertyDetail"></a><a name="d"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">d</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var d:<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The fourth point of the Bezier curve.
+     It is a node, which means it falls directly on the curve.
+     </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="BezierSegment()"></a><a name="BezierSegment(flash.geom.Point,flash.geom.Point,flash.geom.Point,flash.geom.Point)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">BezierSegment</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function BezierSegment(a:<a href="../../flash/geom/Point.html">Point</a>, b:<a href="../../flash/geom/Point.html">Point</a>, c:<a href="../../flash/geom/Point.html">Point</a>, d:<a href="../../flash/geom/Point.html">Point</a>)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Constructor for BezierSegment instances.
+          </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The first point of the curve, a node.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The second point of the curve, a control point.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The third point of the curve, a control point.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The fourth point of the curve, a node.
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="BezierSegment.html#propertyDetail" target="">property details</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="getCubicCoefficients()"></a><a name="getCubicCoefficients(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCubicCoefficients</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getCubicCoefficients(a:<a href="../../Number.html">Number</a>, b:<a href="../../Number.html">Number</a>, c:<a href="../../Number.html">Number</a>, d:<a href="../../Number.html">Number</a>):<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Calculates the coefficients for a cubic polynomial equation,
+     given the values of the corresponding cubic Bezier equation.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:<a href="../../Number.html">Number</a></code> &mdash; The first value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../../Number.html">Number</a></code> &mdash; The second value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../../Number.html">Number</a></code> &mdash; The third value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../../Number.html">Number</a></code> &mdash; The fourth value of the Bezier equation.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An array containing four number values,
+     which are the coefficients for a cubic polynomial.
+     The coefficients are ordered from the highest degree to the lowest,
+     so the first number in the array would be multiplied by t^3, the second by t^2, and so on.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="BezierSegment.html#getCubicRoots()" target="">getCubicRoots()</a>
+</div>
+</div>
+<a name="getCubicRoots()"></a><a name="getCubicRoots(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCubicRoots</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getCubicRoots(a:<a href="../../Number.html">Number</a> = 0, b:<a href="../../Number.html">Number</a> = 0, c:<a href="../../Number.html">Number</a> = 0, d:<a href="../../Number.html">Number</a> = 0):<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Finds the real solutions, if they exist, to a cubic polynomial equation of the form: at^3 + bt^2 + ct + d.
+     This method is used to evaluate custom easing curves.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The first coefficient of the cubic equation, which is multiplied by the cubed variable (t^3).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The second coefficient of the cubic equation, which is multiplied by the squared variable (t^2).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The third coefficient of the cubic equation, which is multiplied by the linear variable (t).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The fourth coefficient of the cubic equation, which is the constant.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An array of number values, indicating the real roots of the equation. 
+     There may be no roots, or as many as three. 
+     Imaginary or complex roots are ignored.
+     </td>
+</tr>
+</table>
+</div>
+<a name="getQuadraticRoots()"></a><a name="getQuadraticRoots(Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getQuadraticRoots</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getQuadraticRoots(a:<a href="../../Number.html">Number</a>, b:<a href="../../Number.html">Number</a>, c:<a href="../../Number.html">Number</a>):<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Finds the real solutions, if they exist, to a quadratic equation of the form: at^2 + bt + c.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:<a href="../../Number.html">Number</a></code> &mdash; The first coefficient of the quadratic equation, which is multiplied by the squared variable (t^2).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../../Number.html">Number</a></code> &mdash; The second coefficient of the quadratic equation, which is multiplied by the linear variable (t).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../../Number.html">Number</a></code> &mdash; The third coefficient of the quadratic equation, which is the constant.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An array of number values, indicating the real roots of the equation. 
+     There may be no roots, or as many as two. 
+     Imaginary or complex roots are ignored.
+     </td>
+</tr>
+</table>
+</div>
+<a name="getSingleValue()"></a><a name="getSingleValue(Number,Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSingleValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getSingleValue(t:<a href="../../Number.html">Number</a>, a:<a href="../../Number.html">Number</a> = 0, b:<a href="../../Number.html">Number</a> = 0, c:<a href="../../Number.html">Number</a> = 0, d:<a href="../../Number.html">Number</a> = 0):<a href="../../Number.html">Number</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Calculates the value of a one-dimensional cubic Bezier equation at a specific time.
+     By contrast, a Bezier curve is usually two-dimensional 
+     and uses two of these equations, one for the x coordinate and one for the y coordinate.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:<a href="../../Number.html">Number</a></code> &mdash; The <code>time</code> or degree of progress along the curve, as a decimal value between <code>0</code> and <code>1</code>.
+     <p>
+<b>Note:</b> The <code>t</code> parameter does not necessarily move along the curve at a uniform speed. For example, a <code>t</code> value of <code>0.5</code> does not always produce a value halfway along the curve.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The first value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The second value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The third value of the Bezier equation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; The fourth value of the Bezier equation.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; The value of the Bezier equation at the specified time. 
+     </td>
+</tr>
+</table>
+</div>
+<a name="getValue()"></a><a name="getValue(Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getValue(t:<a href="../../Number.html">Number</a>):<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Calculates the location of a two-dimensional cubic Bezier curve at a specific time.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:<a href="../../Number.html">Number</a></code> &mdash; The <code>time</code> or degree of progress along the curve, as a decimal value between <code>0</code> and <code>1</code>.
+     <p>
+<b>Note:</b> The <code>t</code> parameter does not necessarily move along the curve at a uniform speed. For example, a <code>t</code> value of <code>0.5</code> does not always produce a value halfway along the curve.</p>
+</td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Point.html">Point</a></code> &mdash; A point object containing the x and y coordinates of the Bezier curve at the specified time. 
+     </td>
+</tr>
+</table>
+</div>
+<a name="getYForX()"></a><a name="getYForX(Number,Array)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getYForX</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getYForX(x:<a href="../../Number.html">Number</a>, coefficients:<a href="../../Array.html">Array</a> = null):<a href="../../Number.html">Number</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Finds the <code>y</code> value of a cubic Bezier curve at a given x coordinate.
+     Some Bezier curves overlap themselves horizontally, 
+     resulting in more than one <code>y</code> value for a given <code>y</code> value.
+     In that case, this method will return whichever value is most logical.
+     
+     Used by CustomEase and BezierEase interpolation.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; An x coordinate that lies between the first and last point, inclusive.
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">coefficients</span>:<a href="../../Array.html">Array</a></code> (default = <code>null</code>)<code></code> &mdash; An optional array of number values that represent the polynomial
+     coefficients for the Bezier. This array can be used to optimize performance by precalculating 
+     values that are the same everywhere on the curve and do not need to be recalculated for each iteration.
+     
+     </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; The <code>y</code> value of the cubic Bezier curve at the given x coordinate.
+     </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

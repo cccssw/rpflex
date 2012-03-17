@@ -1,0 +1,733 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<meta content="Object,globalClassifier.Object,callee,CASEINSENSITIVE,constructor,date,dateUTC,day,dayUTC,DESCENDING,dotall,E,errorID,extended,fullYear,fullYearUTC,global,hours,hoursUTC,ignoreCase,ignoreComments,ignoreProcessingInstructions,ignoreWhitespace,-Infinity,Infinity,lastIndex,length,length,length,LN10,LN2,localName,LOG10E,LOG2E,MAX_VALUE,MAX_VALUE,MAX_VALUE,message,milliseconds,millisecondsUTC,MIN_VALUE,MIN_VALUE,MIN_VALUE,minutes,minutesUTC,month,monthUTC,multiline,name,NaN,NaN,NEGATIVE_INFINITY,NUMERIC,PI,POSITIVE_INFINITY,prefix,prettyIndent,prettyPrinting,prototype,RETURNINDEXEDARRAY,seconds,secondsUTC,source,SQRT1_2,SQRT2,time,timezoneOffset,undefined,UNIQUESORT,uri,uri,abs,acos,addNamespace,appendChild,apply,Array,asin,atan2,atan,attribute,attribute,attributes,attributes,Boolean,call,ceil,charAt,charCodeAt,child,childIndex,child,children,children,comments,comments,concat,concat,contains,contains,copy,copy,cos,Date,decodeURIComponent,decodeURI,defaultSettings,descendants,descendants,elements,elements,encodeURIComponent,encodeURI,escape,every,exec,exp,filter,floor,forEach,fromCharCode,getDate,getDay,getFullYear,getHours,getMilliseconds,getMinutes,getMonth,getSeconds,getStackTrace,getTime,getTimezoneOffset,getUTCDate,getUTCDay,getUTCFullYear,getUTCHours,getUTCMilliseconds,getUTCMinutes,getUTCMonth,getUTCSeconds,hasComplexContent,hasComplexContent,hasOwnProperty,hasOwnProperty,hasOwnProperty,hasSimpleContent,hasSimpleContent,indexOf,indexOf,inScopeNamespaces,insertChildAfter,insertChildBefore,int,isFinite,isNaN,isPrototypeOf,isXMLName,join,lastIndexOf,lastIndexOf,length,length,localeCompare,localName,log,map,match,max,min,name,namespaceDeclarations,namespace,nodeKind,normalize,normalize,Number,Object,parent,parent,parse,parseFloat,parseInt,pop,pow,prependChild,processingInstructions,processingInstructions,propertyIsEnumerable,propertyIsEnumerable,propertyIsEnumerable,push,random,removeNamespace,replace,replace,reverse,round,search,setChildren,setDate,setFullYear,setHours,setLocalName,setMilliseconds,setMinutes,setMonth,setName,setNamespace,setPropertyIsEnumerable,setSeconds,setSettings,setTime,settings,setUTCDate,setUTCFullYear,setUTCHours,setUTCMilliseconds,setUTCMinutes,setUTCMonth,setUTCSeconds,shift,sin,slice,slice,some,sortOn,sort,splice,split,sqrt,String,substring,substr,tan,test,text,text,toDateString,toExponential,toExponential,toExponential,toFixed,toFixed,toFixed,toLocaleDateString,toLocaleLowerCase,toLocaleString,toLocaleString,toLocaleTimeString,toLocaleUpperCase,toLowerCase,toPrecision,toPrecision,toPrecision,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toString,toTimeString,toUpperCase,toUTCString,toXMLString,toXMLString,trace,uint,unescape,unshift,UTC,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,valueOf,XML,XMLList" name="keywords">
+<title>Object (ActionScript 3.0)</title>
+<script type="text/javascript" src="AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Object - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?Object.html&amp;" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Object</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Object"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">Top Level</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public dynamic   class  Object</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td> <a href="flash/accessibility/Accessibility.html">Accessibility</a>,  <a href="flash/accessibility/AccessibilityProperties.html">AccessibilityProperties</a>,  <a href="flash/display/ActionScriptVersion.html">ActionScriptVersion</a>,  <a href="flash/text/AntiAliasType.html">AntiAliasType</a>,  <a href="flash/system/ApplicationDomain.html">ApplicationDomain</a>,  <a href="arguments.html">arguments</a>,  <a href="Array.html">Array</a>,  <a href="fl/motion/easing/Back.html">Back</a>,  <a href="fl/transitions/easing/Back.html">Back</a>,  <a href="fl/motion/BezierEase.html">BezierEase</a>,  <a href="fl/motion/BezierSegment.html">BezierSegment</a>,  <a href="flash/display/BitmapData.html">BitmapData</a>,  <a href="flash/display/BitmapDataChannel.html">BitmapDataChannel</a>,  <a href="flash/filters/BitmapFilter.html">BitmapFilter</a>,  <a href="flash/filters/BitmapFilterQuality.html">BitmapFilterQuality</a>,  <a href="flash/filters/BitmapFilterType.html">BitmapFilterType</a>,  <a href="flash/display/BlendMode.html">BlendMode</a>,  <a href="Boolean.html">Boolean</a>,  <a href="fl/motion/easing/Bounce.html">Bounce</a>,  <a href="fl/transitions/easing/Bounce.html">Bounce</a>,  <a href="fl/controls/ButtonLabelPlacement.html">ButtonLabelPlacement</a>,  <a href="flash/utils/ByteArray.html">ByteArray</a>,  <a href="flash/system/Capabilities.html">Capabilities</a>,  <a href="flash/display/CapsStyle.html">CapsStyle</a>,  <a href="fl/motion/easing/Circular.html">Circular</a>,  <a href="Class.html">Class</a>,  <a href="flash/desktop/Clipboard.html">Clipboard</a>,  <a href="flash/desktop/ClipboardFormats.html">ClipboardFormats</a>,  <a href="flash/desktop/ClipboardTransferMode.html">ClipboardTransferMode</a>,  <a href="flash/geom/ColorTransform.html">ColorTransform</a>,  <a href="flash/utils/CompressionAlgorithm.html">CompressionAlgorithm</a>,  <a href="flash/ui/ContextMenuBuiltInItems.html">ContextMenuBuiltInItems</a>,  <a href="flash/text/CSMSettings.html">CSMSettings</a>,  <a href="fl/motion/easing/Cubic.html">Cubic</a>,  <a href="fl/video/CuePointType.html">CuePointType</a>,  <a href="adobe/utils/CustomActions.html">CustomActions</a>,  <a href="fl/motion/CustomEase.html">CustomEase</a>,  <a href="fl/events/DataChangeType.html">DataChangeType</a>,  <a href="fl/controls/dataGridClasses/DataGridColumn.html">DataGridColumn</a>,  <a href="fl/events/DataGridEventReason.html">DataGridEventReason</a>,  <a href="Date.html">Date</a>,  <a href="flash/utils/Dictionary.html">Dictionary</a>,  <a href="flash/filters/DisplacementMapFilterMode.html">DisplacementMapFilterMode</a>,  <a href="fl/motion/easing/Elastic.html">Elastic</a>,  <a href="fl/transitions/easing/Elastic.html">Elastic</a>,  <a href="flash/data/EncryptedLocalStore.html">EncryptedLocalStore</a>,  <a href="flash/utils/Endian.html">Endian</a>,  <a href="Error.html">Error</a>,  <a href="flash/events/Event.html">Event</a>,  <a href="flash/events/EventDispatcher.html">EventDispatcher</a>,  <a href="flash/events/EventPhase.html">EventPhase</a>,  <a href="fl/motion/easing/Exponential.html">Exponential</a>,  <a href="flash/external/ExternalInterface.html">ExternalInterface</a>,  <a href="flash/net/FileFilter.html">FileFilter</a>,  <a href="flash/filesystem/FileMode.html">FileMode</a>,  <a href="flash/display/FocusDirection.html">FocusDirection</a>,  <a href="fl/managers/FocusManager.html">FocusManager</a>,  <a href="flash/text/Font.html">Font</a>,  <a href="flash/text/FontStyle.html">FontStyle</a>,  <a href="flash/text/FontType.html">FontType</a>,  <a href="flash/display/FrameLabel.html">FrameLabel</a>,  <a href="Function.html">Function</a>,  <a href="fl/motion/FunctionEase.html">FunctionEase</a>,  <a href="flash/display/GradientType.html">GradientType</a>,  <a href="flash/display/Graphics.html">Graphics</a>,  <a href="flash/text/GridFitType.html">GridFitType</a>,  <a href="flash/html/HTMLHistoryItem.html">HTMLHistoryItem</a>,  <a href="flash/html/HTMLHost.html">HTMLHost</a>,  <a href="flash/html/HTMLPDFCapability.html">HTMLPDFCapability</a>,  <a href="flash/html/HTMLWindowCreateOptions.html">HTMLWindowCreateOptions</a>,  <a href="flash/media/ID3Info.html">ID3Info</a>,  <a href="flash/system/IMEConversionMode.html">IMEConversionMode</a>,  <a href="int.html">int</a>,  <a href="fl/events/InteractionInputType.html">InteractionInputType</a>,  <a href="flash/display/InterpolationMethod.html">InterpolationMethod</a>,  <a href="fl/core/InvalidationType.html">InvalidationType</a>,  <a href="flash/display/JointStyle.html">JointStyle</a>,  <a href="flash/ui/Keyboard.html">Keyboard</a>,  <a href="fl/motion/Keyframe.html">Keyframe</a>,  <a href="flash/ui/KeyLocation.html">KeyLocation</a>,  <a href="fl/motion/easing/Linear.html">Linear</a>,  <a href="flash/display/LineScaleMode.html">LineScaleMode</a>,  <a href="fl/controls/listClasses/ListData.html">ListData</a>,  <a href="flash/system/LoaderContext.html">LoaderContext</a>,  <a href="Math.html">Math</a>,  <a href="flash/geom/Matrix.html">Matrix</a>,  <a href="fl/motion/MatrixTransformer.html">MatrixTransformer</a>,  <a href="fl/motion/Motion.html">Motion</a>,  <a href="flash/ui/Mouse.html">Mouse</a>,  <a href="Namespace.html">Namespace</a>,  <a href="flash/desktop/NativeDragActions.html">NativeDragActions</a>,  <a href="flash/desktop/NativeDragManager.html">NativeDragManager</a>,  <a href="flash/desktop/NativeDragOptions.html">NativeDragOptions</a>,  <a href="flash/display/NativeWindowDisplayState.html">NativeWindowDisplayState</a>,  <a href="flash/display/NativeWindowInitOptions.html">NativeWindowInitOptions</a>,  <a href="flash/display/NativeWindowResize.html">NativeWindowResize</a>,  <a href="flash/display/NativeWindowSystemChrome.html">NativeWindowSystemChrome</a>,  <a href="flash/display/NativeWindowType.html">NativeWindowType</a>,  <a href="fl/video/NCManager.html">NCManager</a>,  <a href="fl/transitions/easing/None.html">None</a>,  <a href="flash/desktop/NotificationType.html">NotificationType</a>,  <a href="Number.html">Number</a>,  <a href="flash/net/ObjectEncoding.html">ObjectEncoding</a>,  <a href="flash/display/PixelSnapping.html">PixelSnapping</a>,  <a href="flash/geom/Point.html">Point</a>,  <a href="flash/printing/PrintJobOptions.html">PrintJobOptions</a>,  <a href="flash/printing/PrintJobOrientation.html">PrintJobOrientation</a>,  <a href="fl/controls/ProgressBarDirection.html">ProgressBarDirection</a>,  <a href="fl/controls/ProgressBarMode.html">ProgressBarMode</a>,  <a href="flash/utils/Proxy.html">Proxy</a>,  <a href="QName.html">QName</a>,  <a href="fl/motion/easing/Quadratic.html">Quadratic</a>,  <a href="fl/motion/easing/Quartic.html">Quartic</a>,  <a href="fl/motion/easing/Quintic.html">Quintic</a>,  <a href="flash/geom/Rectangle.html">Rectangle</a>,  <a href="RegExp.html">RegExp</a>,  <a href="fl/transitions/easing/Regular.html">Regular</a>,  <a href="flash/net/Responder.html">Responder</a>,  <a href="flash/security/RevocationCheckSettings.html">RevocationCheckSettings</a>,  <a href="fl/motion/RotateDirection.html">RotateDirection</a>,  <a href="flash/sampler/Sample.html">Sample</a>,  <a href="flash/display/Scene.html">Scene</a>,  <a href="fl/controls/ScrollBarDirection.html">ScrollBarDirection</a>,  <a href="fl/controls/ScrollPolicy.html">ScrollPolicy</a>,  <a href="flash/system/Security.html">Security</a>,  <a href="flash/system/SecurityDomain.html">SecurityDomain</a>,  <a href="flash/system/SecurityPanel.html">SecurityPanel</a>,  <a href="flash/net/SharedObjectFlushStatus.html">SharedObjectFlushStatus</a>,  <a href="flash/security/SignatureStatus.html">SignatureStatus</a>,  <a href="flash/security/SignerTrustSettings.html">SignerTrustSettings</a>,  <a href="fl/data/SimpleCollectionItem.html">SimpleCollectionItem</a>,  <a href="fl/motion/SimpleEase.html">SimpleEase</a>,  <a href="fl/motion/easing/Sine.html">Sine</a>,  <a href="fl/controls/SliderDirection.html">SliderDirection</a>,  <a href="fl/events/SliderEventClickTarget.html">SliderEventClickTarget</a>,  <a href="flash/media/SoundLoaderContext.html">SoundLoaderContext</a>,  <a href="flash/media/SoundMixer.html">SoundMixer</a>,  <a href="flash/media/SoundTransform.html">SoundTransform</a>,  <a href="fl/motion/Source.html">Source</a>,  <a href="flash/display/SpreadMethod.html">SpreadMethod</a>,  <a href="flash/data/SQLCollationType.html">SQLCollationType</a>,  <a href="flash/data/SQLColumnNameStyle.html">SQLColumnNameStyle</a>,  <a href="flash/data/SQLColumnSchema.html">SQLColumnSchema</a>,  <a href="flash/errors/SQLErrorOperation.html">SQLErrorOperation</a>,  <a href="flash/data/SQLMode.html">SQLMode</a>,  <a href="flash/data/SQLResult.html">SQLResult</a>,  <a href="flash/data/SQLSchema.html">SQLSchema</a>,  <a href="flash/data/SQLSchemaResult.html">SQLSchemaResult</a>,  <a href="flash/data/SQLTransactionLockType.html">SQLTransactionLockType</a>,  <a href="flash/sampler/StackFrame.html">StackFrame</a>,  <a href="flash/display/StageAlign.html">StageAlign</a>,  <a href="flash/display/StageDisplayState.html">StageDisplayState</a>,  <a href="flash/display/StageQuality.html">StageQuality</a>,  <a href="flash/display/StageScaleMode.html">StageScaleMode</a>,  <a href="String.html">String</a>,  <a href="fl/transitions/easing/Strong.html">Strong</a>,  <a href="fl/managers/StyleManager.html">StyleManager</a>,  <a href="flash/display/SWFVersion.html">SWFVersion</a>,  <a href="flash/system/System.html">System</a>,  <a href="flash/text/TextColorType.html">TextColorType</a>,  <a href="flash/text/TextDisplayMode.html">TextDisplayMode</a>,  <a href="flash/text/TextFieldAutoSize.html">TextFieldAutoSize</a>,  <a href="flash/text/TextFieldType.html">TextFieldType</a>,  <a href="flash/text/TextFormat.html">TextFormat</a>,  <a href="flash/text/TextFormatAlign.html">TextFormatAlign</a>,  <a href="flash/text/TextLineMetrics.html">TextLineMetrics</a>,  <a href="flash/text/TextRenderer.html">TextRenderer</a>,  <a href="flash/text/TextSnapshot.html">TextSnapshot</a>,  <a href="fl/data/TileListCollectionItem.html">TileListCollectionItem</a>,  <a href="flash/geom/Transform.html">Transform</a>,  <a href="fl/motion/Tweenables.html">Tweenables</a>,  <a href="uint.html">uint</a>,  <a href="flash/desktop/Updater.html">Updater</a>,  <a href="flash/net/URLLoaderDataFormat.html">URLLoaderDataFormat</a>,  <a href="flash/net/URLRequest.html">URLRequest</a>,  <a href="flash/net/URLRequestDefaults.html">URLRequestDefaults</a>,  <a href="flash/net/URLRequestHeader.html">URLRequestHeader</a>,  <a href="flash/net/URLRequestMethod.html">URLRequestMethod</a>,  <a href="flash/net/URLVariables.html">URLVariables</a>,  <a href="fl/video/VideoAlign.html">VideoAlign</a>,  <a href="fl/video/VideoScaleMode.html">VideoScaleMode</a>,  <a href="fl/video/VideoState.html">VideoState</a>,  <a href="XML.html">XML</a>,  <a href="XMLList.html">XMLList</a>,  <a href="flash/xml/XMLNode.html">XMLNode</a>,  <a href="flash/xml/XMLNodeType.html">XMLNodeType</a>,  <a href="adobe/utils/XMLUI.html">XMLUI</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Object class is at the root of the <span>ActionScript</span>
+  class hierarchy. Objects are created by constructors using the
+ <code>new</code> operator syntax, and can have properties assigned to them dynamically. 
+ <span>Objects can also be created by 
+ assigning an object literal, as in:</span>
+ 
+ <div class="listing"><pre>var obj:Object = {a:"foo", b:"bar"}</pre></div>
+ 
+ <p>All classes that don't declare an explicit base class extend the built-in Object class.</p>
+ 
+ 
+ 
+ <p>You can use the Object class to create <i>associative arrays</i>. At its core, an associative array is an instance of the Object class, and each key-value pair is represented by a property and its value. Another reason to declare an associative array using the Object data type is that you can then use an object literal to populate your associative array (but only at the time you declare it). The following example creates an associative array using an object literal, accesses items using both the dot operator and the array access operator, and then adds a new key-value pair by creating a new property:</p>
+ 
+ <div class="listing"><pre>
+ var myAssocArray:Object = {fname:"John", lname:"Public"};
+ trace(myAssocArray.fname);     // Output: John
+ trace(myAssocArray["lname"]);  // Output: Public
+ myAssocArray.initial = "Q";
+ trace(myAssocArray.initial);   // Output: Q</pre></div> 
+ 
+ <p>ActionScript 3.0 has two types of inheritance: class inheritance and prototype inheritance:</p>
+ <ul>
+ <li>Class inheritance - is the primary inheritance mechanism and supports inheritance of fixed properties. A fixed property is a variable, constant or method declared as part of a class definition. Every class definition is now represented by a special class object that stores information about the class. </li>
+ <li>Prototype inheritance - is the only inheritance mechanism in previous versions of ActionScript and serves as an alternate form of inheritance in ActionScript 3.0. Each class has an associated prototype object, and the properties of the prototype object are shared by all instances of the class. When a class instance is created, it has a reference to its class's prototype object, which serves as a link between the instance and its associated class prototype object. At run time, when a property is not found on a class instance, the delegate, which is the class prototype object, is checked for that property. If the prototype object does not contain the property, the process continues with the prototype object's delegate checking in consecutively higher levels in the hierarchy until Flash Player finds the property. </li>
+ </ul>
+ 
+ <p>Both class inheritance and prototype inheritance can exist simultaneously, as shown in the following example:</p>
+ 
+ <div class="listing"><pre>
+ class A {
+     var x = 1
+     prototype.px = 2
+ }
+ dynamic class B extends A {
+     var y = 3
+     prototype.py = 4
+ }
+  
+ var b = new B()
+ b.x // 1 via class inheritance
+ b.px // 2 via prototype inheritance from A.prototype
+ b.y // 3
+ b.py // 4 via prototype inheritance from B.prototype
+  
+ B.prototype.px = 5
+ b.px // now 5 because B.prototype hides A.prototype
+  
+ b.px = 6
+ b.px // now 6 because b hides B.prototype</pre></div>
+ 
+ <p>Using functions instead of classes, you can construct custom prototype inheritance trees. With classes, the prototype inheritance tree mirrors the class inheritance tree. However, since the prototype objects are dynamic, you can add and delete prototype-based properties at run time.</p>
+  <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Object.html#prototype" target="">prototype</a>
+<br>
+<a href="../main/00000047.html" target="_top">Data type descriptions</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#constructor">constructor</a> : <a href="Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#prototype">prototype</a> : <a href="Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Object()">Object</a>()</div>
+<div class="summaryTableDescription">
+  Creates an Object object and stores a reference to the object's constructor method in the object's constructor property.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasOwnProperty()">hasOwnProperty</a>(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="String.html">String</a>, isEnum:<a href="Boolean.html">Boolean</a> = true):<a href="specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():<a href="String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#valueOf()">valueOf</a>():<a href="Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol">Object</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="constructor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constructor</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var constructor:<a href="Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A reference to the class object or constructor function for a given object instance. 
+  If an object is an instance of a class, the <code>constructor</code> 
+  property holds a reference to the class object. 
+  If an object is created with a constructor function, the <code>constructor</code>   
+  property holds a reference to the constructor function.
+  Do not confuse a constructor function with a constructor method of a class.
+  A constructor function is a Function object used to create objects, and is an
+  alternative to using the <code>class</code> keyword for defining classes.
+    <p>If you use the <code>class</code> keyword to define a class, the class's prototype object
+  is assigned a property named <code>constructor</code> that holds a reference to the class object.
+  An instance of the class inherits this property from the prototype object. For example,
+  the following code creates a new class, <code>A</code>, and a class instance named <code>myA</code>:</p>
+  <div class="listing" version="3.0"><pre>
+  dynamic class A {}
+  trace(A.prototype.constructor);      // [class A]
+  trace(A.prototype.constructor == A); // true
+  var myA:A = new A();
+  trace(myA.constructor == A);         // true</pre></div>
+  
+  <p>Advanced users may choose to use the <code>function</code> keyword instead of the <code>class</code>
+  keyword to define a Function object that can be used as a template for creating objects. Such a
+  function is called a constructor function because you can use it in conjunction with the <code>new</code>
+  operator to create objects. 
+  If you use the <code>function</code> keyword to create a constructor function, its prototype object is assigned
+  a property named <code>constructor</code> that holds a reference to the constructor function. 
+  If you then use the constructor function to create an object, the object inherits the  
+  <code>constructor</code> property from the constructor function's prototype object. For example,
+  the following code creates a new constructor function, <code>f</code>, and an object named <code>myF</code>:</p>
+  <div class="listing" version="3.0"><pre>
+  function f() {}
+  trace(f.prototype.constructor);      // function Function() {}
+  trace(f.prototype.constructor == f); // true
+  var myF = new f();
+  trace(myF.constructor == f);         // true</pre></div>
+    <p><b>Note</b>: The <code>constructor</code> property is writable, which means that user code can change
+  its value with an assignment statement. Changing the value of the <code>constructor</code> property is not 
+  recommended, but if you write code that depends on the value of the <code>constructor</code> property, you should
+  ensure that the value is not reset. The value can be changed only when the property is accessed through the prototype
+  object (for example, <code>className.prototype.constructor</code>).</p>
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Class.html" target="">Class</a>
+<br>
+<a href="Function.html" target="">Function</a>
+<br>
+<a href="Object.html#prototype" target="">prototype</a>
+<br>
+<a href="../main/00000064.html" target="_top">Methods</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="prototype"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">prototype</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static var prototype:<a href="Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A reference to the prototype object of a class or function object. The <code>prototype</code> property 
+  is automatically created and attached to any class or function object that you create. This property is 
+  static in that it is specific to the class or function that you create. For example, if you create a  
+  class, the value of the <code>prototype</code> property is shared by all instances of the class and is
+  accessible only as a class property. Instances of your class cannot directly access 
+  the <code>prototype</code> property. 
+  
+     <p>A class's prototype object is a special instance of that class that provides a mechanism for sharing state across all instances of a class. At run time, when a property is not found on a class instance, the delegate, which is the class prototype object, is checked for that property. If the prototype object does not contain the property, the process continues with the prototype object's delegate checking in consecutively higher levels in the hierarchy until 
+  <span>Flash Player or</span> the Adobe Integrated Runtime finds the property. </p>
+  
+     <p><i>Note:</i> In ActionScript 3.0, prototype inheritance is not the primary mechanism for inheritance. Class inheritance, which drives the inheritance of fixed properties in class definitions, is the primary inheritance mechanism in ActionScript 3.0.</p>
+  
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../main/00000069.html" target="_top">Advanced topics</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="Object()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Object</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Object()</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Creates an Object object and stores a reference to the object's constructor method in the object's <code>constructor</code> property.
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../main/00000047.html" target="_top">Data type descriptions</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="hasOwnProperty()"></a><a name="hasOwnProperty(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasOwnProperty</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code><a href="statements.html#AS3">AS3</a> function hasOwnProperty(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates whether an object has a specified property defined. This method returns <code>true</code> if the target object has
+  a property that matches the string specified by the <code>name</code> parameter, and <code>false</code> otherwise. 
+  The following types of properties cause this method to return <code>true</code> for objects that are instances of a class (as opposed to class objects):
+  <ul>
+<li>Fixed instance properties&mdash;variables, constants, or methods defined by the object's class that are not static;</li>
+<li>Inherited fixed instance properties&mdash;variables, constants, or methods inherited by the object's class;</li>
+<li>Dynamic properties&mdash;properties added to an object after it is instantiated (outside of its class definition). To add dynamic properties, the object's defining class must be declared with the <code>dynamic</code> keyword.</li>
+</ul>
+<p>The following types of properties cause this method to return <code>false</code> for objects that are instances of a class:</p>
+<ul>
+<li>Static properties&mdash;variables, constants, or methods defined with the static keyword in an object's defining class or any of its superclasses;</li>
+<li>Prototype properties&mdash;properties defined on a prototype object that is part of the object's prototype chain. In ActionScript 3.0, the prototype chain is not used for class inheritance, but still exists as an alternative form of inheritance. For example, an instance of the Array class can access the <code>valueOf()</code> method because it exists on <code>Object.prototype</code>, which is part of the prototype chain for the Array class. Although you can use <code>valueOf()</code> on an instance of Array, the return value of <code>hasOwnProperty("valueOf")</code> for that instance is <code>false</code>.</li>
+</ul>
+<p>ActionScript 3.0 also has class objects, which are direct representations of class definitions. 
+  When called on class objects, the <code>hasOwnProperty()</code> method returns <code>true</code> only if a property 
+  is a static property defined on that class object. For example, if you create a subclass of Array named 
+  CustomArray, and define a static property in CustomArray named <code>foo</code>, a call to 
+  <code>CustomArray.hasOwnProperty("foo")</code> returns <code>true</code>.
+  For the static property <code>DESCENDING</code> defined in the Array class, however, a call to 
+  <code>CustomArray.hasOwnProperty("DESCENDING")</code> returns <code>false</code>.</p>
+<p>
+<b>Note:</b> Methods of the Object class are dynamically created on Object's prototype. To redefine this method in a subclass of Object, do not use the <code>override</code> keyword. For example, A subclass of Object implements <code>function hasOwnProperty():Boolean</code> instead of using an override of the base class.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="String.html">String</a></code> &mdash; The property of the object.  
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; If the target object has the property specified by the <code>name</code> 
+  parameter this value is <code>true</code>, otherwise <code>false</code>.
+  
+  </td>
+</tr>
+</table>
+</div>
+<a name="isPrototypeOf()"></a><a name="isPrototypeOf(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isPrototypeOf</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code><a href="statements.html#AS3">AS3</a> function isPrototypeOf(theClass:<a href="Object.html">Object</a>):<a href="Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter. This method returns <code>true</code> if the object is in the prototype chain of the 
+  object specified by the <code>theClass</code> parameter. The method returns <code>false</code> 
+  if the target object is absent from the prototype chain of the <code>theClass</code> object, 
+  and also if the <code>theClass</code> parameter is not an object.
+       <p>
+<b>Note:</b> Methods of the Object class are dynamically created on Object's prototype. To redefine this method in a subclass of Object, do not use the <code>override</code> keyword. For example, A subclass of Object implements <code>function isPrototypeOf():Boolean</code> instead of using an override of the base class.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">theClass</span>:<a href="Object.html">Object</a></code> &mdash; The class to which the specified object may refer.  
+  
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; If the object is in the prototype chain of the object 
+  specified by the <code>theClass</code> parameter this value is <code>true</code>, otherwise <code>false</code>.
+  
+  </td>
+</tr>
+</table>
+</div>
+<a name="propertyIsEnumerable()"></a><a name="propertyIsEnumerable(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">propertyIsEnumerable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code><a href="statements.html#AS3">AS3</a> function propertyIsEnumerable(name:<a href="String.html">String</a>):<a href="Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates whether the specified property exists and is enumerable. If <code>true</code>, then the property exists and 
+  can be enumerated in a <code>for..in</code> loop. The property must exist on the target object because this method does not 
+  check the target object's prototype chain.
+  
+  <p>Properties that you create are enumerable, but built-in properties are generally not enumerable.</p>
+<p>
+<b>Note:</b> Methods of the Object class are dynamically created on Object's prototype. To redefine this method in a subclass of Object, do not use the <code>override</code> keyword. For example, A subclass of Object implements <code>function propertyIsEnumerable():Boolean</code> instead of using an override of the base class.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="String.html">String</a></code> &mdash; The property of the object.
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="Boolean.html">Boolean</a></code> &mdash; If the property specified by the <code>name</code> parameter is enumerable this value is <code>true</code>, otherwise <code>false</code>.
+  
+  </td>
+</tr>
+</table>
+</div>
+<a name="setPropertyIsEnumerable()"></a><a name="setPropertyIsEnumerable(String,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setPropertyIsEnumerable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setPropertyIsEnumerable(name:<a href="String.html">String</a>, isEnum:<a href="Boolean.html">Boolean</a> = true):<a href="specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sets the availability of a dynamic property for loop operations. The property must exist on the target object because this method does not check the target object's prototype chain.
+     </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="String.html">String</a></code> &mdash; The property of the object.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">isEnum</span>:<a href="Boolean.html">Boolean</a></code> (default = <code>true</code>)<code></code> &mdash;  If set to <code>false</code>, the dynamic property does not show up in <code>for..in</code> loops, and the method <code>propertyIsEnumerable()</code> returns <code>false</code>. 
+     </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Object.html#propertyIsEnumerable()" target="">propertyIsEnumerable()</a>
+</div>
+</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toString():<a href="String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns the string representation of the specified object.
+       <p>
+<b>Note:</b> Methods of the Object class are dynamically created on Object's prototype. To redefine this method in a subclass of Object, do not use the <code>override</code> keyword. For example, a subclass of Object implements <code>function toString():String</code> instead of using an override of the base class.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="String.html">String</a></code> &mdash; A string representation of the object.
+    </td>
+</tr>
+</table>
+</div>
+<a name="valueOf()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">valueOf</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function valueOf():<a href="Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns the primitive value of the specified object. If this object
+  does not have a primitive value, the object itself is returned.
+  
+     <p>
+<b>Note:</b> Methods of the Object class are dynamically created on Object's prototype. To redefine this method in a subclass of Object, do not use the <code>override</code> keyword. For example, A subclass of Object implements <code>function valueOf():Object</code> instead of using an override of the base class.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="Object.html">Object</a></code> &mdash; The primitive value of this object or the object itself.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Object.html#toString()" target="">Object.toString()</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">ObjectExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the classes <code>ObjectExample</code> and <code>Circle</code>
+ to demonstrate the dynamic nature of the Object class, and how value objects can be transformed into 
+ Shape objects and then added to the stage at the specified x/y coordinates.
+ 
+ <p>The example creates the value objects <code>firstInitObj</code> and <code>secondInitObj</code>. The custom
+ class <code>Circle</code> accepts the value object and loops over it while setting its matching internal
+ properties to those defined in the value object.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+
+    public class ObjectExample extends Sprite {
+        public function ObjectExample() {
+            var firstInitObj:Object = new Object();
+            firstInitObj.bgColor = 0xFF0000;
+            firstInitObj.radius = 25;
+            firstInitObj.xCenter = 25;
+            firstInitObj.yCenter = 25;
+                        
+            var firstCircle:Circle = new Circle(firstInitObj);
+            addChild(firstCircle);
+            firstCircle.x = 50;
+            firstCircle.y = 50;
+
+            var secondInitObj:Object = {bgColor:0xCCCCCC, radius:50, xCenter:50, yCenter:50};
+
+            var secondCircle:Circle = new Circle(secondInitObj);            
+            addChild(secondCircle);
+            secondCircle.x = 100;
+            secondCircle.y = 100;
+        }
+        
+    }
+}
+
+import flash.display.Shape;
+    
+class Circle extends Shape {
+    public var bgColor:Number = 0xFFFFFF;
+    public var radius:Number = 0;
+    public var xCenter:Number = 0;
+    public var yCenter:Number = 0;
+        
+    public function Circle(initObj:Object) {
+        for(var i:String in initObj) {
+            this[i] = initObj[i];
+        }
+        draw();
+    }
+        
+    public function draw():void {
+        graphics.beginFill(bgColor);
+        graphics.drawCircle(xCenter, yCenter, radius);
+        graphics.endFill();
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

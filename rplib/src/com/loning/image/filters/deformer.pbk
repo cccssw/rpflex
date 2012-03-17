@@ -1,0 +1,106 @@
+
+/////////////////////////////////////////////////////
+//
+//  deformer
+//
+//	author 	   : frank reitberger
+//	blog 	   : http://www.prinzipiell.com
+//  copyright 2008
+//
+/////////////////////////////////////////////////////
+
+<languageVersion: 1.0;>
+
+kernel deformer
+
+<   
+    namespace:          "deformer";
+    vendor:             "Frank Reitberger";
+    version:            1;
+    description:        "deforms whatever get´s in the way.";
+>
+
+ {
+
+    parameter float center_x
+    <
+        minValue:float(182.0);
+        maxValue:float(249.0);
+        defaultValue:float(204.64);
+        description: "center point x";
+    >;
+    
+    parameter float center_y
+    <
+        minValue:float(158.0);
+        maxValue:float(249.0);
+        defaultValue:float(182.16);
+        description: "center point y";
+    >;  
+    
+    parameter float imageHeight
+    <
+        minValue:float(1.0);
+        maxValue:float(2024.0);
+        defaultValue:float(323.0);
+        description: "set image height";
+    >;      
+    
+    parameter int stretch
+    <
+        minValue:int(1);
+        maxValue:int(3);
+        defaultValue:int(2);
+        description: "calculate stretch(es)";
+    >;    
+      
+    
+    input image4 src;
+    output pixel4 pxl; 
+    
+    void
+    evaluatePixel() {
+    
+        float2 center;
+        center.x    = center_x;
+        center.y    = center_y;
+        
+        float pi    = 3.141592653589793;
+        float2 pos  = outCoord() - center;
+        
+        
+        pos    *= cos( pi /1.5 / imageHeight * pos.x);
+        
+        float stepY  = length(pos) / center.y;
+        float stepX  = length(pos) / center.x;
+
+        
+        if ( stretch == 1 ) {
+             
+            pos *= ( stepY * stepX );
+            
+        }    
+        
+        if ( stretch == 2 ) {
+             
+            pos *= (sin(stepY) * cos(stepX) );
+            
+        }
+        
+        if ( stretch == 3 ) {
+             
+            pos *= tan(stepY * stepX)/pi;
+            
+        }    
+        
+        if ( stretch == 4 ) {
+             
+            pos += atan(cos(stepY) * sin(stepX));
+            
+        }       
+    
+        pxl = sampleLinear( src, center + pos );
+  
+    }    
+    
+}

@@ -1,0 +1,35 @@
+<languageVersion : 1.0;>
+
+kernel Desaturation
+<   namespace : "HBR";
+    vendor : "Harold Brenes";
+    version : 1;
+    description : "Desaturates an image."; >
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float saturation
+    <
+        defaultValue : 1.0;
+        minValue : 0.0;
+        maxValue : 2.0;
+        description : "Saturation amount.";
+    >;    
+
+    void
+    evaluatePixel()
+    {
+        float4 colors = sampleNearest(src, outCoord());
+
+        float rlum = 0.3;
+        float glum = 0.59;
+        float blum = 0.11;
+    
+        dst.r = ((rlum + (1.0 - rlum) * saturation) * colors.r) + ((glum + -glum * saturation) * colors.g) + ((blum + -blum * saturation) * colors.b);
+        dst.g = ((rlum + -rlum * saturation) * colors.r) + ((glum + (1.0 - glum) * saturation) * colors.g) + ((blum + -blum * saturation) * colors.b);
+        dst.b = ((rlum + -rlum * saturation) * colors.r) + ((glum + -glum * saturation) * colors.g) + ((blum + (1.0 - blum) * saturation) * colors.b);
+        dst.a = colors.a;
+        
+    }
+}

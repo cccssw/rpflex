@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="8" scaleGridRight="90" scaleGridTop="10" scaleGridBottom="86">
+  
+      <Rect x="4" y="6" height="88" width="90" radiusX="4" radiusY="4">
+        <fill>
+          <SolidColor color="#FFFFFF" alpha="0.15"/>
+        </fill>
+      </Rect>
+      <Rect width="98" height="98">
+        <fill>
+          <SolidColor color="#000000" alpha="0"/>
+        </fill>
+      </Rect>
+      
+</Graphic>

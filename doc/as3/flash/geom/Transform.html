@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Transform,flash.geom.Transform,alphaMultiplier,alphaOffset,a,blueMultiplier,blueOffset,bottomRight,bottom,b,color,colorTransform,concatenatedColorTransform,concatenatedMatrix,c,d,greenMultiplier,greenOffset,height,left,length,matrix,pixelBounds,redMultiplier,redOffset,right,size,topLeft,top,tx,ty,width,x,x,y,y" name="keywords">
+<title>flash.geom.Transform (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Transform - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/geom/Transform.html&amp;flash/geom/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Transform</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Transform"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.geom</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Transform</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Transform  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Transform class collects data about color transformations and coordinate transformations that 
+ are applied to a display object. Apply transformations by creating a new <code>Matrix</code> 
+ and/or a new <code>ColorTransform</code> and setting the appropriate properties of the <code>transform</code> property
+ of a display object.
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/DisplayObject.html#transform" target="">flash.display.DisplayObject.transform</a>
+<br>
+<a href="ColorTransform.html" target="">flash.geom.ColorTransform</a>
+<br>
+<a href="Matrix.html" target="">flash.geom.Matrix</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#colorTransform">colorTransform</a> : <a href="../../flash/geom/ColorTransform.html">ColorTransform</a>
+<div class="summaryTableDescription">
+  A ColorTransform object containing values that universally adjust the colors in 
+  the display object.</div>
+</td><td class="summaryTableOwnerCol">Transform</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#concatenatedColorTransform">concatenatedColorTransform</a> : <a href="../../flash/geom/ColorTransform.html">ColorTransform</a>
+<div class="summaryTableDescription">[read-only] 
+  A ColorTransform object representing the combined color transformations applied to the display object 
+  and all of its parent objects, back to the root level.</div>
+</td><td class="summaryTableOwnerCol">Transform</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#concatenatedMatrix">concatenatedMatrix</a> : <a href="../../flash/geom/Matrix.html">Matrix</a>
+<div class="summaryTableDescription">[read-only] 
+  A Matrix object representing the combined transformation matrixes of the 
+  display object and all of its parent objects, back to the root level.</div>
+</td><td class="summaryTableOwnerCol">Transform</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#matrix">matrix</a> : <a href="../../flash/geom/Matrix.html">Matrix</a>
+<div class="summaryTableDescription">
+  A Matrix object containing values that affect the scaling, rotation, 
+  and translation of the display object.</div>
+</td><td class="summaryTableOwnerCol">Transform</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pixelBounds">pixelBounds</a> : <a href="../../flash/geom/Rectangle.html">Rectangle</a>
+<div class="summaryTableDescription">[read-only] 
+  A Rectangle object that defines the bounding rectangle of the display object on the Stage.</div>
+</td><td class="summaryTableOwnerCol">Transform</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="colorTransform"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">colorTransform</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>colorTransform:<a href="../../flash/geom/ColorTransform.html">ColorTransform</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A ColorTransform object containing values that universally adjust the colors in 
+  the display object.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get colorTransform():<a href="../../flash/geom/ColorTransform.html">ColorTransform</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set colorTransform(value:<a href="../../flash/geom/ColorTransform.html">ColorTransform</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; The colorTransform is null when being set
+  
+ </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ColorTransform.html" target="">flash.geom.ColorTransform</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="concatenatedColorTransform"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">concatenatedColorTransform</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>concatenatedColorTransform:<a href="../../flash/geom/ColorTransform.html">ColorTransform</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A ColorTransform object representing the combined color transformations applied to the display object 
+  and all of its parent objects, back to the root level.
+  If different color transformations have been applied at different levels, all of those transformations are 
+  concatenated into one ColorTransform object 
+  for this property.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get concatenatedColorTransform():<a href="../../flash/geom/ColorTransform.html">ColorTransform</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ColorTransform.html" target="">flash.geom.ColorTransform</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="concatenatedMatrix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">concatenatedMatrix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>concatenatedMatrix:<a href="../../flash/geom/Matrix.html">Matrix</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A Matrix object representing the combined transformation matrixes of the 
+  display object and all of its parent objects, back to the root level.
+  If different transformation matrixes have been applied at different levels, 
+  all of those matrixes are concatenated into one matrix 
+  for this property.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get concatenatedMatrix():<a href="../../flash/geom/Matrix.html">Matrix</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="matrix"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">matrix</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>matrix:<a href="../../flash/geom/Matrix.html">Matrix</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A Matrix object containing values that affect the scaling, rotation, 
+  and translation of the display object.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get matrix():<a href="../../flash/geom/Matrix.html">Matrix</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set matrix(value:<a href="../../flash/geom/Matrix.html">Matrix</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; The matrix is null when being set
+  
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Matrix.html" target="">flash.geom.Matrix</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="pixelBounds"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pixelBounds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pixelBounds:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  A Rectangle object that defines the bounding rectangle of the display object on the Stage.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pixelBounds():<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<br>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">TransformExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the TransformExample class to skew the bottom side
+ of a square sprite filled with a gradient pattern. Each time the user clicks the square, the 
+ application transforms the sprite, by skewing it. This is accomplished with the following steps:
+ 
+ <ol>
+  <li>The <code>TransformExample()</code> constructor creates a new sprite object <code>target</code>.</li>
+ 
+  <li>The <code>TransformExample()</code> constructor calls the <code>draw()</code> method, 
+     	which draws a gradient square in the sprite.</li>
+ 
+  <li>The <code>TransformExample()</code> constructor adds a click event listener for the sprite, 
+ 		which is handled by the <code>clickHandler()</code> method. </li>
+ 
+ 	<li>The <code>clickHandler()</code> method creates a new Matrix object, <code>skewMatrix</code>,
+ 		set to apply a skew affect. Another matrix, <code>tempMatrix</code>, is assigned to the 
+ 		current transformation matrix of the sprite, and then it is combined with the <code>skewMatrix</code>
+ 		using the <code>concat()</code> method. This matrix is assigned to the assigned to the 
+ 		<code>transform.matrix</code> property of the square sprite.  Each time the user clicks the square,
+ 		 the call to the <code>clickHandler()</code> modifies the shape of the square, by skewing it.  </li>
+
+  <li>Additionally, the <code>clickHandler()</code> method creates a new ColorTransform object. The
+		<code>redOffset</code> property of the new ColorTransform is set to the current value of redOffset and 
+ 		incremented by 25. Likewise, the <code>blueOffset</code> property is decremented by 25. With each click,
+		the colors of the sprite will change. </li>
+  </ol>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.GradientType;
+    import flash.geom.Matrix;
+    import flash.geom.ColorTransform;
+    import flash.events.MouseEvent;
+
+    public class TransformExample extends Sprite {
+        public function TransformExample() { 
+            var target:Sprite = new Sprite();
+            draw(target);
+            addChild(target);
+            target.useHandCursor = true;
+            target.buttonMode = true;
+            target.addEventListener(MouseEvent.CLICK, clickHandler)
+        }
+        public function draw(sprite:Sprite):void {
+            var red:uint = 0xFF0000;
+            var green:uint = 0x00FF00;
+            var blue:uint = 0x0000FF;
+            var size:Number = 100;
+            sprite.graphics.beginGradientFill(GradientType.LINEAR, [red, blue, green], [1, 0.5, 1], [0, 200, 255]);
+            sprite.graphics.drawRect(0, 0, 100, 100);
+        }
+        public function clickHandler(event:MouseEvent):void {
+            var skewMatrix:Matrix = new Matrix();
+            skewMatrix.c = 0.25;
+            var tempMatrix:Matrix = this.transform.matrix;
+            tempMatrix.concat(skewMatrix);
+            this.transform.matrix = tempMatrix;
+            
+            var rOffset:Number = this.transform.colorTransform.redOffset + 25;
+            var bOffset:Number = this.transform.colorTransform.blueOffset - 25;
+            this.transform.colorTransform = new ColorTransform(1, 1, 1, 1, rOffset, 0, bOffset, 0);            
+        }
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

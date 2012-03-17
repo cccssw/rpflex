@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" compiles="true" parentProject="2b9e06e3-68a7-4ca8-8f64-0a869088202f" projectUUID="2b9e06e3-68a7-4ca8-8f64-0a869088202f" pureCatalystProject="false" sdkVersion="4.6.0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579" version="15">
+  <projects>
+    <project filename="WeiboAPI.fxpl" position="1" projectUUID="99b17c00-00e8-414e-bd95-474048a41263" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <project filename="mobiletheme_ios.fxpl" position="2" projectUUID="b7cbdf70-d9f3-4507-847b-f9d21c5c9f4f" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <project filename="mobile_examples.fxpl" position="3" projectUUID="f67cd8ae-35ca-4bad-a19f-20606b04d987" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <project filename="com.loning.controls.fxpl" position="4" projectUUID="f479320d-7960-46b5-8817-065efd4dc9c1" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <project filename="rplib.fxpl" position="5" projectUUID="96664c73-83e2-459c-9ba3-44b7f01d41a5" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <project filename="com.loning.mobile.controls.fxpl" position="6" projectUUID="d0e1184a-28c9-495d-a96a-253645bb05f1" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </projects>
+  <src>
+    <linked isMain="false" location="locale/{locale}" path="locale/{locale}" position="0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </src>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </swc>
+  <misc/>
+  <theme/>
+  <mxmlFormattingPrefs groupAttributesByState="true" maxLineWidth="100" mxmlAlignAttributes="true" mxmlAttributeOrder="id,userLabel,includeIn,excludeFrom,visible,x,y,z,left,right,top,bottom,width,height,minWidth,minHeight,maxWidth,maxHeight,label" mxmlKeepAttributeValuesOrganized="true"/>
+</fxpProperties>

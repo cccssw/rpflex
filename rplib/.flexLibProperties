@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.loning.image.ElementSettings"/>
+    <classEntry path="com.loning.image.controls.FaceRectangleImage"/>
+    <classEntry path="com.loning.image.controls.FaceRectanglePannel"/>
+    <classEntry path="com.loning.image.ElementSettingsItem"/>
+    <classEntry path="com.loning.image.RpFaceProcessorManagerConfigLoader"/>
+    <classEntry path="com.loning.image.RpFaceProcessorManagerConfigGenerator"/>
+    <classEntry path="com.loning.image.filters.CustomNativeFilter"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.RandomTwistDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.SharpHeadDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.LongFaceDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.FrogEyeFaceDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.TwistEyeFaceDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.TwistNorseFaceDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.BigMouthDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.BigNorseDistort"/>
+    <classEntry path="com.loning.image.faceprocesses.facedistorts.FaceDistortCategory"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

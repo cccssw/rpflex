@@ -1,0 +1,83 @@
+<languageVersion : 1.0;>
+
+/** Ripple filter by Boris van Schooten.
+* http://www.borisvanschooten.nl/ */
+
+kernel RippleFilter<
+	namespace : "borisvanschooten";
+	vendor : "Boris van Schooten";
+	version : 1;
+	description : "Concentric water ripple effect";
+> {
+	input image4 src;
+	output pixel4 dst;
+	
+	parameter float2 center <
+		defaultValue : float2(320.0, 240.0);
+		minValue : float2(0.0,0.0);
+		maxValue : float2(8192.0,8192.0);
+		description: "Center of ripple";
+	>;
+	
+	parameter float displacement <
+		minValue: 0.0;
+		maxValue: 40.0;
+		defaultValue :  6.0;
+		description: "Displacement in pixels";
+	>;
+
+	parameter float size <
+		minValue: 0.0;
+		maxValue: 8192.0;
+		defaultValue :  256.0;
+		description: "Size of effect in pixels";
+	>;
+
+	parameter float ripplewidth <
+		minValue: 0.0;
+		maxValue: 512.0;
+		defaultValue :  32.0;
+		description: "Size of single ripple in pixels";
+	>;
+
+	parameter float phase <
+		defaultValue :  0.0;
+		description: "Phase shift of ripple (change to animate)";
+	>;
+
+	parameter float2 lightdir <
+		defaultValue : float2(0.7071,0.7071);
+		minValue : float2(-1.0,-1.0);
+		maxValue : float2(1.0,1.0);
+		description: "Light direction vector (must be normalised!)";
+	>;
+	parameter float lightbright <
+		minValue: 0.0;
+		maxValue: 1.0;
+		defaultValue :  0.3;
+		description: "Brightness of directional light source";
+	>;
+
+	void evaluatePixel() {
+		float2 pos = outCoord();
+		float2 ofs = pos - center;
+
+		// distance from center
+		float r = length(ofs);
+
+		if (r < size) {
+			// disp = # pixels to displace, ang = displace direction
+			float disp = (1.0 - r/size) * displacement
+						* sin(-phase + r/(ripplewidth/6.28));
+			float ang = atan(ofs.x,ofs.y);
+			// brightness of pixel is based on displacement and angle between
+			// displacement and lightdir
+			float bright = 1.0 + (lightbright*disp/displacement
+							* (ofs.x*lightdir.x/r + ofs.y*lightdir.y/r) );
+			dst = bright*sampleLinear(src,
+				float2(pos.x+disp*sin(ang), pos.y+disp*cos(ang)));
+		} else {
+			dst = sampleLinear(src,pos);
+		}
+	}
+}

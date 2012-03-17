@@ -1,0 +1,8 @@
+<theme>
+<name>Mobiletheme_ios</name>
+<mainFile>mobiletheme_ios.swc</mainFile>
+<category>Custom Themes - Mobile</category>
+<baseTheme></baseTheme>
+<sourceLocation></sourceLocation>
+<compatibility>Mobile</compatibility>
+</theme>

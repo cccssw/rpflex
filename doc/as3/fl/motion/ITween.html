@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="ITween,fl.motion.ITween,a,AUTO,autoRewind,blank,blendMode,brightness,b,cacheAsBitmap,CCW,color,c,CW,dimensions,d,duration,ease,easingFunction,elementType,filters,filters,firstFrame,frameRate,functionName,index,instanceName,isPlaying,keyframes,keyframes,keyframesCompact,label,linkageID,loop,MOTION_END,MOTION_START,MOTION_UPDATE,motion,NONE,orientToPath,orientToPath,parameters,points,points,points,points,positionMatrix,repeatCount,rotateDirection,rotateTimes,ROTATION,rotation,rotation,SCALE_X,SCALE_Y,scaleX,scaleX,scaleY,scaleY,SKEW_X,SKEW_Y,skewX,skewX,skewY,skewY,source,symbolName,target,target,target,target,target,target,TIME_CHANGE,time,tintColor,tintMultiplier,transformationPoint,transformationPoint,tweens,tweens,tweenScale,tweenSnap,tweenSync,X,x,x,Y,y,y,addKeyframe,affectsTweenable,easeNone,easeQuadPercent,end,fromXML,fromXMLString,fromXMLString,getColorTransform,getCubicCoefficients,getCubicRoots,getCurrentKeyframe,getFilters,getNextKeyframe,getQuadraticRoots,getRotation,getRotationRadians,getScaleX,getScaleY,getSingleValue,getSkewX,getSkewXRadians,getSkewY,getSkewYRadians,getTween,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getValue,getYForX,interpolateColor,interpolateFilter,interpolateFilters,interpolateTransform,matchInternalPointWithExternal,nextFrame,pause,play,resume,rewind,rotateAroundExternalPoint,rotateAroundInternalPoint,setRotation,setRotationRadians,setScaleX,setScaleY,setSkewX,setSkewXRadians,setSkewY,setSkewYRadians,setTint,setValue,setValue,stop" name="keywords">
+<title>fl.motion.ITween (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'ITween - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/motion/ITween.html&amp;fl/motion/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">ITween</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ITween"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.motion</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ITween</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implementors</td><td> <a href="../../fl/motion/BezierEase.html">BezierEase</a>,  <a href="../../fl/motion/CustomEase.html">CustomEase</a>,  <a href="../../fl/motion/FunctionEase.html">FunctionEase</a>,  <a href="../../fl/motion/SimpleEase.html">SimpleEase</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The ITween interface defines the application programming interface (API) that interpolation
+ classes implement in order to work with the fl.motion classes.
+ The SimpleEase, CustomEase, BezierEase, and FunctionEase classes implement the ITween interface. 
+ <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../motionXSD.html" target="">Motion XML Elements</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#target">target</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+     The name of the animation property to target.</div>
+</td><td class="summaryTableOwnerCol">ITween</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getValue()">getValue</a>(time:<a href="../../Number.html">Number</a>, begin:<a href="../../Number.html">Number</a>, change:<a href="../../Number.html">Number</a>, duration:<a href="../../Number.html">Number</a>):<a href="../../Number.html">Number</a>
+</div>
+<div class="summaryTableDescription">
+     Calculates an interpolated value for a numerical property of animation.</div>
+</td><td class="summaryTableOwnerCol">ITween</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="target"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">target</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>target:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The name of the animation property to target.
+     <p>The default value is <code>""</code> (empty quotes), which targets all properties.
+     The other acceptable values are <code>"x"</code>, <code>"y"</code>, <code>"position"</code> (which targets both x and y),
+     <code>"scaleX"</code>, <code>"scaleY"</code>, <code>"scale"</code> (which targets both scaleX and scaleY),
+     <code>"skewX"</code>, <code>"skewY"</code>, <code>"rotation"</code>  (which targets both scaleX and scaleY), <code>"color"</code>, and <code>"filters"</code>.</p>
+     
+     </p><p> The default value is <code>""</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get target():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set target(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="getValue()"></a><a name="getValue(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getValue</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getValue(time:<a href="../../Number.html">Number</a>, begin:<a href="../../Number.html">Number</a>, change:<a href="../../Number.html">Number</a>, duration:<a href="../../Number.html">Number</a>):<a href="../../Number.html">Number</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Calculates an interpolated value for a numerical property of animation.
+     The function signature matches that of the easing functions in the fl.motion.easing package.
+     Various ITween classes will produce different styles of interpolation for the same inputs.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">time</span>:<a href="../../Number.html">Number</a></code> &mdash; The time value, which must be between <code>0</code> and <code>duration</code>, inclusive.
+     You can choose any unit (for example, frames, seconds, milliseconds), 
+     but your choice must match the <code>duration</code> unit.
+       </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">begin</span>:<a href="../../Number.html">Number</a></code> &mdash; The value of the animation property at the start of the tween, when time is <code>0</code>.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">change</span>:<a href="../../Number.html">Number</a></code> &mdash; The change in the value of the animation property over the course of the tween. 
+     This value can be positive or negative. For example, if an object rotates from 90 to 60 degrees, the <code>change</code> is <code>-30</code>.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">duration</span>:<a href="../../Number.html">Number</a></code> &mdash; The length of time for the tween. This value must be greater than zero.
+     You can choose any unit (for example, frames, seconds, milliseconds), 
+     but your choice must match the <code>time</code> unit.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; The interpolated value at the specified time.
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../fl/motion/easing/package-detail.html" target="">fl.motion.easing</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

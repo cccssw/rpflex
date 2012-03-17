@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="28" scaleGridRight="175" scaleGridTop="23" scaleGridBottom="56">
+  
+      <Path x="1" y="1" winding="nonZero" data="M20 0 239.998 0C251.045 0 259.998 8.95703 259.998 20L259.998 81.999C259.998 93.0459 251.045 101.999 239.998 101.999L20 101.999C8.95312 101.999 0 93.0459 0 81.999L0 81.999 0 20C0 8.95703 8.95312 0 20 0Z">
+        <fill>
+          <LinearGradient x="129.999" y="101.999" scaleX="101.999" rotation="270">
+            <GradientEntry ratio="0" color="#242424" alpha=".8"/>
+            <GradientEntry ratio="1" alpha=".8"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Path winding="nonZero" data="M21 103.999C9.40234 103.999 0 94.5967 0 82.999L0 82.999 0 21C0 9.39844 9.40234 0 21 0L21 0 21 1 21 1.99609C10.5039 2.01953 2.01953 10.5078 2 21L2 21 2 82.999C2.01953 93.4912 10.5039 101.979 21 101.999L21 101.999 240.998 101.999C251.494 101.979
+ 259.979 93.4912 260 82.999L260 82.999 259.998 21C259.979 10.5078 251.494 2.01953 240.998 1.99609L240.998 1.99609 21 1.99609 21 1 21 0 240.998 0C252.598 0 261.996 9.39844 261.996 21L261.996 21 262 82.999C261.996 94.5967 252.598 103.999 240.998
+ 103.999L240.998 103.999 21 103.999 21 103.999Z">
+        <fill>
+          <LinearGradient x="131" y="103.999" scaleX="103.999" rotation="270">
+            <GradientEntry ratio="0" color="#757575" alpha=".8"/>
+            <GradientEntry ratio="1" color="#303030" alpha=".8"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Rect width="262" height="104">
+        <fill>
+          <SolidColor alpha="0"/>
+        </fill>
+      </Rect>
+
+</Graphic>

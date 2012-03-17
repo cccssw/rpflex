@@ -1,0 +1,90 @@
+<languageVersion : 1.0;>
+
+kernel SmartAA
+<   namespace : "com.smartpage.filters";
+    vendor : "smart-page.net - Jan Frischmuth";
+    version : 1;
+    description : "applys a bicublic BC-spline (Mitchell-Netravali) reconstruction filter";
+>
+{
+    input image4 img;
+    output pixel4 dst;
+    
+    parameter float A_width
+    <
+        minValue:       float(0.0);
+        maxValue:       float(4096.0);
+        defaultValue:   float(0.0);
+    >;
+    parameter float B_height
+    <
+        minValue:       float(0.0);
+        maxValue:       float(4096.0);
+        defaultValue:   float(0.0);
+    >;
+    
+    void evaluatePixel(){
+    	
+        float4 w11=sampleNearest(img, outCoord()); 
+        
+        
+        if(outCoord().x<1.0||outCoord().y<1.0||(A_width!=0.0&&B_height!=0.0&&(int(outCoord().x)== int(A_width)||int(outCoord().y)==int(B_height)))){
+            dst=w11;
+        }else{
+        
+            float4 w00=sampleNearest(img, float2(outCoord().x-1.0, outCoord().y-1.0)); 
+            float4 w10=sampleNearest(img, float2(outCoord().x-1.0, outCoord().y    )); 
+            float4 w20=sampleNearest(img, float2(outCoord().x-1.0, outCoord().y+1.0)); 
+            float4 w01=sampleNearest(img, float2(outCoord().x    , outCoord().y-1.0)); 
+            float4 w21=sampleNearest(img, float2(outCoord().x    , outCoord().y+1.0)); 
+            float4 w02=sampleNearest(img, float2(outCoord().x+1.0, outCoord().y-1.0)); 
+            float4 w12=sampleNearest(img, float2(outCoord().x+1.0, outCoord().y    )); 
+            float4 w22=sampleNearest(img, float2(outCoord().x+1.0, outCoord().y+1.0)); 
+            
+
+            float4 dt=float4(1.0); 
+            float d1, d2, h, v, ax;
+           
+            d1=w00.r-w22.r+w00.g-w22.g+w00.b-w22.b+w00.a-w22.a; 
+            ax = abs(d1);
+            if(ax<1.0){
+                d1=4.5*ax*ax*ax-4.0*ax*ax+0.6667;
+            }else if(ax < 2.0){
+                d1=-0.1667*ax*ax*ax+ax*ax-2.0*ax+1.3333;
+            }else{
+                d1=0.0;
+            } 
+            
+            d2=w20.r-w02.r+w20.g-w02.g+w20.b-w02.b+w20.a-w02.a; 
+            ax=abs(d2);
+            if(ax<1.0){
+                d2=4.5*ax*ax*ax-4.0*ax*ax+0.6667;
+            }else if(ax < 2.0){
+                d2=-0.1667*ax*ax*ax+ax*ax-2.0*ax+1.3333;
+            }else{
+                d2=0.0;
+            }
+            
+            h=w01.r-w21.r+w01.g-w21.g+w01.b-w21.b+w01.a-w21.a; 
+            ax=abs(h);
+            if(ax<1.0){
+                h=4.5*ax*ax*ax-4.0*ax*ax+0.6667;
+            }else if(ax < 2.0){
+                h=-0.1667*ax*ax*ax+ax*ax-2.0*ax+1.3333;
+            }else{
+                h=0.0;
+            }
+            
+            v=w10.r-w12.r+w10.g-w12.g+w10.b-w12.b+w10.a-w12.a;  
+            ax=abs(v);
+            if(ax<1.0){
+                v=4.5*ax*ax*ax-4.0*ax*ax+0.6667;
+            }else if(ax < 2.0){
+                v=-0.1667*ax*ax*ax+ax*ax-2.0*ax+1.3333;
+            }else{
+                v=0.0;
+            }
+            dst=0.3333*((d1*(w00+w22)+d2*(w20+w02)+h*(w01+w21)+v*(w10+w12))/(d1+d2+h+v)+w11);
+        }
+    }
+}

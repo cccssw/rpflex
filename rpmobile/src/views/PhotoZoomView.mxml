@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:aaronhardy="com.aaronhardy.*"
+		overlayControls="true" title="{resourceManager.getString('view','photoZoomViewTitle')}" >
+	
+	<fx:Script>
+		<![CDATA[
+			import controls.ProcessingAlert;
+			import com.rpphoto.utils.DelayCall;
+			
+			import mx.events.FlexEvent;
+			protected var w:int=640;
+			protected var h:int=480;
+			private var busy:ProcessingAlert=new ProcessingAlert();
+			
+			protected function next_clickHandler(event:MouseEvent):void
+			{
+				this.busy.call(this,zoomProcess);
+			}
+			protected function zoomProcess():void{
+				this.nextButton.enabled=false;
+				var tmp:BitmapData=this.sourceZoomer.getViewBitmapData();
+				var bmpd:BitmapData = new BitmapData(
+					this.w,this.h);
+				var m:Matrix=new Matrix();
+				m.scale(
+					w/tmp.width,
+					h/tmp.height);
+				bmpd.draw(tmp,m);
+				var o:Object=new Object();
+				o.bitmapData=bmpd;
+				this.navigator.pushView(
+					FaceRectangleView,o);
+				this.nextButton.enabled=true;
+			}
+			
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:layout>
+		<s:BasicLayout>
+			
+		</s:BasicLayout>
+	</s:layout>
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	<s:VGroup width="100%" height="90%" verticalAlign="middle" horizontalAlign="center">
+		<s:HGroup width="90%" verticalAlign="middle" horizontalAlign="left">
+			<s:Image source="@Embed('assets/bg/shoushi.png')"  />
+		</s:HGroup>
+		<aaronhardy:ImageZoomer id="sourceZoomer" bitmapData="{this.data}" width="96%" height="{this.width*3/4}">
+		</aaronhardy:ImageZoomer>
+	</s:VGroup>
+	<s:actionContent>
+		<s:Button id="nextButton" label="{resourceManager.getString('view','next')}" click="next_clickHandler(event)"/>
+	</s:actionContent>
+</s:View>

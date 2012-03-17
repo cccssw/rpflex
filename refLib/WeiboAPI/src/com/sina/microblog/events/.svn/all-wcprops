@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/src/com/sina/microblog/events
+END
+MicroBlogEvent.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/src/com/sina/microblog/events/MicroBlogEvent.as
+END
+MicroBlogErrorEvent.as
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/src/com/sina/microblog/events/MicroBlogErrorEvent.as
+END

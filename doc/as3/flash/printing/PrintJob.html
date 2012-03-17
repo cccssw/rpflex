@@ -1,0 +1,1096 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="PrintJob,flash.printing.PrintJob,LANDSCAPE,orientation,pageHeight,pageWidth,paperHeight,paperWidth,PORTRAIT,printAsBitmap,addPage,send,start" name="keywords">
+<title>flash.printing.PrintJob (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'PrintJob - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/printing/PrintJob.html&amp;flash/printing/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">PrintJob</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("PrintJob"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.printing</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  PrintJob</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">PrintJob  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The PrintJob class lets you create content and print it to one or
+ more pages. This class
+ lets you render content that is visible, dynamic or off-screen to the user, prompt users with a
+ single Print dialog box, and print an unscaled document with
+ proportions that map to the proportions of the content. This
+ capability is especially useful for rendering and printing dynamic
+ content, such as database content and dynamic text.
+ <p>Use the <code>PrintJob()</code> constructor to create a print job.</p>
+  <p>Additionally, with properties populated by
+ <code>PrintJob.start()</code>, your document can read your user's
+ printer settings, such as page height, width, and image orientation, and
+ you can configure your document to format, dynamically, Flash content
+ that is appropriate for the printer settings. The user layout properties populated by <code>PrintJob.start()</code>
+ are read-only and cannot be changed by Flash Player.</p>
+ 
+ <p><b>Note:</b> ActionScript 3.0 does not restrict a PrintJob object 
+ to a single frame (as did previous versions of ActionScript). However, since 
+ the operating system displays print status information to the user after the 
+ user has clicked the OK button in the Print dialog box, you should call 
+ <code>PrintJob.addPage()</code> and <code>PrintJob.send()</code> as soon as 
+ possible to send pages to the spooler. A delay reaching the frame containing 
+ the <code>PrintJob.send()</code> call will delay the printing process.</p>
+ <p>Additionally, a 15 second script timeout limit applies to the following intervals:</p>
+ <ul>
+ <li><code>PrintJob.start()</code> and the first <code>PrintJob.addPage()</code></li>
+ <li><code>PrintJob.addPage()</code> and the next <code>PrintJob.addPage()</code></li>
+ <li>The last <code>PrintJob.addPage()</code> and <code>PrintJob.send()</code></li>
+ </ul>
+ 
+ <p>If any of the above intervals span more than 15 seconds, the next call to 
+ <code>PrintJob.start()</code> on the PrintJob instance returns <code>false</code>, 
+ and the next <code>PrintJob.addPage()</code> on the PrintJob instance causes 
+ the Flash Player or Adobe AIR to throw a runtime exception.</p>
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000331.html" target="_top">Basics of printing</a>
+<br>
+<a href="../../../main/00000332.html" target="_top">Printing a page</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#orientation">orientation</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+    The image orientation for printing.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pageHeight">pageHeight</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+    The height of the actual printable area on the page, in points.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pageWidth">pageWidth</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+    The width of the actual printable area on the page, in points.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#paperHeight">paperHeight</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+    The overall paper height, in points.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#paperWidth">paperWidth</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+    The overall paper width, in points.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#PrintJob()">PrintJob</a>()</div>
+<div class="summaryTableDescription">
+ Creates a PrintJob object that you can use to print one or more pages.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addPage()">addPage</a>(sprite:<a href="../../flash/display/Sprite.html">Sprite</a>, printArea:<a href="../../flash/geom/Rectangle.html">Rectangle</a> = null, options:<a href="../../flash/printing/PrintJobOptions.html">PrintJobOptions</a> = null, frameNum:<a href="../../int.html">int</a> = 0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sends the specified Sprite object as a single page to the print spooler.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#send()">send</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+      Sends spooled pages to the printer after PrintJob.start() and PrintJob.addPage() have been successful.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#start()">start</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+     Displays the operating system's Print dialog box, starts spooling, and sets the PrintJob read-only property values.</div>
+</td><td class="summaryTableOwnerCol">PrintJob</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable hideInheritedEvent" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="orientation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">orientation</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>orientation:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The image orientation for printing. This property is a value from the 
+    PrintJobOrientation class. This property is available only after a call to the 
+    <code>PrintJob.start()</code> method has been made.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get orientation():<a href="../../String.html">String</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="PrintJobOrientation.html" target="">PrintJobOrientation class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="pageHeight"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pageHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pageHeight:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The height of the actual printable area on the page, in points. 
+    Any user-set margins are ignored. This property is available only 
+    after a call to the <code>PrintJob.start()</code> method has been made.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pageHeight():<a href="../../int.html">int</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000334.html" target="_top">Setting size, scale, and orientation</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="pageWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pageWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pageWidth:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The width of the actual printable area on the page, in points. 
+    Any user-set margins are ignored. This property is available only 
+    after a call to the <code>PrintJob.start()</code> method has been made.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pageWidth():<a href="../../int.html">int</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000334.html" target="_top">Setting size, scale, and orientation</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="paperHeight"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">paperHeight</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>paperHeight:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The overall paper height, in points. This property is available only
+    after a call to the <code>PrintJob.start()</code> method has been made.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get paperHeight():<a href="../../int.html">int</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="paperWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">paperWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>paperWidth:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The overall paper width, in points. This property is available only
+    after a call to the <code>PrintJob.start()</code> method has been made.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get paperWidth():<a href="../../int.html">int</a></code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="PrintJob()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PrintJob</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function PrintJob()</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Creates a PrintJob object that you can use to print one or more pages.
+ After you create a PrintJob object, you need to use (in the following sequence) the
+ <code>PrintJob.start()</code>, <code>PrintJob.addPage()</code>, and then 
+ <code>PrintJob.send()</code> methods to send the print job to the printer.
+ <p>For example, you can replace the <code>[params]</code> placeholder text for the 
+ <code>my_pj.addPage()</code> method calls with custom parameters as shown in the 
+ following code:</p>
+ <div class="listing"><pre>
+ // create PrintJob object
+ var my_pj:PrintJob = new PrintJob();
+  
+ // display Print dialog box, but only initiate the print job
+ // if start returns successfully.
+ if (my_pj.start()) {
+  
+    // add specified page to print job
+    // repeat once for each page to be printed
+    try {
+      my_pj.addPage([params]);
+    }
+    catch(e:Error) {
+      // handle error 
+    }
+    try {
+      my_pj.addPage([params]);
+    }
+    catch(e:Error) {
+      // handle error 
+    }
+ 
+    // send pages from the spooler to the printer, but only if one or more
+    // calls to addPage() was successful. You should always check for successful 
+    // calls to start() and addPage() before calling send().
+    my_pj.send();
+ }
+ </pre></div>
+ <p>You cannot create a second PrintJob object while the first one is still active. 
+ If you create a second PrintJob object (by calling <code>new&nbsp;PrintJob()</code>) 
+ while the first PrintJob object is still active, the second PrintJob object will not be created. So, you may check for the <code>my_pj</code> value before creating a second PrintJob.</p>
+  </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; Throws an exception if another PrintJob object is still active.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="PrintJob.html#addPage()" target="">PrintJob.addPage()</a>
+<br>
+<a href="PrintJob.html#send()" target="">PrintJob.send()</a>
+<br>
+<a href="PrintJob.html#start()" target="">PrintJob.start()</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="addPage()"></a><a name="addPage(flash.display.Sprite,flash.geom.Rectangle,flash.printing.PrintJobOptions,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addPage</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addPage(sprite:<a href="../../flash/display/Sprite.html">Sprite</a>, printArea:<a href="../../flash/geom/Rectangle.html">Rectangle</a> = null, options:<a href="../../flash/printing/PrintJobOptions.html">PrintJobOptions</a> = null, frameNum:<a href="../../int.html">int</a> = 0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sends the specified Sprite object as a single page to the print spooler. Before using this 
+     method, you must create a PrintJob object and then use <code>PrintJob.start()</code>. Then,
+     after calling <code>PrintJob.addPage()</code> one or more times for a print job, you use <code>
+     PrintJob.send()</code> to send the spooled pages to the printer. In other words, after you create
+     a PrintJob object, use (in the following sequence) <code>PrintJob.start()</code>, <code>
+     PrintJob.addPage()</code>, and then <code>PrintJob.send()</code> to send the print job to the
+     printer. You can use <code>PrintJob.addPage()</code> multiple times after a single call to 
+     <code>PrintJob.start()</code> to print several pages at once.
+          <p>If <code>PrintJob.addPage()</code> causes Flash Player to throw an exception (for example, if you haven't called <code>PrintJob.start()
+     </code> or the user canceled the print job), any subsequent calls to <code>PrintJob.addPage()</code> 
+     will fail. However, if previous calls to <code>PrintJob.addPage()</code> were successful, 
+     the concluding <code>PrintJob.send()</code> command sends the successfully spooled pages to the printer.</p>
+<p>If the print job takes more than 15 seconds to complete a <code>PrintJob.addPage()</code> operation, Flash Player will throw an exception on the next <code>Print.addPage()</code> call.</p>
+<p>If you pass a value for the <code>printArea</code> parameter, the <code>
+<i>x</i>
+</code> and <code>
+<i>y</i>
+</code> coordinates of the 
+     <code>printArea</code> object map to the upper-left corner (0,0 coordinates) of the printable area on the page. 
+     The printable area is described by the read-only <code>pageHeight</code> and <code>pageWidth</code> properties set by 
+     <code>PrintJob.start()</code>. Because the printout aligns with the upper-left corner of the printable area on the
+     page, when the area defined in <code>printArea</code> is bigger than the printable area on the page, the 
+     printout is cropped to the right or bottom (or both) of the area defined by <code>printArea</code>. 
+     <span>If you don't pass a value for <code>printArea</code> and the Stage is larger 
+  than the printable area, the same type of clipping occurs.</span>
+</p>
+<p>If you want to scale a Sprite object before you print it, set scale 
+  properties (see <code>flash.display.DisplayObject.scaleX</code> and <code>flash.display.DisplayObject.scaleY</code>) before calling this method, and set them back to their original values after printing. The scale of a Sprite object has no relation 
+  to <code>printArea</code>. That is, if you specify a print area that is 50 x 50 pixels, 2500 pixels are printed. 
+  If you scale the Sprite object, the same 2500 pixels are printed, but the Sprite object is printed at the scaled size.</p>
+<p>The Flash Player printing feature supports PostScript and non-PostScript printers. Non-PostScript printers convert vectors to bitmaps.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">sprite</span>:<a href="../../flash/display/Sprite.html">Sprite</a></code> &mdash; The instance name of the Sprite to print. 
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">printArea</span>:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code> (default = <code>null</code>)<code></code> &mdash;  A Rectangle object that specifies the area to print.  
+    <p>A rectangle's width and height are pixel values. A printer uses points as print units of measurement. Points are a fixed physical size (1/72 inch), but the size of a pixel, onscreen, depends on the resolution of the particular screen. So, the conversion rate between pixels and points depends on the printer settings and whether the sprite is scaled. An unscaled sprite that is 72 pixels wide will print out one inch wide, with one point equal to one pixel, independent of screen resolution.</p>
+<p>You can use the following equivalencies to convert inches 
+  or centimeters to twips or points (a twip is 1/20 of a point): 
+    <ul>
+<li>1 point = 1/72 inch = 20 twips</li>
+<li>1 inch = 72 points = 1440 twips</li>
+<li>1 cm = 567 twips</li>
+</ul>
+</p>
+<p>If you omit the <code>printArea</code> parameter, or if it is passed incorrectly, the full area of 
+  <code>sprite</code> is printed.</p>
+<p>If you don't want to specify a value for <code>printArea</code> but want to specify a value for <code>options</code> 
+  or <code>frameNum</code>, pass <code>null</code> for <code>printArea</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">options</span>:<a href="../../flash/printing/PrintJobOptions.html">PrintJobOptions</a></code> (default = <code>null</code>)<code></code> &mdash; An optional parameter that specifies whether to print as vector or bitmap.
+  The default value is <code>null</code>, which represents a request for vector printing. 
+  To print <code>sprite</code> as a 
+  bitmap, set the <code>printAsBitmap</code> property of the PrintJobOptions object
+  to <code>true</code>. Remember the following suggestions when determining whether to
+  set <code>printAsBitmap</code> to <code>true</code>:
+    <ul>
+<li>If the content that you're printing includes a bitmap image, set 
+  <code>printAsBitmap</code> to <code>true</code> to include any alpha transparency
+  and color effects.</li>
+<li>If the content does not include bitmap images, omit this parameter
+  to print the content in higher quality vector format.</li>
+</ul>
+<p>If <code>options</code> is omitted or is passed incorrectly, vector printing is used. 
+  If you don't want to specify a value for 
+  <code>options</code> but want to specify a value for <code>frameNumber</code>, 
+  pass <code>null</code> for <code>options</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">frameNum</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; 
+<span>An optional number that lets you specify which frame to print; passing a <code>frameNum</code> 
+  does not cause the ActionScript on that frame to be invoked. If you omit this parameter, the current frame in <code>sprite</code> 
+  is printed.</span>
+<p>
+<b>Note: </b>If you previously used <code>print()</code>, <code>printAsBitmap()</code>, 
+  <code>printAsBitmapNum()</code>, or <code>printNum()</code> to print from Flash, you might have used a <code>#p</code> frame label 
+  on multiple frames to specify which pages to print. To use <code>PrintJob.addPage()</code> to print multiple frames, you must use 
+  a <code>PrintJob.addPage()</code> method for each frame; <code>#p</code> frame labels are ignored. For one way to do this 
+  programmatically, see the Example section. </p>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; Throws an exception if you haven't called <code>PrintJob.start()</code> or the user canceled the print job
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="PrintJob.html#send()" target="">PrintJob.send()</a>
+<br>
+<a href="PrintJob.html#start()" target="">PrintJob.start()</a>
+<br>
+<a href="../../flash/display/DisplayObject.html" target="">DisplayObject class</a>
+<br>
+<a href="../../../main/00000332.html" target="_top">Printing a page</a>
+<br>
+<a href="../../../main/00000334.html" target="_top">Setting size, scale, and orientation</a>
+</div>
+</div>
+<a name="send()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">send</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function send():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+      Sends spooled pages to the printer after <code>PrintJob.start()</code> and <code>PrintJob.addPage()</code> have been successful. Calls to <code>PrintJob.send()</code> will not be successful if the call to <code>PrintJob.start()</code> fails, or <code>PrintJob.addpage()</code> throws an exception. So, you should check for <code>PrintJob.start()</code> to return <code>true</code>, and catch any <code>PrintJob.addpage()</code> exceptions before calling <code>PrintJob.send()</code>. For example:
+     <pre>
+     var my_pj:PrintJob = new PrintJob();
+     if (my_pj.start()) {
+       try {
+         my_pj.addPage([params]);
+       }
+       catch(e:Error) {
+          // handle error 
+       }
+            my_pj.send();
+     }
+     </pre>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="PrintJob.html#addPage()" target="">PrintJob.addPage()</a>
+<br>
+<a href="PrintJob.html#start()" target="">PrintJob.start()</a>
+<br>
+<a href="../../../main/00000332.html" target="_top">Printing a page</a>
+</div>
+</div>
+<a name="start()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">start</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function start():<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Displays the operating system's Print dialog box, starts spooling, and sets the PrintJob read-only property values. The Print dialog box lets the user change print settings. When the <code>PrintJob.start()</code> method returns successfully (the user clicks OK in the Print dialog box), the following read-only properties are populated, representing the user's current print settings:
+     <p>
+<table class="innertable" ><tr>
+<th>Property</th><th>Type</th><th>Units</th><th>Notes</th>
+</tr>
+<tr>
+<td>
+<code>PrintJob.paperHeight</code>
+</td><td>Number</td><td>Points</td><td>Overall paper height.</td>
+</tr>
+<tr>
+<td>
+<code>PrintJob.paperWidth</code>
+</td><td>Number</td><td>Points</td><td>Overall paper width.</td>
+</tr>
+<tr>
+<td>
+<code>PrintJob.pageHeight</code>
+</td><td>Number</td><td>Points</td><td>Height of actual printable area on the page; any user-set margins are ignored.</td>
+</tr>
+<tr>
+<td>
+<code>PrintJob.pageWidth</code>
+</td><td>Number</td><td>Points</td><td>Width of actual printable area on the page; any user-set margins are ignored.</td>
+</tr>
+<tr>
+<td>
+<code>PrintJob.orientation</code>
+</td><td>String</td><td></td><td>
+<code>"portrait"</code> (<code>flash.printing.PrintJobOrientation.PORTRAIT</code>) or <code>"landscape"</code> (<code>flash.printing.PrintJobOrientation.LANDSCAPE</code>).</td>
+</tr></table>
+</p>
+<p>
+<b>Note:</b> If the user cancels the Print dialog box, the properties are not populated.</p>
+<p>After the user clicks OK in the Print dialog box, the player begins spooling a print job to the operating system. Because the operating system then begins displaying information to the user about the printing progress, you should call the <code>PrintJob.addPage()</code> and <code>PrintJob.send()</code> calls as soon as possible to send pages to the spooler. You can use the read-only height, width, and orientation properties this method populates to format the printout.</p>
+<p>Test to see if this method returns <code>true</code> (when the user clicks OK in the operating system's Print dialog box) before any subsequent calls to <code>PrintJob.addPage()</code> and <code>PrintJob.send()</code>:</p>
+<pre>
+     var my_pj:PrintJob = new PrintJob();
+        if(my_pj.start()) {
+          // addPage() and send() statements here
+        }
+     </pre>
+<p>For the given print job instance, if any of the following intervals last more than
+     15 seconds the next call to <code>PrintJob.start()</code> will return <code>false</code>:</p>
+<ul>
+<li>
+<code>PrintJob.start()</code> and the first <code>PrintJob.addPage()</code>
+</li>
+<li>One <code>PrintJob.addPage()</code> and the next <code>PrintJob.addPage()</code>
+</li>
+<li>The last <code>PrintJob.addPage()</code> and <code>PrintJob.send()</code>
+</li>
+</ul>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; A value of <code>true</code> if the user clicks OK when the Print dialog box appears; <code>false</code> if the user clicks Cancel or if an error occurs.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="PrintJob.html#addPage()" target="">PrintJob.addPage()</a>
+<br>
+<a href="PrintJob.html#send()" target="">PrintJob.send()</a>
+<br>
+<a href="../../../main/00000332.html" target="_top">Printing a page</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">PrintJobExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the class <code>PrintJobExample</code> to create a small document and
+ then send the document to the printer.  This is accomplished using the following steps:
+ <ol>
+  <li>Declare two variables of type Sprite named <code>sheet1</code> and <code>sheet2</code>.</li>
+  <li>Call <code>init()</code>, which assigns a new Sprite instance to both <code>sheet1</code> and
+  <code>sheet2</code> and then calls <code>createSheet()</code> using different arguments.</li>
+  <li><code>createSheet()</code> does the following:
+  </li>
+  <li>Back in the constructor, the print method that is enabled (not commented out) is called.  Since the
+  methods are very similar, <code>printOnePerPage()</code> is described below.</li>
+  <li><code>printOnePerPage()</code> does the following:
+  </li>
+  <li>The <code>draw()</code> method is called, which re-sizes the two Sprite properties to fit on the stage
+  and re-positions <code>sheet2</code> such that it is just right of <code>sheet1</code>.</li>
+ </ol>
+ 
+ <p><b>Note: </b> the constructor is set up such that one of three printing methods (one sheet per
+ page, two sheets per page, or printing on the top half of the page) can be selected, based on preference. 
+ This example will not work correctly unless exactly two of the print methods are disabled using code
+ comments.  The example is set up such that <code>printOnePerPage()</code> will be called.</p>
+<div class="listing"><pre>
+package {
+    import flash.printing.PrintJob;
+    import flash.printing.PrintJobOrientation;
+    import flash.display.Stage;
+    import flash.display.Sprite;
+    import flash.text.TextField;
+    import flash.geom.Rectangle;
+       
+    public class PrintJobExample extends Sprite {
+        private var sheet1:Sprite;
+        private var sheet2:Sprite;
+           
+        public function PrintJobExample() {
+            init();
+            printOnePerPage();
+//            printTwoPerPage();
+//            printTopHalf();
+            draw();
+        }
+        
+        private function init():void {
+            sheet1 = new Sprite();
+            createSheet(sheet1, "Once upon a time...", {x:10, y:50, width:80, height:130});
+
+            sheet2 = new Sprite();
+            createSheet(sheet2, "There was a great story to tell, and it ended quickly.\n\nThe end.", null);
+        }
+        
+        private function createSheet(sheet:Sprite, str:String, imgValue:Object):void {
+            sheet.graphics.beginFill(0xEEEEEE);
+            sheet.graphics.lineStyle(1, 0x000000);
+            sheet.graphics.drawRect(0, 0, 100, 200);
+            sheet.graphics.endFill();
+            
+            var txt:TextField = new TextField();
+            txt.height = 200;
+            txt.width = 100;
+            txt.wordWrap = true;
+            txt.text = str;
+            
+            if(imgValue != null) {
+                var img:Sprite = new Sprite();
+                img.graphics.beginFill(0xFFFFFF);
+                img.graphics.drawRect(imgValue.x, imgValue.y, imgValue.width, imgValue.height);
+                img.graphics.endFill();
+                sheet.addChild(img);
+            }
+            sheet.addChild(txt);
+        }
+        
+        private function printOnePerPage():void {
+            var pj:PrintJob = new PrintJob();
+            var pagesToPrint:uint = 0;
+            if(pj.start()) {                
+                if(pj.orientation == PrintJobOrientation.LANDSCAPE) {    
+                    throw new Error("Without embedding fonts you must print one sheet per page with an orientation of portrait.");
+                }
+                
+                sheet1.height = pj.pageHeight;
+                sheet1.width = pj.pageWidth;
+                sheet2.height = pj.pageHeight;
+                sheet2.width = pj.pageWidth;
+
+                try {
+                    pj.addPage(sheet1);
+                    pagesToPrint++;
+                }
+                catch(e:Error) {
+                    // do nothing
+                }
+
+                try {
+                    pj.addPage(sheet2);
+                    pagesToPrint++;
+                }
+                catch(e:Error) {
+                    // do nothing
+                }
+
+                if(pagesToPrint &gt; 0) {
+                    pj.send();
+                }
+            }
+        }
+        
+        private function printTwoPerPage():void {
+            var pj:PrintJob = new PrintJob();
+            var pagesToPrint:uint = 0;
+            if(pj.start()) {                
+                if(pj.orientation == PrintJobOrientation.PORTRAIT) {
+                    throw new Error("Without embedding fonts you must print two sheets per page with an orientation of landscape.");
+                }
+                
+                sheet1.height = pj.pageHeight;
+                sheet1.width = pj.pageWidth/2;
+                sheet2.height = pj.pageHeight;
+                sheet2.width = pj.pageWidth/2;
+
+                var sheets:Sprite = new Sprite();
+                sheets.addChild(sheet1);
+                sheets.addChild(sheet2);
+                sheets.getChildAt(1).x = sheets.getChildAt(0).width;
+                try {
+                    pj.addPage(sheets);
+                    pagesToPrint++;
+                }
+                catch(e:Error) {
+                    // do nothing
+                }
+
+                if(pagesToPrint &gt; 0) {
+                    pj.send();
+                }
+            }
+        }
+
+        private function printTopHalf():void {
+            var pj:PrintJob = new PrintJob();
+            var pagesToPrint:uint = 0;
+            if(pj.start()) {                
+                if(pj.orientation == PrintJobOrientation.PORTRAIT) {
+                    throw new Error("Without embedding fonts you must print the top half with an orientation of landscape.");
+                }
+                
+                sheet1.height = pj.pageHeight;
+                sheet1.width = pj.pageWidth/2;
+                sheet2.height = pj.pageHeight;
+                sheet2.width = pj.pageWidth/2;
+
+                var sheets:Sprite = new Sprite();
+                sheets.addChild(sheet1);
+                sheets.addChild(sheet2);
+                sheets.getChildAt(1).x = sheets.getChildAt(0).width;
+                try {
+                    pj.addPage(sheets, new Rectangle(0, 0, sheets.width, sheets.height/2));
+                    pagesToPrint++;
+                }
+                catch(e:Error) {
+                    // do nothing
+                }
+
+                if(pagesToPrint &gt; 0) {
+                    pj.send();
+                }
+            }
+        }
+
+
+        private function draw():void {
+            var sheetWidth:Number = this.stage.stageWidth/2;
+            var sheetHeight:Number = this.stage.stageHeight;
+            
+            addChild(sheet1);
+            sheet1.width = sheetWidth;
+            sheet1.height = sheetHeight;
+            
+            addChild(sheet2);
+            sheet2.width = sheetWidth;
+            sheet2.height = sheetHeight;
+            sheet2.x = sheet1.width;
+        }        
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

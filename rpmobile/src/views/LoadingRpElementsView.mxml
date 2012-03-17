@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		creationComplete="creationCompleteHandler(event)" overlayControls="true"
+		title="{resourceManager.getString('view','LoadingRpElementsViewTitle')}">
+	<s:layout>
+		<s:BasicLayout/>
+	</s:layout>
+	<s:Image width="100%" height="100%" source="@Embed('assets/ui/rpphoto_bg.png')" scaleMode="stretch"/>
+	<s:VGroup width="100%" height="80%" verticalAlign="middle" horizontalAlign="center">
+		<s:BusyIndicator width="100" height="100"/>
+		<s:Label id="label" text="{resourceManager.getString('view','loading')}" fontSize="80" color="white" fontWeight="bold"/>
+	</s:VGroup>
+	
+	<fx:Script>
+		<![CDATA[
+			import br.com.stimuli.loading.BulkLoader;
+			import br.com.stimuli.loading.BulkProgressEvent;
+			
+			import com.loning.image.RpFaceProcessorManager;
+			import com.loning.image.RpFaceProcessorManagerConfigLoader;
+			
+			import mx.events.FlexEvent;
+			//static var num:int=0;
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				var ml:RpFaceProcessorManagerConfigLoader=RpFaceProcessorManagerConfigLoader.getInstance();
+				ml.bulkLoader.addEventListener(Event.COMPLETE, this.LazyComplete,false,0,true);
+				ml.bulkLoader.addEventListener(BulkLoader.PROGRESS,this.bulkProgressChanged,false,0,true);
+		
+				if(data.nowait){
+					this.navigator.popView();
+				}
+			}
+			
+			protected function bulkProgressChanged(e:BulkProgressEvent):void{
+				this.title=e.itemsLoaded+"/"+e.itemsTotal;
+				/*
+				num++;
+				num%=3;
+				var i:int;
+				var lb:String=loading;
+				for(i=0;i<num+1;i++)
+				{
+					lb+=".";
+				}
+				this.label.text = lb;*/
+			}
+			protected function LazyComplete(e:Event):void{
+				this.title="Loaded";
+				if(this.navigator!=null)
+					this.navigator.popView();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<fx:String id="loading">{resourceManager.getString('view','loading')}</fx:String>
+	</fx:Declarations>
+</s:View>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark"
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="734" height="366" currentState="LoadingState"
+		 stateChangeComplete="group1_stateChangeCompleteHandler(event)"
+		 creationComplete.LoadingState="group1_creationCompleteHandler(event)"
+		 creationComplete.TakePhotoState="group1_creationCompleteHandler(event)">
+	<fx:Style>
+		
+		
+	</fx:Style>
+	<fx:Metadata>
+		[Event(name="FacesUploaded",type="com.loning.image.FacesUploadedEvent")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[ 
+			import br.com.stimuli.loading.BulkLoader;
+			import br.com.stimuli.loading.BulkProgressEvent;
+			import br.com.stimuli.loading.lazyloaders.LazyJSONLoader;
+			
+			import com.adobe.serializers.json.*;
+			import com.loning.image.faceprocesses.CategoryFaceProcessor;
+			import com.loning.image.faceprocesses.DarkPhotoBorderFaceProcessor;
+			import com.loning.image.faceprocesses.DebugFaceProcessor;
+			import com.loning.image.faceprocesses.HairFaceProcessor;
+			import com.loning.image.faceprocesses.RpFaceProcessor;
+			import com.loning.image.faceprocesses.decoration.*;
+
+			import com.loning.image.faceprocesses.environment.*;
+			import com.loning.image.faceprocesses.face.*;
+			import com.loning.image.faceprocesses.hat.HatFaceCategory;
+			import com.loning.image.faceprocesses.rightcorner.*;
+			import com.quasimondo.bitmapdata.CameraBitmap;
+			
+			import flashx.textLayout.elements.TextFlow;
+			
+			import jp.maaash.ObjectDetection.ObjectDetector;
+			import jp.maaash.ObjectDetection.ObjectDetectorEvent;
+			import jp.maaash.ObjectDetection.ObjectDetectorOptions;
+			
+			import mx.containers.TitleWindow;
+			import mx.controls.ProgressBar;
+			import mx.core.UIComponent;
+			import mx.events.CloseEvent;
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+			import mx.utils.StringUtil;
+			
+			import ru.inspirit.net.MultipartURLLoader;
+			import ru.inspirit.net.events.MultipartURLLoaderEvent;
+			
+			import spark.events.TextOperationEvent;
+			import spark.globalization.StringTools;
+			import spark.utils.TextFlowUtil;
+			
+			private var detector:ObjectDetector;
+			private var options:ObjectDetectorOptions;
+			private var camera:CameraBitmap;
+			private var detectionMap:BitmapData;
+			private var displayBitmap:BitmapData;
+			private var displayBitmapDetEvent:ObjectDetectorEvent
+			
+			private var resultFacePM:FaceProcessorManager;
+			
+			private var drawMatrix:Matrix;
+			private var scaleFactor:int = 7;
+			private var w:int = 640;
+			private var h:int = 480;
+			
+			private var END_WIDTH:int=488;
+			private var END_HEIGHT:int=366;
+			private var uploaded:Boolean=false;
+			
+			private var faceRectContainer:Sprite;
+			
+			private var minuteTimer:Timer = new Timer(1000, 60);
+			// 为间隔和完成事件指定侦听器
+			
+			private var responseText:String;
+			
+			private var isProcess:Boolean=true;
+			
+			private var mode:String="camera";
+			
+			public var lazy : LazyJSONLoader;
+			
+			public var faceUserInfo:FaceUserInfo;
+			override protected function createChildren():void{
+				import com.gskinner.utils.Rndm;
+				Rndm.seed=Math.random()*0xFFFFFF;
+				flash.system.Security.exactSettings=false;
+				flash.system.Security.allowDomain("*");
+				
+				super.createChildren();
+				
+				
+				minuteTimer.addEventListener(TimerEvent.TIMER, onTick);
+				
+				
+				this.initUI();
+			}
+			
+			
+			public function LazyComplete(e:Event):void{
+				this.currentState="TakePhotoState";
+				this.changeModeToCamera();
+			}
+			public function LoadConfig():void{
+				flash.system.Security.allowDomain("*");
+				var waitingpopup:TitleWindow = new TitleWindow();
+				waitingpopup.title = "资源载入中";
+				var pb:ProgressBar = new ProgressBar();
+				pb.indeterminate = false;
+				pb.label = "载入中...";
+				waitingpopup.addChild(pb);    
+				PopUpManager.addPopUp(waitingpopup, this, true);
+				PopUpManager.centerPopUp(waitingpopup);
+				
+				lazy = new LazyJSONLoader("/index.php/Flex/LazyConfig", "FaceLoader"+Math.random());
+				lazy.addEventListener(Event.COMPLETE, this.LazyComplete);
+				lazy.addEventListener(Event.COMPLETE, function(e:Event):void{
+					PopUpManager.removePopUp(waitingpopup);
+				});
+				lazy.addEventListener(BulkLoader.PROGRESS,function(e:BulkProgressEvent):void{
+					//trace(e.loadingStatus());
+					pb.label=e.itemsLoaded+"/"+e.itemsTotal;
+					pb.setProgress(e.ratioLoaded,1);
+				});
+				this.faceUserInfo=new FaceUserInfo();
+				
+				lazy.decodeFunc=this.faceUserInfo.LoadFromJson;
+				lazy.start();
+			}
+			
+
+			private function changeModeToCamera():void{
+
+				if ( Camera.getCamera())
+				{
+					if(camera==null){
+						camera = new CameraBitmap( END_WIDTH, END_HEIGHT, 8, w, h );
+						camera.addEventListener( Event.RENDER, cameraReadyHandler );
+					}
+					this.cameraDisplayer.source=camera.bitmapData;
+					this.mode="camera";
+					this.cameraRadioButton.selected=true;
+					this.uploadButton.enabled=false;
+				}
+				else
+				{
+					var text:String = "本程序需要使用您系统的摄像头即时拍照\n然后通过人脸识别技术识别到您的人脸进行人品测试\n现自动切换至文件上传模式";
+					var title:String = "请打开摄像头";
+					import mx.controls.Alert;
+					var alert:Alert = Alert.show(
+						text, title, Alert.OK,this,
+						function(event:CloseEvent):void{
+							changeModeToFile();
+							openImageFile();
+						});
+				}
+			}
+			private function changeModeToFile():void{
+				this.mode="file";
+				this.uploadButton.enabled=true;
+				this.uploadRadioButton.selected=true;
+			}
+			private function openImageFile():void{
+				if(this.mode!="file")
+					return;
+				var self:FaceProcessingComponent
+					=this;
+				var myUpload:FileReference = new FileReference();
+				var imageFilter:FileFilter=new FileFilter("Image Files (*.gif;*.jpg;*.bmp;*.png)","*.gif;*.jpg;*.bmp;*.png");
+				myUpload.browse([imageFilter]);
+				myUpload.addEventListener( Event.SELECT, function(event:Event):void {
+					myUpload.load();
+				}  );
+				myUpload.addEventListener(Event.COMPLETE, function(event:Event):void {
+					var load:Loader=new Loader();
+					load.loadBytes(myUpload.data);//读取ByteArray   
+					load.contentLoaderInfo.addEventListener(Event.COMPLETE, function(event:Event):void {
+						var bitMap:Bitmap=event.target.content as Bitmap;//读取Bitmap
+						var bitdata:BitmapData;
+						
+						var rate1:Number=self.END_WIDTH/self.END_HEIGHT;
+						var rate2:Number=bitMap.width/bitMap.height;
+						
+						var m:Matrix=new Matrix();
+						var scale:Number;
+						if(rate1<rate2){
+							scale=self.END_HEIGHT / bitMap.height;
+							var realwidth:Number=bitMap.width*scale;
+							m.scale(scale,scale);
+							m.translate(-(realwidth-self.END_WIDTH)/2,0);
+							//图像比较宽
+						}else{
+							scale=self.END_WIDTH / bitMap.width;
+							var realheight:Number = scale*bitMap.height;
+							m.scale(scale,scale);
+							m.translate(0,-(realheight-self.END_HEIGHT)/2);
+						}
+						
+						bitdata=new BitmapData(self.END_WIDTH,self.END_HEIGHT);
+						bitdata.draw(bitMap,m,null,null,null,true);
+						self.cameraDisplayer.source=bitdata;
+						self.detect(bitdata);
+					});
+					
+				}  );
+			}
+			
+			private function initUI():void
+			{
+				detectionMap = new BitmapData( w / scaleFactor, h / scaleFactor, false, 0 );
+				drawMatrix = new Matrix( 1 / scaleFactor, 0, 0, 1 / scaleFactor );
+				faceRectContainer = new Sprite;
+				faceRectContainer.x=this.imageDisplayer.x;
+				faceRectContainer.y=this.imageDisplayer.y;
+				var container:UIComponent = new UIComponent();
+				container.addChild(faceRectContainer);
+				this.addElement(container);
+				
+				this.initDetector();
+				
+			}
+			
+			
+			protected function cameraReadyHandler(event:Event):void
+			{
+				if(this.currentState=="TakePhotoState" &&this.mode=="camera"){
+					detect(camera.bitmapData);
+				}
+			}
+			private function detect(bitmapdata:BitmapData):void{
+				if(this.isProcess){
+					detectionMap.draw( bitmapdata, drawMatrix, null, "normal", null, true );
+					detector.detect( detectionMap );
+				}
+			}
+			private function initDetector():void
+			{
+				detector = new ObjectDetector();
+				var options:ObjectDetectorOptions = new ObjectDetectorOptions();
+				detector.options = options;
+				detector.addEventListener( ObjectDetectorEvent.DETECTION_COMPLETE, detectionHandler );
+			}
+			
+			private function AddCategory(
+				f:FaceProcessorManager,
+				category:CategoryFaceProcessor,
+				thefinal:Boolean=false):void{
+				
+			}
+			
+			private function ProcessDisplayImg(thefinal:Boolean=false):FaceProcessorManager{
+				if(this.displayBitmap==null)
+					return null;
+				var f:FaceProcessorManager=new RpFaceProcessorManager(
+					this.displayBitmap,this.faceUserInfo,this.lazy,thefinal,
+					this.rpwords.text,this.textDrawCheckBox.selected);
+				
+				
+				for(var idx:int=0;idx<this.displayBitmapDetEvent.rects.length;idx++){
+					var r:Rectangle=this.displayBitmapDetEvent.rects[idx];
+					var rect:Rectangle=new Rectangle(
+						r.x * scaleFactor, r.y * scaleFactor, r.width * scaleFactor, r.height * scaleFactor);
+					
+					f.AddFaces(
+						new Face(rect,f.ProcessedImage,
+							thefinal?this.faceUserInfo.rps[idx]:-1));
+				}
+
+				f.ProcessRPImage();
+				
+				f.ProcessRp();
+				f.ProcessRpWords();
+				
+				return f;
+			}
+			private function detectionHandler( e:ObjectDetectorEvent ):void
+			{
+				
+				var g:Graphics = faceRectContainer.graphics;
+				
+				if ( e.rects &&e.rects.length>0 )
+				{
+					
+					//this.ImageResultText.text="点击测人品按钮测左侧照片人品\r\n"
+					//	+"请确保您的头像清晰哦，否则会算不准～";
+					
+					this.displayBitmap=(this.cameraDisplayer.source as BitmapData).clone();
+					this.displayBitmapDetEvent=e.clone() as ObjectDetectorEvent;
+					
+					g.clear();
+					g.lineStyle(2,0x99FF80);
+					
+					e.rects.forEach( function( r:Rectangle, idx:int, arr:Array ):void
+					{
+						var rect:Rectangle=new Rectangle(
+							r.x * scaleFactor, r.y * scaleFactor, r.width * scaleFactor, r.height * scaleFactor);
+						g.drawRect( rect.x,rect.y,rect.width,rect.height );
+					});
+					/*if(this.isdebug){
+						if(isProcess)
+							this.imageDisplayer.source=ProcessDisplayImg().ProcessedImage.bitmapData;
+					}else{
+						if(this.preViewImage!=null && isProcess)
+							this.preViewImage.source=ProcessDisplayImg().ProcessedImage.bitmapData;
+						
+						this.imageDisplayer.source=this.displayBitmap;
+					}*/
+					if(isProcess)
+						this.imageDisplayer.source=ProcessDisplayImg().ProcessedImage.bitmapData;
+					if(this.currentState=="TakePhotoState")
+						this.takePhotoButton.enabled=true;
+					
+				}				
+			}
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				this.currentState="PhotoProcessingState";
+			}
+			
+			protected function group1_stateChangeCompleteHandler(event:FlexEvent):void
+			{
+				if(this.currentState=="LoadingState"){
+					this.LoadConfig();
+				}else if(this.currentState=="TakePhotoState"){
+					uploaded=false;
+					if(camera!=null && this.mode=="camera")
+						this.cameraDisplayer.source=camera.bitmapData;
+				}else if(this.currentState=="PhotoProcessedState"){
+					this.cameraDisplayer.source=this.displayBitmap;
+					this.imageDisplayer.source=resultFacePM.ProcessedImage.bitmapData;
+					this.ImageResultText.textFlow= 
+						TextFlowUtil.importFromString(
+							"人品测试完毕，快邀请朋友拼人品<br/>"+
+							resultFacePM.GetResultText());
+					var uploadedEvent:FacesUploadedEvent=new FacesUploadedEvent(this.resultFacePM,this.responseText);
+					this.dispatchEvent(uploadedEvent);
+					if(!uploadedEvent.Success){
+						this.currentState="LoadingState";
+						this.LoadConfig();
+						
+					}
+				}else if(this.currentState=="PhotoProcessingState"){
+					
+					faceRectContainer.graphics.clear();
+					this.cameraDisplayer.source=this.displayBitmap;
+					var mainp:FaceProcessorManager=this.ProcessDisplayImg(true);
+					resultFacePM=mainp;
+					import flash.utils.ByteArray;
+					import ru.inspirit.net.MultipartURLLoader;
+					
+					var data:ByteArray = mainp.ProcessedImage.toJPEG();
+					data.position=0;
+					
+					
+					var ml:MultipartURLLoader = new MultipartURLLoader();
+					ml.addEventListener(Event.COMPLETE, onFileUploaded);
+					ml.addEventListener( ProgressEvent.PROGRESS, onUploadProgress );
+					ml.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
+					ml.addEventListener(MultipartURLLoaderEvent.DATA_PREPARE_PROGRESS, function(e:MultipartURLLoaderEvent):void {
+						
+						trace('Prepare data: ' + e.bytesTotal + '/' + e.bytesWritten);
+					});
+					ml.addEventListener(MultipartURLLoaderEvent.DATA_PREPARE_COMPLETE, function(e:MultipartURLLoaderEvent):void {
+						trace('\nDATA PREPARE COMPLETE');
+						var ml:MultipartURLLoader=e.currentTarget as MultipartURLLoader;
+						ml.startLoad();
+						trace('StartLoad');
+					});
+					
+					for(var i:int=0;i<mainp.Faces.length;i++){
+						// simple string data
+						ml.addVariable('rp[]', mainp.Faces[i].Rp.toString());
+						ml.addVariable('des[]',mainp.ResultText[i]);
+						ml.addVariable('face_x[]',mainp.Faces[i].FaceRectangle.x);
+						ml.addVariable('face_y[]',mainp.Faces[i].FaceRectangle.y);
+						ml.addVariable('face_width[]',mainp.Faces[i].FaceRectangle.width);
+						ml.addVariable('face_height[]',mainp.Faces[i].FaceRectangle.height);
+						
+					}
+					ml.addVariable('luckyrpeleid',this.faceUserInfo.luckyDog);
+					ml.addVariable('rpwords',mainp.RpWords);
+					// file data: ByteArray, File name, Name of the file field, content MIME type (default application/octet-stream)
+					// use [] if you need identical file field name
+					// specify MIME type for your file part
+					ml.addFile(data, 'face.jpg', 'Filedata', 'image/jpeg');
+					//ml.load("",true);
+					
+					minuteTimer.start();
+					ml.load("/index.php/Flex/UploadRpFace",true);
+					
+					
+				}
+			}
+			protected function onUploadProgress(e:ProgressEvent):void{
+				trace("发送字节数:"+e.bytesLoaded);
+				
+			}
+			private function onIOError( event: IOErrorEvent ): void
+			{
+				minuteTimer.reset();
+				var text:String = "系统出现了错误～请重试";
+				var title:String = "人品太差";
+				import mx.controls.Alert;
+				var alert:Alert = Alert.show(text, title, Alert.OK);
+				this.currentState="TakePhotoState";
+			}
+			protected function onFileUploaded(e:Event):void
+			{
+				
+				// You can access loader returned data:
+				var ml:MultipartURLLoader=e.currentTarget as MultipartURLLoader;
+				var loader:URLLoader = ml.loader;
+				this.responseText=loader.data;
+				uploaded=true;
+				
+			}
+			protected function onTick(event:TimerEvent):void
+			{
+				if(this.currentState!="PhotoProcessingState"){
+					minuteTimer.reset();
+					return;
+				}
+				if(minuteTimer.currentCount>3 && uploaded)
+				{
+					this.currentState="PhotoProcessedState";
+					return;
+				}
+				var p:FaceProcessorManager=this.ProcessDisplayImg();
+				this.imageDisplayer.source=p.ProcessedImage.bitmapData;
+				this.ImageResultText.text="人品计算中，请稍候"+
+					StringUtil.repeat(".",minuteTimer.currentCount);
+			}
+			
+			protected function group1_creationCompleteHandler(event:FlexEvent):void
+			{
+				//trace('here');
+				
+				//this.initUI();
+			}
+			
+			protected function rpwords_changingHandler(event:Event):void
+			{
+				processAgain();
+			}
+			
+			protected function rpwords_changeHandler(event:Event):void
+			{
+				isProcess=true;
+			}
+			
+			protected function rpwords_focusOutHandler(event:FocusEvent):void
+			{
+				isProcess=true;
+			}
+			
+			protected var keyReturn:Boolean=false;
+			
+			protected function rpwords_keyDownHandler(event:KeyboardEvent):void
+			{
+				if(event.keyCode==Keyboard.ENTER){
+					
+					keyReturn=true;	
+				}
+				processAgain();
+			}
+			
+			protected var processTimer:Timer=new Timer(5000,1);
+			protected function processAgain(time:int=10000):void{
+				this.isProcess=false;
+				trace('false');
+				processTimer.reset();
+				processTimer.delay=time;
+				
+				
+				processTimer.addEventListener(TimerEvent.TIMER, function(event:TimerEvent):void{
+					this.isProcess=true;
+					trace('true');
+				}); 
+				
+				
+				processTimer.start(); 
+			}
+			
+			
+			protected function rpwords_textInputHandler(event:TextEvent):void
+			{
+				if(this.keyReturn){
+					this.keyReturn=false;
+					this.focusManager.setFocus(
+						this.focusbutton);
+					
+					
+					event.preventDefault();
+				}
+			}
+			
+			
+			protected function cameraRadioButton_clickHandler(event:MouseEvent):void
+			{
+				this.changeModeToCamera();
+			}
+			
+			protected function uploadRadioButton_clickHandler(event:MouseEvent):void
+			{
+				this.changeModeToFile();
+				this.openImageFile();
+			}
+			
+			protected function uploadButton_clickHandler(event:MouseEvent):void
+			{
+				this.openImageFile();
+			}
+			
+			
+		]]>
+	</fx:Script>
+	<s:states>
+		<s:State name="TakePhotoState"/>
+		<s:State name="PhotoProcessingState"/>
+		<s:State name="PhotoProcessedState"/>
+		<s:State name="LoadingState"/>
+	</s:states>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+		
+	</fx:Declarations>
+	
+	<s:Image id="imageDisplayer" x="0" y="0" width="488" height="366"
+			 source.LoadingState="@Embed('assets/empty-ver2.jpg')"
+			 source.TakePhotoState="@Embed('assets/empty-ver2.jpg')"/>
+	<s:Image id="cameraDisplayer" x="496" y="0" width="230" height="173" smooth="true"/>
+	<s:Button id="takePhotoButton" x="496" y="206" width="228" height="52" label="测人品"
+			  fontFamily="微软雅黑" fontSize="36" fontStyle="normal" fontWeight="bold"
+			  icon="@Embed('assets/rp.png')" textDecoration="none"
+			  click.LoadingState="button1_clickHandler(event)" enabled.LoadingState="false"
+			  enabled.PhotoProcessedState="false"
+			  enabled.PhotoProcessingState="false"
+			  click.TakePhotoState="button1_clickHandler(event)" enabled.TakePhotoState="false"/>
+	<s:RichText id="ImageResultText" includeIn="PhotoProcessedState,PhotoProcessingState" x="495"
+				width="229" fontSize="12"
+				y.PhotoProcessedState="266" height.PhotoProcessedState="90"
+				y.PhotoProcessingState="266" height.PhotoProcessingState="90"/>
+	<s:Image id="preViewImage" includeIn="LoadingState,TakePhotoState" x="368" y="276" width="120" height="90"/>
+	<s:Label includeIn="LoadingState,TakePhotoState" x="500" y="272" text="PR宣言(回车确定)："
+			 x.TakePhotoState="519" y.TakePhotoState="271"/>
+	<mx:TextArea id="rpwords" visible="false" x="496" y="288" width="228" height="68"
+				 change="rpwords_changeHandler(event)" editable="true"
+				 focusOut="rpwords_focusOutHandler(event)" fontSize="26"
+				 keyDown="rpwords_keyDownHandler(event)" maxChars="14" text="小测一下人品"
+				 textInput="rpwords_textInputHandler(event)"
+				 visible.LoadingState="true"
+				 visible.TakePhotoState="true"/>
+	<s:Button id="focusbutton" x="-77" y="188" label="按钮"/>
+	<s:Button includeIn="LoadingState,TakePhotoState" x="643" y="266" label="确定"
+			  x.TakePhotoState="658" y.TakePhotoState="266" width.TakePhotoState="59"/>
+	<s:RadioButton id="cameraRadioButton" x="496" y="181" label="摄像头" selected="true"
+				   click.LoadingState="cameraRadioButton_clickHandler(event)"
+				   enabled.PhotoProcessedState="false"
+				   click.TakePhotoState="cameraRadioButton_clickHandler(event)"/>
+	<s:RadioButton id="uploadRadioButton" x="572" y="181" label="上传图片"
+				   click.LoadingState="uploadRadioButton_clickHandler(event)"
+				   enabled.PhotoProcessedState="false"
+				   click.TakePhotoState="uploadRadioButton_clickHandler(event)"/>
+	<s:Button id="uploadButton" x="654" y="181" label="浏览"
+			  click.LoadingState="uploadButton_clickHandler(event)" enabled.LoadingState="false"
+			  enabled.PhotoProcessedState="false"
+			  enabled.PhotoProcessingState="false"
+			  click.TakePhotoState="uploadButton_clickHandler(event)" enabled.TakePhotoState="false"/>
+	<s:CheckBox id="textDrawCheckBox" includeIn="TakePhotoState" x="498" y="267" selected="true"/>
+	
+</s:Group>

@@ -1,0 +1,3437 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="DisplayObject,flash.display.DisplayObject,accessibilityProperties,ACTIONSCRIPT2,ACTIONSCRIPT3,actionScriptVersion,active,ADD,align,ALPHA,alpha,ALPHA,ALWAYS,alwaysInFront,applicationDomain,AUTO,BEST,BEVEL,bitmapData,blendMode,BLUE,BOTTOM_LEFT,BOTTOM_LEFT,BOTTOM_RIGHT,BOTTOM_RIGHT,BOTTOM,BOTTOM,BOTTOM,bounds,bounds,buttonMode,bytesLoaded,bytes,bytesTotal,cacheAsBitmap,checked,childAllowsParent,childSandboxBridge,closed,colorDepth,content,contentLoaderInfo,content,contentType,contextMenu,currentFrame,currentLabels,currentLabel,currentScene,DARKEN,data,DIFFERENCE,displayState,displayState,doubleClickEnabled,downState,dropTarget,enabled,enabled,enabled,ERASE,EXACT_FIT,filters,FLASH1,FLASH2,FLASH3,FLASH4,FLASH5,FLASH6,FLASH7,FLASH8,FLASH9,focusRect,focus,frameRate,frameRate,framesLoaded,frame,FULL_SCREEN_INTERACTIVE,FULL_SCREEN,fullScreenHeight,fullScreenSourceRect,fullScreenWidth,graphics,graphics,GREEN,HARDLIGHT,height,height,height,height,height,HIGH,hitArea,hitTestState,HORIZONTAL,INVERT,isSeparator,items,keyEquivalentModifiers,keyEquivalent,labels,label,LAYER,LEFT,LEFT,LIGHTEN,LIGHTWEIGHT,LINEAR_RGB,LINEAR,loaderInfo,loader,loaderURL,LOW,mainScreen,mask,maximizable,maximizable,MAXIMIZED,maxSize,MEDIUM,menu,menu,minimizable,minimizable,MINIMIZED,minSize,MITER,mnemonicIndex,mouseChildren,mouseChildren,mouseEnabled,mouseX,mouseY,MULTIPLY,name,name,name,name,nativeWindow,NEVER,NO_BORDER,NO_SCALE,NONE,NONE,NONE,NONE,NONE,NORMAL,NORMAL,NORMAL,NORMAL,NORMAL,numChildren,numChildren,numFrames,numItems,opaqueBackground,OVERLAY,overState,PAD,parameters,parentAllowsChild,parent,parentSandboxBridge,parent,pixelSnapping,quality,RADIAL,rect,RED,REFLECT,REPEAT,resizable,resizable,RGB,RIGHT,RIGHT,root,rotation,ROUND,ROUND,sameDomain,scale9Grid,scaleMode,scaleX,scaleY,scenes,SCREEN,screens,scrollRect,sharedEvents,SHOW_ALL,showDefaultContextMenu,smoothing,soundTransform,soundTransform,SQUARE,stageFocusRect,stageHeight,stage,stage,stageWidth,STANDARD,submenu,SUBTRACT,supportsMenu,supportsNotification,swfVersion,systemChrome,systemChrome,systemMaxSize,systemMinSize,tabChildren,tabChildren,tabEnabled,tabIndex,textSnapshot,textSnapshot,title,TOP_LEFT,TOP_LEFT,TOP_RIGHT,TOP_RIGHT,TOP,TOP,TOP,totalFrames,trackAsMenu,trackAsMenu,transform,transparent,transparent,transparent,type,type,upState,url,useHandCursor,useHandCursor,UTILITY,VERTICAL,visibleBounds,visible,visible,width,width,width,width,width,x,x,y,y,activate,addChild,addChildAt,addChildAt,addChild,addEventListener,addItem,addItemAt,addSubmenu,addSubmenuAt,applyFilter,areInaccessibleObjectsUnderPoint,assignFocus,beginBitmapFill,beginFill,beginGradientFill,clear,clone,clone,clone,close,close,colorTransform,compare,contains,containsItem,copyChannel,copyPixels,curveTo,dispatchEvent,display,dispose,drawCircle,draw,drawEllipse,drawRect,drawRoundRect,endFill,fillRect,floodFill,generateFilterRect,getBounds,getChildAt,getChildByName,getChildIndex,getColorBoundsRect,getItemAt,getItemByName,getItemIndex,getLoaderInfoByDefinition,getObjectsUnderPoint,getPixel32,getPixel,getPixels,getRect,getScreensForRectangle,globalToLocal,globalToScreen,gotoAndPlay,gotoAndStop,hasEventListener,hitTestObject,hitTest,hitTestPoint,invalidate,isFocusInaccessible,lineGradientStyle,lineStyle,lineTo,loadBytes,load,localToGlobal,lock,maximize,merge,minimize,moveTo,nextFrame,nextScene,noise,notifyUser,orderInBackOf,orderInFrontOf,orderToBack,orderToFront,paletteMap,perlinNoise,pixelDissolve,play,prevFrame,prevScene,removeChildAt,removeChildAt,removeChild,removeItemAt,removeItem,restore,scroll,setChildIndex,setChildIndex,setItemIndex,setPixel32,setPixels,setPixel,startDrag,startMove,startResize,stopDrag,stop,swapChildrenAt,swapChildrenAt,swapChildren,threshold,toString,unload,unlock,willTrigger" name="keywords">
+<title>flash.display.DisplayObject (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'DisplayObject - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/display/DisplayObject.html&amp;flash/display/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">DisplayObject</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DisplayObject"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.display</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  DisplayObject</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">DisplayObject  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td> <a href="../../flash/display/IBitmapDrawable.html">IBitmapDrawable</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td> <a href="../../flash/display/AVM1Movie.html">AVM1Movie</a>,  <a href="../../flash/display/Bitmap.html">Bitmap</a>,  <a href="../../flash/display/InteractiveObject.html">InteractiveObject</a>,  <a href="../../flash/display/MorphShape.html">MorphShape</a>,  <a href="../../flash/display/Shape.html">Shape</a>,  <a href="../../flash/text/StaticText.html">StaticText</a>,  <a href="../../flash/media/Video.html">Video</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The DisplayObject class is the base class for all objects that can be placed on 
+ the display list. The display list manages all objects displayed in Flash Player or Adobe AIR. 
+ Use the DisplayObjectContainer class to arrange the display objects in the display list.
+ DisplayObjectContainer objects can have child display objects, while other display objects, such as
+ Shape and TextField objects, are "leaf" nodes that have only parents and siblings, no children. 
+  <p>The DisplayObject class supports basic functionality like the <i>x</i> and <i>y</i> position of 
+ an object, as well as more advanced properties of the object such as its transformation matrix. 
+ </p>
+  <p>DisplayObject is an abstract base class; therefore, you cannot call DisplayObject directly. Invoking
+ <code>new DisplayObject()</code> throws an <code>ArgumentError</code> exception. </p>
+ 
+ <p>All display objects inherit from the DisplayObject class.</p>
+ 
+ <p>The DisplayObject class itself does not include any APIs for rendering content onscreen. 
+ For that reason, if you want create a custom subclass of the DisplayObject class, you will want
+ to extend one of its subclasses that do have APIs for rendering content onscreen, 
+ such as the Shape, Sprite, Bitmap, SimpleButton, TextField, or MovieClip class.</p>
+  <p>Some properties previously used in the ActionScript 1.0 and 2.0 MovieClip, TextField, and Button
+ classes (such as <code>_alpha</code>, <code>_height</code>, <code>_name</code>, <code>_width</code>,
+ <code>_x</code>, <code>_y</code>, and others) have equivalents in the ActionScript 3.0
+ DisplayObject class that are renamed so that they no longer begin with the underscore (_) character.</p>
+ 
+ <p>For more information, see the "Display Programming" chapter of the <i>Programming 
+ ActionScript 3.0</i> book.</p>
+  <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObjectContainer.html" target="">flash.display.DisplayObjectContainer</a>
+<br>
+<a href="../../../main/00000143.html" target="_top">Core display classes</a>
+<br>
+<a href="../../../main/00000146.html" target="_top">Properties and methods of the DisplayObject class</a>
+<br>
+<a href="../../../main/00000189.html" target="_top">Example: Applying a matrix transformation to a display object</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#accessibilityProperties">accessibilityProperties</a> : <a href="../../flash/accessibility/AccessibilityProperties.html">AccessibilityProperties</a>
+<div class="summaryTableDescription">
+     The current accessibility options for this display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#alpha">alpha</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the alpha transparency value of the object specified.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#blendMode">blendMode</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+     A value from the BlendMode class that specifies which blend mode to use.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#cacheAsBitmap">cacheAsBitmap</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+     If set to true, Flash Player or Adobe AIR caches an internal bitmap representation of the
+     display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#filters">filters</a> : <a href="../../Array.html">Array</a>
+<div class="summaryTableDescription">
+     An indexed array that contains each filter object currently associated with the display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#height">height</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the height of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#loaderInfo">loaderInfo</a> : <a href="../../flash/display/LoaderInfo.html">LoaderInfo</a>
+<div class="summaryTableDescription">[read-only] 
+     Returns a LoaderInfo object containing information about loading the file
+     to which this display object belongs.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mask">mask</a> : <a href="../../flash/display/DisplayObject.html">DisplayObject</a>
+<div class="summaryTableDescription">
+     The calling display object is masked by the specified mask object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mouseX">mouseX</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates the x coordinate of the mouse position, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mouseY">mouseY</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates the y coordinate of the mouse position, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#name">name</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+     Indicates the instance name of the DisplayObject.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#opaqueBackground">opaqueBackground</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+     Specifies whether the display object is opaque with a certain background color.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#parent">parent</a> : <a href="../../flash/display/DisplayObjectContainer.html">DisplayObjectContainer</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates the DisplayObjectContainer object that contains this display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#root">root</a> : <a href="../../flash/display/DisplayObject.html">DisplayObject</a>
+<div class="summaryTableDescription">[read-only] 
+     For a display object in a loaded SWF file, the root property is the 
+     top-most display object in the portion of the display list's tree structure represented by that SWF file.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rotation">rotation</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the rotation of the DisplayObject instance, in degrees, from its original orientation.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scale9Grid">scale9Grid</a> : <a href="../../flash/geom/Rectangle.html">Rectangle</a>
+<div class="summaryTableDescription">
+     The current scaling grid that is in effect.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scaleX">scaleX</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the horizontal scale (percentage) of the object as applied from the registration point.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scaleY">scaleY</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the vertical scale (percentage) of an object as applied from the registration point of the object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#scrollRect">scrollRect</a> : <a href="../../flash/geom/Rectangle.html">Rectangle</a>
+<div class="summaryTableDescription">
+     The scroll rectangle bounds of the display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stage">stage</a> : <a href="../../flash/display/Stage.html">Stage</a>
+<div class="summaryTableDescription">[read-only] 
+     The Stage of the display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#transform">transform</a> : <a href="../../flash/geom/Transform.html">Transform</a>
+<div class="summaryTableDescription">
+    An object with properties pertaining to a display object's matrix, color transform, and pixel bounds.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#visible">visible</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+     Whether or not the display object is visible.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#width">width</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the width of the display object, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#x">x</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the x coordinate of the DisplayObject instance relative to the local coordinates of
+     the parent DisplayObjectContainer.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#y">y</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+     Indicates the y coordinate of the DisplayObject instance relative to the local coordinates of
+     the parent DisplayObjectContainer.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getBounds()">getBounds</a>(targetCoordinateSpace:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../flash/geom/Rectangle.html">Rectangle</a>
+</div>
+<div class="summaryTableDescription">
+     Returns a rectangle that defines the area of the display object relative to the coordinate system
+     of the targetCoordinateSpace object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRect()">getRect</a>(targetCoordinateSpace:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../flash/geom/Rectangle.html">Rectangle</a>
+</div>
+<div class="summaryTableDescription">
+    Returns a rectangle that defines the boundary of the display object, 
+    based on the coordinate system defined by the targetCoordinateSpace 
+    parameter, excluding any strokes on shapes.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#globalToLocal()">globalToLocal</a>(point:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a>
+</div>
+<div class="summaryTableDescription">
+     Converts the point object from the Stage (global) coordinates
+     to the display object's (local) coordinates.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hitTestObject()">hitTestObject</a>(obj:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+     Evaluates the display object to see if it overlaps or intersects with the
+     obj display object.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hitTestPoint()">hitTestPoint</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, shapeFlag:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+     Evaluates the display object to see if it overlaps or intersects with the
+     point specified by the x and y parameters.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#localToGlobal()">localToGlobal</a>(point:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a>
+</div>
+<div class="summaryTableDescription">
+     Converts the point object from the display object's (local) coordinates to the
+     Stage (global) coordinates.</div>
+</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:added">added</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a display object is added to the display list.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:addedToStage">addedToStage</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a display object is added to the on stage display list, either directly or through the addition of a sub tree in which the display object is contained.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:enterFrame">enterFrame</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the playhead is entering a new frame.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:removed">removed</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a display object is about to be removed from the display list.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:removedFromStage">removedFromStage</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a display object is about to be removed from the display list, either directly or through the removal of a sub tree in which the display object is contained.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:render">render</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the display list is about to be updated and rendered.</td><td class="summaryTableOwnerCol">DisplayObject</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="accessibilityProperties"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">accessibilityProperties</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>accessibilityProperties:<a href="../../flash/accessibility/AccessibilityProperties.html">AccessibilityProperties</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The current accessibility options for this display object. If you modify the <code>accessibilityProperties</code>
+     property or any of the fields within <code>accessibilityProperties</code>, you must call 
+     the <code>Accessibility.updateProperties()</code> method to make your changes take effect.
+          <p><b>Note</b>: For an object created in the Flash authoring environment, the value of <code>accessibilityProperties</code>
+     is prepopulated with any information you entered in the Accessibility panel for
+     that object.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get accessibilityProperties():<a href="../../flash/accessibility/AccessibilityProperties.html">AccessibilityProperties</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set accessibilityProperties(value:<a href="../../flash/accessibility/AccessibilityProperties.html">AccessibilityProperties</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/accessibility/Accessibility.html#updateProperties()" target="">flash.accessibility.Accessibility.updateProperties()</a>
+<br>
+<a href="../../flash/accessibility/AccessibilityProperties.html" target="">flash.accessibility.AccessibilityProperties</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how the to attach a simple AccessibilityProperties
+ object to a TextField instance:<div class="listing"><pre>
+
+import flash.text.TextField;
+import flash.accessibility.AccessibilityProperties;
+import flash.accessibility.Accessibility;
+import flash.system.Capabilities;
+
+var tf:TextField = new TextField();
+tf.text = "hello";
+
+var accessProps:AccessibilityProperties = new AccessibilityProperties();
+accessProps.name = "Greeting";
+
+tf.accessibilityProperties = accessProps;
+
+if (Capabilities.hasAccessibility) {
+    Accessibility.updateProperties();
+}
+
+trace(tf.accessibilityProperties.name); // Greeting
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="alpha"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">alpha</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>alpha:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the alpha transparency value of the object specified.
+     Valid values are 0 (fully transparent) to 1 (fully opaque).
+     The default value is 1. Display objects with <code>alpha</code>
+     set to 0 <i>are</i> active, even though they are invisible.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get alpha():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set alpha(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code sets the <code>alpha</code> property of a sprite
+ to 50% when the mouse rolls over the sprite:<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xFF0000);
+circle.graphics.drawCircle(40, 40, 40);
+addChild(circle);
+
+circle.addEventListener(MouseEvent.MOUSE_OVER, dimObject);
+circle.addEventListener(MouseEvent.MOUSE_OUT, restoreObject);
+
+function dimObject(event:MouseEvent):void {
+    event.target.alpha = 0.5;
+}
+
+function restoreObject(event:MouseEvent):void {
+    event.target.alpha = 1.0;
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="blendMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">blendMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>blendMode:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     A value from the BlendMode class that specifies which blend mode to use.
+     A bitmap can be drawn internally in two ways. If you have a blend mode enabled or an
+     external clipping mask, the bitmap is drawn by adding a bitmap-filled square shape to the vector
+     render. If you attempt to set this property to an invalid value, Flash Player or Adobe AIR sets the value
+     to <code>BlendMode.NORMAL</code>.
+          <p>The <code>blendMode</code> property affects each pixel of the display object.
+     Each pixel is composed of three constituent
+     colors (red, green, and blue), and each constituent color has a value between 0x00 and 0xFF.
+     Flash Player or Adobe AIR compares each constituent color of one pixel in the movie clip with
+     the corresponding color of the pixel in the background. For example, if <code>blendMode</code>
+     is set to <code>BlendMode.LIGHTEN</code>, Flash Player or Adobe AIR compares the red value of the display object with
+     the red value of the background, and uses the lighter of the two as the
+     value for the red component of the displayed color.</p>
+          <p>The following table describes the <code>blendMode</code> settings. 
+     The BlendMode class defines string values you can use.
+     The illustrations in the table show <code>blendMode</code> values applied to a circular
+     display object (2) superimposed on another display object (1).</p>
+               <p>
+      <img src="../../images/blendMode-0a.jpg"></img>
+           <img src="../../images/blendMode-0b.jpg"></img>
+          </p>
+               <table class="innertable" ><tr>
+<th>BlendMode Constant</th><th>Illustration</th><th>Description</th>
+</tr>
+<tr>
+<td><code>BlendMode.NORMAL</code></td><td><img src="../../images/blendMode-1.jpg"></img></td><td>The display object appears in front of the background. Pixel values of the display object
+     override those of the background. Where the display object is transparent, the background is
+     visible.</td>
+</tr>
+<tr>
+<td><code>BlendMode.LAYER</code></td><td><img src="../../images/blendMode-2.jpg"></img></td><td>Forces the creation of a transparency group for the display object. This means that the display 
+     object is pre-composed in a temporary buffer before it is processed further. This is done 
+     automatically if the display object is pre-cached using bitmap caching or if the display object is 
+     a display object container with at least one child object with a <code>blendMode</code> 
+     setting other than <code>BlendMode.NORMAL</code>.
+     </td>
+</tr>
+<tr>
+<td><code>BlendMode.MULTIPLY</code></td><td><img src="../../images/blendMode-3.jpg"></img></td><td>Multiplies the values of the display object constituent colors by the colors of the background color,
+     and then normalizes by dividing by 0xFF,
+     resulting in darker colors. This setting is commonly used for shadows and depth effects.
+          <p>For example, if a constituent color (such as red) of one pixel in the display object and the
+     corresponding color of the pixel in the background both have the value 0x88, the multiplied
+     result is 0x4840. Dividing by 0xFF yields a value of 0x48 for that constituent color,
+     which is a darker shade than the color of the display object or the color of the background.</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.SCREEN</code></td><td><img src="../../images/blendMode-4.jpg"></img></td><td>Multiplies the complement (inverse) of the display object color by the complement of the background
+     color, resulting in a bleaching effect. This setting is commonly used for highlights or to remove black
+     areas of the display object.</td>
+</tr>
+<tr>
+<td><code>BlendMode.LIGHTEN</code></td><td><img src="../../images/blendMode-5.jpg"></img></td><td>Selects the lighter of the constituent colors of the display object and the color of the background (the
+     colors with the larger values). This setting is commonly used for superimposing type.
+          <p>For example, if the display object has a pixel with an RGB value of 0xFFCC33, and the background
+     pixel has an RGB value of 0xDDF800, the resulting RGB value for the displayed pixel is
+     0xFFF833 (because 0xFF &gt; 0xDD, 0xCC &lt; 0xF8, and 0x33 &gt; 0x00 = 33).</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.DARKEN</code></td><td><img src="../../images/blendMode-6.jpg"></img></td><td>Selects the darker of the constituent colors of the display object and the colors of the 
+     background (the colors with the smaller values). This setting is commonly used for superimposing type.
+          <p>For example, if the display object has a pixel with an RGB value of 0xFFCC33, and the background
+     pixel has an RGB value of 0xDDF800, the resulting RGB value for the displayed pixel is
+     0xDDCC00 (because 0xFF &gt; 0xDD, 0xCC &lt; 0xF8, and 0x33 &gt; 0x00 = 33).</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.DIFFERENCE</code></td><td><img src="../../images/blendMode-7.jpg"></img></td><td>Compares the constituent colors of the display object with the colors of its background, and subtracts
+     the darker of the values of the two constituent colors from the lighter value. This setting is commonly
+     used for more vibrant colors.
+          <p>For example, if the display object has a pixel with an RGB value of 0xFFCC33, and the background
+     pixel has an RGB value of 0xDDF800, the resulting RGB value for the displayed pixel is
+     0x222C33 (because 0xFF - 0xDD = 0x22, 0xF8 - 0xCC = 0x2C, and 0x33 - 0x00 = 0x33).</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.ADD</code></td><td><img src="../../images/blendMode-8.jpg"></img></td><td>Adds the values of the constituent colors of the display object to the colors of its background, applying a
+     ceiling of 0xFF. This setting is commonly used for animating a lightening dissolve between
+     two objects.
+          <p>For example, if the display object has a pixel with an RGB value of 0xAAA633, and the background
+     pixel has an RGB value of 0xDD2200, the resulting RGB value for the displayed pixel is
+     0xFFC833 (because 0xAA + 0xDD &gt; 0xFF, 0xA6 + 0x22 = 0xC8, and 0x33 + 0x00 = 0x33).</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.SUBTRACT</code></td><td><img src="../../images/blendMode-9.jpg"></img></td><td>Subtracts the values of the constituent colors in the display object from the values of the 
+     background color, applying a floor of 0. This setting is commonly used for animating a 
+     darkening dissolve between two objects.
+          <p>For example, if the display object has a pixel with an RGB value of 0xAA2233, and the background
+     pixel has an RGB value of 0xDDA600, the resulting RGB value for the displayed pixel is
+     0x338400 (because 0xDD - 0xAA = 0x33, 0xA6 - 0x22 = 0x84, and 0x00 - 0x33 &lt; 0x00).</p></td>
+</tr>
+<tr>
+<td><code>BlendMode.INVERT</code></td><td><img src="../../images/blendMode-10.jpg"></img></td><td>Inverts the background.</td>
+</tr>
+<tr>
+<td><code>BlendMode.ALPHA</code></td><td><img src="../../images/blendMode-11.jpg"></img></td><td>Applies the alpha value of each pixel of the display object to the background.
+     This requires the <code>blendMode</code> setting of the parent display object to be set to
+     <code>BlendMode.LAYER</code>.
+     For example, in the illustration, the parent display object, which is a white background,
+     has <code>blendMode = BlendMode.LAYER</code>.</td>
+</tr>
+<tr>
+<td><code>BlendMode.ERASE</code></td><td><img src="../../images/blendMode-12.jpg"></img></td><td>Erases the background based on the alpha value of the display object. This requires the
+     <code>blendMode</code> of the parent display object to be set to
+     <code>BlendMode.LAYER</code>. For example, in the
+     illustration, the parent display object, which is a white background, has
+     <code>blendMode = BlendMode.LAYER</code>.</td>
+</tr>
+<tr>
+<td><code>BlendMode.OVERLAY</code></td><td><img src="../../images/blendMode-13.jpg"></img></td><td>Adjusts the color of each pixel based on the darkness of the background.
+     If the background is lighter than 50% gray, the display object and background colors are
+     screened, which results in a lighter color. If the background is darker than 50% gray,
+     the colors are multiplied, which results in a darker color.
+     This setting is commonly used for shading effects.</td>
+</tr>
+<tr>
+<td><code>BlendMode.HARDLIGHT</code></td><td><img src="../../images/blendMode-14.jpg"></img></td><td>Adjusts the color of each pixel based on the darkness of the display object.
+     If the display object is lighter than 50% gray, the display object and background colors are
+     screened, which results in a lighter color. If the display object is darker than 50% gray,
+     the colors are multiplied, which results in a darker color.
+     This setting is commonly used for shading effects.</td>
+</tr></table>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get blendMode():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set blendMode(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="BlendMode.html" target="">flash.display.BlendMode</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates two sprite objects, a square and a circle, 
+ and sets the blend mode of the circle (in the foreground) to <code>BlendMode.SUBTRACT</code>
+ when the pointer rolls over the circle:<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.display.BlendMode;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFF88CC);
+square.graphics.drawRect(0, 0, 80, 80);
+addChild(square);
+
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xAA0022);
+circle.graphics.drawCircle(40, 40, 40);
+addChild(circle);
+
+circle.addEventListener(MouseEvent.MOUSE_OVER, dimObject);
+circle.addEventListener(MouseEvent.MOUSE_OUT, restoreObject);
+
+function dimObject(event:MouseEvent):void {
+    event.target.blendMode = BlendMode.SUBTRACT;
+}
+
+function restoreObject(event:MouseEvent):void {
+    event.target.blendMode = BlendMode.NORMAL;
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="cacheAsBitmap"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cacheAsBitmap</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>cacheAsBitmap:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     If set to <code>true</code>, Flash Player or Adobe AIR caches an internal bitmap representation of the
+     display object. This caching can increase performance for display objects that contain complex
+     vector content.
+          <p>All vector data for a display object that has a cached bitmap is drawn to the bitmap
+     instead of the main display. The bitmap is then copied to the main display as unstretched,
+     unrotated pixels snapped to the nearest pixel boundaries. Pixels are mapped 1 to 1 with
+     the parent object. If the bounds of the bitmap change, the bitmap is recreated instead
+     of being stretched.</p>
+          <p>No internal bitmap is created unless the <code>cacheAsBitmap</code> property is set to
+     <code>true</code>.</p>
+          <p>After you set the <code>cacheAsBitmap</code> property to <code>true</code>,
+     the rendering does not change, however the display object performs pixel snapping
+     automatically. The animation speed can be significantly faster depending
+     on the complexity of the vector content.
+     </p>
+          <p>The <code>cacheAsBitmap</code> property is automatically set to <code>true</code>
+     whenever you apply a filter to a display object (when its <code>filter</code> array is not empty),
+     and if a display object has a filter applied to it, <code>cacheAsBitmap</code> is reported as
+     <code>true</code> for that display object, even if you set the property to <code>false</code>.
+     If you clear all filters for a display object, the <code>cacheAsBitmap</code> setting changes to
+     what it was last set to.</p>
+          <p>A display object does not use a bitmap even if the <code>cacheAsBitmap</code>
+     property is set to <code>true</code> and instead renders from vector data in the following cases:</p>
+          <ul>
+            <li>The bitmap is too large: greater than 2880 pixels in either direction. </li>
+            <li>The bitmap fails to allocate (out of memory error). </li>
+          </ul>
+          <p>The <code>cacheAsBitmap</code> property is best used with movie clips that have
+     mostly static content and that do not scale and rotate frequently. With such movie
+     clips, <code>cacheAsBitmap</code> can lead to performance increases when the
+     movie clip is translated (when its <i>x</i> and <i>y</i> position is changed).</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get cacheAsBitmap():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set cacheAsBitmap(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#opaqueBackground" target="">opaqueBackground</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example applies a drop shadow to a Shape instance. 
+ It then traces the value of the <code>cacheAsBitmap</code> property, which is set to 
+ <code>true</code> when the filter is applied:
+<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.filters.DropShadowFilter
+
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xAA0022);
+circle.graphics.drawCircle(40, 40, 40);
+
+addChild(circle);
+
+trace(circle.cacheAsBitmap); // false
+
+var filter:DropShadowFilter = new DropShadowFilter();
+circle.filters = [filter];
+
+trace(circle.cacheAsBitmap); // true</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="filters"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">filters</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>filters:<a href="../../Array.html">Array</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     An indexed array that contains each filter object currently associated with the display object.
+     The flash.filters package contains several classes that define specific filters you can
+     use.
+          <p>Filters can be applied in the Flash authoring tool at design-time, or at runtime by using
+     ActionScript code. To apply a filter by using ActionScript, you must make a temporary copy of the
+     entire <code>filters</code> array, modify the temporary array, then assign the value
+     of the temporary array back to the <code>filters</code> array. You cannot directly
+     add a new filter object to the <code>filters</code> array.</p>
+          <p>To add a filter by using ActionScript, perform the following steps (assume that the
+     target display object is named <code>myDisplayObject</code>):</p>
+          <ol>
+            <li>Create a new filter object by using the constructor method of your chosen filter
+     class.</li>
+            <li>Assign the value of the <code>myDisplayObject.filters</code> array to a temporary array, such
+     as one named <code>myFilters</code>.</li>
+            <li>Add the new filter object to the <code>myFilters</code> temporary array.</li>
+            <li>Assign the value of the temporary array to the <code>myDisplayObject.filters</code> array.</li>
+          </ol>
+          <p>If the <code>filters</code> array is undefined, you do not need to use a temporary array.
+     Instead, you can directly assign an array literal that contains one or more filter objects that
+     you create. The first example in the Examples section adds a drop shadow filter by using
+     code that handles both defined and undefined <code>filters</code> arrays.</p>
+          <p>To modify an existing filter object,
+     you must use the technique of modifying a copy of the <code>filters</code> array:</p>
+          <ol>
+            <li>Assign the value of the <code>filters</code> array to a temporary array, such as one
+     named <code>myFilters</code>.</li>
+            <li>Modify the property by using the temporary array, <code>myFilters</code>. For example, 
+     to set the quality property of the first filter in the array, you could use the
+     following code: <code>myFilters[0].quality = 1;</code></li>
+            <li>Assign the value of the temporary array to the <code>filters</code> array.</li>
+          </ol>
+          <p>At load time, if a display object has an associated filter, it is marked to cache itself as a
+     transparent bitmap. From this point forward, as long as the display object has a valid filter list,
+     the player caches the display object as a bitmap. This source bitmap is used as a source
+     image for the filter effects. Each display object usually has two bitmaps: one with the
+     original unfiltered source display object and another for the final image after filtering.
+     The final image is used when rendering. As long as the display object does not
+     change, the final image does not need updating.</p>
+          <p>The flash.filters package includes classes for filters. For example, to create a DropShadow
+     filter, you would write:</p>
+          <div class="listing"><pre>
+     import flash.filters.DropShadowFilter
+     var myFilter:DropShadowFilter = new DropShadowFilter (distance, angle, color, alpha, blurX, blurY, quality, inner, knockout)
+     </pre></div>
+          <p>You can use the <code>is</code> operator to determine the type of filter assigned to 
+     each index position in the <code>filter</code> array. For example, the following code shows
+     how to determine the position of the first filter in the <code>filters</code> array that 
+     is a DropShadowFilter:
+     </p>
+     
+     <div class="listing"><pre>
+     import flash.text.TextField;
+     import flash.filters.*;
+     var tf:TextField = new TextField();
+     var filter1:DropShadowFilter = new DropShadowFilter();
+     var filter2:GradientGlowFilter = new GradientGlowFilter();
+     tf.filters = [filter1, filter2];
+     
+     tf.text = "DropShadow index: " + filterPosition(tf, DropShadowFilter).toString(); // 0
+     addChild(tf)
+     
+     function filterPosition(displayObject:DisplayObject, filterClass:Class):int {
+         for (var i:uint = 0; i &lt; displayObject.filters.length; i++) {
+             if (displayObject.filters[i] is filterClass) {
+                 return i;
+             }
+         }
+         return -1;
+     }
+     </pre></div>
+     <p><b>Note:</b> Since you cannot directly add a new filter object to the
+     <code>DisplayObject.filters</code> array, the following code has no
+     effect on the target display object, named <code>myDisplayObject</code>:</p>
+          <div class="listing"><pre>
+     myDisplayObject.filters.push(myDropShadow);
+     </pre></div>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get filters():<a href="../../Array.html">Array</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set filters(value:<a href="../../Array.html">Array</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/filters/package-detail.html" target="">flash.filters package</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="height"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">height</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>height:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the height of the display object, in pixels. The height is calculated based on the bounds of the content of the display object.
+     When you set the <code>height</code> property, the <code>scaleY</code> property is adjusted accordingly, as shown in the 
+  following code:
+     
+  <div class="listing"><pre>
+ var rect:Shape = new Shape();
+ rect.graphics.beginFill(0xFF0000);
+ rect.graphics.drawRect(0, 0, 100, 100);
+ trace(rect.scaleY) // 1;
+ rect.height = 200;
+ trace(rect.scaleY) // 2;</pre></div>
+ 
+ <p>Except for TextField and Video objects, a display object with no content (such as an empty sprite) has a height 
+ of 0, even if you try to set <code>height</code> to a different value.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get height():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set height(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates two TextField objects and adjusts the 
+ <code>height</code> property of each based on the <code>textHeight</code> property of 
+ each; it also positions the second text field by setting its <code>y</code> property:
+<div class="listing"><pre>
+import flash.text.TextField;
+
+var tf1:TextField = new TextField();
+tf1.text = "Text Field 1";
+tf1.border = true;
+tf1.wordWrap = true;
+tf1.width = 40;
+tf1.height = tf1.textHeight + 5;
+addChild(tf1);
+
+var tf2:TextField = new TextField();
+tf2.text = "Text Field 2";
+tf2.border = true;
+tf2.wordWrap = true;
+tf2.width = 40;
+tf2.height = tf2.textHeight + 5;
+tf2.y = tf1.y + tf1.height + 5;
+addChild(tf2);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="loaderInfo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">loaderInfo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>loaderInfo:<a href="../../flash/display/LoaderInfo.html">LoaderInfo</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Returns a LoaderInfo object containing information about loading the file
+     to which this display object belongs. The <code>loaderInfo</code> property is defined only
+     for the root display object of a SWF file or for a loaded Bitmap (not for a Bitmap that is drawn 
+     with ActionScript). To find the <code>loaderInfo</code> object associated with the SWF file that contains 
+     a display object named <code>myDisplayObject</code>, use <code>myDisplayObject.root.loaderInfo</code>.
+     
+     <p>A large SWF file can monitor its download by calling 
+     <code>this.root.loaderInfo.addEventListener(Event.COMPLETE, func)</code>.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get loaderInfo():<a href="../../flash/display/LoaderInfo.html">LoaderInfo</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="LoaderInfo.html" target="">LoaderInfo class</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code assumes that <code>this</code> refers to 
+ a display object. The code outputs the URL of the root SWF file for the 
+ display object:
+<div class="listing"><pre>
+trace(this.loaderInfo.url);
+ </pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="mask"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mask</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mask:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The calling display object is masked by the specified <code>mask</code> object.
+     To ensure that masking works when the Stage is scaled, the <code>mask</code> display object
+     must be in an active part of the display list. The <code>mask</code> object itself is not drawn.
+     Set <code>mask</code> to <code>null</code> to remove the mask.
+     
+     <p>To be able to scale a mask object, it must be on the display list. To be able to drag a mask Sprite object 
+     (by calling its <code>startDrag()</code> method), it must be on the display list. To call the 
+     <code>startDrag()</code> method for a mask sprite based on a <code>mouseDown</code> event 
+     being dispatched by the sprite, set the sprite's <code>buttonMode</code> property to <code>true</code>.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mask():<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mask(value:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a TextField object as well as a Sprite object
+ that is set as a mask for the TextField object. When the user clicks the text
+ field, the <code>drag()</code> event listener function calls the <code>startDrag()</code>
+ method of the mask Sprite object:<div class="listing"><pre>
+import flash.text.TextField;
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var tf:TextField = new TextField();
+tf.text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, " 
+            + "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+tf.selectable = false;
+tf.wordWrap = true;
+tf.width = 150;
+addChild(tf);
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFF0000);
+square.graphics.drawRect(0, 0, 40, 40);
+addChild(square);
+
+tf.mask = square;
+
+tf.addEventListener(MouseEvent.MOUSE_DOWN, drag);
+tf.addEventListener(MouseEvent.MOUSE_UP, noDrag);
+
+function drag(event:MouseEvent):void {
+    square.startDrag();
+}
+function noDrag(event:MouseEvent):void {
+    square.stopDrag();
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="mouseX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mouseX:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <i>x</i> coordinate of the mouse position, in pixels.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseX():<a href="../../Number.html">Number</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object and traces the <code>mouseX</code>
+ and <code>mouseY</code> positions when the user clicks the sprite:
+<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFF0000);
+square.graphics.drawRect(0, 0, 200, 200);
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, traceCoordinates);
+
+function traceCoordinates(event:MouseEvent):void {
+    trace(square.mouseX, square.mouseY);
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="mouseY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mouseY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>mouseY:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <i>y</i> coordinate of the mouse position, in pixels.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mouseY():<a href="../../Number.html">Number</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object and traces the <code>mouseX</code>
+ and <code>mouseY</code> positions when the user clicks the sprite:
+<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFF0000);
+square.graphics.drawRect(0, 0, 200, 200);
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, traceCoordinates);
+
+function traceCoordinates(event:MouseEvent):void {
+    trace(square.mouseX, square.mouseY);
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="name"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">name</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>name:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the instance name of the DisplayObject. The object can be identified in 
+     the child list of its parent display object container by calling the 
+     <code>getChildByName()</code> method of the display object container.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get name():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set name(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If you are attempting to set this property on an object that was 
+     placed on the timeline in the Flash authoring tool.
+     
+     </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates two Sprite object and traces the 
+ associated <code>name</code> property when the user clicks either of the objects:
+<div class="listing"><pre>
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var circle1:Sprite = new Sprite();
+circle1.graphics.beginFill(0xFF0000);
+circle1.graphics.drawCircle(40, 40, 40);
+circle1.name = "circle1";
+addChild(circle1);
+circle1.addEventListener(MouseEvent.CLICK, traceName);
+
+var circle2:Sprite = new Sprite();
+circle2.graphics.beginFill(0x0000FF);
+circle2.graphics.drawCircle(140, 40, 40);
+circle2.name = "circle2";
+addChild(circle2);
+circle2.addEventListener(MouseEvent.CLICK, traceName);
+
+function traceName(event:MouseEvent):void {
+    trace(event.target.name);
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="opaqueBackground"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">opaqueBackground</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>opaqueBackground:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Specifies whether the display object is opaque with a certain background color.
+     A transparent bitmap contains alpha
+     channel data and is drawn transparently. An opaque bitmap has no alpha channel (and renders faster
+     than a transparent bitmap). If the bitmap is opaque, you specify its own background color to use.
+          <p>If set to a number value, the surface is opaque (not transparent) with the RGB background
+     color that the number specifies. If set to <code>null</code> (the default value), the display 
+     object has a transparent background.</p>
+     
+     <p>The <code>opaqueBackground</code> property is intended mainly for use with the 
+     <code>cacheAsBitmap</code> property, for rendering optimization. For display objects in which the 
+     <code>cacheAsBitmap</code> property is set to true, setting <code>opaqueBackground</code> can 
+     improve rendering performance.</p>
+     
+     <p>The opaque background region is <i>not</i> matched when calling the <code>hitTestPoint()</code> 
+     method with the <code>shapeFlag</code> parameter set to <code>true</code>.</p>
+     
+     <p>The opaque background region does not respond to mouse events.</p>
+     
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get opaqueBackground():<a href="../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set opaqueBackground(value:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#cacheAsBitmap" target="">cacheAsBitmap</a>
+<br>
+<a href="DisplayObject.html#hitTestPoint()" target="">hitTestPoint()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Shape object with a blue circle
+ and sets its <code>opaqueBackground</code> property to red (0xFF0000):
+<div class="listing"><pre>
+import flash.display.Shape;
+
+var circle:Shape = new Shape();
+circle.graphics.beginFill(0x0000FF);
+circle.graphics.drawCircle(40, 40, 40);
+circle.opaqueBackground = 0xFF0000;
+addChild(circle);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="parent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">parent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>parent:<a href="../../flash/display/DisplayObjectContainer.html">DisplayObjectContainer</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the DisplayObjectContainer object that contains this display object. Use the <code>parent</code>
+     property to specify a relative path to display objects that are above the
+     current display object in the display list hierarchy.
+          <p>You can use <code>parent</code> to move up multiple levels in the display list as in the following:</p>
+          <div class="listing"><pre>
+     this.parent.parent.alpha = 20;
+     </pre></div>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parent():<a href="../../flash/display/DisplayObjectContainer.html">DisplayObjectContainer</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; The parent display object belongs to a security sandbox
+     to which you do not have access. You can avoid this situation by having
+     the parent movie call the <code>Security.allowDomain()</code> method.
+          </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates three Sprite objects and shows how
+ the <code>parent</code> property reflects the display list hierarchy:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+
+var sprite1:Sprite = new Sprite();
+sprite1.name = "sprite1";
+var sprite2:Sprite = new Sprite();
+sprite2.name = "sprite2";
+var sprite3:Sprite = new Sprite();
+sprite3.name = "sprite3";
+
+sprite1.addChild(sprite2);
+sprite2.addChild(sprite3);
+
+trace(sprite2.parent.name); // sprite1
+trace(sprite3.parent.name); // sprite2
+trace(sprite3.parent.parent.name); // sprite1
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="root"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">root</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>root:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     For a display object in a loaded SWF file, the <code>root</code> property is the 
+     top-most display object in the portion of the display list's tree structure represented by that SWF file.
+     For a Bitmap object representing a loaded image file, the <code>root</code> property is the Bitmap object
+     itself. For the instance of the main class of the first SWF file loaded, the <code>root</code> property is the 
+     display object itself. The <code>root</code> property of the Stage object is the Stage object itself. The <code>root</code>  
+     property is set to <code>null</code> for any display object that has not been added to the display list, unless 
+     it has been added to a display object container that is off the display list but that is a child of the 
+     top-most display object in a loaded SWF file.
+     
+     <p>For example, if you create a new Sprite object by calling the <code>Sprite()</code> constructor method, 
+     its <code>root</code> property is <code>null</code> until you add it to the display list (or to a display 
+     object container that is off the display list but that is a child of the top-most display object in a SWF file).</p>
+     
+     <p>For a loaded SWF file, even though the Loader object used to load the file may not be on the display list, 
+     the top-most display object in the SWF file has its <code>root</code> property set to itself.  The Loader object 
+     does not have its <code>root</code> property set until it is added as a child of a display object for which the 
+     <code>root</code> property is set.</p>
+     
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get root():<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows the difference between the <code>root</code>
+ property for the Stage object, for a display object (a Loader object) that is not loaded (both before
+ and after it has been added to the display list), and for a loaded object (a loaded Bitmap object):
+<div class="listing"><pre>
+import flash.display.Loader;
+import flash.net.URLRequest;
+import flash.events.Event;
+
+trace(stage.root); // [object Stage]
+
+var ldr:Loader = new Loader();
+trace(ldr.root); // null
+
+addChild(ldr); 
+trace(ldr.root); // [object ...]
+
+var urlReq:URLRequest = new URLRequest("example.jpg");
+ldr.load(urlReq);
+
+ldr.contentLoaderInfo.addEventListener(Event.COMPLETE, loaded);
+
+function loaded(event:Event):void {
+    trace(ldr.content.root); // [object Bitmap]
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="rotation"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotation</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rotation:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the rotation of the DisplayObject instance, in degrees, from its original orientation. Values from 0 to 180 represent
+     clockwise rotation; values from 0 to -180 represent counterclockwise rotation. Values outside this range are added to or
+     subtracted from 360 to obtain a value within the range. For example, the statement <code>my_video.rotation = 450</code> is the
+     same as <code> my_video.rotation = 90</code>.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get rotation():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set rotation(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object and rotates
+ the object when the user clicks it:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFFCC00);
+square.graphics.drawRect(-50, -50, 100, 100);
+square.x = 150;
+square.y = 150;
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, rotate);
+
+function rotate(event:MouseEvent):void {
+        square.rotation += 15;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="scale9Grid"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scale9Grid</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scale9Grid:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The current scaling grid that is in effect. If set to <code>null</code>,
+     the entire display object is scaled normally when any scale transformation is
+     applied.
+          <p>When you define the <code>scale9Grid</code> property, the display object is divided into a
+     grid with nine regions based on the <code>scale9Grid</code> rectangle, which defines the
+     center region of the grid. The eight other regions of the grid are the following areas: </p>
+          <ul>
+       <li>The upper-left corner outside of the rectangle</li>
+       <li>The area above the rectangle </li>
+       <li>The upper-right corner outside of the rectangle</li>
+       <li>The area to the left of the rectangle</li>
+       <li>The area to the right of the rectangle</li>
+       <li>The lower-left corner outside of the rectangle</li>
+       <li>The area below the rectangle</li>
+       <li>The lower-right corner outside of the rectangle</li>
+     </ul>
+          <p>You can think of the eight regions outside of the center (defined by the rectangle)
+     as being like a picture frame that has special rules applied to it when scaled.</p>
+          <p>When the <code>scale9Grid</code> property is set and a display object is scaled, all text and
+     gradients are scaled normally; however, for other types of objects the following rules apply:</p>
+          <ul>
+       <li>Content in the center region is scaled normally. </li>
+       <li>Content in the corners is not scaled. </li>
+       <li>Content in the top and bottom regions is scaled horizontally only. Content in the
+     left and right regions is scaled vertically only.</li>
+      <li>All fills (including bitmaps, video, and gradients) are stretched to fit their shapes.</li>
+     </ul>
+          <p>If a display object is rotated, all subsequent scaling is normal (and the
+     <code>scale9Grid</code> property is ignored).</p>
+          <p>For example, consider the following display object and a rectangle that is applied as the display
+     object's <code>scale9Grid</code>:</p>
+          <table class="+ topic/table adobe-d/adobetable " ><tr><td align="center"><img src="../../images/scale9Grid-a.jpg"></img>
+     <p>The display object.</p></td><td align="center"><img src="../../images/scale9Grid-b.jpg"></img>
+      <p>The red rectangle shows the <code>scale9Grid</code>.</p></td></tr></table>
+          <p>When the display object is scaled or stretched, the objects within the rectangle scale
+     normally, but the objects outside of the rectangle scale according to the
+     <code>scale9Grid</code> rules:</p>
+          <table class="+ topic/table adobe-d/adobetable " ><tr>
+<td>Scaled to 75%:</td><td><img src="../../images/scale9Grid-c.jpg"></img></td>
+</tr>
+<tr>
+<td>Scaled to 50%:</td><td><img src="../../images/scale9Grid-d.jpg"></img></td>
+</tr>
+<tr>
+<td>Scaled to 25%:</td><td><img src="../../images/scale9Grid-e.jpg"></img></td>
+</tr>
+<tr>
+<td>Stretched horizontally 150%: </td><td><img src="../../images/scale9Grid-f.jpg"></img></td>
+</tr></table>
+          <p>A common use for setting <code>scale9Grid</code> is to set up a display object to be used
+     as a component, in which edge regions retain the same width when the component is scaled.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scale9Grid():<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scale9Grid(value:<a href="../../flash/geom/Rectangle.html">Rectangle</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If you pass an invalid argument to the method.
+     
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/geom/Rectangle.html" target="">flash.geom.Rectangle</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Shape object with a rectangle drawn in its 
+ <code>graphics</code> property. The rectangle has a 20-pixel-thick line as the border and 
+ it is filled with a gradient. The timer event calls the <code>scale()</code> function, which
+ scales the Shape object by adjusting the <code>scaleX</code> and <code>scaleY</code> properties.
+ The <code>scale9Grid</code> applied to the Shape object prevents the rectangle's border line 
+ from scaling &mdash; only the gradient fill scales:
+<div class="listing"><pre>
+
+import flash.display.Shape;
+import flash.display.GradientType;
+import flash.display.SpreadMethod;
+import flash.display.InterpolationMethod;
+import flash.geom.Matrix;
+import flash.geom.Rectangle;
+import flash.utils.Timer;
+import flash.events.TimerEvent;
+
+var square:Shape = new Shape();
+square.graphics.lineStyle(20, 0xFFCC00);
+var gradientMatrix:Matrix = new Matrix();
+gradientMatrix.createGradientBox(15, 15, Math.PI, 10, 10);
+square.graphics.beginGradientFill(GradientType.RADIAL, 
+            [0xffff00, 0x0000ff], 
+            [100, 100], 
+            [0, 0xFF], 
+            gradientMatrix, 
+            SpreadMethod.REFLECT, 
+            InterpolationMethod.RGB, 
+            0.9);
+square.graphics.drawRect(0, 0, 100, 100);
+
+var grid:Rectangle = new Rectangle(20, 20, 60, 60);
+square.scale9Grid = grid ;
+
+addChild(square);
+
+var tim:Timer = new Timer(100);
+tim.start();
+tim.addEventListener(TimerEvent.TIMER, scale);
+
+var scaleFactor:Number = 1.01;
+
+function scale(event:TimerEvent):void {
+    square.scaleX *= scaleFactor;
+    square.scaleY *= scaleFactor;
+    
+    if (square.scaleX &gt; 2.0) {
+        scaleFactor = 0.99;
+    }
+    if (square.scaleX &lt; 1.0) {
+        scaleFactor = 1.01;
+    }
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="scaleX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scaleX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scaleX:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the horizontal scale (<code>percentage</code>) of the object as applied from the registration point. The default
+     registration point is (0,0). 1.0 equals 100% scale.
+          <p>Scaling the local coordinate system affects the <code>x</code> and <code>y</code> property settings, which are defined in
+     whole pixels. </p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scaleX():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scaleX(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object with a rectangle drawn in its 
+ <code>graphics</code> property. When the user clicks the sprite, it scales by 10%:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFFCC00);
+square.graphics.drawRect(0, 0, 100, 100);
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, scale);
+
+function scale(event:MouseEvent):void {
+    square.scaleX *= 1.10;
+    square.scaleY *= 1.10;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="scaleY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scaleY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scaleY:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the vertical scale (<code>percentage</code>) of an object as applied from the registration point of the object. The
+     default registration point is (0,0). 1.0 is 100% scale.
+          <p>Scaling the local coordinate system affects the <code>x</code> and <code>y</code> property settings, which are defined in
+     whole pixels. </p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scaleY():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scaleY(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object with a rectangle drawn in its 
+ <code>graphics</code> property. When the user clicks the sprite, it scales by 10%:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFFCC00);
+square.graphics.drawRect(0, 0, 100, 100);
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, scale);
+
+function scale(event:MouseEvent):void {
+    square.scaleX *= 1.10;
+    square.scaleY *= 1.10;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="scrollRect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scrollRect</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>scrollRect:<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The scroll rectangle bounds of the display object. The display object is cropped to the size 
+     defined by the rectangle, and it scrolls within the rectangle when you change the 
+     <code>x</code> and <code>y</code> properties of the <code>scrollRect</code> object.
+     
+     <p>The properties of the <code>scrollRect</code> Rectangle object use the display object's coordinate space 
+     and are scaled just like the overall display object. The corner bounds of the cropped window on the scrolling 
+     display object are the origin of the display object (0,0) and the point defined by the
+     width and height of the rectangle. They are not centered around the origin, but 
+     use the origin to define the upper-left corner of the area. A scrolled display object always 
+     scrolls in whole pixel increments. </p>
+     
+     <p>You can scroll an object left and right by setting the <code>x</code> property of the 
+     <code>scrollRect</code> Rectangle object. You can scroll an object up and down by setting 
+     the <code>y</code> property of the <code>scrollRect</code> Rectangle object. If the display object 
+     is rotated 90&deg; and you scroll it left and right, the display object actually scrolls up and down.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get scrollRect():<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set scrollRect(value:<a href="../../flash/geom/Rectangle.html">Rectangle</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/geom/Rectangle.html" target="">flash.geom.Rectangle</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how the <code>scrollRect</code> property defines the
+ scrolling area for a display object, <code>circle</code>. When you click the <code>circle</code> object,
+ the <code>clicked()</code> event handler method adjusts the <code>y</code> property of the 
+ <code>scrollRect</code> property of the <code>circle</code> object, causing the object to scroll down:<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.geom.Rectangle;
+import flash.events.MouseEvent;
+
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xFFCC00);
+circle.graphics.drawCircle(200, 200, 200);
+circle.scrollRect = new Rectangle(0, 0, 200, 200);
+addChild(circle);
+
+circle.addEventListener(MouseEvent.CLICK, clicked);
+
+function clicked(event:MouseEvent):void {
+    var rect:Rectangle = event.target.scrollRect;
+    rect.y -= 5;
+    event.target.scrollRect = rect;
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="stage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stage:<a href="../../flash/display/Stage.html">Stage</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The Stage of the display object. A Flash application has only one Stage object.
+     For example, you can create and load multiple display objects into the display list, and the
+     <code>stage</code> property of each display object refers to the same Stage object (even if the
+     display object belongs to a loaded SWF file).
+     
+     <p>If a display object is not added to the display list, its <code>stage</code> property is set to 
+     <code>null</code>.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stage():<a href="../../flash/display/Stage.html">Stage</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates two TextField objects and uses the 
+ <code>width</code> property of the Stage object to position the text fields:
+<div class="listing"><pre>
+
+import flash.text.TextField;
+
+var tf1:TextField = new TextField();
+tf1.text = "Text Field 1";
+tf1.border = true;
+tf1.x = 10;
+addChild(tf1);
+tf1.width = tf1.stage.stageWidth / 2 - 10;
+
+var tf2:TextField = new TextField();
+tf2.text = "Text Field 2";
+tf2.border = true;
+tf2.x = tf1.x + tf1.width + 5;
+addChild(tf2);
+tf2.width = tf2.stage.stageWidth / 2 - 10;
+
+trace(stage.stageWidth);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="transform"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">transform</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>transform:<a href="../../flash/geom/Transform.html">Transform</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    An object with properties pertaining to a display object's matrix, color transform, and pixel bounds.
+    The specific properties &mdash; matrix, colorTransform, and three read-only properties 
+    (<code>concatenatedMatrix</code>, <code>concatenatedColorTransform</code>, 
+    and <code>pixelBounds</code>) &mdash; are described in the entry for the Transform class.
+    
+    <p>Each of the transform object's properties is itself an object. This concept is important because the only
+    way to set new values for the matrix or colorTransform objects is to create a new object and copy that
+    object into the transform.matrix or transform.colorTransform property.</p>
+    
+    <p>For example, to increase the <code>tx</code> value of a display object's matrix, you must make a
+    copy of the entire matrix object, then copy the new object into the matrix property of the transform
+    object:</p>
+    
+    <pre><code>
+    var myMatrix:Object = myDisplayObject.transform.matrix;  
+    myMatrix.tx += 10; 
+    myDisplayObject.transform.matrix = myMatrix;  
+    </code></pre>
+    
+    <p>You cannot directly set the <code>tx</code> property. The following code has
+    no effect on <code>myDisplayObject</code>: </p>
+    
+    <pre><code>
+    myDisplayObject.transform.matrix.tx += 10;
+    </code></pre>
+    
+    <p>You can also copy an entire transform object and assign it to another
+    display object's transform property. For example, the following code 
+    copies the entire transform object from <code>myOldDisplayObj</code> to
+    <code>myNewDisplayObj</code>:</p>
+    <code>myNewDisplayObj.transform = myOldDisplayObj.transform;</code>
+    <p>The resulting display object, <code>myNewDisplayObj</code>, now has the same values for its
+    matrix, color transform, and pixel bounds as the old display object, <code>myOldDisplayObj</code>.</p>
+         </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get transform():<a href="../../flash/geom/Transform.html">Transform</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set transform(value:<a href="../../flash/geom/Transform.html">Transform</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/geom/Transform.html" target="">Transform class</a>
+<br>
+<a href="../../../main/00000188.html" target="_top">Using Matrix objects</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code sets up a <code>square</code> Sprite object. 
+ When the user clicks the sprite, the <code>transformer()</code> method adjusts
+ the <code>colorTransform</code> and <code>matrix</code> properties of the 
+ <code>transform</code> property of the sprite:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.geom.ColorTransform;
+import flash.geom.Matrix;
+import flash.geom.Transform;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.lineStyle(20, 0xFF2200);
+square.graphics.beginFill(0x0000DD);
+square.graphics.drawRect(0, 0, 100, 100);
+addChild(square);
+
+var resultColorTransform:ColorTransform = new ColorTransform();
+resultColorTransform.alphaMultiplier = 0.5;
+resultColorTransform.redOffset = 155;
+resultColorTransform.greenMultiplier = 0.5;
+
+var skewMatrix:Matrix = new Matrix(1, 1, 0, 1);
+
+square.addEventListener(MouseEvent.CLICK, transformer);
+
+function transformer(event:MouseEvent):void {
+    var transformation:Transform = square.transform;
+    var tempMatrix:Matrix = square.transform.matrix;
+    tempMatrix.concat(skewMatrix);
+    square.transform.colorTransform = resultColorTransform;
+    
+    square.transform.matrix = tempMatrix;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="visible"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">visible</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>visible:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Whether or not the display object is visible. Display objects that are not visible
+     are disabled. For example, if <code>visible=false</code> for an InteractiveObject instance,
+     it cannot be clicked.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get visible():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set visible(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses a Timer object to call a function that 
+ periodically changes the <code>visible</code> property of a display object,
+ resulting in a blinking effect:
+<div class="listing"><pre>
+
+import flash.text.TextField;
+import flash.utils.Timer;
+import flash.events.TimerEvent;
+
+var tf:TextField = new TextField();
+tf.text = "Hello.";
+addChild(tf);
+
+var tim:Timer = new Timer(250);
+tim.start();
+tim.addEventListener(TimerEvent.TIMER, blinker);
+
+function blinker(event:TimerEvent):void {
+    tf.visible = !tf.visible;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="width"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">width</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>width:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the width of the display object, in pixels. The width is calculated based on the bounds of the content of the display object.
+     When you set the <code>width</code> property, the <code>scaleX</code> property is adjusted accordingly, as shown in the 
+  following code:
+     
+  <div class="listing"><pre>
+ var rect:Shape = new Shape();
+ rect.graphics.beginFill(0xFF0000);
+ rect.graphics.drawRect(0, 0, 100, 100);
+ trace(rect.scaleX) // 1;
+ rect.width = 200;
+ trace(rect.scaleX) // 2;</pre></div>
+ 
+ <p>Except for TextField and Video objects, a display object with no content (such as an empty sprite) has a width 
+ of 0, even if you try to set <code>width</code> to a different value.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get width():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set width(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code sets up a <code>square</code> Sprite object. 
+ When the user clicks the sprite, the <code>widen()</code> method increases
+ the <code>width</code> property of the sprite:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFF0000);
+square.graphics.drawRect(0, 0, 100, 100);
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, widen);
+
+function widen(event:MouseEvent):void {
+    square.width += 10;
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="x"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">x</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>x:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <i>x</i> coordinate of the DisplayObject instance relative to the local coordinates of
+     the parent DisplayObjectContainer. If the object is inside a DisplayObjectContainer that has
+     transformations, it is in the local coordinate system of the enclosing DisplayObjectContainer.
+     Thus, for a DisplayObjectContainer rotated 90&deg; counterclockwise, the DisplayObjectContainer's
+     children inherit a coordinate system that is rotated 90&deg; counterclockwise.
+     The object's coordinates refer to the registration point position.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get x():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set x(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code sets up a <code>circle</code> Sprite object. 
+ A Timer object is used to change the <code>x</code> property of the sprite
+ every 50 milliseconds:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.utils.Timer;
+import flash.events.TimerEvent;
+
+var circle:Sprite = new Sprite();
+circle.graphics.beginFill(0xFF0000);
+circle.graphics.drawCircle(100, 100, 100);
+addChild(circle);
+
+var tim:Timer = new Timer(50);
+tim.start();
+tim.addEventListener(TimerEvent.TIMER, bounce);
+
+var xInc:Number = 2;
+
+function bounce(event:TimerEvent):void {
+    circle.x += xInc;
+    if (circle.x &gt; circle.width) {
+        xInc = -2;
+    }
+    if (circle.x &lt; 0) {
+        xInc = 2;
+    }
+}</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="y"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">y</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>y:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the <i>y</i> coordinate of the DisplayObject instance relative to the local coordinates of
+     the parent DisplayObjectContainer. If the object is inside a DisplayObjectContainer that has
+     transformations, it is in the local coordinate system of the enclosing DisplayObjectContainer.
+     Thus, for a DisplayObjectContainer rotated 90&deg; counterclockwise, the DisplayObjectContainer's
+     children inherit a coordinate system that is rotated 90&deg; counterclockwise.
+     The object's coordinates refer to the registration point position.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get y():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set y(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates two TextField objects and adjusts the 
+ <code>height</code> property of each based on the <code>textHeight</code> property of 
+ each; it also positions the second text field by setting its <code>y</code> property:
+<div class="listing"><pre>
+import flash.text.TextField;
+
+var tf1:TextField = new TextField();
+tf1.text = "Text Field 1";
+tf1.border = true;
+tf1.wordWrap = true;
+tf1.width = 40;
+tf1.height = tf1.textHeight + 5;
+addChild(tf1);
+
+var tf2:TextField = new TextField();
+tf2.text = "Text Field 2";
+tf2.border = true;
+tf2.wordWrap = true;
+tf2.width = 40;
+tf2.height = tf2.textHeight + 5;
+tf2.y = tf1.y + tf1.height + 5;
+addChild(tf2);</pre></div></div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="getBounds()"></a><a name="getBounds(flash.display.DisplayObject)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getBounds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getBounds(targetCoordinateSpace:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Returns a rectangle that defines the area of the display object relative to the coordinate system
+     of the <code>targetCoordinateSpace</code> object.
+     Consider the following code, which shows how the rectangle returned can vary depending on the
+     <code>targetCoordinateSpace</code> parameter that you pass to the method:
+          <div class="listing"><pre>
+     var container:Sprite = new Sprite();
+     container.x = 100;
+     container.y = 100;
+     this.addChild(container);
+     var contents:Shape = new Shape();
+     contents.graphics.drawCircle(0,0,100);
+     container.addChild(contents);
+     trace(contents.getBounds(container));
+      // (x=-100, y=-100, w=200, h=200)
+     trace(contents.getBounds(this));
+      // (x=0, y=0, w=200, h=200)
+     </pre></div>
+<p>
+<b>Note:</b> Use the <code>localToGlobal()</code> and
+     <code>globalToLocal()</code> methods to convert the display object's local coordinates
+     to display coordinates, or display coordinates to local coordinates, respectively.</p>
+<p>The <code>getBounds()</code> method is similar to the <code>getRect()</code> method; 
+     however, the Rectangle returned by the <code>getBounds()</code> method includes any strokes 
+     on shapes, whereas the Rectangle returned by the <code>getRect()</code> method does not. 
+     For an example, see the description of the <code>getRect()</code> method.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">targetCoordinateSpace</span>:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code> &mdash; The display object that defines the coordinate system to use.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Rectangle.html">Rectangle</a></code> &mdash; The rectangle that defines the area of the display object relative to
+     the <code>targetCoordinateSpace</code> object's coordinate system.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#getRect()" target="">getRect()</a>
+<br>
+<a href="DisplayObject.html#globalToLocal()" target="">globalToLocal()</a>
+<br>
+<a href="DisplayObject.html#localToGlobal()" target="">localToGlobal()</a>
+</div>
+</div>
+<a name="getRect()"></a><a name="getRect(flash.display.DisplayObject)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRect(targetCoordinateSpace:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../flash/geom/Rectangle.html">Rectangle</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Returns a rectangle that defines the boundary of the display object, 
+    based on the coordinate system defined by the <code>targetCoordinateSpace</code> 
+    parameter, excluding any strokes on shapes. The values that the <code>getRect()</code> method
+    returns are the same or smaller than those returned by the <code>getBounds()</code> method.
+    
+    <p>
+<b>Note:</b> Use <code>localToGlobal()</code> and <code>globalToLocal()</code> methods 
+    to convert the display object's local coordinates to Stage coordinates, or Stage coordinates to 
+    local coordinates, respectively.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">targetCoordinateSpace</span>:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code> &mdash; The display object that defines the coordinate system to use.
+    
+    </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Rectangle.html">Rectangle</a></code> &mdash; The rectangle that defines the area of the display object relative to
+    the <code>targetCoordinateSpace</code> object's coordinate system.
+    
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#getBounds()" target="">getBounds()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example shows how the <code>getBounds()</code> method can return a larger
+ rectangle than the <code>getRect()</code> method does, because of the additional area taken up by
+ strokes. In this case, the <code>triangle</code> sprite includes extra strokes because of the values passed as the
+ <code>width</code> and <code>jointStyle</code> parameters of the <code>lineStyle()</code>
+ method. The <code>trace()</code> output (in the last two lines) shows the differences between
+ the <code>getRect()</code> and <code>getBounds()</code> rectangles:<div class="listing"><pre>
+
+import flash.display.CapsStyle;
+import flash.display.JointStyle;
+import flash.display.LineScaleMode;
+import flash.display.Sprite;
+import flash.geom.Rectangle;
+
+var triangle:Sprite = new Sprite();
+var color:uint = 0xFF0044;
+var lineWidth:Number = 20;
+var lineAlpha:Number = 1.0;
+var pixelHinting:Boolean = true;
+var scaleMode:String = LineScaleMode.NORMAL;
+var caps:String = CapsStyle.SQUARE;
+var joints:String = JointStyle.MITER;
+triangle.graphics.lineStyle(lineWidth, color, lineAlpha, pixelHinting, scaleMode, caps, joints);
+
+var triangleSide:Number = 100;
+triangle.graphics.moveTo(0, 0);
+triangle.graphics.lineTo(0, triangleSide);
+triangle.graphics.lineTo(triangleSide, triangleSide);
+triangle.graphics.lineTo(0, 0);
+
+addChild(triangle);
+
+trace(triangle.getBounds(this)); // (x=-10, y=-24.1, w=134.1, h=134.1)
+trace(triangle.getRect(this));     // (x=0, y=0, w=100, h=100)</pre></div>
+</div>
+</div>
+<a name="globalToLocal()"></a><a name="globalToLocal(flash.geom.Point)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">globalToLocal</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function globalToLocal(point:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Converts the <code>point</code> object from the Stage (global) coordinates
+     to the display object's (local) coordinates.
+          <p>To use this method, first create an instance of the Point class. The
+     <i>x</i> and <i>y</i> values that you assign represent global coordinates because they
+     relate to the origin (0,0) of the main display area. Then pass the Point instance
+     as the parameter to the <code>globalToLocal()</code> method. The method returns a new Point object with
+     <i>x</i> and <i>y</i> values that relate to the origin of the display object
+     instead of the origin of the Stage.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; An object created with the Point class. The Point object
+     specifies the <i>x</i> and <i>y</i> coordinates as properties.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Point.html">Point</a></code> &mdash; A Point object with coordinates relative to the display object.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#localToGlobal()" target="">localToGlobal()</a>
+<br>
+<a href="../../flash/geom/Point.html" target="">flash.geom.Point class</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Shape object and shows the
+ result of calling the <code>hitTestPoint()</code> method, using different
+ points as parameters. The <code>globalToLocal()</code> method converts the 
+ point from Stage coordinates to the coordinate space of the shape:
+<div class="listing"><pre>
+
+import flash.display.Shape;
+import flash.geom.Point;
+
+var circle:Shape = new Shape();
+circle.graphics.beginFill(0x0000FF);
+circle.graphics.drawCircle(40, 40, 40);
+circle.x = 10;
+addChild(circle);
+
+var point1:Point = new Point(0, 0);
+trace(circle.hitTestPoint(point1.x, point1.y, true)); // false
+trace(circle.hitTestPoint(point1.x, point1.y, false)); // false
+trace(circle.globalToLocal(point1)); // [x=-10, y=0]
+
+var point2:Point = new Point(10, 1);
+trace(circle.hitTestPoint(point2.x, point2.y, true)); // false
+trace(circle.hitTestPoint(point2.x, point2.y, false)); // true
+trace(circle.globalToLocal(point2)); // [x=0, y=1]
+
+var point3:Point = new Point(30, 20);
+trace(circle.hitTestPoint(point3.x, point3.y, true)); // true
+trace(circle.hitTestPoint(point3.x, point3.y, false)); // true
+trace(circle.globalToLocal(point3)); // [x=20, y=20]</pre></div>
+</div>
+</div>
+<a name="hitTestObject()"></a><a name="hitTestObject(flash.display.DisplayObject)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hitTestObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hitTestObject(obj:<a href="../../flash/display/DisplayObject.html">DisplayObject</a>):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Evaluates the display object to see if it overlaps or intersects with the
+     <code>obj</code> display object.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">obj</span>:<a href="../../flash/display/DisplayObject.html">DisplayObject</a></code> &mdash; The display object to test against.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if the display objects intersect; <code>false</code> if not.
+          </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates three Shape objects and shows the
+ result of calling the <code>hitTestObject()</code> method:
+<div class="listing"><pre>
+
+import flash.display.Shape;
+
+var circle1:Shape = new Shape();
+circle1.graphics.beginFill(0x0000FF);
+circle1.graphics.drawCircle(40, 40, 40);
+addChild(circle1);
+
+var circle2:Shape = new Shape();
+circle2.graphics.beginFill(0x00FF00);
+circle2.graphics.drawCircle(40, 40, 40);
+circle2.x = 50;
+addChild(circle2);
+
+var circle3:Shape = new Shape();
+circle3.graphics.beginFill(0xFF0000);
+circle3.graphics.drawCircle(40, 40, 40);
+circle3.x = 100;
+circle3.y = 67;
+addChild(circle3);
+
+trace(circle1.hitTestObject(circle2)); // true
+trace(circle1.hitTestObject(circle3)); // false
+trace(circle2.hitTestObject(circle3)); // true
+</pre></div>
+</div>
+</div>
+<a name="hitTestPoint()"></a><a name="hitTestPoint(Number,Number,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hitTestPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hitTestPoint(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, shapeFlag:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Evaluates the display object to see if it overlaps or intersects with the
+     point specified by the <code>x</code> and <code>y</code> parameters.
+     The <code>x</code> and <code>y</code> parameters specify a point in the 
+     coordinate space of the Stage, not the display object container that contains the 
+     display object (unless that display object container is the Stage).
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>x</i> coordinate to test against this object.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>y</i> coordinate to test against this object.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">shapeFlag</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Whether to check against the actual pixels of the object (<code>true</code>)
+     or the bounding box (<code>false</code>). 
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; 
+<code>true</code> if the display object overlaps or intersects with the specified point;
+     <code>false</code> otherwise.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#opaqueBackground" target="">opaqueBackground</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Shape object and shows the
+ result of calling the <code>hitTestPoint()</code> method, using different
+ points as parameters. The <code>globalToLocal()</code> method converts the 
+ point from Stage coordinates to the coordinate space of the shape:
+<div class="listing"><pre>
+
+import flash.display.Shape;
+import flash.geom.Point;
+
+var circle:Shape = new Shape();
+circle.graphics.beginFill(0x0000FF);
+circle.graphics.drawCircle(40, 40, 40);
+circle.x = 10;
+addChild(circle);
+
+var point1:Point = new Point(0, 0);
+trace(circle.hitTestPoint(point1.x, point1.y, true)); // false
+trace(circle.hitTestPoint(point1.x, point1.y, false)); // false
+trace(circle.globalToLocal(point1)); // [x=-10, y=0]
+
+var point2:Point = new Point(10, 1);
+trace(circle.hitTestPoint(point2.x, point2.y, true)); // false
+trace(circle.hitTestPoint(point2.x, point2.y, false)); // true
+trace(circle.globalToLocal(point2)); // [x=0, y=1]
+
+var point3:Point = new Point(30, 20);
+trace(circle.hitTestPoint(point3.x, point3.y, true)); // true
+trace(circle.hitTestPoint(point3.x, point3.y, false)); // true
+trace(circle.globalToLocal(point3)); // [x=20, y=20]</pre></div>
+</div>
+</div>
+<a name="localToGlobal()"></a><a name="localToGlobal(flash.geom.Point)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">localToGlobal</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function localToGlobal(point:<a href="../../flash/geom/Point.html">Point</a>):<a href="../../flash/geom/Point.html">Point</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Converts the <code>point</code> object from the display object's (local) coordinates to the
+     Stage (global) coordinates.
+          <p>This method allows you to convert any given <i>x</i> and <i>y</i> coordinates from
+     values that are relative to the origin (0,0) of a specific display object (local coordinates)
+     to values that are relative to the origin of the Stage (global coordinates).</p>
+<p>To use this method, first create an instance of the Point class. The
+     <i>x</i> and <i>y</i> values that you assign represent local coordinates because they
+     relate to the origin of the display object.</p>
+<p>You then pass the Point instance that you created as the parameter to
+     the <code>localToGlobal()</code> method. The method returns a new Point object with
+     <i>x</i> and <i>y</i> values that relate to the origin of the Stage
+     instead of the origin of the display object.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="../../flash/geom/Point.html">Point</a></code> &mdash; The name or identifier of a point created with the Point class, specifying the
+     <i>x</i> and <i>y</i> coordinates as properties.
+          </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/geom/Point.html">Point</a></code> &mdash; A Point object with coordinates relative to the Stage.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObject.html#globalToLocal()" target="">globalToLocal()</a>
+<br>
+<a href="../../flash/geom/Point.html" target="">flash.geom.Point class</a>
+<br>
+<a href="../../../main/00000186.html" target="_top">Using Point objects</a>
+<br>
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a Sprite object. The <code>mouseX</code> and 
+ <code>mouseY</code> properties of the sprite are in the coordinate space of the display 
+ object. This code uses the <code>localToGlobal()</code> method to translate these 
+ properties to the global (Stage) coordinates:
+<div class="listing"><pre>
+
+import flash.display.Sprite;
+import flash.events.MouseEvent;
+import flash.geom.Point;
+
+var square:Sprite = new Sprite();
+square.graphics.beginFill(0xFFCC00);
+square.graphics.drawRect(0, 0, 100, 100);
+square.x = 100;
+square.y = 200;
+
+addChild(square);
+
+square.addEventListener(MouseEvent.CLICK, traceCoordinates)
+
+function traceCoordinates(event:MouseEvent):void {
+    var clickPoint:Point = new Point(square.mouseX, square.mouseY);
+    trace("display object coordinates:", clickPoint);
+    trace("stage coordinates:", square.localToGlobal(clickPoint));
+}</pre></div>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:added"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">added</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#ADDED"><code>flash.events.Event.ADDED</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a display object is added to the display list. The 
+ following methods trigger this event: <code>DisplayObjectContainer.addChild()</code>, 
+ <code>DisplayObjectContainer.addChildAt()</code>.
+ </p>
+ The <code>Event.ADDED</code> constant defines the value of the <code>type</code> property of 
+ an <code>added</code> event object. 
+ 
+ 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>true</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The DisplayObject instance being added to the display list.
+ The <code>target</code> is not always the object in the display list 
+ that registered the event listener. Use the <code>currentTarget</code> 
+ property to access the object in the display list that is currently processing the event.</td>
+</tr></table>
+ 
+ <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObjectContainer.html#addChild()" target="">flash.display.DisplayObjectContainer.addChild()</a>
+<br>
+<a href="DisplayObjectContainer.html#addChildAt()" target="">flash.display.DisplayObjectContainer.addChildAt()</a>
+</div>
+</div>
+<a name="event:addedToStage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addedToStage</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#ADDED_TO_STAGE"><code>flash.events.Event.ADDED_TO_STAGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a display object is added to the on stage display list, 
+ either directly or through the addition of a sub tree in which the display object is contained. The 
+ following methods trigger this event: <code>DisplayObjectContainer.addChild()</code>, 
+ <code>DisplayObjectContainer.addChildAt()</code>.
+ </p>
+ The <code>Event.ADDED_TO_STAGE</code> constant defines the value of the <code>type</code> 
+ property of an <code>addedToStage</code> event object. 
+ 
+ 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The DisplayObject instance being added to the on stage display list,
+ either directly or through the addition of a sub tree in which the DisplayObject instance is contained.
+ If the DisplayObject instance is being directly added, the <code>added</code> event occurs before this event.</td>
+</tr></table>
+ 
+ <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DisplayObjectContainer.html#addChild()" target="">flash.display.DisplayObjectContainer.addChild()</a>
+<br>
+<a href="DisplayObjectContainer.html#addChildAt()" target="">flash.display.DisplayObjectContainer.addChildAt()</a>
+</div>
+</div>
+<a name="event:enterFrame"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">enterFrame</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#ENTER_FRAME"><code>flash.events.Event.ENTER_FRAME</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the playhead is entering a new 
+ frame. If the playhead is not moving, or if there is only one frame, this event
+ is dispatched continuously in conjunction with the frame rate. 
+ This event is dispatched simultaneously
+ to all display objects listenting for this event.
+ </p>
+ The <code>Event.ENTER_FRAME</code> constant defines the value of the <code>type</code> property of 
+ an <code>enterFrame</code> event object. 
+ 
+ 
+ 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the ENTER_FRAME event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:removed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removed</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#REMOVED"><code>flash.events.Event.REMOVED</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a display object is about to be removed from the display list. 
+ Two methods of the DisplayObjectContainer class generate this event: 
+ <code>removeChild()</code> and <code>removeChildAt()</code>. 
+ 
+ <p>The following methods of a DisplayObjectContainer object also generate this event if an object must be removed 
+ to make room for the new object:  <code>addChild()</code>, <code>addChildAt()</code>, and 
+ <code>setChildIndex()</code>. </p>
+ </p>
+ The <code>Event.REMOVED</code> constant defines the value of the <code>type</code> property of
+ a <code>removed</code> event object. 
+ 
+ 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>true</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The DisplayObject instance to be removed from the display list. 
+ The <code>target</code> is not always the object in the display list 
+ that registered the event listener. Use the <code>currentTarget</code> 
+ property to access the object in the display list that is currently processing the event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:removedFromStage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removedFromStage</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#REMOVED_FROM_STAGE"><code>flash.events.Event.REMOVED_FROM_STAGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a display object is about to be removed from the display list, 
+ either directly or through the removal of a sub tree in which the display object is contained. 
+ Two methods of the DisplayObjectContainer class generate this event: 
+ <code>removeChild()</code> and <code>removeChildAt()</code>. 
+ 
+ <p>The following methods of a DisplayObjectContainer object also generate this event if an object must be removed 
+ to make room for the new object:  <code>addChild()</code>, <code>addChildAt()</code>, and 
+ <code>setChildIndex()</code>. </p>
+ </p>
+ The <code>Event.REMOVED_FROM_STAGE</code> constant defines the value of the <code>type</code> 
+ property of a <code>removedFromStage</code> event object. 
+ 
+ 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The DisplayObject instance being removed from the on stage display list,
+ either directly or through the removal of a sub tree in which the DisplayObject instance is contained.
+ If the DisplayObject instance is being directly removed, the <code>removed</code> event occurs before this event.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:render"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#RENDER"><code>flash.events.Event.RENDER</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the display list is about to be updated and rendered. This event provides the last opportunity 
+ for objects listening for this event to make changes before the display list is rendered. 
+ You must call the <code>invalidate()</code> method 
+ of the Stage object 
+ each time you want a <code>render</code> event to be dispatched. <code>Render</code> events 
+ are dispatched to an object only if there is mutual trust between it and the object that called 
+ <code>Stage.invalidate()</code>.
+ 
+ <p><b>Note: </b>This event is not dispatched if the display is 
+ not rendering. This is the case when the content is either minimized or obscured. </p>
+ </p>
+ The <code>Event.RENDER</code> constant defines the value of the <code>type</code> property of a <code>render</code> event object. 
+    <p><b>Note:</b> This event does not go through a "capture phase" and is dispatched directly to the target, whether the target is on the display list or not.</p>
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; the default behavior cannot be canceled.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>Any DisplayObject instance with a listener registered for the RENDER event.</td>
+</tr></table>
+ 
+ </div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">DisplayObjectExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the <code>DisplayObjectExample</code> class to
+ draw an orange square in the corner of the Stage and then respond to events by displaying text
+ information for each event.  This task is accomplished by performing the following steps:
+ <ol>
+    <li>Class properties are declared for the color and size of the square.</li>
+ 	<li>The constructor calls the <code>draw()</code> method, which draws an orange square on
+ 	the Stage at the default coordinates of <i>x = 0, y = 0</i>.</li>
+	<li>The following event listener methods are attached to the square:
+ 	<ul>
+		<li><code>addedHandler()</code> listens for <code>added</code> events, dispatched when the
+ 		square is added to the display list.</li>
+		<li><code>enterFrameHandler()</code> listens for <code>enterFrame</code> events, which have no
+ 		real meaning in this example.</li>
+		<li><code>removedHandler()</code> listens for <code>removed</code> events, dispatched when
+ 		the square is removed from the display list, which happens when the square is clicked.</li>
+		<li><code>clickHandler()</code> listens for <code>click</code> events, dispatched when the
+ 		orange square is clicked.</li>
+		<li><code>renderHandler()</code> listens for <code>render</code> events after the display
+ 		list is updated.</li>
+  </ul></li>
+ </ol>
+<div class="listing"><pre>
+
+package {
+    import flash.display.Sprite;
+
+    public class DisplayObjectExample extends Sprite {
+        public function DisplayObjectExample() {
+            var child:CustomDisplayObject = new CustomDisplayObject();
+            addChild(child);
+        }
+    }
+}
+
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.display.Stage;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.events.*;
+
+class CustomDisplayObject extends Sprite {
+    private var bgColor:uint = 0xFFCC00;
+    private var size:uint    = 80;
+
+    public function CustomDisplayObject() {
+        draw();
+        addEventListener(Event.ADDED, addedHandler);
+        addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+        addEventListener(Event.REMOVED, removedHandler);
+        addEventListener(MouseEvent.CLICK, clickHandler);
+        addEventListener(Event.RENDER, renderHandler);
+    }
+
+    private function draw():void {
+        graphics.beginFill(bgColor);
+        graphics.drawRect(0, 0, size, size);
+        graphics.endFill();
+    }
+
+    private function clickHandler(event:MouseEvent):void {
+        trace("clickHandler: " + event);
+        parent.removeChild(this);
+    }
+
+    private function addedHandler(event:Event):void {
+        trace("addedHandler: " + event);
+        stage.scaleMode = StageScaleMode.NO_SCALE;
+        stage.align = StageAlign.TOP_LEFT;
+        stage.addEventListener("resize", resizeHandler);
+    }
+
+    private function enterFrameHandler(event:Event):void {
+        trace("enterFrameHandler: " + event);
+        removeEventListener("enterFrame", enterFrameHandler);
+    }
+
+    private function removedHandler(event:Event):void {
+        trace("removedHandler: " + event);
+        stage.removeEventListener("resize", resizeHandler);
+    }
+
+    private function renderHandler(event:Event):void {
+        trace("renderHandler: " + event);
+    }
+
+    private function resizeHandler(event:Event):void {
+        trace("resizeHandler: " + event);
+    }
+}
+</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

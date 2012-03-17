@@ -1,0 +1,48 @@
+/* CSS file */
+@namespace "library://ns.adobe.com/flex/spark";
+
+/* 240 */
+
+ListForm
+{
+    skinClass: ClassReference("spark.skins.mobile.ListFormSkin");
+}
+
+ListForm #titleDisplay
+{
+    color: #FFFFFF;
+    chromeColor: #484848;
+    fontWeight: bold;
+    fontSize: 20;
+}
+
+Panel
+{
+    skinClass: ClassReference("spark.skins.mobile.PanelSkin");
+}
+
+ListFormItemRenderer
+{
+    borderWeight: 1;
+}
+
+@media (application-dpi: 160)
+{
+    ListForm #titleDisplay
+    {
+        fontSize: 14;
+    }
+}
+
+@media (application-dpi: 320)
+{
+    ListForm #titleDisplay
+    {
+        fontSize: 28;
+    }
+    
+    ListFormItemRenderer
+    {
+        borderWeight: 2;
+    }
+}

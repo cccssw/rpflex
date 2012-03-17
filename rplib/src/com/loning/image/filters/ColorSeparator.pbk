@@ -1,0 +1,141 @@
+<languageVersion : 1.0;>
+/* Color Separation - Pixel Blender Effect
+ * ColorSeparator.pbk
+ *
+ * Copyright (c) 2011 Chase Pettit
+ * http://chasepettit.com
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ */
+
+kernel ColorSeparator
+<   namespace : "PixelBenderEffects";
+    vendor : "Chase Pettit";
+    version : 1;
+    description : "Separate and fade color channels.";
+    displayname: "Color Separation Effect";
+    category: "Pixel Bender";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float2 or
+    <
+        maxValue: float2(10.0, 10.0);
+        minValue: float2(-10.0, -10.0);
+        defaultValue: float2(0.0, 0.0);
+        stepInterval: float2(0.1, 0.1);
+        previewValue: float2(10.0, 10.0);
+        
+        displayName: "Red Channel Offset Distance";
+        description: "Number of pixels to shift red channel";
+    >;
+    
+    parameter float2 og
+    <
+        maxValue: float2(10.0, 10.0);
+        minValue: float2(-10.0, -10.0);
+        defaultValue: float2(0.0, 0.0);
+        stepInterval: float2(0.1, 0.1);
+        previewValue: float2(0.0, 0.0);
+        
+        displayName: "Green Channel Offset Distance";
+        description: "Number of pixels to shift green channel";
+    >;
+    
+    parameter float2 ob
+    <
+        maxValue: float2(10.0, 10.0);
+        minValue: float2(-10.0, -10.0);
+        defaultValue: float2(0.0, 0.0);
+        stepInterval: float2(0.1, 0.1);
+        previewValue: float2(-10.0, -10.0);
+        
+        displayName: "Blue Channel Offset Distance";
+        description: "Number of pixels to shift blue channel";
+    >;
+    
+    parameter float2 oa
+    <
+        maxValue: float2(10.0, 10.0);
+        minValue: float2(-10.0, -10.0);
+        defaultValue: float2(0.0, 0.0);
+        stepInterval: float2(0.1, 0.1);
+        previewValue: float2(0.0, 0.0);
+        
+        displayName: "Alpha Channel Offset Distance";
+        description: "Number of pixels to shift alpha channel";
+    >;
+    
+    parameter float rfade
+    <
+        minValue:0.0;
+        maxValue:100.0;
+        defaultValue:100.0;
+        previewValue: 100.0;
+        minValueName: "Red Channel Not Faded";
+        maxValueName: "No Red Channel";
+        
+        displayName: "Red Channel Fade";
+        description: "Percentage of red channel to keep in the image";
+    >;
+    
+    parameter float gfade
+    <
+        minValue:0.0;
+        maxValue:100.0;
+        defaultValue:100.0;
+        previewValue: 100.0;
+        minValueName: "Green Channel Not Faded";
+        maxValueName: "No Green Channel";
+        
+        displayName: "Green Channel Fade";
+        description: "Percentage of green channel to keep in the image";
+    >;
+    
+    parameter float bfade
+    <
+        minValue:0.0;
+        maxValue:100.0;
+        defaultValue:100.0;
+        previewValue: 100.0;
+        minValueName: "Blue Channel Not Faded";
+        maxValueName: "No Blue Channel";
+        
+        displayName: "Blue Channel Fade";
+        description: "Percentage of blue channel to keep in the image";
+    >;
+    
+    parameter float afade
+    <
+        minValue:0.0;
+        maxValue:100.0;
+        defaultValue:100.0;
+        previewValue: 100.0;
+        minValueName: "Alpha Channel Not Faded";
+        maxValueName: "Image Not Visible";
+        
+        displayName: "Alpha Channel Fade";
+        description: "Percentage of alpha channel to keep in the image";
+    >;
+    
+    void evaluatePixel()
+    {
+        float2 xy = outCoord();
+                
+        dst.r = sampleLinear(src, xy - or).r * (rfade/100.0);
+        dst.g = sampleLinear(src, xy - og).g * (gfade/100.0);
+        dst.b = sampleLinear(src, xy - ob).b * (bfade/100.0);
+        dst.a = sampleLinear(src, xy - oa).a * (afade/100.0);        
+    }
+}

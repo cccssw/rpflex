@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controls:RectangleImage xmlns:fx="http://ns.adobe.com/mxml/2009" 
+						 xmlns:s="library://ns.adobe.com/flex/spark" 
+						 xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:controls="com.loning.controls.*" width="400" height="300"
+						 backgroundColor="#606060" backgroundAlpha="0.5">
+	<fx:Script>
+		<![CDATA[
+			import com.loning.controls.ResizableBorderPannel;
+			
+			override protected function createBorderPannel():ResizableBorderPannel
+			{
+				// TODO Auto Generated method stub
+				return new FaceRectanglePannel();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+</controls:RectangleImage>

@@ -1,0 +1,3350 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="SQLConnection,flash.data.SQLConnection,allowNull,autoCompact,autoIncrement,BINARY,cacheSize,columnNameStyle,columns,complete,connected,CREATE,database,data,dataType,defaultCollationType,DEFAULT,DEFERRED,EXCLUSIVE,executing,IMMEDIATE,indices,inTransaction,itemClass,lastInsertRowID,lastInsertRowID,LONG,name,name,NO_CASE,pageSize,parameters,primaryKey,READ,rowsAffected,SHORT,sqlConnection,sql,tables,table,table,text,totalChanges,triggers,UPDATE,views,addEventListener,analyze,attach,begin,cancel,cancel,clearParameters,close,commit,compact,deanalyze,detach,execute,getItem,getResult,getSchemaResult,loadSchema,next,openAsync,open,removeEventListener,removeItem,reset,rollback,setItem" name="keywords">
+<title>flash.data.SQLConnection (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'SQLConnection - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/data/SQLConnection.html&amp;flash/data/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">SQLConnection</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("SQLConnection"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<div class="annotation">(AIR only)</div>
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.data</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  SQLConnection</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SQLConnection  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ A SQLConnection instance is used to manage the creation of and connection to local SQL database files
+ (local databases).
+  <p>A local SQL database file is created or opened by calling the <code>open()</code> method or the
+ <code>openAsync()</code> method.
+ If the database file does not exist, these methods can optionally create the
+ database file while opening the connection.
+ Once a connection is made to a database, a SQL statement can be created and executed
+ against the database by creating a SQLStatement instance and assigning the
+ SQLConnection instance to the SQLStatement's <code>sqlConnection</code> property.</p>
+  <p>The SQLConnection class also provides state for SQL statements, including a
+ mechanism for executing multiple statements in a transaction, using the <code>begin()</code>,
+ <code>commit()</code>, and <code>rollback()</code> methods.</p>
+  <p>In addition, the SQLConnection class provides access to database schema information for connected
+ databases. A database's schema describes the definitions of its tables, columns, indices, and triggers.
+ See the <code>loadSchema()</code> method for more information.</p>
+  <p>Finally, a SQLConnection instance can be used to receive database-level
+ event notifications and provide configuration control for
+ all aspects of a database, including cache page size, process canceling, and statement execution
+ options.</p>
+  <p>A <code>SQLConnection</code> instance operates in one of two distinct execution modes: asynchronous
+ and synchronous. To use synchronous execution, you use the <code>open()</code> method to connect to the
+ main database for the SQLConnection instance. To use asynchronous execution, use the <code>openAsync()</code>
+ method to connect to the main database for the instance.</p>
+  <p>When you're using asynchronous execution, you use event listeners or a Responder instance to
+ determine when an operation completes or fails. The operations run in the
+ background rather than in the main application thread, so the application continues
+ to run and respond to user interaction even while the database operations are being performed.</p>
+  <p>In asynchronous execution mode, you begin a specific operation
+ by calling the appropriate method, and you can detect the completion (or failure) of the operation
+ by registering a listener for the appropriate event. Each operation has an associated event that
+ is dispatched when the operation completes successfully; for example, when an <code>openAsync()</code>
+ method call completes successfully (when the database connection is opened) the <code>open</code>
+ event is dispatched. When any operation fails,
+ an <code>error</code> event is dispatched. The SQLError instance in the SQLErrorEvent
+ object's <code>error</code> property contains information about the specific error,
+ including the operation that was being attempted and the reason the operation failed.</p>
+  <p>When you're using synchronous execution, you do not need to register event
+ listeners to determine when an operation completes or fails. To identify errors,
+ enclose the error-throwing statements in a <code>try..catch</code> block. Because
+ synchronous operations execute in the main execution thread, all application
+ functionality (including refreshing the screen and allowing mouse and keyboard
+ interaction) is paused while the database operation or operations are performed.
+ For long-running operations this can cause a noticeable pause in the application.</p>
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLStatement.html" target="">flash.data.SQLStatement</a>
+<br>
+<a href="../../flash/events/SQLEvent.html" target="">flash.events.SQLEvent</a>
+<br>
+<a href="../../flash/events/SQLErrorEvent.html" target="">flash.events.SQLErrorEvent</a>
+<br>
+<a href="../../flash/errors/SQLError.html" target="">flash.errors.SQLError</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#autoCompact">autoCompact</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether autocompacting was enabled when the current database
+  was originally created (the value that was specified for the autoCompact
+  parameter in the open() or openAsync() call that created the
+  database).</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#cacheSize">cacheSize</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">
+     Provides access to the cache size for this connection, which represents the maximum number
+     of database disk pages that are held in memory at one time.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#columnNameStyle">columnNameStyle</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+     Indicates how column names are reported in the
+     result of a SELECT statement.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#connected">connected</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the SQLConnection instance has an open connection
+     to a database file.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#inTransaction">inTransaction</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Indicates whether this connection is currently involved in a transaction.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#lastInsertRowID">lastInsertRowID</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+     The last generated row identifier created by a SQL INSERT
+  statement.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#pageSize">pageSize</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates the database page size (in bytes) that was specified when the current database
+  was originally created (the value that was specified for the pageSize
+  parameter in the open() or openAsync() call that created the
+  database).</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#totalChanges">totalChanges</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+     Contains the total number of data changes that have been made since the
+  connection to the database was opened.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#SQLConnection()">SQLConnection</a>()</div>
+<div class="summaryTableDescription">
+     Creates a SQLConnection instance.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#analyze()">analyze</a>(resourceName:<a href="../../String.html">String</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Gathers statistics about database indices and
+     stores them in the database.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#attach()">attach</a>(name:<a href="../../String.html">String</a>, reference:<a href="../../Object.html">Object</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Adds another database to the SQLConnection instance, giving the new database
+     the specified name.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#begin()">begin</a>(option:<a href="../../String.html">String</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Begins a transaction within which all SQL statements executed against
+     the connection's database or databases are grouped.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#cancel()">cancel</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Aborts all SQL statements that are currently executing on databases connected to the SQLConnection
+     instance.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#close()">close</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Closes the current database connection.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#commit()">commit</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Commits an existing transaction, causing any actions performed by the transaction's
+     statements to be permanently applied to the database.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#compact()">compact</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Reclaims all unused space in the database.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#deanalyze()">deanalyze</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Removes all statistical information created by a call to the
+     analyze() method.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#detach()">detach</a>(name:<a href="../../String.html">String</a>, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Detaches an additional database previously attached to the SQLConnection instance using
+     the attach() method.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#getSchemaResult()">getSchemaResult</a>():<a href="../../flash/data/SQLSchemaResult.html">SQLSchemaResult</a>
+</div>
+<div class="summaryTableDescription">
+     Provides access to the result of a call to the loadSchema() method.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#loadSchema()">loadSchema</a>(type:<a href="../../Class.html">Class</a> = null, name:<a href="../../String.html">String</a> = null, database:<a href="../../String.html">String</a> = "main", includeColumnSchema:<a href="../../Boolean.html">Boolean</a> = true, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Loads schema information from the connected database or any attached databases.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#open()">open</a>(reference:<a href="../../Object.html">Object</a> = null, openMode:<a href="../../String.html">String</a> = "create", autoCompact:<a href="../../Boolean.html">Boolean</a> = false, pageSize:<a href="../../int.html">int</a> = 1024):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Opens a connection to the database file at the specified location in the file system,
+     or creates and opens a new database file at the location, or creates and opens an
+     in-memory database.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#openAsync()">openAsync</a>(reference:<a href="../../Object.html">Object</a> = null, openMode:<a href="../../String.html">String</a> = "create", responder:<a href="../../flash/net/Responder.html">Responder</a> = null, autoCompact:<a href="../../Boolean.html">Boolean</a> = false, pageSize:<a href="../../int.html">int</a> = 1024):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Opens a connection to the database file at the specified location in the file system,
+     or creates and opens a new database file at the location, or creates and opens an
+     in-memory database.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#rollback()">rollback</a>(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Rolls back an existing transaction created using the begin() method, meaning all changes
+     made by any SQL statements in the transaction are discarded.</div>
+</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:analyze">analyze</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an analyze() operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:attach">attach</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an attach() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:begin">begin</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a begin() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:cancel">cancel</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a cancel() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:close">close</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a close() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:commit">commit</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a commit() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:compact">compact</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a compact() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:deanalyze">deanalyze</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a deanalyze() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:delete">delete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when data in any table in any of the connected databases changes as a result of a SQL DELETE command.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:detach">detach</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a detach() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:error">error</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when any of the SQLConnection object's asynchronous operations results in an error.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:insert">insert</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when data in any table in any of the connected databases changes as a result of a SQL INSERT command.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:open">open</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an openAsync() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:rollback">rollback</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a rollback() method call's operation completes successfully.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:schema">schema</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a loadSchema() method call's operation completes successfully and the schema results are ready.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:update">update</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when data in any table in any of the connected databases changes as a result of a SQL UPDATE command.</td><td class="summaryTableOwnerCol">SQLConnection</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="autoCompact"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;autoCompact</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>autoCompact:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether autocompacting was enabled when the current database
+  was originally created (the value that was specified for the <code>autoCompact</code>
+  parameter in the <code>open()</code> or <code>openAsync()</code> call that created the
+  database). If this property is <code>true</code>, unused space is removed from the database file
+  automatically after each write operation, keeping the database file smaller. If the property
+  is <code>false</code>, the space previously occupied by removed data is left in the database
+  file and reused when needed. Even when <code>autoCompact</code> is <code>false</code>, you can force the
+  database to reclaim unused space by calling the <code>compact()</code> method.
+          <p>If the <code>connected</code> property is <code>false</code>, this property
+  is set to <code>false</code>.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get autoCompact():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="cacheSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;cacheSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>cacheSize:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Provides access to the cache size for this connection, which represents the maximum number
+     of database disk pages that are held in memory at one time. Each page
+     uses about 1.5 KB of memory (depending on the value specified for the <code>pageSize</code>
+  parameter of the <code>open()</code> or <code>openAsync()</code> method call that created the
+  database). The default cache size is 2000. If an application is executing
+     <code>UPDATE</code> or <code>DELETE</code> operations that change many rows of a database,
+  increasing the cache size can improve speed at the cost of increased memory consumption.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get cacheSize():<a href="../../uint.html">uint</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set cacheSize(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When an attempt is made to set this
+     property while the SQLConnection instance isn't connected to a database (the
+  <code>connected</code> property is <code>false</code>); or if a transaction is currently open (the
+  <code>inTransaction</code> property is <code>true</code>).
+       </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="columnNameStyle"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;columnNameStyle</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>columnNameStyle:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates how column names are reported in the
+     result of a <code>SELECT</code> statement.
+          <p>The constants defined in the SQLColumnNameStyle class
+     represent the possible values for this property:</p>
+          <ul>
+         <li><code>SQLColumnNameStyle.LONG</code> indicates that
+         column names are returned in the format <code>[table-name]_[column-name]</code>.</li>
+         <li><code>SQLColumnNameStyle.SHORT</code> specifies that column names are given
+         the format <code>[column-name]</code>. If there are multiple columns with the same name,
+      only one property with that name is added to the result object.</li>
+         <li><code>SQLColumnNameStyle.DEFAULT</code> is the default value. When
+         this value is used, result column names are formatted according to the number of
+         tables in the <code>SELECT</code> statement that have similar column names. If the
+      <code>SELECT</code> statement includes only one table, the short name format
+      <code>[column-name]</code> is used, and if the <code>SELECT</code>
+         statement includes multiple tables joined together, whenever there is a naming collision
+      because two column names are identical, the long name format
+         <code>[table-name]_[column-name]</code> is used for the identically named columns.</li>
+     </ul>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get columnNameStyle():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set columnNameStyle(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When an attempt is made to set this
+     property while the SQLConnection instance isn't connected to a database (the
+  <code>connected</code> property is <code>false</code>).
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLColumnNameStyle.html" target="">flash.data.SQLColumnNameStyle</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="connected"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;connected</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>connected:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the SQLConnection instance has an open connection
+     to a database file.
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connected():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+<br>
+<a href="SQLConnection.html#close()" target="">close()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="inTransaction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;inTransaction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>inTransaction:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates whether this connection is currently involved in a transaction.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get inTransaction():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#begin()" target="">begin()</a>
+<br>
+<a href="SQLConnection.html#commit()" target="">commit()</a>
+<br>
+<a href="SQLConnection.html#rollback()" target="">rollback()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="lastInsertRowID"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;lastInsertRowID</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>lastInsertRowID:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The last generated row identifier created by a SQL <code>INSERT</code>
+  statement. A row identifier is used to uniquely identify a row in a table within
+     the database. The value is frequently generated by the database.
+       <p>The value is zero if no database is connected or no
+  <code>INSERT</code> statement has been executed.</p>
+    <p>The row identifier for a single SQL <code>INSERT</code> statement execution
+  can be obtained through the <code>lastInsertRowID</code> property of the SQLResult object
+  returned by the SQLStatement object's <code>getResult()</code> method (when called after the
+  SQLStatement dispatches its <code>result</code> event).</p>
+    <p>For more information on primary keys and generated row identifiers,
+  see the "<a href="../../localDatabaseSQLSupport.html#createTable" target="">CREATE TABLE</a>" and
+  "<a href="../../localDatabaseSQLSupport.html#expressions" target="">Expressions</a>" sections in the appendix
+  "<a href="../../localDatabaseSQLSupport.html" target="">SQL support in local databases</a>."</p>
+       </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get lastInsertRowID():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLResult.html#lastInsertRowID" target="">flash.data.SQLResult.lastInsertRowID</a>
+<br>
+<a href="../../flash/events/SQLUpdateEvent.html#rowID" target="">flash.events.SQLUpdateEvent.rowID</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="pageSize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;pageSize</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pageSize:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates the database page size (in bytes) that was specified when the current database
+  was originally created (the value that was specified for the <code>pageSize</code>
+  parameter in the <code>open()</code> or <code>openAsync()</code> call that created the
+  database).
+          <p>If the <code>connected</code> property is <code>false</code>, this property's
+     value is 0.</p>
+       <p>The page size for a database can be changed (using the <code>open()</code> or <code>openAsync()</code>
+  methods) until the first table is created in the database.</p>
+          </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get pageSize():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="totalChanges"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;totalChanges</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>totalChanges:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Contains the total number of data changes that have been made since the
+  connection to the database was opened. In addition to tracking changes
+  made by <code>INSERT</code>, <code>DELETE</code>, and <code>UPDATE</code>
+  statements, this value includes changes caused by triggers.
+    <p>When the database connection is closed, the value is
+     reset to 0. When the SQLConnection instance isn't connected
+  to a database file, the value is 0.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get totalChanges():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLResult.html#rowsAffected" target="">flash.data.SQLResult.rowsAffected</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="SQLConnection()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;SQLConnection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function SQLConnection()</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Creates a SQLConnection instance.
+          </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; if constructor is called from any sandbox outside
+     of the main application sandbox. 
+      
+     </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="addEventListener()"></a><a name="addEventListener(String,Function,Boolean,int,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function addEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event. <span>You can register event listeners on all nodes in the 
+ display list for a specific type of event, phase, and priority.</span>
+<p>After you successfully register an event listener, you cannot change its priority
+ through additional calls to <code>addEventListener()</code>. To change a listener's
+ priority, you must first call <code>removeListener()</code>. Then you can register the
+ listener again with the new priority level. </p>
+<p>Keep in mind that after the listener is registered, subsequent calls to
+ <code>addEventListener()</code> with a different <code>type</code> or
+ <code>useCapture</code> value result in the creation of a separate listener registration. 
+ <span>For example, if you first register a listener with <code>useCapture</code> set to 
+ <code>true</code>, it listens only during the capture phase. If you call 
+ <code>addEventListener()</code> again using the same listener object, but with
+ <code>useCapture</code> set to <code>false</code>, you have two separate listeners: one
+ that listens during the capture phase and another that listens during the target and
+ bubbling phases.</span>
+</p>
+<p>You cannot register an event listener for only the target phase or the bubbling 
+ phase. Those phases are coupled during registration because bubbling 
+ applies only to the ancestors of the target node.</p>
+<p>If you no longer need an event listener, remove it by calling 
+ <code>removeEventListener()</code>, or memory problems could result. Objects with
+ registered event listeners are not automatically removed from memory because the garbage
+ collector does not remove objects that still have references.</p>
+<p>Copying an EventDispatcher instance does not copy the event listeners attached to it. 
+ (If your newly created node needs an event listener, you must attach the listener after
+    creating the node.) However, if you move an EventDispatcher instance, the event listeners 
+    attached to it move along with it.</p>
+<p>If the event listener is being registered on a node while an event is being processed
+ on this node, the event listener is not triggered during the current phase but can be 
+ triggered during a later phase in the event flow, such as the bubbling phase.</p>
+<p>If an event listener is removed from a node while an event is being processed on the node,
+ it is still triggered by the current actions. After it is removed, the event listener is
+ never invoked again (unless registered again for future processing). </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; The listener function that processes the event. This function must accept
+    an Event object as its only parameter and must return nothing<span>, as this example shows:</span>
+<div class="listing"><pre>function(evt:Event):void</pre></div>
+<p>The function can have any name.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+<span>Determines whether the listener works in the capture phase or the 
+ target and bubbling phases. If <code>useCapture</code> is set to <code>true</code>, 
+ the listener processes the event only during the capture phase and not in the 
+ target or bubbling phase. If <code>useCapture</code> is <code>false</code>, the
+ listener processes the event only during the target or bubbling phase. To listen for
+ the event in all three phases, call <code>addEventListener</code> twice, once with 
+ <code>useCapture</code> set to <code>true</code>, then again with
+ <code>useCapture</code> set to <code>false</code>.</span>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; The priority level of the event listener. The priority is designated by
+ a signed 32-bit integer. The higher the number, the higher the priority. All listeners
+ with priority <i>n</i> are processed before listeners of priority <i>n</i>-1. If two
+ or more listeners share the same priority, they are processed in the order in which they
+ were added. The default priority is 0.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useWeakReference</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Determines whether the reference to the listener is strong or
+ weak. A strong reference (the default) prevents your listener from being garbage-collected.
+    A weak reference does not. <p>Class-level member functions are not subject to garbage 
+    collection, so you can set <code>useWeakReference</code> to <code>true</code> for 
+    class-level member functions without subjecting them to garbage collection. If you set
+    <code>useWeakReference</code> to <code>true</code> for a listener that is a nested inner 
+    function, the function will be garbage-collected and no longer persistent. If you create 
+    references to the inner function (save it in another variable) then it is not 
+    garbage-collected and stays persistent.</p>
+</td>
+</tr>
+</table>
+</p>
+</div>
+<a name="analyze()"></a><a name="analyze(String,flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;analyze</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function analyze(resourceName:<a href="../../String.html">String</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Gathers statistics about database indices and
+     stores them in the database. These statistics can then be used by the query optimizer
+  (the portion of the database engine that determines the most efficient way to
+  execute each statement). The statistics help the query optimizer make better
+  choices about which index or indices to use when executing a particular query.
+    <p>If a database has indices defined, but the <code>analyze()</code> method hasn't
+  been called, the runtime still uses those indices to execute statements. However,
+  without the additional statistical information generated by the <code>analyze()</code> method,
+  the runtime may not choose the most efficient index for a particular query.</p>
+<p>When a table's data changes (as a result of <code>INSERT</code>, <code>UPDATE</code>,
+  or <code>DELETE</code> statements) the indices associated with that table change as well.
+  The statistical information generated by <code>analyze()</code> is not automatically
+  updated. Consequently, after a large number of data changes, calling the 
+  <code>analyze()</code> method again might be beneficial. However, the benefit obtained
+  from calling <code>analyze()</code> again depends on several factors, including the
+  number of indices defined on a table, the relationship between the number of changed
+  rows and the total number of rows in the table, how much variation there is in the
+  table's indexed data, and how different the changed data is from the prechange data.</p>
+<p>The <code>resourceName</code> parameter indicates whether the operation is 
+  performed on the indices of all attached databases, a specific database, or a specific
+     table.</p>
+<p>Each time this method is called, any previously created statistical
+     data is purged and recreated for the database or table specified in the <code>resourceName</code>
+  parameter (or all tables in all connected databases if <code>resourceName</code> is <code>null</code>).
+  This method can be called at any time
+     while a database connection is open. The <code>analyze()</code> operation and its statistical
+  data are not included in a transaction; however, it is best
+     not to call <code>analyze()</code> when the database has a current transaction (the
+     <code>inTransaction</code> property is <code>true</code>). This is because any data, table schema,
+  or index changes that have been executed in the transaction but not yet committed
+  are not taken into account by the <code>analyze()</code> call, and the
+  <code>analyze()</code> data is out of date as soon as the transaction is committed.</p>
+<p>To remove the statistical data created with the <code>analyze()</code> method, use
+     the <code>deanalyze()</code> method.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">resourceName</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; The name of the database or
+     table whose indices are to be analyzed. If the specified resource is a table
+     whose name is unique among all the attached databases, only the table name needs
+     to be specified. However, a table name can be specified in the form
+     <code>[database-name].[table-name]</code> to prevent ambiguity when the table name
+     is not unique. If the <code>resourceName</code> parameter is <code>null</code>
+     (the default), all the indices in all attached databases are analyzed.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> an <code>analyze</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>analyze</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When this method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; if the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#deanalyze()" target="">deanalyze()</a>
+</div>
+</div>
+<a name="attach()"></a><a name="attach(String,Object,flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;attach</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function attach(name:<a href="../../String.html">String</a>, reference:<a href="../../Object.html">Object</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Adds another database to the SQLConnection instance, giving the new database
+     the specified name. Attaching a database allows that database to be used in SQL
+     statements executed against this SQLConnection instance.
+          <p>If a database is already attached using the specified name, calling <code>attach()</code>
+     results in an <code>error</code> event. However, the same database may
+     be attached multiple times using unique names. Only ten databases can be attached
+     to a single SQLConnection instance.</p>
+<p>Any SQL statement can be executed on a database connected using
+     <code>attach()</code> that can be executed on the main database (the database
+     connected using <code>open()</code> or <code>openAsync()</code>).
+     A SQL statement can access tables in any of the databases attached to the
+     statement's associated SQLConnection instance, including accessing tables from
+     multiple databases in a single statement. When the runtime is resolving table names
+     in a statement, it searches through the SQLConnection instance's databases in the order
+     in which the databases were attached, starting with the database that was connected
+     using the <code>open()</code> or <code>openAsync()</code> method. Use the database name (as specified in the
+     <code>attach()</code> method's <code>name</code> parameter) in the statement
+     to explicitly qualify a table name.</p>
+<p>To remove a database attached using the <code>attach()</code> method,
+     use the <code>detach()</code> method. When the SQLConnection instance is closed (by
+     calling the <code>close()</code> method), all
+     attached databases are detached.</p>
+<p>The attached database uses the same execution mode (synchronous or asynchronous) as
+  the main database, according to whether the main database was connected using the <code>open()</code>
+  method or the <code>openAsync()</code> method.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; The name that is used to identify the newly attached database.
+     This name can be used in SQL statements to explicitly indicate that a table belongs
+     to the specified database, when using the format <code>[database-name].[table-name]</code>.
+     The names "main" and "temp" are reserved and cannot be used.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">reference</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; A reference to the database file to attach
+  (a flash.filesystem.File instance). If the reference refers to a file that doesn't exist, either
+  a new database file is created or an error is thrown according to the value that was specified for the
+  <code>openMode</code> parameter in the <code>open()</code> or <code>openAsync()</code> call that
+  connected the main database.
+       <p>If the parameter's value is <code>null</code>, an in-memory database is created and attached.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> an <code>attach</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>attach</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; When the <code>name</code> parameter is an empty string (<code>""</code>)
+     or <code>null</code>; or if the value specified for the <code>reference</code> parameter is not a
+  flash.filesystem.File instance.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the SQLConnection instance isn't connected to a database
+  (the <code>connected</code> property is <code>false</code>);
+     or if a transaction is currently open (the <code>inTransaction</code> property is <code>true</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; if the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+<br>
+<a href="SQLConnection.html#detach()" target="">detach()</a>
+</div>
+</div>
+<a name="begin()"></a><a name="begin(String,flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;begin</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function begin(option:<a href="../../String.html">String</a> = null, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Begins a transaction within which all SQL statements executed against
+     the connection's database or databases are grouped.
+          <p>By default, each SQL statement
+     is executed within its own transaction, and the transaction ends when
+     the statement's execution succeeds or fails. Creating a transaction using the
+     <code>begin()</code> method causes a new, manual transaction to be created.
+     From that point on, all SQL statements executed against the SQLConnection instance
+     take place within the transaction, and any actions or modifications performed
+     by the statements can be committed (made permanent) or rolled back (undone) as
+     a group.</p>
+<p>Nested transactions are not allowed (nested calls to <code>begin()</code>
+     are ignored). To end a transaction, call the <code>commit()</code> or
+     <code>rollback()</code> method, depending on whether the changes made by the
+     transactions' statements are to be made permanent or discarded.</p>
+<p>A transaction is not limited to statement executions in a single
+     database; it can include statements executed on different attached
+     databases.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">option</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; Indicates the locking strategy that is used by
+     the transaction. The value can be one of the constants defined
+     in the SQLTransactionLockType class:
+     <ul>
+<li>
+<code>SQLTransactionLockType.DEFERRED</code> indicates that a lock is not acquired
+     until the first read or write operation.</li>
+<li>
+<code>SQLTransactionLockType.EXCLUSIVE</code> indicates that a lock is acquired as soon
+     as possible, and no other SQLConnection instance can read from or write to the database.</li>
+<li>
+<code>SQLTransactionLockType.IMMEDIATE</code> indicates that a lock is acquired as soon
+     as possible, in which other SQLConnection instances can read from but can't write to the database.</li>
+</ul>
+<p>The default value (<code>null</code>) is equivalent to <code>SQLTransactionLockType.DEFERRED</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>begin</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>begin</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When this method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the option specified is not one of the <code>SQLTransactionLockType</code>
+     constants.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; if the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#commit()" target="">commit()</a>
+<br>
+<a href="SQLConnection.html#rollback()" target="">rollback()</a>
+<br>
+<a href="SQLTransactionLockType.html" target="">flash.data.SQLTransactionLockType</a>
+</div>
+</div>
+<a name="cancel()"></a><a name="cancel(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;cancel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function cancel(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Aborts all SQL statements that are currently executing on databases connected to the SQLConnection
+     instance. This method can be used to stop long running or runaway queries.
+          <p>If there are statements executing when the <code>cancel()</code> method is called, this method
+     aborts the statements' operations and any incomplete updates or transactions are rolled back.
+     If there are no statements currently executing, calling this method rolls back an open transaction
+  but otherwise does nothing.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>cancel</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>cancel</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When this method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLStatement.html" target="">flash.data.SQLStatement</a>
+</div>
+</div>
+<a name="close()"></a><a name="close(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Closes the current database connection. Any attached databases are
+     detached as well.
+          <p>If there is an open
+     transaction when <code>close()</code> is called, the transaction is committed.
+     When a SQLConnection instance is
+     garbage-collected, the runtime calls <code>close()</code> automatically, including
+     if an AIR application is closed while a SQLConnection is still connected to a database.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>close</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>close</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+</div>
+<a name="commit()"></a><a name="commit(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;commit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function commit(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Commits an existing transaction, causing any actions performed by the transaction's
+     statements to be permanently applied to the database.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>commit</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>commit</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation completes with a failure.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When the method is called while the SQLConnection instance
+  isn't connected to a database (the <code>connected</code> property is
+  <code>false</code>); or if no transaction is currently open (the
+  <code>inTransaction</code> property is <code>false</code>).
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#begin()" target="">begin()</a>
+<br>
+<a href="SQLConnection.html#rollback()" target="">rollback()</a>
+</div>
+</div>
+<a name="compact()"></a><a name="compact(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;compact</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function compact(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Reclaims all unused space in the database. When an object (table, index, or trigger) is
+     dropped from the database, it leaves behind empty space. This makes the database file
+     larger than it needs to be, but can speed up <code>INSERT</code> operations.
+     Over time, <code>INSERT</code> and <code>DELETE</code> operations can leave the database
+     file structure fragmented, which slows down disk access to the database contents. This
+     method compacts the database file, eliminating free pages, aligning table data to be
+     contiguous, and otherwise cleaning up the database file structure.
+          <p>The <code>compact()</code> operation can't be performed on an attached database file;
+     it can only be performed on the main (original) database file opened by the SQLConnection
+     instance. This operation fails if there is an active transaction, and has no effect
+     on an in-memory database.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>compact</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>compact</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If the method is called while the SQLConnection instance
+  isn't connected to a database (the <code>connected</code> property is <code>false</code>);
+  or if a transaction is currently in progress (the <code>inTransaction</code>
+  property is <code>true</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+</div>
+<a name="deanalyze()"></a><a name="deanalyze(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deanalyze</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deanalyze(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Removes all statistical information created by a call to the
+     <code>analyze()</code> method.
+    <p>Because the statistics generated by the <code>analyze()</code> method take up space in
+  a database, calling <code>deanalyze()</code> allows you to reclaim that space, such as
+  after dropping several indices or tables.</p>
+<p>This operation is not included in an active transaction.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>deanalyze</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>deanalyze</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When this method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#analyze()" target="">analyze()</a>
+</div>
+</div>
+<a name="detach()"></a><a name="detach(String,flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;detach</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function detach(name:<a href="../../String.html">String</a>, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Detaches an additional database previously attached to the SQLConnection instance using
+     the <code>attach()</code> method. It is possible to have the same database file
+     attached multiple times using different names, and detaching one
+     connection to a file leaves the others intact. A database cannot be detached
+     if the database has an open transaction (if the <code>inTransaction</code>
+     property is <code>true</code>).
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; The given name of the database to detach.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>detach</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>detach</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the <code>name</code> argument is <code>null</code> or contains
+     an empty string (<code>""</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; If this method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>); or
+  if the SQLConnection instance has an open transaction (the <code>inTransaction</code>
+  property is <code>true</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#attach()" target="">attach()</a>
+</div>
+</div>
+<a name="getSchemaResult()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;getSchemaResult</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getSchemaResult():<a href="../../flash/data/SQLSchemaResult.html">SQLSchemaResult</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Provides access to the result of a call to the <code>loadSchema()</code> method.
+  The <code>getSchemaResult()</code> method behaves as a first-in, first-out queue of
+  results. Each time the <code>loadSchema()</code> method call completes (each time the
+  <code>schema</code> event is dispatched in asynchronous execution mode),
+  a new SQLSchemaResult object is added to the queue.
+  Each time the <code>getSchemaResult()</code> method
+     is called, the earliest result (the one that was added to the queue first) is returned and removed
+  from the queue. When there are no more objects left in the queue, <code>getSchemaResult()</code>
+  returns <code>null</code>.
+          <p>When the database connection is closed the method returns <code>null</code>.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/data/SQLSchemaResult.html">SQLSchemaResult</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#loadSchema()" target="">loadSchema()</a>
+<br>
+<a href="SQLConnection.html#schema" target="">schema</a>
+</div>
+</div>
+<a name="loadSchema()"></a><a name="loadSchema(Class,String,String,Boolean,flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;loadSchema</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function loadSchema(type:<a href="../../Class.html">Class</a> = null, name:<a href="../../String.html">String</a> = null, database:<a href="../../String.html">String</a> = "main", includeColumnSchema:<a href="../../Boolean.html">Boolean</a> = true, responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Loads schema information from the connected database or any attached databases.
+     The schema indicates the structure of the database's tables, columns, indices, and triggers.
+       <p>To access the loaded schema use the <code>SQLConnection.getSchemaResult()</code> method.</p>
+<p>In asynchronous execution mode, a <code>schema</code> event is dispatched if the operation
+  is successful, or an <code>error</code> event is dispatched if the operation fails.</p>
+<p>The combination of the <code>type</code> and <code>name</code> parameter values determines the
+  type of schema data that's generated by the <code>loadSchema()</code> method and, consequently, the
+  values of the properties of the SQLSchemaResult instance that's generated. The following
+  table lists the valid <code>type</code> and <code>name</code> pairs and the schema data that's
+  generated as a result:</p>
+<table class="innertable" ><tr>
+<th>
+<code>type</code> argument</th><th>
+<code>name</code> argument</th><th>Retrieves schema data for: </th>
+</tr>
+<tr>
+<td>
+<code>null</code>
+</td><td>
+<code>null</code>
+</td><td>all objects in the database (all tables, views, triggers, and indices)</td>
+</tr>
+<tr>
+<td>
+<code>SQLIndexSchema</code>
+</td><td>
+<code>null</code>
+</td><td>all indices in the database</td>
+</tr>
+<tr>
+<td>
+<code>SQLIndexSchema</code>
+</td><td>valid table name</td><td>all indices defined on the specified table</td>
+</tr>
+<tr>
+<td>
+<code>SQLIndexSchema</code>
+</td><td>valid index name</td><td>the specified index</td>
+</tr>
+<tr>
+<td>
+<code>SQLTableSchema</code>
+</td><td>
+<code>null</code>
+</td><td>all tables in the database</td>
+</tr>
+<tr>
+<td>
+<code>SQLTableSchema</code>
+</td><td>valid table name</td><td>the specified table</td>
+</tr>
+<tr>
+<td>
+<code>SQLTriggerSchema</code>
+</td><td>
+<code>null</code>
+</td><td>all triggers in the database</td>
+</tr>
+<tr>
+<td>
+<code>SQLTriggerSchema</code>
+</td><td>valid table name</td><td>all triggers associated with the specified table</td>
+</tr>
+<tr>
+<td>
+<code>SQLTriggerSchema</code>
+</td><td>valid view name</td><td>all triggers associated with the specified view </td>
+</tr>
+<tr>
+<td>
+<code>SQLTriggerSchema</code>
+</td><td>valid trigger name</td><td>the specified trigger </td>
+</tr>
+<tr>
+<td>
+<code>SQLViewSchema</code>
+</td><td>
+<code>null</code>
+</td><td>all views in the database</td>
+</tr>
+<tr>
+<td>
+<code>SQLViewSchema</code>
+</td><td>valid view name</td><td>the specified view </td>
+</tr></table>
+<p>If the combination of <code>type</code> and <code>name</code> arguments does not correspond to
+  one of the specified combinations, an <code>error</code> event is dispatched in asynchronous
+  execution mode or an exception is thrown in synchronous execution mode.
+  For instance, if the <code>type</code> argument is <code>SQLViewSchema</code> and the <code>name</code>
+  argument is the name of a table (rather than the name of a view), an error is raised indicating that
+  the database doesn't contain an object of the specified type with the specified name.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../Class.html">Class</a></code> (default = <code>null</code>)<code></code> &mdash; Indicates the type of schema to load. A <code>null</code> value (the
+  default) indicates that all the schema information is loaded.
+     Specifying a non-<code>null</code> value for this parameter narrows the scope of the
+  resulting schema, removing potentially unneeded information from the results
+  and making the operation more efficient. The value must be the class name of
+  one of the following classes:
+  <ul>
+<li>SQLIndexSchema</li>
+<li>SQLTableSchema</li>
+<li>SQLTriggerSchema</li>
+<li>SQLViewSchema</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; Indicates which resource's schema is loaded. How this value is
+     used depends on the <code>type</code> argument specified. Typically, this is the name of a database
+  object such as a table name, an index or view name, and so forth. If a value is specified,
+  only schema information for the database object with the specified name is included in the
+  result.
+    <p>If the specified value is not valid an <code>error</code> event is
+  dispatched (or an error is thrown in synchronous execution mode). The <code>type</code> parameter
+  value must correspond to the type of the object named in order for the value to be valid, as described
+  in the method description.</p>
+<p>If the <code>name</code> argument is <code>null</code> then all schemata of the specified
+  type are included. If the value specified is not valid an <code>error</code> event is dispatched.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">database</span>:<a href="../../String.html">String</a></code> (default = "<code>main</code>")<code></code> &mdash; The name of the database whose schema is loaded. If the value specified
+     is not valid an <code>error</code> event is dispatched.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">includeColumnSchema</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>true</code>)<code></code> &mdash; Indicates whether the result includes schema information for the
+  columns of tables and views.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>schema</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>schema</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation completes with a failure.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When the method is called while the SQLConnection instance
+     isn't connected to a database (the <code>connected</code> property is <code>false</code>).
+       </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; When the specified <code>type</code> argument value isn't
+  one of the allowed types.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; When using synchronous execution mode, if an invalid value is supplied for the name
+  or database parameters.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#getSchemaResult()" target="">getSchemaResult()</a>
+<br>
+<a href="SQLConnection.html#schema" target="">schema</a>
+<br>
+<a href="SQLIndexSchema.html" target="">flash.data.SQLIndexSchema</a>
+<br>
+<a href="SQLTableSchema.html" target="">flash.data.SQLTableSchema</a>
+<br>
+<a href="SQLTriggerSchema.html" target="">flash.data.SQLTriggerSchema</a>
+<br>
+<a href="SQLViewSchema.html" target="">flash.data.SQLViewSchema</a>
+</div>
+</div>
+<a name="open()"></a><a name="open(Object,String,Boolean,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;open</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function open(reference:<a href="../../Object.html">Object</a> = null, openMode:<a href="../../String.html">String</a> = "create", autoCompact:<a href="../../Boolean.html">Boolean</a> = false, pageSize:<a href="../../int.html">int</a> = 1024):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Opens a connection to the database file at the specified location in the file system,
+     or creates and opens a new database file at the location, or creates and opens an
+     in-memory database.
+    <p>The operations of creating and opening the database, as well as all other operations
+  that are performed using this SQLConnection instance (including statement execution and other operations
+  performed by a SQLStatement instance associated with this SQLConnection instance) are performed
+  <i>synchronously</i> when the database is opened using this method. To perform operations
+  asynchronously, open the database connection using the <code>openAsync()</code> method instead.</p>
+<p>A database that is connected using the <code>open()</code> method is automatically
+     assigned the database name "main"; that name can be used to explicitly qualify
+     table names in SQL statements using the format <code>[database-name].[table-name]</code>.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">reference</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; The location of the database file that is opened. This value must be
+     a flash.filesystem.File instance. If the parameter's value is <code>null</code>, an in-memory database
+     is created and opened.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">openMode</span>:<a href="../../String.html">String</a></code> (default = "<code>create</code>")<code></code> &mdash; Indicates how the database is opened. The value can be any of the
+  constants defined in the SQLMode class. The default value is
+     <code>SQLMode.CREATE</code>, indicating that if a database file is not found at the specified
+     location, one is created. If <code>openMode</code> is <code>SQLMode.READ</code> and
+     the specified file does not exist then an error event is dispatched. This parameter is ignored
+     when the <code>reference</code> parameter is <code>null</code>.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoCompact</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Indicates whether unused space in the database is reclaimed automatically.
+     This parameter is only valid when creating a new database file or opening a database file in which
+     no tables have been created. By default, the space taken up by removed data is left in the database
+     file and reused when needed. Setting this parameter to <code>true</code> causes the database to
+     automatically reclaim unused space. This can negatively affect performance because it requires
+  additional processing each time data is written to the database and can also cause the
+  database data to become fragmented over time.
+  To force the database to reclaim unused space in a database file at any time and to
+  defragment the database file, use the <code>compact()</code> method.
+    <p>This parameter is ignored when the <code>openMode</code> parameter is <code>SQLMode.READ</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pageSize</span>:<a href="../../int.html">int</a></code> (default = <code>1024</code>)<code></code> &mdash; Indicates the page size (in bytes) for the database. This parameter is
+  only valid when creating a new database file or opening a database file in which
+     no tables have been created. The value must be a power of two
+     greater than or equal to 512 and less than or equal to 32768. The default value is 1024 bytes. 
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>open</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When the SQLConnection instance already has an open connection
+     to a database (the <code>connected</code> property is <code>true</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails. The connection is never left open after a failed
+     operation.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value specified for the <code>reference</code> parameter is not a
+  flash.filesystem.File instance.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If an invalid <code>pageSize</code> parameter is specified. This includes passing a page
+     size when the mode is <code>SQLMode.READ</code>.
+  
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+<br>
+<a href="SQLConnection.html#close()" target="">close()</a>
+<br>
+<a href="SQLMode.html" target="">flash.data.SQLMode</a>
+</div>
+</div>
+<a name="openAsync()"></a><a name="openAsync(Object,String,flash.net.Responder,Boolean,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;openAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function openAsync(reference:<a href="../../Object.html">Object</a> = null, openMode:<a href="../../String.html">String</a> = "create", responder:<a href="../../flash/net/Responder.html">Responder</a> = null, autoCompact:<a href="../../Boolean.html">Boolean</a> = false, pageSize:<a href="../../int.html">int</a> = 1024):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Opens a connection to the database file at the specified location in the file system,
+     or creates and opens a new database file at the location, or creates and opens an
+     in-memory database.
+       <p>The operations of creating and opening the database, as well as all other operations
+  that are performed using this SQLConnection instance (including statement execution and other operations
+  performed by a SQLStatement instance associated with this SQLConnection instance) are performed
+  <i>asynchronously</i> when the database is opened using this method. To perform operations
+  synchronously, open the database connection using the <code>open()</code> method instead.</p>
+<p>A database that is connected using the <code>openAsync()</code> method is automatically
+     assigned the database name "main"; that name can be used to explicitly qualify
+     table names in SQL statements using the format <code>[database-name].[table-name]</code>.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">reference</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; The location of the database file that is opened. This value must be
+     a flash.filesystem.File instance. If the parameter's value is <code>null</code>, an in-memory database
+     is created and opened.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">openMode</span>:<a href="../../String.html">String</a></code> (default = "<code>create</code>")<code></code> &mdash; Indicates how the database is opened. The value can be any of the
+  constants defined in the SQLMode class. The default value is
+     <code>SQLMode.CREATE</code>, indicating that if a database file is not found at the specified
+     location, one is created. If <code>openMode</code> is <code>SQLMode.READ</code> and
+     the specified file does not exist then an error event is dispatched. This parameter is ignored
+     when the <code>reference</code> parameter is <code>null</code>.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when the operation succeeds or fails.
+     if the <code>responder</code> argument is <code>null</code> an <code>open</code> or <code>error</code>
+  event is dispatched when execution completes.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">autoCompact</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Indicates whether unused space in the database is reclaimed automatically.
+     This parameter is only valid when creating a new database file or opening a database file in which
+     no tables have been created. By default, the space taken up by removed data is left in the database
+     file and reused when needed. Setting this parameter to <code>true</code> causes the database to
+     automatically reclaim unused space. This can negatively affect performance because it requires
+  additional processing each time data is written to the database and can also cause the
+  database data to become fragmented over time.
+  To force the database to reclaim unused space in a database file at any time and to
+  defragment the database file, use the <code>compact()</code> method.
+    <p>This parameter is ignored when the <code>openMode</code> parameter is <code>SQLMode.READ</code>.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pageSize</span>:<a href="../../int.html">int</a></code> (default = <code>1024</code>)<code></code> &mdash; Indicates the page size (in bytes) for the database. This parameter is only
+     valid when creating a new database file or opening a database file in which
+     no tables have been created. The value must be a power of two greater than or equal
+     to 512 and less than or equal to 32768. The default value (-1) results in a
+  page size of 1024 bytes. This parameter
+  is ignored when the <code>openMode</code> parameter is <code>SQLMode.READ</code>.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>open</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails. The connection is never left open after a
+     failed operation.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When the SQLConnection instance already has an open connection
+     to a database (the <code>connected</code> property is <code>true</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the value specified for the <code>reference</code> parameter is not a
+  flash.filesystem.File instance.
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If an invalid <code>pageSize</code> parameter is specified. This includes passing a page
+     size when the mode is <code>SQLMode.READ</code>.
+  
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#open()" target="">open()</a>
+<br>
+<a href="SQLConnection.html#close()" target="">close()</a>
+<br>
+<a href="SQLMode.html" target="">flash.data.SQLMode</a>
+</div>
+</div>
+<a name="removeEventListener()"></a><a name="removeEventListener(String,Function,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function removeEventListener(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Removes a listener from the EventDispatcher object. If there is no matching listener registered with the EventDispatcher object, a call to this method has no effect.
+ 
+ </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; The type of event.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:<a href="../../Function.html">Function</a></code> &mdash; The listener object to remove.
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; 
+<span>Specifies whether the listener was registered for the capture phase or the 
+ target and bubbling phases. If the listener was registered for both the capture phase and the
+ target and bubbling phases, two calls to <code>removeEventListener()</code> are required 
+ to remove both, one call with <code>useCapture()</code> set to <code>true</code>, and another 
+ call with <code>useCapture()</code> set to <code>false</code>.</span>
+</td>
+</tr>
+</table>
+</p>
+</div>
+<a name="rollback()"></a><a name="rollback(flash.net.Responder)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;rollback</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rollback(responder:<a href="../../flash/net/Responder.html">Responder</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Rolls back an existing transaction created using the <code>begin()</code> method, meaning all changes
+     made by any SQL statements in the transaction are discarded.
+          </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">responder</span>:<a href="../../flash/net/Responder.html">Responder</a></code> (default = <code>null</code>)<code></code> &mdash; An object that designates methods to be called when
+     the operation succeeds or fails. In asynchronous execution mode, if the
+  <code>responder</code> argument is <code>null</code> a <code>rollback</code>
+  or <code>error</code> event is dispatched when execution completes.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>rollback</b>:<a href="../../flash/events/SQLEvent.html"><code>SQLEvent</code></a></code> &mdash; Dispatched when the operation completes successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>error</b>:<a href="../../flash/events/SQLErrorEvent.html"><code>SQLErrorEvent</code></a></code> &mdash; Dispatched when the operation fails in asynchronous execution mode.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IllegalOperationError.html">IllegalOperationError</a> </code> &mdash; When the method is called while the SQLConnection instance
+  isn't connected to a database (the <code>connected</code> property is
+  <code>false</code>); or if no transaction is currently open (the
+  <code>inTransaction</code> property is <code>false</code>).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/SQLError.html">SQLError</a> </code> &mdash; If the operation fails in synchronous execution mode.
+          </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#begin()" target="">begin()</a>
+<br>
+<a href="SQLConnection.html#commit()" target="">commit()</a>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:analyze"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;analyze</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#ANALYZE"><code>flash.events.SQLEvent.ANALYZE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an <code>analyze()</code> operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.ANALYZE</code> constant defines the value of the
+  <code>type</code> property of an <code>analyze</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.analyze()</code> method call completes successfully.
+       The <code>analyze</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#analyze()" target="">analyze()</a>
+</div>
+</div>
+<a name="event:attach"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;attach</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#ATTACH"><code>flash.events.SQLEvent.ATTACH</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an <code>attach()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.ATTACH</code> constant defines the value of the
+  <code>type</code> property of an <code>attach</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.attach()</code> method call completes successfully.
+       The <code>attach</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#attach()" target="">attach()</a>
+</div>
+</div>
+<a name="event:begin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;begin</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#BEGIN"><code>flash.events.SQLEvent.BEGIN</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>begin()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.BEGIN</code> constant defines the value of the
+  <code>type</code> property of a <code>begin</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.begin()</code> method call completes successfully.
+       The <code>begin</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#begin()" target="">begin()</a>
+</div>
+</div>
+<a name="event:cancel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;cancel</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#CANCEL"><code>flash.events.SQLEvent.CANCEL</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>cancel()</code> method call's operation completes
+ successfully.
+  </p>
+     The <code>SQLEvent.CANCEL</code> constant defines the value of the
+     <code>type</code> property of a <code>cancel</code> event object.
+     This type of event is dispatched when a <code>SQLConnection.cancel()</code>
+     method call completes successfully.
+          The <code>cancel</code> event has the following properties:
+  <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection or SQLStatement object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#cancel()" target="">cancel()</a>
+</div>
+</div>
+<a name="event:close"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;close</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#CLOSE"><code>flash.events.SQLEvent.CLOSE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>close()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.CLOSE</code> constant defines the value of the
+  <code>type</code> property of a <code>close</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.close()</code> method call completes successfully.
+       The <code>close</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#close()" target="">close()</a>
+</div>
+</div>
+<a name="event:commit"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;commit</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#COMMIT"><code>flash.events.SQLEvent.COMMIT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>commit()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.COMMIT</code> constant defines the value of the
+  <code>type</code> property of a <code>commit</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.commit()</code> method call completes successfully.
+       The <code>commit</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#commit()" target="">commit()</a>
+</div>
+</div>
+<a name="event:compact"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;compact</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#COMPACT"><code>flash.events.SQLEvent.COMPACT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>compact()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.COMPACT</code> constant defines the value of the
+  <code>type</code> property of a <code>compact</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.compact()</code> method call completes successfully.
+       The <code>compact</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#compact()" target="">compact()</a>
+</div>
+</div>
+<a name="event:deanalyze"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deanalyze</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#DEANALYZE"><code>flash.events.SQLEvent.DEANALYZE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>deanalyze()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.DEANALYZE</code> constant defines the value of the
+  <code>type</code> property of a <code>deanalyze</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.deanalyze()</code> method call completes successfully.
+       The <code>deanalyze</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#deanalyze()" target="">deanalyze()</a>
+</div>
+</div>
+<a name="event:delete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;delete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLUpdateEvent.html"><code>flash.events.SQLUpdateEvent</code></a>
+<br>
+<span class="label">SQLUpdateEvent.type property = </span><a href="../../flash/events/SQLUpdateEvent.html#DELETE"><code>flash.events.SQLUpdateEvent.DELETE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when data in any table in any of the connected databases changes as a result
+ of a SQL <code>DELETE</code> command. The data change can be a direct result of a <code>DELETE</code>
+ statement executed through a SQLStatement instance, or an indirect result caused by a trigger firing
+ in response to a statement execution.
+  </p>
+     The <code>SQLUpdateEvent.DELETE</code> constant defines the value of the
+     <code>type</code> property of a SQLConnection <code>delete</code> event.
+          The <code>delete</code> event has the following properties:
+          <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+     object with an event listener.</td>
+</tr>
+<tr>
+<td><code>rowID</code></td><td>The unique row identifier of the row that was inserted, deleted, or updated.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object on which the operation was performed.</td>
+</tr>
+<tr>
+<td><code>table</code></td><td>The name of the table on which the change occurred.</td>
+</tr></table>
+          <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLStatement.html" target="">flash.data.SQLStatement</a>
+</div>
+</div>
+<a name="event:detach"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;detach</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#DETACH"><code>flash.events.SQLEvent.DETACH</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>detach()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.DETACH</code> constant defines the value of the
+  <code>type</code> property of a <code>detach</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.detach()</code> method call completes successfully.
+       <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#detach()" target="">detach()</a>
+</div>
+</div>
+<a name="event:error"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;error</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLErrorEvent.html"><code>flash.events.SQLErrorEvent</code></a>
+<br>
+<span class="label">SQLErrorEvent.type property = </span><a href="../../flash/events/SQLErrorEvent.html#ERROR"><code>flash.events.SQLErrorEvent.ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when any of the SQLConnection object's asynchronous operations results
+ in an error. The SQLErrorEvent instance that's dispatched as the event object
+ has an <code>error</code> property that contains information about the operation that
+ was attempted and the cause of the failure.
+  </p>
+     The <code>SQLErrorEvent.ERROR</code> constant defines the value of the
+  <code>type</code> property of an error event dispatched when a call
+  to a method of a SQLConnection or SQLStatement instance completes
+  with an error.
+       The <code>error</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>error</code></td><td>A SQLError object containing information about the type of error that occurred and the operation that caused the error.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection or SQLStatement object reporting the error.</td>
+</tr></table>
+    </div>
+<a name="event:insert"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;insert</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLUpdateEvent.html"><code>flash.events.SQLUpdateEvent</code></a>
+<br>
+<span class="label">SQLUpdateEvent.type property = </span><a href="../../flash/events/SQLUpdateEvent.html#INSERT"><code>flash.events.SQLUpdateEvent.INSERT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when data in any table in any of the connected databases changes as a result
+ of a SQL <code>INSERT</code> command. The data change can be a direct result of an <code>INSERT</code>
+ statement executed through a SQLStatement instance, or an indirect result caused by a trigger firing
+ in response to a statement execution.
+  </p>
+     The <code>SQLUpdateEvent.INSERT</code> constant defines the value of the
+     <code>type</code> property of a SQLConnection <code>insert</code> event.
+          The <code>insert</code> event has the following properties:
+          <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+     object with an event listener.</td>
+</tr>
+<tr>
+<td><code>rowID</code></td><td>The unique row identifier of the row that was inserted, deleted, or updated.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object on which the operation was performed.</td>
+</tr>
+<tr>
+<td><code>table</code></td><td>The name of the table on which the change occurred.</td>
+</tr></table>
+          <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLStatement.html" target="">flash.data.SQLStatement</a>
+</div>
+</div>
+<a name="event:open"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;open</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#OPEN"><code>flash.events.SQLEvent.OPEN</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an <code>openAsync()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.OPEN</code> constant defines the value of the
+  <code>type</code> property of a <code>open</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.open()</code> or <code>SQLConnection.openAsync()</code> method call completes successfully.
+       The <code>open</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#openAsync()" target="">openAsync()</a>
+</div>
+</div>
+<a name="event:rollback"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;rollback</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#ROLLBACK"><code>flash.events.SQLEvent.ROLLBACK</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>rollback()</code> method call's operation
+ completes successfully.
+  </p>
+     The <code>SQLEvent.ROLLBACK</code> constant defines the value of the
+  <code>type</code> property of a <code>rollback</code> event object.
+  This type of event is dispatched when a
+  <code>SQLConnection.rollback()</code> method call completes successfully.
+       The <code>rollback</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#rollback()" target="">rollback()</a>
+</div>
+</div>
+<a name="event:schema"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;schema</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLEvent.html"><code>flash.events.SQLEvent</code></a>
+<br>
+<span class="label">SQLEvent.type property = </span><a href="../../flash/events/SQLEvent.html#SCHEMA"><code>flash.events.SQLEvent.SCHEMA</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a <code>loadSchema()</code> method call's operation completes
+ successfully and the schema results are ready.
+  </p>
+     The <code>SQLEvent.SCHEMA</code> constant defines the value of the
+  <code>type</code> property of a <code>schema</code> event object.
+     Dispatched when the <code>SQLConnection.loadSchema()</code> method
+     completes successfully. Once the <code>SQLEvent.SCHEMA</code> event
+     is dispatched the <code>SQLConnection.getSchemaResult()</code> method can be
+     used to get the schema information.
+       The <code>schema</code> event has the following properties:
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object that performed the operation.</td>
+</tr></table>
+    <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLConnection.html#loadSchema()" target="">loadSchema()</a>
+</div>
+</div>
+<a name="event:update"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;update</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SQLUpdateEvent.html"><code>flash.events.SQLUpdateEvent</code></a>
+<br>
+<span class="label">SQLUpdateEvent.type property = </span><a href="../../flash/events/SQLUpdateEvent.html#UPDATE"><code>flash.events.SQLUpdateEvent.UPDATE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when data in any table in any of the connected databases changes as a result
+ of a SQL <code>UPDATE</code> command. The data change can be a direct result of a <code>UPDATE</code>
+ statement executed through a SQLStatement instance, or an indirect result caused by a trigger firing
+ in response to a statement execution.
+  </p>
+  The <code>SQLUpdateEvent.UPDATE</code> constant defines the value of the
+  <code>type</code> property of a SQLConnection <code>update</code> event.
+  
+  <p>The <code>update</code> event has the following properties:</p>
+          <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the event
+     object with an event listener.</td>
+</tr>
+<tr>
+<td><code>rowID</code></td><td>The unique row identifier of the row that was inserted, deleted, or updated.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The SQLConnection object on which the operation was performed.</td>
+</tr>
+<tr>
+<td><code>table</code></td><td>The name of the table on which the change occurred.</td>
+</tr></table>
+          <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="SQLStatement.html" target="">flash.data.SQLStatement</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

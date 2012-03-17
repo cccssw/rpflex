@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<controls:ResizableBorderPannel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+								xmlns:s="library://ns.adobe.com/flex/spark" 
+								xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:controls="com.loning.controls.*" width="400" height="300">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.Face;
+			override protected function updateDisplayList(w:Number, h:Number):void{
+				super.updateDisplayList(w,h);
+				var face:Face=new Face(
+					new Rectangle(0,0,w,h),null);
+				this.graphics.clear();
+				this.graphics.lineStyle(3,0x99FF80);
+				var r:int=face.Radius/4;
+				this.graphics.drawCircle(face.LeftEye.x,face.LeftEye.y,r);
+				this.graphics.drawCircle(face.RightEye.x,face.RightEye.y,r);
+				this.graphics.drawCircle(face.Mouth.x,face.Mouth.y,r);
+			}
+		]]>
+	</fx:Script>
+</controls:ResizableBorderPannel>

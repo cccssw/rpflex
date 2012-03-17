@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:TabbedViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+										   xmlns:s="library://ns.adobe.com/flex/spark"
+										   xmlns:components="spark.components.*"
+										   xmlns:views="views.*"
+										   applicationDPI="320"
+										   initialize="initializeHandler(event)"
+										   resizeForSoftKeyboard="true"
+										   splashScreenImage="@Embed('assets/front/v1.jpg')"
+										   splashScreenScaleMode="stretch"
+										   creationComplete="creationCompleteHandler(event)"><!-- skinClass="com.rpphoto.skins.BackGroundImageSkin"-->
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace components "spark.components.*";
+		@namespace views "views.*";
+		
+		/* default color is white */
+		/*fontFamily: "Comic Sans MS";*/
+		/* 
+		s|ActionBar
+		{	
+			titleAlign: center;
+		}
+		s|ActionBar #titleDisplay{
+			fontWeight: bold;
+			color: #CCCCCC; 
+			fontSize: 32;	
+		}
+		
+		s|Application{
+			fontSize:26;
+		}*/
+		
+	</fx:Style>
+	
+	<views:TakeViewNavigator width="100%" height="100%" label="{resourceManager.getString('view','take')}" firstView="views.PhotoPickView"  >
+		
+	</views:TakeViewNavigator>
+	<!--<components:ViewNavigator width="100%" height="100%" label="Take" firstView="views.TakeView"/>-->
+	<components:ViewNavigator width="100%" height="100%"
+							  label="{resourceManager.getString('view','gallery')}"
+							  firstView="views.GalleryView">
+		<components:icon>
+			<s:MultiDPIBitmapSource source240dpi="@Embed('assets/ui/book_bookmark24.png')"
+									source320dpi="@Embed('assets/ui/book_bookmark32.png')"/>
+		</components:icon>
+	</components:ViewNavigator>
+	<components:ViewNavigator width="100%" height="100%"
+							  label="{resourceManager.getString('view','options')}"
+							  firstView="views.OptionsView">
+		<components:icon>
+			<s:MultiDPIBitmapSource source240dpi="@Embed('assets/ui/spanner24.png')"
+									source320dpi="@Embed('assets/ui/spanner32.png')"/>
+		</components:icon>
+	</components:ViewNavigator>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.FaceUserInfo;
+			import com.loning.image.RpFaceProcessorManagerConfigLoader;
+			
+			import mx.core.FlexGlobals;
+			import mx.core.IVisualElementContainer;
+			import mx.events.FlexEvent;
+			
+			import spark.components.View;
+			import spark.events.ElementExistenceEvent;
+			import spark.events.IndexChangeEvent;
+			import spark.events.ViewNavigatorEvent;
+				
+			// trick Flash Builder by adding a dependency
+			IOSThemeClasses;
+			//MobileExamples;
+			
+			
+			protected function initializeHandler(event:FlexEvent):void
+			{
+				URLRequestDefaults.authenticate=true;
+				URLRequestDefaults.cacheResponse=false;
+				URLRequestDefaults.followRedirects=true;
+				URLRequestDefaults.manageCookies=true;
+				URLRequestDefaults.useCache=false;
+				
+				import com.gskinner.utils.Rndm;
+				Rndm.seed=Math.random()*0xFFFFFF;
+				
+				var file:File =File.applicationStorageDirectory.resolvePath("assets/rpcam/json.txt");
+				
+				if(!file.exists){
+					var defaultFile:File =File.applicationDirectory.resolvePath("assets/rpcam/storagedefault.json");
+					defaultFile.copyTo(file);
+				}
+				/*var elementsDir:File=File.applicationStorageDirectory.resolvePath("rpcam/");
+				if(!elementsDir.exists){
+					var sourceElementsDir:File=File.applicationDirectory.resolvePath("assets/rpcam/");
+					trace('first load,copying files');
+					sourceElementsDir.copyTo(elementsDir,true);
+					trace('file copied');
+				}*/
+				
+				//com.loning.image.FaceUserInfo.localPath=elementsDir.url+"/";
+				//com.loning.image.FaceUserInfo.MAX_ITEM_PER_CATEGORY=1;
+				trace(com.loning.image.FaceUserInfo.localPath);
+			}
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				//var f:File=File.applicationDirectory.resolvePath("assets/rpcam/");
+				
+				//trace(com.loning.image.FaceUserInfo.localPath);
+				RpFaceProcessorManagerConfigLoader.getInstance("app-storage:///assets/rpcam/json.txt");		
+			}
+			
+		]]>
+	</fx:Script>
+		
+	
+</components:TabbedViewNavigatorApplication>

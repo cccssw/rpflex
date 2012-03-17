@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="List"
+        creationComplete="view1_creationCompleteHandler(event)">
+    <fx:Script>
+        <![CDATA[
+            import mx.core.DPIClassification;
+            import mx.core.FlexGlobals;
+            import mx.events.FlexEvent;
+            
+            protected function view1_creationCompleteHandler(event:FlexEvent):void
+            {
+                if (Capabilities.version.indexOf("IOS") == 0)
+                {
+                    var padding:Number = (10 * FlexGlobals.topLevelApplication.applicationDPI / DPIClassification.DPI_160);
+                    list.top = list.bottom = list.left = list.right = padding;
+                }
+            }
+            
+        ]]>
+    </fx:Script>
+    
+	<fx:Declarations>
+		<s:ArrayCollection id="listData">
+            <fx:String>dd</fx:String>
+			<fx:Object name="fdsafads" />
+        </s:ArrayCollection>
+	</fx:Declarations>
+    
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+        
+        @media (os-platform: "IOS")
+        {
+            .listFormItemRenderer
+            {
+                borderStyle: rounded;
+                cornerRadius: 10;
+            }
+            
+            .listForm #titleDisplay
+            {
+                backgroundAlpha: 0;
+                color: #4C566C;
+                fontSize: 18;
+            }
+        }
+        
+        @media (os-platform: "IOS") and (application-dpi: 320)
+        {
+            .listFormItemRenderer
+            {
+                cornerRadius: 20;
+            }
+            
+            .listForm #titleDisplay
+            {
+                fontSize: 36;
+            }
+        }
+        
+    </fx:Style>
+    
+    <s:Scroller width="100%" height="100%">
+        <s:Group width="100%" height="100%">
+            
+            <!-- Custom List with optional title skin part -->
+            <s:ListForm id="list"
+                        width="100%" height="100%" title="Custom List Styles"
+                        dataProvider="{listData}" change="navigator.pushView(views.ListView)"
+                        styleName="listForm">
+                <s:itemRenderer>
+                    <fx:Component>
+                        <!-- Custom IconItemRenderer with arbitrary UIComponent content -->
+                        <s:FocusFormItemRenderer styleName="listFormItemRenderer">
+                            <!-- http://glyphish.com -->
+                            <!-- TODO bitmaps for 240 and 320 -->
+                            <!--
+                            <s:decorator>
+                                <s:MultiDPIBitmapSource source160dpi="@Embed('../assets/01-arrow-east.png')"/>
+                            </s:decorator>
+                            -->
+                        </s:FocusFormItemRenderer>
+                    </fx:Component>
+                </s:itemRenderer>
+            </s:ListForm>
+            
+        </s:Group>
+    </s:Scroller>
+</s:View>

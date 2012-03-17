@@ -1,0 +1,138 @@
+<!--livedocs:no-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<title>fl.motion Summary (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'fl.motion package - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/motion/package-detail.html&amp;fl/motion/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">fl.motion</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="package-detail.html#interfaceSummary"> Interfaces </a>&nbsp;| <a href="package-detail.html#classSummary">Classes</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("fl.motion"); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,true,true,false);}
+
+--></script>
+<div class="MainContent">
+<br>
+<p>The fl.motion package contains functions and classes that can incorporate XML describing a motion tween and apply that tween to a display object. Flash CS3 has a Copy Motion as ActionScript 3.0 command that generates ActionScript and XML based on a motion tween on the Timeline in the authoring tool. You can use the generated ActionScript to apply the animation to other display objects. Or, you can script your own XML and use the fl.motion classes to apply the animation to a specified display object instance. <p>For information on the supporting XML elements, see <a href="../../motionXSD.html">Motion XML Elements</a>.</p><p>To learn more about scripting your own animation or editing content from the Flash CS3 Copy Motion as ActionScript 3.0 command, begin with the Animator class which contains the primary functions and properties for applying the Motion XML to a motion tween.</p></p>
+<br>
+<hr>
+<a name="interfaceSummary"></a>
+<div class="summaryTableTitle">Interfaces</div>
+<table class="summaryTable" cellspacing="0" cellpadding="3">
+<tr>
+<th>&nbsp;</th><th width="30%">Interface</th><th width="70%">Description</th>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><i><a href="ITween.html">ITween</a></i></td><td class="summaryTableLastCol">
+ The ITween interface defines the application programming interface (API) that interpolation
+ classes implement in order to work with the fl.motion classes.</td>
+</tr>
+</table>
+<a name="classSummary"></a>
+<div class="summaryTableTitle">Classes</div>
+<table class="summaryTable" cellspacing="0" cellpadding="3">
+<tr>
+<th>&nbsp;</th><th width="30%">Class</th><th width="70%">Description</th>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Animator.html">Animator</a></td><td class="summaryTableLastCol">
+ The Animator class applies an XML description of a motion tween to a display object.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="BezierEase.html">BezierEase</a></td><td class="summaryTableLastCol">
+ The BezierEase class provides precise easing control for a motion tween between two keyframes.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="BezierSegment.html">BezierSegment</a></td><td class="summaryTableLastCol">
+ A Bezier segment consists of four Point objects that define a single cubic Bezier curve.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Color.html">Color</a></td><td class="summaryTableLastCol">
+ The Color class extends the Flash Player ColorTransform class,
+ adding the ability to control brightness and tint.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="CustomEase.html">CustomEase</a></td><td class="summaryTableLastCol">
+ The CustomEase class is used to modify specific properties of the easing behavior of a motion tween as
+ the tween progresses over time.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="FunctionEase.html">FunctionEase</a></td><td class="summaryTableLastCol">
+ The FunctionEase class allows custom interpolation functions to be used with
+ the fl.motion framework in place of other interpolations like SimpleEase and CustomEase.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Keyframe.html">Keyframe</a></td><td class="summaryTableLastCol">
+ The Keyframe class defines the visual state at a specific time in a motion tween.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="MatrixTransformer.html">MatrixTransformer</a></td><td class="summaryTableLastCol">
+ The MatrixTransformer class contains methods for modifying individual properties of a transformation matrix:
+ horizontal and vertical scale, horizontal and vertical skew, and rotation.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Motion.html">Motion</a></td><td class="summaryTableLastCol">
+ The Motion class stores a keyframe animation sequence that can be applied to a visual object.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="MotionEvent.html">MotionEvent</a></td><td class="summaryTableLastCol">
+ The MotionEvent class represents events that are broadcast by the fl.motion.Animator class.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="RotateDirection.html">RotateDirection</a></td><td class="summaryTableLastCol">
+ The RotateDirection class provides constant values for rotation behavior during a tween.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="SimpleEase.html">SimpleEase</a></td><td class="summaryTableLastCol">
+ The SimpleEase class allows you to control an animation with 
+ the kind of percentage easing that is used in the Flash timeline.</td>
+</tr>
+<tr class="prow1">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Source.html">Source</a></td><td class="summaryTableLastCol">
+ The Source class stores information about the context in which a Motion instance was generated.</td>
+</tr>
+<tr class="prow0">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableSecondCol"><a href="Tweenables.html">Tweenables</a></td><td class="summaryTableLastCol">
+ The Tweenables class provides constant values for the names of animation properties used in the Motion and Keyframe classes.</td>
+</tr>
+</table>
+<p></p>
+<div>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 1:07 PM GMT-07:00 </center>
+</div>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 1:07 PM GMT-07:00 -->

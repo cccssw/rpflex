@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="20" scaleGridRight="55" scaleGridTop="2" scaleGridBottom="42">
+  
+      <Path winding="nonZero" data="M55.4707 1.45166C58.7988 1.45166 61.5 4.00928 61.5 7.16309L61.5 36.3853C61.5 39.5391 58.7988 42.0967 55.4707 42.0967L19.5879 42.0967C16.4736 42.0967 1.5 23.3774 1.5 22.1309 1.5 20.8374 15.75 1.45166 20.124 1.45166L55.4707 1.45166ZM55.4707 0 20.25
+ 0C14.376 0 0 20.6089 0 22.1309 0 23.7173 14.25 43.5488 19.5879 43.5488L55.4707 43.5488C59.6221 43.5488 63 40.3345 63 36.3853L63 7.16309C63 3.21387 59.6221 0 55.4707 0L55.4707 0Z">
+        <fill>
+          <LinearGradient x="31.5" y="0" scaleX="40.646" rotation="90">
+            <GradientEntry ratio="0" color="#323232" alpha="0.9"/>
+            <GradientEntry ratio="0.1" color="#313131" alpha="0.8"/>
+            <GradientEntry ratio="0.2" color="#444444" alpha="0.8"/>
+            <GradientEntry ratio="1" color="#7D7D7D" alpha="0.8"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Path y="22.8486" winding="nonZero" data="M56.6895 20.583C56.2969 20.6592 55.8867 20.7002 55.4707 20.7002L19.5879 20.7002C18.7544 20.7002 16.8018 20.7002 8.2207 10.6582 6.02197 8.08594 1.24219 2.354 0.208008 0 0.0776367 0.303223 0 0.555176 0 0.733887 0 2.32031 5.74805 9.2168 8.2207 12.1099
+ 16.8018 22.1514 18.7544 22.1514 19.5879 22.1514L55.4707 22.1514C59.6221 22.1514 63 18.9375 63 14.9883L63 13.5366C63 17.0889 60.2607 20.0229 56.6895 20.583Z">
+        <fill>
+          <SolidColor color="#FFFFFF" alpha="0.15"/>
+        </fill>
+      </Path>
+      <Rect width="63" height="45">
+        <fill>
+          <SolidColor alpha="0"/>
+        </fill>
+      </Rect>
+
+</Graphic>

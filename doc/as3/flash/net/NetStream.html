@@ -1,0 +1,3446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="NetStream,flash.net.NetStream,AMF0,AMF3,authenticate,authenticate,BINARY,bufferLength,bufferTime,bytesAvailable,bytesAvailable,bytesLoaded,bytesLoaded,bytesTotal,bytesTotal,cacheResponse,cacheResponse,checkPolicyFile,client,client,client,client,connected,connected,connected,connected,connectedProxyType,contentType,creationDate,creator,currentFPS,data,dataFormat,data,data,defaultObjectEncoding,defaultObjectEncoding,DEFAULT,DELETE,description,digest,domain,dynamicPropertyWriter,endian,endian,extension,extension,fileList,FLUSHED,followRedirects,followRedirects,fps,GET,HEAD,liveDelay,macType,manageCookies,manageCookies,method,modificationDate,name,name,objectEncoding,objectEncoding,objectEncoding,objectEncoding,objectEncoding,OPTIONS,PENDING,POST,proxyType,PUT,requestHeaders,size,size,soundTransform,TEXT,time,type,uri,url,useCache,useCache,userAgent,userAgent,usingTLS,value,VARIABLES,addEventListener,addHeader,allowDomain,allowInsecureDomain,attachAudio,attachCamera,browse,browse,call,cancel,clear,close,close,close,close,close,close,close,close,connect,connect,connect,connect,connect,decode,download,flush,flush,getClassByAlias,getLocal,getRemote,load,load,navigateToURL,pause,play,publish,readBoolean,readBoolean,readByte,readByte,readBytes,readBytes,readDouble,readDouble,readFloat,readFloat,readInt,readInt,readMultiByte,readMultiByte,readObject,readObject,readShort,readShort,readUnsignedByte,readUnsignedByte,readUnsignedInt,readUnsignedInt,readUnsignedShort,readUnsignedShort,readUTFBytes,readUTFBytes,readUTF,readUTF,receiveAudio,receiveVideoFPS,receiveVideo,registerClassAlias,resetDRMVouchers,resume,seek,send,send,send,send,sendToURL,setDirty,setDRMAuthenticationCredentials,setLoginCredentialsForHost,setProperty,togglePause,toString,upload,uploadUnencoded,writeBoolean,writeBytes,writeByte,writeDouble,writeDynamicProperties,writeDynamicProperty,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUnsignedInt,writeUTFBytes,writeUTF" name="keywords">
+<title>flash.net.NetStream (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'NetStream - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/net/NetStream.html&amp;flash/net/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">NetStream</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("NetStream"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.net</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  NetStream</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">NetStream  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The NetStream class opens a one-way streaming connection between a 
+ <span>Flash Player or </span> AIR application
+ and Flash Media Server, or between a <span>Flash Player 
+ or </span> AIR application and the local file system. 
+ A NetStream object is a channel within a
+ NetConnection object. This channel can either publish a stream, using 
+ <code>NetStream.publish()</code>,
+ or subscribe to a published stream and receive data, using 
+ <code>NetStream.play()</code>.
+ You can publish or play live (real-time) data and previously recorded data. 
+ You can also use NetStream objects to send text messages to all subscribed clients
+ (see the <code>NetStream.send()</code> method).
+ 
+ <p>Playing external video files provides several advantages over embedding video
+ in a SWF file, such as better performance and memory management, 
+ and independent video and SWF frame rates. </p>
+  <p>Adobe AIR and Flash Player 9.0.115.0 and later versions 
+ support files derived from the standard MPEG-4 container format including F4V, MP4, M4A, MOV, MP4V, 3GP, and 3G2 
+ if they contain H.264 video and/or HEAAC v2 encoded audio. H.264 delivers higher quality video at lower bitrates 
+ when compared to the same encoding profile in Sorenson or On2. HE-AAC v2 is an extension of AAC 
+ (a standard audio format defined in the MPEG-4 video standard) that uses Spectral Band Replication (SBR) 
+ and Parametric Stereo (PS) techniques to increase coding efficiency at low bitrates.
+ For information about supported codecs and file formats, see <a href="http://www.adobe.com/go/hardware_scaling_en" target="external">http://www.adobe.com/go/hardware_scaling_en</a>
+ and the <a href="http://www.adobe.com/support/documentation" target="external">Flash Media Server documentation</a>.</p>
+  <p>
+ The NetStream class provides several methods and properties you can use to track 
+ the progress of the file as it loads and plays,
+ and to give the user control over playback (stopping, pausing, and so on).</p> 
+ 
+ <p><b>General workflow for streaming audio or video.</b> 
+ The following steps summarize the workflow for publishing 
+ real-time audio and video:</p>
+ 
+ <ol>
+ <li>Create a NetConnection object.</li>
+ <li>Use the <code>NetConnection.connect()</code> method to connect
+ to the application instance on the server.</li>
+ <li>Create a NetStream object to create a data stream within the 
+ connection.</li>
+ <li>Use the <code>NetStream.attachAudio()</code>method to capture and send 
+ audio over the stream and the <code>NetStream.attachCamera()</code> 
+ method to capture and send video.</li>
+ <li>Use the <code>NetStream.publish()</code> method to give the stream a 
+ unique name 
+ and send data over the stream to the server so that others can receive it. 
+ You can also record the data
+ as you publish it, so that users can play it back later.</li>
+ </ol>
+ <p>Files that subscribe to the stream will use the name passed to 
+ <code>publish()</code> in their call to <code>play()</code> and will 
+ call the same <code>NetConnection.connect()</code> method as the publisher.
+ They will have to call the <code>Video.attachNetStream()</code> method to 
+ stream the video
+ and the <code>NetStream.play()</code> method to play it.</p>
+ 
+ <p><b>Using data keyframes with Flash Media Server.</b>
+ After creating the NetConnection and NetStream objects, you can 
+ use <code>NetStream.send()</code> to add metadata
+ to live audio or video as you stream it to the server.
+ Metadata can be information such as the height or width of a video,
+ its duration, the name of its creator, and so on.
+ To define the metadata, use the special handler name 
+ <code>@setDataFrame</code> as the first argument to
+ <code>NetStream.send()</code>.
+ The client that receives the live stream also needs to define an
+ <code>onMetaData</code> event handler to retrieve the metadata
+ from the stream; see the <code>NetStream.send()</code> method for details.
+ </p>
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/media/Video.html" target="">flash.media.Video</a>
+<br>
+<a href="NetConnection.html" target="">flash.net.NetConnection</a>
+<br>
+<a href="NetStream.html#send()" target="">send()</a>
+<br>
+<a href="NetStream.html#event:onMetaData" target="">onMetaData</a>
+<br>
+<a href="../../../main/00000252.html" target="_top">Basics of video</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bufferLength">bufferLength</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+  The number of seconds of data currently in the buffer.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bufferTime">bufferTime</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">
+  Specifies how long to buffer messages before starting to display the stream.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bytesLoaded">bytesLoaded</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+  The number of bytes of data that have been loaded into the application.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bytesTotal">bytesTotal</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+  The total size in bytes of the file being loaded into the application.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#checkPolicyFile">checkPolicyFile</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+  Specifies whether the application should try to download a cross-domain policy file from the
+  loaded video file's server before beginning to load the video file.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#client">client</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+     Specifies the object on which callback methods are invoked.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentFPS">currentFPS</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+  The number of frames per second being displayed.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#liveDelay">liveDelay</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+  The number of seconds of data in the subscribing stream's 
+  buffer in live (unbuffered) mode.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#objectEncoding">objectEncoding</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+  The object encoding (AMF version) for this NetStream object.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#soundTransform">soundTransform</a> : <a href="../../flash/media/SoundTransform.html">SoundTransform</a>
+<div class="summaryTableDescription">
+  Controls sound in this NetStream object.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#time">time</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+  The position of the playhead, in seconds.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#NetStream()">NetStream</a>(connection:<a href="../../flash/net/NetConnection.html">NetConnection</a>)</div>
+<div class="summaryTableDescription">
+   Creates a stream that can be used for playing video files through the specified NetConnection 
+  object.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#attachAudio()">attachAudio</a>(microphone:<a href="../../flash/media/Microphone.html">Microphone</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies an audio stream sent over the NetStream object, from a Microphone
+  object passed as the source.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#attachCamera()">attachCamera</a>(theCamera:<a href="../../flash/media/Camera.html">Camera</a>, snapshotMilliseconds:<a href="../../int.html">int</a> = -1):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Starts capturing video from a camera, or stops capturing if 
+  theCamera is set to null.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Stops playing all data on the stream, sets the time property to 0,
+  and makes the stream available for another use.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pause()">pause</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Pauses playback of a video stream.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#play()">play</a>(<a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Begins playback of video files.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#publish()">publish</a>(name:<a href="../../String.html">String</a> = null, type:<a href="../../String.html">String</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Sends streaming audio, video, and text messages from a client to Flash Media Server, 
+     optionally recording the stream during transmission.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#receiveAudio()">receiveAudio</a>(flag:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies whether incoming audio plays on the stream.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#receiveVideo()">receiveVideo</a>(flag:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies whether incoming video will play on the stream.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#receiveVideoFPS()">receiveVideoFPS</a>(FPS:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies the frame rate for incoming video.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#resetDRMVouchers()">resetDRMVouchers</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">[static] 
+     
+     Deletes all locally cached digital rights management (DRM) voucher data for the current content.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#resume()">resume</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Resumes playback of a video stream that is paused.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#seek()">seek</a>(offset:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  
+  Seeks the keyframe (also called an I-frame in the video industry) closest to 
+  the specified location.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#send()">send</a>(handlerName:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Sends a message on a published stream to all subscribing clients.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#setDRMAuthenticationCredentials()">setDRMAuthenticationCredentials</a>(userName:<a href="../../String.html">String</a>, password:<a href="../../String.html">String</a>, type:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the DRM authentication credentials needed for viewing the underlying encrypted content.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#togglePause()">togglePause</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Pauses or resumes playback of a stream.</div>
+</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:asyncError">asyncError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an exception is thrown asynchronously — that is, from native asynchronous code.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:drmAuthenticate">drmAuthenticate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a NetStream object tries to play a digital rights management (DRM) encrypted content that requires a user credential for authentication before playing.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:drmError">drmError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a NetStream object, trying to play a digital rights management (DRM) encrypted file, encounters a DRM-related error.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:drmStatus">drmStatus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the digital rights management (DRM) encrypted content begins playing (when the user is authenticated and authorized to play the content).</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:ioError">ioError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an input or output error occurs that causes a network operation to fail.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:netStatus">netStatus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a NetStream object is reporting its status or error condition.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:onCuePoint">onCuePoint</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Invoked when an embedded cue point is reached while playing a video file.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:onImageData">onImageData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player receives image data as a byte array embedded in a media file that is playing.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:onMetaData">onMetaData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the application receives descriptive information embedded in the video being played.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:onPlayStatus">onPlayStatus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a NetStream object has completely played a stream.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:onTextData">onTextData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player receives text data embedded in a media file that is playing.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:status">status</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the application attempts to play content encrypted with digital rights management (DRM), by invoking the NetStream.play() method.</td><td class="summaryTableOwnerCol">NetStream</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="bufferLength"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bufferLength</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bufferLength:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The number of seconds of data currently in the buffer. You can use this property with 
+  the <code>bufferTime</code> property to estimate how close the buffer is to being full &mdash; for example,
+  to display feedback to a user who is waiting for data to be loaded into the buffer.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bufferLength():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#bufferTime" target="">bufferTime</a>
+<br>
+<a href="NetStream.html#bytesLoaded" target="">bytesLoaded</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="bufferTime"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bufferTime</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bufferTime:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies how long to buffer messages before starting to display the stream. For example, 
+  to make sure that the first 15 seconds of the stream play without interruption, set 
+  <code>bufferTime</code> to 15; the application begins playing the stream only after 15 seconds of
+  data are buffered.
+  
+  <p>The default value is 0.1 (one-tenth of a second). To determine the number of seconds
+  currently in the buffer, use the <code>bufferLength</code> property.</p>
+  
+     <p><b>Note:</b> To avoid distortion when streaming pre-recorded (not live) content,
+     do not set the value of <code>Netstream.bufferTime</code> to 0. By default, the application 
+     uses an input buffer for pre-recorded content that queues the media data and plays the media properly.
+     For pre-recorded content use the default setting or increase the buffer time.</p>
+     
+     <p>Starting with Flash Player 9.0.115.0, Flash Player no longer clears the buffer
+       when <code>NetStream.pause()</code> is called. Before Flash Player 9.0.115.0, Flash Player 
+       waited for the buffer to fill up before resuming playback, which often caused a delay.</p>
+              <p>For a single pause, the <code>NetStream.bufferLength</code> property has a limit of either 60 seconds
+       or twice the value of <code>NetStream.bufferTime</code>, whichever value is higher. For example, if
+       <code>bufferTime</code> is 20 seconds, Flash Player buffers until <code>NetStream.bufferLength</code>
+       is the higher value of either 20*2 (40), or 60, so in this case it buffers until <code>bufferLength</code> is 60. 
+       If <code>bufferTime</code> is 40 seconds, Flash Player buffers until <code>bufferLength</code> is the higher value 
+       of 40*2 (80), or 60, so in this case it buffers until <code>bufferLength</code> is 80 seconds.</p>
+              <p>The <code>bufferLength</code> property also has an absolute limit. 
+       If any call to <code>pause()</code> causes <code>bufferLength</code>
+       to increase more than 600 seconds or the value of <code>bufferTime</code> * 2, whichever is higher, Flash Player
+       flushes the buffer and resets <code>bufferLength</code> to 0. For example, if 
+       <code>bufferTime</code> is 120 seconds, Flash Player flushes the buffer
+       if <code>bufferLength</code> reaches 600 seconds; if <code>bufferTime</code> is 360 seconds, 
+       Flash Player flushes the buffer if <code>bufferLength</code> reaches 720 seconds.</p>
+              <p><b>Tip</b>: You can use <code>NetStream.pause()</code> in code to buffer data while viewers are watching 
+       a commercial, for example, and then unpause when the main video starts.</p>
+              <p>For more information about the new pause behavior, 
+       see <a href="http://www.adobe.com/go/learn_fms_smartpause_en" target="external">http://www.adobe.com/go/learn_fms_smartpause_en</a>.</p>
+     <p>
+     <b>Flash Media Server</b>. The buffer behavior depends on whether the buffer time is
+     set on a publishing stream or a subscribing stream.
+     For a publishing stream, <code>bufferTime</code> specifies how long the outgoing buffer can
+     grow before the application starts dropping frames.
+     On a high-speed connection, buffer time should not be a concern; data will be sent 
+     almost as quickly as the application can buffer it. On a slow connection, however, there might 
+     be a significant difference between how fast the application buffers the data and how fast it 
+     can be sent to the client. 
+     </p>
+     
+     <p>
+     For a subscribing stream, <code>bufferTime</code> specifies how long to buffer incoming 
+     data before starting to display the stream. For example, if you want to make sure that the 
+     first 15 seconds of the stream play without interruption, 
+     set <code>bufferTime</code> to 15; Flash will begin playing the stream only after 15 seconds 
+     of data have been buffered.
+     </p>
+     
+     <p>
+     When a recorded stream is played, if <code>bufferTime</code> is zero, Flash sets it to a small 
+     value (approximately 10 milliseconds). If live streams are later played 
+     (for example, from a playlist), this buffer time persists. That is, <code>bufferTime</code> 
+     remains nonzero for the stream. 
+     </p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bufferTime():<a href="../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set bufferTime(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#bufferLength" target="">bufferLength</a>
+<br>
+<a href="NetStream.html#time" target="">time</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="bytesLoaded"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bytesLoaded</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bytesLoaded:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The number of bytes of data that have been loaded into the application. You can use this property 
+  with the <code>bytesTotal</code> property to estimate how close the buffer is to being full &mdash; for example, 
+     to display feedback to a user who is waiting for data to be loaded into the buffer.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesLoaded():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#bytesTotal" target="">bytesTotal</a>
+<br>
+<a href="NetStream.html#bufferLength" target="">bufferLength</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="bytesTotal"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bytesTotal</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bytesTotal:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The total size in bytes of the file being loaded into the application.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesTotal():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#bytesLoaded" target="">bytesLoaded</a>
+<br>
+<a href="NetStream.html#bufferTime" target="">bufferTime</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="checkPolicyFile"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">checkPolicyFile</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>checkPolicyFile:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the application should try to download a cross-domain policy file from the
+  loaded video file's server before beginning to load the video file. This property applies
+  when you are using a NetStream object for progressive video download (standalone
+  files), or when you are loading files that are outside the calling file's own domain.
+  This property is ignored when you are using a NetStream object to get an RTMP asset.
+       <p>Set this property to <code>true</code> when you are loading an video file from outside the calling 
+     file's domain and you need to use the <code>BitmapData.draw()</code> method for pixel-level access to the video.
+  If you call <code>BitmapData.draw()</code> without setting the <code>checkPolicyFile</code> property
+  to <code>true</code> at loading time, you may get a <code>SecurityError</code> exception 
+  because the required policy file was not downloaded.</p>
+    <p>If you don't need pixel-level access to the video you are loading,
+  avoid setting <code>checkPolicyFile</code> to <code>true</code>. Checking for a policy file 
+  consumes network bandwidth and may delay the start of your download.</p>
+    <p>When you call the <code>NetStream.play()</code> method with <code>checkPolicyFile</code> set to <code>true</code>,
+     <span>Flash Player or</span> the AIR runtime 
+  must either successfully download a relevant cross-domain policy file or determine
+  that no such policy file exists before it begins downloading the object specified in 
+  your call to <code>NetStream.play()</code>. To verify the existence of a policy file,
+     <span>Flash Player or</span> the AIR runtime 
+  performs the following actions, in this order:</p>
+    <ol>
+  
+     <li>The application considers policy files that have already been downloaded.</li>
+  
+  <li>The application tries to download any pending policy files specified in calls to the
+  <code>Security.loadPolicyFile()</code> method.</li>
+  
+  <li>The application tries to download a policy file from the default
+  location that corresponds to the URL you passed to <code>NetStream.play()</code>, which is
+  <code>/crossdomain.xml</code> on the same server as that URL.</li>
+  
+  </ol>
+  
+  <p>In all cases, <span>Flash Player or</span> the AIR runtime
+  requires that an appropriate policy file exist on the video's server, 
+     that it provide access to the object at the URL you passed to <code>play()</code> based on the 
+     policy file's location, and that it allow the domain of the calling code's file to access the video, 
+  through one or more <code>&lt;allow-access-from&gt;</code> tags.</p>
+    <p>If you set <code>checkPolicyFile</code> to <code>true</code>, the application waits until the policy file 
+  is verified before downloading the video. Wait to perform any pixel-level
+  operations on the video data, such as calling <code>BitmapData.draw()</code>, until
+  you receive <code>onMetaData</code> or <code>NetStatus</code> events from your 
+  NetStream object.</p>
+    <p>If you set <code>checkPolicyFile</code> to <code>true</code> but no relevant policy file is found,
+  you won't receive an error until you perform an operation that requires a policy file, and then
+  the application throws a SecurityError exception.</p>
+    <p>Be careful with <code>checkPolicyFile</code> if you are downloading a file from a URL that
+  uses server-side HTTP redirects. The applicatoins tries to retrieve policy files
+  that correspond to the initial URL that you specify in <code>NetStream.play()</code>. If the
+  final file comes from a different URL because of HTTP redirects, the initially
+  downloaded policy files might not be applicable to the file's final URL, which is the URL
+  that matters in security decisions.</p>
+    <p>For more information on policy files, see the "Flash Player Security" chapter of
+  <i>Programming ActionScript 3.0</i>.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get checkPolicyFile():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set checkPolicyFile(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/BitmapData.html#draw()" target="">flash.display.BitmapData.draw()</a>
+<br>
+<a href="../../flash/system/Security.html#loadPolicyFile()" target="">flash.system.Security.loadPolicyFile()</a>
+<br>
+<a href="NetStream.html#event:netStatus" target="">netStatus</a>
+<br>
+<a href="NetStream.html#event:onMetaData" target="">onMetaData</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="../../../main/00000173.html" target="_top">Specifying loading context</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="client"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">client</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>client:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Specifies the object on which callback methods are invoked. The default object is <code>this</code>, the 
+     NetStream object being created. If you set the <code>client</code> property to another object, callback methods will 
+     be invoked on that other object. 
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get client():<a href="../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set client(value:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../TypeError.html">TypeError</a> </code> &mdash; The <code>client</code> property must be set to a non-null object.
+    </td>
+</tr>
+</table>
+</div>
+<a name="propertyDetail"></a><a name="currentFPS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentFPS</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentFPS:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The number of frames per second being displayed. If you are exporting video files to be played back on a number
+  of systems, you can check this value during testing to help you determine how much compression to apply when
+  exporting the file.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentFPS():<a href="../../Number.html">Number</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="liveDelay"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">liveDelay</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>liveDelay:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The number of seconds of data in the subscribing stream's 
+  buffer in live (unbuffered) mode. This property specifies the current
+  network transmission delay (lag time).
+  
+  <p>This property is intended primarily for use with a server such as Flash Media Server;
+  for more information, see the class description.</p>
+  
+  <p>You can get the value of this property to roughly gauge the transmission
+  quality of the stream and communicate it to the user. </p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get liveDelay():<a href="../../Number.html">Number</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="objectEncoding"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">objectEncoding</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>objectEncoding:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The object encoding (AMF version) for this NetStream object. The NetStream object
+  inherits its <code>objectEncoding</code> value from the associated NetConnection object.
+  It's important to understand this property if your ActionScript 3.0 SWF file needs to 
+  communicate with servers released prior to Flash Player 9.
+  For more information, see the <code>objectEncoding</code> property description
+  in the NetConnection class.
+  
+  <p>The value of this property depends on whether the stream is local or  
+  remote. Local streams, where <code>null</code> was passed to the 
+  <code>NetConnection.connect()</code> method, return the value of 
+  <code>NetConnection.defaultObjectEncoding</code>. Remote streams, where you
+  are connecting to a server, return the object encoding of the connection to the server.</p>
+  
+  <p>If you try to read this property when not connected, or if you try to change this property, 
+  the application throws an exception.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html#objectEncoding" target="">NetConnection.objectEncoding</a>
+<br>
+<a href="ObjectEncoding.html" target="">ObjectEncoding</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="soundTransform"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">soundTransform</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>soundTransform:<a href="../../flash/media/SoundTransform.html">SoundTransform</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Controls sound in this NetStream object. For more information, see the SoundTransform class.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get soundTransform():<a href="../../flash/media/SoundTransform.html">SoundTransform</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set soundTransform(value:<a href="../../flash/media/SoundTransform.html">SoundTransform</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/media/SoundTransform.html" target="">flash.media.SoundTransform</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="time"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">time</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>time:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The position of the playhead, in seconds.
+  <p>
+  <b>Flash Media Server</b> For a subscribing stream, the number of seconds
+  the stream has been playing. For a publishing stream, the number of
+  seconds the stream has been publishing. 
+  This number is accurate to the thousandths decimal place; multiply 
+  by 1000 to get the number of milliseconds the stream has been playing.
+  </p>
+  <p>
+  For a subscribing stream, if the server stops sending data but the stream remains open, 
+  the value of <code>time</code> stops incrementing. When the server begins sending data again, 
+  the value continues incrementing from where it left off plus the time that elapsed 
+  while no data was sent. 
+  </p>
+  <p>
+  The value of <code>time</code> continues to increment when the stream 
+  switches from one playlist element to another. This property is set to 0 when 
+  <code>NetStream.play()</code> is called with <code>reset</code> set to <code>1</code> or 
+  <code>true</code>, or when <code>NetStream.close()</code> is called. 
+  </p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get time():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#bufferLength" target="">bufferLength</a>
+<br>
+<a href="NetStream.html#bytesLoaded" target="">bytesLoaded</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="NetStream()"></a><a name="NetStream(flash.net.NetConnection)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">NetStream</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function NetStream(connection:<a href="../../flash/net/NetConnection.html">NetConnection</a>)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a stream that can be used for playing video files through the specified NetConnection 
+  object. 
+     
+     <p>
+     For information about supported codecs and file formats, see <a href="http://www.adobe.com/go/hardware_scaling_en" target="external">http://www.adobe.com/go/hardware_scaling_en</a>
+     and the <a href="http://www.adobe.com/support/documentation" target="external">Flash Media Server documentation</a>.
+     </p>
+  
+   </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">connection</span>:<a href="../../flash/net/NetConnection.html">NetConnection</a></code> &mdash; A NetConnection object.
+  
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The NetConnection instance is not connected.
+      </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html" target="">flash.net.NetConnection</a>
+<br>
+<a href="../../flash/media/Video.html#attachCamera()" target="">flash.media.Video.attachCamera()</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="attachAudio()"></a><a name="attachAudio(flash.media.Microphone)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">attachAudio</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function attachAudio(microphone:<a href="../../flash/media/Microphone.html">Microphone</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies an audio stream sent over the NetStream object, from a Microphone
+  object passed as the source. This method is available 
+  only to the publisher of the specified stream.
+  
+  <p>The <code>attachAudio</code> method is intended for use with Flash Media Server. 
+     This method is often called by a user sending live audio 
+  (or live video with audio) from a client computer to the server.
+  </p>
+<p>You can call this method before or after you call the <code>publish()</code> method
+  and actually begin transmitting. Subscribers who want to hear the audio must call
+  the <code>NetStream.play()</code> method. You can control the sound properties of 
+  this audio stream through the <code>soundTransform</code> property of the specified Microphone
+  object.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">microphone</span>:<a href="../../flash/media/Microphone.html">Microphone</a></code> &mdash; The source of the audio stream to be transmitted.
+       </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="../../flash/media/Microphone.html" target="">flash.media.Microphone</a>
+</div>
+</div>
+<a name="attachCamera()"></a><a name="attachCamera(flash.media.Camera,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">attachCamera</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function attachCamera(theCamera:<a href="../../flash/media/Camera.html">Camera</a>, snapshotMilliseconds:<a href="../../int.html">int</a> = -1):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Starts capturing video from a camera, or stops capturing if 
+  <code>theCamera</code> is set to <code>null</code>.
+  This method is available only to the publisher of the specified stream. 
+  
+     <p>This method is intended for use with Flash Media Server;
+  for more information, see the class description.</p>
+<p> After attaching the video source, you must call <code>NetStream.publish()</code> 
+  to begin transmitting. Subscribers who want to display the video
+  must call the <code>NetStream.play()</code> and <code>Video.attachCamera()</code> methods
+  to display the video on the Stage.</p>
+<p>You can use <code>snapshotMilliseconds</code> to send a single snapshot
+  (by providing a value of 0) or a series of snapshots &mdash; in effect,
+  time-lapse footage &mdash; by providing a positive number that adds a trailer
+  of the specified number of milliseconds to the video feed. The trailer
+  extends the display time of time the video message is displayed. By repeatedly
+  calling <code>attachCamera()</code> with a positive value for <code>snapshotMilliseconds</code>, 
+     the sequence of alternating snapshots and trailers create time-lapse footage.
+  For example, you could capture one frame per day and append it to a video file.
+  When a subscriber plays the file, each frame remains onscreen for the specified
+  number of milliseconds and then the next frame is displayed.</p>
+<p>The purpose of the <code>snapshotMilliseconds</code> parameter is different
+  from the <code>fps</code> parameter you can set with <code>Camera.setMode()</code>. When you specify
+  <code>snapshotMilliseconds</code>, you control how much time elapses between recorded frames. When 
+     you specify <code>fps</code> using <code>Camera.setMode()</code>, you are 
+  controlling how much time elapses during recording and playback.</p>
+<p>For example, suppose you want to take a snapshot every 5 minutes for a total
+  of 100 snapshots. You can do this in two ways:</p>
+<ul>
+<li>You can issue a <code>NetStream.attachCamera(myCamera, 500)</code> command
+  100 times, once every 5 minutes. This takes 500 minutes to record, but the resulting file
+  will play back in 50 seconds (100 frames with 500 milliseconds between frames).</li>
+<li>You can issue a <code>Camera.setMode()</code> command with an <code>fps</code> value
+  of 1/300 (one per 300 seconds, or one every 5 minutes), and then issue a 
+  <code>NetStream.attachCamera(source)</code> command, letting the camera capture continuously
+  for 500 minutes. The resulting file will play back in 500 minutes &mdash; the same length of time
+  that it took to record &mdash; with each frame being displayed for 5 minutes.</li>
+</ul>
+<p>Both techniques capture the same 500 frames, and both approaches are useful;
+  the approach to use depends primarily on your playback requirements. For example, 
+  in the second case, you could be recording audio the entire time. Also, both files 
+  would be approximately the same size.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">theCamera</span>:<a href="../../flash/media/Camera.html">Camera</a></code> &mdash; The source of the video transmission. Valid values are a Camera object
+  (which starts capturing video) and <code>null</code>. If you pass <code>null</code>, 
+  the application stops capturing video, and any additional parameters you send are ignored. 
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">snapshotMilliseconds</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; Specifies whether the video stream is continuous, 
+  a single frame, or a series of single frames used to create time-lapse photography.
+  
+  <ul>
+<li>If you omit this parameter, the application captures all video until you pass
+  a value of <code>null</code> to <code>attachCamera</code>.</li>
+<li>If you pass 0, the application captures only a single video frame. Use this value
+  to transmit "snapshots" within a preexisting stream. <span>Flash Player 
+  or </span> AIR interprets invalid, negative, or nonnumeric arguments as 0.</li>
+<li>If you pass a positive number, the application captures a single video frame and then appends a pause 
+     of the specified length as a trailer on the snapshot. Use this value to create time-lapse 
+     photography effects.</li>
+</ul>
+</td>
+</tr>
+</table>
+</p>
+</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Stops playing all data on the stream, sets the <code>time</code> property to 0,
+  and makes the stream available for another use. This method also deletes the local copy
+  of a video file that was downloaded through HTTP. Although the application deletes the
+  local copy of the file that it creates, a copy might persist in the 
+  cache directory. If you must completely prevent caching or local storage of the video file,
+     use Flash Media Server.
+     
+     <p>
+     When using Flash Media Server, this method is invoked implicitly when you call
+     <code>NetStream.play()</code> from a publishing stream or
+     <code>NetStream.publish()</code> from a subcribing stream.
+     Please note that:
+     </p>
+<ul>
+<li>
+     If <code>close()</code> is called from a publishing stream, the stream
+     stops publishing and the publisher can now use the stream for another purpose.
+     Subscribers no longer receive anything that was being published on the stream,
+     because the stream has stopped publishing. 
+     </li>
+<li>
+     If <code>close()</code> is called from a subscribing stream, the stream
+     stops playing for the subscriber, and the subscriber can use the stream for 
+     another purpose.  Other subscribers are not affected.
+     </li>
+<li>
+     You can stop a subscribing stream from playing, without closing the stream
+     or changing the stream type by using <code>flash.net.NetStream.play(false)</code>.
+     </li>
+</ul>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#pause()" target="">pause()</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+</div>
+</div>
+<a name="pause()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pause():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Pauses playback of a video stream. Calling this method does nothing if the video 
+  is already paused. To resume play after pausing a video, call <code>resume()</code>. 
+  To toggle between pause and play (first pausing the video, then resuming), call 
+  <code>togglePause()</code>.
+  
+  <p>Starting with Flash Player 9.0.115.0, Flash Player no longer clears the buffer
+  when <code>NetStream.pause()</code> is called. Before Flash Player 9.0.115.0, Flash Player 
+  waited for the buffer to fill up before resuming playback, which often caused a delay.</p>
+<p>For a single pause, the <code>NetStream.bufferLength</code> property has a limit of either 60 seconds
+  or twice the value of <code>NetStream.bufferTime</code>, whichever value is higher. For example, if
+  <code>bufferTime</code> is 20 seconds, Flash Player buffers until <code>NetStream.bufferLength</code>
+  is the higher value of either 20*2 (40), or 60, so in this case it buffers until <code>bufferLength</code> is 60. 
+  If <code>bufferTime</code> is 40 seconds, Flash Player buffers until <code>bufferLength</code> is the higher value 
+  of 40*2 (80), or 60, so in this case it buffers until <code>bufferLength</code> is 80 seconds.</p>
+<p>The <code>bufferLength</code> property also has an absolute limit. 
+  If any call to <code>pause()</code> causes <code>bufferLength</code>
+  to increase more than 600 seconds or the value of <code>bufferTime</code> * 2, whichever is higher, Flash Player
+  flushes the buffer and resets <code>bufferLength</code> to 0. For example, if 
+  <code>bufferTime</code> is 120 seconds, Flash Player flushes the buffer
+  if <code>bufferLength</code> reaches 600 seconds; if <code>bufferTime</code> is 360 seconds, 
+  Flash Player flushes the buffer if <code>bufferLength</code> reaches 720 seconds.</p>
+<p>
+<b>Tip</b>: You can use <code>NetStream.pause()</code> in code to buffer data while viewers are watching 
+  a commercial, for example, and then unpause when the main video starts.</p>
+<p>For more information about the new pause behavior, 
+  see <a href="http://www.adobe.com/go/learn_fms_smartpause_en" target="external">http://www.adobe.com/go/learn_fms_smartpause_en</a>.</p>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#close()" target="">close()</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#resume()" target="">resume()</a>
+<br>
+<a href="NetStream.html#togglePause()" target="">togglePause()</a>
+<br>
+<a href="NetStream.html#bufferLength" target="">bufferLength</a>
+<br>
+<a href="NetStream.html#bufferTime" target="">bufferTime</a>
+</div>
+</div>
+<a name="play()"></a><a name="play(restParam)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">play</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function play(<a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Begins playback of video files. 
+          <p>
+     For information about supported codecs and file formats, see <a href="http://www.adobe.com/go/hardware_scaling_en" target="external">http://www.adobe.com/go/hardware_scaling_en</a>
+     and the <a href="http://www.adobe.com/support/documentation" target="external">Flash Media Server documentation</a>.</p>
+<p>To view video data, you must create a
+  Video object and call the <code>Video.attachNetStream()</code> method; 
+  audio being streamed with the video, or a file 
+  that contains only audio, is played automatically.
+  To stream audio from a microphone, use the <code>NetStream.attachAudio()</code> method
+  and control some aspects of the audio through the Microphone object.</p>
+<p>To control the audio associated with a video file, you can use the
+  <code>DisplayObjectContainer.addChild()</code> method to route the audio
+  to an object on the display list; you can then create a 
+  Sound object to control some aspects of the audio. For more information, see the 
+  <code>DisplayObjectContainer.addChild()</code> method.</p>
+<p>If the video file can't be found, the <code>netStatus</code> event is 
+  dispatched. To stop a stream that is currently playing, use the
+  <code>close()</code> method.</p>
+<p>When you use this method without Flash Media Server, there are security considerations. A file in the local-trusted or 
+     local-with-networking sandbox can load and play a video file from the remote sandbox, but cannot access  
+     the remote file's data without explicit permission in the form of a cross-domain policy file.
+  <span>Also, you can prevent a SWF file running in Flash Player from using this method 
+  by setting the <code>allowNetworking</code> parameter of the the <code>object</code> and <code>embed</code> 
+  tags in the HTML page that contains the SWF content.</span>
+</p>
+<p>For more information, see the following:</p>
+<ul>
+<li>The <a href="http://www.adobe.com/go/flashCS3_progAS3_security" target="external">security chapter</a>
+     in the <i>Programming ActionScript 3.0</i> book and the latest comments on LiveDocs</li>
+<li>The <a href="http://www.adobe.com/go/fp9_0_security" target="external">Flash Player 9 Security white paper</a>
+</li>
+<li>The <code>Netstream.checkPolicyFile</code> property.</li>
+</ul>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; The location of the video file to play, as a URLRequest object or
+  a string. In <span>Flash Player and in</span> AIR content outside of the application 
+  security sandbox, you can play local video files that are stored in the same directory as the SWF file or in a 
+  subdirectory; however, you can't navigate to a higher-level directory.
+  <p>
+<b>Flash Media Server</b> 
+  To play video files on Flash Media Server, specify the name of the stream without
+  a file extension (for example, <code>bolero</code>). To play MP3 files, use
+  <code>mp3:</code> before the stream name.
+  To play the ID3 tags of MP3 files, use <code>id3:</code> before the stream name. 
+  </p>
+<p>
+  With Flash Media Server, <code>play()</code> takes the following arguments:
+  </p>
+<table class="innertable" ><tr>
+<th>Name</th><th>Required</th><th>Description</th>
+</tr>
+<tr>
+<td>
+<code>name:Object</code>
+</td><td>Required </td><td> The name of a recorded file without a file extension, 
+         an identifier for live data published by <code>NetStream.publish()</code>,
+         or <code>false</code>. To play MP3 files, use <code>mp3</code> before the name.
+         To play the ID3 tag of an MP3 file, use <code>id3:</code> before the name. 
+         If <code>false</code>, the stream stops playing and any additional parameters
+         are ignored. </td>
+</tr>
+<tr>
+<td>
+<code>start:Number</code>
+</td><td>Optional</td><td> The start time, in seconds. Allowed values are -2, -1, 0,
+         or a positive number. The default value is -2, which looks
+         for a live stream, then a recorded stream, and if it finds
+         neither, opens a live stream. If -1, plays only a live stream.
+         If 0 or a positive number, plays a recorded stream, beginning
+         <code>start</code> seconds in.
+    </td>
+</tr>
+<tr>
+<td>
+<code>len:Number</code>
+</td><td> Optional if <code>start</code> is specified. </td><td> The duration of the playback, in seconds. 
+         Allowed values are -1, 0, or a positive number.
+         The default value is -1, 
+         which plays a live or recorded stream until it ends.
+         If 0, plays a single frame that is 
+         <code>start</code>
+         seconds from the beginning of a recorded stream.
+         If a positive number, plays a live or recorded stream for
+         <code>len</code> seconds.
+    </td>
+</tr>
+<tr>
+<td>
+<code>reset:Object</code>
+</td><td> Optional if <code>len</code> is specified. </td><td> Whether to clear a playlist.
+         The default value is 1 or <code>true</code>, which clears any previous
+         <code>play</code> calls and plays <code>name</code> immediately.
+         If 0 or <code>false</code>, adds the stream to a playlist.
+         If 2, maintains the playlist and returns all stream 
+         messages at once, rather than at intervals.
+         If 3, clears the playlist and returns all stream messages
+         at once.  </td>
+</tr></table>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>status</b>:<a href="../../flash/events/StatusEvent.html"><code>StatusEvent</code></a></code> &mdash; Dispatched when attempting to play content encrypted with
+  digital rights management (DRM). The value of the <code>code</code> property is 
+  <code>"DRM.encryptedFLV"</code>.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; Local untrusted SWF files cannot communicate with
+  the Internet. You can work around this restriction by reclassifying this SWF file
+  as local-with-networking or trusted.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; At least one parameter must be specified.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../Error.html">Error</a> </code> &mdash; The NetStream Object is invalid.  This may be due to a failed NetConnection.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/DisplayObjectContainer.html#addChild()" target="">DisplayObjectContainer.addChild()</a>
+<br>
+<a href="NetStream.html#checkPolicyFile" target="">checkPolicyFile</a>
+<br>
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<div class="detailBody">
+<b>Flash Media Server</b>
+  This example plays a recorded stream, starting at
+  the beginning, for up to 100 seconds:
+  <div class="listing"><pre>
+  ns.play("record1", 0, 100, true);
+  </pre></div>
+<b>Flash Media Server</b>
+  This example plays a live stream published
+  by a client, from beginning to end, starting
+  immediately and clearing any previous streams:
+  <div class="listing"><pre>
+  ns.play("stephen");
+  </pre></div>
+</div>
+</div>
+<a name="publish()"></a><a name="publish(String,String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">publish</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function publish(name:<a href="../../String.html">String</a> = null, type:<a href="../../String.html">String</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Sends streaming audio, video, and text messages from a client to Flash Media Server, 
+     optionally recording the stream during transmission. 
+  This method is available only to the publisher of the specified stream.
+    <p>Don't use this method to let a client play a stream
+  that has already been published and recorded. Instead, 
+  create a NetStream instance for that client and call the <code>play()</code> method:</p>
+<div class="listing"><pre>
+  var subscribeNS:NetStream = new NetStream(myNetConnection);
+  subscribeNS.play("streamToPlay");
+  </pre></div>
+<p>When you record a stream using Flash Media Server, the server creates a file
+  and stores it in a subdirectory in the application's directory
+  on the server. Each stream is stored in a directory whose name matches the
+  application instance name passed to <code>NetConnection.connect()</code>.
+  The server creates these directories automatically; you don't have to create one
+  for each application instance. For example, the following code shows how you would
+  connect to a specific instance of an application stored in
+  a directory named lectureSeries in your application's directory. 
+  A file named lecture.flv is stored in a subdirectory named
+  /yourAppsFolder/lectureSeries/streams/Monday:
+  </p>
+<div class="listing"><pre>
+  var myNC:NetConnection = new NetConnection();
+  myNC.connect("rtmp://server.domain.com/lectureSeries/Monday");
+  var myNS:NetStream = new NetStream(myNC);
+  myNS.publish("lecture", "record");
+  </pre></div>
+<p>The following example shows how to connect to a different instance of the same application
+  but issue an identical publish command. A file named lecture.flv is stored in a subdirectory named
+  /yourAppsFolder/lectureSeries/streams/Tuesday.</p>
+<div class="listing"><pre>
+  var myNC:NetConnection = new NetConnection();
+  myNC.connect("rtmp://server.domain.com/lectureSeries/Tuesday");
+  var myNS:NetStream = new NetStream(myNC);
+  myNS.publish("lecture", "record");
+  </pre></div>
+<p>If you don't pass a value for the instance name, that matches the value passed to the 
+     <code>name</code> property is stored in a subdirectory named /yourAppsFolder/appName/streams/_definst_ 
+  (for "default instance"). For more information on using instance names, 
+  see the <code>NetConnection.connect()</code> method. For information on playing back video files,
+  see the <code>NetStream.play()</code> method.</p>
+<p>
+  When a Flash Media Server application client calls <code>publish()</code>, 
+  the application receives an <code>onPublish</code>
+     event. The application must handle the event in a server-side script.
+     When the client stops publishing, the application receives an
+     <code>onUnpublish</code> event.
+     For more information, see the
+     <i>
+<a href="http://www.adobe.com/go/learn_fms_ssas_en" target="external">Flash Media Server
+     Server-Side ActionScript Language Reference</a>
+</i>.
+  </p>
+<p>This method can dispatch a <code>netStatus</code> event with several different information objects.
+  For example, if someone is already publishing on a stream with the specified name, 
+  the <code>netStatus</code> event is dispatched with a code property of 
+  <code>NetStream.Publish.BadName</code>. 
+  For more information, see the <code>netStatus</code> event.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; A string that identifies the stream. If you pass <code>false</code>,
+  the publish operation stops. Clients that subscribe to this stream must pass this same name
+  when they call <code>NetStream.play()</code>. You don't need to include a file extension 
+  for the stream name. Don't follow the stream name with a "/". For example, don't use
+     the stream name <code>"bolero/"</code>.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; A string that specifies how to publish the stream. 
+  Valid values are "<code>record</code>", "<code>append</code>", and "<code>live</code>".
+  The default value is "<code>live</code>".
+  <ul>
+<li>If you pass "<code>record</code>", the application publishes and records live data,
+  saving the recorded data to a new file with a name matching the value passed
+  to the <code>name</code> parameter. The file is stored
+  on the server in a subdirectory within the directory that contains the server application.
+  If the file already exists, it is overwritten.</li>
+<li>If you pass "<code>append</code>", the application publishes and records live data, 
+  appending the recorded data to a file with a name that matches the value passed
+  to the <code>name</code> parameter, stored on the server 
+  in a subdirectory within the directory that contains the server application. 
+     If no file with a matching name the <code>name</code> parameter is found, it is created. </li>
+<li>If you omit this parameter or pass "<code>live</code>", the application publishes live data without
+  recording it. If a file with a name that matches the value passed
+  to the <code>name</code> parameter exists, it is deleted.</li>
+</ul>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html#connect()" target="">NetConnection.connect()</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#event:netStatus" target="">netStatus</a>
+</div>
+</div>
+<a name="receiveAudio()"></a><a name="receiveAudio(Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">receiveAudio</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function receiveAudio(flag:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether incoming audio plays on the stream.
+  This method is available only to clients subscribed to the specified stream,
+  not to the stream's publisher.
+  
+     <p>This method is intended primarily for use with Flash Media Server;
+  for more information, see the class description.</p>
+<p>You can call this method before or after you call the <code>NetStream.play()</code> method
+  and actually begin receiving the stream. For example, you can attach these methods
+  to a button the user clicks to mute and unmute the incoming audio stream.</p>
+<p>If the specified stream contains only audio data, passing a value of <code>false</code>
+  to this method stops <code>NetStream.time</code> from further incrementing.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">flag</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Specifies whether incoming audio plays on the stream
+  (<code>true</code>) or not (<code>false</code>). The default value is <code>true</code>. 
+  
+  
+  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="receiveVideo()"></a><a name="receiveVideo(Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">receiveVideo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function receiveVideo(flag:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether incoming video will play on the stream. This method is available 
+     only to clients subscribed to the specified stream, not to the stream's publisher.
+  
+     <p>This method is intended primarily for use with Flash Media Server;
+  for more information, see the class description.</p>
+<p>You can call this method before or after you call the <code>NetStream.play()</code>
+  method and actually begin receiving the stream. For example, you can attach
+  these methods to a button the user presses to show or hide the incoming video stream.</p>
+<p>If the specified stream contains only video data, passing a value of <code>false</code>
+  to this method stops <code>NetStream.time</code> from further incrementing.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">flag</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; Specifies whether incoming video plays on this stream 
+  (<code>true</code>) or not (<code>false</code>). The default value is <code>true</code>.  
+  
+  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="receiveVideoFPS()"></a><a name="receiveVideoFPS(Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">receiveVideoFPS</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function receiveVideoFPS(FPS:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the frame rate for incoming video. This method is available 
+     only to clients subscribed to the specified stream, not to the stream's publisher.
+  
+     <p>This method is intended primarily for use with Flash Media Server;
+  for more information, see the class description.</p>
+<p>You can call this method before or after you call the <code>NetStream.play()</code>
+  method and actually begin receiving the stream. For example, you can attach
+  these methods to a text field where the user can set the incoming video frame rate.</p>
+<p>To stop receiving video, pass 0 for FPS. To determine the current frame rate, 
+     use <code>NetStream.currentFPS</code>.</p>
+<p>If you pass a value to the <code>FPS</code> parameter to limit the frame rate of the video, 
+     Flash Media Server attempts to reduce the frame rate while preserving 
+     the integrity of the video. The server sends the minimum number of frames
+     needed to satisfy the desired rate between every two keyframes. Keep in mind, 
+     however, that i-frames (or intermediate frames) must be sent contiguously; 
+     otherwise, the video will be corrupted. Therefore, the desired number of frames
+     is sent immediately and contiguously following a keyframe. Since the frames are not 
+     evenly distributed, the motion appears smooth in segments punctuated by stalls.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">FPS</span>:<a href="../../Number.html">Number</a></code> &mdash; Specifies the frame rate per second at which the incoming video will play.
+  
+  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="resetDRMVouchers()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;resetDRMVouchers</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function resetDRMVouchers():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     
+     Deletes all locally cached digital rights management (DRM) voucher data for the current content.
+     <p>
+     The application must download the voucher again for the user to be able to access the the encrypted content.</p>
+</p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The voucher data cannot be deleted.
+          </td>
+</tr>
+</table>
+</div>
+<a name="resume()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resume</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function resume():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Resumes playback of a video stream that is paused. If the video is already playing, calling this method
+  does nothing.
+  
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#close()" target="">close()</a>
+<br>
+<a href="NetStream.html#pause()" target="">pause()</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#togglePause()" target="">togglePause()</a>
+</div>
+</div>
+<a name="seek()"></a><a name="seek(Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">seek</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function seek(offset:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  
+  Seeks the keyframe (also called an I-frame in the video industry) closest to 
+  the specified location. The keyframe is placed at an offset, in seconds, from 
+  the beginning of the stream. 
+  
+     <p>
+     Video streams are usually encoded with two types of frames, keyframes (or I-frames)
+     and P-frames. A keyframe contains an entire image, while a P-frame is an 
+     interim frame that provides additional video information between keyframes. 
+     A video stream typically has a keyframe every 10 to 50 frames. 
+     </p>
+<p>
+     On Flash Media Server, the behavior of <code>seek()</code> is controlled by the value 
+     of the <code>EnhancedSeek</code> element in the <code>Application.xml</code> configuration file.
+     </p>
+<p>
+     If <code>EnhancedSeek</code> is <code>false</code>, the server uses
+     normal seek mode. In normal seek mode, the server starts streaming 
+     from the nearest keyframe. For example, if a video has keyframes at 0  
+     and 10 seconds, a seek to 4 seconds causes playback to start at 4 seconds 
+     using the keyframe at 0 seconds. The video stays frozen until it reaches the
+     next keyframe at 10 seconds. To get a better seeking experience, you need to 
+     reduce the keyframe interval. In normal seek mode, you cannot start the video 
+     at a point between the keyframes.
+     </p>
+<p>
+     If <code>EnhancedSeek</code> is <code>true</code>, the default value, the server generates
+     a new keyframe at <code>offset</code> based on the previous keyframe and any
+     intervening P-frames. However, this creates a high processing load on the server, 
+     and distortion might occur in the generated keyframe.
+     If the video codec is On2, the keyframe before the seek point and any
+     P-frames between the keyframe and the seek point are sent to the client.
+     </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../Number.html">Number</a></code> &mdash; The approximate time value, in seconds, to move to in a video file. 
+  With Flash Media Server, if <code>&lt;EnhancedSeek&gt;</code> is set to <code>true</code> in the Application.xml
+     configuration file (which it is by default), the server 
+  generates a keyframe at <code>offset</code>. 
+    <ul>
+<li>To return to the beginning of the stream, pass 0 for <code>offset</code>.</li>
+<li>To seek forward from the beginning of the stream, pass the number of seconds to advance. 
+        For example, to position the playhead at 15 seconds from the beginning (or the keyframe
+        before 15 seconds), use <code>myStream.seek(15)</code>.</li>
+<li>To seek relative to the current position, pass <code>NetStream.time + n</code> 
+        or <code>NetStream.time - n</code>
+        to seek <code>n</code> seconds forward or backward, respectively, from the current position. 
+        For example, to rewind 20 seconds from the current position, use 
+        <code>NetStream.seek(NetStream.time - 20).</code>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#time" target="">time</a>
+</div>
+</div>
+<a name="send()"></a><a name="send(String,restParam)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">send</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function send(handlerName:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Sends a message on a published stream to all subscribing clients. 
+  This method is available only to the publisher of the specified stream,
+  and is intended for use with Flash Media Server. 
+     To process and respond to this message, create a handler on the
+     <code>NetStream</code> object, for example, <code>ns.HandlerName</code>.
+     
+     <p>
+<span>Flash Player or </span> AIR does not serialize methods 
+  or their data, object prototype variables, or non-enumerable variables. For display objects,  
+  <span>Flash Player or </span> AIR serializes the path but none of the data.
+  </p>
+<p>
+  You can call the <code>send()</code> method to add data keyframes to a live stream
+  sent to Flash Media Server. A data keyframe is a message a publisher adds
+  to a live stream. Data keyframes are typically used to add metadata to a live stream
+  before data is captured for the stream from camera and microphone. 
+  A publisher can add a data keyframe at any time while the live stream is being published.
+  The data keyframe is saved in the server's memory as long
+  as the publisher is connected to the server. 
+  </p>
+<p>
+  Clients who are subscribed to the live stream before a data keyframe is
+  added receive the keyframe as soon as it is added. Clients who subscribe
+  to the live stream after the data keyframe is added receive the keyframe
+  when they subscribe.
+  </p>
+<p>
+  To add a keyframe of metadata to a live stream sent to Flash Media Server, use  
+  <code>@setDataFrame</code> as the handler name, 
+  followed by two additional arguments, for example:
+  </p>
+<div class="listing"><pre>
+  var ns:NetStream = new NetStream(nc);
+  ns.send("@setDataFrame", "onMetaData", metaData);
+  </pre></div>
+<p>
+  The <code>@setDataFrame</code> argument
+  refers to a special handler built in to Flash Media Server. 
+  The <code>onMetaData</code> argument is the
+  name of a callback function in your client application that
+  listens for the <code>onMetaData</code> event and retrieves the metadata.
+  The third item, <code>metaData</code>, is an instance
+  of <code>Object</code> or <code>Array</code>
+  with properties that define the metadata values.
+  Publishers should set property names that subscribers can
+  easily understand; see the 
+     <a href="http://www.adobe.com/go/learn_fms_docs_en" target="external">Flash Media Server documentation</a> 
+  for a list of suggested property names.
+  </p>
+<p>Use <code>@clearDataFrame</code> to clear a keyframe
+  of metadata that has already been set in the stream:
+  </p>
+<div class="listing"><pre>
+  ns.send("@clearDataFrame", "onMetaData");
+  </pre></div>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">handlerName</span>:<a href="../../String.html">String</a></code> &mdash; The message to be sent; also the name of the ActionScript
+  handler to receive the message. The handler name can be only one level deep
+  (that is, it can't be of the form parent/child) and is relative to the stream object.
+  Do not use a reserved term for a handler name. 
+  For example, using "<code>close</code>" as a handler name will cause 
+  the method to fail.
+  With Flash Media Server, use <code>@setDataFrame</code> to add a 
+  keyframe of metadata to a live stream
+  or <code>@clearDataFrame</code> to remove a keyframe.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">arguments</span></code> &mdash; Optional arguments that can be of any type. They are
+  serialized and sent over the connection, and the receiving handler receives
+  them in the same order. If a parameter is a circular object (for example, 
+  a linked list that is circular), the serializer handles the references correctly.
+  With Flash Media Server,
+  if <code>@setDataFrame</code> is the first argument,
+  use <code>onMetaData</code> as the second argument; for the third
+  argument, pass an instance of <code>Object</code>
+  or <code>Array</code> that has the metadata set as properties.
+  See the 
+     <a href="http://www.adobe.com/go/learn_fms_docs_en" target="external">Flash Media Server documentation</a> 
+  for a list of suggested
+  property names.
+  With <code>@clearDataFrame</code> as the first argument,
+  use <code>onMetaData</code> as the second argument and no third argument.
+  
+  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#client" target="">client</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates two <code>NetStream</code> objects.
+ One is used to publish a live stream to the server, while the other 
+ subscribes to the stream.<div class="listing"><pre>
+package {
+   import flash.display.Sprite;
+   import flash.net.NetConnection;
+   import flash.net.NetStream;
+   import flash.events.NetStatusEvent;
+   import flash.media.Video;
+   import flash.utils.setTimeout;
+
+ 
+   public class TestExample extends Sprite
+   {
+     var nc:NetConnection = new NetConnection();
+     var ns1:NetStream;
+     var ns2:NetStream;
+     var vid:Video = new Video(300,300);
+     var obj:Object = new Object();
+ 
+     public function TestExample() {
+        nc.objectEncoding = 0;
+        nc.addEventListener("netStatus", onNCStatus);
+        nc.connect("rtmp://localhost/FlashVideoApp");
+        addChild(vid); 
+     }
+  
+     function onNCStatus(event:NetStatusEvent):void {
+       switch (event.info.code) {
+           case "NetConnection.Connect.Success":
+               trace("You've connected successfully");
+               ns1 = new NetStream(nc);
+               ns2 = new NetStream(nc);
+               
+               ns1.client = new CustomClient();
+               ns1.publish("dummy", "live");
+    
+               ns2.play("dummy");
+               ns2.client = new CustomClient();
+               vid.attachNetStream(ns2);
+               setTimeout(sendHello, 3000);
+               break;
+              
+           case "NetStream.Publish.BadName":
+               trace("Please check the name of the publishing stream" );
+               break;
+        }   
+     }
+
+     function sendHello():void {
+         ns1.send("myFunction", "hello");
+     }       
+   }
+ }
+ 
+ class CustomClient {
+    public function myFunction(event:String):void {
+       trace(event);
+    }
+ }</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following example creates metadata and adds it
+ to a live stream:<div class="listing"><pre>
+private function netStatusHandler(event:NetStatusEvent):void {
+     switch (event.info.code) {  
+        case "NetStream.Publish.Start":
+            var metaData:Object = new Object();
+            metaData.title = "myStream";
+            metaData.width = 400;
+            metaData.height = 200;
+            ns.send("@setDataFrame", "onMetaData", metaData);
+            ns.attachCamera( Camera.getCamera() );
+            ns.attachAudio( Microphone.getMicrophone() );        
+    }
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> To respond to a data keyframe added to a video, the client needs to define
+ an <code>onMetaData</code> event handler. 
+ The <code>onMetaData</code> event handler is not registered
+ with <code>addEventListener()</code>, but instead is a callback function
+ with the name <code>onMetaData</code>, for example:<div class="listing"><pre>
+ public function onMetaData(info:Object):void {
+    trace("width: " + info.width);
+    trace("height: " + info.height);
+ }</pre></div>
+</div>
+<br>
+<div class="detailBody"> This example shows how to create a playlist on the server:<div class="listing"><pre>
+ // Create a NetStream for playing
+ var my_ns:NetStream = new NetStream(my_nc);
+ my_video.attachNetStream(my_ns);
+ 
+ // Play the stream record1
+ my_ns.play("record1", 0, -1, true);
+ 
+ // Switch to the stream live1 and play for 5 seconds.  
+ // Since reset is false, live1 will start to play after record1 is done.
+ my_ns.play("live1", -1 , 5, false);</pre></div>
+</div>
+<br>
+<div class="detailBody"> If the recorded video file contains only data messages, you can either
+ play the video file at the speed at which it was originally recorded, or
+ you can get the data messages all at once.<div class="listing"><pre>
+ //To play at normal speed
+ var my_ns:NetStream = new NetStream(my_nc);
+ my_ns.play("log", 0, -1);
+ 
+ //To get the data messages all at once
+ my_ns.play("log", 0, -1, 3);</pre></div>
+</div>
+</div>
+<a name="setDRMAuthenticationCredentials()"></a><a name="setDRMAuthenticationCredentials(String,String,String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;setDRMAuthenticationCredentials</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setDRMAuthenticationCredentials(userName:<a href="../../String.html">String</a>, password:<a href="../../String.html">String</a>, type:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Sets the DRM authentication credentials needed for viewing the underlying encrypted content.
+     <p>
+     The <code>setDRMAuthenticationCredentials()</code> method must provide credentials that
+     match those known and accepted by the content provider or the proxy server. These are the same credentials used 
+     by the user when obtaining the permission to view the content.
+     </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">userName</span>:<a href="../../String.html">String</a></code> &mdash; A valid user name credential.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">password</span>:<a href="../../String.html">String</a></code> &mdash; The password credential corresponding to the user name provided.
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; A string that specifies what type of authentication credentials are provided. 
+     Valid values are <code>"drm"</code> and <code>"proxy"</code>. The default value is <code>"drm"</code>.
+     <ul>
+<li>With <code>"drm"</code> authentication type, the credentials provided are authenticated against 
+     Flash Media Rights Management Server (FMRMS).</li>
+<li>With <code>"proxy"</code> authentication type, the credentials provided are authenticated against 
+     the proxy server and must match those required by the proxy server. For example, the <code>"proxy"</code>  
+     option allows the application to authenticate against a proxy server if an enterprise requires such a step 
+     before the user can access the Internet. Unless anonymous authentication is used, after the proxy authentication, 
+     the user still needs to authenticate against FMRMS in order to obtain the voucher and play the content. 
+     You can use <code>setDRMAuthenticationcredentials()</code> a second time, with <code>"drm"</code> option, 
+     to authenticate against FMRMS.</li>
+</ul>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/events/DRMAuthenticateEvent.html" target="">flash.events.DRMAuthenticateEvent</a>
+</div>
+</div>
+<a name="togglePause()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">togglePause</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function togglePause():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Pauses or resumes playback of a stream.
+  The first time you call this method, it pauses play; the next time, it resumes play.
+  You could use this method to let users pause or resume playback by pressing 
+  a single button.
+  
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#close()" target="">close()</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#pause()" target="">pause()</a>
+<br>
+<a href="NetStream.html#resume()" target="">resume()</a>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:asyncError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">asyncError</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/AsyncErrorEvent.html"><code>flash.events.AsyncErrorEvent</code></a>
+<br>
+<span class="label">AsyncErrorEvent.type property = </span><a href="../../flash/events/AsyncErrorEvent.html#ASYNC_ERROR"><code>flash.events.AsyncErrorEvent.ASYNC_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an exception is thrown asynchronously &mdash; that is, 
+ from native asynchronous code. 
+ This event is dispatched when a server calls a method on the client that is not defined.
+  </p>
+ The <code>AsyncErrorEvent.ASYNC_ERROR</code> constant defines the value of the 
+ <code>type</code> property of an <code>asyncError</code> event object. 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default
+ behavior to cancel. </td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the
+ Event object with an event listener. </td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object dispatching the event.</td>
+</tr>
+<tr>
+<td><code>error</code></td><td>The error that triggered the event.</td>
+</tr></table>
+ 
+ <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#event:onPlayStatus" target="">NetStream.onPlayStatus</a>
+<br>
+<a href="NetStream.html#event:onMetaData" target="">NetStream.onMetaData</a>
+</div>
+</div>
+<a name="event:drmAuthenticate"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;drmAuthenticate</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/DRMAuthenticateEvent.html"><code>flash.events.DRMAuthenticateEvent</code></a>
+<br>
+<span class="label">DRMAuthenticateEvent.type property = </span><a href="../../flash/events/DRMAuthenticateEvent.html#DRM_AUTHENTICATE"><code>flash.events.DRMAuthenticateEvent.DRM_AUTHENTICATE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a NetStream object tries to play a digital rights management (DRM) encrypted
+ content that requires a user credential for authentication before playing. 
+ 
+ <p>
+ Use the <code> setDRMAuthenticationCredentials()</code> method of the NetStream object
+ to authenticate the user. If user authentication failed, the application will retry 
+ authentication and dispatch a new DRMAuthenticateEvent event for the NetStream object.
+ </p>
+ 
+ 
+ </p>
+  The <code>DRMAuthenticateEvent.DRM_AUTHENTICATE</code> constant defines the value of the 
+  <code>type</code> property of a <code>drmAuthenticate</code> event object. 
+  
+  <p>This event has the following properties:</p>
+  
+  <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>authenticationType</code></td><td>Indicates whether the supplied credentials are for
+     authenticating against the Flash Media Rights Management Server (FMRMS) or a proxy server.</td>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code> there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>header</code></td><td>The encrypted content file header provided by the server.</td>
+</tr>
+<tr>
+<td><code>netstream</code></td><td>The NetStream object that initiated this event.</td>
+</tr>
+<tr>
+<td><code>passwordPrompt</code></td><td>A prompt for a password credential, provided by the server.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NetStream object.</td>
+</tr>
+<tr>
+<td><code>urlPrompt</code></td><td>A prompt for a URL to display, provided by the server.</td>
+</tr>
+<tr>
+<td><code>usernamePrompt</code></td><td>A prompt for a user name credential, provided by the server.</td>
+</tr></table>
+  
+  <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/events/DRMAuthenticateEvent.html" target="">flash.events.DRMAuthenticateEvent</a>
+<br>
+<a href="NetStream.html#resetDRMVouchers()" target="">resetDRMVouchers()</a>
+<br>
+<a href="NetStream.html#setDRMAuthenticationCredentials()" target="">setDRMAuthenticationCredentials()</a>
+</div>
+</div>
+<a name="event:drmError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;drmError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/DRMErrorEvent.html"><code>flash.events.DRMErrorEvent</code></a>
+<br>
+<span class="label">DRMErrorEvent.type property = </span><a href="../../flash/events/DRMErrorEvent.html#DRM_ERROR"><code>flash.events.DRMErrorEvent.DRM_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a NetStream object, trying to play a digital rights management (DRM) encrypted
+ file, encounters a DRM-related error. For example, a DRMErrorEvent object is dispatched when 
+ the user authorization fails. This may be because the user has not purchased the rights to view the content 
+ or because the content provider does not support the viewing application.
+  </p>
+  The <code>DRMErrorEvent.DRM_ERROR</code> constant defines the value of the 
+  <code>type</code> property of a <code>drmError</code> event object. 
+  
+  <p>This event has the following properties:</p>
+  
+  <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>subErrorID</code></td><td>An error ID that indicates more detailed information about 
+    the underlying problem.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NetStream object.</td>
+</tr></table>
+  
+  <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/events/DRMErrorEvent.html" target="">flash.events.DRMErrorEvent</a>
+<br>
+<a href="NetStream.html#resetDRMVouchers()" target="">resetDRMVouchers()</a>
+<br>
+<a href="NetStream.html#setDRMAuthenticationCredentials()" target="">setDRMAuthenticationCredentials()</a>
+</div>
+</div>
+<a name="event:drmStatus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;drmStatus</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/DRMStatusEvent.html"><code>flash.events.DRMStatusEvent</code></a>
+<br>
+<span class="label">DRMStatusEvent.type property = </span><a href="../../flash/events/DRMStatusEvent.html#DRM_STATUS"><code>flash.events.DRMStatusEvent.DRM_STATUS</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the digital rights management (DRM) encrypted content 
+ begins playing (when the user is authenticated and authorized to play the content).
+ <p>
+ DRMStatusEvent object contains information related to the voucher, such as whether the content
+ can be made available offline or when the voucher will expire and the content can no longer 
+ be viewed.
+ </p>
+  </p>
+  The <code>DRMStatusEvent.DRM_STATUS</code> constant defines the value of the 
+  <code>type</code> property of a <code>drmStatus</code> event object. 
+  
+  
+  <p>This event has the following properties:</p>
+  
+  <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>detail</code></td><td>A string explaining the context of the status event.</td>
+</tr>
+<tr>
+<td><code>isAnonymous</code></td><td>Indicates whether the content protected with DRM 
+     encryption is available without requiring a user to provide authentication credentials.</td>
+</tr>
+<tr>
+<td><code>isAvailableOffline</code></td><td>Indicates whether the content protected with DRM
+     encryption is available offline.</td>
+</tr>
+<tr>
+<td><code>offlineLeasePeriod</code></td><td>The remaining number of days that content can be 
+     viewed offline.</td>
+</tr>
+<tr>
+<td><code>policies</code></td><td>A custom object of the DRM status event.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NetStream object.</td>
+</tr>
+<tr>
+<td><code>voucherEndDate</code></td><td>The absolute date on which the voucher expires 
+     and the content can no longer be viewed by users</td>
+</tr></table>
+  
+  
+  <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/events/DRMStatusEvent.html" target="">flash.events.DRMStatusEvent</a>
+<br>
+<a href="NetStream.html#resetDRMVouchers()" target="">resetDRMVouchers()</a>
+<br>
+<a href="NetStream.html#setDRMAuthenticationCredentials()" target="">setDRMAuthenticationCredentials()</a>
+</div>
+</div>
+<a name="event:ioError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ioError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a>
+<br>
+<span class="label">IOErrorEvent.type property = </span><a href="../../flash/events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an input or output error occurs that causes a network operation to fail. 
+ </p>
+ Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>errorID</code></td><td>A reference number associated with the specific error.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object experiencing the input/output error.</td>
+</tr>
+<tr>
+<td><code>text</code></td><td>Text to be displayed as an error message.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:netStatus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">netStatus</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/NetStatusEvent.html"><code>flash.events.NetStatusEvent</code></a>
+<br>
+<span class="label">NetStatusEvent.type property = </span><a href="../../flash/events/NetStatusEvent.html#NET_STATUS"><code>flash.events.NetStatusEvent.NET_STATUS</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a NetStream object is reporting its status or error condition. 
+ The <code>netStatus</code> event contains an <code>info</code> property,
+ which is an information object that contains specific information about the event, 
+ such as if a connection attempt succeeded or failed.
+ </p>
+    Defines the value of the <code>type</code> property of a <code>netStatus</code> event object.
+   <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>info</code></td><td>An object with properties that describe the object's status or error condition.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The NetConnection or NetStream object reporting its status. </td>
+</tr></table>
+ 
+ <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/events/NetStatusEvent.html#info" target="">flash.events.NetStatusEvent.info</a>
+</div>
+</div>
+<a name="event:onCuePoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onCuePoint</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Invoked when an embedded cue point is reached while playing a video file. You can use this handler to trigger actions in your 
+ code when the video reaches a specific cue point, which lets you synchronize other actions in your application with video
+ playback events. For information about video file formats supported by Flash Media Server, see 
+ the <a href="http://www.adobe.com/support/documentation" target="external">Flash Media Server documentation</a>.
+
+ 
+ <p>This event is intended for use with Flash Media Server. It is not part of the 
+ <span>Flash Player or </span> AIR API, but is included in this language
+ reference for your convenience. You cannot use the <code>addEventListener()</code> method, or any other 
+ EventDispatcher methods, to listen for or process this event. Rather, you must define a single callback function and attach 
+ it directly to one of the following objects:</p>
+  <ul>
+ <li>The object referenced by the <code>client</code> property of a NetStream instance.</li>    
+ <li>An instance of a NetStream subclass. NetStream is a sealed class, which means that properties or methods cannot be added to a NetStream object at runtime. However, you can create a subclass of NetStream and define your event handler in the subclass or make the subclass dynamic and add the event handler function to an instance of the subclass.</li>
+    
+ </ul>
+  <p>The following types of cue points can be embedded in a video file:</p>
+  <ul>
+ <li>A navigation cue point specifies a keyframe within the video file 
+ and the cue point's <code>time</code> property corresponds to that exact keyframe. Navigation cue points are often used as bookmarks
+ or entry points to let users navigate through the video file.</li>
+  <li>An event cue point is specified by time, whether or not that time corresponds to a specific keyframe. 
+ An event cue point usually represents a time in the video when something happens that could be used to trigger other application events.</li>
+ </ul>
+  <p>The <code>onCuePoint</code> event object has the following properties:</p>
+  <table class="innertable" ><tr>
+<th>Property</th><th>Description</th>
+</tr>
+<tr>
+<td><code>name</code></td><td>The name given to the cue point when it was embedded in the video file.</td>
+</tr>
+<tr>
+<td><code>parameters</code></td><td>A associative array of name/value pair strings specified for this cue point. Any valid string can be used for 
+     the parameter name or value.</td>
+</tr>
+<tr>
+<td><code>time</code></td><td>The time in seconds at which the cue point occurred in the video file during playback.</td>
+</tr>
+<tr>
+<td><code>type</code></td><td>The type of cue point that was reached, either navigation or event.</td>
+</tr></table>
+  <p>You can define cue points in a video file when you first encode the file, or when you import a video clip in 
+ the Flash authoring tool by using the Video Import wizard.</p>
+  <p>The <code>onMetaData</code> event also retrieves information about the cue points in a video file. 
+ However the <code>onMetaData</code> event gets information about all of the cue points 
+ before the video begins playing. The <code>onCuePoint</code> event receives information about a single cue point 
+ at the time specified for that cue point during playback.</p>
+  <p>Generally, to have your code respond to a specific cue point at the time it occurs, use 
+ the <code>onCuePoint</code> event to trigger some action in your code.</p>
+  <p>You can use the list of cue points provided to the <code>onMetaData</code> event to 
+ let the user start playing the video at predefined points along the video stream. 
+ Pass the value of the cue point's <code>time</code> property to the 
+ <code>NetStream.seek()</code> method to play the video from that cue point.</p>
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#client" target="">client</a>
+<br>
+<a href="NetStream.html#event:onMetaData" target="">onMetaData</a>
+</div>
+</div>
+<a name="event:onImageData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onImageData</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.115.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when Flash Player receives image data as a byte array embedded in a media file that is
+ playing. The image data can produce either JPEG, PNG or GIF content. Use the 
+ <code>flash.display.Loader.loadBytes()</code> method to load the byte array into a display object.
+ <p>This special event is intended for use with Flash Media Server; for more information, see the class 
+ description. You cannot use the <code>addEventListener()</code> method, or any
+ other EventDispatcher methods, to listen for, or process, this event. Rather, you must define a single 
+ callback function and attach it directly to the imageData object.</p>
+  <p>This event is triggered after a call to the <code>NetStream.play()</code> method, but before the
+ video playhead has advanced.</p>
+  <p>The onImageData event object contains the image data as a byte array sent through an AMF0 data channel.</p>
+ 
+ </p><br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The code in this example uses the <code>Netstream.client</code> property to handle 
+ the callback functions for <code>onTextData</code> and <code>onImageData</code>. 
+ The <code>onImageDataHandler()</code> function uses the onImageData event object 
+ <code>imageData</code> to store the byte array. And, the <code>onTextDataHandler()</code> 
+ function uses the onTextData event object <code>textData</code> to store the pieces of 
+ text data (each piece of data is a property of the <code>textData</code> object).
+ <p>You need to substitute a real location to a media file with text or image 
+ metadata for the location <code>"yourURL"</code> in the code.</p>
+ <p> You can also handle image and text data using a custom class. See the article 
+ <a href="http://www.adobe.com/devnet/flash/quickstart" target="external">Handling metadata and cue points in Flash video</a> for more information and examples.</p>
+ <div class="listing"><pre>
+package {
+    import flash.display.*;
+    import flash.net.*;
+    import flash.media.*;
+    import flash.system.*;
+    import flash.events.*;
+
+        public class OnTextDataExample extends Sprite {
+                                              
+            public function OnTextDataExample():void {
+
+                var customClient:Object = new Object();
+                customClient.onImageData = onImageDataHandler;           
+                customClient.onTextData = onTextDataHandler;               
+
+                var my_nc:NetConnection = new NetConnection();
+                my_nc.connect(null);
+                var my_ns:NetStream = new NetStream(my_nc);
+                my_ns.play("yourURL");
+                my_ns.client = customClient;
+
+                var my_video:Video = new Video();
+                my_video.attachNetStream(my_ns);
+                addChild(my_video);
+
+            }
+
+            public function onImageDataHandler(imageData:Object):void {
+
+                trace("imageData length: " + imageData.data.length);
+                var imageloader:Loader = new Loader();           
+                imageloader.loadBytes(imageData.data); // imageData.data is a ByteArray object.
+                addChild(imageloader);
+            }
+
+    
+            public function onTextDataHandler(textData:Object):void {
+
+                trace("--- textData properties ----");
+                var key:String;
+
+                for (key in textData) {
+                    trace(key + ": " + textData[key]);
+                }
+            }
+
+        }
+
+}
+
+</pre></div></div>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html" target="">NetConnection</a>
+<br>
+<a href="../../flash/display/Loader.html#loadBytes()" target="">flash.display.Loader.loadBytes()</a>
+<br>
+<a href="NetStream.html#client" target="">client</a>
+<br>
+<a href="NetStream.html#event:asyncError" target="">asyncError</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#event:onTextData" target="">onTextData</a>
+</div>
+</div>
+<a name="event:onMetaData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onMetaData</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the application receives descriptive information embedded in the video being played.
+ For information about video file formats supported by Flash Media Server, see 
+ the <a href="http://www.adobe.com/support/documentation" target="external">Flash Media Server documentation</a>.
+ 
+ <p>This special event is intended for use with Flash Media Server;
+ for more information, see the class description. It is not technically part of the <span>Flash Player or </span> AIR API, 
+ but is included in this language reference for your convenience. You cannot use the <code>addEventListener()</code> 
+ method, or any other EventDispatcher methods, to listen for or process this event. Rather, you must define a single 
+ callback function and attach it directly to one of the following objects:</p>
+  <ul>
+ 
+  <li>The object that the <code>client</code> property of a NetStream instance references.</li>    
+ 
+  <li>An instance of a NetStream subclass. NetStream is a sealed class, which means that properties or methods cannot be added to a NetStream object at runtime. However, you can create a subclass of NetStream and define your event handler in the subclass or make the subclass dynamic and add the event handler function to an instance of the subclass.</li>
+    
+ </ul>
+  <p>The Flash Video Exporter utility (version 1.1 or later) embeds
+ a video's duration, creation date, data rates, and other information into the video file itself. 
+ Different video encoders embed different sets of meta data.</p>
+  <p>This event is triggered after a call to the <code>NetStream.play()</code> method, 
+ but before the video playhead has advanced.</p>
+  <p>In many cases, the duration value embedded in stream metadata approximates the actual duration 
+ but is not exact. In other words, it does not always match the value of the <code>NetStream.time</code> property 
+ when the playhead is at the end of the video stream.</p>
+ <p>The onMetaData event object contains one property for each piece metadata item.</p>
+  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html" target="">NetConnection</a>
+<br>
+<a href="NetStream.html#client" target="">client</a>
+<br>
+<a href="NetStream.html#event:asyncError" target="">asyncError</a>
+<br>
+<a href="NetStream.html#event:onCuePoint" target="">onCuePoint</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#time" target="">time</a>
+</div>
+</div>
+<a name="event:onPlayStatus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onPlayStatus</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a NetStream object has completely played a stream. This handler
+ returns information objects that provide information in addition to 
+ what's returned by the <code>netStatus</code> event.
+ You can use this handler to trigger actions in your code when a NetStream object
+ has switched from one stream to another stream in a playlist (as indicated by the 
+ information object <code>NetStream.Play.Switch</code>)
+ or when a NetStream object has played to the end (as indicated by the information object
+ <code>NetStream.Play.Complete</code>). 
+ To respond to this event, you must create a function to process the information object
+ sent by the server. 
+  <p>This event is intended for use with Flash Media Server;
+ for more information, see the class description. 
+ It is not part of the <span>Flash Player or </span> AIR API, but is included in this 
+ language reference for your convenience. You cannot use the <code>addEventListener()</code>
+ method, or any other EventDispatcher methods, to listen for or process this event. 
+ Rather, you must define a single callback function and attach it directly to one of
+ the following objects:</p>
+  <ul>
+    <li>The object that the <code>client</code> property of a NetStream instance references.</li>
+    <li>An instance of a NetStream subclass. NetStream is a sealed class, which means that properties or methods 
+      cannot be added to a NetStream object at runtime. However, you can create a subclass of NetStream and define 
+      your event handler in the subclass or make the subclass dynamic and add the event handler function to an 
+      instance of the subclass.</li>
+    
+ </ul>
+  <p>This event can return an information object with the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Code property</th><th>Level property</th><th>Meaning</th>
+</tr>
+<tr>
+<td><code>NetStream.Play.Switch</code></td><td><code>"status"</code></td><td>The subscriber is switching from one stream to another in a playlist.</td>
+</tr>
+<tr>
+<td><code>NetStream.Play.Complete</code></td><td><code>"status"</code></td><td>Playback has completed.</td>
+</tr></table>
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#client" target="">client</a>
+<br>
+<a href="../../flash/events/NetStatusEvent.html#NET_STATUS" target="">flash.events.NetStatusEvent.NET_STATUS</a>
+<br>
+<a href="NetStream.html#event:asyncError" target="">asyncError</a>
+<br>
+<a href="NetStream.html#event:onMetaData" target="">onMetaData</a>
+<br>
+<a href="NetStream.html#event:onCuePoint" target="">onCuePoint</a>
+</div>
+</div>
+<a name="event:onTextData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onTextData</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.115.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when Flash Player receives text data embedded in a media file that is playing. The text data
+  is in UTF-8 format and can contain information about formatting based on the 3GP timed text specification.
+  This special event is intended for use with Flash Media Server; for more information, see the class 
+  description. You cannot use the <code>addEventListener()</code> method, or any other EventDispatcher
+  methods, to listen for, or process, this event. Rather, you must define a single callback function and 
+  attach it directly to the textData object.
+  <p>This event is triggered after a call to the <code>NetStream.play()</code> method, but before the video 
+  playhead has advanced.</p>
+    <p>The onTextData event object contains one property for each piece of text data.</p>
+    </p><br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The code in this example uses the <code>Netstream.client</code> property to handle 
+ the callback functions for <code>onTextData</code> and <code>onImageData</code>. 
+ The <code>onImageDataHandler()</code> function uses the onImageData event object 
+ <code>imageData</code> to store the byte array. And, the <code>onTextDataHandler()</code> 
+ function uses the onTextData event object <code>textData</code> to store the pieces of 
+ text data (each piece of data is a property of the <code>textData</code> object).
+ <p>You need to substitute a real location to a media file with text or image 
+ metadata for the location <code>"yourURL"</code> in the code.</p>
+ <p> You can also handle image and text data using a custom class. See the article 
+ <a href="http://www.adobe.com/devnet/flash/quickstart" target="external">Handling metadata and cue points in Flash video</a> for more information and examples.</p>
+ <div class="listing"><pre>
+package {
+    import flash.display.*;
+    import flash.net.*;
+    import flash.media.*;
+    import flash.system.*;
+    import flash.events.*;
+
+        public class OnTextDataExample extends Sprite {
+                                              
+            public function OnTextDataExample():void {
+
+                var customClient:Object = new Object();
+                customClient.onImageData = onImageDataHandler;           
+                customClient.onTextData = onTextDataHandler;               
+
+                var my_nc:NetConnection = new NetConnection();
+                my_nc.connect(null);
+                var my_ns:NetStream = new NetStream(my_nc);
+                my_ns.play("yourURL");
+                my_ns.client = customClient;
+
+                var my_video:Video = new Video();
+                my_video.attachNetStream(my_ns);
+                addChild(my_video);
+
+            }
+
+            public function onImageDataHandler(imageData:Object):void {
+
+                trace("imageData length: " + imageData.data.length);
+                var imageloader:Loader = new Loader();           
+                imageloader.loadBytes(imageData.data); // imageData.data is a ByteArray object.
+                addChild(imageloader);
+            }
+
+    
+            public function onTextDataHandler(textData:Object):void {
+
+                trace("--- textData properties ----");
+                var key:String;
+
+                for (key in textData) {
+                    trace(key + ": " + textData[key]);
+                }
+            }
+
+        }
+
+}
+
+</pre></div></div>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetConnection.html" target="">NetConnection</a>
+<br>
+<a href="NetStream.html#client" target="">client</a>
+<br>
+<a href="NetStream.html#event:asyncError" target="">asyncError</a>
+<br>
+<a href="NetStream.html#play()" target="">play()</a>
+<br>
+<a href="NetStream.html#event:onImageData" target="">onImageData</a>
+</div>
+</div>
+<a name="event:status"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;status</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/StatusEvent.html"><code>flash.events.StatusEvent</code></a>
+<br>
+<span class="label">StatusEvent.type property = </span><a href="../../flash/events/StatusEvent.html#STATUS"><code>flash.events.StatusEvent.STATUS</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the application attempts to play content encrypted with digital rights management (DRM),
+ by invoking the <code>NetStream.play()</code> method. The value of the status code property will be 
+ <code>"DRM.encryptedFLV"</code>. 
+ 
+ </p>
+     Defines the value of the <code>type</code> property of a <code>status</code> event object.
+  <p>This event has the following properties:</p>
+  <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>code</code></td><td>A description of the object's status.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+  object with an event listener.</td>
+</tr>
+<tr>
+<td><code>level</code></td><td>The category of the message, such as <code>"status"</code>, <code>"warning"</code> or <code>"error"</code>.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object reporting its status.</td>
+</tr></table>
+  
+  <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="NetStream.html#play()" target="">NetStream.play()</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">NetConnectionExample.as</div>
+<br>
+<div class="detailBody"> The following example uses a Video object with the NetConnection and 
+ NetStream classes to load and play an FLV file. To run this example, you need an FLV file 
+ whose name and location match the variable passed to <code>videoURL</code>; 
+ in this case, an FLV file called Video.flv that is in the same directory as the SWF file.
+
+ <p>In this example, the code that creates the Video and NetStream objects and calls the
+ <code>Video.attachNetStream()</code> and <code>NetStream.play()</code> methods is placed 
+ in a handler function. The handler is called only if the
+ attempt to connect to the NetConnection object is successful; that is, 
+ when the <code>netStatus</code> event returns an <code>info</code> object with a <code>code</code>
+ property that indicates success. 
+ It is recommended that you wait for a successful connection before you call
+ <code>NetStream.play()</code>. </p>
+ <div class="listing"><pre>
+
+package {
+    import flash.display.Sprite;
+    import flash.events.NetStatusEvent;
+    import flash.events.SecurityErrorEvent;
+    import flash.media.Video;
+    import flash.net.NetConnection;
+    import flash.net.NetStream;
+    import flash.events.Event;
+
+    public class NetConnectionExample extends Sprite {
+        private var videoURL:String = "Video.flv";
+        private var connection:NetConnection;
+        private var stream:NetStream;
+
+        public function NetConnectionExample() {
+            connection = new NetConnection();
+            connection.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
+            connection.addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+            connection.connect(null);
+        }
+
+        private function netStatusHandler(event:NetStatusEvent):void {
+            switch (event.info.code) {
+                case "NetConnection.Connect.Success":
+                    connectStream();
+                    break;
+                case "NetStream.Play.StreamNotFound":
+                    trace("Stream not found: " + videoURL);
+                    break;
+            }
+        }
+
+        private function securityErrorHandler(event:SecurityErrorEvent):void {
+            trace("securityErrorHandler: " + event);
+        }
+
+        private function connectStream():void {
+            stream = new NetStream(connection);
+            stream.addEventListener(NetStatusEvent.NET_STATUS, netStatusHandler);
+            stream.client = new CustomClient();
+            var video:Video = new Video();
+            video.attachNetStream(stream);
+            stream.play(videoURL);
+            addChild(video);
+        }
+    }
+}
+
+class CustomClient {
+    public function onMetaData(info:Object):void {
+        trace("metadata: duration=" + info.duration + " width=" + info.width + " height=" + info.height + " framerate=" + info.framerate);
+    }
+    public function onCuePoint(info:Object):void {
+        trace("cuepoint: time=" + info.time + " name=" + info.name + " type=" + info.type);
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

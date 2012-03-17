@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" compiles="true" parentProject="10e84c21-e5a8-476f-beb3-1f34ddc38c11" projectUUID="10e84c21-e5a8-476f-beb3-1f34ddc38c11" pureCatalystProject="false" sdkVersion="4.5.1" uuid="27146690-82f8-4d49-8e91-d8c54d40f5ef" version="15">
+  <projects>
+    <project filename="mobile_examples.fxpl" position="2" projectUUID="f67cd8ae-35ca-4bad-a19f-20606b04d987" uuid="27146690-82f8-4d49-8e91-d8c54d40f5ef"/>
+    <project filename="mobiletheme_ios.fxpl" position="3" projectUUID="b7cbdf70-d9f3-4507-847b-f9d21c5c9f4f" uuid="27146690-82f8-4d49-8e91-d8c54d40f5ef"/>
+  </projects>
+  <src/>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="27146690-82f8-4d49-8e91-d8c54d40f5ef"/>
+    <linked location="/libs" path="/libs" position="1" uuid="fd1e741d-c665-41f6-af16-ab55cba0108a"/>
+  </swc>
+  <misc/>
+  <theme/>
+  <mxmlFormattingPrefs groupAttributesByState="true" maxLineWidth="100" mxmlAlignAttributes="true" mxmlAttributeOrder="id,userLabel,includeIn,excludeFrom,visible,x,y,z,left,right,top,bottom,width,height,minWidth,minHeight,maxWidth,maxHeight,label" mxmlKeepAttributeValuesOrganized="true"/>
+</fxpProperties>

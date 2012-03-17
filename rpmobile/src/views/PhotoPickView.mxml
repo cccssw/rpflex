@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="controls.*"
+		creationComplete="creationCompleteHandler(event)" overlayControls="true"
+		title="{resourceManager.getString('view','photoPickViewTitle')}"><!--{resourceManager.getString('view','photoPickViewTitle')} -->
+	<s:layout>
+		<s:BasicLayout>
+			
+		</s:BasicLayout>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Metadata>
+		[ResourceBundle("view")]
+	</fx:Metadata>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace controls "controls.*";
+		
+		
+	</fx:Style>
+	<s:actionContent>
+		
+	</s:actionContent>
+	<s:navigationContent>
+		
+	</s:navigationContent>
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	<s:VGroup id="vg" width="100%" height="80%" verticalAlign="middle" horizontalAlign="center" gap="45">
+		<!--<controls:BgButton label="login" skinClass="controls.WeiBoBtn" color="white" height="75" width="120" click="bgbutton1_clickHandler(event)"/>-->
+		<!--
+		<s:Button id="takebutton" enabled="{CameraUI.isSupported}" 
+				  label="{resourceManager.getString('view','takephoto')}"
+				  click="deviceCameraApp.launch( MediaType.IMAGE );" />
+		<s:Button id="browserbutton" enabled="{CameraRoll.supportsBrowseForImage}" 
+				  label="{resourceManager.getString('view','browserphoto')}"
+				  click="cameraRoll.browseForImage();"/>
+		<s:Button label="Debug" click="this.debug()"/>
+		-->
+		<s:VGroup width="600" verticalAlign="top" horizontalAlign="center" paddingTop="30" paddingBottom="30">
+			<s:HGroup horizontalAlign="right" width="100%" paddingBottom="20">
+				<!--<s:Image scaleMode="letterbox" source="@Embed('assets/ui/singlebeta.png')"/>-->
+			</s:HGroup>
+			<s:Image scaleMode="letterbox" source="@Embed('assets/ui/firstVText.png')"/>
+		</s:VGroup>
+			<controls:ImgButton enabled="{CameraUI.isSupported}"  id="takebutton" color="#FFFFFF" fontWeight="bold"  label="{resourceManager.getString('view','takephoto')}"  click="deviceCameraApp.launch( MediaType.IMAGE );"
+								skinClass="controls.BtnGraySkin"/>
+			<controls:ImgButton id="browserbutton" color="#FFFFFF" fontWeight="bold"  label="{resourceManager.getString('view','browserphoto')}"
+								skinClass="controls.BtnBlueSkin"/>
+			<controls:ImgButton color="#FFFFFF" fontWeight="bold"  label="{resourceManager.getString('view','demo')}"  click="this.debug()"
+								skinClass="controls.BtnOrangeSkin"/>
+		
+		
+	</s:VGroup>
+
+	
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.RpFaceProcessorManagerConfigLoader;
+			import flash.media.CameraRollBrowseOptions;
+			import controls.ProcessingAlert;
+			
+			import mx.core.BitmapAsset;
+			import mx.events.FlexEvent;
+			
+			private var imageLoader:Loader;
+			private var deviceCameraApp:CameraUI = new CameraUI();
+			private var cameraRoll:CameraRoll = new CameraRoll();
+			private var rawSourceBitmapData:BitmapData;
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				/*if(!RpFaceProcessorManagerConfigLoader.hasInstance){
+					var o:Object=new Object();
+					o.nowait=true;
+					this.navigator.pushView(LoadingRpElementsView,o);
+				}*/
+				
+				if( CameraUI.isSupported )
+				{
+					trace( "Initializing CameraUI..." );
+					deviceCameraApp.addEventListener( MediaEvent.COMPLETE, imageCaptured );
+					deviceCameraApp.addEventListener( Event.CANCEL, captureCanceled );
+					deviceCameraApp.addEventListener( ErrorEvent.ERROR, cameraError );
+				}
+				else
+				{
+					trace( "Camera interface is not supported.");
+				}
+				
+				if( CameraRoll.supportsBrowseForImage )
+				{
+					trace( "Initializing CameraRoll..." );
+					cameraRoll.addEventListener( MediaEvent.SELECT, imageCaptured );
+					cameraRoll.addEventListener( Event.CANCEL, captureCanceled );
+					cameraRoll.addEventListener( ErrorEvent.ERROR, cameraError );
+					browserbutton.addEventListener(MouseEvent.CLICK,this.browserButtonMobileClickHandler);
+				}
+				else
+				{
+					
+					browserbutton.addEventListener(MouseEvent.CLICK, fileButtonClickHandler);
+					trace( "Image browsing is not supported on this device.");
+				} 
+			}
+			private function fileButtonClickHandler(event:MouseEvent):void{
+				var fileToOpen:File = new File();
+				var txtFilter:FileFilter = new FileFilter("Image", "*.jpg;*.png;*.gif");
+				fileToOpen.browseForOpen("Open", [txtFilter]);
+				fileToOpen.addEventListener(Event.SELECT, fileSelected);
+			}
+			private function browserButtonMobileClickHandler(e:MouseEvent):void{
+				var crOpts:CameraRollBrowseOptions = new CameraRollBrowseOptions();
+				crOpts.height = this.stage.stageHeight / 3;
+				crOpts.width = this.stage.stageWidth / 3;
+				crOpts.origin = new Rectangle(e.target.x, e.target.y, e.target.width, e.target.height);
+				this.cameraRoll.browseForImage(crOpts);
+			}
+			
+			private function fileSelected(event:Event):void 
+			{
+				var file:File=event.target as File;
+				imageLoader = new Loader();
+				imageLoader.contentLoaderInfo.addEventListener( Event.COMPLETE, asyncImageLoaded );
+				imageLoader.addEventListener( IOErrorEvent.IO_ERROR, cameraError );
+				imageLoader.load(
+					new URLRequest(file.url));
+			}
+			
+			private function imageCaptured( event:MediaEvent ):void
+			{
+				trace( "Media captured..." );
+				
+				var imagePromise:MediaPromise = event.data;
+				
+				if( imagePromise.isAsync )
+				{
+					trace( "Asynchronous media promise." );
+					imageLoader = new Loader();
+					imageLoader.contentLoaderInfo.addEventListener( Event.COMPLETE, asyncImageLoaded );
+					imageLoader.addEventListener( IOErrorEvent.IO_ERROR, cameraError );
+					
+					imageLoader.loadFilePromise( imagePromise );
+				}
+				else
+				{
+					trace( "Synchronous media promise." );
+					imageLoader.loadFilePromise( imagePromise );
+					
+				}
+			}
+			
+			private function captureCanceled( event:Event ):void
+			{
+				trace( "Media capture canceled." );
+			}
+			private function cameraError( error:ErrorEvent ):void
+			{
+				
+				trace( "Error:" + error.text );
+			}
+			
+			private function asyncImageLoaded( event:Event ):void
+			{
+				trace( "Media loaded in memory." );
+				
+				var bmp:Bitmap = Bitmap(event.target.content);
+				var bitmapData:BitmapData=bmp.bitmapData;
+				var MAX_WIDTH:int=1280;
+				if(bmp.width>MAX_WIDTH){
+					var m:Matrix=new Matrix();
+					var s:Number=MAX_WIDTH/bmp.width;
+					m.scale(s,s);
+					bitmapData=new BitmapData(
+						bmp.width*s,bmp.height*s);
+					bitmapData.draw(
+						bmp.bitmapData,m);
+				}
+				this.rawSourceBitmapData=bitmapData;
+				this.navigator.pushView(PhotoZoomView,this.rawSourceBitmapData);
+			}
+			
+			
+			protected function debug():void{
+				[Embed( 'assets/demo.jpg')]
+				var src:Class;
+				var a:BitmapAsset =new src;
+				
+				
+				var bmp:Bitmap = new Bitmap(a.bitmapData);
+				var bitmapData:BitmapData=bmp.bitmapData;
+				var MAX_WIDTH:int=1280;
+				if(bmp.width>MAX_WIDTH){
+					var m:Matrix=new Matrix();
+					var s:int=MAX_WIDTH/bmp.width;
+					m.scale(s,s);
+					bitmapData=new BitmapData(
+						bmp.width*s,bmp.height*s);
+					bitmapData.draw(
+						bmp.bitmapData,m);
+				}
+				this.rawSourceBitmapData=bitmapData;
+				this.navigator.pushView(PhotoZoomView,this.rawSourceBitmapData);
+			}
+			
+			protected function bgbutton1_clickHandler(event:MouseEvent):void
+			{
+				this.navigator.pushView(Share2Weibo_XAuth,this.rawSourceBitmapData);
+			}
+			
+		]]>
+	</fx:Script>
+</s:View>

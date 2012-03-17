@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="iOS Theme">
+	
+	<fx:Script>
+		<![CDATA[
+            import flash.net.navigateToURL;
+            
+            import mx.core.FlexGlobals;
+		]]>
+	</fx:Script>
+	
+	<s:Scroller width="100%" height="100%" verticalScrollPolicy="on">
+		<s:Group width="100%" height="100%">
+			<s:layout>
+				<s:MultiDPIVerticalLayout sourceDPI="160"
+										  paddingTop="10" paddingBottom="10" paddingLeft="10" paddingRight="10"/>
+			</s:layout>
+			
+			<s:TextArea borderVisible="false" contentBackgroundAlpha="0" width="100%" editable="false" selectable="false">
+				<s:text><![CDATA[iOS theme proof of concept by Jason San Jose, Software Engineer, Adobe Flex.
+
+Credit to Rusty Mitchell's blog post at Mercury Intermedia for Illustrator artwork.
+                
+icons by Joseph Wain / glyphish.com]]></s:text>
+			</s:TextArea>
+            
+            
+            <s:Button label="Flash Builder 4.5.1" width="100%"
+                      click="navigateToURL(new URLRequest('http://adobe.com/go/try_flashbuilder'))"/>
+            
+            <s:Button label="Jason's Flex Blog" width="100%"
+                      click="navigateToURL(new URLRequest('http://blogs.adobe.com/jasonsj'))"/>
+            
+            <s:Button label="iPhone UI Vector Elements" width="100%"
+                      click="navigateToURL(new URLRequest('http://www.mercuryintermedia.com/blog/index.php/2009/03/iphone-ui-vector-elements'))"/>
+			
+            <s:Button label="icons by Joseph Wain / glyphish.com" width="100%"
+                      click="navigateToURL(new URLRequest('http://glyphish.com'))"/>
+            
+		</s:Group>
+	</s:Scroller>
+	
+	<s:actionContent>
+		<s:Button label="Go" click="navigator.pushView(views.ListView)"/>
+	</s:actionContent>
+	
+</s:View>

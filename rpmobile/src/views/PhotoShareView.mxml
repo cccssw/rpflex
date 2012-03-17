@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		creationComplete="creationCompleteHandler(event)" overlayControls="true"
+		title="{resourceManager.getString('view','sharePhotoViewTitle')}">
+	<s:layout>
+		<s:BasicLayout />
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import com.adobe.serializers.json.JSONDecoder;
+			import com.loning.image.Face;
+			import com.loning.image.FaceProcessorManager;
+			 
+			import controls.ProcessingAlert;
+			
+			import flash.events.SoftKeyboardEvent;
+			
+			import mx.core.FlexGlobals;
+			import mx.events.FlexEvent;
+			import mx.events.ResizeEvent;
+			
+			import ru.inspirit.net.MultipartURLLoader;
+			import ru.inspirit.net.events.MultipartURLLoaderEvent;
+			
+			private var busy:ProcessingAlert=new ProcessingAlert();
+			
+			[Bindable]
+			private var bitmapData:BitmapData;
+			
+			private var bytes:ByteArray;
+			
+			[Bindable]
+			private var processedText:String;
+			
+			
+			
+			private var uploadCallBack:Function;
+			private var uploadResponseObject:Object;
+			
+			
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{	
+				bytes=data.bytes;
+				bitmapData=data.bitmapData;
+				processedText=data.processedText;
+				uploadResponseObject=data.uploadResponseObject;
+			}
+			
+			protected function uploadImage():void{
+				if(uploadResponseObject!=null){
+					this.uploadCallBack();
+					return;
+				}
+				var ml:MultipartURLLoader = new MultipartURLLoader();
+				ml.addEventListener(Event.COMPLETE, onFileUploaded);
+				ml.addEventListener(IOErrorEvent.IO_ERROR, this.onIOError);
+				
+				ml.addEventListener(MultipartURLLoaderEvent.DATA_PREPARE_COMPLETE, function(e:MultipartURLLoaderEvent):void {
+					trace('\nDATA PREPARE COMPLETE');
+					var ml:MultipartURLLoader=e.currentTarget as MultipartURLLoader;
+					ml.startLoad();
+				});
+				ml.addVariable('rp[]', '0');
+				ml.addVariable('des[]','');
+				ml.addVariable('face_x[]','0');
+				ml.addVariable('face_y[]','0');
+				ml.addVariable('face_width[]','0');
+				ml.addVariable('face_height[]','0');
+				
+				ml.addVariable('luckyrpeleid','');
+				ml.addVariable('rpwords',processedText);
+				
+				ml.addFile(bytes, 'face.png', 'Filedata', 'image/png');
+				this.busy.open(this,true);
+				ml.load("http://www.canamgroup.cn/index.php/Flex/UploadRpFace",true);
+			}
+			
+			private function onIOError( event: IOErrorEvent ): void
+			{
+				trace(event);
+				this.busy.close();
+			}
+			
+			protected function onFileUploaded(e:Event):void
+			{
+				trace("image uploaded to self server");
+				this.busy.close();
+				// You can access loader returned data:
+				var ml:MultipartURLLoader=e.currentTarget as MultipartURLLoader;
+				var loader:URLLoader = ml.loader;
+				var responseText:String=loader.data;
+				//uploaded=true;
+				var decoder:JSONDecoder=new JSONDecoder();
+				var config:Object = decoder.decode(responseText);
+				trace(responseText);
+				if(config.success){
+					this.uploadResponseObject=config;
+					data.uploadResponseObject=config;
+					if(this.uploadCallBack!=null){
+						this.uploadCallBack();
+					}
+					
+				}
+			}
+			
+			protected function facebook_callback():void{
+				navigateToURL(new URLRequest(
+					'http://m.facebook.com/sharer.php?t='+
+					encodeURIComponent(this.processedText)+'&u='+encodeURIComponent('http://www.canamgroup.cn/index.php/RpFace/'+uploadResponseObject.id)));
+			}
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				mx.core.FlexGlobals.topLevelApplication.viewMenuOpen=true;
+			}
+			
+			
+			protected function viewmenuitem1_clickHandler(event:MouseEvent):void
+			{
+				data.processedText=this.processedText;
+				this.navigator.pushView(Share2Weibo_OAuth,data);
+			}
+			
+			protected function textarea1_softKeyboardActivateHandler(event:SoftKeyboardEvent):void
+			{
+				this.overlayControls=false;
+			}
+			
+			protected function textarea1_softKeyboardDeactivateHandler(event:SoftKeyboardEvent):void
+			{
+				this.overlayControls=true;
+			}
+			
+			protected function viewmenuitemFacebook_clickHandler(event:MouseEvent):void
+			{
+				this.uploadCallBack=this.facebook_callback;
+				this.uploadImage();
+				// TODO Auto-generated method stub
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		
+	</fx:Declarations>
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	
+	<s:Scroller height="100%" width="100%" horizontalScrollPolicy="off">
+		<s:VGroup width="100%" height="100%" verticalAlign="middle" gap="20" horizontalAlign="center">
+			<s:Image id="image" width="96%" height="{image.width*this.bitmapData.height/this.bitmapData.width}" source="{this.bitmapData}" />
+			<s:TextArea  width="96%" text="@{this.processedText}" softKeyboardDeactivate="textarea1_softKeyboardDeactivateHandler(event)" softKeyboardActivate="textarea1_softKeyboardActivateHandler(event)"/>
+		</s:VGroup>
+	</s:Scroller>
+	<s:viewMenuItems>
+		<s:ViewMenuItem label="{resourceManager.getString('view','ToWeibo')}" icon="@Embed('assets/weibo.png')" click="viewmenuitem1_clickHandler(event)"/>
+		<s:ViewMenuItem label="Facebook" click="viewmenuitemFacebook_clickHandler(event)"/>
+	</s:viewMenuItems>
+	<s:actionContent>
+		<s:Button label="{resourceManager.getString('view','share')}" click="button1_clickHandler(event)"></s:Button>
+	</s:actionContent>
+	<s:navigationContent>
+		<s:Button label="{resourceManager.getString('view','back')}" click="navigator.popView()" />
+	</s:navigationContent>
+</s:View>

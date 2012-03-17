@@ -1,0 +1,1592 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Capabilities,flash.system.Capabilities,allowLoadBytesCodeExecution,ALPHANUMERIC_FULL,ALPHANUMERIC_HALF,applicationDomain,APPLICATION,avHardwareDisable,CAMERA,checkPolicyFile,CHINESE,conversionMode,currentDomain,currentDomain,DEFAULT,DISPLAY,enabled,exactSettings,hasAccessibility,hasAudioEncoder,hasAudio,hasEmbeddedVideo,hasIME,hasMP3,hasPrinting,hasScreenBroadcast,hasScreenPlayback,hasStreamingAudio,hasStreamingVideo,hasTLS,hasVideoEncoder,ime,isDebugger,JAPANESE_HIRAGANA,JAPANESE_KATAKANA_FULL,JAPANESE_KATAKANA_HALF,KOREAN,language,LOCAL_STORAGE,LOCAL_TRUSTED,LOCAL_WITH_FILE,LOCAL_WITH_NETWORK,localFileReadDisable,manufacturer,MICROPHONE,os,parentDomain,pixelAspectRatio,playerType,PRIVACY,REMOTE,sandboxType,screenColor,screenDPI,screenResolutionX,screenResolutionY,securityDomain,serverString,SETTINGS_MANAGER,totalMemory,UNKNOWN,useCodePage,version" name="keywords">
+<title>flash.system.Capabilities (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Capabilities - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/system/Capabilities.html&amp;flash/system/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Capabilities</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Capabilities"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.system</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  Capabilities</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Capabilities  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ <span>The Capabilities class provides properties that 
+ describe the system and player that are hosting a SWF file.
+ For example, a mobile phone's screen might be 100 square 
+ pixels, black and white, whereas a PC screen might be 1000 square pixels, color. 
+ By using the Capabilities object to determine what type of device a user has, 
+ you can provide appropriate content to as many users as possible. When you know 
+ the device's capabilities, you can tell the server to send the appropriate SWF 
+ files or tell the SWF file to alter its presentation.</span>
+  
+  <p>You can send capabilities information, which is stored in the 
+ <code>Capabilities.serverString</code> property as a URL-encoded string, using the 
+ <code>GET</code> or <code>POST</code> HTTP method. The following example shows a server 
+ string for a computer that has MP3 support and 1600 x 1200 pixel resolution and that is 
+ running Windows XP with an input method editor (IME) installed:</p>
+  <pre>A=t&amp;SA=t&amp;SV=t&amp;EV=t&amp;MP3=t&amp;AE=t&amp;VE=t&amp;ACC=f&amp;PR=t&amp;SP=t&amp;
+     SB=f&amp;DEB=t&amp;V=WIN%209%2C0%2C0%2C0&amp;M=Adobe%20Windows&amp;
+     R=1600x1200&amp;DP=72&amp;COL=color&amp;AR=1.0&amp;OS=Windows%20XP&amp;
+     L=en&amp;PT=External&amp;AVD=f&amp;LFD=f&amp;WD=f&amp;IME=t</pre>
+  <p>The following table lists the properties of the Capabilities class and corresponding server strings:
+ <table class="innertable" ><tr><th align="left">Capabilities class property</th><th align="left">Server string</th></tr>
+<tr>
+<td><code>avHardwareDisable</code></td><td><code>AVD</code></td>
+</tr>
+<tr>
+<td><code>hasAccessibility</code></td><td><code>ACC</code></td>
+</tr>
+<tr>
+<td><code>hasAudio</code></td><td><code>A</code></td>
+</tr>
+<tr>
+<td><code>hasAudioEncoder</code></td><td><code>AE</code></td>
+</tr>
+<tr>
+<td><code>hasEmbeddedVideo</code></td><td><code>EV</code></td>
+</tr>
+<tr>
+<td><code>hasIME</code></td><td><code>IME</code></td>
+</tr>
+<tr>
+<td><code>hasMP3</code></td><td><code>MP3</code></td>
+</tr>
+<tr>
+<td><code>hasPrinting</code></td><td><code>PR</code></td>
+</tr>
+<tr>
+<td><code>hasScreenBroadcast</code></td><td><code>SB</code></td>
+</tr>
+<tr>
+<td><code>hasScreenPlayback</code></td><td><code>SP</code></td>
+</tr>
+<tr>
+<td><code>hasStreamingAudio</code></td><td><code>SA</code></td>
+</tr>
+<tr>
+<td><code>hasStreamingVideo</code></td><td><code>SV</code></td>
+</tr>
+<tr>
+<td><code>hasTLS</code></td><td><code>TLS</code></td>
+</tr>
+<tr>
+<td><code>hasVideoEncoder</code></td><td><code>VE</code></td>
+</tr>
+<tr>
+<td><code>isDebugger</code></td><td><code>DEB</code></td>
+</tr>
+<tr>
+<td><code>language</code></td><td><code>L</code></td>
+</tr>
+<tr>
+<td><code>localFileReadDisable</code></td><td><code>LFD</code></td>
+</tr>
+<tr>
+<td><code>manufacturer</code></td><td><code>M</code></td>
+</tr>
+<tr>
+<td><code>os</code></td><td><code>OS</code></td>
+</tr>
+<tr>
+<td><code>pixelAspectRatio</code></td><td><code>AR</code></td>
+</tr>
+<tr>
+<td><code>playerType</code></td><td><code>PT</code></td>
+</tr>
+<tr>
+<td><code>screenColor</code></td><td><code>COL</code></td>
+</tr>
+<tr>
+<td><code>screenDPI</code></td><td><code>DP</code></td>
+</tr>
+<tr>
+<td><code>screenResolutionX</code></td><td><code>R</code></td>
+</tr>
+<tr>
+<td><code>screenResolutionY</code></td><td><code>R</code></td>
+</tr>
+<tr>
+<td><code>version</code></td><td><code>V</code></td>
+</tr></table>
+ </p>
+  
+ <p>All properties of the Capabilities class are read-only.</p>
+  <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#avHardwareDisable">avHardwareDisable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether access to the user's camera and microphone has
+  been administratively prohibited (true) or allowed (false).</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasAccessibility">hasAccessibility</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system supports 
+  (true) or does not support (false) communication 
+  with accessibility aids.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasAudio">hasAudio</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system has audio 
+  capabilities.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasAudioEncoder">hasAudioEncoder</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system can (true) or cannot (false)
+  encode an audio stream, such as that coming from a microphone.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasEmbeddedVideo">hasEmbeddedVideo</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system supports 
+  (true) or does not support (false) 
+  embedded video.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasIME">hasIME</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system does (true) 
+  or does not (false) have an input method editor (IME) installed.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasMP3">hasMP3</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system does (true) 
+  or does not (false) have an MP3 decoder.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasPrinting">hasPrinting</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system does (true)
+  or does not (false) support printing.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasScreenBroadcast">hasScreenBroadcast</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system does (true) or does not (false)
+  support the development of screen broadcast applications to be run through Flash Media 
+  Server.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasScreenPlayback">hasScreenPlayback</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system does (true) or does not 
+  (false) support the playback of screen broadcast applications 
+  that are being run through Flash Media Server.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasStreamingAudio">hasStreamingAudio</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system can (true) or cannot (false) 
+  play streaming audio.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasStreamingVideo">hasStreamingVideo</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system can (true) or cannot 
+  (false) play streaming video.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasTLS">hasTLS</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system supports native SSL sockets through NetConnection 
+  (true) or does not (false).</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#hasVideoEncoder">hasVideoEncoder</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether the system can (true) or cannot 
+  (false) encode a video stream, such as that coming 
+  from a web camera.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#isDebugger">isDebugger</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only]  
+  Specifies whether the system is a special debugging version 
+  (true) or an officially released version (false).</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#language">language</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the language code of the system on which the content is running.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#localFileReadDisable">localFileReadDisable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies whether read access to the user's hard disk has been 
+  administratively prohibited (true) or allowed 
+  (false).</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#manufacturer">manufacturer</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the manufacturer of the running version of 
+  Flash Player or  the AIR runtime, in the format "Adobe 
+  OSName".</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#os">os</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the current operating system.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#pixelAspectRatio">pixelAspectRatio</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[static] [read-only]  
+  Specifies the pixel aspect ratio of the screen.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#playerType">playerType</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the type of runtime environment.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#screenColor">screenColor</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the screen color.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#screenDPI">screenDPI</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the dots-per-inch (dpi) resolution of the screen, in pixels.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#screenResolutionX">screenResolutionX</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  Specifies the maximum horizontal resolution of the screen.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#screenResolutionY">screenResolutionY</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[static] [read-only]  
+  Specifies the maximum vertical resolution of the screen.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#serverString">serverString</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only]  
+  A URL-encoded string that specifies values for each Capabilities
+  property.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#version">version</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only]  
+  Specifies the Flash Player or Adobe&reg; AIR
+  platform and version information.</div>
+</td><td class="summaryTableOwnerCol">Capabilities</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="avHardwareDisable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">avHardwareDisable</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>avHardwareDisable:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether access to the user's camera and microphone has
+  been administratively prohibited (<code>true</code>) or allowed (<code>false</code>).
+  The server string is <code>AVD</code>.
+    <p>For content in Adobe AIR&trade;, this property applies only to content in security  
+  sandboxes other than the application security sandbox. Content in the application 
+  security sandbox can always access the user's camera and microphone.</p>
+     </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get avHardwareDisable():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/media/Camera.html#getCamera()" target="">flash.media.Camera.getCamera()</a>
+<br>
+<a href="../../flash/media/Microphone.html#getMicrophone()" target="">flash.media.Microphone.getMicrophone()</a>
+<br>
+<a href="Security.html#showSettings()" target="">Security.showSettings()</a>
+<br>
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="hasAccessibility"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasAccessibility</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasAccessibility:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system supports 
+  (<code>true</code>) or does not support (<code>false</code>) communication 
+  with accessibility aids.
+  The server string is <code>ACC</code>. 
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasAccessibility():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/accessibility/Accessibility.html#active" target="">flash.accessibility.Accessibility.active</a>
+<br>
+<a href="../../flash/accessibility/Accessibility.html#updateProperties()" target="">flash.accessibility.Accessibility.updateProperties()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="hasAudio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasAudio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasAudio:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system has audio 
+  capabilities. This property is always <code>true</code>.  The server 
+  string is <code>A</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasAudio():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasAudioEncoder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasAudioEncoder</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasAudioEncoder:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system can (<code>true</code>) or cannot (<code>false</code>)
+  encode an audio stream, such as that coming from a microphone.
+  The server string is <code>AE</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasAudioEncoder():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasEmbeddedVideo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasEmbeddedVideo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasEmbeddedVideo:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system supports 
+  (<code>true</code>) or does not support (<code>false</code>) 
+  embedded video. The server string is <code>EV</code>. 
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasEmbeddedVideo():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasIME"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasIME</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasIME:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system does (<code>true</code>) 
+  or does not (<code>false</code>) have an input method editor (IME) installed.
+  The server string is <code>IME</code>. 
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasIME():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="IME.html" target="">flash.system.IME</a>
+<br>
+<a href="System.html#ime" target="">flash.system.System.ime</a>
+<br>
+<a href="../../../main/00000328.html" target="_top">Using the IME class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="hasMP3"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasMP3</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasMP3:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system does (<code>true</code>) 
+  or does not (<code>false</code>) have an MP3 decoder.
+  The server string is <code>MP3</code>.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasMP3():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="hasPrinting"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasPrinting</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasPrinting:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system does (<code>true</code>)
+  or does not (<code>false</code>) support printing.
+  The server string is <code>PR</code>. 
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasPrinting():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasScreenBroadcast"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasScreenBroadcast</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasScreenBroadcast:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system does (<code>true</code>) or does not (<code>false</code>)
+  support the development of screen broadcast applications to be run through Flash Media 
+  Server.
+  The server string is <code>SB</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasScreenBroadcast():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasScreenPlayback"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasScreenPlayback</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasScreenPlayback:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system does (<code>true</code>) or does not 
+  (<code>false</code>) support the playback of screen broadcast applications 
+  that are being run through Flash Media Server.
+  The server string is <code>SP</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasScreenPlayback():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasStreamingAudio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasStreamingAudio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasStreamingAudio:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system can (<code>true</code>) or cannot (<code>false</code>) 
+  play streaming audio.
+  The server string is <code>SA</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasStreamingAudio():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasStreamingVideo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasStreamingVideo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasStreamingVideo:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system can (<code>true</code>) or cannot 
+  (<code>false</code>) play streaming video.
+  The server string is <code>SV</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasStreamingVideo():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="hasTLS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasTLS</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasTLS:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system supports native SSL sockets through NetConnection 
+  (<code>true</code>) or does not (<code>false</code>).
+  The server string is <code>TLS</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasTLS():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/net/NetConnection.html#connectedProxyType" target="">flash.net.NetConnection.connectedProxyType</a>
+<br>
+<a href="../../flash/net/NetConnection.html#proxyType" target="">flash.net.NetConnection.proxyType</a>
+<br>
+<a href="../../flash/net/NetConnection.html#usingTLS" target="">flash.net.NetConnection.usingTLS</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="hasVideoEncoder"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasVideoEncoder</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>hasVideoEncoder:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether the system can (<code>true</code>) or cannot 
+  (<code>false</code>) encode a video stream, such as that coming 
+  from a web camera.
+  The server string is <code>VE</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get hasVideoEncoder():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="isDebugger"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isDebugger</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isDebugger:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+  Specifies whether the system is a special debugging version 
+  (<code>true</code>) or an officially released version (<code>false</code>). 
+  The server string is <code>DEB</code>. This property is set to <code>true</code>
+  when running in <span>the debug version of Flash Player or</span>
+  the AIR Debug Launcher (ADL).
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get isDebugger():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="language"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">language</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>language:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the language code of the system on which the content is running. The language is
+  specified as a lowercase two-letter language code from ISO 639-1. For Chinese, an additional
+  uppercase two-letter country code from ISO 3166 distinguishes between Simplified and
+  Traditional Chinese. The languages codes are based on the English names of the language: for example, 
+  <code>hu</code> specifies Hungarian.
+    <p>On English systems, this property returns only the language code (<code>en</code>), not 
+  the country code. On Microsoft Windows systems, this property returns the user interface (UI) 
+  language, which refers to the language used for all menus, dialog boxes, error messages, and help 
+  files. The following table lists the possible values:
+  
+     <table class="innertable" ><tr><th align="left">Language</th><th align="left">Value</th></tr>
+<tr>
+<td>Czech</td><td><code>cs</code></td>
+</tr>
+<tr>
+<td>Danish</td><td><code>da</code></td>
+</tr>
+<tr>
+<td>Dutch</td><td><code>nl</code></td>
+</tr>
+<tr>
+<td>English</td><td><code>en</code></td>
+</tr>
+<tr>
+<td>Finnish</td><td><code>fi</code></td>
+</tr>
+<tr>
+<td>French</td><td><code>fr</code></td>
+</tr>
+<tr>
+<td>German</td><td><code>de</code></td>
+</tr>
+<tr>
+<td>Hungarian</td><td><code>hu</code></td>
+</tr>
+<tr>
+<td>Italian</td><td><code>it</code></td>
+</tr>
+<tr>
+<td>Japanese</td><td><code>ja</code></td>
+</tr>
+<tr>
+<td>Korean</td><td><code>ko</code></td>
+</tr>
+<tr>
+<td>Norwegian</td><td><code>no</code></td>
+</tr>
+<tr>
+<td>Other/unknown</td><td><code>xu</code></td>
+</tr>
+<tr>
+<td>Polish</td><td><code>pl</code></td>
+</tr>
+<tr>
+<td>Portuguese</td><td><code>pt</code></td>
+</tr>
+<tr>
+<td>Russian</td><td><code>ru</code></td>
+</tr>
+<tr>
+<td>Simplified Chinese</td><td><code>zh-CN</code></td>
+</tr>
+<tr>
+<td>Spanish</td><td><code>es</code></td>
+</tr>
+<tr>
+<td>Swedish</td><td><code>sv</code></td>
+</tr>
+<tr>
+<td>Traditional Chinese</td><td><code>zh-TW</code></td>
+</tr>
+<tr>
+<td>Turkish</td><td><code>tr</code></td>
+</tr></table>
+  </p>
+  <p>The server string is <code>L</code>.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get language():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> In the following example, the content that is displayed depends on the language of the user's operating
+ system.
+ 
+ <p>The <code>Capabilities.language</code> property returns the ISO 639-1 language code 
+ (for example, "en" for English). The <code>switch</code> statement checks for the language code and sets  
+ the content of the <code>myTextField</code> text field to a greeting specific to the 
+ language. If the language code is not supported by the example, the default error string 
+ is returned.</p>
+ <div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;
+    import flash.system.Capabilities;
+
+    public class Capabilities_languageExample extends Sprite {
+
+        public function Capabilities_languageExample()  {
+            var myTextField:TextField = new TextField();         
+            myTextField.x = 10;
+            myTextField.y = 10;
+            myTextField.background = true;
+            myTextField.autoSize = TextFieldAutoSize.LEFT;
+            
+            var greetingEnglish:String = "Hello World";
+            var greetingGerman:String = "Hallo Welt";
+            var greetingFrench:String = "Bonjour Monde";
+            var greetingSpanish:String = "Hola Mundo";
+
+            var lang:String = Capabilities.language;
+                         
+            switch (lang) {
+                case "en":
+                    myTextField.text = greetingEnglish;
+                    break;
+                case "de":
+                    myTextField.text = greetingGerman;
+                    break;
+                case "fr":
+                    myTextField.text = greetingFrench;
+                    break;
+                case "es":
+                    myTextField.text = greetingSpanish;
+                    break;
+                default:
+                    myTextField.text = "Sorry your system's language is not supported at this time.";               
+            }
+             
+            this.addChild(myTextField);
+        }
+    }
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="localFileReadDisable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">localFileReadDisable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>localFileReadDisable:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies whether read access to the user's hard disk has been 
+  administratively prohibited (<code>true</code>) or allowed 
+  (<code>false</code>). For content in Adobe AIR, this property 
+  applies only to content in security sandboxes other 
+  than the application security sandbox. (Content in the application 
+  security sandbox can always read from the file system.) 
+  <span>If this property is <code>true</code>, 
+  Flash Player cannot read files (including the first file that
+  Flash Player launches with) from the user's hard disk.</span> 
+  If this property is <code>true</code>, AIR content outside of the 
+  application security sandbox cannot read files from the user's 
+  hard disk. For example, attempts to read a file on the user's 
+  hard disk using load methods will fail if this property 
+  is set to <code>true</code>.
+  
+  <p>Reading runtime shared libraries is also blocked  
+  if this property is set to <code>true</code>, but reading local shared objects 
+  is allowed without regard to the value of this property.</p>
+  
+  <p>The server string is <code>LFD</code>.</p>
+      </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get localFileReadDisable():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/Loader.html" target="">flash.display.Loader</a>
+<br>
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="manufacturer"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">manufacturer</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>manufacturer:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the manufacturer of <span>the running version of 
+  Flash Player or </span> the AIR runtime, in the format <code>"Adobe</code> 
+  <code><i>OSName</i>"</code>. The value for <code><i>OSName</i></code> 
+  could be <code>"Windows"</code>, <code>"Macintosh"</code>,
+  <code>"Linux"</code>, or another operating system name. The server string is <code>M</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get manufacturer():<a href="../../String.html">String</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="os"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">os</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>os:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the current operating system. The <code>os</code> property
+  can return the following strings: <code>"Windows XP"</code>, <code>"Windows 2000"</code>, 
+  <code>"Windows NT"</code>, <code>"Windows 98/ME"</code>, <code>"Windows 95"</code>, 
+  <code>"Windows CE"</code> (available only in Flash Player SDK, not in the desktop version), 
+  <code>"Linux"</code>, and <code>"MacOS"</code>.
+  The server string is <code>OS</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get os():<a href="../../String.html">String</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="pixelAspectRatio"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pixelAspectRatio</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>pixelAspectRatio:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+  Specifies the pixel aspect ratio of the screen. The server string
+  is <code>AR</code>.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get pixelAspectRatio():<a href="../../Number.html">Number</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="playerType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playerType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>playerType:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the type of runtime environment. This property can have one of the following
+  values:
+  
+  <ul>
+    <li><code>"ActiveX"</code> for the Flash Player ActiveX control used by Microsoft Internet Explorer</li>
+    <li><code>"Desktop"</code> for the Adobe AIR runtime (except for SWF content loaded by an HTML page, which
+       has <code>Capabilities.playerType</code> set to <code>"PlugIn"</code>)</li>
+    <li><code>"External"</code> for the external Flash Player<span src="flashonly"> or in test mode</span></li>
+    <li><code>"PlugIn"</code> for the Flash Player browser plug-in (and for SWF content loaded by
+       an HTML page in an AIR application)</li>
+    <li><code>"StandAlone"</code> for the stand-alone Flash Player</li>
+  </ul>
+  <p>The server string is <code>PT</code>.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get playerType():<a href="../../String.html">String</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="screenColor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">screenColor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>screenColor:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the screen color. This property can have the value 
+  <code>"color"</code>, <code>"gray"</code> (for grayscale), or 
+  <code>"bw"</code> (for black and white). 
+  The server string is <code>COL</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get screenColor():<a href="../../String.html">String</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="screenDPI"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">screenDPI</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>screenDPI:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the dots-per-inch (dpi) resolution of the screen, in pixels.
+  The server string is <code>DP</code>.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get screenDPI():<a href="../../Number.html">Number</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="screenResolutionX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">screenResolutionX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>screenResolutionX:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies the maximum horizontal resolution of the screen. 
+  The server string is <code>R</code> (which returns both the width and height of the screen).
+  This property does not update with a user's screen resolution and instead only indicates the resolution 
+  at the time <span>Flash Player or </span> an Adobe AIR application started. 
+  Also, the value only specifies the main monitor.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get screenResolutionX():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="screenResolutionY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">screenResolutionY</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>screenResolutionY:<a href="../../Number.html">Number</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+  Specifies the maximum vertical resolution of the screen. 
+  The server string is <code>R</code> (which returns both the width and height of the screen).
+  This property does not update with a user's screen resolution and instead only indicates the resolution 
+  at the time <span>Flash Player or </span> an Adobe AIR application started. 
+  Also, the value only specifies the main monitor.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get screenResolutionY():<a href="../../Number.html">Number</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="serverString"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">serverString</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>serverString:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+  A URL-encoded string that specifies values for each Capabilities
+  property.
+  
+  <p>The following example shows a URL-encoded string:
+  <pre>A=t&amp;SA=t&amp;SV=t&amp;EV=t&amp;MP3=t&amp;AE=t&amp;VE=t&amp;ACC=f&amp;PR=t&amp;SP=t&amp;
+  SB=f&amp;DEB=t&amp;V=WIN%208%2C5%2C0%2C208&amp;M=Adobe%20Windows&amp;
+  R=1600x1200&amp;DP=72&amp;COL=color&amp;AR=1.0&amp;OS=Windows%20XP&amp;
+  L=en&amp;PT=External&amp;AVD=f&amp;LFD=f&amp;WD=f</pre></p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get serverString():<a href="../../String.html">String</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="version"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">version</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>version:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p> 
+  Specifies the Flash Player or Adobe<sup>&reg;</sup> AIR
+  platform and version information. The format of the version number is: 
+  <i>platform majorVersion,minorVersion,buildNumber,internalBuildNumber</i>. 
+  Possible values for <i>platform</i> are <code>"WIN"</code>, 
+  <code>"MAC"</code>, and <code>"UNIX"</code>. Here are some examples of 
+  version information:
+  
+  <pre>
+  WIN 9,0,0,0  // Flash Player 9 for Windows
+  MAC 7,0,25,0   // Flash Player 7 for Macintosh
+  UNIX 5,0,55,0  // Flash Player 5 for UNIX
+  </pre>
+  
+  <p>The server string is <code>V</code>.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get version():<a href="../../String.html">String</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000326.html" target="_top">Using the Capabilities class</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">CapabilitiesExample.as</div>
+<br>
+<div class="detailBody"> The following example simply outputs the values found in the
+ flash.system.Capabilities object using several calls to <code>trace()</code>.
+<div class="listing"><pre>
+
+package {
+    import flash.display.Sprite;
+    import flash.system.Capabilities;
+
+    public class CapabilitiesExample extends Sprite {
+        public function CapabilitiesExample() {
+            showCapabilities();
+        }
+        
+        private function showCapabilities():void {
+            trace("avHardwareDisable: " + Capabilities.avHardwareDisable);
+            trace("hasAccessibility: " + Capabilities.hasAccessibility);
+            trace("hasAudio: " + Capabilities.hasAudio);
+            trace("hasAudioEncoder: " + Capabilities.hasAudioEncoder);
+            trace("hasEmbeddedVideo: " + Capabilities.hasEmbeddedVideo);
+            trace("hasMP3: " + Capabilities.hasMP3);
+            trace("hasPrinting: " + Capabilities.hasPrinting);
+            trace("hasScreenBroadcast: " + Capabilities.hasScreenBroadcast);
+            trace("hasScreenPlayback: " + Capabilities.hasScreenPlayback);
+            trace("hasStreamingAudio: " + Capabilities.hasStreamingAudio);
+            trace("hasVideoEncoder: " + Capabilities.hasVideoEncoder);
+            trace("isDebugger: " + Capabilities.isDebugger);
+            trace("language: " + Capabilities.language);
+            trace("localFileReadDisable: " + Capabilities.localFileReadDisable);
+            trace("manufacturer: " + Capabilities.manufacturer);
+            trace("os: " + Capabilities.os);
+            trace("pixelAspectRatio: " + Capabilities.pixelAspectRatio);
+            trace("playerType: " + Capabilities.playerType);
+            trace("screenColor: " + Capabilities.screenColor);
+            trace("screenDPI: " + Capabilities.screenDPI);
+            trace("screenResolutionX: " + Capabilities.screenResolutionX);
+            trace("screenResolutionY: " + Capabilities.screenResolutionY);
+            trace("serverString: " + Capabilities.serverString);
+            trace("version: " + Capabilities.version);
+        }
+    }
+}
+</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

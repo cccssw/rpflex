@@ -1,0 +1,61 @@
+<languageVersion : 1.0;>
+
+kernel SineWave
+<   namespace : "net.ghostradio.pb";
+    vendor : "ghostRadio.net";
+    version : 1;
+    description : "Applies a sine-wave to the image";
+>
+{
+    parameter float frequency
+    <
+    minValue : 0.0;
+    maxValue : 1.0;
+    defaultValue : 0.0;
+    description : "wave size";
+    >;
+    
+    parameter float waveSize
+    <
+    minValue : -50.0;
+    maxValue : 50.0;
+    defaultValue : 0.0;
+    description : "width";
+    >;
+    
+    parameter int direction
+    <
+    minValue : 0;
+    maxValue : 1;
+    defaultValue : 0;
+    description : "Direction of the wave - 0 for vertical, 1 for horizontal. (Default is 0 - vertical)";
+    >;
+
+    input image4 src;
+    output pixel4 outputPx;
+
+    void
+    evaluatePixel()
+    {
+        float2 cPos = outCoord();
+        
+        //float sineVal = cPos.y * sin(frequency);
+			
+        //cPos.x += sin(sineVal) * waveSize;
+        
+        float coord1 = (direction == 0) ? cPos.y : cPos.x;
+        
+        float sineVal = coord1 * sin(frequency);
+        
+        if (direction == 0)
+        {
+            cPos.x += sin(sineVal) * waveSize;
+        }
+        else
+        {
+            cPos.y += sin(sineVal) * waveSize;
+        }
+    
+        outputPx = sampleNearest(src, cPos);
+    }
+}

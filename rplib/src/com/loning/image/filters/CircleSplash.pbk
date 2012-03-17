@@ -1,0 +1,49 @@
+<languageVersion : 1.0;>
+
+kernel CircleSplash
+<   namespace : "net.Jerry.PixelBender";
+    vendor : "Jerry.net@gmail.com";
+    version : 1;
+    description : "Just a Circle Splash effect.";
+>
+{
+
+    parameter float Radius
+    <
+        minValue:float(0.0);
+        maxValue:float(300.0);
+        defaultValue:float(100.0);
+    >;
+    
+    parameter float2 center
+    <
+        minValue:float2(0.0,0.0);
+        maxValue:float2(1800.0,1800.0);
+        defaultValue:float2(150.0,150.0);
+    >;
+
+    input image4 src;
+    output pixel4 dst;
+
+    void
+    evaluatePixel()
+    {
+        float2 pos = outCoord()-center;
+        float relativeScale = Radius/length(pos);
+        
+        float2x2 scaleMap = float2x2(
+            relativeScale,  0.0,
+            0.0,  relativeScale
+        );
+        
+        float2 relativePos = scaleMap*pos;
+        
+        if (length(pos) >= Radius){
+            relativePos = relativePos+center;
+        }else{
+            relativePos = outCoord();
+        }   
+        
+        dst = sampleLinear(src,relativePos);
+    }
+}

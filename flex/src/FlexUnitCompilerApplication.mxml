@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 此文件是由 Flash Builder 自动生成的，可用于编译 FlexUnit 类，但不可修改。
+请单击“FlexUnit 结果”视图中的“刷新”图标以重新生成此文件。 -->
+
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+	<fx:Script>
+		<![CDATA[
+			import flexUnitTests.TestLoader;
+			
+			private var flexUnitTests_TestLoader_obj:flexUnitTests.TestLoader;
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+</s:Application>

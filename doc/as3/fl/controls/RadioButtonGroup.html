@@ -1,0 +1,1113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="RadioButtonGroup,fl.controls.RadioButtonGroup,allowMultipleSelection,alwaysShowSelection,alwaysShowSelection,autoRepeat,autoRepeat,autoRepeat,AUTO,autoSize,BOTTOM,colors,columnCount,columns,columnWidth,condenseWhite,condenseWhite,condenseWhite,dataProvider,dataProvider,dataProvider,direction,direction,direction,direction,direction,displayAsPassword,displayAsPassword,dropdown,dropdownWidth,editable,editable,editable,editable,editable,editedItemPosition,editedItemRenderer,emphasized,enabled,enabled,enabled,enabled,enabled,enabled,enabled,EVENT,groupName,group,headerHeight,height,height,hexValue,HORIZONTAL,HORIZONTAL,horizontalScrollBar,horizontalScrollPolicy,horizontalScrollPolicy,horizontalScrollPosition,horizontalScrollPosition,htmlText,htmlText,htmlText,iconField,iconField,iconFunction,iconFunction,imeMode,imeMode,imeMode,imeMode,imeMode,indeterminate,innerHeight,innerWidth,itemEditorInstance,labelField,labelField,labelField,labelFunction,labelFunction,labelFunction,labelFunction,label,labelPlacement,LEFT,LEFT,length,length,length,length,lineScrollSize,liveDragging,MANUAL,maxChars,maxChars,maxHorizontalScrollPosition,maxHorizontalScrollPosition,maxHorizontalScrollPosition,maxHorizontalScrollPosition,maximum,maximum,maximum,maxScrollPosition,maxVerticalScrollPosition,minColumnWidth,minimum,minimum,minimum,minScrollPosition,mode,name,nextValue,numRadioButtons,OFF,ON,pageScrollSize,pageSize,percentComplete,POLLED,previousValue,prompt,resizableColumns,restrict,restrict,restrict,RIGHT,RIGHT,rowCount,rowCount,rowCount,rowCount,rowCount,rowHeight,rowHeight,rowHeight,scrollPolicy,scrollPosition,scrollTarget,selectable,selectable,selectedColor,selectedData,selected,selected,selectedIndex,selectedIndex,selected,selectedIndices,selectedItem,selectedItem,selectedItems,selectedLabel,selectionBeginIndex,selectionBeginIndex,selectionEndIndex,selectionEndIndex,selection,showHeaders,showTextField,snapInterval,sortableColumns,sortDescending,sortIndex,sourceField,sourceFunction,source,stepSize,textField,textField,textField,textField,textField,textField,textField,text,text,text,text,textHeight,textHeight,textWidth,textWidth,tickInterval,toggle,toggle,toggle,TOP,value,value,value,value,value,VERTICAL,VERTICAL,verticalScrollBar,verticalScrollPolicy,verticalScrollPosition,width,width,wordWrap,wordWrap,addColumn,addColumnAt,addItem,addItemAt,addItemAt,addItem,addRadioButton,appendText,appendText,clearRendererStyle,clearSelection,close,close,createItemEditor,destroyItemEditor,drawFocus,drawFocus,drawFocus,drawFocus,drawFocus,editField,getCellRendererAt,getColumnAt,getColumnCount,getColumnIndex,getGroup,getItemAt,getItemAt,getLineMetrics,getLineMetrics,getNextIndexAtLetter,getRadioButtonAt,getRadioButtonIndex,getRendererStyle,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,getStyleDefinition,invalidateItemAt,invalidateItem,invalidateList,isItemSelected,itemToCellRenderer,itemToCellRenderer,itemToLabel,itemToLabel,itemToLabel,itemToLabel,open,open,removeAllColumns,removeAll,removeAll,removeColumnAt,removeItemAt,removeItemAt,removeItem,removeItem,removeRadioButton,replaceItemAt,replaceItemAt,reset,scrollToIndex,scrollToIndex,scrollToIndex,scrollToIndex,scrollToSelected,setFocus,setMouseState,setProgress,setRendererStyle,setScrollProperties,setScrollProperties,setSelection,setSelection,setSize,setSize,sortItemsOn,sortItemsOn,sortItems,sortItems,spaceColumnsEqually,update" name="keywords">
+<title>fl.controls.RadioButtonGroup (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'RadioButtonGroup - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/controls/RadioButtonGroup.html&amp;fl/controls/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">RadioButtonGroup</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("RadioButtonGroup"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.controls</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  RadioButtonGroup</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">RadioButtonGroup  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+  The RadioButtonGroup class defines a group of RadioButton components 
+  to act as a single component. When one radio button is selected, no other
+  radio buttons from the same group can be selected.
+       <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="RadioButton.html" target="">RadioButton</a>
+<br>
+<a href="RadioButton.html#group" target="">RadioButton.group</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#name">name</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+   Gets the instance name of the radio button.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#numRadioButtons">numRadioButtons</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+   Gets the number of radio buttons in this radio button group.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#selectedData">selectedData</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+         Gets or sets the selected radio button's value property.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#selection">selection</a> : <a href="../../fl/controls/RadioButton.html">RadioButton</a>
+<div class="summaryTableDescription">
+   Gets or sets a reference to the radio button that is currently selected 
+         from the radio button group.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#RadioButtonGroup()">RadioButtonGroup</a>(name:<a href="../../String.html">String</a>)</div>
+<div class="summaryTableDescription">
+   Creates a new RadioButtonGroup instance.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addRadioButton()">addRadioButton</a>(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Adds a radio button to the internal radio button array for use with 
+   radio button group indexing, which allows for the selection of a single radio button
+   in a group of radio buttons.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getGroup()">getGroup</a>(name:<a href="../../String.html">String</a>):<a href="../../fl/controls/RadioButtonGroup.html">RadioButtonGroup</a>
+</div>
+<div class="summaryTableDescription">[static] 
+   Retrieves a reference to the specified radio button group.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRadioButtonAt()">getRadioButtonAt</a>(index:<a href="../../int.html">int</a>):<a href="../../fl/controls/RadioButton.html">RadioButton</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves the RadioButton component at the specified index location.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRadioButtonIndex()">getRadioButtonIndex</a>(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+   Returns the index of the specified RadioButton instance.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeRadioButton()">removeRadioButton</a>(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Clears the RadioButton instance from the internal list of radio buttons.</div>
+</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:change">change</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the selected RadioButton instance in a group changes.</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:click">click</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a RadioButton instance is clicked.</td><td class="summaryTableOwnerCol">RadioButtonGroup</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="name"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">name</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>name:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Gets the instance name of the radio button.
+                  </p><p> The default value is <code>"RadioButtonGroup"</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get name():<a href="../../String.html">String</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="numRadioButtons"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">numRadioButtons</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>numRadioButtons:<a href="../../int.html">int</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Gets the number of radio buttons in this radio button group.
+                  </p><p> The default value is <code>0</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get numRadioButtons():<a href="../../int.html">int</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="selectedData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">selectedData</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>selectedData:<a href="../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets or sets the selected radio button's <code>value</code> property.
+         If no radio button is currently selected, this property is <code>null</code>.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get selectedData():<a href="../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set selectedData(value:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new RadioButtonGroup and listens for its <code>change</code> event:
+<div class="listing"><pre>
+
+import fl.controls.RadioButton;
+import fl.controls.RadioButtonGroup;
+
+var myRadioGroup:RadioButtonGroup = new RadioButtonGroup("options");
+myRadioGroup.addEventListener(Event.CHANGE, changeHandler);
+
+var radio1:RadioButton = new RadioButton();
+radio1.label = "Option A";
+radio1.value = "optionA";
+radio1.group = myRadioGroup;
+radio1.move(10, 10);
+addChild(radio1);
+
+var radio2:RadioButton = new RadioButton();
+radio2.label = "Option B";
+radio2.value = "optionB";
+radio2.group = myRadioGroup;
+radio2.move(10, 30);
+addChild(radio2);
+
+var radio3:RadioButton = new RadioButton();
+radio3.label = "Option C";
+radio3.value = "optionC";
+radio3.group = myRadioGroup;
+radio3.move(10, 50);
+addChild(radio3);
+
+function changeHandler(event:Event):void {
+    var rbg:RadioButtonGroup = event.target as RadioButtonGroup;
+    if (rbg.selectedData != null) {
+        trace(rbg.selectedData);
+    } else {
+        trace("no value specified.");
+    }
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="selection"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">selection</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>selection:<a href="../../fl/controls/RadioButton.html">RadioButton</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Gets or sets a reference to the radio button that is currently selected 
+         from the radio button group.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get selection():<a href="../../fl/controls/RadioButton.html">RadioButton</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set selection(value:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new radio button group that contains two radio buttons. When the currently selected radio button changes, the selected radio button's label and value are traced:
+<div class="listing"><pre>
+
+import fl.controls.RadioButton;
+import fl.controls.RadioButtonGroup;
+
+var radioGroup:RadioButtonGroup = new RadioButtonGroup("rbg");
+radioGroup.addEventListener(Event.CHANGE, changeHandler);
+
+var radio1:RadioButton = new RadioButton();
+radio1.group = radioGroup;
+radio1.label = "Option A";
+radio1.value = 1;
+radio1.move(10, 10);
+addChild(radio1);
+
+var radio2:RadioButton = new RadioButton();
+radio2.group = radioGroup;
+radio2.label = "Option B";
+radio2.value = 2;
+radio2.move(10, 30);
+addChild(radio2);
+
+function changeHandler(event:Event):void {
+    var rg:RadioButtonGroup = event.currentTarget as RadioButtonGroup;
+    trace("change:", rg.selection.label, "(" + rg.selectedData + ")");
+}
+</pre></div></div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="RadioButtonGroup()"></a><a name="RadioButtonGroup(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RadioButtonGroup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function RadioButtonGroup(name:<a href="../../String.html">String</a>)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a new RadioButtonGroup instance.  
+   This is usually done automatically when a radio button is instantiated.
+   
+         </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; The name of the radio button group.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="addRadioButton()"></a><a name="addRadioButton(fl.controls.RadioButton)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addRadioButton</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addRadioButton(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Adds a radio button to the internal radio button array for use with 
+   radio button group indexing, which allows for the selection of a single radio button
+   in a group of radio buttons.  This method is used automatically by radio buttons, 
+   but can also be manually used to explicitly add a radio button to a group.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">radioButton</span>:<a href="../../fl/controls/RadioButton.html">RadioButton</a></code> &mdash; The RadioButton instance to be added to the current radio button group.
+                  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="getGroup()"></a><a name="getGroup(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getGroup</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getGroup(name:<a href="../../String.html">String</a>):<a href="../../fl/controls/RadioButtonGroup.html">RadioButtonGroup</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Retrieves a reference to the specified radio button group.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:<a href="../../String.html">String</a></code> &mdash; The name of the group for which to retrieve a reference.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../fl/controls/RadioButtonGroup.html">RadioButtonGroup</a></code> &mdash; A reference to the specified RadioButtonGroup.
+            </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example demonstrates how to determine which radio button in a group is selected:
+<div class="listing"><pre>
+
+import fl.controls.RadioButton;
+import fl.controls.RadioButtonGroup;
+
+var rbg1:RadioButtonGroup = new RadioButtonGroup("group1");
+
+var rb1:RadioButton = new RadioButton();
+rb1.label = "Choice A";
+rb1.group = rbg1;
+rb1.move(10, 10);
+rb1.addEventListener(MouseEvent.CLICK, announceCurrentGroup);
+addChild(rb1);
+
+var rb2:RadioButton = new RadioButton();
+rb2.label = "Choice B";
+rb2.group = rbg1;
+rb2.move(10, 30);
+rb2.addEventListener(MouseEvent.CLICK, announceCurrentGroup);
+addChild(rb2);
+
+function announceCurrentGroup(e:MouseEvent):void {
+    var group:RadioButtonGroup = RadioButtonGroup.getGroup("group1");
+    trace("The currently selected radio button is: " + group.selection.label);
+}
+</pre></div>
+</div>
+</div>
+<a name="getRadioButtonAt()"></a><a name="getRadioButtonAt(int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRadioButtonAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRadioButtonAt(index:<a href="../../int.html">int</a>):<a href="../../fl/controls/RadioButton.html">RadioButton</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Retrieves the RadioButton component at the specified index location.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../int.html">int</a></code> &mdash; The index of the RadioButton component in the RadioButtonGroup component, 
+                where the index of the first component is 0. 
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../fl/controls/RadioButton.html">RadioButton</a></code> &mdash; The specified RadioButton component.
+            </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than or equal to the length of the data provider.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="getRadioButtonIndex()"></a><a name="getRadioButtonIndex(fl.controls.RadioButton)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRadioButtonIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRadioButtonIndex(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../int.html">int</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Returns the index of the specified RadioButton instance.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">radioButton</span>:<a href="../../fl/controls/RadioButton.html">RadioButton</a></code> &mdash; The RadioButton instance to locate in the current RadioButtonGroup.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; The index of the specified RadioButton component, or -1 if the specified RadioButton was not found.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="removeRadioButton()"></a><a name="removeRadioButton(fl.controls.RadioButton)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeRadioButton</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeRadioButton(radioButton:<a href="../../fl/controls/RadioButton.html">RadioButton</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Clears the RadioButton instance from the internal list of radio buttons.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">radioButton</span>:<a href="../../fl/controls/RadioButton.html">RadioButton</a></code> &mdash; The RadioButton instance to remove.
+                  </td>
+</tr>
+</table>
+</p>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:change"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">change</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CHANGE"><code>flash.events.Event.CHANGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when the selected RadioButton instance in a group changes.
+          </p>
+ The <code>Event.CHANGE</code> constant defines the value of the <code>type</code> property of a <code>change</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>true</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that has had its value modified. 
+ The <code>target</code> is not always the object in the display list 
+ that registered the event listener. Use the <code>currentTarget</code> 
+ property to access the object in the display list that is currently processing the event.</td>
+</tr></table>
+ 
+ <br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates three radio buttons and adds an event listener for a radio button group's <code>change</code> event:
+<div class="listing"><pre>
+
+import fl.controls.RadioButton;
+import fl.controls.RadioButtonGroup;
+
+var myRadioGroup:RadioButtonGroup = new RadioButtonGroup("options");
+myRadioGroup.addEventListener(Event.CHANGE, changeHandler);
+
+var radio1:RadioButton = new RadioButton();
+radio1.label = "Option A";
+radio1.group = myRadioGroup;
+radio1.move(10, 10);
+addChild(radio1);
+
+var radio2:RadioButton = new RadioButton();
+radio2.label = "Option B";
+radio2.group = myRadioGroup;
+radio2.move(10, 30);
+addChild(radio2);
+
+var radio3:RadioButton = new RadioButton();
+radio3.label = "Option C";
+radio3.group = myRadioGroup;
+radio3.move(10, 50);
+addChild(radio3);
+
+function changeHandler(event:Event):void {
+    var rg:RadioButtonGroup = event.target as RadioButtonGroup;
+    switch (rg.selection) {
+        case radio1:
+            trace("radio1");
+            break;
+        case radio2:
+            trace("radio2");
+            break;
+        case radio3:
+            trace("radio3");
+            break;
+    }
+}
+</pre></div></div>
+</div>
+<a name="event:click"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">click</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/MouseEvent.html"><code>flash.events.MouseEvent</code></a>
+<br>
+<span class="label">MouseEvent.type property = </span><a href="../../flash/events/MouseEvent.html#CLICK"><code>flash.events.MouseEvent.CLICK</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched when a RadioButton instance is clicked.
+          </p>
+ Defines the value of the <code>type</code> property of a <code>click</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>true</code></td>
+</tr>
+<tr>
+<td><code>buttonDown</code></td><td><code>true</code> if the primary mouse button is pressed; <code>false</code> otherwise.</td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>ctrlKey</code></td><td><code>true</code> on Windows if the Ctrl key is active. <code>true</code> on Mac if either the Ctrl key or the Command key is active. Otherwise, <code>false</code>.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>localX</code></td><td>The horizontal coordinate at which the event occurred relative to the containing sprite.</td>
+</tr>
+<tr>
+<td><code>localY</code></td><td>The vertical coordinate at which the event occurred relative to the containing sprite.</td>
+</tr>
+<tr>
+<td><code>shiftKey</code></td><td><code>true</code> if the Shift key is active; <code>false</code> if it is inactive.</td>
+</tr>
+<tr>
+<td><code>commandKey</code></td><td><code>true</code> on the Mac if the Command key is active; <code>false</code> if it is inactive. Always <code>false</code> on Windows.</td>
+</tr>
+<tr>
+<td><code>controlKey</code></td><td><code>true</code> if the Ctrl key is active; <code>false</code> if it is inactive.</td>
+</tr>
+<tr>
+<td><code>stageX</code></td><td>The horizontal coordinate at which the event occurred in global stage coordinates.</td>
+</tr>
+<tr>
+<td><code>stageY</code></td><td>The vertical coordinate at which the event occurred in global stage coordinates.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The InteractiveObject instance under the pointing device. 
+ The <code>target</code> is not always the object in the display list 
+ that registered the event listener. Use the <code>currentTarget</code> 
+ property to access the object in the display list that is currently processing the event.</td>
+</tr></table>
+ 
+ </div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">RadioButtonGroupExample.as</div>
+<br>
+<div class="detailBody"> This example demonstrates how to manage many RadioButton instances over several groups.
+  <p>To run the example, follow these steps:</p>
+  <ol>
+      <li>Add the RadioButton and Label components to the library.</li>
+      <li>Save this code as RadioButtonGroupExample.as in the same directory as your FLA file.</li>
+      <li>Set the Document class in the FLA file to RadioButtonGroupExample.</li>
+  </ol>
+<div class="listing"><pre>
+package
+{
+    import fl.controls.Label;
+    import fl.controls.RadioButton;
+    import fl.controls.RadioButtonGroup;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.text.TextFieldAutoSize;
+    
+    public class RadioButtonGroupExample extends Sprite
+    {
+        private var padding:uint = 10;
+        private var currHeight:uint = 0;
+        private var verticalSpacing:uint = 30;
+        private var posX:uint;
+        private var reportLabel:Label;
+        
+        public function RadioButtonGroupExample() {
+            setupRadioButtons();
+        }
+        private function setupRadioButtons():void {
+            reportLabel = new Label();
+            reportLabel.move(10,150);
+            reportLabel.autoSize = TextFieldAutoSize.LEFT;
+            reportLabel.text = "Select a Radio Button";
+            addChild(reportLabel);
+
+            createRadioButtonGroup("1st Group");
+            createRadioButtonGroup("2nd Group");
+            createRadioButtonGroup("3rd Group");
+            createRadioButtonGroup("4th Group");
+        }
+        private function createRadioButtonGroup(name:String):void {
+            var rbg:RadioButtonGroup = new RadioButtonGroup(name);
+            rbg.addEventListener(Event.CHANGE, announceChange);
+            createRadioButton("1st Button", rbg, posX);
+            createRadioButton("2nd Button", rbg, posX);
+            createRadioButton("3rd Button", rbg, posX);
+            createRadioButton("4th Button", rbg, posX);
+            posX += 125;
+            currHeight = 0;
+        }
+        private function createRadioButton(rbLabel:String,rbg:RadioButtonGroup,posX:uint):void {
+            var rb:RadioButton = new RadioButton();
+            rb.group = rbg;
+            rb.label = rbLabel;
+            rb.move(posX, padding + currHeight);
+            addChild(rb);
+
+            currHeight += verticalSpacing;
+        }
+        private function announceChange(e:Event):void {
+            var rbg:RadioButtonGroup = e.target as RadioButtonGroup;
+            var rb:RadioButton = rbg.selection;
+            reportLabel.text = rbg.name + " has selected " + rb.label;            
+        }
+    }
+}    </pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/RadioButtonGroupExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

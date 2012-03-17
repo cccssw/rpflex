@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        viewActivate="view1_viewActivateHandler(event)"
+        viewDeactivate="view1_viewDeactivateHandler(event)"
+        initialize="view1_initializeHandler(event)"
+        title="{useVirtual ? 'useVirtualLayout=true' : 'useVirtualLayout=false'}">
+    <fx:Script>
+        <![CDATA[
+            import mx.core.FlexGlobals;
+            import mx.events.FlexEvent;
+            
+            import spark.events.ViewNavigatorEvent;
+            
+            [Bindable]
+            private var useVirtual:Boolean = true;
+            
+            protected function view1_viewActivateHandler(event:ViewNavigatorEvent):void
+            {
+                var assets:File = File.applicationDirectory.resolvePath("assets");
+                assets.addEventListener(FileListEvent.DIRECTORY_LISTING, listFiles);
+                assets.getDirectoryListingAsync();
+                
+                if (!useVirtual)
+                {
+                    // use alternatingItemColors for item renderer background color
+                    setStyle("contentBackgroundColor", 0x000000);
+                    list.setStyle("alternatingItemColors", [0x000000]);
+                    list.setStyle("color", 0xFFFFFF);
+                    list.scroller.verticalScrollBar.thumb.setStyle("chromeColor", 0xFFFFFF);
+                    navigator.actionBar.setStyle("chromeColor", 0x000000);
+                    FlexGlobals.topLevelApplication.tabbedNavigator.tabBar.setStyle("chromeColor", 0x000000);
+                    overlayControls = true;
+                }
+            }
+            
+            protected function listFiles(event:FileListEvent):void
+            {
+                var f:File;
+                for each (var o:Object in event.files)
+                {
+                    f = (o as File);
+                    
+                    files.addItem(
+                        {
+                            name: f.name,
+                            icon: f.url
+                        }
+                    );
+                }
+            }
+            
+            protected function view1_initializeHandler(event:FlexEvent):void
+            {
+                if (data)
+                    useVirtual = data.useVirtual;
+            }
+            
+            protected function view1_viewDeactivateHandler(event:ViewNavigatorEvent):void
+            {
+                navigator.actionBar.clearStyle("chromeColor");
+                FlexGlobals.topLevelApplication.tabbedNavigator.tabBar.clearStyle("chromeColor");
+            }
+            
+        ]]>
+    </fx:Script>
+    
+    <fx:Style>
+        @namespace s "library://ns.adobe.com/flex/spark";
+        
+        .rendererStyle
+        {
+            messageStyleName: "customMessageStyle";
+        }
+        
+        .customMessageStyle
+        {
+            fontSize: 12;
+            fontStyle: italic;
+        }
+        
+        @media (application-dpi: 240)
+        {
+            .customMessageStyle
+            {
+                fontSize: 16;
+            }
+        }
+        
+        @media (application-dpi: 320)
+        {
+            .customMessageStyle
+            {
+                fontSize: 24;
+            }
+        }
+    </fx:Style>
+    
+    <fx:Declarations>
+        <s:ArrayCollection id="files"/>
+    </fx:Declarations>
+
+    <s:List id="list" width="100%" height="100%" dataProvider="{files}" useVirtualLayout="{useVirtual}">
+        <s:itemRenderer>
+            <fx:Component>
+                <s:IconItemRenderer iconWidth="32" iconHeight="32" iconFillMode="clip" iconScaleMode="letterbox"
+                                    iconField="icon" labelField="name" messageField="icon"
+                                    styleName="rendererStyle">
+                    <!-- http://glyphish.com -->
+                    <!-- TODO bitmaps for 240 and 320 -->
+                    <!--
+                    <s:decorator>
+                        <s:MultiDPIBitmapSource source160dpi="@Embed('../assets/01-arrow-east.png')"/>
+                    </s:decorator>
+                    -->
+                </s:IconItemRenderer>
+            </fx:Component>
+        </s:itemRenderer>
+    </s:List>
+    
+    <s:actionContent>
+        <s:Button label="Toggle" click="navigator.pushView(views.ItemRendererView, {useVirtual: !useVirtual})"/>
+    </s:actionContent>
+    
+</s:View>

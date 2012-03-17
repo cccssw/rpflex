@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		creationComplete="creationCompleteHandler(event)" overlayControls="true"
+		title="{resourceManager.getString('view','faceProcessViewTitle')}" xmlns:controls="controls.*">
+	<s:layout>
+		<s:BasicLayout>
+			
+		</s:BasicLayout>
+	</s:layout>
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.ElementSettings;
+			import com.loning.image.Face;
+			import com.loning.image.FaceProcessorManager;
+			import com.loning.image.RpFaceProcessorManager;
+			import com.loning.image.RpFaceProcessorManagerConfigLoader;
+			
+			import controls.ProcessingAlert;
+			
+			import mx.events.FlexEvent;
+			import mx.formatters.DateFormatter;
+			import com.rpphoto.utils.DelayCall;
+
+			protected var bitmapData:BitmapData;
+			
+			[Bindable]
+			protected var processedBitmapData:BitmapData;
+			
+			[Bindable]
+			protected var rectangles:Vector.<Rectangle>;
+			
+			protected var busy:ProcessingAlert=new ProcessingAlert();
+			
+			private var fpm:FaceProcessorManager;
+			
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				bitmapData=data.bitmapData;
+				rectangles=data.rectangles;
+				this.delayProcessImage();
+			}
+			
+			protected function delayProcessImage():void{  
+				busy.call(this,processImage);
+			}
+			protected function processImage():void{
+				if(!RpFaceProcessorManagerConfigLoader.getInstance().bulkLoader.isFinished){
+					var o:Object=new Object();
+					o.nowait=false;
+					this.navigator.pushView(
+						LoadingRpElementsView,o);
+				}else{
+ 					var theFinal:Boolean=false;
+					var settings:ElementSettings=ElementSettings.load();
+					var f:RpFaceProcessorManager=
+						RpFaceProcessorManagerConfigLoader.getInstance()
+							.createRpFaceProcessorManager(this.bitmapData,theFinal,"",false,settings.drawRp.selected);
+					for each(var rect:Rectangle in this.rectangles){
+						f.AddFaces(
+							new Face(rect,f.ProcessedImage,
+								theFinal?f.faceUserInfo.rps[0]:-1));
+					}
+					f.ProcessRPImage();
+					f.ProcessRp();
+					f.ProcessRpWords();
+					this.processedBitmapData = f.ProcessedImage.bitmapData;
+					this.fpm=f;
+				}
+				//com.loning.image.RpFaceProcessorManagerConfigLoader.getInstance().forceReload();
+			}
+			
+			protected function saveButton_clickHandler(event:MouseEvent):void
+			{
+				busy.call(this,
+					saveImage);
+			}
+			protected function saveImage():void{
+				var docsDir:File =
+					new File(File.documentsDirectory.nativePath+"/Photo/");
+				
+				if(!docsDir.exists)
+					docsDir.createDirectory();
+				
+				var fr:DateFormatter=new DateFormatter();
+				fr.formatString="YYYYMMDDJJNNSS.png";
+				var filename:String = fr.format(new Date());
+				
+				var newFile:File = docsDir.resolvePath(filename); //new File(docsDir.nativePath+"/"+filename);
+				if (!newFile.exists)
+				{
+					trace("begin encode");
+					var arr:ByteArray=this.fpm.ProcessedImage.toPNG();
+					trace("finish encode");
+					trace("begin save file");
+					var stream:FileStream = new FileStream();
+					stream.open(newFile, FileMode.WRITE);
+					
+					stream.writeBytes(
+						arr,0,arr.length);
+					stream.close();
+					trace("finish save file");
+				}
+				var o:Object=new Object();
+				o.bitmapData=this.fpm.ProcessedImage.bitmapData;
+				o.bytes=arr;
+				o.processedText=this.fpm.GetResultText();
+				
+				this.navigator.pushView(
+					PhotoShareView,o);
+				
+				com.loning.image.RpFaceProcessorManagerConfigLoader.getInstance().forceReload();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:actionContent>
+		
+		<s:Button id="saveButton" label="{resourceManager.getString('view','save')}" click="saveButton_clickHandler(event)"/>
+	</s:actionContent>
+	
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	<s:Image id="bg" width="100%" y="{this.img.y+this.img.height-this.bg.bitmapData.height/2}" scaleMode="stretch" source="@Embed('assets/ui/displaybg2.png')" />
+	<s:HGroup y="{this.bg.y+this.bg.height}" width="100%" verticalAlign="top" horizontalAlign="center" >
+		<s:HGroup width="90%" verticalAlign="top" horizontalAlign="center" gap="30">
+			<s:HGroup width="40%" verticalAlign="top" horizontalAlign="center" paddingRight="10">
+				<s:Image  id="leftbd" source="@Embed('assets/ui/leftBoard.png')" width="100%" scaleMode="stretch" height="{this.img.height*0.25}" />
+			</s:HGroup>
+			<s:HGroup  width="60%" verticalAlign="top" horizontalAlign="center" paddingLeft="25">
+				<s:Image id="rightbd" source="@Embed('assets/ui/rightBoard.png')" width="100%" scaleMode="stretch" height="{this.img.height*0.35}"/>
+			</s:HGroup>
+		</s:HGroup>
+	</s:HGroup>
+	<s:HGroup y="{this.bg.y+this.bg.height}" width="100%" verticalAlign="top" horizontalAlign="center" >
+		<s:HGroup width="90%" verticalAlign="top" horizontalAlign="center" gap="30">
+			<s:HGroup width="40%"  horizontalAlign="center" verticalAlign="middle" height="{this.img.height*0.25}" paddingRight="10" id="leftgp">
+				<controls:ImgButton width="80%" minHeight="{this.img.height*0.25*0.5}" color="#4f391e" fontWeight="bold" textShadowColor="black" label="{resourceManager.getString('view','refresh')}" click="this.delayProcessImage()" skinClass="controls.BtnWoodSkin"/>
+			</s:HGroup>
+			<s:HGroup  width="60%"  horizontalAlign="center" verticalAlign="middle" height="{this.img.height*0.35}" paddingLeft="30">
+				<controls:ImgButton width="80%" minHeight="{this.img.height*0.35*0.5}" label="{resourceManager.getString('view','selecElements')}" fontWeight="bold" color="#4f391e" textShadowColor="white"  click="this.navigator.pushView(TypeSelectionView)" skinClass="controls.BtnWoodSkin"/>
+			</s:HGroup>
+		</s:HGroup>
+	</s:HGroup>
+	<s:VGroup width="100%" height="85%" horizontalAlign="center" verticalAlign="bottom">
+		<s:Group width="100%" height="100%">
+		<s:layout>
+			<s:VerticalLayout gap="0" horizontalAlign="center" verticalAlign="middle"/>
+		</s:layout>
+		<s:Image id="img" width="90%" source="{this.processedBitmapData}" 
+				 height="{this.processedBitmapData.height*img.width/this.processedBitmapData.width}"
+				 click="this.delayProcessImage()"/>
+		</s:Group>
+		<!--
+	<s:BorderContainer y="697" width="100%" height="110" backgroundAlpha="0.8" 
+					   backgroundColor="#b9b9b9">
+		<s:layout>
+			<s:HorizontalLayout gap="10" horizontalAlign="center" verticalAlign="middle"/>
+		</s:layout>
+		<s:Button label="Refresh" click="this.processImage()" color="#959cb6" textShadowColor="#606060" textShadowAlpha="1"/>
+		<s:Button label="Change Elements" click="this.navigator.pushView(TypeSelectionView)" />
+	</s:BorderContainer>
+		-->
+	</s:VGroup>
+	
+	
+	
+</s:View>

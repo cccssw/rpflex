@@ -1,0 +1,860 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="ContextMenu,flash.ui.ContextMenu,A,ALTERNATE,BACKQUOTE,BACKSLASH,BACKSPACE,B,builtInItems,CAPS_LOCK,capsLock,caption,C,CharCodeStrings,COMMA,COMMAND,CONTROL,customItems,D,DELETE,DOWN,E,END,ENTER,EQUAL,ESCAPE,F10,F11,F12,F13,F14,F15,F1,F2,F3,F4,F5,F6,F7,F8,F9,F,forwardAndBack,G,H,HOME,I,INSERT,J,K,KEYNAME_BEGIN,KEYNAME_BREAK,KEYNAME_CLEARDISPLAY,KEYNAME_CLEARLINE,KEYNAME_DELETECHAR,KEYNAME_DELETE,KEYNAME_DELETELINE,KEYNAME_DOWNARROW,KEYNAME_END,KEYNAME_EXECUTE,KEYNAME_F10,KEYNAME_F11,KEYNAME_F12,KEYNAME_F13,KEYNAME_F14,KEYNAME_F15,KEYNAME_F16,KEYNAME_F17,KEYNAME_F18,KEYNAME_F19,KEYNAME_F1,KEYNAME_F20,KEYNAME_F21,KEYNAME_F22,KEYNAME_F23,KEYNAME_F24,KEYNAME_F25,KEYNAME_F26,KEYNAME_F27,KEYNAME_F28,KEYNAME_F29,KEYNAME_F2,KEYNAME_F30,KEYNAME_F31,KEYNAME_F32,KEYNAME_F33,KEYNAME_F34,KEYNAME_F35,KEYNAME_F3,KEYNAME_F4,KEYNAME_F5,KEYNAME_F6,KEYNAME_F7,KEYNAME_F8,KEYNAME_F9,KEYNAME_FIND,KEYNAME_HELP,KEYNAME_HOME,KEYNAME_INSERTCHAR,KEYNAME_INSERT,KEYNAME_INSERTLINE,KEYNAME_LEFTARROW,KEYNAME_MENU,KEYNAME_MODESWITCH,KEYNAME_NEXT,KEYNAME_PAGEDOWN,KEYNAME_PAGEUP,KEYNAME_PAUSE,KEYNAME_PREV,KEYNAME_PRINT,KEYNAME_PRINTSCREEN,KEYNAME_REDO,KEYNAME_RESET,KEYNAME_RIGHTARROW,KEYNAME_SCROLLLOCK,KEYNAME_SELECT,KEYNAME_STOP,KEYNAME_SYSREQ,KEYNAME_SYSTEM,KEYNAME_UNDO,KEYNAME_UPARROW,KEYNAME_USER,L,LEFTBRACKET,LEFT,LEFT,loop,M,MINUS,N,NUM_PAD,NUMBER_0,NUMBER_1,NUMBER_2,NUMBER_3,NUMBER_4,NUMBER_5,NUMBER_6,NUMBER_7,NUMBER_8,NUMBER_9,numLock,NUMPAD_0,NUMPAD_1,NUMPAD_2,NUMPAD_3,NUMPAD_4,NUMPAD_5,NUMPAD_6,NUMPAD_7,NUMPAD_8,NUMPAD_9,NUMPAD_ADD,NUMPAD_DECIMAL,NUMPAD_DIVIDE,NUMPAD_ENTER,NUMPAD_MULTIPLY,NUMPAD_SUBTRACT,NUMPAD,O,PAGE_DOWN,PAGE_UP,P,PERIOD,play,print,Q,quality,QUOTE,R,rewind,RIGHTBRACKET,RIGHT,RIGHT,save,S,SEMICOLON,separatorBefore,SHIFT,SLASH,SPACE,STANDARD,STRING_BEGIN,STRING_BREAK,STRING_CLEARDISPLAY,STRING_CLEARLINE,STRING_DELETE,STRING_DELETECHAR,STRING_DELETELINE,STRING_DOWNARROW,STRING_END,STRING_EXECUTE,STRING_F1,STRING_F10,STRING_F11,STRING_F12,STRING_F13,STRING_F14,STRING_F15,STRING_F16,STRING_F17,STRING_F18,STRING_F19,STRING_F2,STRING_F20,STRING_F21,STRING_F22,STRING_F23,STRING_F24,STRING_F25,STRING_F26,STRING_F27,STRING_F28,STRING_F29,STRING_F3,STRING_F30,STRING_F31,STRING_F32,STRING_F33,STRING_F34,STRING_F35,STRING_F4,STRING_F5,STRING_F6,STRING_F7,STRING_F8,STRING_F9,STRING_FIND,STRING_HELP,STRING_HOME,STRING_INSERT,STRING_INSERTCHAR,STRING_INSERTLINE,STRING_LEFTARROW,STRING_MENU,STRING_MODESWITCH,STRING_NEXT,STRING_PAGEDOWN,STRING_PAGEUP,STRING_PAUSE,STRING_PREV,STRING_PRINT,STRING_PRINTSCREEN,STRING_REDO,STRING_RESET,STRING_RIGHTARROW,STRING_SCROLLLOCK,STRING_SELECT,STRING_STOP,STRING_SYSREQ,STRING_SYSTEM,STRING_UNDO,STRING_UPARROW,STRING_USER,TAB,T,U,UP,V,visible,W,X,Y,Z,zoom,display,hideBuiltInItems,hide,isAccessible,show" name="keywords">
+<title>flash.ui.ContextMenu (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'ContextMenu - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/ui/ContextMenu.html&amp;flash/ui/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">ContextMenu</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ContextMenu"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.ui</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  ContextMenu</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">ContextMenu  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/display/NativeMenu.html">NativeMenu</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The ContextMenu class provides control over the items in the Flash Player context menu. Users open
+ the context menu by right-clicking (Windows) or Control-clicking (Macintosh) Flash Player. You can use the
+ methods and properties of the ContextMenu class to add custom menu items, control the display of the
+ built-in context menu items (for example, Zoom In and Print), or create copies of menus.
+  <p>You can attach a ContextMenu object to a specific button, movie clip, or text
+ field object, or to an entire movie level. You use the <code>menu</code> property of the Button, MovieClip, or
+ TextField class to do this. For more information about the <code>menu</code> property, see Button.menu,
+ MovieClip.menu, and TextField.menu.</p>
+  
+  <p>To add new items to a ContextMenu object, you create a ContextMenuItem object, and then add that
+ object to the <code>ContextMenu.customItems</code> array. For more information about creating context
+ menu items, see the ContextMenuItem class entry.</p>
+ <p>Flash Player has three types of context menus: the standard menu (which appears when you right-click
+ in Flash Player), the edit menu (which appears when you right-click a selectable or editable text
+ field), and an error menu (which appears when a SWF file has failed to load into Flash Player). Only the
+ standard and edit menus can be modified with the ContextMenu class.</p>
+ <p>Custom menu items always appear at the top of the Flash Player context menu, above any visible
+ built-in menu items; a separator bar distinguishes built-in and custom menu items. You can add no more
+ than 15 custom items to a context menu. You cannot remove the Settings menu item from the context menu.
+ The Settings menu item is required in Flash so that users can access the settings that affect privacy and
+ storage on their computers. You also cannot remove the About menu item, which is
+ required so that users can find out what version of Flash Player they are using.</p>
+ <p>You must use the <code>ContextMenu()</code> constructor to create a ContextMenu object before
+ calling its methods.</p>
+  <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ContextMenuItem.html" target="">ContextMenuItem class</a>
+<br>
+<a href="../../flash/display/InteractiveObject.html#contextMenu" target="">flash.display.InteractiveObject.contextMenu</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#builtInItems">builtInItems</a> : <a href="../../flash/ui/ContextMenuBuiltInItems.html">ContextMenuBuiltInItems</a>
+<div class="summaryTableDescription">
+  An object that has the following properties of the ContextMenuBuiltInItems class: forwardAndBack, loop,
+  play, print, quality,
+  rewind, save, and zoom.</div>
+</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#customItems">customItems</a> : <a href="../../Array.html">Array</a>
+<div class="summaryTableDescription">
+  An array of ContextMenuItem objects.</div>
+</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#items">items</a> : <a href="../../Array.html">Array</a>
+<div class="summaryTableDescription">[read-only] 
+         The array of NativeMenuItem objects in this menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#numItems">numItems</a> : <a href="../../int.html">int</a>
+<div class="summaryTableDescription">[read-only] 
+         The number of NativeMenuItem objects in this menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#parent">parent</a> : <a href="../../flash/display/NativeMenu.html">NativeMenu</a>
+<div class="summaryTableDescription">[read-only] 
+         The parent menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ContextMenu()">ContextMenu</a>()</div>
+<div class="summaryTableDescription">
+  Creates a ContextMenu object.</div>
+</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#addItem()">addItem</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Adds a menu item at the bottom of the menu.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#addItemAt()">addItemAt</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>, index:<a href="../../int.html">int</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Inserts a menu item at the specified position.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#addSubmenu()">addSubmenu</a>(submenu:<a href="../../flash/display/NativeMenu.html">NativeMenu</a>, label:<a href="../../String.html">String</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+        Adds a submenu to the menu by inserting a new menu item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#addSubmenuAt()">addSubmenuAt</a>(submenu:<a href="../../flash/display/NativeMenu.html">NativeMenu</a>, index:<a href="../../int.html">int</a>, label:<a href="../../String.html">String</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+        Adds a submenu to the menu by inserting a new menu item at the 
+        specified position.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#clone()">clone</a>():<a href="../../flash/display/NativeMenu.html">NativeMenu</a>
+</div>
+<div class="summaryTableDescription">
+                Creates a copy of the menu and all items.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#containsItem()">containsItem</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+         Reports whether this menu contains the specified menu item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#display()">display</a>(stage:<a href="../../flash/display/Stage.html">Stage</a>, stageX:<a href="../../Number.html">Number</a>, stageY:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+        Pops up this menu at the specified location.</div>
+</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#getItemAt()">getItemAt</a>(index:<a href="../../int.html">int</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Gets the menu item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#getItemByName()">getItemByName</a>(name:<a href="../../String.html">String</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Gets the menu item with the specified name.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#getItemIndex()">getItemIndex</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>):<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+         Gets the position of the specified item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hideBuiltInItems()">hideBuiltInItems</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Hides all built-in menu items (except Settings) in the specified ContextMenu object.</div>
+</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#removeItem()">removeItem</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Removes the specified menu item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#removeItemAt()">removeItemAt</a>(index:<a href="../../int.html">int</a>):<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>
+</div>
+<div class="summaryTableDescription">
+         Removes and returns the menu item at the specified index.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#setItemIndex()">setItemIndex</a>(item:<a href="../../flash/display/NativeMenuItem.html">NativeMenuItem</a>, index:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+         Moves a menu item to the specified position.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#event:displaying">displaying</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeMenu object immediately before the menu is to be displayed.</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:menuSelect">menuSelect</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a user first generates a context menu but before the contents of the context menu are displayed.</td><td class="summaryTableOwnerCol">ContextMenu</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/display/NativeMenu.html#event:select">select</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched by this NativeMenu object when one of its menu items or an item in one of its descendant submenus is selected.</td><td class="summaryTableOwnerCol"><a href="../../flash/display/NativeMenu.html">NativeMenu</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="builtInItems"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">builtInItems</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>builtInItems:<a href="../../flash/ui/ContextMenuBuiltInItems.html">ContextMenuBuiltInItems</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  An object that has the following properties of the ContextMenuBuiltInItems class: <code>forwardAndBack</code>, <code>loop</code>,
+  <code>play</code>, <code>print</code>, <code>quality</code>,
+  <code>rewind</code>, <code>save</code>, and <code>zoom</code>.
+  Setting these properties to <code>false</code> removes the corresponding menu items from the
+  specified ContextMenu object. These properties are enumerable and are set to <code>true</code> by
+  default.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get builtInItems():<a href="../../flash/ui/ContextMenuBuiltInItems.html">ContextMenuBuiltInItems</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set builtInItems(value:<a href="../../flash/ui/ContextMenuBuiltInItems.html">ContextMenuBuiltInItems</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ContextMenuBuiltInItems.html" target="">ContextMenuBuiltInItems class</a>
+<br>
+<a href="ContextMenu.html#hideBuiltInItems()" target="">ContextMenu.hideBuiltInItems()</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="customItems"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">customItems</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>customItems:<a href="../../Array.html">Array</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  An array of ContextMenuItem objects. Each object in the array represents a context menu item that you
+  have defined. Use this property to add, remove, or modify these custom menu items.
+    <p>To add new menu items, you create a ContextMenuItem object and then add it to the
+  <code>customItems</code> array (for example, by using <code>Array.push()</code>). For more information about creating
+  menu items, see the ContextMenuItem class entry.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get customItems():<a href="../../Array.html">Array</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set customItems(value:<a href="../../Array.html">Array</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/display/InteractiveObject.html#contextMenu" target="">flash.display.InteractiveObject.contextMenu</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="ContextMenu()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ContextMenu</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function ContextMenu()</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Creates a ContextMenu object.
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ContextMenu.html#customItems" target="">ContextMenu.customItems</a>
+<br>
+<a href="ContextMenu.html#hideBuiltInItems()" target="">ContextMenu.hideBuiltInItems()</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="display()"></a><a name="display(flash.display.Stage,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">display</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function display(stage:<a href="../../flash/display/Stage.html">Stage</a>, stageX:<a href="../../Number.html">Number</a>, stageY:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p><p>
+        Pops up this menu at the specified location.
+        
+        </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">stage</span>:<a href="../../flash/display/Stage.html">Stage</a></code> &mdash; The Stage object on which to display this menu.
+  
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stageX</span>:<a href="../../Number.html">Number</a></code> &mdash; The number of horizontal pixels, relative to the origin 
+        of stage, at which to display this menu.
+  
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stageY</span>:<a href="../../Number.html">Number</a></code> &mdash; The number of vertical pixels, relative to the origin 
+        of stage, at which to display this menu.
+  
+  </td>
+</tr>
+</table>
+</p>
+</div>
+<a name="hideBuiltInItems()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hideBuiltInItems</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hideBuiltInItems():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Hides all built-in menu items (except Settings) in the specified ContextMenu object. If the debugger version of Flash
+  Player is running, the Debugging menu item appears, although it is dimmed for SWF files that
+  do not have remote debugging enabled.
+    <p>This method hides only menu items that appear in the standard context menu; it does not affect
+  items that appear in the edit and error menus. </p>
+<p>This method works by setting all the Boolean members of <code>
+<i>my_cm</i>
+</code>
+<code>.builtInItems</code> to <code>false</code>. You can selectively make a built-in item visible by setting its
+  corresponding member in <code>
+<i>my_cm</i>
+</code>
+<code>.builtInItems</code> to <code>true</code>.
+  </p>
+</p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ContextMenuBuiltInItems.html" target="">ContextMenuBuiltInItems class</a>
+<br>
+<a href="ContextMenu.html#builtInItems" target="">ContextMenu.builtInItems</a>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:menuSelect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">menuSelect</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/ContextMenuEvent.html"><code>flash.events.ContextMenuEvent</code></a>
+<br>
+<span class="label">ContextMenuEvent.type property = </span><a href="../../flash/events/ContextMenuEvent.html#MENU_SELECT"><code>flash.events.ContextMenuEvent.MENU_SELECT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a user first generates a 
+ context menu but before the contents of the context menu are displayed. This allows your
+ program to modify the set of context menu items before 
+ displaying the menu. The user generates 
+ the context menu by right-clicking the pointing device. 
+ </p>
+ Defines the value of the <code>type</code> property of a <code>menuSelect</code> event object. 
+ <p>This event has the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>contextMenuOwner</code></td><td>The display list object to which the menu is attached.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>mouseTarget</code></td><td>The display list object on which the user right-clicked to display the context menu.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The ContextMenu object that is about to be displayed. 
+ The target is not always the object in the display list 
+ that registered the event listener. Use the <code>currentTarget</code> 
+ property to access the object in the display list that is currently processing the event.</td>
+</tr></table>
+ 
+ </div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">ContextMenuExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the class <code>ContextMenuExample</code> 
+ to remove the default context menu items from the Stage and add a new menu item, which, if
+ clicked, changes the color of a square on the Stage.  This is accomplished with the following
+ steps:
+ <ol>
+     <li>A property <code>myContextMenu</code> is declared and then assigned to a new ContextMenu
+ 	object and a property <code>redRectangle</code> of type Sprite is declared.</li>
+ 	<li>The method <code>removeDefaultItems()</code> is called, which removes all built-in context
+ 	menu items except Print.</li>
+ 	<li>The method <code>addCustomMenuItems()</code> is called, which places a menu item called 
+ 	<code>Red to Black</code> menu selection into the <code>defaultItems</code> array by using the 
+ 	<code>push()</code> method of Array.  A <code>menuItemSelect</code> event listener is added to the 
+ 	ContextMenuItem object and the associated method is called <code>menuItemSelectHandler()</code>.  
+ 	This method prints out some statements using <code>trace()</code> whenever the 
+ 	context menu is accessed and <code>Red to Black</code> is selected.  Also the red square
+ 	is removed and replaced with a black one.</li>
+ 	<li>An event listener of type <code>menuSelect</code> is added, along with
+  the associated method <code>menuSelectHandler</code>, which simply prints out three statements using
+ 	<code>trace()</code> every time an item in the context menu is opened.</li>
+ 	<li>Then <code>addChildren()</code> draws a red square and adds it
+ 	to the display list, where it is immediately displayed.</li>
+  <li>Finally, <code>myContextMenu</code> is assigned to the context menu of the <code>redRectangle</code> sprite
+ 	so that the custom context menu is displayed only when the mouse pointer is over the square.</li>
+ </ol>
+<div class="listing"><pre>
+package {
+    import flash.ui.ContextMenu;
+    import flash.ui.ContextMenuItem;
+    import flash.ui.ContextMenuBuiltInItems;
+    import flash.events.ContextMenuEvent;
+    import flash.events.ContextMenuEvent;
+    import flash.display.Sprite;
+    import flash.display.Shape;
+    import flash.text.TextField;
+
+    public class ContextMenuExample extends Sprite {
+        private var myContextMenu:ContextMenu;
+        private var menuLabel:String = "Reverse Colors";
+        private var textLabel:String = "Right Click";
+        private var redRectangle:Sprite;
+        private var label:TextField;
+        private var size:uint = 100;
+        private var black:uint = 0x000000;
+        private var red:uint = 0xFF0000;
+
+        public function ContextMenuExample() {
+            myContextMenu = new ContextMenu();
+            removeDefaultItems();
+            addCustomMenuItems();
+            myContextMenu.addEventListener(ContextMenuEvent.MENU_SELECT, menuSelectHandler);
+
+            addChildren();
+            redRectangle.contextMenu = myContextMenu;
+        }
+
+        private function addChildren():void {
+            redRectangle = new Sprite();
+            redRectangle.graphics.beginFill(red);
+            redRectangle.graphics.drawRect(0, 0, size, size);
+            addChild(redRectangle);
+            redRectangle.x = size;
+            redRectangle.y = size;
+            label = createLabel();
+            redRectangle.addChild(label);
+        }
+
+        private function removeDefaultItems():void {
+            myContextMenu.hideBuiltInItems();
+            var defaultItems:ContextMenuBuiltInItems = myContextMenu.builtInItems;
+            defaultItems.print = true;
+        }
+
+        private function addCustomMenuItems():void {
+            var item:ContextMenuItem = new ContextMenuItem(menuLabel);
+            myContextMenu.customItems.push(item);
+            item.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, menuItemSelectHandler);
+        }
+
+        private function menuSelectHandler(event:ContextMenuEvent):void {
+            trace("menuSelectHandler: " + event);
+        }
+
+        private function menuItemSelectHandler(event:ContextMenuEvent):void {
+            trace("menuItemSelectHandler: " + event);
+            var textColor:uint = (label.textColor == black) ? red : black;
+            var bgColor:uint = (label.textColor == black) ? black : red;
+            redRectangle.graphics.clear();
+            redRectangle.graphics.beginFill(bgColor);
+            redRectangle.graphics.drawRect(0, 0, size, size);
+            label.textColor = textColor;
+        }
+
+        private function createLabel():TextField {
+            var txtField:TextField = new TextField();
+            txtField.text = textLabel;
+            return txtField;
+        }
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

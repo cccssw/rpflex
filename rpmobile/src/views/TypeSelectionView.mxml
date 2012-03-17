@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="com.loning.mobile.controls.*"
+		creationComplete="view1_creationCompleteHandler(event)" title="{resourceManager.getString('view','TypeSelectionViewTitle')}">
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import br.com.stimuli.loading.BulkLoader;
+			
+			import com.loning.image.*;
+			import com.rpphoto.utils.DelayCall;
+			
+			import controls.ProcessingAlert;
+			
+			import mx.events.FlexEvent;
+			private var busy:ProcessingAlert=new ProcessingAlert();
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				this.optionList.dataProvider=ElementSettings.load().typeAndCategoryOptionsCollection;
+			}
+			
+			private var gen:RpFaceProcessorManagerConfigGenerator;
+			private var fileToLoad:int;
+			private var bulkLoader:BulkLoader;
+			private function doSave():void{
+				this.save.enabled=false;
+				ElementSettings.save();
+				this.gen=new RpFaceProcessorManagerConfigGenerator();
+				var files:Array=File.applicationDirectory
+					.resolvePath("assets/rpcam/config").getDirectoryListing();
+				var settings:ElementSettings=ElementSettings.load();
+				fileToLoad=0;
+				var toLoadFiles:Array=new Array();
+				for each(var f:File in files){
+					if(settings.selectedPackages[f.name]){
+						fileToLoad++;
+						toLoadFiles.push(f);
+					}
+				}
+				if(fileToLoad==0){
+					fileToLoad++;
+					toLoadFiles.push(
+						File.applicationDirectory.resolvePath("assets/rpcam/config/default.json")
+					);
+				}
+				var loader : BulkLoader = new BulkLoader();
+				this.bulkLoader=loader;
+				loader.addEventListener(Event.COMPLETE, this.bulkComplete);
+				for each(var file:File in toLoadFiles){
+					loader.add(file.url,{type:"text"});
+				}
+				loader.start();
+			}
+			protected function save_clickHandler(event:MouseEvent):void
+			{
+				busy.open(this,true);
+				com.rpphoto.utils.DelayCall.call(0.2,doSave);
+			}
+			protected function bulkComplete(event:Event):void{
+				for each(var item:Object in this.bulkLoader.items){
+					gen.process(item.content,ElementSettings.load());
+				}
+				var saveFile:File =File.applicationStorageDirectory.resolvePath("assets/rpcam/json.txt");
+				var stream:FileStream = new FileStream();
+				stream.open(saveFile, FileMode.WRITE);
+				stream.writeUTFBytes(gen.getString());
+				stream.close();
+				RpFaceProcessorManagerConfigLoader.getInstance().forceReload();
+				this.save.enabled=true;
+				busy.close();
+				this.navigator.popView();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		
+		
+		
+	</fx:Declarations>
+	<s:navigationContent>
+		<s:Button id="backButton" label="{resourceManager.getString('view','back')}" click="this.navigator.popView();"/>
+	</s:navigationContent>  
+	
+	<s:actionContent>
+		<s:Button id="save" click="save_clickHandler(event)" label="{resourceManager.getString('view','save')}"/>
+	</s:actionContent>
+	<s:List itemRenderer="com.loning.mobile.controls.MobileCheckBoxListItemRenderer"
+			skinClass="com.loning.mobile.controls.MobileSkinnableDataContainerSkin"
+			id="optionList" top="10" x="0" y="0" height="100%" width="100%"/>
+</s:View>

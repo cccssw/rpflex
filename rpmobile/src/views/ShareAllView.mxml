@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		title="{resourceManager.getString('view','shareAllTitle')}">
+	<s:layout>
+		<s:VerticalLayout gap="20" horizontalAlign="center" verticalAlign="middle"/>
+	</s:layout>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		
+	</fx:Declarations>
+	<s:Button id="shareToWeiboButton"  height="90" label="ShareToWeibo"
+			  click="shareToWeiboButton_clickHandler(event)" icon="assets/weibo.png"/>
+	<fx:Script>
+		<![CDATA[
+
+			public function shareToWeiboButton_clickHandler(event:Event):void{
+				navigator.pushView(views.Share2Weibo_XAuth,data,null);
+			}
+		]]>
+	</fx:Script>
+</s:View>

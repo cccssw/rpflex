@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<fxpProperties abbreviated="false" authoringTool="Flex Builder" parentProject="2b9e06e3-68a7-4ca8-8f64-0a869088202f" projectUUID="96664c73-83e2-459c-9ba3-44b7f01d41a5" pureCatalystProject="false" sdkVersion="4.6.0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579" version="15">
+  <projects>
+    <project filename="com.loning.controls.fxpl" position="8" projectUUID="f479320d-7960-46b5-8817-065efd4dc9c1" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </projects>
+  <src>
+    <linked isMain="false" location="locale/{locale}" path="locale/{locale}" position="0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </src>
+  <swc>
+    <linked location="sdkPlaceHolder" path="sdkPlaceHolder" position="0" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="${DCD_LIB_LOCATION}/serializers.swc" path="${DCD_LIB_LOCATION}/serializers.swc" position="1" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="${DCD_LIB_LOCATION}/fds.swc" path="${DCD_LIB_LOCATION}/fds.swc" position="2" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="/libs/vector-collection-1.1.0-Final.swc" path="\libs\vector-collection-1.1.0-Final.swc" position="3" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="/libs/serializers.swc" path="\libs\serializers.swc" position="4" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="/libs/serializers_rb.swc" path="\libs\serializers_rb.swc" position="5" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="/libs/bulk_loader.swc" path="\libs\bulk_loader.swc" position="6" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+    <linked location="/libs/ImageProcessing.swc" path="\libs\ImageProcessing.swc" position="7" uuid="01e74e45-9076-44ee-ab2c-d9f5bf236579"/>
+  </swc>
+  <misc/>
+  <theme/>
+  <mxmlFormattingPrefs groupAttributesByState="true" maxLineWidth="100" mxmlAlignAttributes="true" mxmlAttributeOrder="id,userLabel,includeIn,excludeFrom,visible,x,y,z,left,right,top,bottom,width,height,minWidth,minHeight,maxWidth,maxHeight,label" mxmlKeepAttributeValuesOrganized="true"/>
+</fxpProperties>

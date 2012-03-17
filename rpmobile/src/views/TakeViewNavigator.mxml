@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ViewNavigator xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				 xmlns:s="library://ns.adobe.com/flex/spark" width="400" height="300"
+				 title="Take View">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:icon>
+		<s:MultiDPIBitmapSource source240dpi="@Embed('assets/ui/photo24.png')"
+								source320dpi="@Embed('assets/ui/photo32.png')"/>
+	</s:icon>
+	<s:actionContent>
+		
+	</s:actionContent>
+	<s:navigationContent>
+		<s:Button label="{resourceManager.getString('view','back')}" click="this.popView()" />
+	</s:navigationContent>
+</s:ViewNavigator>

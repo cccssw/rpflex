@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:image="com.loning.image.*"
+			   width="734" height="366">
+	<fx:Style>
+		
+	
+		global
+		{
+			font-family: "中易黑体";
+			font-size: 15;
+			font-weight: normal;
+			
+		}
+		
+		.alert{
+			modalTransparency:0;
+			modalTransparencyBlur:0;
+			modalTransparencyDuration:0;
+		}
+		
+	</fx:Style>
+	
+	<fx:Script>
+		
+		<![CDATA[
+			import com.loning.image.FaceProcessorManager;
+			import com.loning.image.FacesUploadedEvent;
+			
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			
+			import ru.inspirit.net.MultipartURLLoader;
+			
+			private var facesId:int;
+			private var pkId:int;
+			private var FPM:FaceProcessorManager;
+			
+			protected function faceprocessingcomponent1_FacesUploadedHandler(event:FacesUploadedEvent):void
+			{
+				
+				if(event.Success){
+					var text:String = event.Msg+"\n是否分享给好友？";
+					var title:String = "上传成功";
+					this.FPM=event.FPM;
+					//var alert:Alert = Alert.show(text, title, Alert.YES | Alert.NO);
+					facesId=event.FacesId;
+					pkId=event.PkId;
+					var alert:Alert=Alert.show(text,title,Alert.YES|Alert.NO,this,this.shareToFriendHandler);
+					alert.styleName="alert";
+				}else{
+					Alert.show(event.Msg, "错误", Alert.OK);
+				}
+				
+			}
+			private function shareToFriendHandler(event:CloseEvent):void{
+				if(event.detail== mx.controls.Alert.YES){
+					var theAlert:Alert = Alert.show("分享中请稍候..","提示",Alert.OK,this);
+					theAlert.mx_internal::alertForm.removeChild(theAlert.mx_internal::alertForm.mx_internal::buttons[0]);
+					var ml:MultipartURLLoader = new MultipartURLLoader();
+					var mainp:FaceProcessorManager=this.FPM;
+					for(var i:int=0;i<mainp.Faces.length;i++){
+						// simple string data
+						ml.addVariable('rp[]', mainp.Faces[i].Rp.toString());
+						ml.addVariable('des[]',mainp.ResultText[i]);
+						ml.addVariable('face_x[]',mainp.Faces[i].FaceRectangle.x);
+						ml.addVariable('face_y[]',mainp.Faces[i].FaceRectangle.y);
+						ml.addVariable('face_width[]',mainp.Faces[i].FaceRectangle.width);
+						ml.addVariable('face_height[]',mainp.Faces[i].FaceRectangle.height);
+					}
+					ml.addVariable('rpwords',mainp.RpWords);
+					if(this.pkId>0)
+						ml.addVariable('pkid',this.pkId);
+					ml.addVariable('pid',this.facesId);
+					ml.addEventListener(Event.COMPLETE, shareCompleteHandler);
+					ml.load("/index.php/Flex/Share");
+				}else{
+					var m:String = ExternalInterface.call("OnFacesUploaded",facesId,pkId);
+				}
+			}
+			
+			protected function shareCompleteHandler(e:Event):void
+			{
+				// You can access loader returned data:
+				var ml:MultipartURLLoader=e.currentTarget as MultipartURLLoader;
+				var loader:URLLoader = ml.loader;
+				//var str:String=loader.data;
+				var m:String = ExternalInterface.call("OnFacesUploaded",facesId,pkId);
+			}
+			
+			override protected function createChildren():void
+			{
+				// TODO Auto Generated method stub
+				super.createChildren();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<image:FaceProcessingComponent x="0" y="0" FacesUploaded="faceprocessingcomponent1_FacesUploadedHandler(event)">
+	</image:FaceProcessingComponent>
+</s:Application>

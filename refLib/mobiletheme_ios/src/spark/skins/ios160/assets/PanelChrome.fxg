@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" ai:appVersion="15.0.2.399" ATE:version="1.0.0" flm:version="1.0.0" d:using="" xmlns="http://ns.adobe.com/fxg/2008" xmlns:ATE="http://ns.adobe.com/ate/2009" xmlns:ai="http://ns.adobe.com/ai/2009" xmlns:d="http://ns.adobe.com/fxg/2008/dt" xmlns:flm="http://ns.adobe.com/flame/2008"
+	scaleGridTop="30" scaleGridBottom="163" scaleGridLeft="138" scaleGridRight="139">
+      <Path x="1" y="1" winding="nonZero" ai:seqID="3" data="M265 171 8.99902 171C4.03613 171 0 166.961 0 161.999L0 8.99902C0 4.03711 4.03613 0 8.99902 0L265 0C269.963 0 273.999 4.03711 273.999 8.99902L273.999 161.999C273.999 166.961 269.963 171 265 171L265 171Z">
+        <fill>
+          <SolidColor color="#000F37"/>
+        </fill>
+      </Path>
+      <Path x="2" y="2" winding="nonZero" ai:seqID="4" data="M264 0 8 0C3.58887 0 0 3.58887 0 8L0 18.0059C32.0693 24.627 81.0732 27.8613 136 27.8613 190.926 27.8613 239.93 24.627 272 18.0059L272 8C272 3.58887 268.411 0 264 0Z">
+        <fill>
+          <LinearGradient x="136" y="27.8613" scaleX="27.8613" rotation="270">
+            <GradientEntry ratio="0.197802" color="#4B5673"/>
+            <GradientEntry ratio="0.456044" color="#4D5874"/>
+            <GradientEntry ratio="0.554945" color="#616982"/>
+            <GradientEntry ratio="0.89011" color="#7E859A"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Path winding="nonZero" ai:seqID="5" data="M266 0C271.523 0 276 4.47754 276 10L276 163C276 168.523 271.523 173 266 173L10 173C4.47754 173 0 168.523 0 163L0 10C0 4.47754 4.47754 0 10 0L266 0ZM266 2 10 2C5.58887 2 2 5.58887 2 10L2 163C2 167.411 5.58887 171 10 171L266 171C270.411 171 274
+ 167.411 274 163L274 10C274 5.58887 270.411 2 266 2L266 2Z">
+        <fill>
+          <LinearGradient x="138" y="0" scaleX="173" rotation="90">
+            <GradientEntry ratio="0" color="#DBDDE4"/>
+            <GradientEntry ratio="1" color="#BBC1CD"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+</Graphic>

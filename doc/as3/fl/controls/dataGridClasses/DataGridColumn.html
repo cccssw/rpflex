@@ -1,0 +1,1536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="DataGridColumn,fl.controls.dataGridClasses.DataGridColumn,cellRenderer,column,dataField,data,editable,editorDataField,headerRenderer,headerText,imeMode,itemEditor,labelFunction,listData,minWidth,resizable,selected,sortable,sortCompareFunction,sortDescending,sortOptions,visible,width,getStyleDefinition,getStyleDefinition,itemToLabel,setMouseState,toString" name="keywords">
+<title>fl.controls.dataGridClasses.DataGridColumn (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'DataGridColumn - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../../index.html?fl/controls/dataGridClasses/DataGridColumn.html&amp;fl/controls/dataGridClasses/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">DataGridColumn</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DataGridColumn"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.controls.dataGridClasses</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  DataGridColumn</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">DataGridColumn  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> <a href="../../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+     The DataGridColumn class describes a column in a DataGrid component. There 
+     is one DataGridColumn object for every column that could be displayed on
+  the screen, even for columns that are currently hidden or off-screen. The 
+  data provider items that belong to a DataGrid component can contain properties 
+  that are not displayed; such properties do not require a DataGridColumn. 
+       <p>You can specify the kind of component that displays the data for a DataGridColumn.
+  The characteristics that can be specified include the text that appears in the
+  column header and whether the column can be edited, sorted, or resized.</p>
+          <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../fl/controls/DataGrid.html" target="">fl.controls.DataGrid</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#cellRenderer">cellRenderer</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">
+   The class that is used to render the items in this column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../Object.html#constructor">constructor</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dataField">dataField</a> : <a href="../../../String.html">String</a>
+<div class="summaryTableDescription">
+   Identifies the name of the field or property in the data provider item
+         that is associated with the column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#editable">editable</a> : <a href="../../../Boolean.html">Boolean</a> = true<div class="summaryTableDescription">
+          Indicates whether the items in the column can be edited.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#editorDataField">editorDataField</a> : <a href="../../../String.html">String</a> = "text"<div class="summaryTableDescription">
+    Identifies the name of the property of the item editor that contains the new
+    data for the list item.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#headerRenderer">headerRenderer</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">
+   The class that is used to render the header of this column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#headerText">headerText</a> : <a href="../../../String.html">String</a>
+<div class="summaryTableDescription">
+   The column name to be displayed in the column header.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#imeMode">imeMode</a> : <a href="../../../String.html">String</a>
+<div class="summaryTableDescription">
+    The mode of the input method editor (IME).</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#itemEditor">itemEditor</a> : <a href="../../../Object.html">Object</a> = fl.controls.dataGridClasses.DataGridCellEditor<div class="summaryTableDescription">
+    Indicates the class of the instances of the item editor to use for the 
+    column, when it is editable.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#labelFunction">labelFunction</a> : <a href="../../../Function.html">Function</a>
+<div class="summaryTableDescription">
+   A function that determines the text to be displayed in this column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#minWidth">minWidth</a> : <a href="../../../Number.html">Number</a>
+<div class="summaryTableDescription">
+   The minimum width of the column, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../Object.html#prototype">prototype</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#resizable">resizable</a> : <a href="../../../Boolean.html">Boolean</a> = true<div class="summaryTableDescription">
+   Indicates whether the user is allowed to change the width of the
+   column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sortable">sortable</a> : <a href="../../../Boolean.html">Boolean</a> = true<div class="summaryTableDescription">
+   Indicates whether the user can click on the header of the current column 
+   to sort the data provider.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sortCompareFunction">sortCompareFunction</a> : <a href="../../../Function.html">Function</a>
+<div class="summaryTableDescription">
+   A callback function that is called when sorting the data in
+   the column.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sortDescending">sortDescending</a> : <a href="../../../Boolean.html">Boolean</a> = false<div class="summaryTableDescription">
+         Indicates whether the DataGridColumn is to be sorted in ascending or 
+         descending order.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#sortOptions">sortOptions</a> : <a href="../../../uint.html">uint</a> = 0<div class="summaryTableDescription">
+   One or more defined constants, identified by name or number and separated
+   by the bitwise OR (|) operator.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#visible">visible</a> : <a href="../../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">
+         Indicates whether the column is visible.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#width">width</a> : <a href="../../../Number.html">Number</a>
+<div class="summaryTableDescription">
+   The width of the column, in pixels.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#DataGridColumn()">DataGridColumn</a>(columnName:<a href="../../../String.html">String</a> = null)</div>
+<div class="summaryTableDescription">
+   Creates a new DataGridColumn instance.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../../String.html">String</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../../Object.html">Object</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#itemToLabel()">itemToLabel</a>(data:<a href="../../../Object.html">Object</a>):<a href="../../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+    Returns the string that the item renderer displays for the given data object.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../../String.html">String</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../../String.html">String</a>, isEnum:<a href="../../../Boolean.html">Boolean</a> = true):<a href="../../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():<a href="../../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+          Returns a string representation of the DataGridColumn object.</div>
+</td><td class="summaryTableOwnerCol">DataGridColumn</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#valueOf()">valueOf</a>():<a href="../../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="cellRenderer"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cellRenderer</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>cellRenderer:<a href="../../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The class that is used to render the items in this column.
+       The type of this property can be Class, Sprite or String.
+    If the property type is String, the String value must be a
+    fully qualified class name.
+            </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get cellRenderer():<a href="../../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set cellRenderer(value:<a href="../../../Object.html">Object</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#headerRenderer" target="">DataGridColumn.headerRenderer</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example specifies a custom cell renderer for a data grid column:
+<div class="listing"><pre>
+
+import fl.controls.dataGridClasses.DataGridColumn;
+
+var dgc:DataGridColumn = new DataGridColumn("Field");
+dgc.cellRenderer = "MyCustomCellRendererClass";
+dg.addColumn(dgc);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="dataField"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dataField</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var dataField:<a href="../../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Identifies the name of the field or property in the data provider item
+         that is associated with the column.
+                  </p></div>
+<a name="propertyDetail"></a><a name="editable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">editable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var editable:<a href="../../../Boolean.html">Boolean</a> = true</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+          Indicates whether the items in the column can be edited. A value of <code>true</code>
+    indicates that the column items can be edited; a value of <code>false</code> indicates
+    that they cannot be edited.
+       <p>If this property is set to <code>true</code> and the <code>editable</code>
+    property of the DataGrid is also <code>true</code>, the items in a column are 
+    editable and can be individually edited by clicking an item 
+    or by navigating to the item by using the Tab and arrow keys.</p>
+                   </p><p> The default value is <code>true</code>.</p>
+</div>
+<a name="propertyDetail"></a><a name="editorDataField"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">editorDataField</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var editorDataField:<a href="../../../String.html">String</a> = "text"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Identifies the name of the property of the item editor that contains the new
+    data for the list item.
+       <p>For example, the default <code>itemEditor</code> is
+    TextInput, so the default value of the <code>editorDataField</code> 
+    property is <code>"text"</code>. This value specifies the 
+    <code>text</code> property of the TextInput component.</p>
+                   </p><p> The default value is <code>"text"</code>.</p>
+</div>
+<a name="propertyDetail"></a><a name="headerRenderer"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">headerRenderer</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>headerRenderer:<a href="../../../Object.html">Object</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The class that is used to render the header of this column.
+      <p>The type of this property can be Class, Sprite or String.
+    If the property type is String, the string value must be a
+    fully qualified class name.</p>
+                  </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get headerRenderer():<a href="../../../Object.html">Object</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set headerRenderer(value:<a href="../../../Object.html">Object</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#cellRenderer" target="">DataGridColumn.cellRenderer</a>
+<br>
+<a href="HeaderRenderer.html" target="">HeaderRenderer</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="headerText"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">headerText</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>headerText:<a href="../../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The column name to be displayed in the column header.
+         By default, the DataGrid component uses the value of the <code>dataField</code> 
+         property as the column name.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get headerText():<a href="../../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set headerText(value:<a href="../../../String.html">String</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new data grid and specifies header text for each column:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var dp:DataProvider = new DataProvider();
+dp.addItem({name:"Person A", sales:13453});
+dp.addItem({name:"Person B", sales:23432});
+dp.addItem({name:"Person C", sales:9454});
+
+var nameCol:DataGridColumn = new DataGridColumn("name");
+nameCol.headerText = "Employee:";
+
+var salesCol:DataGridColumn = new DataGridColumn("sales");
+salesCol.headerText = "Sales:";
+salesCol.labelFunction = currencyFormatter;
+salesCol.sortOptions = Array.NUMERIC;
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(nameCol);
+myDataGrid.addColumn(salesCol);
+myDataGrid.dataProvider = dp;
+myDataGrid.move(10, 10);
+myDataGrid.setSize(320, 240);
+addChild(myDataGrid);
+
+function currencyFormatter(item:Object):String {
+    return "$" + item.sales.toFixed(0);
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="imeMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">imeMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>imeMode:<a href="../../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    The mode of the input method editor (IME). The IME enables users to 
+    enter text in Chinese, Japanese, and Korean. The flash.system.IMEConversionMode 
+    class defines constants to be used as the valid values for this property.  
+       <p>If this property is <code>null</code>, the mode of the IME is 
+    set to the value of the <code>imeMode</code> property of the DataGrid
+    component.</p>
+       </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get imeMode():<a href="../../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set imeMode(value:<a href="../../../String.html">String</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../flash/system/IMEConversionMode.html" target="">flash.system.IMEConversionMode</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="itemEditor"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">itemEditor</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var itemEditor:<a href="../../../Object.html">Object</a> = fl.controls.dataGridClasses.DataGridCellEditor</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Indicates the class of the instances of the item editor to use for the 
+    column, when it is editable.
+   
+    The type of this property can be Class, Sprite or String.
+    If the property type is String, the string value must be a
+    fully qualified class name.
+             </p><p> The default value is <code>"fl.controls.dataGridClasses.DataGridCellEditor"</code>.</p>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example specifies a custom item editor for a data grid column:
+<div class="listing"><pre>
+
+import fl.controls.dataGridClasses.DataGridColumn;
+
+var dgc:DataGridColumn = new DataGridColumn("Field");
+dgc.itemEditor = "MyCustomItemEditorClass";
+dg.addColumn(dgc);</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="labelFunction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">labelFunction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>labelFunction:<a href="../../../Function.html">Function</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   A function that determines the text to be displayed in this column. By default, the
+   column displays the text for the data field that matches the column name.
+   However, a column can also be used to display the text of more than one data field, 
+   or to display content that is not in the proper format.  This can be done by
+         using the <code>labelFunction</code> property to specify a callback function.
+   
+         <p>If both the <code>labelFunction</code> and <code>labelField</code> properties 
+         are defined, the <code>labelFunction</code> takes precedence.</p>
+            </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get labelFunction():<a href="../../../Function.html">Function</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set labelFunction(value:<a href="../../../Function.html">Function</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a data grid and defines a custom label function for one of the data grid columns:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.ScrollPolicy;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var i:uint;
+var totalRows:uint = 16;
+var dp:DataProvider = new DataProvider();
+for (i = 0; i &lt; totalRows; i++) {
+    dp.addItem({col1:getRandomNumber(), col2:getRandomNumber(), col3:getRandomNumber(), col4:getRandomNumber()});
+}
+
+var c1:DataGridColumn = new DataGridColumn("col1");
+c1.sortOptions = Array.NUMERIC;
+var c2:DataGridColumn = new DataGridColumn("col2");
+c2.sortOptions = Array.NUMERIC;
+var c3:DataGridColumn = new DataGridColumn("col3");
+c3.sortOptions = Array.NUMERIC;
+c3.labelFunction = currencyFormatter;
+
+var dg:DataGrid = new DataGrid();
+dg.setSize(200, 300);
+dg.addColumn(c1);
+dg.addColumn(c2);
+dg.addColumn(c3);
+dg.dataProvider = dp;
+addChild(dg);
+
+function getRandomNumber():Number {
+    return Math.random() * 100;
+}
+
+function currencyFormatter(data:Object):String {
+    var value:Number = Number(data.col3);
+    return "$" + value.toFixed(2);
+}
+</pre></div></div>
+<br>
+<div class="detailBody"> The following example creates a new DataGridColumn object and 
+ specifies both a <code>labelFunction</code> and <code>sortCompareFunction</code>:
+<div class="listing"><pre>
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var data:XML = &lt;data&gt;
+        &lt;item name="Employee A" isManager="1" /&gt;
+        &lt;item name="Employee B" isManager="0" /&gt;
+        &lt;item name="Employee C" isManager="1" /&gt;
+    &lt;/data&gt;;
+
+var dp:DataProvider = new DataProvider(data);
+
+var nameDGC:DataGridColumn = new DataGridColumn("name");
+nameDGC.sortCompareFunction = isManager;
+nameDGC.labelFunction = nameLabelFunction;
+
+var myDataGrid:DataGrid = new DataGrid()
+myDataGrid.addColumn(nameDGC);
+myDataGrid.dataProvider = dp;
+myDataGrid.width = 200;
+myDataGrid.rowCount = myDataGrid.length;
+myDataGrid.move(10, 10);
+addChild(myDataGrid);
+
+function nameLabelFunction(item:Object):String {
+    var managerString:String = "";
+    if (item.isManager == "1") {
+        managerString = " (Manager)";
+    }
+    return item.name + managerString;
+}
+
+function isManager(itemA:Object, itemB:Object):int {
+    if (itemA.isManager &gt; itemB.isManager) {
+        return -1;
+    } else if (itemA.isManager &lt; itemB.isManager) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="minWidth"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">minWidth</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>minWidth:<a href="../../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The minimum width of the column, in pixels.
+      </p><p> The default value is <code>20</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get minWidth():<a href="../../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set minWidth(value:<a href="../../../Number.html">Number</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#width" target="">DataGridColumn.width</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example displays the width of each column in the data grid whenever a column's width changes:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+import fl.events.DataGridEvent;
+
+var data:XML = &lt;data&gt;
+        &lt;row col1="item 1.A" col2="item 1.B" col3="item 1.C" /&gt;
+        &lt;row col1="item 2.A" col2="item 2.B" col3="item 2.C" /&gt;
+        &lt;row col1="item 3.A" col2="item 3.B" col3="item 3.C" /&gt;
+    &lt;/data&gt;;
+    
+var dp:DataProvider = new DataProvider(data);
+
+var c1:DataGridColumn = new DataGridColumn("col1");
+c1.minWidth = 100;
+var c2:DataGridColumn = new DataGridColumn("col2");
+var c3:DataGridColumn = new DataGridColumn("col3");
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(c1);
+myDataGrid.addColumn(c2);
+myDataGrid.addColumn(c3);
+myDataGrid.dataProvider = dp;
+myDataGrid.move(10, 10);
+myDataGrid.setSize(300, 200);
+myDataGrid.addEventListener(DataGridEvent.COLUMN_STRETCH, columnStretchHandler);
+addChild(myDataGrid);
+
+function columnStretchHandler(event:DataGridEvent):void {
+    var column:DataGridColumn;
+    for each (column in myDataGrid.columns) {
+        trace(column.dataField, "width:" + column.width, "minWidth:" + column.minWidth);
+    }
+    trace("---");
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="resizable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">resizable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var resizable:<a href="../../../Boolean.html">Boolean</a> = true</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Indicates whether the user is allowed to change the width of the
+   column. A value of <code>true</code> indicates that the user can
+   change the column width; a value of <code>false</code> indicates that
+   the user cannot change the column width.
+                  </p><p> The default value is <code>true</code>.</p>
+</div>
+<a name="propertyDetail"></a><a name="sortable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sortable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var sortable:<a href="../../../Boolean.html">Boolean</a> = true</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Indicates whether the user can click on the header of the current column 
+   to sort the data provider. A value of <code>true</code> indicates that
+   the column can be sorted by clicking on its header; a value of <code>false</code> 
+   indicates that it cannot be sorted by clicking on its header.
+                  </p><p> The default value is <code>true</code>.</p>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new data grid with an unsortable column:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+import fl.events.DataGridEvent;
+
+var data:XML = &lt;dataProvider&gt;
+        &lt;data col1="Person A" col2="11.383" /&gt;
+        &lt;data col1="Person B" col2="3.399" /&gt;
+        &lt;data col1="Person C" col2="25.624" /&gt;
+    &lt;/dataProvider&gt;
+
+var dp:DataProvider = new DataProvider(data);
+
+var c1:DataGridColumn = new DataGridColumn("col1");
+var c2:DataGridColumn = new DataGridColumn("col2");
+c2.sortable = false;
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(c1);
+myDataGrid.addColumn(c2);
+myDataGrid.dataProvider = dp;
+myDataGrid.move(10, 10);
+myDataGrid.setSize(160, 120);
+addChild(myDataGrid);
+</pre></div></div>
+<br>
+<div class="detailBody"> The following example creates a DataGrid with one unsortable column by setting the data grid column's <code>sortable</code> property to <code>false</code>:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+import fl.events.DataGridEvent;
+
+var xmlDP:XML = &lt;items&gt;
+        &lt;item name="Person 1" bio="Person 1 bio" /&gt;    
+        &lt;item name="Person 2" bio="Person 2 bio" /&gt;
+    &lt;/items&gt;;
+
+var dp:DataProvider = new DataProvider(xmlDP);
+
+var nameCol:DataGridColumn = new DataGridColumn("name");
+nameCol.headerText = "Name:";
+
+var bioCol:DataGridColumn = new DataGridColumn("bio");
+bioCol.headerText = "Bio:";
+bioCol.sortable = false;
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(nameCol);
+myDataGrid.addColumn(bioCol);
+myDataGrid.dataProvider = dp;
+myDataGrid.rowCount = dp.length;
+myDataGrid.width = 200;
+myDataGrid.move(10, 10);
+myDataGrid.addEventListener(DataGridEvent.HEADER_RELEASE, headerReleaseHandler);
+addChild(myDataGrid);
+
+function headerReleaseHandler(event:DataGridEvent):void {
+    var myDG:DataGrid = event.currentTarget as DataGrid;
+    trace("dataField:" + event.dataField);
+    trace("columnIndex:" + event.columnIndex);
+    trace("{DataGrid}.sortDescending:" + myDG.sortDescending);
+    trace("{DataGridColumn}.sortDescending:" + myDG.getColumnAt(event.columnIndex).sortDescending);
+    trace("");
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="sortCompareFunction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sortCompareFunction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>sortCompareFunction:<a href="../../../Function.html">Function</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   A callback function that is called when sorting the data in
+   the column. If this property is not specified, the data is sorted by string
+   or number, depending on the <code>sortOptions</code> property.
+         When specified, the <code>sortCompareFunction</code> property allows you to create 
+         your own custom sorting method for the current data grid column.
+            </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get sortCompareFunction():<a href="../../../Function.html">Function</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set sortCompareFunction(value:<a href="../../../Function.html">Function</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#sortOptions" target="">sortOptions</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new DataGridColumn object and 
+ specifies both a <code>labelFunction</code> and <code>sortCompareFunction</code>:
+<div class="listing"><pre>
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var data:XML = &lt;data&gt;
+        &lt;item name="Employee A" isManager="1" /&gt;
+        &lt;item name="Employee B" isManager="0" /&gt;
+        &lt;item name="Employee C" isManager="1" /&gt;
+    &lt;/data&gt;;
+
+var dp:DataProvider = new DataProvider(data);
+
+var nameDGC:DataGridColumn = new DataGridColumn("name");
+nameDGC.sortCompareFunction = isManager;
+nameDGC.labelFunction = nameLabelFunction;
+
+var myDataGrid:DataGrid = new DataGrid()
+myDataGrid.addColumn(nameDGC);
+myDataGrid.dataProvider = dp;
+myDataGrid.width = 200;
+myDataGrid.rowCount = myDataGrid.length;
+myDataGrid.move(10, 10);
+addChild(myDataGrid);
+
+function nameLabelFunction(item:Object):String {
+    var managerString:String = "";
+    if (item.isManager == "1") {
+        managerString = " (Manager)";
+    }
+    return item.name + managerString;
+}
+
+function isManager(itemA:Object, itemB:Object):int {
+    if (itemA.isManager &gt; itemB.isManager) {
+        return -1;
+    } else if (itemA.isManager &lt; itemB.isManager) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="sortDescending"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sortDescending</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var sortDescending:<a href="../../../Boolean.html">Boolean</a> = false</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Indicates whether the DataGridColumn is to be sorted in ascending or 
+         descending order. A value of <code>true</code> indicates that the 
+         DataGridColumn is sorted in descending order; a value of <code>false</code> 
+         indicates that the DataGridColum is sorted in ascending order.
+                  </p><p> The default value is <code>false</code>.</p>
+</div>
+<a name="propertyDetail"></a><a name="sortOptions"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sortOptions</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var sortOptions:<a href="../../../uint.html">uint</a> = 0</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   One or more defined constants, identified by name or number and separated
+   by the bitwise OR (|) operator. These constants are used to specify
+   the sort operation.
+            </p><p> The default value is <code>0</code>.</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../Array.html#sort()" target="">Array.sort()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example uses the <code>sortOptions</code> property 
+ to specify that a data grid column should be sorted numerically:
+<div class="listing"><pre>
+
+import fl.data.DataProvider;
+import fl.controls.dataGridClasses.DataGridColumn;
+
+var data:XML = &lt;players&gt;
+        &lt;player name="Player 1" score="1234" /&gt;
+        &lt;player name="Player 2" score="198" /&gt;
+        &lt;player name="Player 3" score="987" /&gt;
+    &lt;/players&gt;;
+
+var dp:DataProvider = new DataProvider(data);
+
+var nameDGC:DataGridColumn = new DataGridColumn("name");
+var scoreDGC:DataGridColumn = new DataGridColumn("score");
+scoreDGC.sortOptions = Array.NUMERIC;
+
+dg.addColumn(nameDGC);
+dg.addColumn(scoreDGC);
+dg.dataProvider = dp;
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="visible"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">visible</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>visible:<a href="../../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Indicates whether the column is visible. A value of <code>true</code> indicates
+   that the column is visible; a value of <code>false</code> indicates that the column
+   is invisible.
+                  </p><p> The default value is <code>true</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get visible():<a href="../../../Boolean.html">Boolean</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set visible(value:<a href="../../../Boolean.html">Boolean</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a DataGrid component instance with two columns. You can toggle the <code>visible</code> property of each of these columns by clicking the corresponding Button instance on the Stage.
+<div class="listing"><pre>
+
+import fl.controls.Button;
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var dp:DataProvider = new DataProvider();
+dp.addItem({name:"Person A", average:0.297});
+dp.addItem({name:"Person B", average:0.288});
+dp.addItem({name:"Person C", average:0.310});
+
+var nameCol:DataGridColumn = new DataGridColumn("name");
+nameCol.headerText = "Name:";
+
+var averageCol:DataGridColumn = new DataGridColumn("average");
+averageCol.headerText = "Average:";
+averageCol.labelFunction = numberFormatter;
+averageCol.sortOptions = Array.NUMERIC;
+averageCol.visible = false;
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(nameCol);
+myDataGrid.addColumn(averageCol);
+myDataGrid.dataProvider = dp;
+myDataGrid.rowCount = dp.length;
+myDataGrid.width = 320;
+myDataGrid.move(10, 10);
+addChild(myDataGrid);
+
+var nameButton:Button = new Button();
+nameButton.label = "Toggle name";
+nameButton.toggle = true;
+nameButton.selected = nameCol.visible;
+nameButton.move(myDataGrid.x, myDataGrid.y + myDataGrid.height + 10);
+nameButton.addEventListener(Event.CHANGE, changeHandler);
+addChild(nameButton);
+
+var averageButton:Button = new Button();
+averageButton.label = "Toggle average";
+averageButton.toggle = true;
+averageButton.selected = averageCol.visible;
+averageButton.move(nameButton.x + nameButton.width + 10, nameButton.y);
+averageButton.addEventListener(Event.CHANGE, changeHandler);
+addChild(averageButton);
+
+function numberFormatter(item:Object):String {
+    return Number(item.average).toFixed(3);
+}
+
+function changeHandler(event:Event):void {
+    var colIndex:int = -2;
+    var col:DataGridColumn;
+    switch (event.currentTarget) {
+        case nameButton:
+            colIndex = myDataGrid.getColumnIndex("name");
+            break;
+        case averageButton:
+            colIndex = myDataGrid.getColumnIndex("average");
+            break;
+        default:
+            return;
+    }
+    
+    if (colIndex &gt; -1) {
+        col = myDataGrid.getColumnAt(colIndex);
+        col.visible = !col.visible;
+        myDataGrid.removeColumnAt(colIndex);
+        myDataGrid.addColumnAt(col, colIndex);
+    }
+    myDataGrid.spaceColumnsEqually();
+}
+</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="width"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">width</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>width:<a href="../../../Number.html">Number</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The width of the column, in pixels.
+            </p><p> The default value is <code>100</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get width():<a href="../../../Number.html">Number</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set width(value:<a href="../../../Number.html">Number</a>):<a href="../../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#minWidth" target="">DataGridColumn.minWidth</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="DataGridColumn()"></a><a name="DataGridColumn(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DataGridColumn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function DataGridColumn(columnName:<a href="../../../String.html">String</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a new DataGridColumn instance.
+   
+         </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">columnName</span>:<a href="../../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; The column name to display in the column header. If
+                no name is specified, the <code>dataField</code> value is used.
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataGridColumn.html#headerText" target="">DataGridColumn.headerText</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="itemToLabel()"></a><a name="itemToLabel(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">itemToLabel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function itemToLabel(data:<a href="../../../Object.html">Object</a>):<a href="../../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Returns the string that the item renderer displays for the given data object.
+    If the DataGridColumn or its DataGrid component has a non-null <code>labelFunction</code>
+    property, it applies the function to the data object. Otherwise, the method extracts 
+          the contents of the field that is specified by the <code>dataField</code> property, or gets the 
+          string value of the data object. If the method cannot convert the parameter to a string, 
+          it returns a single space.
+       </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../../../Object.html">Object</a></code> &mdash; The Object to be rendered.
+             </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../../String.html">String</a></code> &mdash; Displayable string based on the specified <code>data</code> object.
+                   </td>
+</tr>
+</table>
+</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toString():<a href="../../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+          Returns a string representation of the DataGridColumn object.
+             </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../../String.html">String</a></code> &mdash; "[object DataGridColumn]"
+                  </td>
+</tr>
+</table>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">DataGridColumnExample.as</div>
+<br>
+<div class="detailBody"> This example demonstrates how to manipulate the columns of a DataGrid programmatically.
+
+  <p>To run the example, follow these steps:</p>
+    <ol>
+		<li>Add the DataGrid and Button components to the library.</li>
+		<li>Save this code as DataGridColumnExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to DataGridColumnExample.</li>
+	</ol>
+<div class="listing"><pre>
+package
+{
+    import fl.controls.Button;
+    import fl.controls.DataGrid;
+    import fl.controls.dataGridClasses.DataGridColumn;
+    import fl.data.DataProvider;
+    import fl.events.DataChangeEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    
+    public class DataGridColumnExample extends Sprite
+    {
+        private var dg:DataGrid;
+        private var dp:DataProvider;
+        private var names:Array = [ "Mary", "Bob", "Sue", "Joe" ];
+        
+        
+        public function DataGridColumnExample() {
+            dp = new DataProvider();
+            dp.addEventListener(DataChangeEvent.DATA_CHANGE,dataChanged);
+        
+            dg = new DataGrid();
+            addChild(dg);
+            dg.move(10,45);
+            dg.setSize(450,300);
+            dg.addColumn(new DataGridColumn("name"));
+            dg.addColumn(new DataGridColumn("phone"));
+            dg.addColumn(new DataGridColumn("email"));
+
+            var firstColumn = dg.columns[0];
+            firstColumn.resizable = false;
+            var secondColumn = dg.columns[1];
+            secondColumn.sortable = false;
+            var thirdColumn = dg.columns[2];
+            thirdColumn.sortable = false;
+            
+            var addContactBtn:Button = new Button();
+            addContactBtn.label = "Add Contact";
+            addContactBtn.move(10,10);
+            addContactBtn.addEventListener(MouseEvent.CLICK, addContact);
+            addChild(addContactBtn);            
+        }
+        
+        private function getRandomPhone():String {
+            return randomDigit()+randomDigit()+randomDigit()+"-"+randomDigit()+randomDigit()+randomDigit()+"-"+randomDigit()+randomDigit()+randomDigit()+randomDigit();    
+        }
+        private function randomDigit():String {
+            return String(Math.round(Math.random()*10)%10);    
+        }
+        private function getRandomName():String {
+            return names[Math.round(Math.random()*names.length)%names.length];    
+        }
+        private function addContact(e:MouseEvent):void {
+            var randomName:String = getRandomName()
+            dp.addItem( { name: randomName, phone: getRandomPhone(), email: randomName + "@fictitious.com" } );
+        }
+        private function dataChanged(e:DataChangeEvent):void {
+            var changedItems:Array = e.items;
+            dg.addItem(changedItems[0]);
+        }
+    }
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/DataGridColumnExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

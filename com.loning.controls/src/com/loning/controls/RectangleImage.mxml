@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark" 
+				   xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Image id="image" x="0" y="0" width="100%" height="100%"
+			 mouseDown="image_mouseDownHandler(event)" source="{this.source}"/>
+	<s:Group id="area" x="0" y="0" width="100%" height="100%" >
+	</s:Group>
+	<fx:Script>
+		<![CDATA[
+			import mx.core.IVisualElement;
+			import mx.events.DragEvent;
+			private var drawingPannel:ResizableBorderPannel;
+			private var faceStartPoint:Point=new Point();
+			private var faceEndPoint:Point = new Point();
+			[Bindable]
+			public var HasRectangles:Boolean;
+			
+			[Bindable]
+			public var source:BitmapData;
+			
+			private var _rectangles:Vector.<Rectangle>;
+			
+			[Bindable(event="rectanglesChange")]
+			public function get rectangles():Vector.<Rectangle>
+			{
+				return this.getRectangles();
+			}
+
+			public function set rectangles(value:Vector.<Rectangle>):void
+			{
+				if( _rectangles !== value)
+				{
+					trace("set rectangles");
+					_rectangles = value;
+					
+					for each(var rect:Rectangle in value){
+						this.drawRectangle(rect);	
+					}
+					dispatchEvent(new Event("rectanglesChange"));
+				}
+			}
+			public function updateRectangles():void{
+				dispatchEvent(new Event("rectanglesChange"));
+			}
+
+			public function getRectangles():Vector.<Rectangle>{
+				var arr:Vector.<Rectangle>=new Vector.<Rectangle>();
+				var ws:Number=source.width/this.width;
+				var hs:Number=source.height/this.height;
+				for(var i:int=0;i<area.numElements;i++){
+					var e:IVisualElement=area.getElementAt(i);
+					arr.push(
+						new Rectangle(
+							e.x*ws,e.y*hs,e.width*ws,e.height*hs));
+				}
+				return arr;
+			}
+			protected function rect_closehandler(e:Event):void{
+				var ve:IVisualElement=e.target as IVisualElement;
+				this.area.removeElement(ve);
+			}
+			public function drawRectangle(rect:Rectangle):void{
+				trace("draw",rect);
+				var ws:Number=source.width/this.width;
+				var hs:Number=source.height/this.height;
+				drawingPannel=this.createBorderPannel();
+				drawingPannel.x=rect.x/ws;
+				drawingPannel.y=rect.y/hs;
+				drawingPannel.width=rect.width/ws;
+				drawingPannel.height=rect.height/hs;
+				drawingPannel.addEventListener(
+					Event.CLOSE,this.rect_closehandler);
+				this.area.addElement(
+					drawingPannel);
+				this.HasRectangles=true;
+			}
+			public function clearRectangles():void{
+				this.drawingPannel=null;
+				this.area.removeAllElements();
+				this.HasRectangles=false;
+				
+			}
+			
+			protected function image_mouseMoveHandler(e:MouseEvent):void
+			{
+				if(e.buttonDown){
+					if(drawingPannel!=null){
+						var w:int=e.localX-drawingPannel.x;
+						var h:int=e.localY-drawingPannel.y;
+						drawingPannel.width=w>0?w:0;
+						drawingPannel.height=h>0?h:0;
+						//trace("draw\t",e);
+					}else{
+						drawingPannel=this.createBorderPannel();
+						drawingPannel.x=e.localX;
+						drawingPannel.y=e.localY;
+						drawingPannel.width=0;
+						drawingPannel.height=0;
+						drawingPannel.addEventListener(
+							Event.CLOSE,this.rect_closehandler);
+						this.area.addElement(
+							drawingPannel);
+						this.HasRectangles=true;
+						//trace("start\t",e);
+					}
+				}else{
+					
+					//trace("end\t",e);
+				}
+			}
+			protected function createBorderPannel():ResizableBorderPannel{
+				return new ResizableBorderPannel();
+			}
+			
+			
+			
+			protected function image_mouseDownHandler(event:MouseEvent):void
+			{
+				this.image.addEventListener(MouseEvent.MOUSE_MOVE,this.image_mouseMoveHandler);
+				this.stage.addEventListener(MouseEvent.MOUSE_UP,this.image_mouseUpHandler);
+			}
+			
+			protected function image_mouseUpHandler(event:MouseEvent):void
+			{
+				if(drawingPannel!=null){
+					if(drawingPannel.width<50||drawingPannel.height<50){
+						this.area.removeElement(drawingPannel);
+						this.HasRectangles=this.area.numElements>0;
+					}
+				}
+				drawingPannel=null;
+				this.image.removeEventListener(MouseEvent.MOUSE_MOVE,this.image_mouseMoveHandler);
+				this.stage.removeEventListener(MouseEvent.MOUSE_UP,this.image_mouseUpHandler);
+
+			}
+			
+		]]>
+	</fx:Script>
+</s:BorderContainer>

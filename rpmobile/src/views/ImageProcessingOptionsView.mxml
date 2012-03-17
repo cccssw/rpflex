@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="{resourceManager.getString('view','ImageProcessingOptionsViewTitle')}" creationComplete="creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import com.loning.image.*;
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				this.optionList.dataProvider=ElementSettings.load().imageProcessingOptionsCollection;
+			}
+			protected function save_clickHandler(event:MouseEvent):void
+			{
+				ElementSettings.save();
+				this.navigator.popView();
+				
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:navigationContent>
+		<s:Button id="backButton" label="{resourceManager.getString('view','back')}" click="this.navigator.popView();"/>
+	</s:navigationContent>  
+	
+	<s:actionContent>
+		<s:Button id="save" click="save_clickHandler(event)" label="{resourceManager.getString('view','save')}"/>
+	</s:actionContent>
+	<s:List itemRenderer="com.loning.mobile.controls.MobileCheckBoxListItemRenderer"
+			skinClass="com.loning.mobile.controls.MobileSkinnableDataContainerSkin"
+			id="optionList" top="10" x="0" y="0" height="100%" width="100%"/>
+</s:View>

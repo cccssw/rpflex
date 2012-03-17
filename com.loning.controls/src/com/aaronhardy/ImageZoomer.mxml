@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+					  xmlns:s="library://ns.adobe.com/flex/spark"
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  xmlns:aaronhardy="com.aaronhardy.*"
+					  width="400" height="300" backgroundAlpha="0.5" backgroundColor="#606060"
+					  creationComplete="skinnablecontainer1_creationCompleteHandler(event)"
+					  gestureRotate="gestureRotateHandler(event)"
+					  gestureZoom="gestureZoomHandler(event)"
+					  >
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="leftRotating"/>
+		<s:State name="rightRotating"/>
+	</s:states>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			public var bitmapData:BitmapData;
+			
+			public function setBitmapData(ImageClass:Class):void
+			{
+				bitmapData = Bitmap(new ImageClass()).bitmapData;
+			}
+			
+			protected function formatDataTip(value:Number):String
+			{
+				return Math.round(value * 10) / 10 + 'x';
+			}
+			
+			protected function scaleSlider_changeHandler(event:Event):void
+			{
+				inspector.relativeScale = scaleSlider.value;
+			}
+			
+			protected function skinnablecontainer1_creationCompleteHandler(event:FlexEvent):void
+			{
+				
+			}
+			public function getViewBitmapData():BitmapData{
+				return this.inspector.getViewBitmapData();
+			}
+			private var imagerotation:Number;
+			protected function gestureRotateHandler(event:TransformGestureEvent):void
+			{
+				// TODO Auto-generated method stub
+				//trace(event);
+				if(event.phase=="begin"){
+					gesturing=true;
+					imagerotation=0;
+				}else if(event.phase=="end"){
+					gesturing=false;
+					if(Math.abs(imagerotation)>10){
+						if(imagerotation>0)
+							this.bitmapData=rotateRight(this.bitmapData);
+						else{
+							this.bitmapData=rotateLeft(this.bitmapData);
+						}
+					}
+					this.currentState="normal";
+				}else{
+					imagerotation+=event.rotation;
+					if(Math.abs(imagerotation)>10){
+						if(imagerotation>0){
+							this.currentState="rightRotating";
+						}else{
+							this.currentState="leftRotating";
+						}
+					}
+				}
+			}
+			public function rotateRight(bmpData:BitmapData):BitmapData
+			{
+				var m:Matrix = new Matrix();
+				m.rotate(Math.PI/2);
+				m.translate(bmpData.height,0);
+				var n:BitmapData = new BitmapData(bmpData.height, bmpData.width,true,0);
+				n.draw(bmpData,m);
+				return n;
+			}
+			
+			public function rotateLeft(bmpData:BitmapData):BitmapData
+			{
+				var m:Matrix = new Matrix();
+				m.rotate(-Math.PI/2);
+				m.translate(0,bmpData.width);
+				var n:BitmapData = new BitmapData(bmpData.height, bmpData.width,true,0);
+				n.draw(bmpData,m);
+				return n;
+			}
+			
+			protected function right_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.bitmapData=rotateRight(this.bitmapData);
+			}
+			
+			protected function imageleft_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				this.bitmapData=rotateLeft(this.bitmapData);
+			}
+			private var scale:Number;
+			private var gesturing:Boolean;
+			protected function gestureZoomHandler(event:TransformGestureEvent):void
+			{
+				// TODO Auto-generated method stub
+				//trace(event);
+				switch(event.phase){
+					case "begin":
+						gesturing=true;
+						scale=1;
+						break;
+					case "update":
+						//scale*=;
+						inspector.relativeScale*=event.scaleX;
+						break;
+					case "end":
+						gesturing=false;
+						break;
+				}
+				
+			}
+			
+			private var lastPoint:Point;
+			protected function mouseDownHandler(event:MouseEvent):void
+			{
+				//trace(event);
+				lastPoint=new Point(
+					event.stageX,event.stageY);
+				stage.addEventListener(MouseEvent.MOUSE_MOVE, mouseMoveHandler);
+				stage.addEventListener(MouseEvent.MOUSE_UP, mouseUpHandler);
+			}
+			
+			private function mouseMoveHandler(e:MouseEvent):void{
+				
+				if(this.gesturing ||this.inspector.viewRect==null)
+					return;
+				if(lastPoint==null){
+					lastPoint=new Point(
+						e.stageX,e.stageY);
+				}else{
+					var rect:Rectangle=this.inspector.viewRect;
+					rect.x-=e.stageX-lastPoint.x;
+					rect.y-=e.stageY-lastPoint.y;
+					lastPoint.x=e.stageX;
+					lastPoint.y=e.stageY;
+					this.inspector.viewRect=rect;
+				}
+			}
+			private function mouseUpHandler(e:MouseEvent):void{
+				//trace("up");
+				lastPoint=null;
+				stage.removeEventListener(MouseEvent.MOUSE_MOVE, mouseMoveHandler);
+				stage.removeEventListener(MouseEvent.MOUSE_UP, mouseUpHandler);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Style>
+		
+		
+		.dataTip
+		{
+		color: #000000;
+		}
+	</fx:Style>
+	
+	<aaronhardy:ImageInspector id="inspector" width="100%" height="100%" bitmapData="{bitmapData}"
+							   mouseDown="mouseDownHandler(event)"
+							   viewRect="{pip.viewRect}"/>
+	<aaronhardy:PictureInPicture id="pip" maxWidth="{this.width/4}" maxHeight="{this.height/4}" 
+								 left="0" bottom="0" 
+								 viewRect="{inspector.viewRect}"
+								 bitmapData="{bitmapData}"/>
+	
+	
+	<s:Image source="@Embed('assets/shape_rotate_anticlockwise.png')"
+			 click="imageleft_clickHandler(event)" top="0" left="0"/>
+	<s:Image source="@Embed('assets/shape_rotate_clockwise.png')"
+			 click="right_clickHandler(event)"  top="0" right="0"/>
+	<s:Image id="leftRotatingImage" includeIn="leftRotating" 
+			 x="{(inspector.width-this.leftRotatingImage.width)/2}" 
+			 y="{(inspector.height-this.leftRotatingImage.height)/2}" 
+			 source="@Embed('assets/rotate_left.png')"/>
+	<s:Image id="rightRotatingImage" includeIn="rightRotating" 
+			 x="{(inspector.width-this.rightRotatingImage.width)/2}" 
+			 y="{(inspector.height-this.rightRotatingImage.height)/2}" 
+			 source="@Embed('assets/rotate_right.png')"/>
+	<s:HGroup left="{pip.x + pip.width}" bottom="0" width="100%" horizontalAlign="center"
+			  paddingBottom="5" paddingLeft="5" paddingRight="5" paddingTop="5" verticalAlign="middle">
+		
+		
+		<s:HSlider id="scaleSlider" width="100%" change="scaleSlider_changeHandler(event)"
+				   dataTipFormatFunction="{formatDataTip}" liveDragging="true" maximum="3"
+				   minimum="1" stepSize="0.25" value="{inspector.relativeScale}"
+				   />
+	</s:HGroup>
+</s:SkinnableContainer>

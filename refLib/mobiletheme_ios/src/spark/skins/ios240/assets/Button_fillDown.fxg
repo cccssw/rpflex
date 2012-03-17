@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="21" scaleGridRight="175" scaleGridTop="23" scaleGridBottom="56">
+  
+      <Rect x="5.98486" y="5.98486" width="184.031" height="65.8315" radiusX="14.9645" radiusY="14.9645">
+        <fill>
+          <LinearGradient x="92.0151" y="0" scaleX="65.832" rotation="90">
+            <GradientEntry ratio="0" color="#141C2B"/>
+            <GradientEntry ratio="0.5" color="#272D36"/>
+            <GradientEntry ratio="0.5" color="#151E27"/>
+            <GradientEntry ratio="1" color="#282E38"/>
+          </LinearGradient>
+        </fill>
+      </Rect>
+      <Path x="5.98486" y="5.98486" winding="nonZero" data="M169.069 0 14.9619 0C6.69922 0 0 6.70068 0 14.9619L0 16.458C0 8.19678 6.69922 1.49609 14.9619 1.49609L169.069 1.49609C177.333 1.49609 184.031 8.19678 184.031 16.458L184.031 14.9619C184.031 6.70068 177.333 0 169.069 0Z">
+        <fill>
+          <SolidColor color="#141C2B"/>
+        </fill>
+      </Path>
+      <Rect width="196" height="77.8018">
+        <fill>
+          <SolidColor alpha="0"/>
+        </fill>
+      </Rect>
+
+</Graphic>

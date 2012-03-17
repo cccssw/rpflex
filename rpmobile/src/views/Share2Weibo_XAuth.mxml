@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:supportClasses="spark.skins.mobile.supportClasses.*"
+		xmlns:controls="controls.*"
+		creationComplete="view1_creationCompleteHandler(event)" overlayControls="true"
+		title="{resourceManager.getString('view','Share2Weibo')}">
+	<s:layout>
+		<s:BasicLayout>
+			
+		</s:BasicLayout>
+	</s:layout>
+	
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.FaceProcessorManager;
+			import com.rpphoto.model.WeiBoAPIManager;
+			import com.rpphoto.utils.*;
+			import com.sina.microblog.events.*;
+			
+			import controls.LogingView;
+			import controls.ResultView;
+			
+			import flash.globalization.DateTimeFormatter;
+			
+			import mx.charts.DateTimeAxis;
+			import mx.events.FlexEvent;
+			import mx.formatters.DateBase;
+			import mx.managers.PopUpManager;
+			
+			import org.osmf.events.TimeEvent;
+			
+			private var _WeiBoAPI:WeiBoAPIManager = new WeiBoAPIManager();
+			private static var _instance:Share2Weibo_XAuth;
+			private var islogin:Boolean=false;
+			private var resultView:ResultView = ResultView.instance ;
+			private var loginView:LogingView = LogingView.instance;
+			
+
+			[Bindable]
+			private var bitmapData:BitmapData;
+			
+			private var bytes:ByteArray;
+			
+			[Bindable]
+			private var sendMsg:String;
+	
+			protected function loginBtn_clickHandler(event:MouseEvent):void
+			{
+				if(usrIpt.text==""||pwdIpt.text==""){
+					resultView.open(this,true);
+					resultView.setText(resourceManager.getString('view','makeSureUsrPwd'),resourceManager.getString('view','ok'));
+					return;
+				}
+				loginWithUserName(usrIpt.text,pwdIpt.text);
+				resultView.open(this,true);
+				resultView.setText(resourceManager.getString('view','loging'),resourceManager.getString('view','cancle'));
+			}
+			protected function cancleBtn_clickHandler(event:MouseEvent):void
+			{
+				navigator.popView();
+			}
+			
+			
+			public static function loginWithUserName(aUserName:String, aPassword:String) : void
+			{
+				WeiBoAPIManager.instance.microBlog.login(aUserName, aPassword, false, true);
+				//LoginView.instance.isLoading = true;
+				return;
+			}// end function
+			
+			public function VerifyCredentialsError(event:MicroBlogErrorEvent):void{
+//				resultView.close();
+//				resultView.open(this,true);
+				resultView.setText(resourceManager.getString('view','logFailed'),resourceManager.getString('view','ok'));
+				
+				//DelayCall.call(3,resultView.close);
+			}
+			public function UpdateStatusResult(event:MicroBlogEvent):void{			
+//				resultView.close();
+//				resultView.open(this,true);
+				resultView.setText(resourceManager.getString('view','shareOk'),resourceManager.getString('view','ok'));
+				//DelayCall.call(3,resultView.close);
+			}
+			public function UpdateStatusError(event:MicroBlogErrorEvent):void{
+				
+//				resultView.close();
+//				resultView.open(this,true);
+				resultView.setText(resourceManager.getString('view','shareFailed'),resourceManager.getString('view','ok'));
+				//DelayCall.call(3,resultView.close);
+			}
+			
+			
+			public function VerifyCredentialsResult():void{
+//				resultView.open(this,true);
+//				resultView.setText("登录成功");
+				resultView.setText(resourceManager.getString('view','transmiting'),resourceManager.getString('view','cancle'));
+				var currentTime:Date = new Date(); 
+				sendFeed(this.sendMsg,"rpphoto"+currentTime.toString()+".png",this.bytes);
+			}
+			
+			private function onVerifyCredentialsResult(event:MicroBlogEvent) : void
+			{
+				//Controller.getTwisAfterLogin(event.result as MicroBlogUser);
+				VerifyCredentialsResult();
+				return;
+			}// end function
+			
+			
+			public static function sendFeed(title:String,name:String,img:ByteArray):void{
+				WeiBoAPIManager.instance.microBlog.updateStatus(title,name,img);
+			}
+			
+			public function get WeiBoAPI():WeiBoAPIManager{
+				return this._WeiBoAPI;				
+			}
+			
+			public static function get instance():Share2Weibo_XAuth{
+				if (_instance == null)
+				{
+					_instance = new Share2Weibo_XAuth;
+				}
+				return _instance;
+			}
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				WeiBoAPIManager.instance.microBlog.addEventListener(MicroBlogEvent.VERIFY_CREDENTIALS_RESULT,this.onVerifyCredentialsResult);
+				WeiBoAPIManager.instance.microBlog.addEventListener(MicroBlogErrorEvent.VERIFY_CREDENTIALS_ERROR,this.VerifyCredentialsError);
+				WeiBoAPIManager.instance.microBlog.addEventListener(MicroBlogErrorEvent.OAUTH_CERTIFICATE_ERROR,this.VerifyCredentialsError);
+				WeiBoAPIManager.instance.microBlog.addEventListener(MicroBlogErrorEvent.UPDATE_STATUS_ERROR,this.UpdateStatusError);
+				WeiBoAPIManager.instance.microBlog.addEventListener(MicroBlogEvent.UPDATE_STATUS_RESULT,this.UpdateStatusResult);
+				bytes=data.bytes;
+				bitmapData=data.bitmapData;
+				this.sendMsg = data.processedText;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace supportClasses "spark.skins.mobile.supportClasses.*";
+	</fx:Style>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	<s:VGroup width="100%" height="90%" verticalAlign="middle" horizontalAlign="center">
+		<s:Group >
+				<s:Image id="wbBg" width="450" top="0" height="{this.wbBg.width*0.7}" scaleMode="stretch">
+					<s:source>
+						<s:MultiDPIBitmapSource source240dpi="@Embed('assets/ui/weibobg24.png')"
+												source320dpi="@Embed('assets/ui/weibobg32.png')"/>
+					</s:source>
+				</s:Image>
+
+			
+			
+			<s:VGroup width="450" height="{this.wbBg.width*0.7}" horizontalAlign="center" verticalAlign="middle" paddingTop="48">
+				<s:HGroup horizontalAlign="center" verticalAlign="middle">
+					<s:Image source="@Embed('assets/weibo.png')"/>
+					<s:Label text="{resourceManager.getString('view','weiboLoginTitle')}" fontSize="30" color="white" fontWeight="bold"/>
+				</s:HGroup>
+				<s:VGroup width="80%" paddingTop="25">
+					<s:HGroup width="100%"  gap="6" horizontalAlign="center" verticalAlign="middle" >
+						<s:VGroup height="134" width="30%">
+							<s:Label text="{resourceManager.getString('view','Username')}" paddingRight="20" paddingTop="20" paddingBottom="16"/>
+							<s:Label text="{resourceManager.getString('view','Password')}" paddingRight="20" paddingTop="20" paddingBottom="16"/>
+						</s:VGroup>
+						<s:VGroup width="60%">
+							<s:TextInput id="usrIpt" width="100%"/>
+							<s:TextInput id="pwdIpt" width="100%" displayAsPassword="true"/>
+						</s:VGroup>
+					</s:HGroup>
+					<s:HGroup width="100%" height="100" gap="0" horizontalAlign="center" verticalAlign="top">
+						<!--<s:Button id="loginBtn" label="Login" click="loginBtn_clickHandler(event)"/>-->
+						<controls:BgButton label="{resourceManager.getString('view','shareIt')}" skinClass="controls.WeiBoBtn" color="white" height="60"  click="loginBtn_clickHandler(event)" />
+					</s:HGroup>
+					
+				</s:VGroup>
+				
+			</s:VGroup>
+			
+			
+		</s:Group>
+	</s:VGroup>
+	
+	<s:actionContent>
+		<s:Button label="{resourceManager.getString('view','home')}" click="navigator.popToFirstView()"></s:Button>
+	</s:actionContent>
+	
+</s:View>
+

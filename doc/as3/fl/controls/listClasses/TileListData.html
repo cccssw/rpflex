@@ -1,0 +1,504 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="TileListData,fl.controls.listClasses.TileListData,column,data,data,icon,index,label,listData,listData,listData,owner,row,selected,selected,source,source" name="keywords">
+<title>fl.controls.listClasses.TileListData (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'TileListData - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../../index.html?fl/controls/listClasses/TileListData.html&amp;fl/controls/listClasses/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">TileListData</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("TileListData"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.controls.listClasses</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  TileListData</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">TileListData  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> <a href="../../../fl/controls/listClasses/ListData.html">ListData</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../images/inherit-arrow.gif"> <a href="../../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+     TileListData is a messenger class that holds information relevant to a specific 
+     cell in the list-based TileListData component. This information includes the label 
+  and image source that are associated with the cell; whether or not the cell is selected; 
+  and the position of the cell in the list by row and column. 
+    <p>A new TileListData component is created for a cell renderer 
+  each time it is invalidated.</p>
+    <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ListData.html" target="">ListData</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#column">column</a> : <a href="../../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+   The column in which the data item is displayed.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../Object.html#constructor">constructor</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#icon">icon</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+   A class that represents the icon for the item in the List component, 
+         computed from the List class method.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#index">index</a> : <a href="../../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+         The index of the item in the data provider.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#label">label</a> : <a href="../../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+         The label to be displayed in the cell.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#owner">owner</a> : <a href="../../../fl/core/UIComponent.html">UIComponent</a>
+<div class="summaryTableDescription">[read-only] 
+         A reference to the List object that owns this item.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../Object.html#prototype">prototype</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../../fl/controls/listClasses/ListData.html#row">row</a> : <a href="../../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+         The row in which the data item is displayed.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../fl/controls/listClasses/ListData.html">ListData</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#source">source</a> : <a href="../../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+         Gets or sets an absolute or relative URL that identifies the 
+   location of the SWF or image file to load, the class name 
+   of a movie clip in the library, or a reference to a display 
+   object.</div>
+</td><td class="summaryTableOwnerCol">TileListData</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#TileListData()">TileListData</a>(label:<a href="../../../String.html">String</a>, icon:<a href="../../../Object.html">Object</a>, source:<a href="../../../Object.html">Object</a>, owner:<a href="../../../fl/core/UIComponent.html">UIComponent</a>, index:<a href="../../../uint.html">uint</a>, row:<a href="../../../uint.html">uint</a>, col:<a href="../../../uint.html">uint</a> = 0)</div>
+<div class="summaryTableDescription">
+   Creates a new instance of the TileListData class as specified by its 
+   parameters.</div>
+</td><td class="summaryTableOwnerCol">TileListData</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../../String.html">String</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../../Object.html">Object</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../../String.html">String</a>):<a href="../../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../../String.html">String</a>, isEnum:<a href="../../../Boolean.html">Boolean</a> = true):<a href="../../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#toString()">toString</a>():<a href="../../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../../Object.html#valueOf()">valueOf</a>():<a href="../../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="source"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">source</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>source:<a href="../../../Object.html">Object</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets or sets an absolute or relative URL that identifies the 
+   location of the SWF or image file to load, the class name 
+   of a movie clip in the library, or a reference to a display 
+   object.  The TileListData does not load the source, it only
+   passes the value of the source on to the ImageCell.
+   
+   <p>Valid image file formats include GIF, PNG, and JPEG.</p>
+                  </p><p> The default value is <code>null</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get source():<a href="../../../Object.html">Object</a></code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="TileListData()"></a><a name="TileListData(String,Object,Object,fl.core.UIComponent,uint,uint,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">TileListData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function TileListData(label:<a href="../../../String.html">String</a>, icon:<a href="../../../Object.html">Object</a>, source:<a href="../../../Object.html">Object</a>, owner:<a href="../../../fl/core/UIComponent.html">UIComponent</a>, index:<a href="../../../uint.html">uint</a>, row:<a href="../../../uint.html">uint</a>, col:<a href="../../../uint.html">uint</a> = 0)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a new instance of the TileListData class as specified by its 
+   parameters. The TileListData class inherits the properties of the ListData
+   class, and adds a source parameter for the path to the image that is
+   associated with the cell.
+                  </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">label</span>:<a href="../../../String.html">String</a></code> &mdash; The label to be displayed in this cell.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">icon</span>:<a href="../../../Object.html">Object</a></code> &mdash; The icon to be displayed in this cell.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">source</span>:<a href="../../../Object.html">Object</a></code> &mdash; The path or class that is associated with the content to be displayed in the cell.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">owner</span>:<a href="../../../fl/core/UIComponent.html">UIComponent</a></code> &mdash; The component that owns this cell.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../../uint.html">uint</a></code> &mdash; The index of the item in the data provider.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">row</span>:<a href="../../../uint.html">uint</a></code> &mdash; The row in which this item is being displayed. In a List or 
+                DataGrid, this corresponds to the index. In a TileList it may be 
+                different than the index.
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col</span>:<a href="../../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; The column in which this item is being displayed. In a List
+                this will always be equal to 0.
+   
+         </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ListData.html" target="">ListData</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">TileListDataExample.as</div>
+<br>
+<div class="detailBody"> This example illustrates how to access the TileListData object of an image cell in a tile list.
+  <p>To run the example, follow these steps:</p>
+  <ol>
+    	<li>Add the TileList component to the library.</li>
+		<li>Save this code as TileListDataExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to TileListDataExample.</li>
+	</ol>
+<div class="listing"><pre>
+package 
+{
+    import fl.controls.TileList;
+    import fl.controls.listClasses.ImageCell;
+    import fl.controls.listClasses.TileListData;
+    import fl.data.DataProvider;
+    import fl.events.ListEvent;
+    import flash.display.Sprite;
+    import flash.events.Event;
+    import flash.text.TextField;
+    import flash.text.TextFieldAutoSize;    
+    
+    public class TileListDataExample extends Sprite
+    {
+        var sourceClasses:Array = [ RedBox, GreenBox, BlueBox ];
+        var myTileList:TileList;
+        var tf:TextField;
+
+        public function TileListDataExample() {
+            createList();
+
+            tf = new TextField();
+            tf.x = 10;
+            tf.y = 10;
+            tf.autoSize = TextFieldAutoSize.LEFT;
+            addChild(tf);
+        }
+        private function createList():void {
+            myTileList = new TileList();
+            myTileList.move(10,40);
+            myTileList.addEventListener(ListEvent.ITEM_CLICK,itemSelected);
+            
+            var dp:DataProvider = new DataProvider();
+            var i:uint;
+            for(i=0; i&lt;42; i++) {
+                dp.addItem( { label:"Item " + i, source:getRandomImageCellSource() } );
+            }
+            myTileList.dataProvider = dp;
+            myTileList.rowCount = 3;
+            myTileList.columnCount = 7;
+            
+            addChild(myTileList);
+        }
+        private function itemSelected(e:ListEvent):void {
+            var renderer:ImageCell = myTileList.itemToCellRenderer(e.item) as ImageCell;
+            var listData:TileListData = renderer.listData as TileListData;
+
+            tf.text = "You have clicked an item that uses " + listData.source + " for a source.";
+        }
+        private function getRandomImageCellSource():Class {
+            return sourceClasses[Math.floor(Math.random()*sourceClasses.length)];
+        }
+    }
+}
+
+import flash.display.Sprite;
+
+class RedBox extends Sprite {
+    public function RedBox() {
+        graphics.beginFill(0x990000);
+        graphics.drawRect(0,0,100,100);
+    }
+}
+class GreenBox extends Sprite {
+    public function GreenBox() {
+        graphics.beginFill(0x009900);
+        graphics.drawRect(0,0,100,100);
+    }
+}    
+class BlueBox extends Sprite {
+    public function BlueBox() {
+        graphics.beginFill(0x000099);
+        graphics.drawRect(0,0,100,100);
+    }
+}        </pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/TileListDataExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

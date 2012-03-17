@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   width="200" height="200" open="openHandler(event)" styleName="popup">
+	<s:layout>
+		<s:VerticalLayout/>
+	</s:layout>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:BusyIndicator width="200" height="200"/>
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		.popup{
+			backgroundColor: #000000;
+			backgroundAlpha: 0;
+			borderColor: #808080;
+			borderStyle: solid;
+			dropShadowColor: #000000;
+			dropShadowEnabled: yes;
+			modalTransparency:0.5;
+			modalTransparencyBlur:3;
+			modalTransparencyColor:#DDDDDD;
+			modalTransparencyDuration:100;
+			
+		}
+	</fx:Style>
+	<fx:Script>
+		<![CDATA[
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+			import com.rpphoto.utils.DelayCall;
+			
+			import spark.events.PopUpEvent;
+			
+			public override function open(owner:DisplayObjectContainer, modal:Boolean = false):void{
+				super.open(owner,modal);
+				PopUpManager.centerPopUp(this);
+			}
+			private var func:Function;
+			public function call(owner:DisplayObjectContainer,func:Function=null):void{
+				if(func!=null){
+					this.func=func;
+				}
+				this.open(owner,true);
+			}
+			protected function openHandler(event:PopUpEvent):void
+			{
+				if(this.func!=null){
+					DelayCall.call(0.2,this.runFunc);
+				}
+			}
+			private function runFunc():void{
+				this.func();
+				this.func=null;
+				DelayCall.call(0.2,todoClose);
+			}
+			
+			private function todoClose():void{
+				this.close();
+			}
+			private function todoFunc():void{
+				this.func();
+			}
+			
+		]]>
+	</fx:Script>
+</s:SkinnablePopUpContainer>

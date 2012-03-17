@@ -1,0 +1,2128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Graphics,flash.display.Graphics,activate,addChild,addChildAt,addChildAt,addChild,addEventListener,addItem,addItemAt,addSubmenu,addSubmenuAt,applyFilter,areInaccessibleObjectsUnderPoint,assignFocus,beginBitmapFill,beginFill,beginGradientFill,clear,clone,clone,clone,close,close,colorTransform,compare,contains,containsItem,copyChannel,copyPixels,curveTo,dispatchEvent,display,dispose,drawCircle,draw,drawEllipse,drawRect,drawRoundRect,endFill,fillRect,floodFill,generateFilterRect,getBounds,getChildAt,getChildByName,getChildIndex,getColorBoundsRect,getItemAt,getItemByName,getItemIndex,getLoaderInfoByDefinition,getObjectsUnderPoint,getPixel32,getPixel,getPixels,getRect,getScreensForRectangle,globalToLocal,globalToScreen,gotoAndPlay,gotoAndStop,hasEventListener,hitTestObject,hitTest,hitTestPoint,invalidate,isFocusInaccessible,lineGradientStyle,lineStyle,lineTo,loadBytes,load,localToGlobal,lock,maximize,merge,minimize,moveTo,nextFrame,nextScene,noise,notifyUser,orderInBackOf,orderInFrontOf,orderToBack,orderToFront,paletteMap,perlinNoise,pixelDissolve,play,prevFrame,prevScene,removeChildAt,removeChildAt,removeChild,removeItemAt,removeItem,restore,scroll,setChildIndex,setChildIndex,setItemIndex,setPixel32,setPixels,setPixel,startDrag,startMove,startResize,stopDrag,stop,swapChildrenAt,swapChildrenAt,swapChildren,threshold,toString,unload,unlock,willTrigger" name="keywords">
+<title>flash.display.Graphics (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Graphics - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/display/Graphics.html&amp;flash/display/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Graphics</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Graphics"); titleBar_setSubNav(false,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.display</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  Graphics</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Graphics  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Graphics class contains a set of methods that you can use to create a vector shape. 
+ Display objects that support drawing include Sprite and Shape objects.
+ Each of these classes includes a <code>graphics</code> property that is a Graphics object. 
+ The following are among those helper functions provided for ease of use: 
+ <code>drawRect()</code>, <code>drawRoundRect()</code>, 
+ <code>drawCircle()</code>, and <code>drawEllipse()</code>.
+  <p>You cannot create a Graphics object directly from ActionScript code. 
+ If you call <code>new Graphics()</code>, an exception is thrown.</p>
+  <p>The Graphics class is final; it cannot be subclassed.</p>
+ 
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000176.html" target="_top">Basics of using the drawing API</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#beginBitmapFill()">beginBitmapFill</a>(bitmap:<a href="../../flash/display/BitmapData.html">BitmapData</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, repeat:<a href="../../Boolean.html">Boolean</a> = true, smooth:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Fills a drawing area with a bitmap image.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#beginFill()">beginFill</a>(color:<a href="../../uint.html">uint</a>, alpha:<a href="../../Number.html">Number</a> = 1.0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Specifies a simple one-color fill that subsequent calls to other 
+  Graphics methods (such as lineTo() or drawCircle()) use when drawing.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#beginGradientFill()">beginGradientFill</a>(type:<a href="../../String.html">String</a>, colors:<a href="../../Array.html">Array</a>, alphas:<a href="../../Array.html">Array</a>, ratios:<a href="../../Array.html">Array</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, spreadMethod:<a href="../../String.html">String</a> = "pad", interpolationMethod:<a href="../../String.html">String</a> = "rgb", focalPointRatio:<a href="../../Number.html">Number</a> = 0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies a gradient fill that subsequent calls to other 
+  Graphics methods (such as lineTo() or drawCircle()) use when drawing.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clear()">clear</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Clears the graphics that were drawn to this Graphics object, and resets fill and
+     line style settings.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#curveTo()">curveTo</a>(controlX:<a href="../../Number.html">Number</a>, controlY:<a href="../../Number.html">Number</a>, anchorX:<a href="../../Number.html">Number</a>, anchorY:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws a curve using the current line style from the current drawing position 
+  to (anchorX, anchorY) and using the control point that (controlX, 
+  controlY) specifies.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#drawCircle()">drawCircle</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, radius:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws a circle.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#drawEllipse()">drawEllipse</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws an ellipse.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#drawRect()">drawRect</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws a rectangle.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#drawRoundRect()">drawRoundRect</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>, ellipseWidth:<a href="../../Number.html">Number</a>, ellipseHeight:<a href="../../Number.html">Number</a> = NaN):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws a rounded rectangle.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#endFill()">endFill</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Applies a fill to the lines and curves that were added since the last call to the 
+  beginFill(), beginGradientFill(), or 
+  beginBitmapFill() method.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#lineGradientStyle()">lineGradientStyle</a>(type:<a href="../../String.html">String</a>, colors:<a href="../../Array.html">Array</a>, alphas:<a href="../../Array.html">Array</a>, ratios:<a href="../../Array.html">Array</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, spreadMethod:<a href="../../String.html">String</a> = "pad", interpolationMethod:<a href="../../String.html">String</a> = "rgb", focalPointRatio:<a href="../../Number.html">Number</a> = 0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Specifies a gradient for the line style that subsequent calls to other 
+  Graphics methods (such as lineTo() or drawCircle()) use for drawing.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#lineStyle()">lineStyle</a>(thickness:<a href="../../Number.html">Number</a> = NaN, color:<a href="../../uint.html">uint</a> = 0, alpha:<a href="../../Number.html">Number</a> = 1.0, pixelHinting:<a href="../../Boolean.html">Boolean</a> = false, scaleMode:<a href="../../String.html">String</a> = "normal", caps:<a href="../../String.html">String</a> = null, joints:<a href="../../String.html">String</a> = null, miterLimit:<a href="../../Number.html">Number</a> = 3):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Specifies a line style that Flash uses for subsequent calls to other 
+  Graphics methods (such as lineTo() or drawCircle()) for the object.</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#lineTo()">lineTo</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Draws a line using the current line style from the current drawing position to (x, y); 
+  the current drawing position is then set to (x, y).</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#moveTo()">moveTo</a>(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Moves the current drawing position to (x, y).</div>
+</td><td class="summaryTableOwnerCol">Graphics</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="beginBitmapFill()"></a><a name="beginBitmapFill(flash.display.BitmapData,flash.geom.Matrix,Boolean,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">beginBitmapFill</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function beginBitmapFill(bitmap:<a href="../../flash/display/BitmapData.html">BitmapData</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, repeat:<a href="../../Boolean.html">Boolean</a> = true, smooth:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Fills a drawing area with a bitmap image. The bitmap can be repeated or tiled to fill 
+  the area. The fill remains in effect until you call the <code>beginFill()</code>,  
+  <code>beginBitmapFill()</code>, or <code>beginGradientFill()</code> method. 
+  Calling the <code>clear()</code> method clears the fill.
+    <p>The fill is not rendered until the <code>endFill()</code> method is
+  called. </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">bitmap</span>:<a href="../../flash/display/BitmapData.html">BitmapData</a></code> &mdash; A transparent or opaque bitmap image that contains the bits to be displayed.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">matrix</span>:<a href="../../flash/geom/Matrix.html">Matrix</a></code> (default = <code>null</code>)<code></code> &mdash; A matrix object (of the flash.geom.Matrix class), which you can use to
+  define transformations on the bitmap. For instance, you can use the following matrix
+  to rotate a bitmap by 45 degrees (pi/4 radians):
+  
+  <div class="listing"><pre>
+  matrix = new flash.geom.Matrix(); 
+  matrix.rotate(Math.PI/4);
+  </pre></div>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">repeat</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>true</code>)<code></code> &mdash; If <code>true</code>, the bitmap image repeats in a tiled pattern. If 
+  <code>false</code>, the bitmap image does not repeat, and the edges of the bitmap are 
+  used for any fill area that extends beyond the bitmap. 
+  
+  <p>For example, consider the following bitmap (a 20 x 20-pixel checkerboard pattern):</p>
+<p>
+<img src="../../images/movieClip_beginBitmapFill_repeat_1.jpg"></img>
+</p>
+<p>When <code>repeat</code> is set to <code>true</code> (as in the following example), the bitmap fill 
+  repeats the bitmap:</p>
+<p>
+<img src="../../images/movieClip_beginBitmapFill_repeat_2.jpg"></img>
+</p>
+<p>When <code>repeat</code> is set to <code>false</code>, the bitmap fill uses the edge
+  pixels for the fill area outside of the bitmap:</p>
+<p>
+<img src="../../images/movieClip_beginBitmapFill_repeat_3.jpg"></img>
+</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">smooth</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; If <code>false</code>, upscaled bitmap images are rendered by using a 
+  nearest-neighbor algorithm and look pixelated. If <code>true</code>, upscaled 
+     bitmap images are rendered by using a bilinear algorithm. Rendering by using the nearest 
+  neighbor algorithm is usually faster.
+           </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#endFill()" target="">endFill()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example uses an image (<code>image1.jpg</code>) that is rotated and repeated to fill in a rectangle.
+ 
+ <ol>
+<li>The image file (<code>image1.jpg</code>) is loaded using the <code>Loader</code> and <code>URLRequest</code> objects. 
+ Here the file is in the same directory as the SWF file. The SWF file needs to be compiled with Local Playback 
+ Security set to Access Local Files Only.</li>
+<li>When the image is loaded (<code>Event</code> is complete), the <code>drawImage()</code> method is called. 
+ The <code>ioErrorHandler()</code> method writes a trace comment if the image was not loaded properly.</li>
+<li>In <code>drawImage()</code> method, a <code>BitmapData</code> object is instantiated and its width and height 
+ are set to the image (<code>image1.jpg</code>). Then the source image is drawn into the BitmapData
+ object. Next, a rectangle is drawn in the <code>mySprite</code> Sprite object and the BitmapData object is used to 
+ fill it. Using a <code>Matrix</code> object, the <code>beginBitmapFill()</code> method rotates the image 45 degrees, 
+ then it begins filling the rectangle with the image until it is finished.</li>
+</ol>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.BitmapData;
+    import flash.display.Loader;
+    import flash.net.URLRequest;
+    import flash.events.Event;
+    import flash.events.IOErrorEvent;
+    import flash.geom.Matrix;
+
+    public class Graphics_beginBitmapFillExample extends Sprite {
+ 
+        private var url:String = "image1.jpg";
+        private var loader:Loader = new Loader();
+
+        public function Graphics_beginBitmapFillExample() {
+
+            var request:URLRequest = new URLRequest(url);
+            
+            loader.load(request);
+            loader.contentLoaderInfo.addEventListener(Event.COMPLETE, drawImage);
+            loader.contentLoaderInfo.addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+        }
+
+        private function drawImage(event:Event):void {
+
+            var mySprite:Sprite = new Sprite();
+            var myBitmap:BitmapData = new BitmapData(loader.width, loader.height, false);
+  
+            myBitmap.draw(loader, new Matrix());
+            
+            var matrix:Matrix = new Matrix();
+            matrix.rotate(Math.PI/4);
+            
+            mySprite.graphics.beginBitmapFill(myBitmap, matrix, true);
+            mySprite.graphics.drawRect(100, 50, 200, 90);
+            mySprite.graphics.endFill();
+            
+            addChild(mySprite);
+        }
+ 
+         private function ioErrorHandler(event:IOErrorEvent):void {
+            trace("Unable to load image: " + url);
+        }
+    }   
+}
+</pre></div>
+</div>
+</div>
+<a name="beginFill()"></a><a name="beginFill(uint,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">beginFill</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function beginFill(color:<a href="../../uint.html">uint</a>, alpha:<a href="../../Number.html">Number</a> = 1.0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Specifies a simple one-color fill that subsequent calls to other 
+  Graphics methods (such as <code>lineTo()</code> or <code>drawCircle()</code>) use when drawing.
+  The fill remains in effect until you call the <code>beginFill()</code>,  
+  <code>beginBitmapFill()</code>, or <code>beginGradientFill()</code> method. 
+  Calling the <code>clear()</code> method clears the fill.
+  
+  <p>The fill is not rendered until the <code>endFill()</code> method is
+  called. </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">color</span>:<a href="../../uint.html">uint</a></code> &mdash; The color of the fill (0xRRGGBB).
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alpha</span>:<a href="../../Number.html">Number</a></code> (default = <code>1.0</code>)<code></code> &mdash; The alpha value of the fill (0.0 to 1.0). 
+          </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#endFill()" target="">endFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+<br>Please see the <a href="#includeExamplesSummary" target="">example</a> at the end of this 
+     class for an illustration of how to use this method. 
+     </div>
+<a name="beginGradientFill()"></a><a name="beginGradientFill(String,Array,Array,Array,flash.geom.Matrix,String,String,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">beginGradientFill</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function beginGradientFill(type:<a href="../../String.html">String</a>, colors:<a href="../../Array.html">Array</a>, alphas:<a href="../../Array.html">Array</a>, ratios:<a href="../../Array.html">Array</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, spreadMethod:<a href="../../String.html">String</a> = "pad", interpolationMethod:<a href="../../String.html">String</a> = "rgb", focalPointRatio:<a href="../../Number.html">Number</a> = 0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies a gradient fill that subsequent calls to other 
+  Graphics methods (such as <code>lineTo()</code> or <code>drawCircle()</code>) use when drawing.
+  The fill remains in effect until you call the <code>beginFill()</code>,  
+  <code>beginBitmapFill()</code>, or <code>beginGradientFill()</code> method. 
+  Calling the <code>clear()</code> method clears the fill.
+    <p>The fill is not rendered until the <code>endFill()</code> method is
+  called. </p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; A value from the GradientType class that 
+  specifies which gradient type to use: <code>GradientType.LINEAR</code> or 
+  <code>GradientType.RADIAL</code>. 
+  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">colors</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of RGB hexadecimal color values to be used in the gradient; for example,
+     red is 0xFF0000, blue is 0x0000FF, and so on. You can specify up to 15 colors. 
+     For each color, be sure you specify a corresponding value in the alphas and ratios parameters.
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alphas</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of alpha values for the corresponding colors in the colors array; 
+     valid values are 0 to 1. If the value is less than 0, the default is 0. If the value is 
+     greater than 1, the default is 1.
+     
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">ratios</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of color distribution ratios; valid values are 0 to 255. This value 
+  defines the percentage of the width where the color is sampled at 100%. The value 0 represents 
+  the left-hand position in the gradient box, and 255 represents the right-hand position in the 
+  gradient box. 
+  
+  <p>
+<b>Note:</b> This value represents positions in the gradient box, not the 
+  coordinate space of the final gradient, which might be wider or thinner than the gradient box. 
+  Specify a value for each value in the <code>colors</code> parameter. </p>
+<p>For example, for a linear gradient that includes two colors, blue and green, the 
+  following example illustrates the placement of the colors in the gradient based on different values
+  in the <code>ratios</code> array:</p>
+<table class="innertable" ><tr>
+<th>
+<code>ratios</code>
+</th><th>Gradient</th>
+</tr>
+<tr>
+<td>
+<code>[0, 127]</code>
+</td><td>
+<img src="../../images/gradient-ratios-1.jpg"></img>
+</td>
+</tr>
+<tr>
+<td>
+<code>[0, 255]</code>
+</td><td>
+<img src="../../images/gradient-ratios-2.jpg"></img>
+</td>
+</tr>
+<tr>
+<td>
+<code>[127, 255]</code>
+</td><td>
+<img src="../../images/gradient-ratios-3.jpg"></img>
+</td>
+</tr></table>
+<p>The values in the array must increase sequentially; for example, 
+  <code>[0, 63, 127, 190, 255]</code>. </p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">matrix</span>:<a href="../../flash/geom/Matrix.html">Matrix</a></code> (default = <code>null</code>)<code></code> &mdash; A transformation matrix as defined by the 
+  flash.geom.Matrix class. The flash.geom.Matrix class includes a 
+  <code>createGradientBox()</code> method, which lets you conveniently set up 
+  the matrix for use with the <code>beginGradientFill()</code> method.
+  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">spreadMethod</span>:<a href="../../String.html">String</a></code> (default = "<code>pad</code>")<code></code> &mdash; A value from the SpreadMethod class that 
+  specifies which spread method to use, either: <code>SpreadMethod.PAD</code>,
+  <code>SpreadMethod.REFLECT</code>, or <code>SpreadMethod.REPEAT</code>. 
+  
+  <p>For example, consider a simple linear gradient between two colors:</p>
+<div class="listing"><pre>
+  import flash.geom.*
+  import flash.display.*
+  var fillType:String = GradientType.LINEAR;
+  var colors:Array = [0xFF0000, 0x0000FF];
+  var alphas:Array = [1, 1];
+  var ratios:Array = [0x00, 0xFF];
+  var matr:Matrix = new Matrix();
+  matr.createGradientBox(20, 20, 0, 0, 0);
+  var spreadMethod:String = SpreadMethod.PAD;
+  this.graphics.beginGradientFill(fillType, colors, alphas, ratios, matr, spreadMethod);  
+  this.graphics.drawRect(0,0,100,100);
+  </pre></div>
+<p>This example uses <code>SpreadMethod.PAD</code> for the spread method, and 
+  the gradient fill looks like the following:</p>
+<p>
+<img src="../../images/beginGradientFill_spread_pad.jpg"></img>
+</p>
+<p>If you use <code>SpreadMethod.REFLECT</code> for the spread method, the gradient fill  
+  looks like the following:</p>
+<p>
+<img src="../../images/beginGradientFill_spread_reflect.jpg"></img>
+</p>
+<p>If you use <code>SpreadMethod.REPEAT</code> for the spread method, the gradient fill  
+  looks like the following:</p>
+<p>
+<img src="../../images/beginGradientFill_spread_repeat.jpg"></img>
+</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">interpolationMethod</span>:<a href="../../String.html">String</a></code> (default = "<code>rgb</code>")<code></code> &mdash; A value from the InterpolationMethod class that 
+  specifies which value to use: <code>InterpolationMethod.linearRGB</code> or 
+  <code>InterpolationMethod.RGB</code>
+<p>For example, consider a simple linear gradient between two colors (with the <code>spreadMethod</code> 
+  parameter set to <code>SpreadMethod.REFLECT</code>). The different interpolation methods affect 
+  the appearance as follows: </p>
+<table class="+ topic/table adobe-d/adobetable " ><tr><td align="center">
+<img src="../../images/beginGradientFill_interp_linearrgb.jpg"></img>
+</td><td align="center">
+<img src="../../images/beginGradientFill_interp_rgb.jpg"></img>
+</td></tr>
+<tr><td align="center">
+<code>InterpolationMethod.LINEAR_RGB</code>
+</td><td align="center">
+<code>InterpolationMethod.RGB</code>
+</td></tr></table>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">focalPointRatio</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; A number that controls the 
+  location of the focal point of the gradient. 0 means that the focal point is in the center. 1 
+  means that the focal point is at one border of the gradient circle. -1 means that the focal point 
+  is at the other border of the gradient circle. A value less than -1 or greater than
+  1 is rounded to -1 or 1. For example, the following example
+  shows a <code>focalPointRatio</code> set to 0.75:
+  
+     <p>
+<img src="../../images/radial_sketch.jpg"></img>
+</p>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the <code>type</code> parameter is not valid.
+  
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#endFill()" target="">endFill()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+<br>
+<a href="../../flash/geom/Matrix.html#createGradientBox()" target="">flash.geom.Matrix.createGradientBox()</a>
+<br>
+<a href="GradientType.html" target="">flash.display.GradientType</a>
+<br>
+<a href="SpreadMethod.html" target="">flash.display.SpreadMethod</a>
+<br>
+<a href="../../../main/00000188.html" target="_top">Using Matrix objects</a>
+</div>
+</div>
+<a name="clear()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clear</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clear():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Clears the graphics that were drawn to this Graphics object, and resets fill and
+     line style settings.
+       </p></div>
+<a name="curveTo()"></a><a name="curveTo(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">curveTo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function curveTo(controlX:<a href="../../Number.html">Number</a>, controlY:<a href="../../Number.html">Number</a>, anchorX:<a href="../../Number.html">Number</a>, anchorY:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws a curve using the current line style from the current drawing position 
+  to (anchorX, anchorY) and using the control point that (<code>controlX</code>, 
+  <code>controlY</code>) specifies. The current drawing position is then set to 
+  (<code>anchorX</code>, <code>anchorY</code>). If the movie clip in which you are 
+  drawing contains content created with the Flash drawing tools, calls to the 
+  <code>curveTo()</code> method are drawn underneath this content. If you call the 
+  <code>curveTo()</code> method before any calls to the <code>moveTo()</code> method, 
+  the default of the current drawing position is (0, 0). If any of the parameters are 
+  missing, this method fails and the current drawing position is not changed.
+  
+  <p>The curve drawn is a quadratic Bezier curve. Quadratic Bezier curves 
+  consist of two anchor points and one control point. The curve interpolates the two anchor 
+  points and curves toward the control point. </p>
+<p>
+<img src="../../images/quad_bezier.jpg"></img>
+</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">controlX</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that specifies the horizontal position of the control 
+     point relative to the registration point of the parent display object.  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">controlY</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that specifies the vertical position of the control 
+     point relative to the registration point of the parent display object.  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">anchorX</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that specifies the horizontal position of the next anchor 
+     point relative to the registration point of the parent display object.  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">anchorY</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that specifies the vertical position of the next anchor 
+     point relative to the registration point of the parent display object.  
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example draws a green circular object with a width and height of 100
+ pixels, 250 pixels to the right from the registration point (0, 0) of Sprite display object. 
+
+ <p>Draw four curves to produce a circle and fill it green.</p>
+<p>Note that due to the nature of the quadratic Bezier equation, this is not a perfect circle.
+ The best way to draw a circle is to use the Graphics class's <code>drawCircle()</code> method.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.Shape;
+    
+    public class Graphics_curveToExample1 extends Sprite
+    {
+        public function Graphics_curveToExample1():void
+        {
+            var roundObject:Shape = new Shape();
+
+            roundObject.graphics.beginFill(0x00FF00);
+            roundObject.graphics.moveTo(250, 0);
+            roundObject.graphics.curveTo(300, 0, 300, 50);
+            roundObject.graphics.curveTo(300, 100, 250, 100);
+            roundObject.graphics.curveTo(200, 100, 200, 50);
+            roundObject.graphics.curveTo(200, 0, 250, 0);
+            roundObject.graphics.endFill();
+            
+            this.addChild(roundObject);
+        }
+    }
+}
+</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following example draws a new moon using <code>curveTo()</code> method.
+ 
+ <p>Two curve lines of 1 pixel are drawn and the space in between is filled white. The <code>moveTo()</code> 
+ method is used to position the current drawing position to coordinates (100, 100). The first curve moves the drawing
+ position to (100, 200), its destination point. The second curve returns the position back to 
+ the starting position (100, 100), its destination point. The horizontal control points determine 
+ the different curve sizes.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.Shape;
+
+    public class Graphics_curveToExample2 extends Sprite
+    {
+        public function Graphics_curveToExample2() {
+            var newMoon:Shape = new Shape();
+            
+            newMoon.graphics.lineStyle(1, 0);
+            newMoon.graphics.beginFill(0xFFFFFF);
+            newMoon.graphics.moveTo(100, 100); 
+            newMoon.graphics.curveTo(30, 150, 100, 200);    
+            newMoon.graphics.curveTo(50, 150, 100, 100);
+            graphics.endFill();
+            
+            this.addChild(newMoon);
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="drawCircle()"></a><a name="drawCircle(Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">drawCircle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function drawCircle(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, radius:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws a circle. You must set the line style, fill, or both before 
+  you call the <code>drawCircle()</code> method, by calling the <code>linestyle()</code>, 
+  <code>lineGradientStyle()</code>, <code>beginFill()</code>, <code>beginGradientFill()</code>, 
+  or <code>beginBitmapFill()</code> method.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>x</i> location of the center of the circle relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>y</i> location of the center of the circle relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">radius</span>:<a href="../../Number.html">Number</a></code> &mdash; The radius of the circle (in pixels).
+          </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#drawEllipse()" target="">drawEllipse()</a>
+<br>
+<a href="Graphics.html#lineStyle()" target="">lineStyle()</a>
+<br>
+<a href="Graphics.html#lineGradientStyle()" target="">lineGradientStyle()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+<br>Please see the <a href="#includeExamplesSummary" target="">example</a> at the end of this 
+     class for an illustration of how to use this method. 
+     </div>
+<a name="drawEllipse()"></a><a name="drawEllipse(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">drawEllipse</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function drawEllipse(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws an ellipse. You must set the line style, fill, or both before 
+  you call the <code>drawEllipse()</code> method, by calling the <code>linestyle()</code>, 
+  <code>lineGradientStyle()</code>, <code>beginFill()</code>, <code>beginGradientFill()</code>, 
+  or <code>beginBitmapFill()</code> method.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>x</i> location of the center of the ellipse relative to the 
+ registration point of the parent display object (in pixels).
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; The <i>y</i> location of the center of the ellipse relative to the 
+ registration point of the parent display object (in pixels).
+ 
+ </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:<a href="../../Number.html">Number</a></code> &mdash; The width of the ellipse (in pixels).
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:<a href="../../Number.html">Number</a></code> &mdash; The height of the ellipse (in pixels).
+    </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#drawCircle()" target="">drawCircle()</a>
+<br>
+<a href="Graphics.html#lineStyle()" target="">lineStyle()</a>
+<br>
+<a href="Graphics.html#lineGradientStyle()" target="">lineGradientStyle()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example uses the function <code>drawEgg()</code> to draw three different sized eggs 
+ (three sizes of ellipses), depending on the <code>eggSize</code> parameter.  
+ <ol>
+<li>The constructor calls the function <code>drawEgg()</code> and passes the horizontal and vertical parameters for 
+ where the egg should be drawn, plus the type of egg (<code>eggSize</code>). (The height and width of the 
+ eggs (the ellipses) can be used to decide where to display them.)</li>
+<li>Function <code>drawEgg()</code> draws the different size ellipses and fills them white using 
+ <code>beginFill()</code> method. There is no advance error handling written for his function.</li>
+</ol>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.Shape;
+
+    public class Graphics_drawEllipseExample extends Sprite
+    {
+        public static const SMALL:uint = 0;
+        public static const MEDIUM:uint = 1;
+        public static const LARGE:uint = 2;
+
+        public function Graphics_drawEllipseExample()
+        {
+            drawEgg(SMALL, 0, 100);
+            drawEgg(MEDIUM, 100, 60);
+            drawEgg(LARGE, 250, 35);    
+        }
+
+        public function drawEgg(eggSize:uint, x:Number, y:Number):void  {
+            
+            var myEgg:Shape = new Shape();
+            
+            myEgg.graphics.beginFill(0xFFFFFF);
+            myEgg.graphics.lineStyle(1);
+
+            switch(eggSize) {
+                case SMALL:
+                    myEgg.graphics.drawEllipse(x, y, 60, 70);
+                    break;
+                case MEDIUM:
+                    myEgg.graphics.drawEllipse(x, y, 120, 150);    
+                    break;
+                case LARGE:
+                    myEgg.graphics.drawEllipse(x, y, 150, 200);
+                    break;
+                default:
+                    trace ("Wrong size! There is no egg.");
+                break;            
+            }
+            
+            myEgg.graphics.endFill();
+    
+            this.addChild(myEgg);
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="drawRect()"></a><a name="drawRect(Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">drawRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function drawRect(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws a rectangle. You must set the line style, fill, or both before 
+  you call the <code>drawRect()</code> method, by calling the <code>linestyle()</code>, 
+  <code>lineGradientStyle()</code>, <code>beginFill()</code>, <code>beginGradientFill()</code>, 
+  or <code>beginBitmapFill()</code> method.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; A number indicating the horizontal position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; A number indicating the vertical position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:<a href="../../Number.html">Number</a></code> &mdash; The width of the rectangle (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:<a href="../../Number.html">Number</a></code> &mdash; The height of the rectangle (in pixels).
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the <code>width</code> or <code>height</code> parameters 
+  are not a number (<code>Number.NaN</code>).
+  
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#lineStyle()" target="">lineStyle()</a>
+<br>
+<a href="Graphics.html#lineGradientStyle()" target="">lineGradientStyle()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+<br>
+<a href="Graphics.html#drawRoundRect()" target="">drawRoundRect()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+<br>Please see the <a href="#includeExamplesSummary" target="">example</a> at the end of this 
+     class for an illustration of how to use this method. 
+     </div>
+<a name="drawRoundRect()"></a><a name="drawRoundRect(Number,Number,Number,Number,Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">drawRoundRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function drawRoundRect(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>, width:<a href="../../Number.html">Number</a>, height:<a href="../../Number.html">Number</a>, ellipseWidth:<a href="../../Number.html">Number</a>, ellipseHeight:<a href="../../Number.html">Number</a> = NaN):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws a rounded rectangle. You must set the line style, fill, or both before 
+  you call the <code>drawRoundRect()</code> method, by calling the <code>linestyle()</code>, 
+  <code>lineGradientStyle()</code>, <code>beginFill()</code>, <code>beginGradientFill()</code>, or 
+  <code>beginBitmapFill()</code> method.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; A number indicating the horizontal position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; A number indicating the vertical position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:<a href="../../Number.html">Number</a></code> &mdash; The width of the round rectangle (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:<a href="../../Number.html">Number</a></code> &mdash; The height of the round rectangle (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">ellipseWidth</span>:<a href="../../Number.html">Number</a></code> &mdash; The width of the ellipse used to draw the rounded corners (in pixels).
+          </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">ellipseHeight</span>:<a href="../../Number.html">Number</a></code> (default = <code>NaN</code>)<code></code> &mdash; The height of the ellipse used to draw the rounded corners (in pixels). 
+     Optional; if no value is specified, the default value matches that provided for the 
+     <code>ellipseWidth</code> parameter.
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; If the <code>width</code>, <code>height</code>, <code>ellipseWidth</code> 
+     or <code>ellipseHeight</code> parameters are not a number (<code>Number.NaN</code>).
+  
+     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#lineStyle()" target="">lineStyle()</a>
+<br>
+<a href="Graphics.html#lineGradientStyle()" target="">lineGradientStyle()</a>
+<br>
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+<br>
+<a href="Graphics.html#drawRect()" target="">drawRect()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+<br>Please see the <a href="#includeExamplesSummary" target="">example</a> at the end of this 
+     class for an illustration of how to use this method. 
+     </div>
+<a name="endFill()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">endFill</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function endFill():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Applies a fill to the lines and curves that were added since the last call to the 
+  <code>beginFill()</code>, <code>beginGradientFill()</code>, or 
+  <code>beginBitmapFill()</code> method. Flash uses the fill that was specified in the previous 
+  call to the <code>beginFill()</code>, <code>beginGradientFill()</code>, or <code>beginBitmapFill()</code>
+  method. If the current drawing position does not equal the previous position specified in a 
+  <code>moveTo()</code> method and a fill is defined, the path is closed with a line and then 
+  filled.
+    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Graphics.html#beginFill()" target="">beginFill()</a>
+<br>
+<a href="Graphics.html#beginBitmapFill()" target="">beginBitmapFill()</a>
+<br>
+<a href="Graphics.html#beginGradientFill()" target="">beginGradientFill()</a>
+</div>
+</div>
+<a name="lineGradientStyle()"></a><a name="lineGradientStyle(String,Array,Array,Array,flash.geom.Matrix,String,String,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lineGradientStyle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function lineGradientStyle(type:<a href="../../String.html">String</a>, colors:<a href="../../Array.html">Array</a>, alphas:<a href="../../Array.html">Array</a>, ratios:<a href="../../Array.html">Array</a>, matrix:<a href="../../flash/geom/Matrix.html">Matrix</a> = null, spreadMethod:<a href="../../String.html">String</a> = "pad", interpolationMethod:<a href="../../String.html">String</a> = "rgb", focalPointRatio:<a href="../../Number.html">Number</a> = 0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Specifies a gradient for the line style that subsequent calls to other 
+  Graphics methods (such as <code>lineTo()</code> or <code>drawCircle()</code>) use for drawing.
+  The line style remains in effect until you call the <code>lineStyle()</code> method or the 
+  <code>lineGradientStyle()</code> method with different parameters. You can call the 
+  <code>lineGradientStyle()</code> method in the middle of drawing a path to specify different 
+  styles for different line segments within a path. 
+  
+  <p>Call <code>lineStyle()</code> before you call
+  <code>lineGradientStyle()</code> to enable a stroke, otherwise the value of the line style  
+  remains <code>undefined</code>.</p>
+<p>Calls to <code>clear()</code> set the line style back to 
+  <code>undefined</code>.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:<a href="../../String.html">String</a></code> &mdash; A value from the GradientType class that 
+  specifies which gradient type to use, either GradientType.LINEAR or GradientType.RADIAL.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">colors</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of RGB hex color values to be used in the gradient (for example, 
+  red is 0xFF0000, blue is 0x0000FF, and so on).
+  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alphas</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of alpha values for the corresponding colors in the colors array; 
+     valid values are 0 to 1. If the value is less than 0, the default is 0. If the value is 
+     greater than 1, the default is 1.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">ratios</span>:<a href="../../Array.html">Array</a></code> &mdash; An array of color distribution ratios; valid values are from 0 to 255. This value 
+  defines the percentage of the width where the color is sampled at 100%. The value 0 represents 
+  the left-hand position in the gradient box, and 255 represents the right-hand position in the 
+  gradient box. This value represents positions in the gradient box, not the 
+  coordinate space of the final gradient, which might be wider or thinner than the gradient box. 
+  Specify a value for each value in the <code>colors</code> parameter. 
+  
+  <p>For example, for a linear gradient that includes two colors, blue and green, the 
+  following figure illustrates the placement of the colors in the gradient based on different values
+  in the <code>ratios</code> array:</p>
+<table class="innertable" ><tr>
+<th>
+<code>ratios</code>
+</th><th>Gradient</th>
+</tr>
+<tr>
+<td>
+<code>[0, 127]</code>
+</td><td>
+<img src="../../images/gradient-ratios-1.jpg"></img>
+</td>
+</tr>
+<tr>
+<td>
+<code>[0, 255]</code>
+</td><td>
+<img src="../../images/gradient-ratios-2.jpg"></img>
+</td>
+</tr>
+<tr>
+<td>
+<code>[127, 255]</code>
+</td><td>
+<img src="../../images/gradient-ratios-3.jpg"></img>
+</td>
+</tr></table>
+<p>The values in the array must increase, sequentially; for example, 
+  <code>[0, 63, 127, 190, 255]</code>. </p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">matrix</span>:<a href="../../flash/geom/Matrix.html">Matrix</a></code> (default = <code>null</code>)<code></code> &mdash; A transformation matrix as defined by the 
+  flash.geom.Matrix class. The flash.geom.Matrix class includes a 
+  <code>createGradientBox()</code> method, which lets you conveniently set up 
+  the matrix for use with the <code>lineGradientStyle()</code> method.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">spreadMethod</span>:<a href="../../String.html">String</a></code> (default = "<code>pad</code>")<code></code> &mdash; A value from the SpreadMethod class that 
+  specifies which spread method to use: 
+  
+  <p>
+<table class="+ topic/table adobe-d/adobetable " ><tr><td align="center">
+<img src="../../images/beginGradientFill_spread_pad.jpg"></img>
+</td><td align="center">
+<img src="../../images/beginGradientFill_spread_reflect.jpg"></img>
+</td><td align="center">
+<img src="../../images/beginGradientFill_spread_repeat.jpg"></img>
+</td></tr>
+<tr><td align="center">
+<code>SpreadMethod.PAD</code>
+</td><td align="center">
+<code>SpreadMethod.REFLECT</code>
+</td><td align="center">
+<code>SpreadMethod.REPEAT</code>
+</td></tr></table>
+</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">interpolationMethod</span>:<a href="../../String.html">String</a></code> (default = "<code>rgb</code>")<code></code> &mdash; A value from the InterpolationMethod class that 
+  specifies which value to use. For example, consider a simple linear gradient between two colors (with the <code>spreadMethod</code> 
+  parameter set to <code>SpreadMethod.REFLECT</code>). The different interpolation methods affect 
+  the appearance as follows:
+  
+  <p>
+<table class="+ topic/table adobe-d/adobetable " ><tr><td align="center">
+<img src="../../images/beginGradientFill_interp_linearrgb.jpg"></img>
+</td><td align="center">
+<img src="../../images/beginGradientFill_interp_rgb.jpg"></img>
+</td></tr>
+<tr><td align="center">
+<code>InterpolationMethod.LINEAR_RGB</code>
+</td><td align="center">
+<code>InterpolationMethod.RGB</code>
+</td></tr></table>
+</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">focalPointRatio</span>:<a href="../../Number.html">Number</a></code> (default = <code>0</code>)<code></code> &mdash; A number that controls the location of the focal
+  point of the gradient. The value 0 means the focal point is in the center. The value 1 means the focal   
+  point is at one border of the gradient circle. The value -1 means that the focal point is 
+     at the other border of the gradient circle. Values less than -1 or greater than 1 are
+  rounded to -1 or 1. The following image shows a gradient with a
+     <code>focalPointRatio</code> of -0.75:
+     
+     <p>
+<img src="../../images/radial_sketch.jpg"></img>
+</p>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/geom/Matrix.html#createGradientBox()" target="">flash.geom.Matrix.createGradientBox()</a>
+<br>
+<a href="GradientType.html" target="">flash.display.GradientType</a>
+<br>
+<a href="SpreadMethod.html" target="">flash.display.SpreadMethod</a>
+<br>
+<a href="../../../main/00000188.html" target="_top">Using Matrix objects</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example draws a rectangle and a circle that use 
+ a gradient stroke from red to green to blue.
+ 
+ <p>The method <code>createGradientBox()</code> from the <code>Matrix</code> class is used to define the 
+ gradient box to 200 width and 40 height. The thickness of line is set to 5 pixels. Thickness of the stroke
+ must be defined for <code>lineGradientStyle()</code> method. The gradient is set to linear. Colors for the
+ gradient are set to red, green, and blue. Transparency (alpha value) for the colors is set to 1 (opaque). 
+ The distribution of gradient is even, where the colors are sampled at 100% at 0 (left-hand position in the 
+ gradient box), 128 (middle in the box) and 255 (right-hand position in the box). The width of the rectangle 
+ encompasses all the spectrum of the gradient, while the circle encompasses 50% from the middle of the spectrum.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.Shape;
+    import flash.geom.Matrix; 
+    import flash.display.GradientType;
+    
+    public class Graphics_lineGradientStyleExample extends Sprite
+    {
+        public function Graphics_lineGradientStyleExample()
+        {
+            var myShape:Shape = new Shape();
+            var gradientBoxMatrix:Matrix = new Matrix();
+  
+            gradientBoxMatrix.createGradientBox(200, 40, 0, 0, 0);  
+            
+            myShape.graphics.lineStyle(5);
+  
+            myShape.graphics.lineGradientStyle(GradientType.LINEAR, [0xFF0000,
+            0x00FF00, 0x0000FF], [1, 1, 1], [0, 128, 255], gradientBoxMatrix);
+            
+            myShape.graphics.drawRect(0, 0, 200, 40);
+            myShape.graphics.drawCircle(100, 120, 50);  
+             
+            this.addChild(myShape);
+    
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="lineStyle()"></a><a name="lineStyle(Number,uint,Number,Boolean,String,String,String,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lineStyle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function lineStyle(thickness:<a href="../../Number.html">Number</a> = NaN, color:<a href="../../uint.html">uint</a> = 0, alpha:<a href="../../Number.html">Number</a> = 1.0, pixelHinting:<a href="../../Boolean.html">Boolean</a> = false, scaleMode:<a href="../../String.html">String</a> = "normal", caps:<a href="../../String.html">String</a> = null, joints:<a href="../../String.html">String</a> = null, miterLimit:<a href="../../Number.html">Number</a> = 3):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Specifies a line style that Flash uses for subsequent calls to other 
+  Graphics methods (such as <code>lineTo()</code> or <code>drawCircle()</code>) for the object. 
+  The line style remains in effect until you call the <code>lineGradientStyle()</code> 
+  method or the <code>lineStyle()</code> method with different parameters. 
+  You can call <code>lineStyle()</code> in the middle of drawing a path to specify different 
+  styles for different line segments within the path. 
+  
+  <p>
+<b>Note: </b>Calls to the <code>clear()</code> method set the line style back to 
+  <code>undefined</code>.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">thickness</span>:<a href="../../Number.html">Number</a></code> (default = <code>NaN</code>)<code></code> &mdash; An integer that indicates the thickness of the line in 
+     points; valid values are 0 to 255. If a number is not specified, or if the 
+     parameter is undefined, a line is not drawn. If a value of less than 0 is passed, 
+     the default is 0. The value 0 indicates hairline thickness; the maximum thickness 
+     is 255. If a value greater than 255 is passed, the default is 255. 
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">color</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; A hexadecimal color value of the line; for example, red is 0xFF0000, blue is 
+  0x0000FF, and so on. If a value is not indicated, the default is 0x000000 (black). Optional.
+  
+   
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alpha</span>:<a href="../../Number.html">Number</a></code> (default = <code>1.0</code>)<code></code> &mdash; A number that indicates the alpha value of the color of the line; 
+     valid values are 0 to 1. If a value is not indicated, the default is 1 (solid). If 
+     the value is less than 0, the default is 0. If the value is greater than 1, the default is 1. 
+  
+  
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pixelHinting</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; A Boolean value that specifies whether to hint strokes 
+  to full pixels. This affects both the position of anchors of a curve and the line stroke size 
+  itself. With <code>pixelHinting</code> set to <code>true</code>, line widths are adjusted  
+  to full pixel widths. With <code>pixelHinting</code> set to <code>false</code>, disjoints can 
+  appear for curves and straight lines. For example, the following illustrations show how 
+  Flash Player or Adobe AIR renders two rounded rectangles that are identical, except that the 
+  <code>pixelHinting</code> parameter used in the <code>lineStyle()</code> method is set 
+  differently (the images are scaled by 200%, to emphasize the difference):
+  
+  <p>
+<img src="../../images/lineStyle_pixelHinting.jpg"></img>
+</p>
+<p>If a value is not supplied, the line does not use pixel hinting.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">scaleMode</span>:<a href="../../String.html">String</a></code> (default = "<code>normal</code>")<code></code> &mdash; A value from the LineScaleMode class that 
+  specifies which scale mode to use:
+  
+  <ul>
+<li>
+<code>LineScaleMode.NORMAL</code>&mdash;Always scale the line thickness when the object is scaled 
+  (the default).
+  </li>
+<li>
+<code>LineScaleMode.NONE</code>&mdash;Never scale the line thickness.
+  </li>
+<li>
+<code>LineScaleMode.VERTICAL</code>&mdash;Do not scale the line thickness if the object is scaled vertically 
+  <i>only</i>. For example, consider the following circles, drawn with a one-pixel line, and each with the 
+  <code>scaleMode</code> parameter set to <code>LineScaleMode.VERTICAL</code>. The circle on the left 
+  is scaled vertically only, and the circle on the right is scaled both vertically and horizontally:
+  
+     <p>
+<img src="../../images/LineScaleMode_VERTICAL.jpg"></img>
+</p>
+</li>
+<li>
+<code>LineScaleMode.HORIZONTAL</code>&mdash;Do not scale the line thickness if the object is scaled horizontally 
+  <i>only</i>. For example, consider the following circles, drawn with a one-pixel line, and each with the 
+  <code>scaleMode</code> parameter set to <code>LineScaleMode.HORIZONTAL</code>. The circle on the left 
+  is scaled horizontally only, and the circle on the right is scaled both vertically and horizontally:
+  
+     <p>
+<img src="../../images/LineScaleMode_HORIZONTAL.jpg"></img>
+</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">caps</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; A value from the CapsStyle class that specifies the type of caps at the end 
+  of lines. Valid values are: <code>CapsStyle.NONE</code>, <code>CapsStyle.ROUND</code>, and <code>CapsStyle.SQUARE</code>. 
+  If a value is not indicated, Flash uses round caps. 
+  <p>For example, the following illustrations show the different <code>capsStyle</code> 
+  settings. For each setting, the illustration shows a blue line with a thickness of 30 (for 
+  which the <code>capsStyle</code> applies), and a superimposed black line with a thickness of 1 
+  (for which no <code>capsStyle</code> applies):
+  </p>
+<p>
+<img src="../../images/linecap.jpg"></img>
+</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">joints</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; A value from the JointStyle class that specifies the type of joint appearance
+  used at angles. Valid 
+  values are: <code>JointStyle.BEVEL</code>, <code>JointStyle.MITER</code>, and <code>JointStyle.ROUND</code>.
+  If a value is not indicated, Flash uses round joints. 
+  
+  <p>For example, the following illustrations show the different <code>joints</code> 
+  settings. For each setting, the illustration shows an angled blue line with a thickness of 
+  30 (for which the <code>jointStyle</code> applies), and a superimposed angled black line with a 
+  thickness of 1 (for which no <code>jointStyle</code> applies):
+  </p>
+<p>
+<img src="../../images/linejoin.jpg"></img>
+</p>
+<p>
+<b>Note:</b> For <code>joints</code> set to <code>JointStyle.MITER</code>, 
+  you can use the <code>miterLimit</code> parameter to limit the length of the miter.</p>
+</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">miterLimit</span>:<a href="../../Number.html">Number</a></code> (default = <code>3</code>)<code></code> &mdash; A number that indicates the limit at which a miter is cut off. 
+  Valid values range from 1 to 255 (and values outside of that range are rounded to 1 or 255). 
+  This value is only used if the <code>jointStyle</code> 
+  is set to <code>"miter"</code>. The 
+  <code>miterLimit</code> value represents the length that a miter can extend beyond the point
+  at which the lines meet to form a joint. The value expresses a factor of the line
+  <code>thickness</code>. For example, with a <code>miterLimit</code> factor of 2.5 and a 
+  <code>thickness</code> of 10 pixels, the miter is cut off at 25 pixels. 
+  
+  <p>For example, consider the following angled lines, each drawn with a <code>thickness</code> 
+  of 20, but with <code>miterLimit</code> set to 1, 2, and 4. Superimposed are black reference
+  lines showing the meeting points of the joints:</p>
+<p>
+<img src="../../images/miterLimit.jpg"></img>
+</p>
+<p>Notice that a given <code>miterLimit</code> value has a specific maximum angle 
+  for which the miter is cut off. The following table lists some examples:</p>
+<table class="innertable" ><tr>
+<th>
+<code>miterLimit</code> value:</th><th>Angles smaller than this are cut off:</th>
+</tr>
+<tr>
+<td>1.414</td><td>90 degrees</td>
+</tr>
+<tr>
+<td>2</td><td>60 degrees</td>
+</tr>
+<tr>
+<td>4</td><td>30 degrees</td>
+</tr>
+<tr>
+<td>8</td><td>15 degrees</td>
+</tr></table>
+</td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="LineScaleMode.html" target="">LineScaleMode</a>
+<br>
+<a href="CapsStyle.html" target="">CapsStyle</a>
+<br>
+<a href="JointStyle.html" target="">JointStyle</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+<br>Please see the <a href="#lineTo()" target="">lineTo()</a> or <a href="#moveTo()" target="">moveTo()</a> 
+     method's example for illustrations of how to use the <code>getStyle()</code> method. 
+          </div>
+<a name="lineTo()"></a><a name="lineTo(Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lineTo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function lineTo(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Draws a line using the current line style from the current drawing position to (<code>x</code>, <code>y</code>); 
+  the current drawing position is then set to (<code>x</code>, <code>y</code>).
+  If the display object in which you are drawing contains content that was created with 
+  the Flash drawing tools, calls to the <code>lineTo()</code> method are drawn underneath the content. If 
+  you call <code>lineTo()</code> before any calls to the <code>moveTo()</code> method, the 
+  default position for the current drawing is (<i>0, 0</i>). If any of the parameters are missing, this 
+  method fails and the current drawing position is not changed.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that indicates the horizontal position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that indicates the vertical position relative to the 
+     registration point of the parent display object (in pixels).
+               </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example draws a trapezoid using <code>lineTo()</code> method, starting at
+ pixels (100, 100). 
+
+ <p>The line thickness is set to 10 pixels, color is gold and opaque, caps at the end of lines
+ is set to none (since all lines are jointed), and the joint between the lines is set to 
+ <code>MITER</code> with miter limit set to 10, to have sharp, pointed corners.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.LineScaleMode;
+    import flash.display.CapsStyle;
+    import flash.display.JointStyle;
+    import flash.display.Shape;
+
+
+    public class Graphics_lineToExample extends Sprite {
+
+        public function Graphics_lineToExample() {
+
+            var trapezoid:Shape = new Shape();    
+
+            trapezoid.graphics.lineStyle(10, 0xFFD700, 1, false, LineScaleMode.VERTICAL,
+                               CapsStyle.NONE, JointStyle.MITER, 10);
+
+            trapezoid.graphics.moveTo(100, 100);
+ 
+            trapezoid.graphics.lineTo(120, 50);
+            trapezoid.graphics.lineTo(200, 50);
+            trapezoid.graphics.lineTo(220, 100);
+            trapezoid.graphics.lineTo(100, 100); 
+
+            this.addChild(trapezoid);
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="moveTo()"></a><a name="moveTo(Number,Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">moveTo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function moveTo(x:<a href="../../Number.html">Number</a>, y:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Moves the current drawing position to (<code>x</code>, <code>y</code>). If any of the parameters 
+     are missing, this method fails and the current drawing position is not changed.
+       </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that indicates the horizontal position relative to the 
+     registration point of the parent display object (in pixels).
+     
+     </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:<a href="../../Number.html">Number</a></code> &mdash; A number that indicates the vertical position relative to the 
+     registration point of the parent display object (in pixels).
+          </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example draws a dashed line of three pixels thickness
+ using <code>moveTo()</code> and <code>lineTo()</code> methods.
+ 
+ <p>Using the <code>lineStyle()</code> method, the line thickness is set to 3 pixels. It is also set not
+ to scale. Color is set to red with 25 percent opacity. The <code>CapsStyle</code> property is set to 
+ square (the default is round).</p>
+<p>Since <code>Graphics_moveToExample</code> is an instance of the <code>Sprite</code> class, it has access 
+ to all the Graphics class methods. The Graphics class methods can be used to directly draw on the
+ <code>Graphic_moveToExample</code> Sprite object. However, not putting the vector drawing object in a 
+ <code>Shape</code> limits the way they can be managed, moved, or changed.</p>
+<div class="listing"><pre>
+package {
+    import flash.display.Sprite;
+    import flash.display.CapsStyle;
+    import flash.display.LineScaleMode;
+
+    public class Graphics_moveToExample extends Sprite
+    {
+        public function Graphics_moveToExample() {
+            
+            graphics.lineStyle(3, 0x990000, 0.25, false, 
+                            LineScaleMode.NONE, CapsStyle.SQUARE);
+
+            graphics.moveTo(10, 20);
+            graphics.lineTo(20, 20);
+            graphics.moveTo(30, 20);
+            graphics.lineTo(50, 20);
+            graphics.moveTo(60, 20);
+            graphics.lineTo(80, 20);
+            graphics.moveTo(90, 20);
+            graphics.lineTo(110, 20);            
+            graphics.moveTo(120, 20);
+            graphics.lineTo(130, 20);           
+        }
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">GraphicsExample.as</div>
+<br>
+<div class="detailBody"> The following example uses the GraphicsExample class to draw a circle,
+ a rounded rectangle, and a square.  This task is accomplished by using the following steps:
+ <ol>
+    <li>Declare a <code>size</code> property for later use in determining the size of each shape.</li>
+ 	<li>Declare properties that set the background color to orange, the border color to
+ 	dark gray, the border size to 0 pixels, the corner radius to 9 pixels, and set the space
+ 	between the stage edge and the other objects to be 5 pixels.</li>
+	<li>Use the properties declared in the preceding steps along with the built in methods of the
+ 	Graphics class to draw the circle, rounded rectangle, and square at coordinates x = 0, y = 0.</li>
+	<li>Redraw each of the shapes along the top of the stage, starting at x = 5, y = 5, with
+ 	a 5-pixel spacing between shapes.</li>
+ </ol>
+<div class="listing"><pre>
+
+package {
+    import flash.display.DisplayObject;
+    import flash.display.Graphics;
+    import flash.display.Shape;
+    import flash.display.Sprite;
+
+    public class GraphicsExample extends Sprite {
+        private var size:uint         = 80;
+        private var bgColor:uint      = 0xFFCC00;
+        private var borderColor:uint  = 0x666666;
+        private var borderSize:uint   = 0;
+        private var cornerRadius:uint = 9;
+        private var gutter:uint       = 5;
+
+        public function GraphicsExample() {
+            doDrawCircle();
+            doDrawRoundRect();
+            doDrawRect();
+            refreshLayout();
+        }
+
+        private function refreshLayout():void {
+            var ln:uint = numChildren;
+            var child:DisplayObject;
+            var lastChild:DisplayObject = getChildAt(0);
+            lastChild.x = gutter;
+            lastChild.y = gutter;
+            for (var i:uint = 1; i &lt; ln; i++) {
+                child = getChildAt(i);
+                child.x = gutter + lastChild.x + lastChild.width;
+                child.y = gutter;
+                lastChild = child;
+            }
+        }
+
+        private function doDrawCircle():void {
+            var child:Shape = new Shape();
+            var halfSize:uint = Math.round(size / 2);
+            child.graphics.beginFill(bgColor);
+            child.graphics.lineStyle(borderSize, borderColor);
+            child.graphics.drawCircle(halfSize, halfSize, halfSize);
+            child.graphics.endFill();
+            addChild(child);
+        }
+
+        private function doDrawRoundRect():void {
+            var child:Shape = new Shape();
+            child.graphics.beginFill(bgColor);
+            child.graphics.lineStyle(borderSize, borderColor);
+            child.graphics.drawRoundRect(0, 0, size, size, cornerRadius);
+            child.graphics.endFill();
+            addChild(child);
+        }
+
+        private function doDrawRect():void {
+            var child:Shape = new Shape();
+            child.graphics.beginFill(bgColor);
+            child.graphics.lineStyle(borderSize, borderColor);
+            child.graphics.drawRect(0, 0, size, size);
+            child.graphics.endFill();
+            addChild(child);
+        }
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

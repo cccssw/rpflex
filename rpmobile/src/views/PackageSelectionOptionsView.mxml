@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" creationComplete="view1_creationCompleteHandler(event)" 
+		title="{resourceManager.getString('view','packageSelectViewTitle')}" xmlns:controls="com.loning.mobile.controls.*">
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.*;
+			
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			
+			[Bindable]
+			protected var arr:ArrayCollection=new ArrayCollection();
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				var files:Array=File.applicationDirectory
+					.resolvePath("assets/rpcam/config").getDirectoryListing();
+				var settings:ElementSettings=ElementSettings.load();
+				
+				for each(var f:File in files){
+					var o:Object=new Object();
+					o.title=f.name.replace("."+f.extension,"");
+					o.description="";
+					o.selected=settings.selectedPackages[o.title]==true?true:false;
+					arr.addItem(o);
+				}
+				this.optionList.dataProvider=arr;
+			}
+			
+			private var file:File;
+			protected function save_clickHandler(event:MouseEvent):void
+			{
+				var settings:ElementSettings=ElementSettings.load();
+				settings.selectedPackages=new Dictionary();
+				for each(var obj:Object in arr){
+					settings.selectedPackages[obj.title]=obj.selected;
+					trace(obj.title,"was",obj.selected);
+				}
+				ElementSettings.save();
+				this.navigator.popView();
+			}
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+	</fx:Declarations>
+	<s:navigationContent>
+		<s:Button id="backButton" label="{resourceManager.getString('view','back')}" click="this.navigator.popView();"/>
+	</s:navigationContent>  
+	
+	<s:actionContent>
+		<s:Button id="save" click="save_clickHandler(event)" label="{resourceManager.getString('view','save')}"/>
+	</s:actionContent>
+	<s:List dataProvider="{this.arr}"
+			skinClass="com.loning.mobile.controls.MobileSkinnableDataContainerSkin"
+			id="optionList" top="10" x="0" y="0" height="100%" width="100%">
+		<s:itemRenderer>
+			<fx:Component>
+				<controls:MobileCheckBoxListItemRenderer />
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+</s:View>

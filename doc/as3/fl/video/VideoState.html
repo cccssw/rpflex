@@ -1,0 +1,663 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="VideoState,fl.video.VideoState,ACTIONSCRIPT,activeVideoPlayerIndex,added,align,align,ALL,AUTO_LAYOUT,AUTO_REWOUND,autoLayout,autoPlay,autoRewind,autoRewind,backButton,bitrate,bitrate,bitrate,BOTTOM_LEFT,BOTTOM_RIGHT,BOTTOM,BUFFERING_STATE_ENTERED,buffering,bufferingBar,bufferingBarHidesAndDisablesOthers,BUFFERING,bufferTime,bufferTime,bytesLoaded,bytesLoaded,bytesTotal,bytesTotal,CAPTION_CHANGE,CAPTION_TARGET_CREATED,captionButton,captionCuePointObject,captionTargetName,captionTarget,captionTarget,CENTER,CLOSE,code,COMPLETE,CONNECTION_ERROR,CUE_POINT,cuePoints,DEFAULT_TIMEOUT,DELETE_DEFAULT_PLAYER,DISCONNECTED,EVENT,EXACT_FIT,fallbackServerName,FAST_FORWARD,FLV,flvPlaybackName,flvPlayback,forwardButton,fullScreenBackgroundColor,fullScreenButton,fullScreenSkinDelay,fullScreenTakeOver,height,height,idleTimeout,idleTimeout,ILLEGAL_CUE_POINT,INCMANAGER_CLASS_UNSET,iNCManagerClass,info,INVALID_SEEK,INVALID_SOURCE,INVALID_XML,isLive,isLive,isRTMP,isRTMP,isRTMP,isRTMP,LAYOUT,LEFT,LOADING,MAINTAIN_ASPECT_RATIO,METADATA_RECEIVED,metadata,metadata,metadataLoaded,MISSING_SKIN_STYLE,muteButton,NAVIGATION,ncMgr,ncMgr,netConnection,netConnection,netConnection,NETSTREAM_CLIENT_CLASS_UNSET,netStream,netStreamClientClass,NO_BITRATE_MATCH,NO_CONNECTION,NO_SCALE,NULL_URL_LOAD,oldBounds,oldRegistrationBounds,pauseButton,PAUSED_STATE_ENTERED,paused,PAUSED,playButton,PLAYHEAD_UPDATE,playheadPercentage,playheadTime,playheadTime,playheadTime,playheadUpdateInterval,playheadUpdateInterval,PLAYING_STATE_ENTERED,playing,PLAYING,playPauseButton,preferredHeight,preferredWidth,preview,PROGRESS,progressInterval,progressInterval,READY,registrationHeight,registrationHeight,registrationWidth,registrationWidth,registrationX,registrationX,registrationY,registrationY,RESIZING,REWIND,REWINDING,RIGHT,scaleMode,scaleMode,scaleX,scaleX,scaleY,scaleY,SCRUB_FINISH,SCRUB_START,scrubbing,seekBarInterval,seekBarScrubTolerance,seekBar,SEEKED,SEEKING,seekToPrevOffset,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,SHORT_VERSION,showCaptions,simpleFormatting,SKIN_ERROR,SKIN_LOADED,skin,skinAutoHide,skinBackgroundAlpha,skinBackgroundColor,skinFadeTime,skinScaleMaximum,SOUND_UPDATE,soundTransform,soundTransform,soundTransform,source,source,source,STATE_CHANGE,state,state,state,stateResponsive,stateResponsive,stopButton,STOPPED_STATE_ENTERED,stopped,STOPPED,streamHeight,streamHeight,streamLength,streamLength,streamLength,streamName,streamName,streamWidth,streamWidth,timeout,timeout,TOP_LEFT,TOP_RIGHT,TOP,totalTime,totalTime,track,type,UNSUPPORTED_PROPERTY,VERSION,VERSION,VERSION,VERSION,VERSION,VERSION,videoHeight,videoPlayer,videoPlayerIndex,videoPlayer,videoWidth,visible,visibleVideoPlayerIndex,volume,volume,volumeBarInterval,volumeBarScrubTolerance,volumeBar,vp,vp,vp,vp,vp,width,width,x,x,y,y" name="keywords">
+<title>fl.video.VideoState (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'VideoState - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/video/VideoState.html&amp;fl/video/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">VideoState</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("VideoState"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.video</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final   class  VideoState</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">VideoState  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+  The VideoState class provides constant values for the read-only <code>FLVPlayback.state</code> and
+  <code>VideoPlayer.state</code> properties.
+  
+     <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="VideoPlayer.html#state" target="">VideoPlayer.state</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable hideInheritedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable hideInheritedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#BUFFERING">BUFFERING</a> : <a href="../../String.html">String</a> = "buffering"<div class="summaryTableDescription">[static] 
+   The video player is in the buffering state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#CONNECTION_ERROR">CONNECTION_ERROR</a> : <a href="../../String.html">String</a> = "connectionError"<div class="summaryTableDescription">[static] 
+   The video player is in the connection error state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DISCONNECTED">DISCONNECTED</a> : <a href="../../String.html">String</a> = "disconnected"<div class="summaryTableDescription">[static] 
+   The video player is in the disconnected state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LOADING">LOADING</a> : <a href="../../String.html">String</a> = "loading"<div class="summaryTableDescription">[static] 
+   The video player is in the loading state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PAUSED">PAUSED</a> : <a href="../../String.html">String</a> = "paused"<div class="summaryTableDescription">[static] 
+   The video player is in the paused state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PLAYING">PLAYING</a> : <a href="../../String.html">String</a> = "playing"<div class="summaryTableDescription">[static] 
+   The video player is in the playing state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RESIZING">RESIZING</a> : <a href="../../String.html">String</a> = "resizing"<div class="summaryTableDescription">[static] 
+   The video player is in the resizing state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#REWINDING">REWINDING</a> : <a href="../../String.html">String</a> = "rewinding"<div class="summaryTableDescription">[static] 
+   The video player is in the rewinding state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#SEEKING">SEEKING</a> : <a href="../../String.html">String</a> = "seeking"<div class="summaryTableDescription">[static] 
+   The video player is in the seeking state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#STOPPED">STOPPED</a> : <a href="../../String.html">String</a> = "stopped"<div class="summaryTableDescription">[static] 
+   The video player is in the stopped state.</div>
+</td><td class="summaryTableOwnerCol">VideoState</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Constant Detail</div>
+<a name="constantDetail"></a><a name="BUFFERING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">BUFFERING</td><td class="detailHeaderType">Constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const BUFFERING:<a href="../../String.html">String</a> = "buffering"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the buffering state. 
+   It enters this state immediately 
+   after a call is made to the <code>play()</code> or <code>load()</code> method. 
+   Use the <code>FLVPlayback.state</code> property to obtain the current state of 
+   the video player.
+      <p>This is a responsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#buffering" target="">FLVPlayback.buffering</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="CONNECTION_ERROR"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">CONNECTION_ERROR</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const CONNECTION_ERROR:<a href="../../String.html">String</a> = "connectionError"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the connection error state.
+   It enters this state when a video stream attempted to 
+   load but was unsuccessful. There are two possible reasons for the error: 
+   no connection to the server or the stream was not found.
+   Use the <code>FLVPlayback.state</code> property to obtain the current 
+   state of the video player.
+      <p>This is an unresponsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="DISCONNECTED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DISCONNECTED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DISCONNECTED:<a href="../../String.html">String</a> = "disconnected"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the disconnected state.
+                 It enters this state when the stream is closed by a call 
+                 to the <code>closeVideoPlayer()</code>
+   method or timed out on idle. Use the <code>FLVPlayback.state</code> property to 
+   obtain the current state of the video player.
+   
+   <p>The FLVPlayback instance is in a disconnected state until you set the 
+   <code>FLVPlayback.source</code> property.</p>
+   
+         </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#closeVideoPlayer()" target="">FLVPlayback.closeVideoPlayer()</a>
+<br>
+<a href="FLVPlayback.html#idleTimeout" target="">FLVPlayback.idleTimeout</a>
+<br>
+<a href="FLVPlayback.html#source" target="">FLVPlayback.source</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="LOADING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">LOADING</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const LOADING:<a href="../../String.html">String</a> = "loading"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the loading state. 
+   It enters this state immediately after the
+   <code>play()</code> or <code>load()</code> method is called or
+   after the <code>FLVPlayback.source</code> property is set.
+   Use the <code>FLVPlayback.state</code> property to obtain the current state of 
+   the video player.
+      <p>This is an unresponsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#load()" target="">FLVPlayback.load()</a>
+<br>
+<a href="FLVPlayback.html#play()" target="">FLVPlayback.play()</a>
+<br>
+<a href="FLVPlayback.html#source" target="">FLVPlayback.source</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PAUSED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PAUSED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PAUSED:<a href="../../String.html">String</a> = "paused"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the paused state.
+   It enters this state when the FLV file is loaded, but play is paused
+   by calling the <code>pause()</code> or
+   <code>load()</code> method. 
+   Use the <code>FLVPlayback.state</code> 
+   property to obtain the current state of the video player.
+      <p>This is a responsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#load()" target="">FLVPlayback.load()</a>
+<br>
+<a href="FLVPlayback.html#pause()" target="">FLVPlayback.pause()</a>
+<br>
+<a href="FLVPlayback.html#paused" target="">FLVPlayback.paused</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PLAYING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PLAYING</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PLAYING:<a href="../../String.html">String</a> = "playing"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the playing state.
+   It enters this state when the FLV file is loaded and is playing. 
+   Use the <code>FLVPlayback.state</code> 
+   property to obtain the current state of the video player.
+      <p>This is a responsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#playing" target="">FLVPlayback.playing</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+<br>
+<a href="FLVPlayback.html#play()" target="">FLVPlayback.play()</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="RESIZING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RESIZING</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RESIZING:<a href="../../String.html">String</a> = "resizing"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the resizing state.
+   It enters this state during autolayout.
+   The <code>FLVPlayback</code> instance never has this constant's state value, 
+   only the <code>VideoPlayer</code> instance. Use the <code>VideoPlayer.state</code> 
+   property to obtain the current 
+   state of the video player.
+      <p>This is a unresponsive state.</p>
+                    </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="VideoPlayer.html#state" target="">VideoPlayer.state</a>
+<br>
+<a href="VideoPlayer.html#stateResponsive" target="">VideoPlayer.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="REWINDING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">REWINDING</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const REWINDING:<a href="../../String.html">String</a> = "rewinding"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the rewinding state.
+   It enters this state when the video rewinds automatically.
+   The video rewinds automatically after it has stopped, either
+   by clicking the stop button or by the video playing to the end. 
+   After rewinding is complete, the state is stopped.
+   Use the <code>FLVPlayback.state</code> property to obtain the current 
+   state of the video player.
+      <p>This is an unresponsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#autoRewind" target="">FLVPlayback.autoRewind</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="SEEKING"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SEEKING</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const SEEKING:<a href="../../String.html">String</a> = "seeking"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the seeking state.
+   It enters this state after the <code>seek()</code> method
+   is called and also while the user is scrubbing with the seek bar.
+   Use the <code>FLVPlayback.state</code> property to obtain the current 
+   state of the video player.
+   
+   <p>This is an unresponsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+<br>
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#seek()" target="">FLVPlayback.seek()</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="STOPPED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">STOPPED</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const STOPPED:<a href="../../String.html">String</a> = "stopped"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   The video player is in the stopped state.
+   It enters this state when the FLV file is loaded and 
+   play is stopped by calling the <code>stop()</code> method or when the
+   playhead reaches the end of the stream. Use the <code>FLVPlayback.state</code> 
+   property to obtain the current state of the video player.
+      <p>This is a responsive state.</p>
+            </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FLVPlayback.html#state" target="">FLVPlayback.state</a>
+<br>
+<a href="FLVPlayback.html#stateResponsive" target="">FLVPlayback.stateResponsive</a>
+<br>
+<a href="FLVPlayback.html#stop()" target="">FLVPlayback.stop()</a>
+<br>
+<a href="FLVPlayback.html#stopped" target="">FLVPlayback.stopped</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

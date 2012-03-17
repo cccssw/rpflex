@@ -1,0 +1,3674 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="File,flash.filesystem.File,APPEND,applicationDirectory,applicationStorageDirectory,bytesAvailable,desktopDirectory,documentsDirectory,endian,exists,icon,isDirectory,isHidden,isPackage,isSymbolicLink,lineEnding,nativePath,objectEncoding,parent,position,readAhead,READ,separator,systemCharset,UPDATE,url,userDirectory,WRITE,browseForDirectory,browseForOpen,browseForOpenMultiple,browseForSave,cancel,canonicalize,clone,close,copyToAsync,copyTo,createDirectory,createTempDirectory,createTempFile,deleteDirectoryAsync,deleteDirectory,deleteFileAsync,deleteFile,getDirectoryListingAsync,getDirectoryListing,getRelativePath,getRootDirectories,moveToAsync,moveTo,moveToTrashAsync,moveToTrash,openAsync,open,readBoolean,readBytes,readByte,readDouble,readFloat,readInt,readMultiByte,readObject,readShort,readUnsignedByte,readUnsignedInt,readUnsignedShort,readUTFBytes,readUTF,resolvePath,truncate,writeBoolean,writeBytes,writeByte,writeDouble,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUnsignedInt,writeUTFBytes,writeUTF" name="keywords">
+<title>flash.filesystem.File (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'File - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/filesystem/File.html&amp;flash/filesystem/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">File</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("File"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<div class="annotation">(AIR only)</div>
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.filesystem</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  File</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">File  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/net/FileReference.html">FileReference</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ A File object represents a path to a file or directory. This can be an existing file or directory, or it can be
+ one that does not yet exist; for instance, it can represent the path to a file or directory that you plan to create. 
+ 
+  <p>The File class has a number of properties and methods for getting information about the file system and 
+  for performing operations, such as copying files and directories.</p>
+  
+  <p>You can use File objects along with the FileStream class to read and write files. </p>
+  
+  <p>The File class extends the FileReference class. The FileReference class, which is available in Flash<sup>&reg;</sup> Player as
+  well as Adobe<sup>&reg;</sup> AIR<sup>&trade;</sup>, represents a pointer to a file, but the File class adds properties and methods that are not 
+  exposed in Flash Player (in a SWF running in a browser), due to security considerations.</p>
+  
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FileStream.html" target="">FileStream</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#applicationDirectory">applicationDirectory</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The folder containing the application's installed files.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#applicationStorageDirectory">applicationStorageDirectory</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[static] [read-only] 
+     The application's private storage directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#creationDate">creationDate</a> : <a href="../../Date.html">Date</a>
+<div class="summaryTableDescription">[read-only] 
+    The creation date of the file on the local disk.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#creator">creator</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+    The Macintosh creator type of the file, which is only used in Mac OS versions 
+ prior to Mac OS X.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#desktopDirectory">desktopDirectory</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The user's desktop directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#documentsDirectory">documentsDirectory</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The user's documents directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#exists">exists</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the referenced file or directory exists.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/net/FileReference.html#extension">extension</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+  The filename extension.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#icon">icon</a> : <a href="../../flash/desktop/Icon.html">Icon</a>
+<div class="summaryTableDescription">[read-only] 
+  An Icon object containing the icons defined for the file.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#isDirectory">isDirectory</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the reference is to a directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#isHidden">isHidden</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the referenced file or directory is "hidden."
+     The value is true if the referenced file or directory is hidden, false otherwise.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#isPackage">isPackage</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the referenced directory is a package.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#isSymbolicLink">isSymbolicLink</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+     Indicates whether the reference is a symbolic link.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#lineEnding">lineEnding</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The line-ending character sequence used by the host operating system.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#modificationDate">modificationDate</a> : <a href="../../Date.html">Date</a>
+<div class="summaryTableDescription">[read-only] 
+   The date that the file on the local disk was last modified.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#name">name</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+   The name of the file on the local disk.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#nativePath">nativePath</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+  The full path in the host operating system representation.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#parent">parent</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[read-only] 
+     The directory that contains the file or directory referenced by this File object.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#separator">separator</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The host operating system's path component separator character.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#size">size</a> : <a href="../../Number.html">Number</a>
+<div class="summaryTableDescription">[read-only] 
+  The size of the file on the local disk in bytes.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#systemCharset">systemCharset</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The default encoding used by the host operating system.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/net/FileReference.html#type">type</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+  The file type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#url">url</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+  The URL for this file path.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#userDirectory">userDirectory</a> : <a href="../../flash/filesystem/File.html">File</a>
+<div class="summaryTableDescription">[static] [read-only] 
+  The user's directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#File()">File</a>(path:<a href="../../String.html">String</a> = null)</div>
+<div class="summaryTableDescription">
+ The constructor function for the File class.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#browse()">browse</a>(typeFilter:<a href="../../Array.html">Array</a> = null):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+    Displays a file-browsing dialog box that lets the
+    user select a file to upload.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#browseForDirectory()">browseForDirectory</a>(title:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Displays a directory chooser dialog box, in which the user can select a directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#browseForOpen()">browseForOpen</a>(title:<a href="../../String.html">String</a>, typeFilter:<a href="../../Array.html">Array</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Displays the Open File dialog box, in which the user can select a file to open.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#browseForOpenMultiple()">browseForOpenMultiple</a>(title:<a href="../../String.html">String</a>, typeFilter:<a href="../../Array.html">Array</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Displays the Open File dialog box, in which the user can select one or more files to open.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#browseForSave()">browseForSave</a>(title:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Displays the Save File dialog box, in which the user can select a file destination.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#cancel()">cancel</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Cancels any pending asynchronous operation.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#canonicalize()">canonicalize</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Canonicalizes the File path.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#clone()">clone</a>():<a href="../../flash/filesystem/File.html">File</a>
+</div>
+<div class="summaryTableDescription">
+  Returns a copy of this File object.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#copyTo()">copyTo</a>(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Copies the file or directory at the location specified by this File object to 
+  the location specified by the newLocation parameter.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#copyToAsync()">copyToAsync</a>(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Begins copying the file or directory at the location specified by this File object to 
+  the location specified by the destination parameter.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#createDirectory()">createDirectory</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Creates the specified directory and any necessary parent directories.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#createTempDirectory()">createTempDirectory</a>():<a href="../../flash/filesystem/File.html">File</a>
+</div>
+<div class="summaryTableDescription">[static] 
+  Returns a reference to a new temporary directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#createTempFile()">createTempFile</a>():<a href="../../flash/filesystem/File.html">File</a>
+</div>
+<div class="summaryTableDescription">[static] 
+  Returns a reference to a new temporary file.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#deleteDirectory()">deleteDirectory</a>(deleteDirectoryContents:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Deletes the directory.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#deleteDirectoryAsync()">deleteDirectoryAsync</a>(deleteDirectoryContents:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Deletes the directory asynchronously.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#deleteFile()">deleteFile</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Deletes the file.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#deleteFileAsync()">deleteFileAsync</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Deletes the file asynchronously.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#download()">download</a>(request:<a href="../../flash/net/URLRequest.html">URLRequest</a>, defaultFileName:<a href="../../String.html">String</a> = null):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Opens a dialog box that lets the user download a file from a remote server.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#getDirectoryListing()">getDirectoryListing</a>():<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">
+  Returns an array of File objects corresponding to files and directories in the directory represented by this
+  File object.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#getDirectoryListingAsync()">getDirectoryListingAsync</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Asynchronously retrieves an array of File objects corresponding to the contents of the directory represented
+  by this File object.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#getRelativePath()">getRelativePath</a>(ref:<a href="../../flash/net/FileReference.html">FileReference</a>, useDotDot:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Finds the relative path between two File paths.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#getRootDirectories()">getRootDirectories</a>():<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">[static] 
+  Returns an array of File objects, listing the file system root directories.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#moveTo()">moveTo</a>(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Moves the file or directory at the location specified by this File object to 
+  the location specified by the destination parameter.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#moveToAsync()">moveToAsync</a>(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Begins moving the file or directory at the location specified by this File object to 
+  the location specified by the newLocation parameter.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#moveToTrash()">moveToTrash</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Moves a file or directory to the trash.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#moveToTrashAsync()">moveToTrashAsync</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Asynchronously moves a file or directory to the trash.</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#resolvePath()">resolvePath</a>(path:<a href="../../String.html">String</a>):<a href="../../flash/filesystem/File.html">File</a>
+</div>
+<div class="summaryTableDescription">
+  Creates a new File object with a path relative to this File object's path, based on the 
+  path parameter (a String).</div>
+</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#upload()">upload</a>(request:<a href="../../flash/net/URLRequest.html">URLRequest</a>, uploadDataFieldName:<a href="../../String.html">String</a> = "Filedata", testUpload:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+    Starts the upload of a file selected by a user to a remote server.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/net/FileReference.html#uploadUnencoded()">uploadUnencoded</a>(request:<a href="../../flash/net/URLRequest.html">URLRequest</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+    Initiate uploading a file to a URL without any encoding.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:cancel">cancel</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a pending asynchronous operation is canceled.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:complete">complete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an asynchronous operation is complete.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:directoryListing">directoryListing</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a directory list is available as a result of a call to the getDirectoryListingAsync() method.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/net/FileReference.html#event:httpResponseStatus">httpResponseStatus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to the upload() or uploadUnencoded() method attempts to access data over HTTP and Adobe AIR is able to detect and return the status code for the request.</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#event:httpStatus">httpStatus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an upload fails and an HTTP status code is available to describe the failure.</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:ioError">ioError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an error occurs during an asynchronous file operation.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#event:open">open</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an upload or download operation starts.</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#event:progress">progress</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched periodically during the file upload or download operation.</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:securityError">securityError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an operation violates a security constraint.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:select">select</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the user selects a file or directory from a file- or directory-browsing dialog box.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="#event:selectMultiple">selectMultiple</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the user selects files from the dialog box opened by a call to the browseForOpenMultiple() method.</td><td class="summaryTableOwnerCol">File</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/net/FileReference.html#event:uploadCompleteData">uploadCompleteData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched after data is received from the server after a successful upload.</td><td class="summaryTableOwnerCol"><a href="../../flash/net/FileReference.html">FileReference</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="applicationDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;applicationDirectory</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>applicationDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The folder containing the application's installed files.
+  
+  <p>The <code>url</code> property for this object uses the <code>app</code> URL scheme 
+  (not the <code>file</code> URL scheme). This means that the <code>url</code> string is specified starting 
+  with <code>"app:"</code> (not <code>"file:"</code>). Also, if you create a File object relative to the 
+  <code>File.applicationDirectory</code> directory (by using the <code>resolvePath()</code> method), 
+  the <code>url</code> property of the File object also uses the <code>app</code> URL scheme. 
+  </p>
+  
+  <p><i>Note:</i> You cannot write to files or directories that have paths that use the <code>app</code>
+  URL scheme. Also, you cannot delete or create files or folders that have paths that use the <code>app</code>
+  URL scheme. Modifying content in the application directory is a bad practice, for security reasons.
+  If you want to store application-specific data, consider using the application storage directory 
+  (<code>File.applicationStorageDirectory</code>). If you want any of the content in the application storage directory
+  to have access to the application-priveleged functionality (AIR APIs), you can expose that functionality
+  by using a sandbox bridge.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get applicationDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#applicationStorageDirectory" target="">applicationStorageDirectory</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="applicationStorageDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;applicationStorageDirectory</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>applicationStorageDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The application's private storage directory. 
+  
+  <p>Each AIR application has a unique, persistent application storage directory, which
+  is created when you first access <code>File.applicationStorageDirectory</code>. This directory 
+  is a convenient location to store application-specific data.</p>
+  
+  <p>When you uninstall an AIR application, the uninstaller does not delete files that are stored 
+  in the application storage directory.</p>
+  
+  <p>The <code>url</code> property for this object uses the <code>app-storage</code> URL scheme 
+  (not the <code>file</code> URL scheme). This means that the <code>url</code> string is specified starting 
+  with <code>"app-storage:"</code> (not <code>"file:"</code>). Also, if you create a File object relative to the 
+  <code>File.applicationStoreDirectory</code> directory (by using the <code>resolvePath()</code> method), 
+  the <code>url</code> of the File object also uses the <code>app-storage</code> URL scheme 
+  (as in the example).</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get applicationStorageDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a File object pointing to the "images" subdirectory of 
+ the application storage directory.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var tempFiles:File = File.applicationStorageDirectory;
+tempFiles = tempFiles.resolvePath("images/");
+trace(tempFiles.url); // app-storage:/images</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="desktopDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;desktopDirectory</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>desktopDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The user's desktop directory.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get desktopDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code outputs a list of files and directories contained in the user's desktop directory.<div class="listing"><pre>
+import flash.filesystem.File;
+var desktop:File = File.desktopDirectory;
+
+var files:Array = desktop.getDirectoryListing()
+
+for (var i:uint = 0; i &lt; files.length; i++) {
+    trace(files[i].nativePath)
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples\File.desktopDirectory.1",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="documentsDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;documentsDirectory</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>documentsDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The user's documents directory.
+  
+  <p>On Windows, this is the My Documents directory
+  (for example, C:\Documents and Settings\userName\My Documents). 
+  On Mac OS, it is /Users/userName/Documents.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get documentsDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>File.documentsDirectory</code> property and the 
+ <code>File.createDirectory()</code> method to ensure that a directory named "AIR Test" exists
+ in the user's documents directory.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var directory:File = File.documentsDirectory;
+directory = directory.resolvePath("AIR Test");
+
+File.createDirectory(directory);
+trace(directory.exists); // true</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="exists"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;exists</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>exists:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the referenced file or directory exists.
+     The value is <code>true</code> if the File object points to an existing file or directory, 
+     <code>false</code> otherwise.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get exists():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a temporary file, then deletes it and uses the 
+ <code>File.exists</code> property to check for the existence of the file.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var temp:File = File.createTempFile();
+trace(temp.exists) // true
+temp.deleteFile();
+trace(temp.exists) // false
+</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples\File.exists.1",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="icon"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;icon</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>icon:<a href="../../flash/desktop/Icon.html">Icon</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  An Icon object containing the icons defined for the file. An Icon object is an array of BitmapData
+  objects corresponding to the various icon states.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get icon():<a href="../../flash/desktop/Icon.html">Icon</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to find the image in the <code>icon</code> array that has
+ the least height, and it sets a Bitmap object to that image.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.display.*;
+
+var directory:File = File.documentsDirectory;
+var bitmaps:Array = file.icon.bitmaps;
+var bmpData:BitmapData = new BitmapData(1, 1);
+for (var i:uint = 0; i &lt; bitmaps.length; i++) {
+    if (bitmaps[i].height &gt; bmpData.height) {
+        bmpData = file.icon.bitmaps[i];
+    }
+}
+var iconBmp:Bitmap = new Bitmap(bmpData);</pre></div> You might add this Bitmap object as a child of a display object container, 
+ such as a Sprite object or a Flex UIComponent object.</div>
+</div>
+<a name="propertyDetail"></a><a name="isDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;isDirectory</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isDirectory:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the reference is to a directory.
+     The value is <code>true</code> if the File object points to a directory; <code>false</code> otherwise.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isDirectory():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates an array of File objects pointing to files and directories in the 
+ user directory and then uses the <code>isDirectory</code> property to list only those File objects that point to 
+ directories (not to files).<div class="listing"><pre>
+import flash.filesystem.*;
+
+var userDirFiles:Array = File.userDirectory.getDirectoryListing();
+for (var i:uint = 0; i &lt; userDirFiles.length; i++) {
+    if (userDirFiles[i].isDirectory) {
+        trace(userDirFiles[i].nativePath);
+    }
+}    </pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples\File.isDirectory.1",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="isHidden"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;isHidden</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isHidden:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the referenced file or directory is "hidden."
+     The value is <code>true</code> if the referenced file or directory is hidden, <code>false</code> otherwise.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isHidden():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates an array of File objects pointing to files and directories in the 
+ user directory and then uses the <code>isHidden</code> property to list hidden files and directories.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var userDirFiles:Array = File.userDirectory.getDirectoryListing();
+for (var i:uint = 0; i &lt; userDirFiles.length; i++) {
+    if (userDirFiles[i].isHidden) {
+        trace(userDirFiles[i].nativePath);
+    }
+}    </pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples\File.isHidden.1",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="isPackage"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;isPackage</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isPackage:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the referenced directory is a package.
+     
+  <p>The value is <code>true</code> if the referenced directory is a package, <code>false</code> otherwise.
+  Note that the File class does not allow creating packages directly.</p>
+  
+  <ul>
+  
+   <li>On Mac OS, directories can be designated as packages and will show up in the Finder as a
+   single file rather than as a directory. This property is set to <code>true</code> if the referenced 
+   directory is a package, and <code>false</code> if the file is not a directory, does not exists, or 
+  is not a package.</li>
+  
+   <li>On other operating systems, this property is always set to <code>false</code>.</li>
+  
+  </ul>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isPackage():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="isSymbolicLink"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;isSymbolicLink</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>isSymbolicLink:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Indicates whether the reference is a symbolic link.
+     
+  <p>The value is <code>true</code> if the File object is a symbolic link, <code>false</code> otherwise.
+  Note that the File class does not allow creating symbolic links directly.</p>
+  
+  <p>Symbolic links allow a file to point to another file or directory on disk. Although similar, symbolic
+  links are not the same as aliases on Mac OS and shortcuts on Windows. An alias or a  shortcut is always
+  reported as a file (rather than a directory), and reading or writing to an alias or shortcut
+  never affects the original file or directory that it points to.
+  On the other hand, a symbolic link behaves exactly like the file or directory it points to. It can be
+  reported as a file or a directory, and reading or writing to a symbolic link affects the file or directory
+  that it points to, not the symbolic link itself.</p>
+  
+  <p>Mac<sup>&reg;</sup> OS<sup>&reg;</sup> and Windows<sup>&reg;</sup> Vista<sup>&reg;</sup>
+  support symbolic links. Additionally, on Windows the <code>isSymbolicLink</code> 
+  property for a File object referencing a junction point (used in the NTFS file system) is set to
+  <code>true</code>.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get isSymbolicLink():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="lineEnding"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;lineEnding</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>lineEnding:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The line-ending character sequence used by the host operating system.
+    <p>On Mac OS, this is the line-feed character (character code 0x0A hexadecimal). 
+  On Windows, this is the carriage return character (character code 0x0D hexadecimal) followed
+  by the line-feed character (character code 0x0A hexadecimal).</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get lineEnding():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code writes a string (<code>str</code>) to a text file and uses the 
+ <code>File.lineEnding</code> static property to replace all instances of the new-line character 
+ (represented in the code by the regular expression <code>/\n/g</code>) with the preferred  
+ line-ending character for the host operating system.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var str:String = "Hello\n" + 
+        "World\n";
+str = str.replace(/\n/g, File.lineEnding);
+var file:File = File.documentsDirectory.resolvePath("AIR Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.WRITE);
+fileStream.writeUTF(str);
+fileStream.close();</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="nativePath"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;nativePath</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>nativePath:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The full path in the host operating system representation. On Mac OS, 
+  the forward slash (/) character is used as the path separator. 
+  However, in Windows, you can <i>set</i> the <code>nativePath</code> property 
+  by using the forward slash character or the backslash (\) character as the 
+     path separator, and AIR automatically replaces forward slashes with 
+  the appropriate backslash character.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get nativePath():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set nativePath(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; The caller is not in the application security sandbox.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The syntax of the path is invalid.
+    </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows the difference between the <code>nativePath</code>
+ property and the <code>url</code> property of a File object. The comments show results on an
+ example Windows computer.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var docs:File = File.documentsDirectory;
+trace(docs.nativePath); // C:\Documents and Settings\turing\My Documents
+trace(docs.url); // file:///C:/Documents%20and%20Settings/turing/My%20Documents</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="parent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;parent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>parent:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     The directory that contains the file or directory referenced by this File object. 
+  
+  <p>If the file or directory does not exist, the <code>parent</code> property still returns the
+  File object that points to the containing directory, even if that directory does not exist.</p>
+    <p>This property is identical to the return value for <code>resolvePath("..")</code> except that the parent of a root
+  directory is <code>null</code>.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get parent():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>parent</code> property to show the directory
+ that contains a temporary file.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var tempFile:File = File.createTempDirectory();
+trace(tempFile.parent.nativePath);
+tempFile.deleteFile();</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="separator"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;separator</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>separator:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The host operating system's path component separator character.
+  
+  <p>On Mac OS, this is the forward slash (/) character. On Windows, it is the backslash 
+  (\) character.</p>
+  
+  <p><i>Note:</i> When using the backslash character in a String literal, remember to 
+  type the character twice (as in <code>"directory\\file.ext"</code>). Each pair of backslashes
+  in a String literal represent a single backslash in the String.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get separator():<a href="../../String.html">String</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>getRelativePath()</code> method to get the relative path
+ between a directory and a file. The code then uses the <code>File.separator</code> static property 
+ to replace forward slash (/) characters in the path with the separator character used by the operating 
+ system, which is the backslash character (\) on Windows and the forward slash character on other
+ operating systems.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var directory:File = File.documentsDirectory.resolvePath("Apollo Test");
+var file:File = File.documentsDirectory.resolvePath("Apollo Test/employees/bob/test.txt");
+
+var relativePath:String = directory.getRelativePath(file); // employees/bob/test.txt
+relativePath = relativePath.replace(/\//g, File.separator);
+trace(relativePath); </pre></div> In this example, the <code>replace()</code> method uses a regular expression, 
+ <code>/\//g</code>, to match <i>all</i> forward slash characters.</div>
+</div>
+<a name="propertyDetail"></a><a name="systemCharset"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;systemCharset</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>systemCharset:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The default encoding used by the host operating system. 
+  
+  <p>Possible values include <code>"windows-1252"</code>
+  <code>"shift-jis"</code>, <code>"cn-gb"</code>, <code>"iso-8859-1"</code>, and others.
+  For a complete list, see <a href="../../charset-codes.html" target="">Supported Character Sets</a>.</p>
+  
+  <p>You can use this value when using the <code>readMultiByte()</code> and <code>writeMultiByte()</code>
+  methods of the FileStream class.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get systemCharset():<a href="../../String.html">String</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FileStream.html#readMultiByte()" target="">FileStream.readMultiByte()</a>
+<br>
+<a href="FileStream.html#writeMultiByte()" target="">FileStream.writeMultiByte()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code opens a file (a test.txt file in the AIR Test subdirectory of the 
+ user's documents directory), and uses the <code>File.systemCharset</code> static property
+ as the <code>charSet</code> parameter of a call to the <code>readMultiByte()</code> method
+ of a FileStream object.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var file:File = File.documentsDirectory.resolvePath("AIR Test/test.txt");
+var fileStream:FileStream = new FileStream();
+fileStream.open(file, FileMode.READ);
+var str:String = fileStream.readMultiByte(file.size, File.systemCharset);
+trace(str);    </pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="url"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;url</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>url:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The URL for this file path.
+    <p>If this is a reference to a path in the application storage directory, the URL scheme is 
+  <code>"app-storage"</code>; if it is a reference to a path in the application directory, the 
+  URL scheme is <code>"app"</code>; otherwise the scheme is <code>"file"</code>. </p>
+    <p>You can use blank space characters (rather than <code>"%20"</code>) when
+     <i>assigning</i> a value to the <code>url</code> property; AIR automatically 
+  encodes the strings (for instance, converting spaces to <code>"%20"</code>).</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get url():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set url(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<br>
+<span class="label"> Throws </span>
+<br>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The URL syntax is invalid.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; The caller is not in the application security sandbox.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#nativePath" target="">nativePath</a>
+<br>
+<a href="../../package.html#decodeURI()" target="">decodeURI() global function</a>
+<br>
+<a href="../../package.html#decodeURIComponent()" target="">decodeURIComponent() global function</a>
+<br>
+<a href="../../package.html#encodeURI()" target="">decodeURI() global function</a>
+<br>
+<a href="../../package.html#encodeURIComponent()" target="">decodeURIComponent() global function</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows the difference between the <code>nativePath</code>
+ property and the <code>url</code> property of a File object. The comments show results on an
+ example Windows computer.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var docs:File = File.documentsDirectory;
+trace(docs.nativePath); // C:\Documents and Settings\turing\My Documents
+trace(docs.url); // file:///C:/Documents%20and%20Settings/turing/My%20Documents</pre></div></div>
+</div>
+<a name="propertyDetail"></a><a name="userDirectory"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;userDirectory</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>userDirectory:<a href="../../flash/filesystem/File.html">File</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The user's directory.
+    <p>On Windows, this is the parent of the My Documents directory
+  (for example, C:\Documents and Settings\userName). On
+  Mac OS it is /Users/userName.</p>
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get userDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code outputs a list of files and directories contained in the root level 
+ of the user directory:<div class="listing"><pre>
+import flash.filesystem.File;
+
+var files:Array = File.userDirectory.listDirectory()
+for (var i:uint = 0; i &lt; files.length; i++) {
+    trace(files[i].nativePath)
+}</pre></div></div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="File()"></a><a name="File(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;File</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function File(path:<a href="../../String.html">String</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ The constructor function for the File class. 
+ 
+ <p>If you pass a <code>path</code> argument, the
+ File object points to the specified path, and the <code>nativePath</code> property and 
+ and <code>url</code> property are set to reflect that path.</p>
+ 
+ </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">path</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; The path to the file. You can specify the path by using either a URL or 
+ native path (platform-specific) notation. 
+ 
+ <p>If you specify a URL, you can use any of the following
+ URL schemes: <code>file</code>, <code>app</code>, or 
+ <code>app-storage</code>. The following are valid values for the <code>path</code>
+ parameter using URL notation: </p>
+ 
+ <ul>
+ 
+  <li><code>"app:/DesktopPathTest.xml"</code></li> 
+  <li><code>"app-storage:/preferences.xml"</code></li> 
+  <li><code>"file:///C:/Documents%20and%20Settings/bob/Desktop"</code> (the desktop on Bob's Windows computer)</li>
+  <li><code>"file:///Users/bob/Desktop"</code> (the desktop on Bob's Mac computer)</li>
+ 
+ </ul>
+ 
+ <p>The <code>app</code> and <code>app-storage</code> URL schemes 
+ are useful because they can point to a valid file on both Mac and Windows. However, 
+ in the other two examples, which use the <code>file</code> URL scheme to point to the 
+ user's desktop directory, it would be better to pass <i>no</i> <code>path</code> argument  
+ to the <code>File()</code> constructor and then assign <code>File.desktopDirectory</code>
+ to the File object, as a way to access the desktop directory that is both platform- and
+ user-independent.</p>
+ 
+ <p>If you specify a native path, on Windows you can use either the backslash character or 
+ the forward slash character as the path separator in this argument; on Mac OS, use the    
+ forward slash. The following are valid values for the <code>path</code> parameter using 
+ native path notation:</p>
+ 
+ <ul>
+ 
+  <li><code>"C:/Documents and Settings/bob/Desktop"</code></li>
+  <li><code>"/Users/bob/Desktop"</code></li>
+ 
+ </ul>
+ 
+ <p>However, for these two examples, you should pass <i>no</i> <code>path</code> argument  
+ to the <code>File()</code> constructor and then assign <code>File.desktopDirectory</code>
+ to the File object, as a way to access the desktop directory that is both platform- and
+ user-independent.</p>
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The syntax of the <code>path</code> parameter is invalid.
+ 
+ </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#nativePath" target="">nativePath</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="browseForDirectory()"></a><a name="browseForDirectory(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;browseForDirectory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function browseForDirectory(title:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Displays a directory chooser dialog box, in which the user can select a directory.
+  When the user selects the directory, the <code>select</code> event is dispatched.
+  The <code>target</code> property of the <code>select</code> event is the
+  File object pointing to the selected directory.
+  
+  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:<a href="../../String.html">String</a></code> &mdash; The string that is diplayed in the title bar of the dialog box.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>cancel</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user clicks the Cancel button in the Open File dialog box.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>select</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user selects a directory and closes the directory chooser dialog box.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#browseForOpen()" target="">browseForOpen()</a>
+<br>
+<a href="File.html#browseForSave()" target="">browseForSave()</a>
+<br>
+<a href="File.html#event:select" target="">select</a>
+<br>
+<a href="../../flash/net/FileFilter.html" target="">flash.net.FileFilter</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>File.browseForDirectory()</code> method to 
+ let the user select a directory. When the directory is selected, the code lists the contents of
+ the selected directory in the <code>trace()</code> output.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.events.Event;
+
+var directory:File = File.documentsDirectory;
+
+try
+{
+    directory.browseForDirectory("Select Directory");
+    directory.addEventListener(Event.SELECT, directorySelected);
+}
+catch (error:Error)
+{
+    trace("Failed:", error.message)
+}
+
+function directorySelected(event:Event):void 
+{
+    directory = event.target as File;
+    var files:Array = directory.getDirectoryListing();
+    for(var i:uint = 0; i &lt; files.length; i++)
+    {
+        trace(files[i].name);
+    }
+}</pre></div>
+</div>
+</div>
+<a name="browseForOpen()"></a><a name="browseForOpen(String,Array)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;browseForOpen</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function browseForOpen(title:<a href="../../String.html">String</a>, typeFilter:<a href="../../Array.html">Array</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Displays the Open File dialog box, in which the user can select a file to open.
+  
+  <p>When the user selects the file, the <code>select</code> event is dispatched.
+  The <code>target</code> property of the <code>select</code> event is the
+  File object pointing to the selected file.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:<a href="../../String.html">String</a></code> &mdash; The string that is diplayed in the title bar of the dialog box.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">typeFilter</span>:<a href="../../Array.html">Array</a></code> (default = <code>null</code>)<code></code> &mdash; An array of FileFilter instances used to filter the files 
+  that are displayed in the dialog box. If you omit this parameter, all files are 
+  displayed. For more information, see the FileFilter class.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>cancel</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user clicks the Cancel button in the Open File dialog box.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>select</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user selects a file and closes the Open File dialog box.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#browseForSave()" target="">browseForSave()</a>
+<br>
+<a href="File.html#browseForOpenMultiple()" target="">browseForOpenMultiple()</a>
+<br>
+<a href="File.html#browseDirectory()" target="">browseDirectory()</a>
+<br>
+<a href="File.html#event:select" target="">select</a>
+<br>
+<a href="../../flash/net/FileFilter.html" target="">flash.net.FileFilter</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>File.browseForOpen()</code> method to 
+ let the user choose a text file. When the file is selected, the code reads the file data
+ into a string.<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+import flash.net.FileFilter;
+
+var fileToOpen:File = new File();
+var txtFilter:FileFilter = new FileFilter("Text", "*.as;*.css;*.html;*.txt;*.xml");
+
+try 
+{
+    fileToOpen.browseForOpen("Open", [txtFilter]);
+    fileToOpen.addEventListener(Event.SELECT, fileSelected);
+}
+catch (error:Error)
+{
+    trace("Failed:", error.message)
+}
+
+function fileSelected(event:Event):void 
+{
+    var stream:FileStream = new FileStream();
+    stream.open(event.target, FileMode.READ);
+    var fileData:String = stream.readUTFBytes(stream.bytesAvailable);
+    trace(fileData);
+}</pre></div>
+</div>
+</div>
+<a name="browseForOpenMultiple()"></a><a name="browseForOpenMultiple(String,Array)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;browseForOpenMultiple</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function browseForOpenMultiple(title:<a href="../../String.html">String</a>, typeFilter:<a href="../../Array.html">Array</a> = null):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Displays the Open File dialog box, in which the user can select one or more files to open.
+  
+  <p>When the user selects the files, the <code>selectMultiple</code> event is dispatched.
+  The <code>target</code> property of the <code>select</code> event is this
+  File object.  Unlike <code>browseForOpen()</code>, with the <code>browseForOpenMultiple()</code> 
+  method, this File object is not updated to reference any of the chosen files. 
+  Instead, the resulting <code>selectMultiple</code> event contains an array of the chosen files.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:<a href="../../String.html">String</a></code> &mdash; The string that is diplayed in the title bar of the dialog box.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">typeFilter</span>:<a href="../../Array.html">Array</a></code> (default = <code>null</code>)<code></code> &mdash; An array of FileFilter instances used to filter the files 
+  that are displayed in the dialog box. If you omit this parameter, all files are 
+  displayed. For more information, see the FileFilter class.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>cancel</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user clicks the Cancel button in the Open File dialog box.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>selectMultiple</b>:<a href="../../flash/events/FileListEvent.html"><code>FileListEvent</code></a></code> &mdash; Dispatched when the user selects files and closes the Open File dialog box.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#browseForSave()" target="">browseForSave()</a>
+<br>
+<a href="File.html#browseForOpen()" target="">browseForOpen()</a>
+<br>
+<a href="File.html#browseDirectory()" target="">browseDirectory()</a>
+<br>
+<a href="File.html#event:selectMultiple" target="">selectMultiple</a>
+<br>
+<a href="../../flash/net/FileFilter.html" target="">flash.net.FileFilter</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>File.browseForOpenMultiple()</code> method to 
+ let the user choose multiple files. When the files are selected, the code outputs the paths
+ for the selected files.<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.FileListEvent;
+
+var docsDir:File = File.documentsDirectory;
+try
+{
+    docsDir.browseForOpenMultiple("Select Files");
+    docsDir.addEventListener(FileListEvent.SELECT_MULTIPLE, filesSelected);
+}
+catch (error:Error)
+{
+    trace("Failed:", error.message)
+}
+
+function filesSelected(event:FileListEvent):void 
+{
+    for (var i:uint = 0; i &lt; event.files.length; i++) 
+    {
+        trace(event.files[i].nativePath);
+    }
+}</pre></div>
+</div>
+</div>
+<a name="browseForSave()"></a><a name="browseForSave(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;browseForSave</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function browseForSave(title:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Displays the Save File dialog box, in which the user can select a file destination. 
+  
+  <p>When the user selects the file, the <code>select</code> event is dispatched.
+  The <code>target</code> property of the <code>select</code> event is the
+  File object pointing to the selected Save destination.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">title</span>:<a href="../../String.html">String</a></code> &mdash; The string that is diplayed in the title bar of the dialog box.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>cancel</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user clicks the Cancel button in the Save File dialog box.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>select</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the user selects a file and closes the Save File dialog box.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#browseDirectory()" target="">browseDirectory()</a>
+<br>
+<a href="File.html#browseForOpen()" target="">browseForOpen()</a>
+<br>
+<a href="File.html#event:select" target="">select</a>
+<br>
+<a href="../../flash/net/FileFilter.html" target="">flash.net.FileFilter</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>File.browseForSave()</code> method to 
+ let the user select a path for saving a file. When the files are selected, the code saves
+ data to the selected file path.<div class="listing"><pre>
+import flash.filesystem.*;
+import flash.events.Event;
+
+var docsDir:File = File.documentsDirectory;
+try
+{
+    docsDir.browseForSave("Save As");
+    docsDir.addEventListener(Event.SELECT, saveData);
+}
+catch (error:Error)
+{
+    trace("Failed:", error.message)
+}
+
+function saveData(event:Event):void 
+{
+    var newFile:File = event.target as File;
+    var str:String = "Hello.";
+    if (!newFile.exists)
+    {
+        var stream:FileStream = new FileStream();
+        stream.open(newFile, FileMode.WRITE);
+        stream.writeUTFBytes(str);
+        stream.close();
+    }
+}
+</pre></div>
+</div>
+</div>
+<a name="cancel()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;cancel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function cancel():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<p></p>
+<p></p><p>
+  Cancels any pending asynchronous operation.
+  </p></div>
+<a name="canonicalize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;canonicalize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function canonicalize():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Canonicalizes the File path.
+  
+  <p>If the File object represents an existing file or directory, canonicalization 
+  adjusts the path so that it matches the case of the actual file or directory name.
+  If the File object is a symbolic link, canonicalization adjusts the path so that
+  it matches the file or directory that the link points to, regardless of whether the
+  file or directory that is pointed to exists.</p>
+<p>In addition, canonicalization converts short filesnames to long filenames on Windows.</p>
+</p><br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody">     The following code shows how to use the <code>canonicalize()</code> method to find the 
+ correct capitalization of a directory name. Before running this example, create a directory named AIR Test 
+ on the desktop of your computer.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var path:File = File.desktopDirectory.resolvePath("air test");
+trace(path.nativePath); 
+path.canonicalize();
+trace(path.nativePath); // ...\AIR Test
+</pre></div>
+</div>
+<br>
+<div class="detailBody">     The following code shows how to use the <code>canonicalize()</code> method to find the 
+ long name of a Windows directory based on its short name. This example assumes that there is an AIR Test
+ directory at the root of the C: drive, and that the system has assigned the short name AIR~1 to the directory.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var path:File = new File();
+path.nativePath = "C:\\AIR~1";
+path.canonicalize();
+trace(path.nativePath); // C:\AIR Test</pre></div>
+</div>
+</div>
+<a name="clone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clone():<a href="../../flash/filesystem/File.html">File</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns a copy of this File object. Event registrations are not copied.
+  
+  <p>
+<i>Note:</i> This method does <i>not</i> copy the file itself. It simply makes a 
+  copy of the instance of the <span>ActionScript<sup>&trade;</sup>
+</span>
+   File object. To copy a file, use the 
+  <code>copyTo()</code> method.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/filesystem/File.html">File</a></code></td>
+</tr>
+</table>
+</div>
+<a name="copyTo()"></a><a name="copyTo(flash.net.FileReference,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;copyTo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function copyTo(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Copies the file or directory at the location specified by this File object to 
+  the location specified by the <code>newLocation</code> parameter. The copy process 
+  creates any required parent directories (if possible).
+  
+  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newLocation</span>:<a href="../../flash/net/FileReference.html">FileReference</a></code> &mdash; The target location of the new file. Note that this File object specifies
+  the resulting (copied) file or directory, <i>not</i> the path to the containing directory.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">overwrite</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; If <code>false</code>, the copy fails if the file specified by the <code>target</code>  
+  parameter already exists. If <code>true</code>, the operation first deletes any existing file or directory 
+  of the same name. (However, you cannot copy a file or folder to its original path.) 
+  
+  <p>
+<i>Note:</i> If you set this parameter to <code>true</code> and the source and destination File objects
+  point to the same path, calling this method deletes the file or directory.</p>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The source does not exist; or the destination exists and <code>overwrite</code> is <code>false</code> 
+  or the source could not be copied to the target. On Windows, you cannot copy a file that is open or a directory
+  that contains a file that is open.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#copyToAsync()" target="">copyToAsync()</a>
+<br>
+<a href="File.html#moveTo()" target="">moveTo()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>copyTo()</code> method to copy  a file. 
+ Before running this code, create a test1.txt file in the AIR Test subdirectory of the documents directory on  
+ your computer. The resulting copied file is named test2.txt, and it is also in the AIR Test subdirectory. When 
+ you set the <code>clobber</code> parameter to <code>true</code>, the operation overwrites any existing test2.txt file.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.events.Event;
+
+var sourceFile:FileReference = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("AIR Test/test1.txt");
+var destination:FileReference = File.documentsDirectory;
+destination = destination.resolvePath("AIR Test/test2.txt");
+
+if (sourceFile.copyTo(destination, true)) {
+    trace("Done.")
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>copyTo()</code> method to copy a file.
+ Before running this code, create a test1.txt file in the AIR Test subdirectory of the home directory on your 
+ computer. The resulting copied file is named test2.txt. The <code>try</code> and <code>catch</code> statements
+ show how to respond to errors.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var sourceFile:File = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("AIR Test/test1.txt");
+var destination:File = File.documentsDirectory;
+destination = destination.resolvePath("AIR Test/test2.txt");
+
+try 
+{
+    if (sourceFile.copyTo(destination, true)) {
+}
+catch (error:Error)
+{
+    trace("Error:" error.message)
+}</pre></div>
+</div>
+</div>
+<a name="copyToAsync()"></a><a name="copyToAsync(flash.net.FileReference,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;copyToAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function copyToAsync(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Begins copying the file or directory at the location specified by this File object to 
+  the location specified by the <code>destination</code> parameter. 
+  
+  <p>Upon completion, either a <code>complete</code> event (successful) or an <code>ioError</code> event 
+  (unsucessful) is dispatched. The copy process creates any required parent directories (if possible).</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newLocation</span>:<a href="../../flash/net/FileReference.html">FileReference</a></code> &mdash; The target location of the new file. Note that this File object specifies
+  the resulting (copied) file or directory, <i>not</i> the path to the containing directory.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">overwrite</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; If <code>false</code>, the copy fails if the file specified by the <code>target</code>  
+  file already exists. If <code>true</code>, the operation first deletes any existing file or directory 
+  of the same name.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>complete</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the file or directory has been successfully copied.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The source does not exist; or the destination exists and <code>overwrite</code> 
+  is <code>false</code>; or the source could not be copied to the target. On Windows, you cannot copy a 
+  file that is open or a directory that contains a file that is open.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#copyTo()" target="">copyTo()</a>
+<br>
+<a href="File.html#moveToAsync()" target="">moveToAsync()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>copyToAsync()</code> method to copy a file.
+ Before running this code, be sure to create a test1.txt file in the AIR Test subdirectory of the documents directory on your 
+ computer. The resulting copied file is named test2.txt, and it is also in the AIR Test subdirectory. When you set the 
+ <code>clobber</code> parameter to <code>true</code>, the operation overwrites any existing test2.txt file.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("AIR Test/test1.txt");
+var destination:File = File.documentsDirectory;
+destination = destination.resolvePath("AIR Test/test2.txt");
+
+var sourceFile.copyToAsync(destination, true);
+sourceFile.addEventListener(Event.COMPLETE, fileCopiedHandler);
+
+function fileCopiedHandler(event:Event): void {
+    trace("Done.")
+}</pre></div>
+</div>
+</div>
+<a name="createDirectory()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;createDirectory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function createDirectory():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Creates the specified directory and any necessary parent directories. If the 
+  directory already exists, no action is taken.
+  
+  </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The directory did not exist and could not be created. 
+    </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody">     The following code moves a file named test.txt on the desktop to the AIR Test 
+ subdirectory of the documents directory. The call to the <code>createDirectory()</code> method 
+ ensures that the AIR Test directory exists before the file is moved.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var source:File = File.desktopDirectory.resolvePath("test.txt");
+var target:File = File.documentsDirectory.resolvePath("AIR Test/test.txt");
+var targetParent:File = target.parent;
+targetParent.createDirectory();
+source.moveTo(target, true);</pre></div>
+</div>
+</div>
+<a name="createTempDirectory()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;createTempDirectory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createTempDirectory():<a href="../../flash/filesystem/File.html">File</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns a reference to a new temporary directory. This is a new directory
+  in the system's temporary directory path.
+    <p>This method lets you identify a new, unique directory, without having to
+  query the system to see that the directory is new and unique.</p>
+<p>You may want to delete the temporary directory before closing the application, 
+  since it is not deleted automatically.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/filesystem/File.html">File</a></code> &mdash; A File object referencing the new temporary directory.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#createTempFile()" target="">createTempFile()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>createTempFile()</code> method to obtain a 
+ reference to a new temporary directory.<div class="listing"><pre>
+import flash.File;
+
+var temp:File = File.createTempDirectory();
+trace(temp.nativePath);</pre></div> Each time you run this code, a new (unique) file is created. </div>
+</div>
+<a name="createTempFile()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;createTempFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createTempFile():<a href="../../flash/filesystem/File.html">File</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns a reference to a new temporary file. This is a new file
+  in the system's temporary directory path.
+  
+  <p>This method lets you identify a new, unique file, without having to
+  query the system to see that the file is new and unique.</p>
+<p>You may want to delete the temporary file before closing the application, 
+  since it is not deleted automatically.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/filesystem/File.html">File</a></code> &mdash; A File object referencing the new temporary file.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#createTempDirectory()" target="">createTempDirectory()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code uses the <code>createTempFile()</code> method to obtain a 
+ reference to a new temporary file.<div class="listing"><pre>
+import flash.File;
+
+var temp:File = File.createTempFile();
+trace(temp.nativePath);</pre></div> Each time you run this code, a new (unique) file is created. </div>
+</div>
+<a name="deleteDirectory()"></a><a name="deleteDirectory(Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deleteDirectory</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deleteDirectory(deleteDirectoryContents:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Deletes the directory.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">deleteDirectoryContents</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Specifies whether or not to delete a directory that contains files or
+  subdirectories. When <code>false</code>, if the directory contains files or directories, a call to
+  this method throws an exception.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The directory does not exist, or the directory could not be deleted. On Windows, 
+  you cannot delete a directory that contains a file that is open.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#deleteDirectoryAsync()" target="">deleteDirectoryAsync()</a>
+<br>
+<a href="File.html#deleteFile()" target="">deleteFile()</a>
+<br>
+<a href="File.html#moveToTrash()" target="">moveToTrash()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates an empty directory and then uses the 
+ <code>deleteDirectory()</code> method to delete the directory. <div class="listing"><pre>
+import flash.filesystem.File;
+
+var directory:File = File.documentsDirectory.resolvePath("Empty Junk Directory/");
+File.createDirectory(directory);
+trace(directory.exists); // true
+directory.deleteDirectory();
+trace(directory.exists); // false</pre></div>
+</div>
+</div>
+<a name="deleteDirectoryAsync()"></a><a name="deleteDirectoryAsync(Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deleteDirectoryAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deleteDirectoryAsync(deleteDirectoryContents:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Deletes the directory asynchronously. 
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">deleteDirectoryContents</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; Specifies whether or not to delete a directory that contains files or
+  subdirectories. When <code>false</code>, if the directory contains files or directories, 
+  the File object dispatches an <code>ioError</code> event.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>complete</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the directory has been deleted successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The directory does not exist or could not be deleted. On Windows, 
+  you cannot delete a directory that contains a file that is open.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#deleteDirectory()" target="">deleteDirectory()</a>
+<br>
+<a href="File.html#deleteFileAsync()" target="">deleteFileAsync()</a>
+<br>
+<a href="File.html#moveToTrashAsync()" target="">moveToTrashAsync()</a>
+</div>
+</div>
+<a name="deleteFile()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deleteFile</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deleteFile():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Deletes the file.
+    </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The file does not exist or could not to be deleted. On Windows, 
+  you cannot delete a file that is currently open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#deleteDirectory()" target="">deleteDirectory()</a>
+<br>
+<a href="File.html#deleteFileAsync()" target="">deleteFileAsync()</a>
+<br>
+<a href="File.html#moveToTrash()" target="">moveToTrash()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code creates a temporary file and then calls the <code>deleteFile()</code>
+ method to delete it.<div class="listing"><pre>
+import flash.filesystem.*;
+
+var file:File = File.createTempFile();
+trace(file.exists); // true
+file.deleteFile();
+trace(file.exists); // false</pre></div>
+</div>
+</div>
+<a name="deleteFileAsync()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;deleteFileAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deleteFileAsync():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Deletes the file asynchronously. 
+  
+  </p><br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>complete</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the file has been deleted successfully.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The file does not exist or could not be deleted. On Windows,
+  you cannot delete a file that is currently open.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#deleteDirectoryAsync()" target="">deleteDirectoryAsync()</a>
+<br>
+<a href="File.html#deleteFile()" target="">deleteFile()</a>
+<br>
+<a href="File.html#moveToTrashAsync()" target="">moveToTrashAsync()</a>
+</div>
+</div>
+<a name="getDirectoryListing()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;getDirectoryListing</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDirectoryListing():<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns an array of File objects corresponding to files and directories in the directory represented by this
+  File object. This method does not explore the contents of subdirectories.
+  
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An array of File objects.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#getDirectoryListingAsync()" target="">getDirectoryListingAsync()</a>
+<br>
+<a href="File.html#getRootDirectories()" target="">getRootDirectories()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>getDirectoryListing()</code> method to 
+ enumerate the contents of the user directory.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var directory:File = File.userDirectory;
+var list:Array = directory.getDirectoryListing();
+for (var i:uint = 0; i &lt; list.length; i++) {
+    trace(list[i].nativePath);
+}</pre></div>
+</div>
+</div>
+<a name="getDirectoryListingAsync()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;getDirectoryListingAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDirectoryListingAsync():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Asynchronously retrieves an array of File objects corresponding to the contents of the directory represented
+  by this File object. 
+  
+  </p><br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/ErrorEvent.html"><code>ErrorEvent</code></a></code> &mdash; You do not have adequate permissions to read this directory, or the directory does
+  not exist.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>directoryListing</b>:<a href="../../flash/events/FileListEvent.html"><code>FileListEvent</code></a></code> &mdash; The directory contents have been enumerated successfully. The 
+  <code>contents</code> event includes a <code>files</code> property, which is the resulting array of File objects.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#getDirectoryListing()" target="">getDirectoryListing()</a>
+<br>
+<a href="File.html#getRootDirectories()" target="">getRootDirectories()</a>
+<br>
+<a href="File.html#event:directoryListing" target="">directoryListing event</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>getDirectoryListingAsync()</code> method to 
+ enumerate the contents of the user directory.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.events.FileListEvent;
+
+var directory:File = File.userDirectory;
+directory.getDirectoryListingAsync();
+directory.addEventListener(FileListEvent.DIRECTORY_LISTING, directoryListingHandler);
+
+function directoryListingHandler(event:FileListEvent):void {
+    var list:Array = event.files;
+    for (var i:uint = 0; i &lt; list.length; i++) {
+        trace(list[i].nativePath);
+    }
+}</pre></div>
+</div>
+</div>
+<a name="getRelativePath()"></a><a name="getRelativePath(flash.net.FileReference,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;getRelativePath</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getRelativePath(ref:<a href="../../flash/net/FileReference.html">FileReference</a>, useDotDot:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Finds the relative path between two File paths.
+  
+  <p>The relative path is the list of components that can be appended to
+  (resolved against) this reference in order to locate the second (parameter)
+  reference. The relative path is returned using the "/" separator character.</p>
+<p>Optionally, relative paths may include ".." references, but such paths
+  will not cross conspicuous volume boundaries.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">ref</span>:<a href="../../flash/net/FileReference.html">FileReference</a></code> &mdash;  A File object against which the path is given.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useDotDot</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash;  Specifies whether the resulting relative path can use ".." components.
+  
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; The relative path between this file (or directory) and the <code>ref</code> file 
+  (or directory), if possible; otherwise <code>null</code>.
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../ArgumentError.html">ArgumentError</a> </code> &mdash; The reference is <code>null</code>.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; The caller is not in the application security sandbox.
+    </td>
+</tr>
+</table>
+</div>
+<a name="getRootDirectories()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;getRootDirectories</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getRootDirectories():<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Returns an array of File objects, listing the file system root directories. 
+  
+  <p>For example, on Windows this is a list of volumes such as the C: drive and the 
+  D: drive. An empty drive, such as a CD or DVD drive in which no disc is inserted, 
+  is not included in this array.</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An array of File objects, listing the root directories. 
+  
+  </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code outputs a list of root directories:<div class="listing"><pre>
+import flash.filesystem.File;
+var rootDirs:Array = File.getRootDirectories();
+
+for (var i:uint = 0; i &lt; rootDirs.length; i++) {
+    trace(rootDirs[i].nativePath)
+}</pre></div>
+</div>
+</div>
+<a name="moveTo()"></a><a name="moveTo(flash.net.FileReference,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;moveTo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function moveTo(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Moves the file or directory at the location specified by this File object to 
+  the location specified by the <code>destination</code> parameter. 
+  
+  <p>To rename a file, set the <code>destination</code> parameter to point to a path that is 
+  in the file's directory, but with a different filename.</p>
+<p>The move process creates any required parent directories (if possible).</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newLocation</span>:<a href="../../flash/net/FileReference.html">FileReference</a></code> &mdash; The target location for the move. This object specifies the path to the resulting
+  (moved) file or directory, <i>not</i> the path to the containing directory.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">overwrite</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; If <code>false</code>, the move fails if the <code>target</code> file 
+  already exists. If <code>true</code>, the operation overwrites any existing file or directory 
+  of the same name. 
+  
+  <p>
+<i>Note:</i> If you set this parameter to <code>true</code> and the source and 
+  destination File objects point to the same path, calling this method deletes the file or directory.</p>
+</td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The source does not exist; or the destination exists and <code>overwrite</code> is 
+  set to <code>false</code>; or the source file could not be moved to the target location. On Windows, 
+  you cannot move a file that is open or a directory that contains a file that is open.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#copyTo()" target="">copyTo()</a>
+<br>
+<a href="File.html#moveToAsync()" target="">moveToAsync()</a>
+<br>
+<a href="File.html#moveToTrash()" target="">moveToTrash()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>moveTo()</code> method to rename
+ a file. The original filename is test1.txt and the resulting filename is test2.txt. Since both the source and destination File
+ object point to the same directory (the Apollo Test subdirectory of the user's documents directory), the 
+ <code>moveTo()</code> method renames the file, rather than moving it to a new directory. Before running 
+ this code, create a test1.txt file in the AIR Test subdirectory of the documents directory on your 
+ computer. When you set the <code>clobber</code> parameter to <code>true</code>, the operation overwrites 
+ any existing test2.txt file.<div class="listing"><pre>
+
+import flash.filesystem.File;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("AIR Test/test1.txt");
+var destination:File = File.documentsDirectory;
+destination = destination.resolvePath("Apollo Test/test2.txt");
+
+try  
+{
+    sourceFile.moveTo(destination, true);
+}
+catch (error:Error)
+{
+    trace("Error:" error.message);
+}</pre></div>
+</div>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>moveTo()</code> method to move a file.
+ The original file is the test1.txt file in the Apollo Test subdirectory of the user's documents directory, 
+ and the method moves the file to the Results subdirectory. Before running this code, create a 
+ test1.txt file in the AIR Test subdirectory of the home directory on your computer. The <code>try</code> 
+ and <code>catch</code> statements show how to respond to errors.<div class="listing"><pre>
+import flash.filesystem.File;
+
+var sourceFile:File = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("AIR Test/test1.txt");
+var destination:File = File.documentsDirectory;
+destination = destination.resolvePath("AIR Test/Results/test1.txt");
+
+try 
+{
+    sourceFile.moveTo(destination, true);
+}
+catch (error:Error)
+{
+    trace("Error:" error.message);
+}</pre></div>
+</div>
+</div>
+<a name="moveToAsync()"></a><a name="moveToAsync(flash.net.FileReference,Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;moveToAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function moveToAsync(newLocation:<a href="../../flash/net/FileReference.html">FileReference</a>, overwrite:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Begins moving the file or directory at the location specified by this File object to 
+  the location specified by the <code>newLocation</code> parameter. 
+  
+  <p>To rename a file, set the <code>destination</code> parameter to point to a path that is 
+  in the file's directory, but with a different filename.</p>
+<p>The move process creates any required parent directories (if possible).</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newLocation</span>:<a href="../../flash/net/FileReference.html">FileReference</a></code> &mdash; The target location for the move. This object specifies the path to the resulting
+  (moved) file or directory, <i>not</i> the path to the containing directory.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">overwrite</span>:<a href="../../Boolean.html">Boolean</a></code> (default = <code>false</code>)<code></code> &mdash; If <code>false</code>, the move fails if the <code>target</code> file 
+  already exists. If <code>true</code>, the operation overwrites any existing file or directory 
+  of the same name.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>complete</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the file or directory has been successfully moved.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The source does not exist; or the destination exists and <code>overwrite</code> 
+  is <code>false</code>; or the source could not be moved to the target.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; You do not have adequate permissions to read the source file or to write to the
+  target location; or the source file is missing. On Windows, you cannot move a file that is open or a directory
+  that contains a file that is  open.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#copyToAsync()" target="">copyToAsync()</a>
+<br>
+<a href="File.html#moveTo()" target="">moveTo()</a>
+<br>
+<a href="File.html#moveToTrashAsync()" target="">moveToTrashAsync()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following code shows how to use the <code>moveToAsync()</code> method to rename a 
+ file. The original filename is test1.txt and the resulting name is test2.txt. Since both the source and destination File
+ object point to the same directory (the Apollo Test subdirectory of the user's documents directory), the 
+ <code>moveToAsync()</code> method renames the file, rather than moving it to a new directory.
+ Before running this code, create a test1.txt file in the Apollo Test subdirectory of the documents directory on your 
+ computer. When you set <code>clobber</code> parameter to <code>true</code>, the operation overwrites any 
+ existing test2.txt file.<div class="listing"><pre>
+import flash.filesystem.File;
+import flash.events.Event;
+
+var sourceFile:File = File.documentsDirectory;
+sourceFile = sourceFile.resolvePath("Apollo Test/test1.txt");
+var destination:File = File.documentsDirectory;
+destination = destination.resolvePath("Apollo Test/test2.txt");
+
+var sourceFile.moveToAsync(destination, true);
+sourceFile.addEventListener(Event.COMPLETE, fileMoveCompleteHandler);
+
+function fileMoveCompleteHandler(event:Event): void 
+{
+    trace("Done.")
+}</pre></div>
+</div>
+</div>
+<a name="moveToTrash()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;moveToTrash</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function moveToTrash():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Moves a file or directory to the trash.
+  
+  </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The operating system did not allow the operation; or the file
+  or directory does not exist. On Windows, you cannot move a file that is open or a directory
+  that contains a file that is currently open.
+  
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#moveToTrashAsync()" target="">moveToTrashAsync()</a>
+</div>
+</div>
+<a name="moveToTrashAsync()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;moveToTrashAsync</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function moveToTrashAsync():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Asynchronously moves a file or directory to the trash. 
+  
+  </p><br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; The operating system did not allow the operation; or the file
+  or directory does not exist. On Windows, you cannot move a file that is open or a directory
+  that contains a file that is currently open.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>complete</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when the file or directory has been successfully moved to the trash.</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#moveToTrash()" target="">moveToTrash()</a>
+</div>
+</div>
+<a name="resolvePath()"></a><a name="resolvePath(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;resolvePath</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function resolvePath(path:<a href="../../String.html">String</a>):<a href="../../flash/filesystem/File.html">File</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Creates a new File object with a path relative to this File object's path, based on the 
+  <code>path</code> parameter (a String).
+    <p>If the given path is an absolute file reference, then that path is used; otherwise
+  the path is interpreted relative to this File object as follows:</p>
+<p>The given <code>path</code> is "appended" to this path (however, use of ".." in the <code>path</code>
+  can return a resulting path that is not a child of the File object). The resulting reference need not 
+  refer to an actual file system location. Use the forward slash (/) character as the path separator
+  (not <code>\</code>).</p>
+<p>All resulting paths are normalized as follows: </p>
+<ul>
+<li>Any "." element is ignored.</li>
+<li>Any ".." element consumes its parent entry.  </li>
+<li>No ".." reference that reaches the file system root or the application-persistent
+      storage root passes that node; it is ignored.</li>
+</ul>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">path</span>:<a href="../../String.html">String</a></code> &mdash; The path to append to this File object's path.
+  
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/filesystem/File.html">File</a></code> &mdash; A new File object, with the specified relative file path.
+  
+  </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:cancel"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;cancel</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CANCEL"><code>flash.events.Event.CANCEL</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a pending asynchronous operation is canceled.
+ 
+ </p>
+ The <code>Event.CANCEL</code> constant defines the value of the <code>type</code> property of a <code>cancel</code> event object. 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>A reference to the object on which the operation is canceled.</td>
+</tr></table>
+ </div>
+<a name="event:complete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;complete</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#COMPLETE"><code>flash.events.Event.COMPLETE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an asynchronous operation is complete.
+ 
+ </p>
+ The <code>Event.COMPLETE</code> constant defines the value of the <code>type</code> property of a <code>complete</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object that has completed loading. 
+     </td>
+</tr></table>
+ 
+ </div>
+<a name="event:directoryListing"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;directoryListing</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/FileListEvent.html"><code>flash.events.FileListEvent</code></a>
+<br>
+<span class="label">FileListEvent.type property = </span><a href="../../flash/events/FileListEvent.html#DIRECTORY_LISTING"><code>flash.events.FileListEvent.DIRECTORY_LISTING</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a directory list is available as a result of a call to the <code>getDirectoryListingAsync()</code>
+ method.
+  </p>
+   The <code>FileListEvent.DIRECTORY_LISTING</code> constant defines the value of the  
+   <code>type</code> property of the event object for a <code>directoryListing</code> event.
+   
+   <p>This event has the following properties:</p>
+   
+   <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>files</code></td><td>An array of File objects representing the files and directories found.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The FileListEvent object.</td>
+</tr></table>
+   <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#getDirectoryListingAsync()" target="">File.getDirectoryListingAsync()</a>
+</div>
+</div>
+<a name="event:ioError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;ioError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a>
+<br>
+<span class="label">IOErrorEvent.type property = </span><a href="../../flash/events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an error occurs during an asynchronous file operation.
+ 
+ </p>
+ Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>errorID</code></td><td>A reference number associated with the specific error.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object experiencing the input/output error.</td>
+</tr>
+<tr>
+<td><code>text</code></td><td>Text to be displayed as an error message.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:securityError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;securityError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a>
+<br>
+<span class="label">SecurityErrorEvent.type property = </span><a href="../../flash/events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an operation violates a security constraint.
+ 
+  </p>
+ The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the value of the <code>type</code> property of a <code>securityError</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object reporting the security error.</td>
+</tr>
+<tr>
+<td><code>text</code></td><td>Text to be displayed as an error message.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:select"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;select</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#SELECT"><code>flash.events.Event.SELECT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the user selects a file or directory from a file- or directory-browsing dialog box. 
+ 
+  </p>
+ The <code>Event.SELECT</code> constant defines the value of the <code>type</code> property of a <code>select</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object on which an item has been selected.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:selectMultiple"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;selectMultiple</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/FileListEvent.html"><code>flash.events.FileListEvent</code></a>
+<br>
+<span class="label">FileListEvent.type property = </span><a href="../../flash/events/FileListEvent.html#SELECT_MULTIPLE"><code>flash.events.FileListEvent.SELECT_MULTIPLE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the user selects files from the dialog box opened by a call to the 
+ <code>browseForOpenMultiple()</code> method. 
+ 
+  </p>
+   The <code>FileListEvent.SELECT_MULTIPLE</code> constant defines the value of the  
+   <code>type</code> property of the event object for a <code>selectMultiple</code> event.
+   
+   <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>files</code></td><td>An array of File objects representing the files selected.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The FileListEvent object.</td>
+</tr></table>
+   <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="File.html#browseForMultiple()" target="">browseForMultiple()</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

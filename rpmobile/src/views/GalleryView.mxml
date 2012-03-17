@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+				 xmlns:s="library://ns.adobe.com/flex/spark"
+				 xmlns:components="spark.components.*"
+				 xmlns:controls="com.loning.mobile.controls.*"
+				 creationComplete="view1_creationCompleteHandler(event)" overlayControls="true"
+				 title="{resourceManager.getString('view','galleryViewTitle')}">
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		.myFontStyle { 
+			fontSize: 26;
+			color: #FFFFFF;
+		}
+		.myItemStyle{
+			fontSize:26;
+			color:#FFFFFF;
+			paddingTop:2;
+			paddingBottom:2;
+			verticalGap:25;
+			verticalAlign:middle;
+		}
+	</fx:Style>
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			
+			import spark.components.ViewNavigator;
+			import spark.events.IndexChangeEvent;
+			
+			[Bindable]
+			public var items:ArrayCollection=new ArrayCollection();
+			
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				
+				var files:Array=File.documentsDirectory.resolvePath("Photo").getDirectoryListing();
+				var list:Array=new Array();
+				
+				files.sortOn(["name"],Array.DESCENDING);
+				for each (var file:File in files){
+					if(file.extension=="png" || file.extension=="jpg"){
+						list.push(file);
+						
+					}
+				}
+				items.source=files;
+				restoreScrollPosition();
+			}
+			protected function galleryList_changeHandler(event:IndexChangeEvent):void
+			{
+				this.saveScrollPosition();
+				var file:File=galleryList.selectedItem;
+				file.addEventListener(Event.COMPLETE,this.fileLoadCompleteHandler);
+				file.load();
+			}
+			protected function fileLoadCompleteHandler(e:Event):void{
+				var loader:Loader = new Loader();
+				var o:Object=new Object();
+				var bitmap:Bitmap=new Bitmap();
+				o.bytes=e.target.data;
+				var navigator:ViewNavigator=this.navigator;
+				loader.contentLoaderInfo.addEventListener(Event.COMPLETE,function(event:Event):void{
+					var bitmap:Bitmap = event.target.content as Bitmap;
+					o.bitmapData = bitmap.bitmapData;
+					o.processedText=resourceManager.getString('view','shareWords');
+					navigator.pushView(
+						PhotoShareView,o);
+				});
+				loader.loadBytes(e.target.data);
+				trace("load gallery file");
+			}
+			
+			private function restoreScrollPosition():void {
+				// the data might be null if it has never been set
+				if (data == null)
+					return;
+				
+				var restoredVSP:Number = data.verticalScrollPosition as Number;
+				var restoredHSP:Number = data.horizontalScrollPosition as Number;
+				
+				var maxVSP:Number = galleryList.dataGroup.contentHeight - galleryList.dataGroup.height;
+				var maxHSP:Number = galleryList.dataGroup.contentWidth - galleryList.dataGroup.width;
+				
+				// restore the saved scroll position, but don't set it to higher than the maximum
+				// to prevent from orientation changes causing a scroll into excess space
+				galleryList.dataGroup.verticalScrollPosition = Math.min(maxVSP, restoredVSP);
+				galleryList.dataGroup.horizontalScrollPosition = Math.min(maxHSP, restoredHSP);
+			}
+			
+			private function saveScrollPosition():void {
+				// first time the data might not be created yet
+				if (data == null)
+					data = new Object();
+				
+				// save the vertical scroll position
+				data.verticalScrollPosition = galleryList.dataGroup.verticalScrollPosition;
+				data.horizontalScrollPosition = galleryList.dataGroup.horizontalScrollPosition;
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<components:navigationContent>
+		
+	</components:navigationContent>
+	<s:List id="galleryList" top="0" bottom="0" left="0" right="0" horizontalScrollPolicy="off" change="galleryList_changeHandler(event)"  >
+		<s:AsyncListView list="{items}"/>
+		
+		<s:itemRenderer>
+			<fx:Component>
+				<controls:EngadgetItemRenderer messageStyleName="myFontStyle" styleName="myItemStyle" alternatingItemColors="[#686E75]"
+											   labelField="" messageField="name"  iconScaleMode="letterbox"  decorator="@Embed('assets/ui/arrow.png')"
+											   iconField="url"/>
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+	
+</components:View>

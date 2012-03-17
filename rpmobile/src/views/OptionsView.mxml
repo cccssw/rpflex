@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="com.loning.mobile.controls.*"
+		title="{resourceManager.getString('view','optionsViewTitle')}" creationComplete="creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.ElementSettings;
+			
+			import controls.ResultView;
+			
+			import mx.events.FlexEvent;
+			
+			import spark.events.IndexChangeEvent;
+			private var resultView:ResultView=ResultView.instance;
+			protected function list_changeHandler(event:IndexChangeEvent):void
+			{
+				trace(list.selectedItem.title);
+				
+				switch(list.selectedItem.cmd){
+					case "TypeSelection":
+						this.navigator.pushView(TypeSelectionView);
+						break;
+					case "ImageProcessing":
+						this.navigator.pushView(ImageProcessingOptionsView);
+						break;
+					case "PackageSelection":
+						this.navigator.pushView(PackageSelectionOptionsView);
+						break;
+					case "About":
+						this.navigator.pushView(AboutView);
+						break;
+				}
+			}
+			
+			protected function loadDefaultButton_clickHandler(event:MouseEvent):void
+			{
+				ElementSettings.loadDefault();
+				this.resultView.open(this,true);
+				this.resultView.setText(resourceManager.getString('view','loadingSucc'),resourceManager.getString('view','ok'));
+				
+			}
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<s:ArrayCollection id="listData">
+			<fx:Object cmd="TypeSelection" title="{resourceManager.getString('view','Elements')}" description="{resourceManager.getString('view','ElementsDes')}" />
+			<fx:Object cmd="ImageProcessing" title="{resourceManager.getString('view','PicProc')}" description="{resourceManager.getString('view','PicProcDes')}" />
+			<fx:Object cmd="PackageSelection" title="{resourceManager.getString('view','theme')}" description="{resourceManager.getString('view','themedesc')}" />
+			<fx:Object cmd="About" title="{resourceManager.getString('view','about')}" description="{resourceManager.getString('view','aboutdes')}" />
+		</s:ArrayCollection>
+	</fx:Declarations>
+	
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		
+			.listFormItemRenderer
+			{
+				borderStyle: rounded;
+				cornerRadius: 20;
+			}
+			
+		
+	</fx:Style>
+	<s:actionContent>
+		<s:Button label="{resourceManager.getString('view','defaultSettings')}" click="loadDefaultButton_clickHandler(event)"/>
+	</s:actionContent>
+
+	<s:List id="list" top="10"
+			height="100%"
+			width="100%"
+				dataProvider="{listData}" change="list_changeHandler(event)"
+				skinClass="com.loning.mobile.controls.MobileSkinnableDataContainerSkin"
+				>
+		<s:layout>
+			<s:VerticalLayout horizontalAlign="center" verticalAlign="top" gap="0"/>
+		</s:layout>
+		<s:itemRenderer>
+			<fx:Component>
+				<!-- Custom IconItemRenderer with arbitrary UIComponent content -->
+				<s:FocusFormItemRenderer width="96%" labelField="title" messageField="description" styleName="listFormItemRenderer" decorator="@Embed('assets/ui/arrow.png')">
+				</s:FocusFormItemRenderer>
+				
+			</fx:Component>
+		</s:itemRenderer>
+	</s:List>
+			
+</s:View>

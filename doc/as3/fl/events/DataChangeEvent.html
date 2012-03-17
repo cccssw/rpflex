@@ -1,0 +1,1042 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="DataChangeEvent,fl.events.DataChangeEvent,ADD,BUTTON_DOWN,CANCELLED,CHANGE,CHANGE,CHANGE,changeType,clickTarget,color,COLUMN_STRETCH,columnIndex,DATA_CHANGE,dataField,delta,direction,endIndex,ENTER,ENTER,HEADER_RELEASE,HIDE,index,INVALIDATE_ALL,INVALIDATE,ITEM_CLICK,ITEM_DOUBLE_CLICK,ITEM_EDIT_BEGINNING,ITEM_EDIT_BEGIN,ITEM_EDIT_END,ITEM_FOCUS_IN,ITEM_FOCUS_OUT,ITEM_ROLL_OUT,ITEM_ROLL_OUT,ITEM_ROLL_OVER,ITEM_ROLL_OVER,item,itemRenderer,items,KEYBOARD,keyCode,LABEL_CHANGE,MOUSE,MOVE,NEW_COLUMN,NEW_ROW,OTHER,position,PRE_DATA_CHANGE,reason,REMOVE_ALL,REMOVE,REPLACE,RESIZE,rowIndex,SCROLL,SHOW,SORT,startIndex,THUMB_DRAG,THUMB_PRESS,THUMB_RELEASE,THUMB,TRACK,triggerEvent,value,clone,clone,clone,clone,clone,clone,clone,toString,toString,toString,toString,toString,toString,toString" name="keywords">
+<title>fl.events.DataChangeEvent (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'DataChangeEvent - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/events/DataChangeEvent.html&amp;fl/events/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">DataChangeEvent</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DataChangeEvent"); titleBar_setSubNav(true,true,false,false,false,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.events</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  DataChangeEvent</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">DataChangeEvent  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/Event.html">Event</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+  The DataChangeEvent class defines the event that is dispatched when the data 
+  that is associated with a component changes. This event is used by the List, 
+  DataGrid, TileList, and ComboBox components.
+    <p>This class provides the following event:</p>
+  <ul>
+      <li><code>DataChangeEvent.DATA_CHANGE</code>: dispatched when the component data changes.</li>
+  </ul>
+       <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeType.html" target="">DataChangeType</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#bubbles">bubbles</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+ Indicates whether an event is a bubbling event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#cancelable">cancelable</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+ Indicates whether the behavior associated with the event can be prevented.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#changeType">changeType</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+   Gets the type of the change that triggered the event.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#currentTarget">currentTarget</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+ The object that is actively processing the Event object with an event listener.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#endIndex">endIndex</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+         Gets the index of the last changed item in the array of items
+   that were changed.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#eventPhase">eventPhase</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+ The current phase in the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#items">items</a> : <a href="../../Array.html">Array</a>
+<div class="summaryTableDescription">[read-only] 
+         Gets an array that contains the changed items.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#startIndex">startIndex</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+   Gets the index of the first changed item in the array of items 
+   that were changed.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#target">target</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[read-only] 
+ The event target.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#type">type</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">[read-only] 
+ The type of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#DataChangeEvent()">DataChangeEvent</a>(eventType:<a href="../../String.html">String</a>, changeType:<a href="../../String.html">String</a>, items:<a href="../../Array.html">Array</a>, startIndex:<a href="../../int.html">int</a> = -1, endIndex:<a href="../../int.html">int</a> = -1)</div>
+<div class="summaryTableDescription">
+   Creates a new DataChangeEvent object with the specified parameters.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clone()">clone</a>():<a href="../../flash/events/Event.html">Event</a>
+</div>
+<div class="summaryTableDescription">
+   Creates a copy of the DataEvent object and sets the value of each parameter to match
+   that of the original.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#formatToString()">formatToString</a>(className:<a href="../../String.html">String</a>, <a href="../../statements.html#..._(rest)_parameter">...</a> arguments):<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  A utility function for implementing the toString() method in custom 
+  ActionScript 3.0 Event classes.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#isDefaultPrevented()">isDefaultPrevented</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the preventDefault() method has been called on the event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#preventDefault()">preventDefault</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Cancels an event's default behavior if that behavior can be canceled.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#stopImmediatePropagation()">stopImmediatePropagation</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Prevents processing of any event listeners in the current node and any subsequent nodes in 
+ the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/Event.html#stopPropagation()">stopPropagation</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Prevents processing of any event listeners in nodes subsequent to the current node in the 
+ event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+   Returns a string that contains all the properties of the DataChangeEvent object.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<div class="showHideLinks">
+<div class="hideInheritedConstant" id="hideInheritedConstant">
+<a onclick="javascript:setInheritedVisible(false,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Constants</a>
+</div>
+<div class="showInheritedConstant" id="showInheritedConstant">
+<a onclick="javascript:setInheritedVisible(true,'Constant');" href="#constantSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Constants</a>
+</div>
+</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ACTIVATE">ACTIVATE</a> : <a href="../../String.html">String</a> = "activate"<div class="summaryTableDescription">[static] 
+ The Event.ACTIVATE constant defines the value of the type property of an activate event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ADDED">ADDED</a> : <a href="../../String.html">String</a> = "added"<div class="summaryTableDescription">[static] 
+ The Event.ADDED constant defines the value of the type property of 
+ an added event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ADDED_TO_STAGE">ADDED_TO_STAGE</a> : <a href="../../String.html">String</a> = "addedToStage"<div class="summaryTableDescription">[static] 
+ The Event.ADDED_TO_STAGE constant defines the value of the type 
+ property of an addedToStage event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CANCEL">CANCEL</a> : <a href="../../String.html">String</a> = "cancel"<div class="summaryTableDescription">[static] 
+ The Event.CANCEL constant defines the value of the type property of a cancel event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CHANGE">CHANGE</a> : <a href="../../String.html">String</a> = "change"<div class="summaryTableDescription">[static] 
+ The Event.CHANGE constant defines the value of the type property of a change event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CLOSE">CLOSE</a> : <a href="../../String.html">String</a> = "close"<div class="summaryTableDescription">[static] 
+ The Event.CLOSE constant defines the value of the type property of a close event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#CLOSING">CLOSING</a> : <a href="../../String.html">String</a> = "closing"<div class="summaryTableDescription">[static] 
+ The Event.CLOSING constant defines the value of the 
+ type property of a closing event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#COMPLETE">COMPLETE</a> : <a href="../../String.html">String</a> = "complete"<div class="summaryTableDescription">[static] 
+ The Event.COMPLETE constant defines the value of the type property of a complete event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#CONNECT">CONNECT</a> : <a href="../../String.html">String</a> = "connect"<div class="summaryTableDescription">[static] 
+ The Event.CONNECT constant defines the value of the type property of a connect event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DATA_CHANGE">DATA_CHANGE</a> : <a href="../../String.html">String</a> = "dataChange"<div class="summaryTableDescription">[static] 
+         Defines the value of the type property of a dataChange
+   event object.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#DEACTIVATE">DEACTIVATE</a> : <a href="../../String.html">String</a> = "deactivate"<div class="summaryTableDescription">[static] 
+ The Event.DEACTIVATE constant defines the value of the type property of a deactivate event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#DISPLAYING">DISPLAYING</a> : <a href="../../String.html">String</a> = "displaying"<div class="summaryTableDescription">[static] 
+  Defines the value of the type property of a displaying event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ENTER_FRAME">ENTER_FRAME</a> : <a href="../../String.html">String</a> = "enterFrame"<div class="summaryTableDescription">[static] 
+ The Event.ENTER_FRAME constant defines the value of the type property of 
+ an enterFrame event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#EXITING">EXITING</a> : <a href="../../String.html">String</a> = "exiting"<div class="summaryTableDescription">[static] 
+ The Event.EXITING constant defines the value of the type property of an exiting event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#FULLSCREEN">FULLSCREEN</a> : <a href="../../String.html">String</a> = "fullScreen"<div class="summaryTableDescription">[static] 
+ The Event.FULL_SCREEN constant defines the value of the type property of a fullScreen event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_BOUNDS_CHANGE">HTML_BOUNDS_CHANGE</a> : <a href="../../String.html">String</a> = "htmlBoundsChange"<div class="summaryTableDescription">[static] 
+ The Event.HTML_BOUNDS_CHANGE constant defines the value of the type property of an htmlBoundsChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_DOM_INITIALIZE">HTML_DOM_INITIALIZE</a> : <a href="../../String.html">String</a> = "htmlDOMInitialize"<div class="summaryTableDescription">[static] 
+ The Event.HTML_DOM_INITIALIZE constant defines the value of the type property 
+ of an htmlDOMInitialize event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#HTML_RENDER">HTML_RENDER</a> : <a href="../../String.html">String</a> = "htmlRender"<div class="summaryTableDescription">[static] 
+ The Event.HTML_RENDER constant defines the value of the type property of an htmlRender event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#ID3">ID3</a> : <a href="../../String.html">String</a> = "id3"<div class="summaryTableDescription">[static] 
+ The Event.ID3 constant defines the value of the type property of an id3 event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#INIT">INIT</a> : <a href="../../String.html">String</a> = "init"<div class="summaryTableDescription">[static] 
+ The Event.INIT constant defines the value of the type property of an init event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#LOCATION_CHANGE">LOCATION_CHANGE</a> : <a href="../../String.html">String</a> = "locationChange"<div class="summaryTableDescription">[static] 
+ The Event.LOCATION_CHANGE constant defines the value of the type property of a locationChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#MOUSE_LEAVE">MOUSE_LEAVE</a> : <a href="../../String.html">String</a> = "mouseLeave"<div class="summaryTableDescription">[static] 
+ The Event.MOUSE_LEAVE constant defines the value of the type property of a mouseLeave event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#NETWORK_CHANGE">NETWORK_CHANGE</a> : <a href="../../String.html">String</a> = "networkChange"<div class="summaryTableDescription">[static] 
+ The Event.NETWORK_CHANGE constant defines the value of the type property of a networkChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#OPEN">OPEN</a> : <a href="../../String.html">String</a> = "open"<div class="summaryTableDescription">[static] 
+ The Event.OPEN constant defines the value of the type property of an open event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PRE_DATA_CHANGE">PRE_DATA_CHANGE</a> : <a href="../../String.html">String</a> = "preDataChange"<div class="summaryTableDescription">[static] 
+   Defines the value of the type property of a preDataChange
+   event object.</div>
+</td><td class="summaryTableOwnerCol">DataChangeEvent</td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#REMOVED">REMOVED</a> : <a href="../../String.html">String</a> = "removed"<div class="summaryTableDescription">[static] 
+ The Event.REMOVED constant defines the value of the type property of
+ a removed event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#REMOVED_FROM_STAGE">REMOVED_FROM_STAGE</a> : <a href="../../String.html">String</a> = "removedFromStage"<div class="summaryTableDescription">[static] 
+ The Event.REMOVED_FROM_STAGE constant defines the value of the type 
+ property of a removedFromStage event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#RENDER">RENDER</a> : <a href="../../String.html">String</a> = "render"<div class="summaryTableDescription">[static] 
+ The Event.RENDER constant defines the value of the type property of a render event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#RESIZE">RESIZE</a> : <a href="../../String.html">String</a> = "resize"<div class="summaryTableDescription">[static] 
+ The Event.RESIZE constant defines the value of the type property of a resize event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SCROLL">SCROLL</a> : <a href="../../String.html">String</a> = "scroll"<div class="summaryTableDescription">[static] 
+ The Event.SCROLL constant defines the value of the type property of a scroll event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SELECT">SELECT</a> : <a href="../../String.html">String</a> = "select"<div class="summaryTableDescription">[static] 
+ The Event.SELECT constant defines the value of the type property of a select event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#SOUND_COMPLETE">SOUND_COMPLETE</a> : <a href="../../String.html">String</a> = "soundComplete"<div class="summaryTableDescription">[static] 
+ The Event.SOUND_COMPLETE constant defines the value of the type property of a soundComplete event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_CHILDREN_CHANGE">TAB_CHILDREN_CHANGE</a> : <a href="../../String.html">String</a> = "tabChildrenChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_CHILDREN_CHANGE constant defines the value of the type 
+ property of a tabChildrenChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_ENABLED_CHANGE">TAB_ENABLED_CHANGE</a> : <a href="../../String.html">String</a> = "tabEnabledChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_ENABLED_CHANGE constant defines the value of the type 
+ property of a tabEnabledChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#TAB_INDEX_CHANGE">TAB_INDEX_CHANGE</a> : <a href="../../String.html">String</a> = "tabIndexChange"<div class="summaryTableDescription">[static] 
+ The Event.TAB_INDEX_CHANGE constant defines the value of the 
+ type property of a tabIndexChange event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../flash/events/Event.html#UNLOAD">UNLOAD</a> : <a href="../../String.html">String</a> = "unload"<div class="summaryTableDescription">[static] 
+ The Event.UNLOAD constant defines the value of the type property of an unload event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#USER_IDLE">USER_IDLE</a> : <a href="../../String.html">String</a> = "userIdle"<div class="summaryTableDescription">[static] 
+ The Event.USER_IDLE constant defines the value of the type property of a userIdle event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+<tr class="hideInheritedConstant">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><img title="Only available in the AIR runtime" alt="AIR-only" vspace="0" hspace="0" height="12" width="12" src="../../images/AirIcon12x12.gif">&thinsp;<a class="signatureLink" href="../../flash/events/Event.html#USER_PRESENT">USER_PRESENT</a> : <a href="../../String.html">String</a> = "userPresent"<div class="summaryTableDescription">[static] 
+ The Event.USER_PRESENT constant defines the value of the type property of a userPresent event object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/Event.html">Event</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="changeType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">changeType</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>changeType:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Gets the type of the change that triggered the event. The DataChangeType class 
+   defines the possible values for this property.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get changeType():<a href="../../String.html">String</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeType.html" target="">DataChangeType</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="endIndex"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">endIndex</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>endIndex:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets the index of the last changed item in the array of items
+   that were changed.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endIndex():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeEvent.html#startIndex" target="">startIndex</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="items"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">items</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>items:<a href="../../Array.html">Array</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Gets an array that contains the changed items.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get items():<a href="../../Array.html">Array</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="startIndex"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">startIndex</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>startIndex:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Gets the index of the first changed item in the array of items 
+   that were changed.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get startIndex():<a href="../../uint.html">uint</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeEvent.html#endIndex" target="">endIndex</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="DataChangeEvent()"></a><a name="DataChangeEvent(String,String,Array,int,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DataChangeEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function DataChangeEvent(eventType:<a href="../../String.html">String</a>, changeType:<a href="../../String.html">String</a>, items:<a href="../../Array.html">Array</a>, startIndex:<a href="../../int.html">int</a> = -1, endIndex:<a href="../../int.html">int</a> = -1)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a new DataChangeEvent object with the specified parameters.
+      </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">eventType</span>:<a href="../../String.html">String</a></code> &mdash; The type of change event.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">changeType</span>:<a href="../../String.html">String</a></code> &mdash; The type of change that was made. The DataChangeType class defines the possible values for
+          this parameter.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">items</span>:<a href="../../Array.html">Array</a></code> &mdash; A list of items that were changed.
+   
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">startIndex</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; The index of the first item that was changed.
+                  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">endIndex</span>:<a href="../../int.html">int</a></code> (default = <code>-1</code>)<code></code> &mdash; The index of the last item that was changed.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="clone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function clone():<a href="../../flash/events/Event.html">Event</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a copy of the DataEvent object and sets the value of each parameter to match
+   that of the original.
+      </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/events/Event.html">Event</a></code> &mdash; A new DataChangeEvent object with property values that match those of the
+                 original.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function toString():<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Returns a string that contains all the properties of the DataChangeEvent object. The
+   string is in the following format:
+   
+   <p>[<code>DataChangeEvent type=<i>value</i> changeType=<i>value</i> 
+   startIndex=<i>value</i> endIndex=<i>value</i>
+   bubbles=<i>value</i> cancelable=<i>value</i>
+</code>]</p>
+</p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; A string that contains all the properties of the DataChangeEvent object.
+                  </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader">Constant Detail</div>
+<a name="constantDetail"></a><a name="DATA_CHANGE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DATA_CHANGE</td><td class="detailHeaderType">Constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DATA_CHANGE:<a href="../../String.html">String</a> = "dataChange"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Defines the value of the <code>type</code> property of a <code>dataChange</code>
+   event object. 
+      <p>This event has the following properties:</p>
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>changeType</code></td><td>Identifies the type of change that was made.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing 
+      the event object with an event listener.</td>
+</tr>
+<tr>
+<td><code>endIndex</code></td><td>Identifies the index of the last changed item.</td>
+</tr>
+<tr>
+<td><code>items</code></td><td>An array that lists the items that were changed.</td>
+</tr>
+<tr>
+<td><code>startIndex</code></td><td>Identifies the index of the first changed item.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event. The target is 
+                   not always the object listening for the event. Use the <code>currentTarget</code>
+      property to access the object that is listening for the event.</td>
+</tr></table>
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeEvent.html#PRE_DATA_CHANGE" target="">PRE_DATA_CHANGE</a>
+</div>
+</div>
+<a name="constantDetail"></a><a name="PRE_DATA_CHANGE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PRE_DATA_CHANGE</td><td class="detailHeaderType">Constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PRE_DATA_CHANGE:<a href="../../String.html">String</a> = "preDataChange"</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Defines the value of the <code>type</code> property of a <code>preDataChange</code>
+   event object. This event object is dispatched before a change is made to component data.
+      <p>This event has the following properties:</p>
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>changeType</code></td><td>Identifies the type of change to be made.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing 
+      the event object with an event listener.</td>
+</tr>
+<tr>
+<td><code>endIndex</code></td><td>Identifies the index of the last item to be
+      changed.</td>
+</tr>
+<tr>
+<td><code>items</code></td><td>An array that lists the items to be changed.</td>
+</tr>
+<tr>
+<td><code>startIndex</code></td><td>Identifies the index of the first item to be
+           changed.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event. The target is 
+                  not always the object listening for the event. Use the <code>currentTarget</code>
+      property to access the object that is listening for the event.</td>
+</tr></table>
+   
+         </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataChangeEvent.html#DATA_CHANGE" target="">DATA_CHANGE</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">DataChangeEventExample.as</div>
+<br>
+<div class="detailBody"> This example demonstrates how to listen to the DataChangeEvent broadcast by 
+  the DataProvider, and use its events to populate a DataGrid manually.
+  <p>To run the example, follow these steps:</p>
+	<ol>
+		<li>Add the DataGrid and Button components to the library.</li>
+		<li>Save this code as DataChangeEventExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to DataChangeEventExample.</li>
+	</ol>
+<div class="listing"><pre>
+package
+{
+    import fl.controls.Button;
+    import fl.controls.DataGrid;
+    import fl.data.DataProvider;
+    import fl.events.DataChangeEvent;
+    import flash.display.Sprite;
+    import flash.events.MouseEvent;
+    
+    public class DataChangeEventExample extends Sprite
+    {
+        private var dg:DataGrid;
+        private var dp:DataProvider;
+        private var names:Array = [ "Mary", "Bob", "Sue", "Joe" ];
+        
+        public function DataChangeEventExample() {
+            dp = new DataProvider();
+            dp.addEventListener(DataChangeEvent.DATA_CHANGE,dataChanged);
+        
+            dg = new DataGrid();
+            dg.move(10,45);
+            dg.setSize(300,250);
+            dg.columns = [ "name", "phone", "email" ];
+            addChild(dg);
+
+            var addContactBtn:Button = new Button();
+            addContactBtn.label = "Add Contact";
+            addContactBtn.move(10,10);
+            addContactBtn.addEventListener(MouseEvent.CLICK, addContact);
+            addChild(addContactBtn);            
+        }
+        
+        private function getRandomPhone():String {
+            return randomDigit()+randomDigit()+randomDigit()+"-"+randomDigit()+randomDigit()+randomDigit()+"-"+randomDigit()+randomDigit()+randomDigit()+randomDigit();    
+        }
+        private function randomDigit():String {
+            return String(Math.round(Math.random()*10)%10);    
+        }
+        private function getRandomName():String {
+            return names[Math.round(Math.random()*names.length)%names.length];    
+        }
+        private function addContact(e:MouseEvent):void {
+            var randomName:String = getRandomName()
+            dp.addItem( { name: randomName, phone: getRandomPhone(), email: randomName + "@fictitious.com" } );
+        }
+        private function dataChanged(e:DataChangeEvent):void {
+            var changedItems:Array = e.items;
+            dg.addItem(changedItems[0]);
+        }
+    }
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/DataChangeEventExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

@@ -1,0 +1,1060 @@
+<!--livedocs:no-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<title>SQL support in local databases (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'SQL support in local databases - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?localDatabaseSQLSupport.html&amp;all-classes.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">  </td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("  "); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+
+--></script>
+<div class="MainContent">
+      
+		<div style="height:15px;" width="100%"></div>
+<p>Adobe AIR includes a SQL database engine with support for local SQL databases with many standard SQL features, using the open source <a href="http://www.sqlite.org/">SQLite</a> database system. The runtime does not specify how or where database data is stored on the file system. Each database is stored completely within a single file. A developer can specify the location in the file system where the database file is stored, and a single AIR application can access one or many separate databases (i.e. separate database files).</p>
+<p>This document outlines the SQL syntax and data type support for Adobe AIR local SQL databases. This document is not intended to serve as a comprehensive SQL reference. Rather, it describes specific details of the SQL dialect that Adobe AIR supports. The runtime supports most of the SQL-92 standard SQL dialect. Because there are numerous references, web sites, books, and training materials for learning SQL, this document is not intended to be a comprehensive SQL reference or tutorial. Instead, this document particularly focuses on the Apollo AIR-supported SQL syntax, and the differences between SQL-92 and the supported SQL dialect.</p>
+<p>The following topics are covered:</p>
+<ul>
+  <li><a href="#sqlSyntax">Supported SQL syntax</a></li>
+  <li><a href="#dataTypes">Data type support</a></li>
+  <li><a href="#conventions">Conventions used in this document</a></li>
+</ul>
+<h2 id="sqlSyntax">Supported SQL syntax</h2>
+<p>This section describes the SQL syntax supported by the Adobe AIR SQL database engine. These listings are divided into explanations of different statement and clause types, expressions, built-in functions, and operators. The following topics are covered:</p>
+<ul>
+  <li><a href="#generalSyntax">General SQL syntax</a></li>
+  <li><a href="#dataManipulation">Data manipulation statements</a> (<code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>)</li>
+  <li><a href="#dataDefinition">Data definition statements</a> (<code>CREATE</code>, <code>ALTER</code>, and <code>DROP</code> statements for tables, indices, views, and triggers)</li>
+  <li><a href="#specialStatements">Special statements and clauses</a></li>
+  <li><a href="#builtinFunctions">Built-in functions</a> (Aggregate, scalar, and date/time formatting functions)</li>
+  <li><a href="#operators">Operators</a></li>
+  <li><a href="#prarameters">Parameters</a></li>
+  <li><a href="#unsupportedSQL">Unsupported SQL features</a></li>
+  <li><a href="#additionalSQL">Additional SQL features</a></li>
+</ul>
+<h3 id="generalSyntax">General SQL syntax</h3>
+<p>In addition to the specific syntax for various statements and expressions, the following are general rules of SQL syntax:</p>
+<ul>
+  <li><strong>Case sensitivity:</strong> SQL statements, including object names, are not case sensitive. Nevertheless, SQL statements are frequently written with SQL keywords written in uppercase, and this document uses that convention. While SQL syntax is not case sensitive, literal text values in SQL are case sensitive, and comparison and sorting operations can be case sensitive, as specified by the collation sequence defined for a column or operation. For more information see <a href="#collate">COLLATE</a>.</li>
+  <li><strong>White space:</strong> A white-space character (such as space, tab, new line, and so forth) must be used to separate individual words in an SQL statement. However, white space is optional between words and symbols. The type and quantity of white-space characters in a SQL statement is not significant. You can use white space, such as indenting and line breaks, to format your SQL statements for easy readability, without affecting the meaning of the statement.</li>
+</ul>
+<h3 id="dataManipulation">Data manipulation statements</h3>
+<p>Data manipulation statements are the most commonly used SQL statements. These statements are used to retrieve, add, modify, and remove data from database tables. The following data manipulation statements are supported:</p>
+<ul>
+  <li><a href="#select">SELECT</a></li>
+  <li><a href="#insert">INSERT</a></li>
+  <li><a href="#update">UPDATE</a></li>
+  <li><a href="#delete">DELETE</a></li>
+</ul>
+<h4 id="select">SELECT</h4>
+<p>The <code>SELECT</code> statement is used to query the database. The result of a <code>SELECT</code> is zero or more rows of data where each row has a fixed number of columns. The number of columns in the result is specified by the <code>result</code> column name or expression list between the <code>SELECT</code> and optional <code>FROM</code> keywords.</p>
+<listing>sql-statement   ::=  SELECT [ALL | DISTINCT] result
+                     [FROM table-list]
+                     [WHERE expr]
+                     [GROUP BY expr-list]
+                     [HAVING expr]
+                     [compound-op select-statement]*
+                     [ORDER BY sort-expr-list]
+                     [LIMIT integer [( OFFSET | , ) integer]]
+
+result          ::=  result-column [, result-column]*
+
+result-column   ::=  * | table-name . * | expr [[AS] string]
+
+table-list      ::=  table [ join-op table join-args ]*
+
+table           ::=  table-name [AS alias] |
+                     ( select ) [AS alias]
+
+join-op         ::=  , | [NATURAL] [LEFT | RIGHT | FULL] [OUTER | INNER | CROSS] JOIN
+
+join-args       ::=  [ON expr] [USING ( id-list )]
+
+compound-op     ::=  UNION | UNION ALL | INTERSECT | EXCEPT
+
+sort-expr-list  ::=  expr [sort-order] [, expr [sort-order]]*
+
+sort-order      ::=  [COLLATE collation-name] [ASC | DESC]
+
+collation-name  ::=  BINARY | NOCASE
+</listing>
+<p>Any arbitrary expression can be used as a result. If a result expression is <code>*</code> then all columns of all tables are substituted for that one expression. If the expression is the name of a table followed by <code>.*</code> then the result is all columns in that one table.</p>
+<p>The <code>DISTINCT</code> keyword causes a subset of result rows to be returned, in which each result row is different. <code>NULL</code> values are not treated as distinct from each other. The default behavior is that all result rows are returned, which can be made explicit with the keyword <code>ALL</code>.</p>
+<p>The query is executed against one or more tables specified after the <code>FROM</code> keyword. If multiple table names are separated by commas, then the query uses the cross join of the various tables. The <code>JOIN</code> syntax can also be used to specify how tables are joined. The only type of outer join that is supported is <code>LEFT OUTER JOIN</code>. The <code>ON</code> clause expression in <code>join-args</code> must resolve to a boolean value. A subquery in parentheses may be used as a table in the <code>FROM</code> clause. The entire <code>FROM</code> clause may be omitted, in which case the result is a single row consisting of the values of the <code>result</code> expression list.</p>
+<p>The <code>WHERE</code> clause is used to limit the number of rows the query retrieves. <code>WHERE</code> clause expressions must resolve to a boolean value. <code>WHERE</code> clause filtering is performed before any grouping, so <code>WHERE</code> clause expressions may not include aggregate functions.</p>
+<p>The <code>GROUP BY</code> clause causes one or more rows of the result to be combined into a single row of output. A <code>GROUP BY</code> clause is especially useful when the result contains aggregate functions. The expressions in the <code>GROUP BY</code> clause do not have to be expressions that appear in the <code>SELECT</code> expression list.</p>
+<p>The <code>HAVING</code> clause is like <code>WHERE</code> in that it limits the rows returned by the statement. However, the <code>HAVING</code> clause applies after any grouping specified by a <code>GROUP BY</code> clause has occurred. Consequently, the <code>HAVING</code> expression may refer to values that include aggregate functions. A <code>HAVING</code> clause expression is not required to appear in the <code>SELECT</code> list. Like a <code>WHERE</code> expression, a <code>HAVING</code> expression must resolve to a boolean value.</p>
+<p>The <code>ORDER BY</code> clause causes the output rows to be sorted. The <code>sort-expr-list</code> argument to the <code>ORDER BY</code> clause is a list of expressions that are used as the key for the sort. The expressions do not have to be part of the result for a simple <code>SELECT</code>, but in a compound <code>SELECT</code> (a <code>SELECT</code> using one of the <code>compound-op</code> operators) each sort expression must exactly match one of the result columns. Each sort expression may be optionally followed by a <code>sort-order</code> clause consisting of the <code>COLLATE</code> keyword and the name of a collation function used for ordering text and/or the keyword <code>ASC</code> or <code>DESC</code> to specify the sort order (ascending or descending). The <code>sort-order</code> can be omitted and the default (ascending order) is used. For a definition of the <code>COLLATE</code> clause and collation functions, see <a href="#collate">COLLATE</a>.</p>
+<p>The <code>LIMIT</code> clause places an upper bound on the number of rows returned in the result. A negative <code>LIMIT</code> indicates no upper bound. The optional <code>OFFSET</code> following <code>LIMIT</code> specifies how many rows to skip at the beginning of the result set. In a compound <code>SELECT</code> query, the <code>LIMIT</code> clause may only appear after the final <code>SELECT</code> statement, and the limit is applied to the entire query. Note that if the <code>OFFSET</code> keyword is used in the <code>LIMIT</code> clause, then the limit is the first integer and the offset is the second integer. If a comma is used instead of the <code>OFFSET</code> keyword, then the offset is the first number and the limit is the second number. This seeming contradiction is intentional &#8212; it maximizes compatibility with legacy SQL database systems.</p>
+<p>A compound <code>SELECT</code> is formed from two or more simple <code>SELECT</code> statements connected by one of the operators <code>UNION</code>, <code>UNION</code> <code>ALL</code>, <code>INTERSECT</code>, or <code>EXCEPT</code>. In a compound <code>SELECT</code>, all the constituent <code>SELECT</code> statements must specify the same number of result columns. There can only be a single <code>ORDER BY</code> clause after the final <code>SELECT</code> statement (and before the single <code>LIMIT</code> clause, if one is specified). The <code>UNION</code> and <code>UNION ALL</code> operators combine the results of the preceding and following <code>SELECT</code> statements into a single table. The difference is that in <code>UNION</code>, all result rows are distinct, but in <code>UNION ALL</code>, there may be duplicates. The <code>INTERSECT</code> operator takes the intersection of the results of the preceding and following <code>SELECT</code> statements. <code>EXCEPT</code> takes the result of preceding <code>SELECT</code> after removing the results of the following <code>SELECT</code>. When three or more <code>SELECT</code> statements are connected into a compound, they group from first to last.</p>
+<p>For a definition of permitted expressions, see <a href="#expressions">Expressions</a></p>
+<h4 id="insert">INSERT</h4>
+<p>The <code>INSERT</code> statement comes in two basic forms and is used to populate tables with data.</p>
+<listing>sql-statement  ::=  INSERT [OR conflict-algorithm] INTO [database-name.] table-name [(column-list)] VALUES (value-list) |
+                    INSERT [OR conflict-algorithm] INTO [database-name.] table-name [(column-list)] select-statement
+
+                    REPLACE INTO [database-name.] table-name [(column-list)] VALUES (value-list) |
+                    REPLACE INTO [database-name.] table-name [(column-list)] select-statement</listing>
+<p>The first form (with the <code>VALUES</code> keyword) creates a single new row in an existing table. If no <code>column-list</code> is specified then the number of values must be the same as the number of columns in the table. If a <code>column-list</code> is specified, then the number of values must match the number of specified columns. Columns of the table that do not appear in the column list are filled with the default value defined when the table is created, or with <code>NULL</code> if no default value is defined.</p>
+<p>The second form of the <code>INSERT</code> statement takes its data from a <code>SELECT</code> statement. The number of columns in the result of the <code>SELECT</code> must exactly match the number of columns in the table if <code>column-list</code> is not specified, or it must match the number of columns named in the <code>column-list</code>. A new entry is made in the table for every row of the <code>SELECT</code> result. The <code>SELECT</code> may be simple or compound. For a definition of allowable <code>SELECT</code> statements, see <a href="#select">SELECT</a>.</p>
+<p>The optional <code>conflict-algorithm</code> allows the specification of an alternative constraint conflict resolution algorithm to use during this one command. For an explanation and definition of conflict algorithms, see <a href="#onConflict">ON CONFLICT (conflict algorithms)</a>.</p>
+<p>The two <code>REPLACE INTO</code> forms of the statement are equivalent to using the standard <code>INSERT [OR conflict-algorithm]</code> form with the <code>REPLACE</code> conflict algorithm (i.e. the <code>INSERT OR REPLACE...</code> form).</p>
+<h4 id="update">UPDATE</h4>
+<p>The <code>UPDATE</code> statement is used to change the value of columns in a set of rows in a table.</p>
+<listing>sql-statement       ::=  UPDATE [OR conflict-algorithm] [database-name.] table-name
+                         SET assignment [, assignment]*
+                         [WHERE expr]
+
+conflict-algorithm  ::=  ROLLBACK | ABORT | FAIL | IGNORE | REPLACE
+
+assignment          ::=  column-name = expr</listing>
+<p>Each assignment in an <code>UPDATE</code> specifies a column name to the left of the equals sign and an arbitrary expression to the right. The expression may use the values of other columns. All expressions are evaluated before any assignments are made. For a definition of permitted expressions see <a href="#expressions">Expressions</a>.</p>
+<p>The <code>WHERE</code> clause is used to restrict the rows that are updated. The <code>WHERE</code> clause expression must resolve to a boolean value.</p>
+<p>The optional <code>conflict-algorithm</code> allows the specification of an alternative constraint conflict resolution algorithm to use during this one command. For an explanation and definition of conflict algorithms, see <a href="#onConflict">ON CONFLICT (conflict algorithms)</a>.</p>
+<h4 id="delete">DELETE</h4>
+<p>The delete command is used to remove records from a table.</p>
+<listing>sql-statement  ::=  DELETE FROM [database-name.] table-name [WHERE expr]</listing>
+<p>The command consists of the <code>DELETE FROM</code> keywords followed by the name of the table from which records are to be removed.</p>
+<p>Without a <code>WHERE</code> clause, all rows of the table are removed. If a <code>WHERE</code> clause is supplied, then only those rows that match the expression are removed. The <code>WHERE</code> clause expression must resolve to a boolean value. For a definition of permitted expressions, see <a href="#expressions">Expressions</a>.</p>
+<h3 id="dataDefinition">Data definition statements</h3>
+<p>Data definition statements are used to create, modify, and remove database objects such as tables, views, indices, and triggers. The following data definition statements are supported:</p>
+<ul>
+  <li>Tables:
+    <ul>
+      <li><a href="#createTable">CREATE TABLE</a></li>
+      <li><a href="#alterTable">ALTER TABLE</a></li>
+      <li><a href="#dropTable">DROP TABLE</a></li>
+    </ul>
+  </li>
+  <li>Indices:
+    <ul>
+      <li><a href="#createIndex">CREATE INDEX</a></li>
+      <li><a href="#dropIndex">DROP INDEX</a></li>
+    </ul>
+  </li>
+  <li>Views:
+    <ul>
+      <li><a href="#createView">CREATE VIEW</a></li>
+      <li><a href="#dropView">DROP VIEW</a></li>
+    </ul>
+  </li>
+  <li>Triggers:
+    <ul>
+      <li><a href="#createTrigger">CREATE TRIGGER</a></li>
+      <li><a href="#dropTrigger">DROP TRIGGER</a></li>
+    </ul>
+  </li>
+</ul>
+<h4 id="createTable">CREATE TABLE</h4>
+<p>A <code>CREATE TABLE</code> statement consists of the keywords <code>CREATE TABLE</code> followed by the name of the new table, then (in parentheses) a list of column definitions and constraints. The table name can be either an identifier or a string.</p>
+<listing>sql-statement       ::=  CREATE [TEMP | TEMPORARY] TABLE [IF NOT EXISTS] [database-name.] table-name
+                         ( column-def [, column-def]* [, constraint]* )
+
+sql-statement       ::=  CREATE [TEMP | TEMPORARY] TABLE [database-name.] table-name AS select-statement
+
+column-def          ::=  name [type] [[CONSTRAINT name] column-constraint]*
+
+type                ::=  typename | typename ( number ) | typename ( number , number )
+
+column-constraint   ::=  NOT NULL [ conflict-clause ] |
+                         PRIMARY KEY [sort-order] [ conflict-clause ] [AUTOINCREMENT] |
+                         UNIQUE [conflict-clause] |
+                         CHECK ( expr ) |
+                         DEFAULT default-value |
+                         COLLATE collation-name
+
+constraint          ::=  PRIMARY KEY ( column-list ) [conflict-clause] |
+                         UNIQUE ( column-list ) [conflict-clause] |
+                         CHECK ( expr )
+
+conflict-clause     ::=  ON CONFLICT conflict-algorithm
+
+conflict-algorithm  ::=  ROLLBACK | ABORT | FAIL | IGNORE | REPLACE
+
+default-value       ::=  NULL | string | number | CURRENT_TIME | CURRENT_DATE | CURRENT_TIMESTAMP
+
+sort-order          ::=  ASC | DESC
+
+collation-name      ::=  BINARY | NOCASE
+
+column-list         ::=  column-name [, column-name]*</listing>
+<p>Each column definition is the name of the column followed by the data type for that column, then one or more optional column constraints. The data type for the column restricts what data may be stored in that column. If an attempt is made to store a value in a column with a different data type, the runtime will convert the value to the appropriate type if possible, or raise an error. See the <a href="#dataTypes">Data type support</a> section for additional information.</p>
+<p>The <code>NOT NULL</code> column constraint indicates that the column cannot contain <code>NULL</code> values.</p>
+<p>A <code>UNIQUE</code> constraint causes an index to be created on the specified column or columns. This index must contain unique keys&#8212;no two rows may contain duplicate values or combinations of values for the specified column or columns. A <code>CREATE TABLE</code> statement can have multiple <code>UNIQUE</code> constraints, including multiple columns with a <code>UNIQUE</code> constraint in the column's definition and/or multiple table-level <code>UNIQUE</code> constraints.</p>
+<p>A CHECK constraint defines an expression that is evaluated and must be true in order for a row's data to be inserted or updated. The CHECK expression must resolve to a boolean value.</p>
+<p>A <code>COLLATE</code> clause in a column definition specifies what text collation function to use when comparing text entries for the column. The <code>BINARY</code> collating function is used by default. For details on the <code>COLLATE</code> clause and collation functions, see <a href="#collate">COLLATE</a>.</p>
+<p>The <code>DEFAULT</code> constraint specifies a default value to use when doing an <code>INSERT</code>. The value may be <code>NULL</code>, a string constant, or a number. The default value may also be one of the special case-independent keywords <code>CURRENT_TIME</code>, <code>CURRENT_DATE</code> or <code>CURRENT_TIMESTAMP</code>. If the value is <code>NULL</code>, a string constant, or a number, it is literally inserted into the column whenever an <code>INSERT</code> statement does not specify a value for the column. If the value is <code>CURRENT_TIME</code>, <code>CURRENT_DATE</code> or <code>CURRENT_TIMESTAMP</code>, then the current UTC date and/or time is inserted into the column. For <code>CURRENT_TIME</code>, the format is <code>HH:MM:SS</code>. For <code>CURRENT_DATE</code>, the format is <code>YYYY-MM-DD</code>. The format for <code>CURRENT_TIMESTAMP</code> is <code>YYYY-MM-DD HH:MM:SS</code>.</p>
+<p>Specifying a <code>PRIMARY KEY</code> normally just creates a <code>UNIQUE</code> index on the corresponding column or columns. However, if the <code>PRIMARY KEY</code> constraint is on a single column that has the data type <code>INTEGER</code>, then that column is used internally as the actual primary key for the table. This means that the column may only hold unique integer values. If a table does not have an <code>INTEGER PRIMARY KEY</code> column, an integer key will be automatically generated when a row is inserted. The primary key for a row can always be accessed using one of the special names <code>ROWID</code>, <code>OID</code>, or <code>_ROWID_</code>. These names can be used regardless of whether it is an explicitly declared <code>INTEGER PRIMARY KEY</code> or an internal generated value. An <code>INTEGER PRIMARY KEY</code> column can also include the keyword <code>AUTOINCREMENT</code>. When the <code>AUTOINCREMENT</code> keyword is used, the database automatically generates and inserts a sequentially incremented integer key in the <code>INTEGER PRIMARY KEY</code> column when an <code>INSERT</code> statement is executed.</p>
+<p>There can only be one <code>PRIMARY KEY</code> constraint in a <code>CREATE TABLE</code> statement. It can either be part of one column's definition or one single table-level <code>PRIMARY KEY</code> constraint. A primary key column is implicitly <code>NOT NULL</code>.</p>
+<p>The optional <code>conflict-clause</code> following many constraints allows the specification of an alternative default constraint conflict resolution algorithm for that constraint. The default is <code>ABORT</code>. Different constraints within the same table may have different default conflict resolution algorithms. If an <code>INSERT</code> or <code>UPDATE</code> statement specifies a different conflict resolution algorithm, that algorithm is used in place of the algorithm specified in the CREATE TABLE statement. See the section <a href="#onConflict">ON CONFLICT (conflict algorithms)</a> for additional information.</p>
+<p>Additional constraints, such as FOREIGN KEY constraints, do not result in an error but the runtime ignores them.</p>
+<p>If the <code>TEMP</code> or <code>TEMPORARY</code> keyword occurs between <code>CREATE</code> and <code>TABLE</code> then the table that is created is only visible within the same database connection (SQLConnection instance). It is automatically deleted when the database connection is closed. Any indices created on a temporary table are also temporary. Temporary tables and indices are stored in a separate file distinct from the main database file.</p>
+<p>If the optional <code>database-name</code> prefix is specified, then the table is created in a named database (a database that was connected to the SQLConnection instance by calling the <code>attach()</code> method with the specified database name). It is an error to specify both a <code>database-name</code> prefix and the <code>TEMP</code> keyword, unless the <code>database-name</code> prefix is <code>temp</code>. If no database name is specified, and the <code>TEMP</code> keyword is not present, the table is created in the main database (the database that was connected to the SQLConnection instance using the <code>open()</code> or <code>openAsync()</code>method).</p>
+<p>There are no arbitrary limits on the number of columns or on the number of constraints in a table. There is also no arbitrary limit on the amount of data in a row.</p>
+<p>The <code>CREATE TABLE AS</code> form defines the table as the result set of a query. The names of the table columns are the names of the columns in the result.</p>
+<p>If the optional <code>IF NOT EXISTS</code> clause is present and another table with the same name already exists, then the database ignores the <code>CREATE TABLE</code> command.</p>
+<p>A table can be removed using the <code>DROP TABLE</code> statement, and limited changes can be made using the <code>ALTER TABLE</code> statement.</p>
+<h4 id="alterTable">ALTER TABLE</h4>
+<p>The <code>ALTER TABLE</code> command allows the user to rename or add a new column to an existing table. It is not possible to remove a column from a table.</p>
+<listing>sql-statement ::= ALTER TABLE [database-name.] table-name alteration
+
+alteration    ::= RENAME TO new-table-name
+
+alteration    ::= ADD [COLUMN] column-def</listing>
+<p>The <code>RENAME TO</code> syntax is used to rename the table identified by <code>[database-name.] table-name</code> to <code>new-table-name</code>. This command cannot be used to move a table between attached databases, only to rename a table within the same database.</p>
+<p>If the table being renamed has triggers or indices, then they remain attached to the table after it has been renamed. However, if there are any view definitions or statements executed by triggers that refer to the table being renamed, they are not automatically modified to use the new table name. If a renamed table has associated views or triggers, you must manually drop and recreate the triggers or view definitions using the new table name.</p>
+<p>The <code>ADD [COLUMN]</code> syntax is used to add a new column to an existing table. The new column is always appended to the end of the list of existing columns. The <code>column-def</code> clause may take any of the forms permissible in a <code>CREATE TABLE</code> statement, with the following restrictions:</p>
+<ul>
+  <li>The column may not have a <code>PRIMARY KEY</code> or <code>UNIQUE</code> constraint.</li>
+  <li>The column may not have a default value of <code>CURRENT_TIME</code>, <code>CURRENT_DATE</code> or <code>CURRENT_TIMESTAMP</code>.</li>
+  <li>If a <code>NOT NULL</code> constraint is specified, the column must have a default value other than <code>NULL</code>.</li>
+</ul>
+<p>The execution time of the <code>ALTER TABLE</code> statement is not affected by the amount of data in the table.</p>
+<h4 id="dropTable">DROP TABLE</h4>
+<p>The <code>DROP TABLE</code> statement removes a table added with a <code>CREATE TABLE</code> statement. The table with the specified <code>table-name</code> is the table that's dropped. It is completely removed from the database and the disk file. The table cannot be recovered. All indices associated with the table are also deleted.</p>
+<listing>sql-statement  ::=  DROP TABLE [IF EXISTS] [database-name.] table-name</listing>
+<p>By default the <code>DROP TABLE</code> statement does not reduce the size of the database file. Empty space in the database is retained and used in subsequent <code>INSERT</code> operations. To remove free space in the database use the <code>SQLConnection.clean()</code> method. If the <code>autoClean</code> parameter is set to <code>true</code> when the database is initially created, the space is freed automatically.</p>
+<p>The optional <code>IF EXISTS</code> clause suppresses the error that would normally result if the table does not exist.</p>
+<h4 id="createIndex">CREATE INDEX</h4>
+<p>The <code>CREATE INDEX</code> command consists of the keywords <code>CREATE INDEX</code> followed by the name of the new index, the keyword <code>ON</code>, the name of a previously created table that is to be indexed, and a parenthesized list of names of columns in the table whose values are used for the index key.</p>
+<listing>sql-statement  ::=  CREATE [UNIQUE] INDEX [IF NOT EXISTS] [database-name.] index-name
+                    ON table-name ( column-name [, column-name]* )
+
+column-name    ::=  name [COLLATE collation-name] [ASC | DESC]</listing>
+<p>Each column name can be followed by <code>ASC</code> or <code>DESC</code> keywords to indicate sort order, but the sort order designation is ignored by the runtime. Sorting is always done in ascending order.</p>
+<p>The <code>COLLATE</code> clause following each column name defines a collating sequence used for text values in that column. The default collation sequence is the collation sequence defined for that column in the <code>CREATE TABLE</code> statement. If no collation sequence is specified, the <code>BINARY</code> collation sequence is used. For a definition of the <code>COLLATE</code> clause and collation functions see <a href="#collate">COLLATE</a>.</p>
+<p>There are no arbitrary limits on the number of indices that can be attached to a single table. There are also no limits on the number of columns in an index.</p>
+<h4 id="dropIndex">DROP INDEX</h4>
+<p>The drop index statement removes an index added with the <code>CREATE INDEX</code> statement. The specified index is completely removed from the database file. The only way to recover the index is to reenter the appropriate <code>CREATE INDEX</code> command.</p>
+<listing>sql-statement  ::=  DROP INDEX [IF EXISTS] [database-name.] index-name</listing>
+<p>By default the <code>DROP INDEX</code> statement does not reduce the size of the database file. Empty space in the database is retained and used in subsequent <code>INSERT</code> operations. To remove free space in the database use the <code>SQLConnection.clean()</code> method. If the <code>autoClean</code> parameter is set to <code>true</code> when the database is initially created, the space is freed automatically.</p>
+<h4 id="createView">CREATE VIEW</h4>
+<p>The <code>CREATE VIEW</code> command assigns a name to a pre-defined <code>SELECT</code> statement. This new name can then be used in a <code>FROM</code> clause of another <code>SELECT</code> statement in place of a table name. Views are commonly used to simplify queries by combining a complex (and frequently used) set of data into a structure that can be used in other operations.</p>
+<listing>sql-statement  ::=  CREATE [TEMP | TEMPORARY] VIEW [IF NOT EXISTS] [database-name.] view-name AS select-statement</listing>
+<p>If the <code>TEMP</code> or <code>TEMPORARY</code> keyword occurs in between <code>CREATE</code> and <code>VIEW</code> then the view that is created is only visible to the SQLConnection instance that opened the database and is automatically deleted when the database is closed.</p>
+<p>If a <code>[database-name]</code> is specified the view is created in the named database (a database that was connected to the SQLConnection instance using the <code>attach()</code> method, with the specified <code>name</code> argument. It is an error to specify both a <code>[database-name]</code> and the <code>TEMP</code> keyword unless the <code>[database-name]</code> is <code>temp</code>. If no database name is specified, and the <code>TEMP</code> keyword is not present, the view is created in the main database (the database that was connected to the SQLConnection instance using the <code>open()</code> or <code>openAsync()</code> method).</p>
+<p>Views are read only. A <code>DELETE</code>, <code>INSERT</code>, or <code>UPDATE</code> statement cannot be used on a view, unless at least one trigger of the associated type (<code>INSTEAD OF DELETE</code>, <code>INSTEAD OF INSERT</code>, <code>INSTEAD OF UPDATE</code>) is defined. For information on creating a trigger for a view, see <a href="#createTrigger">CREATE TRIGGER</a>.</p>
+<p>A view is removed from a database using the <code>DROP VIEW</code> statement.</p>
+<h4 id="dropView">DROP VIEW</h4>
+<p>The <code>DROP VIEW</code> statement removes a view created by a <code>CREATE VIEW</code> statement.</p>
+<listing>sql-statement  ::=  DROP VIEW [IF EXISTS] view-name</listing>
+<p>The specified <code>view-name</code> is the name of the view to drop. It is removed from the database, but no data in the underlying tables is modified.</p>
+<h4 id="createTrigger">CREATE TRIGGER</h4>
+<p>The create trigger statement is used to add triggers to the database schema. A trigger is a database operation (the <code>trigger-action</code>) that is automatically performed when a specified database event (the <code>database-event</code>) occurs.</p>
+<listing>sql-statement   ::=  CREATE [TEMP | TEMPORARY] TRIGGER [IF NOT EXISTS] trigger-name
+                     [BEFORE | AFTER] database-event
+                     ON [database-name.] table-name
+                     trigger-action
+
+sql-statement   ::=  CREATE [TEMP | TEMPORARY] TRIGGER [IF NOT EXISTS] trigger-name
+                     INSTEAD OF database-event
+                     ON [database-name.] view-name
+                     trigger-action
+
+database-event  ::=  DELETE |
+                     INSERT |
+                     UPDATE |
+                     UPDATE OF column-list
+
+trigger-action  ::=  [FOR EACH ROW] [WHEN expr]
+                     BEGIN
+                       trigger-step ;
+                       [ trigger-step ; ]*
+                     END
+
+trigger-step    ::=  update-statement |
+                     insert-statement |
+                     delete-statement |
+                     select-statement
+
+column-list     ::=  column-name [, column-name]*</listing>
+<p>A trigger is specified to fire whenever a <code>DELETE</code>, <code>INSERT</code>, or <code>UPDATE</code> of a particular database table occurs, or whenever an <code>UPDATE</code> of one or more specified columns of a table are updated. Triggers are permanent unless the <code>TEMP</code> or <code>TEMPORARY</code> keyword is used. In that case the trigger is removed when the SQLConnection instance's main database connection is closed. If no timing is specified (<code>BEFORE</code> or <code>AFTER</code>) the trigger defaults to <code>BEFORE</code>.</p>
+<p>Only <code>FOR EACH ROW</code> triggers are supported, so the <code>FOR EACH ROW</code> text is optional. With a <code>FOR EACH ROW</code> trigger, the <code>trigger-step</code> statements are executed for each database row being inserted, updated or deleted by the statement causing the trigger to fire, if the <code>WHEN</code> clause expression evaluates to <code>true</code>.</p>
+<p>If a <code>WHEN</code> clause is supplied, the SQL statements specified as trigger-steps are only executed for rows for which the WHEN clause is true. If no WHEN clause is supplied, the SQL statements are executed for all rows.</p>
+<p>Within the body of a trigger, (the <code>trigger-action</code> clause) the pre-change and post-change values of the affected table are available using the special table names <code>OLD</code> and <code>NEW</code>. The structure of the <code>OLD</code> and <code>NEW</code> tables matches the structure of the table on which the trigger is created. The OLD table contains any rows that are modified or deleted by the triggering statement, in their state before the triggering statement's operations. The NEW table contains any rows that are modified or created by the triggering statement, in their state after the triggering statement's operations. Both the <code>WHEN</code> clause and the <code>trigger-step</code> statements can access values from the row being inserted, deleted or updated using references of the form <code>NEW.column-name</code> and <code>OLD.column-name</code>, where <code>column-name</code> is the name of a column from the table with which the trigger is associated. The availability of the <code>OLD</code> and <code>NEW</code> table references depends on the type of <code>database-event</code> the trigger handles:</p>
+<ul>
+  <li>
+    <div> <code>INSERT</code> &ndash; <code>NEW</code> references are valid</div>
+  </li>
+  <li>
+    <div> <code>UPDATE</code> &ndash; <code>NEW</code> and <code>OLD</code> references are valid</div>
+  </li>
+  <li>
+    <div> <code>DELETE</code> &ndash; <code>OLD</code> references are valid</div>
+  </li>
+</ul>
+<p>The specified timing (<code>BEFORE</code>, <code>AFTER</code>, or <code>INSTEAD OF</code>) determines when the <code>trigger-step</code> statements are executed relative to the insertion, modification or removal of the associated row. An <code>ON CONFLICT</code> clause may be specified as part of an <code>UPDATE</code> or <code>INSERT</code> statement in a <code>trigger-step</code>. However, if an <code>ON CONFLICT</code> clause is specified as part of the statement causing the trigger to fire, then that conflict handling policy is used instead.</p>
+<p>In addition to table triggers, an <code>INSTEAD OF</code> trigger can be created on a view. If one or more <code>INSTEAD OF INSERT</code>, <code>INSTEAD OF DELETE</code>, or <code>INSTEAD OF UPDATE</code> triggers are defined on a view, it is not considered an error to execute the associated type of statement (<code>INSERT</code>, <code>DELETE</code>, or <code>UPDATE</code>) on the view. In that case, executing an <code>INSERT</code>, <code>DELETE</code> or <code>UPDATE</code> on the view causes the associated triggers to fire. Because the trigger is an <code>INSTEAD OF</code> trigger, the tables underlying the view are not modified by the statement that causes the trigger to fire. However, the triggers can be used to perform modifying operations on the underlying tables.</p>
+<p>There is an important issue to keep in mind when creating a trigger on a table with an <code>INTEGER PRIMARY KEY</code> column. If a <code>BEFORE</code> trigger modifies the <code>INTEGER PRIMARY KEY</code> column of a row that is to be updated by the statement that causes the trigger to fire, the update doesn't occur. A workaround is to create the table with a <code>PRIMARY KEY</code> column instead of an <code>INTEGER PRIMARY KEY</code> column.</p>
+<p>A trigger can be removed using the <code>DROP TRIGGER</code> statement. When a table or view is dropped, all triggers associated with that table or view are automatically dropped as well.</p>
+<h5 id="raise()">RAISE() function</h5>
+<p>A special SQL function <code>RAISE()</code> can be used in a <code>trigger-step</code> statement of a trigger. This function has the following syntax:</p>
+<listing>raise-function  ::=  RAISE ( ABORT, error-message ) |
+                     RAISE ( FAIL, error-message ) |
+                     RAISE ( ROLLBACK, error-message ) |
+                     RAISE ( IGNORE )</listing>
+<p>When one of the first three forms is called during trigger execution, the specified <code>ON CONFLICT</code> processing action (<code>ABORT</code>, <code>FAIL</code>, or <code>ROLLBACK</code>) is performed and the current statement's execution ends. The <code>ROLLBACK</code> is considered a statement execution failure, so the SQLStatement instance whose <code>execute()</code> method was being carried out dispatches an <code>error</code> (<code>SQLErrorEvent.ERROR</code>) event. The SQLError object in the dispatched event object's <code>error</code> property has its <code>details</code> property set to the <code>error-message</code> specified in the <code>RAISE()</code> function.</p>
+<p>When <code>RAISE(IGNORE)</code> is called, the remainder of the current trigger, the statement that caused the trigger to execute, and any subsequent triggers that would of been executed are abandoned. No database changes are rolled back. If the statement that caused the trigger to execute is itself part of a trigger, that trigger program resumes execution at the beginning of the next step. For more information about the conflict resolution algorithms, see the section <a href="#onConflict">ON CONFLICT (conflict algorithms)</a>.</p>
+<h4 id="dropTrigger">DROP TRIGGER</h4>
+<p>The <code>DROP TRIGGER</code> statement removes a trigger created by the <code>CREATE TRIGGER</code> statement.</p>
+<listing>sql-statement  ::=  DROP TRIGGER [IF EXISTS] [database-name.] trigger-name</listing>
+<p>The trigger is deleted from the database. Note that triggers are automatically dropped when their associated table is dropped.</p>
+<h3 id="specialStatements">Special statements and clauses</h3>
+<p>This section describes several clauses that are extensions to SQL provided by the runtime, as well as two language elements that can be used in many statements, comments and expressions. The elements in this section are:</p>
+<ul>
+  <li><a href="#collate">COLLATE clause</a></li>
+  <li><a href="#explain">EXPLAIN clause</a></li>
+  <li><a href="#onConflict">ON CONFLICT clause and conflict algorithms</a></li>
+  <li><a href="#reindex">REINDEX statement</a></li>
+  <li><a href="#comments">Comments</a></li>
+  <li><a href="#expressions">Expressions</a></li>
+</ul>
+<h4 id="collate">COLLATE</h4>
+<p>The COLLATE clause is used in <code>SELECT</code>, <code>CREATE TABLE</code>, and <code>CREATE INDEX</code> statements to specify the comparison algorithm that is used when comparing or sorting values.</p>
+<listing>sql-statement   ::=  COLLATE collation-name
+
+collation-name  ::=  BINARY | NOCASE</listing>
+<p>The default collation type for columns is <code>BINARY</code>. When <code>BINARY</code> collation is used with values of the <code>TEXT</code> storage class, binary collation is performed by comparing the bytes in memory that represent the value regardless of the text encoding.</p>
+<p>The <code>NOCASE</code> collation sequence is only applied for values of the <code>TEXT</code> storage class. When used, the <code>NOCASE</code> collation performs a case-insensitive comparison.</p>
+<p>No collation sequence is used for storage classes of type <code>NULL</code>, <code>BLOB</code>, <code>INTEGER</code>, or <code>REAL</code>.</p>
+<p>To use a collation type other than <code>BINARY</code> with a column, a <code>COLLATE</code> clause must be specified as part of the column definition in the <code>CREATE TABLE</code> statement. Whenever two <code>TEXT</code> values are compared, a collation sequence is used to determine the results of the comparison according to the following rules:</p>
+<ul>
+  <li>For binary comparison operators (<code>=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, and <code>&gt;=</code>), if either operand is a column, then the default collation type of the column determines the collation sequence that is used for the comparison. If both operands are columns, then the collation type for the left operand determines the collation sequence used. If neither operand is a column, then the <code>BINARY</code> collation sequence is used.</li>
+  <li>The <code>BETWEEN...AND</code> operator is equivalent to using two expressions with the <code>&gt;=</code> and <code>&lt;=</code> operators. For example, the expression <code>x BETWEEN y AND z</code> is equivalent to <code>x &gt;= y AND x &lt;= z</code>. Consequently, the <code>BETWEEN...AND</code> operator follows the preceding rule to determine the collation sequence.</li>
+  <li>The <code>IN</code> operator behaves like the <code>=</code> operator for the purposes of determining the collation sequence to use. For example, the collation sequence used for the expression <code>x IN (y, z)</code> is the default collation type of <code>x</code> if <code>x</code> is a column. Otherwise, <code>BINARY</code> collation is used.</li>
+  <li>An <code>ORDER BY</code> clause that is part of a <code>SELECT</code> statement may be explicitly assigned a collation sequence to be used for the sort operation. In that case the explicit collation sequence is always used. Otherwise, if the expression sorted by an <code>ORDER BY</code> clause is a column, the default collation type of the column is used to determine sort order. If the expression is not a column, the <code>BINARY</code> collation sequence is used.</li>
+</ul>
+<h4 id="explain">EXPLAIN</h4>
+<p>The <code>EXPLAIN</code> command modifier is a non-standard extension to SQL.</p>
+<listing>sql-statement  ::=  EXPLAIN sql-statement</listing>
+<p>If the <code>EXPLAIN</code> keyword appears before any other SQL statement, then instead of actually executing the command, the result reports the sequence of virtual machine instructions it would have used to execute the command, had the <code>EXPLAIN</code> keyword not been present. The <code>EXPLAIN</code> feature is an advanced feature and allows developers to change SQL statement text in an attempt to optimize performance or debug a statement that doesn't appear to be working properly.</p>
+<h4 id="onConflict">ON CONFLICT (conflict algorithms)</h4>
+<p>The <code>ON CONFLICT</code> clause is not a separate SQL command. It is a non-standard clause that can appear in many other SQL commands.</p>
+<listing>conflict-clause     ::=  ON CONFLICT conflict-algorithm
+
+conflict-clause     ::=  OR conflict-algorithm
+
+conflict-algorithm  ::=  ROLLBACK |
+                         ABORT |
+                         FAIL |
+                         IGNORE |
+                         REPLACE</listing>
+<p>The first form of the <code>ON CONFLICT</code> clause, using the keywords <code>ON CONFLICT</code>, is used in a <code>CREATE TABLE</code> statement. For an <code>INSERT</code> or <code>UPDATE</code> statement, the second form is used, with <code>ON CONFLICT</code> replaced by <code>OR</code> to make the syntax seem more natural. For example, instead of <code>INSERT ON CONFLICT IGNORE</code>, the statement becomes <code>INSERT OR IGNORE</code>. Although the keywords are different, the meaning of the clause is the same in either form.</p>
+<p>The <code>ON CONFLICT</code> clause specifies the algorithm that is used to resolve constraint conflicts. The five algorithms are <code>ROLLBACK</code>, <code>ABORT</code>, <code>FAIL</code>, <code>IGNORE</code>, and <code>REPLACE</code>. The default algorithm is <code>ABORT</code>. The following is an explanation of the five conflict algorithms:</p>
+<ul>
+  <li><strong>ROLLBACK</strong> - When a constraint violation occurs, an immediate <code>ROLLBACK</code> occurs, ending the current transaction. The command aborts and the SQLStatement instance dispatches an <code>error</code> event. If no transaction is active (other than the implied transaction that is created on every command) then this algorithm works the same as <code>ABORT</code>.</li>
+  <li><strong>ABORT</strong> - When a constraint violation occurs, the command backs out any prior changes it might have made and the SQLStatement instance dispatches an <code>error</code> event. No <code>ROLLBACK</code> is executed, so changes from prior commands within a transaction are preserved. <code>ABORT</code> is the default behavior.</li>
+  <li><strong>FAIL</strong> - When a constraint violation occurs, the command aborts and the SQLStatement dispatches an <code>error</code> event. However, any changes to the database that the statement made before encountering the constraint violation are preserved and are not backed out. For example, if an <code>UPDATE</code> statement encounters a constraint violation on the 100th row that it attempts to update, then the first 99 row changes are preserved but changes to rows 100 and beyond don't occur.</li>
+  <li><strong>IGNORE</strong> - When a constraint violation occurs, the one row that contains the constraint violation is not inserted or changed. Aside from this row being ignored, the command continues executing normally. Other rows before and after the row that contained the constraint violation continue to be inserted or updated normally. No error is returned.</li>
+  <li><strong>REPLACE</strong> - When a <code>UNIQUE</code> constraint violation occurs, the pre-existing rows that are causing the constraint violation are removed before inserting or updating the current row. Consequently, the insert or update always occurs, and the command continues executing normally. No error is returned. If a <code>NOT NULL</code> constraint violation occurs, the <code>NULL</code> value is replaced by the default value for that column. If the column has no default value, then the <code>ABORT</code> algorithm is used. If a <code>CHECK</code> constraint violation occurs then the <code>IGNORE</code> algorithm is used. When this conflict resolution strategy deletes rows in order to satisfy a constraint, it does not invoke delete triggers on those rows.</li>
+</ul>
+<p>The algorithm specified in the <code>OR</code> clause of an <code>INSERT</code> or <code>UPDATE</code> statement overrides any algorithm specified in a <code>CREATE TABLE</code> statement. If no algorithm is specified in the <code>CREATE TABLE</code> statement or the executing <code>INSERT</code> or <code>UPDATE</code> statement, the <code>ABORT</code> algorithm is used.</p>
+<h4 id="reindex">REINDEX</h4>
+<p>The <code>REINDEX</code> command is used to delete and re-create one or more indices. This command is useful when the definition of a collation sequence has changed.</p>
+<listing>sql-statement  ::=  REINDEX collation-name
+
+sql-statement  ::=  REINDEX [database-name .] ( table-name | index-name )</listing>
+<p>In the first form, all indices in all attached databases that use the named collation sequence are recreated. In the second form, when a <code>table-name</code> is specified, all indices associated with the table are rebuilt. If an <code>index-name</code> is given, only the specified index is deleted and recreated.</p>
+<h4 id="comments">Comments</h4>
+<p>Comments aren't SQL commands, but they can occur in SQL queries. They are treated as white space by the runtime. They can begin anywhere white space can be found, including inside expressions that span multiple lines.</p>
+<listing>comment             ::=  single-line-comment |
+                         block-comment
+
+single-line-comment ::=  -- single-line
+
+block-comment       ::=  /* multiple-lines or block [*/]</listing>
+<p>A single-line comment is indicated by two dashes. A single line comment only extends to the end of the current line.</p>
+<p>Block comments can span any number of lines, or be embedded within a single line. If there is no terminating delimiter, a block comment extends to the end of the input. This situation is not treated as an error. A new SQL statement can begin on a line after a block comment ends. Block comments can be embedded anywhere white space can occur, including inside expressions, and in the middle of other SQL statements. Block comments do not nest. Single-line comments inside a block comment are ignored.</p>
+<h4 id="expressions">Expressions</h4>
+<p>Expressions are subcommands within other SQL blocks. The following describes the valid syntax for an expression within a SQL statement:</p>
+<listing>expr            ::=  expr binary-op expr |
+                     expr [NOT] like-op expr [ESCAPE expr] |
+                     unary-op expr |
+                     ( expr ) |
+                     column-name |
+                     table-name.column-name |
+                     database-name.table-name.column-name |
+                     literal-value |
+                     parameter |
+                     function-name( expr-list | * ) |
+                     expr ISNULL |
+                     expr NOTNULL |
+                     expr [NOT] BETWEEN expr AND expr |
+                     expr [NOT] IN ( value-list ) |
+                     expr [NOT] IN ( select-statement ) |
+                     expr [NOT] IN [database-name.] table-name |
+                     [EXISTS] ( select-statement ) |
+                     CASE [expr] ( WHEN expr THEN expr )+ [ELSE expr] END |
+                     CAST ( expr AS type ) |
+                     expr COLLATE collation-name
+
+like-op         ::=  LIKE | GLOB
+
+binary-op       ::=  see <a href="#operators">Operators</a>
+
+unary-op        ::=  see <a href="#operators">Operators</a>
+
+parameter       ::=  :param-name | @param-name | ?
+
+value-list      ::=  literal-value [, literal-value]*
+
+literal-value   ::=  literal-string | literal-number | literal-boolean | literal-blob | literal-null
+
+literal-string  ::=  'string value'
+
+literal-number  ::=  integer | number
+
+literal-boolean  ::=  true | false
+
+literal-blob  ::=  X'string of hexadecimal data'
+
+literal-null  ::=  NULL</listing>
+<p>An expression is any combination of values and operators that can be resolved to a single value. Expressions can be divided into two general types, according to whether they resolve to a boolean (true or false) value or whether they resolve to a non-boolean value.</p>
+<p>In several common situations, including in a WHERE clause, a HAVING clause, the ON expression in a JOIN clause, and a CHECK expression, the expression must resolve to a boolean value. The following types of expressions meet this condition:</p>
+  <ul>
+    <li><code>ISNULL</code></li>
+    <li><code>NOTNULL</code></li>
+    <li><code>IN ()</code></li>
+    <li><code>EXISTS ()</code></li>
+    <li><code>LIKE</code></li>
+    <li><code>GLOB</code></li>
+    <li>Certain <a href="#builtinFunctions">functions</a></li>
+    <li>Certain <a href="#operators">operators</a> (specifically comparison operators)</li>
+  </ul>
+<h5 id="literalValues">Literal values</h5>
+<p>A literal numeric value is written as an integer number or a floating point number. Scientific notation is supported. The <code>.</code> (period) character is always used as the decimal point.</p>
+<p>A string literal is indicated by enclosing the string in single quotes <code>'</code>. To include a single quote within a string, put two single quotes in a row like this example: <code>''</code>.</p>
+<p>A boolean literal is indicated by the value <code>true</code> or <code>false</code>. Literal boolean values are used with the Boolean column data type.</p>
+<p>A BLOB literal is a string literal containing hexadecimal data and proceeded by a single <code>x</code> or <code>X</code> character, such as <code>X'53514697465'</code>.</p>
+<p>A literal value can also be the token <code>NULL</code>.</p>
+<h5>Column name</h5>
+<p>A column name can be any of the names defined in the <code>CREATE TABLE</code> statement or one of the following special identifiers: <code>ROWID</code>, <code>OID</code>, or <code>_ROWID_</code>. These special identifiers all describe the unique random integer key (the &quot;row key&quot;) associated with every row of every table. The special identifiers only refer to the row key if the <code>CREATE TABLE</code> statement does not define a real column with the same name. Row keys behave as read-only columns. A row key can be used anywhere a regular column can be used, except that you cannot change the value of a row key in an <code>UPDATE</code> or <code>INSERT</code> statement. The <code>SELECT * FROM table</code> statement does not include the row key in its result set.</p>
+<h5 id="expressionSelect">SELECT statement</h5>
+<p>A <code>SELECT</code> statement can appear in an expression as either the right-hand operand of the <code>IN</code> operator, as a scalar quantity (a single result value), or as the operand of an <code>EXISTS</code> operator. When used as a scalar quantity or the operand of an <code>IN</code> operator, the <code>SELECT</code> can only have a single column in its result. A compound <code>SELECT</code> statement (connected with keywords like <code>UNION</code> or <code>EXCEPT</code>) is allowed. With the <code>EXISTS</code> operator, the columns in the result set of the <code>SELECT</code> are ignored and the expression returns <code>TRUE</code> if one or more rows exist and <code>FALSE</code> if the result set is empty. If no terms in the <code>SELECT</code> expression refer to the value in the containing query, then the expression is evaluated once before any other processing and the result is reused as necessary. If the <code>SELECT</code> expression does contain variables from the outer query, known as a correlated subquery, then the <code>SELECT</code> is re-evaluated every time it is needed.</p>
+<p>When a <code>SELECT</code> is the right operand of the <code>IN</code> operator, the <code>IN</code> operator returns <code>TRUE</code> if the result of the left operand is equal to any of the values in the <code>SELECT</code> statement's result set. The <code>IN</code> operator may be preceded by the <code>NOT</code> keyword to invert the sense of the test.</p>
+<p>When a <code>SELECT</code> appears within an expression but is not the right operand of an <code>IN</code> operator, then the first row of the result of the <code>SELECT</code> becomes the value used in the expression. If the <code>SELECT</code> yields more than one result row, all rows after the first are ignored. If the <code>SELECT</code> yields no rows, then the value of the <code>SELECT</code> is <code>NULL</code>.</p>
+<h5>CAST expression</h5>
+<p>A <code>CAST</code> expression changes the data type of the value specified to the one given. The type specified can be any non-empty type name that is valid for the type in a column definition of a <code>CREATE TABLE</code> statement. See <a href="#dataTypes">Data type support</a> for details.</p>
+<h5>Additional expression elements </h5>
+<p>These sections describe additional SQL elements that can be used in expressions:</p>
+<ul>
+  <li><a href="#builtinFunctions">Built-in functions</a>
+    <ul>
+      <li><a href="#aggregateFunctions">Aggregate functions</a></li>
+      <li><a href="#scalarFunctions">Scalar functions</a></li>
+      <li><a href="#dateAndTimeFunctions">Date and time formatting functions</a></li>
+    </ul>
+  </li>
+  <li><a href="#operators">Operators</a></li>
+  <li><a href="#parameters">Parameters</a></li>
+</ul>
+<h3 id="builtinFunctions">Built-in functions</h3>
+<p>The built-in functions fall into three main categories:</p>
+<ul>
+  <li><a href="#aggregateFunctions">Aggregate functions</a></li>
+  <li><a href="#scalarFunctions">Scalar functions</a></li>
+  <li><a href="#dateAndTimeFunctions">Date and time formatting functions</a></li>
+</ul>
+<p>In addition to these functions, there is a special function <code>RAISE()</code> that is used to provide notification of an error in the execution of a trigger. This function can only be used within the body of a <code>CREATE TRIGGER</code> statement. For information on the <code>RAISE()</code> function, see <a href="#raise()">CREATE TRIGGER &gt; RAISE()</a>.</p>
+<p>Like all keywords in SQL, function names are not case sensitive.</p>
+<h4 id="aggregateFunctions">Aggregate functions</h4>
+<p>Aggregate functions perform operations on values from multiple rows. These functions are primarily used in <code>SELECT</code> statements in conjunction with the <code>GROUP BY</code> clause.</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td><code>AVG(X)</code></td>
+      <td>Returns the average value of all non-<code>NULL</code> X within a group. String and BLOB values that do not look like numbers are interpreted as 0. The result of <code>AVG()</code> is always a floating point value even if all inputs are integers.</td>
+    </tr>
+    <tr>
+      <td><p><code>COUNT(X)</code></p>
+      <p><code>COUNT(*)</code></p></td>
+      <td>The first form return a count of the number of times that X is not <code>NULL</code> in a group. The second form (with the <code>*</code> argument) returns the total number of rows in the group.</td>
+    </tr>
+    <tr>
+      <td><code>MAX(X)</code></td>
+      <td>Returns the maximum value of all values in the group. The usual sort order is used to determine the maximum.</td>
+    </tr>
+    <tr>
+      <td><code>MIN(X)</code></td>
+      <td>Returns the minimum non-<code>NULL</code> value of all values in the group. The usual sort order is used to determine the minimum. If all values in the group are <code>NULL</code>, <code>NULL</code> is returned.</td>
+    </tr>
+    <tr>
+      <td><p><code>SUM(X)</code></p>
+      <p><code>TOTAL(X)</code></p></td>
+      <td>Returns the numeric sum of all non-<code>NULL</code> values in the group. If all of the values are <code>NULL</code> then <code>SUM()</code> returns <code>NULL</code>, and <code>TOTAL()</code> returns <code>0.0</code>. The result of <code>TOTAL()</code> is always a floating point value. The result of <code>SUM()</code> is an integer value if all non-<code>NULL</code> inputs are integers. If any input to <code>SUM()</code> is not an integer and not <code>NULL</code> then <code>SUM()</code> returns a floating point value. This value might be an approximation to the true sum.</td>
+    </tr>
+  </tbody>
+</table>
+<p id="scalarFunctions">In any of the preceding aggregate functions that take a single argument, that argument can be preceded by the keyword <code>DISTINCT</code>. In that case, duplicate elements are filtered before being passed into the aggregate function. For example, the function call <code>COUNT(DISTINCT x)</code> returns the number of distinct values of column X instead of the total number of non-<code>NULL</code> values in column <code>x</code>.</p>
+<h4>Scalar functions</h4>
+<p>Scalar functions operate on values one row at a time. The following is a list of these functions:</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td><code>ABS(X)</code></td>
+      <td>Returns the absolute value of argument <code>X</code>.</td>
+    </tr>
+    <tr>
+      <td><code>COALESCE(X, Y, ...)</code></td>
+      <td>Returns a copy of the first non-<code>NULL</code> argument. If all arguments are <code>NULL</code> then <code>NULL</code> is returned. There must be at least two arguments.</td>
+    </tr>
+    <tr>
+      <td><code>GLOB(X, Y)</code></td>
+      <td>This function is used to implement the <code>X GLOB Y</code> syntax.</td>
+    </tr>
+    <tr>
+      <td><code>IFNULL(X, Y)</code></td>
+      <td>Returns a copy of the first non-<code>NULL</code> argument. If both arguments are <code>NULL</code> then <code>NULL</code> is returned. This function behaves the same as <code>COALESCE()</code>.</td>
+    </tr>
+    <tr>
+      <td><code>HEX(X)</code></td>
+      <td>The argument is interpreted as a value of the BLOB storage type. The result is a hexadecimal rendering of the content of that value.</td>
+    </tr>
+	<tr>
+	  <td><code>LAST_INSERT_ROWID()</code></td>
+	  <td>Returns the row identifier (generated primary key) of the last row inserted to the database through the current SQLConnection. This value is the same as the value returned by the <a href="flash/data/SQLConnection.html#lastInsertRowID"><code>SQLConnection.lastInsertRowID</code></a> property.</td>
+	</tr>
+    <tr>
+      <td><code>LENGTH(X)</code></td>
+      <td>Returns the string length of <code>X</code> in characters.</td>
+    </tr>
+    <tr>
+      <td><code>LIKE(X, Y [, Z])</code></td>
+      <td>This function is used to implement the <code>X LIKE Y [ESCAPE Z]</code> syntax of SQL. If the optional <code>ESCAPE</code> clause is present, then the function is invoked with three arguments. Otherwise, it is invoked with two arguments only.</td>
+    </tr>
+    <tr>
+      <td><code>LOWER(X)</code></td>
+      <td>Returns a copy of string <code>X</code> with all characters converted to lower case.<br /></td>
+    </tr>
+	<tr>
+	  <td><p><code>LTRIM(X)</code></p><p><code>LTRIM(X, Y)</code></p></td>
+	  <td>Returns a string formed by removing spaces from the left side of <code>X</code>. If a <code>Y</code> argument is specified, the function removes any of the characters in <code>Y</code> from the left side of <code>X</code>.</td>
+	</tr>
+    <tr>
+      <td><code>MAX(X, Y, ...)</code></td>
+      <td>Returns the argument with the maximum value. Arguments may be strings in addition to numbers. The maximum value is determined by the defined sort order. Note that <code>MAX()</code> is a simple function when it has 2 or more arguments but is an aggregate function when it has a single argument.</td>
+    </tr>
+    <tr>
+      <td><code>MIN(X, Y, ...)</code></td>
+      <td>Returns the argument with the minimum value. Arguments may be strings in addition to numbers. The minimum value is determined by the defined sort order. Note that <code>MIN()</code> is a simple function when it has 2 or more arguments but is an aggregate function when it has a single argument.</td>
+    </tr>
+    <tr>
+      <td><code>NULLIF(X, Y)</code></td>
+      <td>Returns the first argument if the arguments are different, otherwise returns <code>NULL</code>.</td>
+    </tr>
+    <tr>
+      <td><code>QUOTE(X)</code></td>
+      <td>This routine returns a string which is the value of its argument suitable for inclusion into another SQL statement. Strings are surrounded by single-quotes with escapes on interior quotes as needed. BLOB storage classes are encoded as hexadecimal literals. The function is useful when writing triggers to implement undo/redo functionality.</td>
+    </tr>
+    <tr>
+      <td><code>RANDOM(*)</code></td>
+      <td>Returns a pseudo-random integer between -9223372036854775808 and 9223372036854775807. This random value <em>is not</em> crypto-strong.</td>
+    </tr>
+    <tr>
+      <td><code>RANDOMBLOB(N)</code></td>
+      <td>Returns an <code>N</code>-byte BLOB containing pseudo-random bytes. <code>N</code> should be a positive integer. This random value <em>is not</em> crypto-strong. If the value of <code>N</code> is negative a single byte is returned.</td>
+    </tr>
+    <tr>
+      <td><p><code>ROUND(X)</code></p><p><code>ROUND(X, Y)</code></p></td>
+      <td>Rounds off the number <code>X</code> to <code>Y</code> digits to the right of the decimal point. If the <code>Y</code> argument is omitted, 0 is used.</td>
+    </tr>
+	<tr>
+	  <td><p><code>RTRIM(X)</code></p><p><code>RTRIM(X, Y)</code></p></td>
+	  <td>Returns a string formed by removing spaces from the right side of <code>X</code>. If a <code>Y</code> argument is specified, the function removes any of the characters in <code>Y</code> from the right side of <code>X</code>.</td>
+	</tr>
+    <tr>
+      <td><code>SUBSTR(X, Y, Z)</code></td>
+      <td>Returns a substring of input string <code>X</code> that begins with the <code>Y</code>-th character and which is <code>Z</code> characters long. The left-most character of <code>X</code> is index position 1. If <code>Y</code> is negative the first character of the substring is found by counting from the right rather than the left.</td>
+    </tr>
+	<tr>
+	  <td><p><code>TRIM(X)</code></p><p><code>TRIM(X, Y)</code></p></td>
+	  <td>Returns a string formed by removing spaces from the left and right sides of <code>X</code>. If a <code>Y</code> argument is specified, the function removes any of the characters in <code>Y</code> from the left and right sides of <code>X</code>.</td>
+	</tr>
+    <tr>
+      <td><code>TYPEOF(X)</code></td>
+      <td>Returns the type of the expression <code>X</code>. The possible return values are 'null', 'integer', 'real', 'text', and 'blob'. For more information on data types see <a href="#dataTypes">Data type support</a>.</td>
+    </tr>
+    <tr>
+      <td><code>UPPER(X)</code></td>
+      <td>Returns a copy of input string <code>X</code> converted to all upper-case letters.</td>
+    </tr>
+    <tr>
+      <td><code>ZEROBLOB(N)</code></td>
+      <td>Returns a BLOB containing <code>N</code> bytes of 0x00.</td>
+    </tr>
+  </tbody>
+</table>
+<h4 id="dateAndTimeFunctions">Date and time formatting functions</h4>
+<p>The date and time formatting functions are a group of scalar functions that are used to create formatted date and time data. Note that these functions operate on and return string and number values. These functions are not intended to be used with the DATE data type. If you use these functions on data in a column whose declared data type is DATE, they do not behave as expected.</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td><code>DATE(T, ...)</code></td>
+      <td>The <code>DATE()</code> function returns a string containing the date in this format: <code>YYYY-MM-DD</code>. The first parameter (<code>T</code>) specifies a time string of the format found under <a href="#timeFormats">Time formats</a>. Any number of modifiers can be specified after the time string. The modifiers can be found under <a href="#modifiers">Modifiers</a>.</td>
+    </tr>
+    <tr>
+      <td><code>TIME(T, ...)</code></td>
+      <td>The <code>TIME()</code> function returns a string containing the time as HH:MM:SS. The first parameter (<code>T</code>) specifies a time string of the format found under <a href="#timeFormats">Time formats</a>. Any number of modifiers can be specified after the time string. The modifiers can be found under <a href="#modifiers">Modifiers</a>.</td>
+    </tr>
+    <tr>
+      <td>DATETIME(T, ...)</td>
+      <td>The <code>DATETIME()</code> function returns a string containing the date and time in YYYY-MM-DD HH:MM:SS format. The first parameter (<code>T</code>) specifies a time string of the format found under <a href="#timeFormats">Time formats</a>. Any number of modifiers can be specified after the time string. The modifiers can be found under <a href="#modifiers">Modifiers</a>.</td>
+    </tr>
+    <tr>
+      <td>JULIANDAY(T, ...)</td>
+      <td>The <code>JULIANDAY()</code> function returns a number indicating the number of days since noon in Greenwich on November 24, 4714 B.C. and the provided date. The first parameter (<code>T</code>) specifies a time string of the format found under <a href="#timeFormats">Time formats</a>. Any number of modifiers can be specified after the time string. The modifiers can be found under <a href="#modifiers">Modifiers</a>.</td>
+    </tr>
+    <tr>
+      <td>STRFTIME(F, T, ...)</td>
+      <td>The STRFTIME() routine returns the date formatted according to the format string specified as the first argument <code>F</code>. The format string supports the following substitutions:<br />
+          <br />
+          <table class="innertable">
+            <tbody>
+              <tr>
+                <td>%d</td>
+                <td align="right">day of month</td>
+              </tr>
+              <tr>
+                <td>%f</td>
+                <td align="right">fractional seconds SS.SSS</td>
+              </tr>
+              <tr>
+                <td>%H</td>
+                <td align="right">hour 00-24</td>
+              </tr>
+              <tr>
+                <td>%j</td>
+                <td align="right">day of year 001-366</td>
+              </tr>
+              <tr>
+                <td>%J</td>
+                <td align="right">Julian day number</td>
+              </tr>
+              <tr>
+                <td>%m</td>
+                <td align="right">month 01-12</td>
+              </tr>
+              <tr>
+                <td>%M</td>
+                <td align="right">minute 00-59</td>
+              </tr>
+              <tr>
+                <td>%s</td>
+                <td align="right">seconds since 1970-01-01</td>
+              </tr>
+              <tr>
+                <td>%S</td>
+                <td align="right">seconds 00-59</td>
+              </tr>
+              <tr>
+                <td>%w</td>
+                <td align="right">day of week 0-6 (sunday <code>=</code> 0)</td>
+              </tr>
+              <tr>
+                <td>%W</td>
+                <td align="right">week of year 00-53</td>
+              </tr>
+              <tr>
+                <td>%Y</td>
+                <td align="right">year 0000-9999</td>
+              </tr>
+              <tr>
+                <td>%%</td>
+                <td align="right">%</td>
+              </tr>
+            </tbody>
+          </table>
+        <br />
+        The second parameter (<code>T</code>) specifies a time string of the format found under <a href="#timeFormats">Time formats</a>. Any number of modifiers can be specified after the time string. The modifiers can be found under <a href="#modifiers">Modifiers</a>.</td>
+    </tr>
+  </tbody>
+</table>
+<h5 id="timeFormats">Time formats</h5>
+<p>A time string can be in any of the following formats:</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td>YYYY-MM-DD</td>
+      <td>2007-06-15</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DD HH:MM</td>
+      <td>2007-06-15 07:30</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DD HH:MM:SS</td>
+      <td>2007-06-15 07:30:59</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DD HH:MM:SS.SSS</td>
+      <td>2007-06-15 07:30:59.152</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DDTHH:MM</td>
+      <td>2007-06-15T07:30</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DDTHH:MM:SS</td>
+      <td>2007-06-15T07:30:59</td>
+    </tr>
+    <tr>
+      <td>YYYY-MM-DDTHH:MM:SS.SSS</td>
+      <td>2007-06-15T07:30:59.152</td>
+    </tr>
+    <tr>
+      <td>HH:MM</td>
+      <td>07:30 (date is 2000-01-01)</td>
+    </tr>
+    <tr>
+      <td>HH:MM:SS</td>
+      <td>07:30:59 (date is 2000-01-01)</td>
+    </tr>
+    <tr>
+      <td>HH:MM:SS.SSS</td>
+      <td>07:30:59:152 (date is 2000-01-01)</td>
+    </tr>
+    <tr>
+      <td>now</td>
+      <td>Current date and time in Universal Coordinated Time.</td>
+    </tr>
+    <tr>
+      <td>DDDD.DDDD</td>
+      <td>Julian day number as a floating point number</td>
+    </tr>
+  </tbody>
+</table>
+<p>The character <em>T</em> in these formats is a literal character "T" separating the date and the time. Formats that only include a time assume the date 2001-01-01.</p>
+<h5 id="modifiers">Modifiers</h5>
+<p>The time string can be followed by zero or more modifiers that alter the date or alter the interpretation of the date. The available modifiers are as follows:</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td>NNN days</td>
+      <td>Number of days to add to the time.</td>
+    </tr>
+    <tr>
+      <td>NNN hours</td>
+      <td>Number of hours to add to the time.</td>
+    </tr>
+    <tr>
+      <td>NNN minutes</td>
+      <td>Number of minutes to add to the time.</td>
+    </tr>
+    <tr>
+      <td>NNN.NNNN seconds</td>
+      <td>Number of seconds and milliseconds to add to the time.</td>
+    </tr>
+    <tr>
+      <td>NNN months</td>
+      <td>Number of months to add to the time.</td>
+    </tr>
+    <tr>
+      <td>NNN years</td>
+      <td>Number of years to add to the time.</td>
+    </tr>
+    <tr>
+      <td>start of month</td>
+      <td>Shift time backwards to the start of the month.</td>
+    </tr>
+    <tr>
+      <td>start of year</td>
+      <td>Shift time backwards to the start of the year.</td>
+    </tr>
+    <tr>
+      <td>start of day</td>
+      <td>Shift time backwards to the start of the day.</td>
+    </tr>
+    <tr>
+      <td>weekday N</td>
+      <td>Forwards the time to the specified weekday. (0 = Sunday, 1 = Monday, and so forth)</td>
+    </tr>
+    <tr>
+      <td>localtime</td>
+      <td>Converts the date to local time</td>
+    </tr>
+    <tr>
+      <td>utc</td>
+      <td>Converts the date to Universal Coordinated Time</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="operators">Operators</h3>
+<p>SQL supports a large selection of operators, including common operators that exist in most programming languages, as well as several operators that are unique to SQL.</p>
+<h4>Common operators</h4>
+<p>The following binary operators are allowed in a SQL block and are listed in order from highest to lowest precedence:</p>
+<listing>||
+*    /    %
++    -
+&lt;&lt;   &gt;&gt;   &amp;    |
+&lt;    &lt;=   &gt;    &gt;=
+=    ==   !=   &lt;&gt;   IN
+AND
+OR</listing>
+<p>Supported unary prefix operators are:</p>
+<listing>-    !    ~    NOT</listing>
+<p>The <code>COLLATE</code> operator can be thought of as a unary postfix operator. The <code>COLLATE</code> operator has the highest precedence. It always binds more tightly than any prefix unary operator or any binary operator.</p>
+<p>Note that there are two variations of the equals and not equals operators. Equals can be either <code>=</code> or <code>==</code>. The not-equals operator can be either <code>!=</code> or <code>&lt;&gt;</code>.</p>
+<p>The <code>||</code> operator is the string concatenation operator&#8212;it joins together the two strings of its operands.</p>
+<p>The operator <code>%</code> outputs the remainder of its left operand modulo its right operand.</p>
+<p>The result of any binary operator is a numeric value, except for the <code>||</code> concatenation operator which gives a string result.</p>
+<h4>SQL operators</h4>
+<h5>LIKE</h5>
+<p>The <code>LIKE</code> operator does a pattern matching comparison.</p>
+<listing>expr     ::=  (column-name | expr) LIKE pattern
+
+pattern  ::=  '[ string | % | _ ]'</listing>
+<p>The operand to the right of the <code>LIKE</code> operator contains the pattern, and the left-hand operand contains the string to match against the pattern. A percent symbol (<code>%</code>) in the pattern is a wildcard character&#8212;it matches any sequence of zero or more characters in the string. An underscore (<code>_</code>) in the pattern matches any single character in the string. Any other character matches itself or its lower/upper case equivalent, that is, matches are performed in a case-insensitive manner. (Note: the database engine only understands upper/lower case for 7-bit Latin characters. Consequently, the <code>LIKE</code> operator is case sensitive for 8-bit iso8859 characters or UTF-8 characters. For example, the expression <code>'a' LIKE 'A'</code> is <code>TRUE</code> but <code>'&aelig;' LIKE '&AElig;'</code> is <code>FALSE</code>). Case sensitivity for Latin characters can be changed using the <code>SQLConnection.caseSensitiveLike</code> property.</p>
+<p>If the optional <code>ESCAPE</code> clause is present, then the expression following the <code>ESCAPE</code> keyword must evaluate to a string consisting of a single character. This character may be used in the <code>LIKE</code> pattern to match literal percent or underscore characters. The escape character followed by a percent symbol, underscore or itself matches a literal percent symbol, underscore or escape character in the string, respectively.</p>
+<h5>GLOB</h5>
+<p>The <code>GLOB</code> operator is similar to <code>LIKE</code> but uses the Unix file globbing syntax for its wildcards. Unlike <code>LIKE</code>, <code>GLOB</code> is case sensitive.</p>
+<h5>IN</h5>
+<p>The <code>IN</code> operator calculates whether its left operand is equal to one of the values in its right operand (a set of values in parentheses).</p>
+<listing>in-expr         ::=  expr [NOT] IN ( value-list ) |
+                     expr [NOT] IN ( select-statement ) |
+                     expr [NOT] IN [database-name.] table-name
+
+value-list      ::=  literal-value [, literal-value]*</listing>
+<p>The right operand can be a set of comma-separated literal values, or it can be the result of a <code>SELECT</code> statement. See <code>SELECT</code> statements in expressions for an explanation and limitations on using a SELECT statement as the right-hand operand of the <code>IN</code> operator.</p>
+<h5>BETWEEN...AND</h5>
+<p>The <code>BETWEEN...AND</code> operator is equivalent to using two expressions with the <code>&gt;=</code> and <code>&lt;=</code> operators. For example, the expression <code>x BETWEEN y AND z</code> is equivalent to <code>x &gt;= y AND x &lt;= z</code>.</p>
+<h5>NOT</h5>
+<p>The NOT operator is a negation operator. The <code>GLOB</code>, <code>LIKE</code>, and <code>IN</code> operators may be preceded by the <code>NOT</code> keyword to invert the sense of the test (in other words, to check that a value <em>does not</em> match the indicated pattern).</p>
+<h3 id="parameters">Parameters</h3>
+<p>A parameter specifies a placeholder in the expression for a literal value that is filled in at runtime by assigning a value to the <code>SQLStatement.parameters</code> associative array. Parameters can take three forms:</p>
+<table class="innertable">
+  <tbody>
+    <tr>
+      <td><code>?</code></td>
+      <td>A question mark indicates an indexed parameter. Parameters are assigned numerical (zero-based) index values according to their order in the statement.</td>
+    </tr>
+    <tr>
+      <td><code>:AAAA</code></td>
+      <td>A colon followed by an identifier name holds a spot for a named parameter with the name <code>AAAA</code>. Named parameters are also numbered according to their order in the SQL statement. To avoid confusion, it is best to avoid mixing named and numbered parameters.</td>
+    </tr>
+    <tr>
+      <td><code>&#064;AAAA</code></td>
+      <td>An &quot;at sign&quot; is equivalent to a colon.</td>
+    </tr>
+  </tbody>
+</table>
+<h3 id="unsupportedSQL">Unsupported SQL features</h3>
+<p>The following is a list of the standard SQL elements that are not supported in Adobe AIR:</p>
+<ul>
+  <li><strong>FOREIGN KEY constraints</strong> - <code>FOREIGN KEY</code> constraints are parsed but are not enforced.</li>
+  <li><strong>Triggers</strong> - <code>FOR EACH STATEMENT</code> triggers are not supported (all triggers must be <code>FOR EACH ROW</code>). <code>INSTEAD OF</code> triggers are not supported on tables (<code>INSTEAD OF</code> triggers are only allowed on views). Recursive triggers&#8212;triggers that trigger themselves&#8212;are not supported.</li>
+ <li><strong>ALTER TABLE</strong> - Only the <code>RENAME TABLE</code> and <code>ADD COLUMN</code> variants of the <code>ALTER TABLE</code> command are supported. Other kinds of <code>ALTER TABLE</code> operations such as <code>DROP COLUMN</code>, <code>ALTER COLUMN</code>, <code>ADD CONSTRAINT</code>, and so forth are ignored.</li>
+  <li><strong>Nested transactions</strong> - Only a single active transaction is allowed.</li>
+  <li><strong>RIGHT and FULL OUTER JOIN</strong> - <code>RIGHT OUTER JOIN</code> or <code>FULL OUTER JOIN</code> are not supported.</li>
+  <li><strong>Updateable VIEW</strong> - A view is read only. You may not execute a <code>DELETE</code>, <code>INSERT</code>, or <code>UPDATE</code> statement on a view. An <code>INSTEAD OF</code> trigger that fires on an attempt to <code>DELETE</code>, <code>INSERT</code>, or <code>UPDATE</code> a view is supported and can be used to update supporting tables in the body of the trigger.</li>
+  <li><strong>GRANT and REVOKE</strong>- A database is an ordinary disk file; the only access permissions that can be applied are the normal file access permissions of the underlying operating system. The <code>GRANT</code> and <code>REVOKE</code> commands commonly found on client/server RDBMSes are not implemented.</li>
+</ul>
+<p>The following SQL elements and SQLite features are supported in some SQLite implementations, but are not supported in Adobe AIR. Most of this functionality is available through methods of the SQLConnection class:</p>
+<ul>
+  <li><strong>Transaction-related SQL elements (<code>BEGIN</code>, <code>END</code>, <code>COMMIT</code>, <code>ROLLBACK</code>)</strong>: This functionality is available through the transaction-related methods of the <a href="flash/data/SQLConnection.html">SQLConnection</a> class: <a href="flash/data/SQLConnection.html#begin()"><code>SQLConnection.begin()</code></a>, <a href="flash/data/SQLConnection.html#commit()"><code>SQLConnection.commit()</code></a>, and <a href="flash/data/SQLConnection.html#rollback()"><code>SQLConnection.rollback()</code></a>.</li>
+  <li><strong><code>ANALYZE</code></strong>: This functionality is available through the <a href="flash/data/SQLConnection.html#analyze()"><code>SQLConnection.analyze()</code></a> method.</li>
+  <li><strong><code>ATTACH</code></strong>: This functionality is available through the <a href="flash/data/SQLConnection.html#attach()"><code>SQLConnection.attach()</code></a> method.</li>
+  <li><strong><code>COPY</code></strong>: This statement is not supported.</li>
+  <li><strong><code>CREATE VIRTUAL TABLE</code></strong>: This statement is not supported.</li>
+  <li><strong><code>DETACH</code></strong>: This functionality is available through the <a href="flash/data/SQLConnection.html#detach()"><code>SQLConnection.detach()</code></a> method.</li>
+  <li><strong><code>PRAGMA</code></strong>: This statement is not supported.</li>
+  <li><strong><code>VACUUM</code></strong>: This functionality is available through the <a href="flash/data/SQLConnection.html#compact()"><code>SQLConnection.compact()</code></a> method.</li>
+  <li><strong>System table access is not available</strong>: The system tables including sqlite_master and other tables with the "sqlite_" prefix are not available in SQL statements. The runtime includes a schema API that provides an object-oriented way to access schema data. For more information see the <a href="flash/data/SQLConnection.html#loadSchema()"><code>SQLConnection.loadSchema()</code></a> method.</li>
+  <li><strong><code>SQLITE_VERSION()</code> function</strong>: The <code>sqlite_version()</code> function is not available for use in SQL statements.</li>
+  <li><strong>Regular-expression functions (<code>MATCH()</code> and <code>REGEX()</code>)</strong>: These functions are not available in SQL statements.</li>
+</ul>
+<p>The following functionality differs between many SQLite implementations and Adobe AIR:</p>
+<ul>
+  <li><strong>Indexed statement parameters</strong>: In many implementations indexed statement parameters are one-based. However, in Adobe AIR indexed statement parameters are zero-based (that is, the first parameter is given the index 0, the second parameter is given the index 1, and so forth.</li>
+</ul>
+<h3 id="additionalSQL">Additional SQL features</h3>
+<p>The following column affinity types are not supported by default in SQLite, but are supported in Adobe AIR:</p>
+<ul>
+  <li><strong>STRING</strong>: corresponding to the <a href="String.html">String class</a> (equivalent to the TEXT column affinity).</li>
+  <li><strong>NUMBER</strong>: corresponding to the <a href="Number.html">Number class</a> (equivalent to the REAL column affinity).</li>
+  <li><strong>BOOLEAN</strong>: corresponding to the <a href="Boolean.html">Boolean class</a>.</li>
+  <li><strong>DATE</strong>: corresponding to the <a href="Date.html">Date class</a>.</li>
+  <li><strong>XML</strong>: corresponding to the ActionScript (E4X) <a href="XML.html">XML class</a>.</li>
+  <li><strong>XMLLIST</strong>: corresponding to the ActionScript (E4X) <a href="XMLList.html">XMLList class</a>.</li>
+  <li><strong>OBJECT</strong>: corresponding to the <a href="Object.html">Object class</a> or any subclass that can be serialized and deserialized using AMF3. (This includes most classes including custom classes, but excludes some classes including display objects and objects that include display objects as properties.)</li>
+</ul>
+<p>The following literal values are not supported by default in SQLite, but are supported in Adobe AIR:</p>
+<ul>
+  <li><strong>true</strong>: used to represent the literal boolean value <code>true</code>, for working with BOOLEAN columns.</li>
+  <li><strong>false</strong>: used to represent the literal boolean value <code>false</code>, for working with BOOLEAN columns.</li>
+</ul>
+<h2 id="dataTypes">Data type support</h2>
+<p>Unlike with most SQL databases, the Adobe AIR SQL database engine does not require or enforce that table columns contain values of a certain type. Instead, the runtime uses two concepts, storage classes and column affinity, to control data types. This section describes storage classes and column affinity, as well as how data type differences are resolved under various conditions:</p>
+<ul>
+  <li><a href="#storageClasses">Storage classes</a></li>
+  <li><a href="#columnAffinity">Column affinity</a></li>
+  <li><a href="#typesAndComparisonOps">Data types and comparison operators</a></li>
+  <li><a href="#typesAndMathOps">Data types and mathematical operators</a></li>
+  <li><a href="#typesAndSorting">Data types and sorting</a></li>
+  <li><a href="#typesAndGrouping">Data types and grouping</a></li>
+  <li><a href="#typesAndCompoundSelect">Data types and compound SELECT statements</a></li>
+</ul>
+<h3 id="storageClasses">Storage classes</h3>
+<p>Storage classes represent the actual data types that are used to store values in a database. The following storage classes are available:</p>
+<ul>
+  <li><strong>NULL</strong> - The value is a <code>NULL</code> value.</li>
+  <li><strong>INTEGER</strong> - The value is a signed integer.</li>
+  <li><strong>REAL</strong> - The value is a floating point number value.</li>
+  <li><strong>TEXT</strong> - The value is a text string (limited to 256 MB).</li>
+  <li><strong>BLOB</strong> - The value is a Binary Large Object (BLOB); in other words, raw binary data (limited to 256 MB).</li>
+</ul>
+<p>All values supplied to the database as literals embedded in a SQL statement or values bound using parameters to a prepared SQL statement are assigned a storage class before the SQL statement is executed.</p>
+<p>Literals that are part of a SQL statement are assigned storage class TEXT if they are enclosed by single or double quotes, INTEGER if the literal is specified as an unquoted number with no decimal point or exponent, REAL if the literal is an unquoted number with a decimal point or exponent and NULL if the value is a NULL. Literals with storage class BLOB are specified using the <code>X'ABCD'</code> notation. For more information, see <a href="#literalValues">Literal values in expressions</a>.</p>
+<p>Values supplied as parameters using the <code>SQLStatement.parameters</code> associative array are assigned the storage class that most closely matches the native data type bound. For example, int values are bound as INTEGER storage class, Number values are given the REAL storage class, String values are given the TEXT storage class, and ByteArray objects are given the BLOB storage class.</p>
+<h3 id="columnAffinity">Column affinity</h3>
+<p>The <em>affinity</em> of a column is the recommended type for data stored in that column. When a value is stored in a column (through an <code>INSERT</code> or <code>UPDATE</code> statement), the runtime attempts to convert that value from its data type to the specified affinity. For example, if a Date value (an ActionScript or JavaScript Date instance) is inserted into a column whose affinity is TEXT, the Date value is converted to the String representation (equivalent to calling the object's <code>toString()</code> method) before being stored in the database. If the value cannot be converted to the specified affinity an error occurs and the operation is not performed. When a value is retrieved from the database using a <code>SELECT</code> statement, it is returned as an instance of the class corresponding to the affinity, regardless of whether it was converted from a different data type when it was stored.</p>
+<p>If a column accepts NULL values, the ActionScript or JavaScript value <code>null</code> can be used as a parameter value to store NULL in the column. When a NULL storage class value is retrieved in a <code>SELECT</code> statement, it is always returned as the ActionScript or JavaScript value <code>null</code>, regardless of the column's affinity. If a column accepts NULL values, always check values retrieved from that column to determine if they're <code>null</code> before attempting to cast the values to a non-nullable type (such as Number or Boolean).</p>
+<p>Each column in the database is assigned one of the following type affinities:</p>
+<ul>
+  <li>TEXT (or STRING)</li>
+  <li>NUMERIC</li>
+  <li>INTEGER</li>
+  <li>REAL (or NUMBER)</li>
+  <li>BOOLEAN</li>
+  <li>DATE</li>
+  <li>XML</li>
+  <li>XMLLIST</li>
+  <li>OBJECT</li>
+  <li>NONE</li>
+</ul>
+<h4>TEXT (or STRING)</h4>
+<p>A column with TEXT or STRING affinity stores all data using storage classes NULL, TEXT, or BLOB. If numerical data is inserted into a column with TEXT affinity it is converted to text form before being stored.</p>
+<h4>NUMERIC</h4>
+<p>A column with NUMERIC affinity contains values using storage classes NULL, REAL, or INTEGER. When text data is inserted into a NUMERIC column, an attempt is made to convert it to an integer or real number before it is stored. If the conversion is successful, then the value is stored using the INTEGER or REAL storage class (for example, a value of <code>'10.05'</code> is converted to REAL storage class before being stored). If the conversion cannot be performed an error occurs. No attempt is made to convert a NULL value. A value that's retrieved from a NUMERIC column is returned as an instance of the most specific numeric type into which the value fits. In other words, if the value is a positive integer or 0, it's returned as a uint instance. If it's a negative integer, it's returned as an int instance. Finally, if it has a floating point component (it's not an integer) it's returned as a Number instance.</p>
+<h4>INTEGER</h4>
+<p>A column that uses INTEGER affinity behaves in the same way as a column with NUMERIC affinity, with one exception. If the value to be stored is a real value (such as a Number instance) with no floating point component or if the value is a text value that can be converted to a real value with no floating point component, it is converted to an integer and stored using the INTEGER storage class. If an attempt is made to store a real value with a floating point component an error occurs.</p>
+<h4>REAL (or NUMBER)</h4>
+<p>A column with REAL or NUMBER affinity behaves like a column with NUMERIC affinity except that it forces integer values into floating point representation. A value in a REAL column is always returned from the database as a Number instance.</p>
+<h4>BOOLEAN</h4>
+<p>A column with BOOLEAN affinity stores true or false values. A BOOLEAN column accepts a value that is an ActionScript or JavaScript Boolean instance. If code attempts to store a String value, a String with a length greater than zero is considered true, and an empty String is false. If code attempts to store numeric data, any non-zero value is stored as true and 0 is stored as false. When a Boolean value is retrieved using a <code>SELECT</code> statement, it is returned as a Boolean instance. Non-NULL values are stored using the INTEGER storage class (0 for false and 1 for true) and are converted to Boolean objects when data is retrieved.</p>
+<h4>DATE</h4>
+<p>A column with DATE affinity stores date and time values. A DATE column is designed to accept values that are ActionScript or JavaScript Date instances. If an attempt is made to store a String value in a DATE column, the runtime attempts to convert it to a Julian date. If the conversion fails an error occurs. If code attempts to store a Number, int, or uint value, no attempt is made to validate the data and it is assumed to be a valid Julian date value. A DATE value that's retrieved using a <code>SELECT</code> statement is automatically converted to a Date instance. DATE values are stored as Julian date values using the REAL storage class, so sorting and comparing operations work as you would expect them to.</p>
+<h4>XML or XMLLIST</h4>
+<p>A column that uses XML or XMLLIST affinity stores XML structures. When code attempts to store data in an XML column using a SQLStatement parameter the runtime attempts to convert and validate the value using the ActionScript <code>XML()</code> or <code>XMLList()</code> function. If the value cannot be converted to valid XML an error occurs. If the attempt to store the data uses a literal SQL text value (for example <code>INSERT INTO (col1) VALUES ('<root>Invalid XML (no closing tag)<root>')</code>, the value is not parsed or validated &#8212; it is assumed to be well-formed. If an invalid value is stored, when it is retrieved it is returned as an empty XML object. XML and XMLLIST Data is stored using the TEXT storage class or the NULL storage class.</p>
+<h4>OBJECT</h4>
+<p>A column with OBJECT affinity stores ActionScript or JavaScript complex objects, including Object class instances as well as instances of Object subclasses such as Array instances and even custom class instances. OBJECT column data is serialized in AMF3 format and stored using the BLOB storage class. When a value is retrieved, it is deserialized from AMF3 and returned as an instance of the class as it was stored. Note that some ActionScript classes, notably display objects, cannot be deserialized as instances of their original data type. Before storing a custom class instance, you must register an alias for the class using the <code>flash.net.registerClassAlias()</code> method (or in Flex by adding <code>[RemoteObject]</code> metadata to the class declaration). Also, before retrieving that data you must register the same alias for the class. Any data that can't be deserialized properly, either because the class inherently can't be deserialized or because of a missing or mismatched class alias, is returned as an anonymous object (an Object class instance) with properties and values corresponding to the original instance as stored.</p>
+<h4>NONE</h4>
+<p>A column with affinity NONE does not prefer one storage class over another. It makes no attempt to convert data before it is inserted.</p>
+<h4>Determining affinity</h4>
+<p>The type affinity of a column is determined by the declared type of the column in the <code>CREATE TABLE</code> statement. When determining the type the following rules are applied:</p>
+<ul>
+  <li>If the data type of the column contains any of the strings &quot;CHAR&quot;, &quot;CLOB&quot;, &quot;STRI&quot;, or &quot;TEXT&quot; then that column has TEXT/STRING affinity. Notice that the type <code>VARCHAR</code> contains the string &quot;CHAR&quot; and is thus assigned TEXT affinity.</li>
+  <li>If the data type for the column contains the string &quot;BLOB&quot; or if no data type is specified then the column has affinity NONE.</li>
+  <li>If the data type for column contains the string &quot;XMLL&quot; then the column has XMLLIST affinity.</li>
+  <li>If the data type is the string &quot;XML&quot; then the column has XML affinity.</li>
+  <li>If the data type contains the string &quot;OBJE&quot; then the column has OBJECT affinity.</li>
+  <li>If the data type contains the string &quot;BOOL&quot; then the column has BOOLEAN affinity.</li>
+  <li>If the data type contains the string &quot;DATE&quot; then the column has DATE affinity.</li>
+  <li>If the data type contains the string &quot;INT&quot; (including &quot;UINT&quot;) then it is assigned INTEGER affinity.</li>
+  <li>If the data type for a column contains any of the strings &quot;REAL&quot;, &quot;NUMB&quot;, &quot;FLOA&quot;, or &quot;DOUB&quot; then the column has REAL/NUMBER affinity.</li>
+  <li>Otherwise, the affinity is NUMERIC.</li>
+  <li>If a table is created using a <code>CREATE TABLE t AS SELECT...</code> statement then all columns have no data type specified and they are given the affinity NONE.</li>
+</ul>
+<h3 id="typesAndComparisonOps">Data types and comparison operators</h3>
+<p>The following binary comparison operators <code>=</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>&gt;=</code> and <code>!=</code> are supported, along with an operation to test for set membership, <code>IN</code>, and the ternary comparison operator <code>BETWEEN</code>. For details about these operators see <a href="#operators">Operators</a>.</p>
+<p>The results of a comparison depend on the storage classes of the two values being compared. When comparing two values the following rules are applied:</p>
+<ul>
+  <li>A value with storage class NULL is considered less than any other value (including another value with storage class NULL).</li>
+ <li>An INTEGER or REAL value is less than any TEXT or BLOB value. When an INTEGER or REAL is compared to another INTEGER or REAL, a numerical comparison is performed.</li>
+ <li>A TEXT value is less than a BLOB value. When two TEXT values are compared, a binary comparison is performed.</li>
+ <li>When two BLOB values are compared, the result is always determined using a binary comparison.</li>
+</ul>
+<p>When making binary comparisons between numeric and text storage classes, if necessary the database attempts to convert the values before performing the comparison. When comparing number and text storage classes the following rules are applied (Note: the term <em>expression</em> used in the following rules includes any SQL scalar expression or literal other than a column value. For example, if <code>X</code> and <code>Y.Z</code> are column names, then <code>+X</code> and <code>+Y.Z</code> are considered expressions):</p>
+<ul>
+ <li>When a column value is compared to the result of an expression, the affinity of the column is applied to the result of the expression before the comparison takes place.</li>
+ <li>When two column values are compared, if one column has INTEGER, REAL, or NUMERIC affinity and the other does not, then NUMERIC affinity is applied to any values with storage class TEXT extracted from the non-NUMERIC column.</li>
+ <li>When the results of two expressions are compared, no conversions occur. The results are compared as-is. If a string is compared to a number, the number is always less than the string.</li>
+</ul>
+<p>The ternary operator <code>BETWEEN</code> is always recast as the equivalent binary expression. For example, <code>a BETWEEN b AND c</code> is recast to <code>a &gt;= b AND a &lt;= c</code>, even if this means that different affinities are applied to <code>a</code> in each of the comparisons required to evaluate the expression.</p>
+<p>Expressions of the type <code>a IN (SELECT b ....)</code> are handled by the three rules enumerated previously for binary comparisons, that is, in a similar manner to <code>a = b</code>. For example, if <code>b</code> is a column value and <code>a</code> is an expression, then the affinity of <code>b</code> is applied to <code>a</code> before any comparisons take place. The expression <code>a IN (x, y, z)</code> is recast as <code>a = +x OR a = +y OR a = +z</code>. The values to the right of the <code>IN</code> operator (the <code>x</code>, <code>y</code>, and <code>z</code> values in this example) are considered to be expressions, even if they happen to be column values. If the value of the left of the <code>IN</code> operator is a column, then the affinity of that column is used. If the value is an expression then no conversions occur.</p>
+<p>How comparisons are performed can also be affected by the use of a <code>COLLATE</code> clause. For more information, see <a href="#collate">COLLATE</a>.</p>
+<h3 id="typesAndMathOps">Data types and mathematical operators</h3>
+<p>For each of the supported mathematical operators, <code>*</code>, <code>/</code>, <code>%</code>, <code>+</code>, and <code>-</code>, numeric affinity is applied to each operand before evaluating the expression. If any operand cannot be converted to the NUMERIC storage class successfully the expression evaluates to <code>NULL</code>.</p>
+<p>When the concatenation operator <code>||</code> is used each operand is converted to the TEXT storage class before the expression is evaluated. If any operand cannot be converted to the TEXT storage class then the result of the expression is <code>NULL</code>. This inability to convert the value can happen in two situations, if the value of the operand is <code>NULL</code>, or if it's a BLOB containing a non-TEXT storage class.</p>
+<h3 id="typesAndSorting">Data types and sorting</h3>
+<p>When values are sorted by an <code>ORDER BY</code> clause, values with storage class NULL come first. These are followed by INTEGER and REAL values interspersed in numeric order, followed by TEXT values in binary order or based on the specified collation (<code>BINARY</code> or <code>NOCASE</code>). Finally come BLOB values in binary order. No storage class conversions occur before the sort.</p>
+<h3 id="typesAndGrouping">Data types and grouping</h3>
+<p>When grouping values with the <code>GROUP BY</code> clause, values with different storage classes are considered distinct. An exception is INTEGER and REAL values which are considered equal if they are numerically equivalent. No affinities are applied to any values as the result of a <code>GROUP BY</code> clause.</p>
+<h3 id="typesAndCompoundSelect">Data types and compound SELECT statements</h3>
+<p>The compound <code>SELECT</code> operators <code>UNION</code>, <code>INTERSECT</code>, and <code>EXCEPT</code> perform implicit comparisons between values. Before these comparisons are performed an affinity may be applied to each value. The same affinity, if any, is applied to all values that may be returned in a single column of the compound <code>SELECT</code> result set. The affinity that is applied is the affinity of the column returned by the first component <code>SELECT</code> statement that has a column value (and not some other kind of expression) in that position. If for a given compound <code>SELECT</code> column none of the component <code>SELECT</code> statements return a column value, no affinity is applied to the values from that column before they are compared.</p>
+<h2 id="conventions">Conventions used in this document</h2>
+<p>Within statement definitions in this document, the following conventions are used:</p>
+<ul>
+  <li>Text case
+    <ul>
+      <li><code>UPPER CASE</code> - literal SQL keywords are written in all upper case</li>
+      <li><code>lower case</code> - placeholder terms or clause names are written in all lower case</li>
+    </ul>
+  </li>
+  <li>Definition characters
+	  <ul>
+		<li><code>::=</code> - indicates a clause or statement definition</li>
+	  </ul>
+  </li>
+  <li>Grouping and alternating characters
+    <ul>
+      <li><code>|</code> - the pipe character is used between alternative options, and can be read as &quot;or&quot;</li>
+      <li><code>[]</code> - items in square brackets are optional items; the brackets can contain a single item or a set of alternative items</li>
+      <li><code>()</code> - parentheses surrounding a set of alternatives (a set of items separated by pipe characters), designates a required group of items, that is, a set of items that are the possible values for a single required item</li>
+    </ul>
+  </li>
+  <li><code></code>Quantifiers
+    <ul>
+      <li><code>+</code> - a plus character following an item in parentheses indicates that the preceding item can occur 1 or more times</li>
+      <li><code>*</code> - an asterisk character following an item in square brackets indicates that the preceding (bracketed) item can occur 0 or more times</li>
+    </ul>
+  </li>
+  <li>Literal characters
+    <ul>
+      <li><code>*</code> - an asterisk character used in a column name or between the parentheses following a function name signifies a literal asterisk character rather than the &quot;0 or more&quot; quantifier</li>
+      <li><code>.</code> - a period character represents a literal period</li>
+      <li><code>,</code> - a comma character represents a literal comma</li>
+      <li><code>()</code> - a pair of parentheses surrounding a single clause or item indicates that the parentheses are required, literal parentheses characters.</li>
+      <li>Other characters - unless otherwise indicated, other characters represent those literal characters</li>
+    </ul>
+  </li>
+</ul>
+    <div style="height:20px;" width="100%"></div>
+	<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:55 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:55 PM GMT-07:00 -->

@@ -1,0 +1,460 @@
+<languageVersion : 1.0;>
+
+kernel Droste
+<   namespace : "com.subblue.filters";
+    vendor : "Tom Beddard";
+    version : 1;
+    description : "The Droste effect.";
+>
+
+// Based on the Mathmap version described in the Escher Droste Flickr group:
+// http://www.flickr.com/groups/escherdroste/
+//
+// Original Droste formula by: 
+// Ben Reichardt: http://www.flickr.com/photos/breic
+// Additional Features and Mathmap 1.2 conversion by:
+// Josh Sommers: http://www.flickr.com/photos/joshsommers
+// 
+// The math behind the transformation:
+// http://escherdroste.math.leidenuniv.nl/
+// http://www.josleys.com/articles/printgallery.htm
+// 
+// Examples on using the parameters and further updates to the code at:
+// http://www.subblue.com/projects/droste
+//
+// Changelog:
+// 17/11/2008 v1.0: Initial release
+// 25/09/2009 v1.1: Tidied up the code and controls a little.
+//				    Added a rotateSpin parameter to rotate the untransformed image. Works well with rotatePolar
+//                  Added anti-aliasing option. 1 = no AA, 2 = 4x samples, 3 = 9x samples.
+//
+// Quickstart
+// 
+// These are the steps you should follow for best results:
+// 1) Set the size to match the source image
+// 2) Adjust the shift so that the spiral is centered on the area you want to repeat
+// 3) If the source image is a 24-bit PNG with a transparent centre section 
+//    (like a picture frame) then set transparentInside to 1.
+//    If the image has a transparent outside (like a flower cut-out) set enableOutsideTransparency to 1
+// 4) Adjust the inner radius in combination with tweaking the shift values until the repeated section
+//    aligns nicely.
+// 5) Adjust the center parameter to frame the overall image.
+//
+// Tips
+// 
+// Periodicity:
+//   This sets the number of times the image is repeat on each level of the spiral. For 
+//   picture frame type images leave this as 1. For circular images small adjustments 
+//   might be needed to get a nice repeating spiral but it is always worth enabling
+//   the periodicityAuto setting.
+//
+// Levels:
+//   Increase the levelStart so that the image fills the outer area.
+//   Increase the levels until the centre of the spiral has filled in.
+//
+// Strands:
+//   This sets the number of arms on the spiral. When set greater than 1 and applied to an image 
+//   like a flower that has an outside transparency then strandMirror for seamless tiling.
+//
+// Other mapping effects:
+//   rotatePolar will rotateSpin the image round as if it were mapped inside a sphere. The rotateSpin
+//   parameter works well with this.
+//   When fractal points or hyperDroste is set then you will get fractal-like effects.
+//   Unchecking the twist option will tile the untwisted annular section effectively unrolling 
+//   a circular image.
+//
+
+
+
+// Constants
+#define PI 3.141592653
+#define TWOPI 6.283185307
+#define PI180 0.017453292
+#define I float2(0.0, 1.0)
+
+// Complex math operations
+#define complexMult(a,b) float2(a.x*b.x - a.y*b.y, a.x*b.y + a.y*b.x)
+#define complexMag(z) float(pow(length(z), 2.0))
+#define complexReciprocal(z) float2(z.x / complexMag(z), -z.y / complexMag(z))
+#define complexDivision(a,b) complexMult(a, complexReciprocal(b))
+#define complexArg(z) float(atan(z.y, z.x))
+#define complexLog(z) float2(log(length(z)), complexArg(z))
+#define complexExp(z) float2(exp(z.x) * cos(z.y), exp(z.x) * sin(z.y))
+#define sinh(x) float((exp(x) - exp(-x)) / 2.0)
+#define cosh(x) float((exp(x) + exp(-x)) / 2.0)
+#define complexSin(z) float2(sin(z.x) * cosh(z.y), cos(z.x) * sinh(z.y))
+#define complexCos(z) float2(cos(z.x) * cosh(z.y), -sin(z.x) * sinh(z.y))
+#define complexTan(z) float2(sin(2.0 * z.x)/(cos(2.0 * z.x) + cosh(2.0 * z.y)), sinh(2.0 * z.y)/(cos(2.0 * z.x) + cosh(2.0 * z.y)))
+#define complexSinh(z) float2(sinh(z.x) * cos(z.y), cosh(z.x) * sin(z.y))
+#define complexCosh(z) float2(cosh(z.x) * cos(z.y), sinh(z.x) * sin(z.y))
+#define complexTanh(z) float2(sinh(2.0 * z.x)/(cosh(2.0 * z.a) + cos(2.0 * z.y)), sin(2.0 * z.y)/(cosh(2.0 * z.x) + cos(2.0 * z.y)))
+#define polar(r,a) float2(cos(a) * r, sin(a) * r)
+#define power(z,p) float2(polar(pow(length(z), float(p)), float(p) * complexArg(z)))
+
+
+
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter int2 size
+    <
+        minValue:int2(100, 100);
+        maxValue:int2(4000, 4000);
+        defaultValue:int2(680, 680);
+        description: "Output size of final image";
+    >;
+    
+    parameter float radiusInside
+    <
+        minValue:0.1;
+        maxValue:100.0;
+        defaultValue:25.0;
+        description: "The inner radius of the repeating annular";
+    >;
+    
+    parameter float radiusOutside
+    <
+        minValue:1.0;
+        maxValue:100.0;
+        defaultValue:100.0;
+        description: "The outer radius of the repeating annular";
+    >;
+    
+    parameter float periodicity
+    <
+        minValue:-6.0;
+        maxValue: 6.0;
+        defaultValue:1.0;
+        description: "The number of image the image is repeated on each level";
+    >;
+    
+    parameter int strands
+    <
+        minValue:-12;
+        maxValue: 12;
+        defaultValue:1;
+        description: "The number of strands of the spiral";
+    >;
+    
+    parameter bool strandMirror
+    <
+        defaultValue:true;
+        description: "Smoother repeating when using more than one strand";
+    >;
+    
+    parameter float zoom
+    <
+        minValue:0.0;
+        maxValue:30.0;
+        defaultValue:0.0;
+        description: "Overall image magnification";
+    >;
+
+    parameter float rotate
+    <
+        minValue:-360.0;
+        maxValue: 360.0;
+        defaultValue:0.0;
+        description: "Overall image rotation";
+    >;
+    
+    parameter int antialiasing
+    <
+        minValue:1;
+        maxValue:3;
+        defaultValue:1;
+		description:"Super sampling quality. Number of samples squared per pixel.";
+    >;
+    
+    parameter float2 center
+    <
+        minValue:float2(-200.0, -200.0);
+        maxValue:float2(200.0, 200.0);
+        defaultValue:float2(0.0, 0.0);
+        description: "Panning of the image in the output frame";
+    >;
+    
+    parameter float2 centerShift
+    <
+        minValue:float2(-200.0, -200.0);
+        maxValue:float2(200.0, 200.0);
+        defaultValue:float2(0.0, 0.0);
+        description: "Shift the centre of the spiral";
+    >;
+    
+    parameter pixel4 backgroundRGBA
+    <
+        minValue:pixel4(0, 0, 0, 0);
+        maxValue:pixel4(1, 1, 1, 1);
+        defaultValue:pixel4(0, 0, 0, 1);
+        description: "Set the RGBA background colour";
+    >;
+    
+    parameter int levels
+    <
+        minValue:1;
+        maxValue:20;
+        defaultValue:9;
+        description: "The number of repeating levels of the spiral";
+    >;
+    
+    parameter int levelStart
+    <
+        minValue:1;
+        maxValue:20;
+        defaultValue:3;
+        description: "The starting spiral level";
+    >;
+    
+    parameter bool transparentInside
+    <
+        defaultValue:true;
+        description: "Enable for images with transparent middle areas (such as a picture frame).";
+    >;
+    
+    parameter bool transparentOutside
+    <
+        defaultValue:true;
+        description: "Enable for images with transparent areas around the outside.";
+    >;
+    
+    parameter bool twist
+    <
+        defaultValue:true;
+        description: "Uncheck to unroll the circular annular of the image.";
+    >;
+    
+    parameter bool periodicityAuto
+    <
+        defaultValue:false;
+        description: "Automatically set the ideal periodicity for the current radius settings.";
+    >;
+    
+    parameter float rotatePolar
+    <
+        minValue: -360.0;
+        maxValue: 360.0;
+        defaultValue: 0.0;
+        description: "Polar rotation";
+    >;
+    
+    parameter float rotateSpin
+    <
+        minValue:-360.0;
+        maxValue:360.0;
+        defaultValue:0.0;
+		description:"Spin mapped image. Best used with polar rotation.";
+    >;
+    
+    parameter bool hyperDroste
+    <
+        defaultValue:false;
+        description: "Enable hyper droste effect.";
+    >;
+    
+    parameter int fractalPoints
+    <
+        minValue:0;
+        maxValue:10;
+        defaultValue:0;
+        description: "Used by hyper droste option.";
+    >;
+    
+    region generated()
+    {
+        return region(float4(0, 0, size.x, size.y));
+    }
+    
+    dependent float     r1, r2, p1, p2, w, h, sampleStep, sampleContribution;
+    dependent float2    _shift, _center, _rotate, _zoom, xBounds, yBounds, xyMiddle, minDimension;
+    dependent float2x2  imageSpin;
+    dependent bool tileBasedOnTransparency;
+    
+    // Initialize parameters
+    void evaluateDependents()
+    {
+        // Set code variables
+        r1 = radiusInside / 100.0;
+        r2 = radiusOutside / 100.0;
+        p1 = periodicity;
+		if (p1 == 0.0) p1 = 0.001;		// Prevent divide by zero
+        p2 = float(strands);
+        if (p2 == 0.0) p2 = 0.0001;
+        tileBasedOnTransparency = (transparentInside || !transparentOutside) ? true : false;
+        
+        _shift = 1.0 + centerShift / 100.0;
+        _center = (float2(size) / 2.0) + center * (float2(size) / 2.0) / 100.0;
+        
+        w = float(size.x);
+        h = float(size.y);
+        minDimension = float2(min(w, h) / 2.0);
+        
+        // Autoset periodicity
+        if (periodicityAuto) {
+            p1 = p2/2.0 * (1.0 + sqrt(1.0 - pow(log(r2/r1)/PI, 2.0)));
+        }
+        
+        // Set rotation
+        _rotate = p1 > 0.0 ? float2(-PI180 * rotate, 0.0) : float2(PI180 * rotate, 0.0);
+        
+        float sc = cos(radians(rotateSpin));
+        float ss = sin(radians(rotateSpin));
+        imageSpin = float2x2(sc, ss, -ss, sc);
+        
+        // Set zoom
+        _zoom = float2((exp(zoom) + radiusInside - 1.0) / 100.0, 0.0);
+        
+        // Scale viewport pixels to complex plane
+        if (twist) {
+            xBounds = float2(-r2, r2);
+            yBounds = float2(-r2, r2);
+        } else {
+            xBounds = float2(-log(r2/r1), log(r2/r1));
+            yBounds = float2(0.0, 2.1 * PI);
+        }
+        
+        xyMiddle = float2(xBounds.x + xBounds.y, yBounds.x + yBounds.y) / 2.0;
+        float2 xyRange  = float2(xBounds.y - xBounds.x, yBounds.y - yBounds.x);
+        xyRange.x = xyRange.y * (w / h);
+        xBounds = float2(xyMiddle.x - xyRange.x/2.0, xyMiddle.x + xyRange.x/2.0);
+        
+        // Super sampling
+        sampleStep = 1.0 / float(antialiasing);
+        sampleContribution = 1.0 / pow(float(antialiasing), 2.0);
+    }
+    
+    
+    void render(
+        in      float2  z,
+        inout   float   alphaRemaining,
+        inout   int     sign,
+        inout   int     iteration,
+        inout   pixel4  colorSoFar
+        )
+    {
+        float2 d = minDimension * (z + _shift);
+        sign = 0;
+        
+        if (tileBasedOnTransparency || iteration == 0) {
+            pixel4 color = sample(src, d);
+            colorSoFar += color * (color.a * alphaRemaining);
+            alphaRemaining *= (1.0 - colorSoFar.a);
+        }
+        
+        if (tileBasedOnTransparency) {
+            if (!transparentOutside && alphaRemaining > 0.0) sign = -1;
+            if (transparentOutside && alphaRemaining > 0.0) sign = 1;
+        } else {
+            if (iteration > 0) colorSoFar = sample(src, d);
+            float radius = length(z);
+            sign = (radius < r1) ? -1 : (radius > r2 ? 1 : 0);
+        }
+        iteration += 1;
+    }
+    
+    
+    pixel4 renderPoint(float2 s)
+    {
+        float2 z, d, ratio, polar;
+        float radius, theta, div;
+        int iteration;
+        int sign = 0;
+        float alphaRemaining = 1.0;
+        pixel4 colorSoFar = pixel4(0, 0, 0, 0);
+        
+        z = float2((xBounds.x + (xBounds.y - xBounds.x) * ((s.x - _center.x) + w / 2.0) / w),
+                   (yBounds.x + (yBounds.y - yBounds.x) * ((s.y - _center.y) + h / 2.0) / h));
+        
+        // Only allow for procedural zooming/scaling in the standard coordinates
+        if (twist) {
+            z = xyMiddle + complexMult(complexDivision((z - xyMiddle), _zoom), complexExp(complexMult(-I, _rotate)));
+        }
+        
+        // Extra options
+        if (hyperDroste) {
+            z = complexSin(z);
+        }
+        
+        if (fractalPoints > 0) {
+            z = power(z, fractalPoints);
+            z = complexTan(complexMult(z, float2(2.0, 0.0)));
+        }
+        
+        if (rotatePolar != 0.0) {
+            theta = PI180 * rotatePolar;
+            
+            div = (1.0 + pow(z.x, 2.0) + pow(z.y, 2.0) + ((1.0 - pow(z.x, 2.0) - pow(z.y, 2.0)) * cos(theta)) - (2.0 * z.x * sin(theta))) / 2.0;
+            z.x = z.x * cos(theta) + ((1.0 - pow(z.x, 2.0) - pow(z.y, 2.0)) * sin(theta) / 2.0);
+            z = complexDivision(z, float2(div, 0.0));
+        }
+        
+        z *= imageSpin;
+        
+        if (twist) {
+            z = complexLog(complexDivision(z, float2(r1, 0.0)));
+        }
+        
+        // Start Droste-effect code
+        float2 alpha = float2(atan((p2/p1) * (log(r2/r1) / TWOPI)), 0.0);
+        float2 f = float2(cos(alpha.x), 0.0);
+        float2 beta = complexMult(f, complexExp(complexMult(alpha, I)));
+        
+        // The angle of rotation between adjacent annular levels
+        float2 angle = float2(-TWOPI * p1, 0.0);
+        
+        if (p2 > 0.0) angle = -angle;
+        if (strandMirror) angle /= p2;
+        
+        z = complexDivision(complexMult(float2(p1, 0.0), z), beta);
+        z = complexMult(float2(r1, 0.0), complexExp(z));
+        // End Droste-effect code
+        
+        
+        // Start drawing
+        if (tileBasedOnTransparency && levelStart > 0) {
+            if (transparentOutside) {
+				ratio = complexMult(float2(r2/r1, 0.0), complexExp(complexMult(angle, I)));
+			} else {
+            	ratio = complexMult(float2(r1/r2, 0.0), complexExp(complexMult(angle,-I)));
+			}
+            z = complexMult(z, power(ratio, levelStart));
+        }
+        
+        iteration = 0;
+        render(z, alphaRemaining, sign, iteration, colorSoFar);
+        
+        if (sign < 0) ratio = complexMult(float2(r2/r1, 0.0), complexExp(complexMult(angle, I)));
+        if (sign > 0) ratio = complexMult(float2(r1/r2, 0.0), complexExp(complexMult(angle, -I)));
+        
+        iteration = levelStart;
+        int maxIteration = levels + levelStart - 1;
+        
+        while (sign != 0 && iteration < maxIteration) {
+            z = complexMult(z, ratio);
+            render(z, alphaRemaining, sign, iteration, colorSoFar);
+        }
+        
+        return colorSoFar;
+    
+    }
+    
+    
+    void evaluatePixel()
+    {
+        pixel4 c = backgroundRGBA;
+        
+        if (antialiasing > 1) {
+            // Average detailSuperSample^2 points per pixel
+            for (float i = 0.0; i < 1.0; i += sampleStep)
+                for (float j = 0.0; j < 1.0; j += sampleStep)
+                    c += sampleContribution * renderPoint(float2(outCoord().x + i, outCoord().y + j));
+        } else {
+           c = renderPoint(outCoord());
+        }
+        
+        if (c.a < 1.0) c = mix(c, backgroundRGBA, 1.0 - c.a);
+        
+        dst = c;
+    }
+}

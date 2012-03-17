@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="Pop Ups">
+	
+	<fx:Style>
+		@namespace s "library://ns.adobe.com/flex/spark";
+		@namespace f "spark.skins.mobile.*";
+		
+		@media (os-platform: "IOS")
+		{
+            .buyButton
+            {
+                chromeColor: #009900;
+                color: #FFFFFF;
+                textShadowColor: #000000;
+            }
+		}
+        
+        /* http://glyphish.com */
+        /* TODO bitmaps for 240 and 320 */
+        /*
+        @media (os-platform: "Android")
+        {
+            .buyButton
+            {
+                icon: Embed(source="../assets/172-pricetag.png");
+            }
+            
+            .printButton
+            {
+                icon: Embed(source="../assets/185-printer.png");
+            }
+            
+            .editButton
+            {
+                icon: Embed(source="../assets/187-pencil.png");
+            }
+        }
+        */
+	</fx:Style>
+	
+    <fx:Script>
+        <![CDATA[
+            import mx.core.FlexGlobals;
+            import mx.events.ResizeEvent;
+            
+            protected function openAlert(event:MouseEvent):void
+            {
+                alert.open(this, false);
+                updateAlertPosition();
+                
+                stage.addEventListener(ResizeEvent.RESIZE, updateAlertPosition);
+            }
+            
+            protected function updateAlertPosition(event:Event=null):void
+            {
+                if (alert.isOpen)
+                {
+                    alert.width = systemManager.screen.width;
+                    alert.height = systemManager.screen.height;
+                }
+            }
+            
+        ]]>
+    </fx:Script>
+    
+    <fx:Declarations>
+        <s:SkinnablePopUpContainer id="alert" backgroundAlpha="0.5" backgroundColor="0x000000">
+            <s:Panel title="Alert" horizontalCenter="0" verticalCenter="0" width="90%">
+                <s:HGroup width="100%" bottom="0">
+                    <s:Button label="Close" click="alert.close()" width="50%"/>
+                    <s:Button label="OK" click="alert.close()" width="50%" styleName="dialogDefaultButton"/>
+                </s:HGroup>
+            </s:Panel>
+        </s:SkinnablePopUpContainer>
+    </fx:Declarations>
+    
+	<s:Scroller width="100%" height="100%">
+		<s:Group width="100%" height="100%">
+			<s:layout>
+				<s:MultiDPIVerticalLayout sourceDPI="160"
+										  paddingTop="10" paddingBottom="10" paddingLeft="10" paddingRight="10"/>
+			</s:layout>
+			
+			<s:Button width="100%" label="ViewMenu" click="FlexGlobals.topLevelApplication.viewMenuOpen = true;"/>
+            <s:Button width="100%" label="PopUp Panel" click="openAlert(event)"/>
+			
+		</s:Group>
+	</s:Scroller>
+	
+	<s:viewMenuItems>
+        <s:ViewMenuItem label="Buy" styleName="buyButton"/>
+        <s:ViewMenuItem label="Print" styleName="printButton"/>
+        <s:ViewMenuItem label="Edit" styleName="editButton"/>
+	</s:viewMenuItems>
+	
+</s:View>

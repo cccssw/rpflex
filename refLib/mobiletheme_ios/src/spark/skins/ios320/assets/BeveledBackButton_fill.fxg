@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Graphic version="2.0" xmlns="http://ns.adobe.com/fxg/2008"
+  scaleGridLeft="28" scaleGridRight="72" scaleGridTop="4" scaleGridBottom="56">
+  
+      <Path x="2" y="1.93555" winding="nonZero" data="M80 46.5781C80 50.7832 76.4023 54.1934 71.9609 54.1934L24.1172 54.1934C19.9688 54.1934 0 29.2344 0 27.5723 0 25.8477 19.332 0 24.1172 0L71.9609 0C76.4023 0 80 3.41016 80 7.61523L80 46.5781Z">
+        <fill>
+          <LinearGradient x="40" y="0" scaleX="54.1938" rotation="90">
+            <GradientEntry ratio="0" color="#7D7D7D"/>
+            <GradientEntry ratio="0.5" color="#444444"/>
+            <GradientEntry ratio="0.5" color="#313131"/>
+            <GradientEntry ratio="1" color="#323232"/>
+          </LinearGradient>
+        </fill>
+      </Path>
+      <Rect width="84" height="60">
+        <fill>
+          <SolidColor alpha="0"/>
+        </fill>
+      </Rect>
+
+</Graphic>

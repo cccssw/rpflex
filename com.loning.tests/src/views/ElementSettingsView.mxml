@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		xmlns:s="library://ns.adobe.com/flex/spark" title="ElementSettingsView" creationComplete="view1_creationCompleteHandler(event)">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.*;
+			
+			import flash.net.SharedObject;
+			import flash.net.registerClassAlias;
+			
+			import mx.events.FlexEvent;
+
+			protected function view1_creationCompleteHandler(event:FlexEvent):void
+			{
+				
+				
+				var settings:ElementSettings=ElementSettings.load();
+
+				ElementSettings.save();
+			}
+			
+		]]>
+	</fx:Script>
+</s:View>

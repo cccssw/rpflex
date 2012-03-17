@@ -1,0 +1,53 @@
+<languageVersion : 1.0;>
+
+kernel GrillShift
+<   namespace : "filters";
+    vendor : "henke37";
+    version : 1;
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    
+    parameter float grillSize <
+        minValue: 1.0;
+        defaultValue: 1.0;
+    >;
+    
+    parameter float offset <
+        defaultValue: 0.0;
+        //minValue: -1000.0;
+        //maxValue: 1000.0;
+    >;
+
+    void evaluatePixel() {
+        float2 pos=outCoord();
+        
+        if(fract(pos.y/(grillSize*2.0))<0.5) {
+            pos.x+=offset;
+        } else {
+            pos.x-=offset;
+        }
+        
+        dst = sampleNearest(src,pos);
+    }
+    
+    #if AIF_FLASH_TARGET == 0
+    
+    region generated() {
+        float2 padding=float2(abs(offset),0.0);
+        return outset(dod(src),padding);
+    }
+    
+    region needed(region outputRegion,imageRef inputIndex) {
+        float2 padding=float2(abs(offset),0.0);
+        return outset(outputRegion,padding);
+    }
+    
+    region changed(region outputRegion,imageRef inputIndex) {
+        float2 padding=float2(abs(offset),0.0);
+        return outset(outputRegion,padding);
+    }
+    
+    #endif
+}

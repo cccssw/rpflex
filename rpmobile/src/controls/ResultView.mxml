@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   height="75"
+						   show="skinnablepopupcontainer1_showHandler(event)"
+						   backgroundAlpha="0.0"
+						   >
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+		<s:Panel id="panel" title="{resourceManager.getString('view','notice')}" fontWeight="bold" horizontalCenter="0" verticalCenter="0" width="80%" fontSize="32">
+			<s:VGroup width="100%" horizontalAlign="center">
+				<s:Label id="textlabel"  height="74" fontSize="40" fontWeight="bold" text="notice"
+						 verticalAlign="bottom" backgroundAlpha="0.0"/>
+				<s:HGroup width="100%" bottom="0" verticalAlign="baseline" horizontalAlign="center" paddingTop="20">
+					<s:Button id="btn" label="OK" click="this.close()" width="50%" styleName="dialogDefaultButton" />
+				</s:HGroup>
+			</s:VGroup>
+			
+		</s:Panel>
+	
+	
+	<fx:Script>
+		<![CDATA[
+			import com.rpphoto.utils.*;
+			
+			import flash.events.Event;
+			import flash.events.TimerEvent;
+			import flash.utils.Timer;
+			
+			import mx.events.FlexEvent;
+			import mx.managers.PopUpManager;
+
+			private static var _instance:ResultView;
+			
+			[Event(name="clickBtn", type="flash.events.MouseEvent")]
+			
+			public function setText(titleText:String,btnText:String):void{
+				this.textlabel.text=titleText;
+				this.btn.label=btnText;
+				//this.panel.title=txt;
+			}
+			public function setBtnText(text:String):void{
+				this.btn.label=text;
+			}
+			public override function open(owner:DisplayObjectContainer, modal:Boolean = false):void{
+				super.open(owner,modal);
+				PopUpManager.centerPopUp(this);
+			}
+			public static function get instance():ResultView{
+				if (_instance == null)
+				{
+					_instance = new ResultView;
+				}
+				return _instance;
+			}
+			public function get getBtn():Button{
+				return this.btn;
+			}
+			
+			protected function skinnablepopupcontainer1_showHandler(event:FlexEvent):void
+			{
+				
+			}
+			
+			
+		]]>
+	</fx:Script>
+</s:SkinnablePopUpContainer>

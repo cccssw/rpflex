@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<componentPackage>
+    <!-- mobile theme extras -->
+    <component id="FocusFormItemRenderer" class="spark.components.FocusFormItemRenderer"/>
+    <component id="ListForm" class="spark.components.ListForm"/>
+    <component id="ListFormItemRenderer" class="spark.components.ListFormItemRenderer"/>
+    <component id="MultiDPIHorizontalLayout" class="spark.layouts.MultiDPIHorizontalLayout"/>
+    <component id="MultiDPIVerticalLayout" class="spark.layouts.MultiDPIVerticalLayout"/>
+    <component id="ToggleButtonFormItemRenderer" class="spark.components.ToggleButtonFormItemRenderer"/>
+</componentPackage>

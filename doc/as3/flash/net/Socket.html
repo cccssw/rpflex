@@ -1,0 +1,2785 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="Socket,flash.net.Socket,AMF0,AMF3,authenticate,authenticate,BINARY,bufferLength,bufferTime,bytesAvailable,bytesAvailable,bytesLoaded,bytesLoaded,bytesTotal,bytesTotal,cacheResponse,cacheResponse,checkPolicyFile,client,client,client,client,connected,connected,connected,connected,connectedProxyType,contentType,creationDate,creator,currentFPS,data,dataFormat,data,data,defaultObjectEncoding,defaultObjectEncoding,DEFAULT,DELETE,description,digest,domain,dynamicPropertyWriter,endian,endian,extension,extension,fileList,FLUSHED,followRedirects,followRedirects,fps,GET,HEAD,liveDelay,macType,manageCookies,manageCookies,method,modificationDate,name,name,objectEncoding,objectEncoding,objectEncoding,objectEncoding,objectEncoding,OPTIONS,PENDING,POST,proxyType,PUT,requestHeaders,size,size,soundTransform,TEXT,time,type,uri,url,useCache,useCache,userAgent,userAgent,usingTLS,value,VARIABLES,addEventListener,addHeader,allowDomain,allowInsecureDomain,attachAudio,attachCamera,browse,browse,call,cancel,clear,close,close,close,close,close,close,close,close,connect,connect,connect,connect,connect,decode,download,flush,flush,getClassByAlias,getLocal,getRemote,load,load,navigateToURL,pause,play,publish,readBoolean,readBoolean,readByte,readByte,readBytes,readBytes,readDouble,readDouble,readFloat,readFloat,readInt,readInt,readMultiByte,readMultiByte,readObject,readObject,readShort,readShort,readUnsignedByte,readUnsignedByte,readUnsignedInt,readUnsignedInt,readUnsignedShort,readUnsignedShort,readUTFBytes,readUTFBytes,readUTF,readUTF,receiveAudio,receiveVideoFPS,receiveVideo,registerClassAlias,resetDRMVouchers,resume,seek,send,send,send,send,sendToURL,setDirty,setDRMAuthenticationCredentials,setLoginCredentialsForHost,setProperty,togglePause,toString,upload,uploadUnencoded,writeBoolean,writeBytes,writeByte,writeDouble,writeDynamicProperties,writeDynamicProperty,writeFloat,writeInt,writeMultiByte,writeObject,writeShort,writeUnsignedInt,writeUTFBytes,writeUTF" name="keywords">
+<title>flash.net.Socket (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Socket - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?flash/net/Socket.html&amp;flash/net/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Socket</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Socket"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">flash.net</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  Socket</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">Socket  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td> <a href="../../flash/utils/IDataInput.html">IDataInput</a>,  <a href="../../flash/utils/IDataOutput.html">IDataOutput</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+ The Socket class enables code to make
+ socket connections and to read and write raw binary data.  It is similar
+ to XMLSocket but does not dictate the format of
+ the received or transmitted data.
+  <p>The Socket class is useful for working with servers
+ that use binary protocols.</p>
+  <p>When you use this method , consider the <span>Flash Player</span>
+  security model:</p>
+ 
+ <ul>
+   <li>Data loading is not allowed if the calling file is in the local-with-file-system 
+ sandbox and the target resource is from a network sandbox.</li>
+   <li>Data loading is also not allowed if the calling file is from a network sandbox and the 
+ target resource is local.</li>
+   <li>The calling file and the network resource being accessed must be in 
+ exactly the same domain. For example, a file at adobe.com  can connect only to a server daemon 
+ at adobe.com.</li>
+   <li>Websites can permit cross-domain access to a resource through a cross-domain policy file.</li>
+ </ul>
+ 
+ <p>However, in Adobe AIR, content in the <code>application</code> security sandbox (content
+ installed with the AIR application) are not restricted by these security limitations.</p>
+ 
+ <p>For more information, see the following:</p>
+ 
+ <ul>
+ 
+ 
+ <li>The <a href="http://www.adobe.com/go/flashCS3_progAS3_security" target="external">security chapter</a>
+ in the <i>Programming ActionScript 3.0</i> book and the latest comments on LiveDocs</li>
+ 
+ <li>The "Understanding AIR Security" section of the "Getting started with Adobe AIR" chapter
+ in the <i>Developing AIR Applications</i> book.</li>
+ 
+ <li>The <a href="http://www.adobe.com/go/fp9_0_security" target="external">Flash Player 9 Security white paper</a></li>
+ 
+ </ul>
+ 
+ <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000318.html" target="_top">Socket connections</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bytesAvailable">bytesAvailable</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+  The number of bytes of data available for reading in the input buffer.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#connected">connected</a> : <a href="../../Boolean.html">Boolean</a>
+<div class="summaryTableDescription">[read-only] 
+  Indicates whether this Socket object is currently connected.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#endian">endian</a> : <a href="../../String.html">String</a>
+<div class="summaryTableDescription">
+  Indicates the byte order for the data; possible values are
+  constants from the flash.utils.Endian class,
+  Endian.BIG_ENDIAN or Endian.LITTLE_ENDIAN.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#objectEncoding">objectEncoding</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">
+  Controls the version of AMF used when writing or reading an object.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Socket()">Socket</a>(host:<a href="../../String.html">String</a> = null, port:<a href="../../int.html">int</a> = 0)</div>
+<div class="summaryTableDescription">
+  Creates a Socket object.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#close()">close</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Closes the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#connect()">connect</a>(host:<a href="../../String.html">String</a>, port:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Connects the socket to the specified host and port.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#flush()">flush</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Flushes any accumulated data in the socket's output buffer.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readBoolean()">readBoolean</a>():<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a Boolean value from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readByte()">readByte</a>():<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a signed byte from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readBytes()">readBytes</a>(bytes:<a href="../../flash/utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Reads the number of data bytes specified by the length 
+     parameter from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readDouble()">readDouble</a>():<a href="../../Number.html">Number</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an IEEE 754 double-precision floating-point number from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readFloat()">readFloat</a>():<a href="../../Number.html">Number</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an IEEE 754 single-precision floating-point number from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readInt()">readInt</a>():<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a signed 32-bit integer from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readMultiByte()">readMultiByte</a>(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a multibyte string from the byte stream, using the specified character set.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readObject()">readObject</a>():<a href="../../specialTypes.html#*">*</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an object from the socket, encoded in AMF serialized format.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readShort()">readShort</a>():<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a signed 16-bit integer from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readUnsignedByte()">readUnsignedByte</a>():<a href="../../uint.html">uint</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an unsigned byte from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readUnsignedInt()">readUnsignedInt</a>():<a href="../../uint.html">uint</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an unsigned 32-bit integer from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readUnsignedShort()">readUnsignedShort</a>():<a href="../../uint.html">uint</a>
+</div>
+<div class="summaryTableDescription">
+  Reads an unsigned 16-bit integer from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readUTF()">readUTF</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Reads a UTF-8 string from the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#readUTFBytes()">readUTFBytes</a>(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+     Reads the number of UTF-8 data bytes specified by the length 
+     parameter from the socket, and returns a string.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the string representation of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeBoolean()">writeBoolean</a>(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a Boolean value to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeByte()">writeByte</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a byte to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeBytes()">writeBytes</a>(bytes:<a href="../../flash/utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a sequence of bytes from the specified byte array.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeDouble()">writeDouble</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes an IEEE 754 double-precision floating-point number to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeFloat()">writeFloat</a>(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes an IEEE 754 single-precision floating-point number to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeInt()">writeInt</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a 32-bit signed integer to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeMultiByte()">writeMultiByte</a>(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Writes a multibyte string from the byte stream, using the specified character set.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeObject()">writeObject</a>(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Write an object to the socket in AMF serialized format.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeShort()">writeShort</a>(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a 16-bit integer to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeUnsignedInt()">writeUnsignedInt</a>(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a 32-bit unsigned integer to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeUTF()">writeUTF</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes the following data to the socket: a 16-bit unsigned integer, which
+     indicates the length of the specified UTF-8 string in bytes, followed by
+  the string itself.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#writeUTFBytes()">writeUTFBytes</a>(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+  Writes a UTF-8 string to the socket.</div>
+</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:close">close</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when the server closes the socket connection.</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:connect">connect</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a network connection has been established.</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:ioError">ioError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when an input/output error occurs that causes a send or load operation to fail.</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:securityError">securityError</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched if a call to Socket.connect() attempts to connect either to a server outside the caller's security sandbox or to a port lower than 1024.</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:socketData">socketData</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when a socket has received data.</td><td class="summaryTableOwnerCol">Socket</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="bytesAvailable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bytesAvailable</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>bytesAvailable:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  The number of bytes of data available for reading in the input buffer.
+  
+  <p>Your code must access <code>bytesAvailable</code> to ensure
+  that sufficient data is available before trying to read
+  it with one of the <code>read</code> methods.</p>
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get bytesAvailable():<a href="../../uint.html">uint</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="connected"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connected</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>connected:<a href="../../Boolean.html">Boolean</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates whether this Socket object is currently connected. 
+  A call to this property returns a value of <code>true</code> if the socket
+  is currently connected, or <code>false</code> otherwise.
+  
+  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get connected():<a href="../../Boolean.html">Boolean</a></code>
+<br>
+</div>
+<a name="propertyDetail"></a><a name="endian"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">endian</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>endian:<a href="../../String.html">String</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Indicates the byte order for the data; possible values are
+  constants from the flash.utils.Endian class,
+  <code>Endian.BIG_ENDIAN</code> or <code>Endian.LITTLE_ENDIAN</code>.
+  </p><p> The default value is <code>Endian.BIG_ENDIAN</code>.</p>
+<br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get endian():<a href="../../String.html">String</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set endian(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../flash/utils/Endian.html" target="">flash.utils.Endian</a>
+</div>
+</div>
+<a name="propertyDetail"></a><a name="objectEncoding"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">objectEncoding</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>objectEncoding:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-write] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Controls the version of AMF used when writing or reading an object.
+    </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get objectEncoding():<a href="../../uint.html">uint</a></code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set objectEncoding(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ObjectEncoding.html" target="">ObjectEncoding class</a>
+<br>
+<a href="Socket.html#readObject()" target="">readObject()</a>
+<br>
+<a href="Socket.html#writeObject()" target="">writeObject()</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="Socket()"></a><a name="Socket(String,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Socket</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Socket(host:<a href="../../String.html">String</a> = null, port:<a href="../../int.html">int</a> = 0)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Creates a Socket object.  If no
+  parameters are specified, an initially disconnected socket
+  is created.  If parameters are specified, a connection
+  is attempted to the specified host and port.
+    </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">host</span>:<a href="../../String.html">String</a></code> (default = <code>null</code>)<code></code> &mdash; The name of the host to connect to. If this parameter is not specified, an initially disconnected socket
+  is created.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">port</span>:<a href="../../int.html">int</a></code> (default = <code>0</code>)<code></code> &mdash; The port number to connect to. If this parameter is not specified, an initially disconnected socket
+  is created.
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>connect</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when a network connection has been established.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Dispatched when an input/output error 
+  occurs that causes the connection to fail.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>securityError</b>:<a href="../../flash/events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; <span platform="javascript">This error occurs in SWF content.</span>
+  <span platform="actionscript"> Dispatched if a call to <code>Socket.connect()</code> attempts 
+     to connect either to a server outside the caller's security sandbox or to a port lower than 1024. You 
+     can work around either problem by using a cross-domain policy file on the server. (This restriction is 
+  not placed on AIR content running in the application security sandbox.) For more information 
+     about policy files for sockets, see the "Flash Player Security" chapter in 
+  <em>Programming ActionScript 3.0</em>.</span></td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; This error occurs in SWF content
+  <span> for the following reasons:</span>
+  
+     <ul>
+       <li>Local-with-filesystem files cannot communicate with the Internet. You can 
+       work around this problem by reclassifying this SWF file as local-with-networking or trusted.
+    This limitation is not set for AIR application content in the application security sandbox.</li>
+  
+       <li>You cannot specify a socket port higher than 65535.</li>
+     </ul>
+  
+  </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="close()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function close():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Closes the socket. You cannot read or write any data after the <code>close()</code> method
+  has been called.
+       <p>The <code>close</code> event is dispatched only when the server
+  closes the connection; it is not dispatched when you call the <code>close()</code> method.</p>
+<p>You can reuse the Socket object by calling the <code>connect()</code> method on it again.</p>
+</p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; The socket could not be closed, or the socket was not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="connect()"></a><a name="connect(String,int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function connect(host:<a href="../../String.html">String</a>, port:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Connects the socket to the specified host and port.
+  If the connection fails immediately, either an event is dispatched
+  or an exception is thrown: an error event is dispatched if a host was
+  specified, and an exception is thrown if no host was specified.
+  Otherwise, the status of the connection is reported by an event.
+  If the socket is already connected, the existing connection is closed first.
+       <p>By default, the value you pass for <code>host</code> must be in 
+     the same domain and the value you pass for <code>port</code> must be 1024 or higher. 
+     For example, a SWF file at adobe.com can connect only to a server daemon running at
+     adobe.com. If you want to connect to a socket on a different host than the one from which 
+     the connecting SWF file was served, or if you want to connect to a port lower than 1024 on any host, 
+     you must obtain an <code>xmlsocket:</code> policy file from the host to which you are 
+     connecting. Howver, these restrictions do not exist for AIR content in the application 
+  security sandbox. For more information, see the "Flash Player Security" chapter in 
+     <i>Programming ActionScript 3.0</i>.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">host</span>:<a href="../../String.html">String</a></code> &mdash; The name of the host to connect to. If no host is specified,
+       the host that is contacted is the host where the calling file 
+          resides. If you do not specify a host, use an event listener to 
+          determine whether the connection was successful.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">port</span>:<a href="../../int.html">int</a></code> &mdash; The port number to connect to.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Events</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><b>connect</b>:<a href="../../flash/events/Event.html"><code>Event</code></a></code> &mdash; Dispatched when a network connection has been 
+       established.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>ioError</b>:<a href="../../flash/events/IOErrorEvent.html"><code>IOErrorEvent</code></a></code> &mdash; Dispatched if a host is specified and an 
+          input/output error occurs that causes the connection to fail.</td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><b>securityError</b>:<a href="../../flash/events/SecurityErrorEvent.html"><code>SecurityErrorEvent</code></a></code> &mdash; Dispatched if a call to 
+          <code>Socket.connect()</code> attempts to connect to either
+          a server outside the caller's security sandbox or to a port 
+          lower than 1024. (This restriction is not placed on AIR content  
+    running in the application security sandbox.) You can work 
+    around either problem by using
+       a cross-domain policy file on the server. For more information, 
+          see the "Flash Player Security" chapter in <em>Programming 
+          ActionScript 3.0</em>.</td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; No host was specified and the connection failed.
+  
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../SecurityError.html">SecurityError</a> </code> &mdash; This error occurs in SWF content
+  <span> for the following reasons:</span>
+<ul>
+<li>Local untrusted SWF files may not communicate with
+               the Internet. You can work around this by reclassifying the 
+                  file as local-with-networking or trusted.</li>
+<li>You cannot specify a socket port higher than 65535.</li>
+<li>In the HTML page that contains the SWF content, the
+    <code>allowNetworking</code> parameter of the the <code>object</code> 
+    and <code>embed</code> tags is set to <code>"none"</code>.</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+</div>
+<a name="flush()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flush</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function flush():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Flushes any accumulated data in the socket's output buffer.
+  Data written by the <code>write</code> methods is not
+  immediately transmitted; it is queued until the
+  <code>flush()</code> method is called.
+    </p><br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.    
+  </td>
+</tr>
+</table>
+</div>
+<a name="readBoolean()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readBoolean</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readBoolean():<a href="../../Boolean.html">Boolean</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a Boolean value from the socket. After reading a single byte, the
+     method returns <code>true</code> if the byte is nonzero, and 
+     <code>false</code> otherwise.
+  
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Boolean.html">Boolean</a></code> &mdash; A value of <code>true</code> if the byte read is nonzero, 
+          otherwise <code>false</code>.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readByte()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readByte</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readByte():<a href="../../int.html">int</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a signed byte from the socket.
+  
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; A value from -128 to 127.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readBytes()"></a><a name="readBytes(flash.utils.ByteArray,uint,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readBytes(bytes:<a href="../../flash/utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Reads the number of data bytes specified by the <code>length</code> 
+     parameter from the socket. The bytes are read into the specified byte
+     array, starting at the position indicated by <code>offset</code>.
+  
+  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../../flash/utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to read data into.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; The offset at which data reading should begin in the byte 
+          array.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to read. The default value of 0 causes
+          all available data to be read.
+       </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is 
+          not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readDouble()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readDouble</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readDouble():<a href="../../Number.html">Number</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an IEEE 754 double-precision floating-point number from the socket.
+  
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; An IEEE 754 double-precision floating-point number.
+  
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readFloat()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readFloat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readFloat():<a href="../../Number.html">Number</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an IEEE 754 single-precision floating-point number from the socket.
+  
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Number.html">Number</a></code> &mdash; An IEEE 754 single-precision floating-point number.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readInt()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readInt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readInt():<a href="../../int.html">int</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a signed 32-bit integer from the socket.
+          </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; A value from -2147483648 to 2147483647.
+  
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readMultiByte()"></a><a name="readMultiByte(uint,String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readMultiByte</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readMultiByte(length:<a href="../../uint.html">uint</a>, charSet:<a href="../../String.html">String</a>):<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a multibyte string from the byte stream, using the specified character set.
+  </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; The number of bytes from the byte stream to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; The string denoting the character set to use to interpret the bytes. 
+     Possible character set strings include <code>"shift_jis"</code>, <code>"CN-GB"</code>, and
+  <code>"iso-8859-1"</code>.
+  For a complete list, see <a href="../../charset-codes.html" target="">Supported Character Sets</a>. 
+  
+     <p>
+<b>Note:</b> If the value for the <code>charSet</code> parameter is not recognized 
+  by the current system, then the application uses the system's default code page as the character set. 
+  For example, a value for the <code>charSet</code> parameter, as in <code>myTest.readMultiByte(22, 
+  "iso-8859-01")</code> that uses <code>01</code> instead of <code>1</code> might work on your 
+  development machine, but not on another machine. On the other machine, the application  
+  will use the system's default code page.</p>
+</td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; A UTF-8 encoded string.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+       </td>
+</tr>
+</table>
+</div>
+<a name="readObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readObject():<a href="../../specialTypes.html#*">*</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an object from the socket, encoded in AMF serialized format.
+  
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; The deserialized object
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="ObjectEncoding.html" target="">ObjectEncoding</a>
+</div>
+</div>
+<a name="readShort()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readShort</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readShort():<a href="../../int.html">int</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a signed 16-bit integer from the socket.
+  
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; A value from -32768 to 32767.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readUnsignedByte()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readUnsignedByte</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readUnsignedByte():<a href="../../uint.html">uint</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an unsigned byte from the socket.  
+  
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; A value from 0 to 255.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readUnsignedInt()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readUnsignedInt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readUnsignedInt():<a href="../../uint.html">uint</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an unsigned 32-bit integer from the socket.
+  
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; A value from 0 to 4294967295.
+    </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readUnsignedShort()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readUnsignedShort</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readUnsignedShort():<a href="../../uint.html">uint</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads an unsigned 16-bit integer from the socket.
+  
+     </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../uint.html">uint</a></code> &mdash; A value from 0 to 65535.
+       </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readUTF()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readUTF</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readUTF():<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Reads a UTF-8 string from the socket.  The string is assumed to be prefixed 
+     with an unsigned short integer that indicates the length in bytes.
+    </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; A UTF-8 string.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="readUTFBytes()"></a><a name="readUTFBytes(uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">readUTFBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function readUTFBytes(length:<a href="../../uint.html">uint</a>):<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Reads the number of UTF-8 data bytes specified by the <code>length</code> 
+     parameter from the socket, and returns a string.
+    </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> &mdash; The number of bytes to read.
+  
+  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; A UTF-8 string.
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/EOFError.html">EOFError</a> </code> &mdash; There is insufficient data available to read.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+  </td>
+</tr>
+</table>
+</div>
+<a name="writeBoolean()"></a><a name="writeBoolean(Boolean)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeBoolean</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeBoolean(value:<a href="../../Boolean.html">Boolean</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a Boolean value to the socket. This method writes a single byte,
+  with either a value of 1 (<code>true</code>) or 0 (<code>false</code>).
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Boolean.html">Boolean</a></code> &mdash; The value to write to the socket: 1 (<code>true</code>) or 0 (<code>false</code>).
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeByte()"></a><a name="writeByte(int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeByte</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeByte(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a byte to the socket.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; The value to write to the socket. The low 8 bits of the
+  value are used; the high 24 bits are ignored.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeBytes()"></a><a name="writeBytes(flash.utils.ByteArray,uint,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeBytes(bytes:<a href="../../flash/utils/ByteArray.html">ByteArray</a>, offset:<a href="../../uint.html">uint</a> = 0, length:<a href="../../uint.html">uint</a> = 0):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a sequence of bytes from the specified byte array. The write 
+     operation starts at the position specified by <code>offset</code>.
+    <p>If you omit the <code>length</code> parameter the default
+  length of 0 causes the method to write the entire buffer starting at
+  <code>offset</code>.</p>
+<p>If you also omit the <code>offset</code> parameter, the entire buffer is written.</p>
+<p>If <code>offset</code> or <code>length</code>
+  is out of range, they are adjusted to match the beginning and end
+  of the <code>bytes</code> array.</p>
+<p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">bytes</span>:<a href="../../flash/utils/ByteArray.html">ByteArray</a></code> &mdash; The ByteArray object to write data from.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">offset</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; The zero-based offset into the <code>bytes</code> ByteArray
+          object at which data writing should begin.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">length</span>:<a href="../../uint.html">uint</a></code> (default = <code>0</code>)<code></code> &mdash; The number of bytes to write.  The default value of 0 causes
+          the entire buffer to be written, starting at the value specified by 
+          the <code>offset</code> parameter.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeDouble()"></a><a name="writeDouble(Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeDouble</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeDouble(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes an IEEE 754 double-precision floating-point number to the socket.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; The value to write to the socket.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeFloat()"></a><a name="writeFloat(Number)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeFloat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeFloat(value:<a href="../../Number.html">Number</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes an IEEE 754 single-precision floating-point number to the socket.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Number.html">Number</a></code> &mdash; The value to write to the socket.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeInt()"></a><a name="writeInt(int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeInt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeInt(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a 32-bit signed integer to the socket.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; The value to write to the socket.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeMultiByte()"></a><a name="writeMultiByte(String,String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeMultiByte</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeMultiByte(value:<a href="../../String.html">String</a>, charSet:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+     Writes a multibyte string from the byte stream, using the specified character set.
+       <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; The string value to be written.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">charSet</span>:<a href="../../String.html">String</a></code> &mdash; The string denoting the character set to use to interpret the bytes. 
+     Possible character set strings include <code>"shift_jis"</code>, <code>"CN-GB"</code>, 
+     and <code>"iso-8859-1"</code>. For a complete list, see 
+     <a href="../../charset-codes.html" target="">Supported Character Sets</a>. 
+          </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeObject()"></a><a name="writeObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeObject(object:<a href="../../specialTypes.html#*">*</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Write an object to the socket in AMF serialized format.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">object</span>:<a href="../../specialTypes.html#*">*</a></code> &mdash; The object to be serialized.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+       </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+<br>
+<a href="ObjectEncoding.html" target="">ObjectEncoding</a>
+</div>
+</div>
+<a name="writeShort()"></a><a name="writeShort(int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeShort</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeShort(value:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a 16-bit integer to the socket. The bytes written are as follows:
+    <pre>
+<code>(v &gt;&gt; 8) &amp; 0xff v &amp; 0xff</code>
+</pre>
+<p>The low 16 bits of the parameter are used; the high 16 bits
+  are ignored.</p>
+<p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../int.html">int</a></code> &mdash; The value to write to the socket.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeUnsignedInt()"></a><a name="writeUnsignedInt(uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeUnsignedInt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeUnsignedInt(value:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a 32-bit unsigned integer to the socket.
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../uint.html">uint</a></code> &mdash; The value to write to the socket.
+    </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeUTF()"></a><a name="writeUTF(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeUTF</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeUTF(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes the following data to the socket: a 16-bit unsigned integer, which
+     indicates the length of the specified UTF-8 string in bytes, followed by
+  the string itself.
+    <p>Before writing the string, the method calculates the number of bytes 
+     needed to represent all characters of the string.</p>
+<p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code> method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; The string to write to the socket.
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The length is larger than 65535.
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<a name="writeUTFBytes()"></a><a name="writeUTFBytes(String)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">writeUTFBytes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function writeUTFBytes(value:<a href="../../String.html">String</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Writes a UTF-8 string to the socket. 
+          <p>
+<b>Note:</b> Data written by this method is not
+     immediately transmitted; it is queued until the <code>flush()</code>
+     method is called.</p>
+</p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../String.html">String</a></code> &mdash; The string to write to the socket.
+  
+  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../flash/errors/IOError.html">IOError</a> </code> &mdash; An I/O error occurred on the socket, or the socket is not open.
+       </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#flush()" target="">flush()</a>
+</div>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:close"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">close</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CLOSE"><code>flash.events.Event.CLOSE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when the server closes the socket connection. 
+ The <code>close</code> event is dispatched only when the server
+ closes the connection; it is not dispatched when you call the <code>Socket.close()</code> method.
+ </p>
+ The <code>Event.CLOSE</code> constant defines the value of the <code>type</code> property of a <code>close</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ 
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object whose connection has been closed.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:connect"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">connect</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/Event.html"><code>flash.events.Event</code></a>
+<br>
+<span class="label">Event.type property = </span><a href="../../flash/events/Event.html#CONNECT"><code>flash.events.Event.CONNECT</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a network connection has been established. 
+ </p>
+ The <code>Event.CONNECT</code> constant defines the value of the <code>type</code> property of a <code>connect</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The Socket or XMLSocket object that has established a network connection.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:ioError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ioError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/IOErrorEvent.html"><code>flash.events.IOErrorEvent</code></a>
+<br>
+<span class="label">IOErrorEvent.type property = </span><a href="../../flash/events/IOErrorEvent.html#IO_ERROR"><code>flash.events.IOErrorEvent.IO_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when an input/output error occurs that causes a send or load operation to fail. 
+ </p>
+ Defines the value of the <code>type</code> property of an <code>ioError</code> event object.
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>errorID</code></td><td>A reference number associated with the specific error.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object experiencing the input/output error.</td>
+</tr>
+<tr>
+<td><code>text</code></td><td>Text to be displayed as an error message.</td>
+</tr></table>
+ 
+ </div>
+<a name="event:securityError"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">securityError</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/SecurityErrorEvent.html"><code>flash.events.SecurityErrorEvent</code></a>
+<br>
+<span class="label">SecurityErrorEvent.type property = </span><a href="../../flash/events/SecurityErrorEvent.html#SECURITY_ERROR"><code>flash.events.SecurityErrorEvent.SECURITY_ERROR</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched if a call to <code>Socket.connect()</code> 
+ attempts to connect either to a server outside the caller's security sandbox or to a port lower than 1024.
+ </p>
+ The <code>SecurityErrorEvent.SECURITY_ERROR</code> constant defines the value of the <code>type</code> property of a <code>securityError</code> event object. 
+ 
+ <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event 
+ object with an event listener.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The network object reporting the security error.</td>
+</tr>
+<tr>
+<td><code>text</code></td><td>Text to be displayed as an error message.</td>
+</tr></table>
+ 
+ <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Socket.html#connect()" target="">Socket.connect()</a>
+<br>
+<a href="../../../main/00000347.html" target="_top">Flash Player security</a>
+</div>
+</div>
+<a name="event:socketData"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">socketData</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../flash/events/ProgressEvent.html"><code>flash.events.ProgressEvent</code></a>
+<br>
+<span class="label">ProgressEvent.type property = </span><a href="../../flash/events/ProgressEvent.html#SOCKET_DATA"><code>flash.events.ProgressEvent.SOCKET_DATA</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+ Dispatched when a socket has received data.
+ Events of type <code>socketData</code> do not use the <code>ProgressEvent.bytesTotal</code>
+ property. 
+ </p>
+ Defines the value of the <code>type</code> property of a <code>socketData</code> event object.
+  <p>This event has the following properties:</p>
+ <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing the Event.</td>
+</tr>
+<tr>
+<td><code>bytesLoaded</code></td><td>The number of items or bytes loaded at the time the listener processes the event.</td>
+</tr>
+<tr>
+<td><code>bytesTotal</code></td><td>0; this property is not used by <code>socketData</code> event objects.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The Socket object reporting progress.</td>
+</tr></table>
+ 
+ </div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">SocketExample.as</div>
+<br>
+<div class="detailBody"> The following example reads from and writes to a socket and outputs information
+ transmitted during socket events. Highlights of the example follow:
+ <ol>
+    <li>The constructor creates a <code>CustomSocket</code> instance named <code>socket</code> and passes the
+ 	host name <code>localhost</code> and port 80 as arguments. Since <code>CustomSocket</code> extends
+ 	Socket, a call to <code>super()</code> calls Socket's constructor with <code>localhost</code> as the 
+  host name and 80 as the port number.</li>
+	<li>The example then calls the <code>configureListeners()</code> method, which adds listeners for  
+ 	Socket events.</li>
+ </ol>
+ 
+ <p> <b>Note:</b> To run the example, you need a server running on the same domain
+ where the SWF resides (in the example, <code>localhost</code>) and listening on port 80.</p>
+<div class="listing"><pre>
+
+package {
+    import flash.display.Sprite;
+
+    public class SocketExample extends Sprite {
+
+        public function SocketExample() {
+            var socket:CustomSocket = new CustomSocket("localhost", 80);
+        }
+    }
+}
+
+import flash.errors.*;
+import flash.events.*;
+import flash.net.Socket;
+
+class CustomSocket extends Socket {
+    private var response:String;
+
+    public function CustomSocket(host:String = null, port:uint = 0) {
+        super(host, port);
+        configureListeners();
+    }
+
+    private function configureListeners():void {
+        addEventListener(Event.CLOSE, closeHandler);
+        addEventListener(Event.CONNECT, connectHandler);
+        addEventListener(IOErrorEvent.IO_ERROR, ioErrorHandler);
+        addEventListener(SecurityErrorEvent.SECURITY_ERROR, securityErrorHandler);
+        addEventListener(ProgressEvent.SOCKET_DATA, socketDataHandler);
+    }
+
+    private function writeln(str:String):void {
+        str += "\n";
+        try {
+            writeUTFBytes(str);
+        }
+        catch(e:IOError) {
+            trace(e);
+        }
+    }
+
+    private function sendRequest():void {
+        trace("sendRequest");
+        response = "";
+        writeln("GET /");
+        flush();
+    }
+
+    private function readResponse():void {
+        var str:String = readUTFBytes(bytesAvailable);
+        response += str;
+    }
+
+    private function closeHandler(event:Event):void {
+        trace("closeHandler: " + event);
+        trace(response.toString());
+    }
+
+    private function connectHandler(event:Event):void {
+        trace("connectHandler: " + event);
+        sendRequest();
+    }
+
+    private function ioErrorHandler(event:IOErrorEvent):void {
+        trace("ioErrorHandler: " + event);
+    }
+
+    private function securityErrorHandler(event:SecurityErrorEvent):void {
+        trace("securityErrorHandler: " + event);
+    }
+
+    private function socketDataHandler(event:ProgressEvent):void {
+        trace("socketDataHandler: " + event);
+        readResponse();
+    }
+}</pre></div></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

@@ -1,0 +1,44 @@
+<languageVersion : 1.0;>
+
+kernel Vignetting
+<   namespace : "me.odin";
+    vendor : "Ilya Ovdin";
+    version : 1;
+    description : "Photo vignetting effect";
+>
+{
+    input image4 src;
+    output pixel4 dst;
+    parameter float2 size 
+    <
+    minValue:float2(1.0,1.0);
+    maxValue:float2(4096.0,4096.0);
+    defaultValue:float2(1.0,1.0);
+    >;
+    
+    parameter float amount 
+    <
+    minValue:float(0.0);
+    maxValue:float(2.0);
+    defaultValue:float(0.5);
+    >;
+    
+    parameter float radius 
+    <
+    minValue:float(0.0);
+    maxValue:float(10.0);
+    defaultValue:float(2.5);
+    >;
+
+    void evaluatePixel()
+    {
+        float2 coord = outCoord();
+        float4 inputColor = sampleNearest(src,coord);
+        float2 shift;
+        float sc = amount*pow(length(coord - 0.5*size)/length(size*0.5),radius);
+        sc = clamp(sc,0.0,1.0);
+        sc = min(sc,1.0);
+        dst.rgb = (1.0 - sc) * inputColor.rgb;
+        dst.a = inputColor.a;
+    }
+}

@@ -1,0 +1,2013 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../print.css" type="text/css" media="print">
+<meta content="DataProvider,fl.data.DataProvider,data,label,label,length,source,addItem,addItemAt,addItems,addItemsAt,clone,concat,getItemAt,getItemIndex,invalidate,invalidateItemAt,invalidateItem,merge,removeAll,removeItemAt,removeItem,replaceItemAt,replaceItem,sortOn,sort,toArray,toString" name="keywords">
+<title>fl.data.DataProvider (ActionScript 3.0)</title>
+<script type="text/javascript" src="../../AC_OETags.js"></script>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'DataProvider - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '../../';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../all-classes.html')" href="../../package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../all-classes.html')" href="../../class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="../../language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('../../index-list.html')" href="../../all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="../../appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="../../conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="../../index.html?fl/data/DataProvider.html&amp;fl/data/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="../../images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">DataProvider</td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a>&nbsp;| <a href="#includeExamplesSummary">Examples</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("DataProvider"); titleBar_setSubNav(false,true,false,false,true,false,true,true,false,false,false,false,false,false);}
+
+--></script>
+<div xmlns:fn="http://www.w3.org/2005/02/xpath-functions" class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">fl.data</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public  class  DataProvider</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">DataProvider  <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../flash/events/EventDispatcher.html">EventDispatcher</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../images/inherit-arrow.gif"> <a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+  The DataProvider class provides methods and properties that allow you to query and modify
+  the data in any list-based component--for example, in a List, DataGrid, TileList, or ComboBox
+  component.
+    <p>A <i>data provider</i> is a linear collection of items that serve as a data source--for 
+  example, an array. Each item in a data provider is an object or XML object that contains one or 
+  more fields of data. You can access the items that are contained in a data provider by index, by 
+  using the <code>DataProvider.getItemAt()</code> method.</p>
+          <p></p>
+<p>
+<a href="#includeExamplesSummary">View the examples</a>
+</p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#constructor">constructor</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">
+  A reference to the class object or constructor function for a given object instance.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#length">length</a> : <a href="../../uint.html">uint</a>
+<div class="summaryTableDescription">[read-only] 
+         The number of items that the data provider contains.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../../Object.html#prototype">prototype</a> : <a href="../../Object.html">Object</a>
+<div class="summaryTableDescription">[static] 
+  A reference to the prototype object of a class or function object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods </div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#DataProvider()">DataProvider</a>(value:<a href="../../Object.html">Object</a> = null)</div>
+<div class="summaryTableDescription">
+   Creates a new DataProvider object using a list, XML instance or an array of data objects
+   as the data source.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#addEventListener()">addEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false, priority:<a href="../../int.html">int</a> = 0, useWeakReference:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Registers an event listener object with an EventDispatcher object so that the listener 
+ receives notification of an event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addItem()">addItem</a>(item:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Appends an item to the end of the data provider.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addItemAt()">addItemAt</a>(item:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Adds a new item to the data provider at the specified index.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addItems()">addItems</a>(items:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Appends multiple items to the end of the DataProvider and dispatches
+   a DataChangeType.ADD event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addItemsAt()">addItemsAt</a>(items:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Adds several items to the data provider at the specified index and dispatches
+   a DataChangeType.ADD event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#clone()">clone</a>():<a href="../../fl/data/DataProvider.html">DataProvider</a>
+</div>
+<div class="summaryTableDescription">
+   Creates a copy of the current DataProvider object.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#concat()">concat</a>(items:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Concatenates the specified items to the end of the current data provider.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#dispatchEvent()">dispatchEvent</a>(event:<a href="../../flash/events/Event.html">Event</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Dispatches an event into the event flow.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getItemAt()">getItemAt</a>(index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+         Returns the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getItemIndex()">getItemIndex</a>(item:<a href="../../Object.html">Object</a>):<a href="../../int.html">int</a>
+</div>
+<div class="summaryTableDescription">
+         Returns the index of the specified item.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#hasEventListener()">hasEventListener</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether the EventDispatcher object has any listeners registered for a specific type 
+ of event.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#hasOwnProperty()">hasOwnProperty</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an object has a specified property defined.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#invalidate()">invalidate</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+         Invalidates all the data items that the DataProvider contains and dispatches a 
+         DataChangeEvent.INVALIDATE_ALL event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#invalidateItem()">invalidateItem</a>(item:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Invalidates the specified item.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#invalidateItemAt()">invalidateItemAt</a>(index:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Invalidates the item at the specified index.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#isPrototypeOf()">isPrototypeOf</a>(theClass:<a href="../../Object.html">Object</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether an instance of the Object class is in the prototype chain of the object specified 
+  as the parameter.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#merge()">merge</a>(newData:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Appends the specified data into the data that the data provider
+   contains and removes any duplicate items.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#propertyIsEnumerable()">propertyIsEnumerable</a>(name:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+  Indicates whether the specified property exists and is enumerable.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeAll()">removeAll</a>():<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+   Removes all items from the data provider and dispatches a DataChangeType.REMOVE_ALL
+         event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#removeEventListener()">removeEventListener</a>(type:<a href="../../String.html">String</a>, listener:<a href="../../Function.html">Function</a>, useCapture:<a href="../../Boolean.html">Boolean</a> = false):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+ Removes a listener from the EventDispatcher object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeItem()">removeItem</a>(item:<a href="../../Object.html">Object</a>):<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+   Removes the specified item from the data provider and dispatches a DataChangeType.REMOVE
+   event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeItemAt()">removeItemAt</a>(index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+   Removes the item at the specified index and dispatches a DataChangeType.REMOVE
+   event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#replaceItem()">replaceItem</a>(newItem:<a href="../../Object.html">Object</a>, oldItem:<a href="../../Object.html">Object</a>):<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+   Replaces an existing item with a new item and dispatches a DataChangeType.REPLACE
+   event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#replaceItemAt()">replaceItemAt</a>(newItem:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+    Replaces the item at the specified index and dispatches a DataChangeType.REPLACE
+    event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#setPropertyIsEnumerable()">setPropertyIsEnumerable</a>(name:<a href="../../String.html">String</a>, isEnum:<a href="../../Boolean.html">Boolean</a> = true):<a href="../../specialTypes.html#void">void</a>
+</div>
+<div class="summaryTableDescription">
+     Sets the availability of a dynamic property for loop operations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sort()">sort</a>(<a href="../../statements.html#..._(rest)_parameter">...</a> sortArgs):<a href="../../specialTypes.html#*">*</a>
+</div>
+<div class="summaryTableDescription">
+   Sorts the items that the data provider contains and dispatches a DataChangeType.SORT
+   event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sortOn()">sortOn</a>(fieldName:<a href="../../Object.html">Object</a>, options:<a href="../../Object.html">Object</a> = null):<a href="../../specialTypes.html#*">*</a>
+</div>
+<div class="summaryTableDescription">
+   Sorts the items that the data provider contains by the specified 
+   field and dispatches a DataChangeType.SORT event.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toArray()">toArray</a>():<a href="../../Array.html">Array</a>
+</div>
+<div class="summaryTableDescription">
+   Creates an Array object representation of the data that the data provider contains.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():<a href="../../String.html">String</a>
+</div>
+<div class="summaryTableDescription">
+   Creates a string representation of the data that the data provider contains.</div>
+</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../Object.html#valueOf()">valueOf</a>():<a href="../../Object.html">Object</a>
+</div>
+<div class="summaryTableDescription">
+  Returns the primitive value of the specified object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../Object.html">Object</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#willTrigger()">willTrigger</a>(type:<a href="../../String.html">String</a>):<a href="../../Boolean.html">Boolean</a>
+</div>
+<div class="summaryTableDescription">
+ Checks whether an event listener is registered with this EventDispatcher object or any of 
+ its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<div class="showHideLinks">
+<div class="hideInheritedEvent" id="hideInheritedEvent">
+<a onclick="javascript:setInheritedVisible(false,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Events</a>
+</div>
+<div class="showInheritedEvent" id="showInheritedEvent">
+<a onclick="javascript:setInheritedVisible(true,'Event');" href="#eventSummary" class="showHideLink"><img src="../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Events</a>
+</div>
+</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:activate">activate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application gains operating system focus and becomes active.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:dataChange">dataChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched after the data is changed.</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+<tr class="hideInheritedEvent">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../../flash/events/EventDispatcher.html#event:deactivate">deactivate</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched when Flash Player or an AIR application loses operating system focus and is becoming inactive.</td><td class="summaryTableOwnerCol"><a href="../../flash/events/EventDispatcher.html">EventDispatcher</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:preDataChange">preDataChange</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">Dispatched before the data is changed.</td><td class="summaryTableOwnerCol">DataProvider</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+
+										showHideInherited();
+
+										--></script>
+<div class="MainContent">
+<div class="detailSectionHeader">Property Detail</div>
+<a name="propertyDetail"></a><a name="length"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">length</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>length:<a href="../../uint.html">uint</a></code>&nbsp;&nbsp;[read-only] <p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         The number of items that the data provider contains.
+                  </p><br>
+<span class="label"> Implementation </span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get length():<a href="../../uint.html">uint</a></code>
+<br>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a List component instance and resizes the list to match the number of items in its data provider:
+<div class="listing"><pre>
+
+import fl.controls.List;
+import fl.data.DataProvider;
+
+var dp:DataProvider = new DataProvider();
+dp.addItem({label:"Item 1"});
+dp.addItem({label:"Item 2"});
+dp.addItem({label:"Item 3"});
+dp.addItem({label:"Item 4"});
+
+var myList:List = new List();
+myList.dataProvider = dp;
+myList.rowHeight = 35;
+myList.rowCount = dp.length;
+myList.move(10, 10);
+addChild(myList);
+</pre></div></div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor Detail</div>
+<a name="DataProvider()"></a><a name="DataProvider(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DataProvider</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">Constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function DataProvider(value:<a href="../../Object.html">Object</a> = null)</code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a new DataProvider object using a list, XML instance or an array of data objects
+   as the data source. 
+   
+         </p><span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; The data that is used to create the DataProvider.
+                  </td>
+</tr>
+</table>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new data provider using the <code>addItem()</code> method:
+<div class="listing"><pre>
+
+import fl.controls.ComboBox;
+import fl.data.DataProvider;
+ 
+var dp:DataProvider = new DataProvider();
+dp.addItem({label:"item 1a"});
+dp.addItem({label:"item 2a"});
+
+var myComboBox:ComboBox = new ComboBox()
+myComboBox.dataProvider = dp;
+myComboBox.move(10, 10);
+addChild(myComboBox);
+</pre></div></div>
+<br>
+<div class="detailBody"> The following example populates a data provider using an Array object:
+<div class="listing"><pre>
+
+import fl.controls.ComboBox;
+import fl.data.DataProvider;
+
+var arr:Array = new Array();
+arr.push({label:"item 1b"});
+arr.push({label:"item 2b"});
+
+var dp:DataProvider = new DataProvider(arr);
+
+var myComboBox:ComboBox = new ComboBox()
+myComboBox.dataProvider = dp;
+myComboBox.move(10, 10);
+addChild(myComboBox);
+</pre></div></div>
+<br>
+<div class="detailBody"> The following example populates a data provider using an XML object with attributes:
+<div class="listing"><pre>
+
+import fl.controls.ComboBox;
+import fl.data.DataProvider;
+
+var xml:XML = &lt;items&gt;
+        &lt;item label="item 1c" /&gt;
+        &lt;item label="item 2c" /&gt;
+    &lt;/items&gt;;
+
+var dp:DataProvider = new DataProvider(xml);
+
+var myComboBox:ComboBox = new ComboBox()
+myComboBox.dataProvider = dp;
+myComboBox.move(10, 10);
+addChild(myComboBox);
+</pre></div></div>
+<br>
+<div class="detailBody"> The following example populates a data provider using an XML object with child nodes:
+<div class="listing"><pre>
+
+import fl.controls.ComboBox;
+import fl.data.DataProvider;
+
+var xml:XML = &lt;items&gt;
+        &lt;item&gt;
+            &lt;label&gt;item 1d&lt;/label&gt;
+        &lt;/item&gt;
+        &lt;item&gt;
+            &lt;label&gt;item 2d&lt;/label&gt;
+        &lt;/item&gt;
+    &lt;/items&gt;;
+
+var dp:DataProvider = new DataProvider(xml);
+
+var myComboBox:ComboBox = new ComboBox()
+myComboBox.dataProvider = dp;
+myComboBox.move(10, 10);
+addChild(myComboBox);
+</pre></div></div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method Detail</div>
+<a name="addItem()"></a><a name="addItem(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addItem(item:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Appends an item to the end of the data provider.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../../Object.html">Object</a></code> &mdash; The item to be appended to the end of the current data provider.
+                  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#addItemAt()" target="">addItemAt()</a>
+<br>
+<a href="DataProvider.html#addItems()" target="">addItems()</a>
+<br>
+<a href="DataProvider.html#addItemsAt()" target="">addItemsAt()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example creates a new data provider using the <code>addItem()</code> method:
+<div class="listing"><pre>
+
+import fl.controls.ComboBox;
+import fl.data.DataProvider;
+ 
+var dp:DataProvider = new DataProvider();
+dp.addItem({label:"item 1a"});
+dp.addItem({label:"item 2a"});
+
+var myComboBox:ComboBox = new ComboBox()
+myComboBox.dataProvider = dp;
+myComboBox.move(10, 10);
+addChild(myComboBox);
+</pre></div>
+</div>
+</div>
+<a name="addItemAt()"></a><a name="addItemAt(Object,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItemAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addItemAt(item:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Adds a new item to the data provider at the specified index.
+   If the index that is specified exceeds the length of the data provider,
+   the index is ignored.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../../Object.html">Object</a></code> &mdash; An object that contains the data for the item to be added.
+            </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../uint.html">uint</a></code> &mdash;  The index at which the item is to be added.
+                  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than or equal 
+           to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#addItem()" target="">addItem()</a>
+<br>
+<a href="DataProvider.html#addItems()" target="">addItems()</a>
+<br>
+<a href="DataProvider.html#addItemsAt()" target="">addItemsAt()</a>
+<br>
+<a href="DataProvider.html#getItemAt()" target="">getItemAt()</a>
+<br>
+<a href="DataProvider.html#removeItemAt()" target="">removeItemAt()</a>
+</div>
+</div>
+<a name="addItems()"></a><a name="addItems(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItems</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addItems(items:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Appends multiple items to the end of the DataProvider and dispatches
+   a <code>DataChangeType.ADD</code> event. The items are added in the order 
+   in which they are specified.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">items</span>:<a href="../../Object.html">Object</a></code> &mdash; The items to be appended to the data provider.
+                  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#addItem()" target="">addItem()</a>
+<br>
+<a href="DataProvider.html#addItemAt()" target="">addItemAt()</a>
+<br>
+<a href="DataProvider.html#addItemsAt()" target="">addItemsAt()</a>
+</div>
+<br>
+<span class="label"> Example </span>
+<br>
+<br>
+<div class="detailBody"> The following example uses the <code>addItems()</code> method to add several items to the data provider:
+<div class="listing"><pre>
+
+import fl.controls.DataGrid;
+import fl.controls.dataGridClasses.DataGridColumn;
+import fl.data.DataProvider;
+
+var arr:Array = [{col1:"1.A", col2:"1.B"}, {col1:"2.A", col2:"2.B"}]
+
+var dp:DataProvider = new DataProvider();
+dp.addItems(arr);
+trace(dp.length); // 2
+
+var c1:DataGridColumn = new DataGridColumn("col1");
+var c2:DataGridColumn = new DataGridColumn("col2");
+
+var myDataGrid:DataGrid = new DataGrid();
+myDataGrid.addColumn(c1);
+myDataGrid.addColumn(c2);
+myDataGrid.dataProvider = dp;
+myDataGrid.setSize(200, 160);
+myDataGrid.move(10, 10);
+addChild(myDataGrid);
+</pre></div>
+</div>
+</div>
+<a name="addItemsAt()"></a><a name="addItemsAt(Object,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addItemsAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addItemsAt(items:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Adds several items to the data provider at the specified index and dispatches
+   a <code>DataChangeType.ADD</code> event.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">items</span>:<a href="../../Object.html">Object</a></code> &mdash; The items to be added to the data provider.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../uint.html">uint</a></code> &mdash; The index at which the items are to be inserted.
+                  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than or equal 
+                      to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#addItem()" target="">addItem()</a>
+<br>
+<a href="DataProvider.html#addItemAt()" target="">addItemAt()</a>
+<br>
+<a href="DataProvider.html#addItems()" target="">addItems()</a>
+</div>
+</div>
+<a name="clone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">clone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function clone():<a href="../../fl/data/DataProvider.html">DataProvider</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a copy of the current DataProvider object.
+            </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../fl/data/DataProvider.html">DataProvider</a></code> &mdash; A new instance of this DataProvider object.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="concat()"></a><a name="concat(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">concat</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function concat(items:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Concatenates the specified items to the end of the current data provider.
+         This method dispatches a <code>DataChangeType.ADD</code> event.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">items</span>:<a href="../../Object.html">Object</a></code> &mdash; The items to be added to the data provider.
+                  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#addItems()" target="">addItems()</a>
+<br>
+<a href="DataProvider.html#merge()" target="">merge()</a>
+</div>
+</div>
+<a name="getItemAt()"></a><a name="getItemAt(uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getItemAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getItemAt(index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Returns the item at the specified index.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../uint.html">uint</a></code> &mdash; Location of the item to be returned.
+      </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Object.html">Object</a></code> &mdash; The item at the specified index.
+                  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than 
+           or equal to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#getItemIndex()" target="">getItemIndex()</a>
+<br>
+<a href="DataProvider.html#removeItemAt()" target="">removeItemAt()</a>
+</div>
+</div>
+<a name="getItemIndex()"></a><a name="getItemIndex(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getItemIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getItemIndex(item:<a href="../../Object.html">Object</a>):<a href="../../int.html">int</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Returns the index of the specified item.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../../Object.html">Object</a></code> &mdash; The item to be located.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../int.html">int</a></code> &mdash; The index of the specified item, or -1 if the specified item is not found.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#getItemAt()" target="">getItemAt()</a>
+</div>
+</div>
+<a name="invalidate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">invalidate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function invalidate():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+         Invalidates all the data items that the DataProvider contains and dispatches a 
+         <code>DataChangeEvent.INVALIDATE_ALL</code> event. Items are invalidated after they
+   are changed; the DataProvider automatically redraws the invalidated items. 
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#invalidateItem()" target="">invalidateItem()</a>
+<br>
+<a href="DataProvider.html#invalidateItemAt()" target="">invalidateItemAt()</a>
+</div>
+</div>
+<a name="invalidateItem()"></a><a name="invalidateItem(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">invalidateItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function invalidateItem(item:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Invalidates the specified item. An item is invalidated after it is
+   changed; the DataProvider automatically redraws the invalidated item. 
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../../Object.html">Object</a></code> &mdash; Item to be invalidated.
+                  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#invalidate()" target="">invalidate()</a>
+<br>
+<a href="DataProvider.html#invalidateItemAt()" target="">invalidateItemAt()</a>
+</div>
+</div>
+<a name="invalidateItemAt()"></a><a name="invalidateItemAt(int)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">invalidateItemAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function invalidateItemAt(index:<a href="../../int.html">int</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Invalidates the item at the specified index. An item is invalidated after it is
+   changed; the DataProvider automatically redraws the invalidated item. 
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../int.html">int</a></code> &mdash; Index of the item to be invalidated.
+                  </td>
+</tr>
+</table>
+</p>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than 
+                 or equal to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#invalidate()" target="">invalidate()</a>
+<br>
+<a href="DataProvider.html#invalidateItem()" target="">invalidateItem()</a>
+</div>
+</div>
+<a name="merge()"></a><a name="merge(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">merge</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function merge(newData:<a href="../../Object.html">Object</a>):<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Appends the specified data into the data that the data provider
+   contains and removes any duplicate items. This method dispatches
+   a <code>DataChangeType.ADD</code> event.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newData</span>:<a href="../../Object.html">Object</a></code> &mdash; Data to be merged into the data provider.
+                  </td>
+</tr>
+</table>
+</p>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#concat()" target="">concat()</a>
+</div>
+</div>
+<a name="removeAll()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeAll():<a href="../../specialTypes.html#void">void</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Removes all items from the data provider and dispatches a <code>DataChangeType.REMOVE_ALL</code>
+         event.
+                  </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#removeItem()" target="">removeItem()</a>
+<br>
+<a href="DataProvider.html#removeItemAt()" target="">removeItemAt()</a>
+</div>
+</div>
+<a name="removeItem()"></a><a name="removeItem(Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeItem(item:<a href="../../Object.html">Object</a>):<a href="../../Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Removes the specified item from the data provider and dispatches a <code>DataChangeType.REMOVE</code>
+   event.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">item</span>:<a href="../../Object.html">Object</a></code> &mdash; Item to be removed.
+                  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Object.html">Object</a></code> &mdash; The item that was removed.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#removeAll()" target="">removeAll()</a>
+<br>
+<a href="DataProvider.html#removeItemAt()" target="">removeItemAt()</a>
+</div>
+</div>
+<a name="removeItemAt()"></a><a name="removeItemAt(uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeItemAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeItemAt(index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Removes the item at the specified index and dispatches a <code>DataChangeType.REMOVE</code>
+   event.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../uint.html">uint</a></code> &mdash; Index of the item to be removed.
+                  </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Object.html">Object</a></code> &mdash; The item that was removed.
+                  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than
+                 or equal to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#removeAll()" target="">removeAll()</a>
+<br>
+<a href="DataProvider.html#removeItem()" target="">removeItem()</a>
+</div>
+</div>
+<a name="replaceItem()"></a><a name="replaceItem(Object,Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">replaceItem</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function replaceItem(newItem:<a href="../../Object.html">Object</a>, oldItem:<a href="../../Object.html">Object</a>):<a href="../../Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Replaces an existing item with a new item and dispatches a <code>DataChangeType.REPLACE</code>
+   event.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newItem</span>:<a href="../../Object.html">Object</a></code> &mdash; The item to be replaced.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">oldItem</span>:<a href="../../Object.html">Object</a></code> &mdash; The replacement item.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Object.html">Object</a></code> &mdash; The item that was replaced.
+                  </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The item could not be found in the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#replaceItemAt()" target="">replaceItemAt()</a>
+</div>
+</div>
+<a name="replaceItemAt()"></a><a name="replaceItemAt(Object,uint)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">replaceItemAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function replaceItemAt(newItem:<a href="../../Object.html">Object</a>, index:<a href="../../uint.html">uint</a>):<a href="../../Object.html">Object</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+    Replaces the item at the specified index and dispatches a <code>DataChangeType.REPLACE</code>
+    event.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newItem</span>:<a href="../../Object.html">Object</a></code> &mdash; The replacement item.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:<a href="../../uint.html">uint</a></code> &mdash; The index of the item to be replaced.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Object.html">Object</a></code> &mdash; The item that was replaced.
+         
+         </td>
+</tr>
+</table>
+<br>
+<span class="label">Throws</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../RangeError.html">RangeError</a> </code> &mdash; The specified index is less than 0 or greater than 
+                 or equal to the length of the data provider.
+                  </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#replaceItem()" target="">replaceItem()</a>
+</div>
+</div>
+<a name="sort()"></a><a name="sort(restParam)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sort</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sort(<a href="../../statements.html#..._(rest)_parameter">...</a> sortArgs):<a href="../../specialTypes.html#*">*</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Sorts the items that the data provider contains and dispatches a <code>DataChangeType.SORT</code>
+   event.
+            </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><a href="../../statements.html#..._(rest)_parameter">...</a> <span class="label">sortArgs</span></code> &mdash; The arguments to use for sorting.
+            </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; The return value depends on whether the method receives any arguments.  
+                 See the <code>Array.sort()</code> method for more information. 
+                 This method returns 0 when the <code>sortOption</code> property 
+                 is set to <code>Array.UNIQUESORT</code>.
+            </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#sortOn()" target="">sortOn()</a>
+<br>
+<a href="../../Array.html#sort()" target="">Array.sort()</a>
+</div>
+</div>
+<a name="sortOn()"></a><a name="sortOn(Object,Object)"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sortOn</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function sortOn(fieldName:<a href="../../Object.html">Object</a>, options:<a href="../../Object.html">Object</a> = null):<a href="../../specialTypes.html#*">*</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Sorts the items that the data provider contains by the specified 
+   field and dispatches a <code>DataChangeType.SORT</code> event.
+   The specified field can be a string, or an array of string values that
+   designate multiple fields to sort on in order of precedence.
+      </p><p>
+<span class="label"> Parameters </span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fieldName</span>:<a href="../../Object.html">Object</a></code> &mdash; The item field by which to sort. This value can be a string 
+                    or an array of string values.
+      </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">options</span>:<a href="../../Object.html">Object</a></code> (default = <code>null</code>)<code></code> &mdash; Options for sorting.
+      </td>
+</tr>
+</table>
+</p>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../specialTypes.html#*">*</a></code> &mdash; The return value depends on whether the method receives any arguments. 
+           For more information, see the <code>Array.sortOn()</code> method. 
+           If the <code>sortOption</code> property is set to <code>Array.UNIQUESORT</code>,
+           this method returns 0. 
+            </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#sort()" target="">sort()</a>
+<br>
+<a href="../../Array.html#sortOn()" target="">Array.sortOn()</a>
+</div>
+</div>
+<a name="toArray()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toArray</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toArray():<a href="../../Array.html">Array</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates an Array object representation of the data that the data provider contains.
+            </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../Array.html">Array</a></code> &mdash; An Array object representation of the data that the data provider contains.
+                  </td>
+</tr>
+</table>
+</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function toString():<a href="../../String.html">String</a></code>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+   Creates a string representation of the data that the data provider contains.
+            </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../../String.html">String</a></code> &mdash; A string representation of the data that the data provider contains.
+                  </td>
+</tr>
+</table>
+</div>
+<div class="detailSectionHeader"> Event Detail </div>
+<a name="event:dataChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dataChange</td><td class="detailHeaderType"> Event </td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/events/DataChangeEvent.html"><code>fl.events.DataChangeEvent</code></a>
+<br>
+<span class="label">DataChangeEvent.type property = </span><a href="../../fl/events/DataChangeEvent.html#DATA_CHANGE"><code>fl.events.DataChangeEvent.DATA_CHANGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched after the data is changed.
+          </p>
+         Defines the value of the <code>type</code> property of a <code>dataChange</code>
+   event object. 
+      <p>This event has the following properties:</p>
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>changeType</code></td><td>Identifies the type of change that was made.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing 
+      the event object with an event listener.</td>
+</tr>
+<tr>
+<td><code>endIndex</code></td><td>Identifies the index of the last changed item.</td>
+</tr>
+<tr>
+<td><code>items</code></td><td>An array that lists the items that were changed.</td>
+</tr>
+<tr>
+<td><code>startIndex</code></td><td>Identifies the index of the first changed item.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event. The target is 
+                   not always the object listening for the event. Use the <code>currentTarget</code>
+      property to access the object that is listening for the event.</td>
+</tr></table>
+                  <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#event:preDataChange" target="">preDataChange event</a>
+</div>
+</div>
+<a name="event:preDataChange"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">preDataChange</td><td class="detailHeaderType"> Event </td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event Object Type: </span><a href="../../fl/events/DataChangeEvent.html"><code>fl.events.DataChangeEvent</code></a>
+<br>
+<span class="label">DataChangeEvent.type property = </span><a href="../../fl/events/DataChangeEvent.html#PRE_DATA_CHANGE"><code>fl.events.DataChangeEvent.PRE_DATA_CHANGE</code></a>
+<br>
+<p></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Language Version :&nbsp;</b></td><td>ActionScript 3.0</td>
+</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td valign="top" style="white-space:nowrap"><b> Player Version :&nbsp;</b></td><td>Flash Player 9.0.28.0</td>
+</tr>
+</table>
+<p></p>
+<p></p><p>
+  Dispatched before the data is changed.
+       </p>
+   Defines the value of the <code>type</code> property of a <code>preDataChange</code>
+   event object. This event object is dispatched before a change is made to component data.
+      <p>This event has the following properties:</p>
+    <table class="innertable" ><tr>
+<th>Property</th><th>Value</th>
+</tr>
+<tr>
+<td><code>bubbles</code></td><td><code>false</code></td>
+</tr>
+<tr>
+<td><code>cancelable</code></td><td><code>false</code>; there is no default behavior to cancel.</td>
+</tr>
+<tr>
+<td><code>changeType</code></td><td>Identifies the type of change to be made.</td>
+</tr>
+<tr>
+<td><code>currentTarget</code></td><td>The object that is actively processing 
+      the event object with an event listener.</td>
+</tr>
+<tr>
+<td><code>endIndex</code></td><td>Identifies the index of the last item to be
+      changed.</td>
+</tr>
+<tr>
+<td><code>items</code></td><td>An array that lists the items to be changed.</td>
+</tr>
+<tr>
+<td><code>startIndex</code></td><td>Identifies the index of the first item to be
+           changed.</td>
+</tr>
+<tr>
+<td><code>target</code></td><td>The object that dispatched the event. The target is 
+                  not always the object listening for the event. Use the <code>currentTarget</code>
+      property to access the object that is listening for the event.</td>
+</tr></table>
+   
+         <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="DataProvider.html#event:dataChange" target="">dataChange event</a>
+</div>
+</div>
+<a name="includeExamplesSummary"></a>
+<div class="detailSectionHeader">Examples<span class="usage"><a href="../../ExampleInstruct.html"> How to use examples </a></span>
+</div>
+<div class="exampleHeader">DataProviderExample.as</div>
+<br>
+<div class="detailBody"> This example demonstrates how data providers can be used to maintain the contents of several data grids.
+  <p>To run the example, follow these steps:</p>
+
+    <ol>
+		<li>Add the Label, Button, ComboBox, TextInput, and DataGrid components to the library.</li>
+		<li>Save this code as DataProviderExample.as in the same directory as your FLA file.</li>
+		<li>Set the Document class in the FLA file to DataProviderExample.</li>
+	</ol>
+<div class="listing"><pre>
+package
+{
+    import fl.controls.Button;
+    import fl.controls.ComboBox;
+    import fl.controls.DataGrid;
+    import fl.controls.Label;
+    import fl.controls.TextInput;
+    import fl.data.DataProvider;
+    import flash.display.Sprite;
+    import flash.events.*;
+    import flash.text.TextFieldAutoSize;
+    
+    public class DataProviderExample extends Sprite
+    {        
+        private var southern:DataGrid;
+        private var northern:DataGrid;
+        private var world:DataGrid;
+        private var southernRoster:DataProvider;
+        private var northernRoster:DataProvider;
+        private var leagueCB:ComboBox;
+        private var nameTI:TextInput;
+        private var goalsTI:TextInput;
+        private var submitBtn:Button;
+
+        public function DataProviderExample() {
+            southernRoster = new DataProvider();
+            northernRoster = new DataProvider();
+            
+            createDataGrids();
+            createUI();
+        }
+
+        private function createUI():void {
+            var description:Label = new Label();
+            description.text = "Enter player's name, goals scored, and hemisphere of origin:";
+            description.autoSize = TextFieldAutoSize.LEFT;
+            nameTI = new TextInput();
+            goalsTI = new TextInput();
+            
+            var submitBtn:Button = new Button();
+            submitBtn.label = "Submit Player";
+            submitBtn.addEventListener(MouseEvent.CLICK, submitPlayer);
+            
+            leagueCB = new ComboBox();
+            leagueCB.addItem( { label:"Northern", data: 0 } );
+            leagueCB.addItem( { label:"Southern", data: 1 } );
+            
+            description.move(10,10);
+            nameTI.move(10,40);
+            nameTI.setSize(150,24);
+            goalsTI.move(170,40);
+            goalsTI.setSize(40,24);
+            leagueCB.move(220,40);
+            leagueCB.setSize(120,24);
+            submitBtn.move(350,40);
+            goalsTI.restrict = "0123456789";
+            
+            addChild(description);
+            addChild(leagueCB);
+            addChild(submitBtn);
+            addChild(nameTI);
+            addChild(goalsTI);
+        }
+        private function submitPlayer(e:MouseEvent):void {
+            if(nameTI.text != "" &amp;&amp; goalsTI.text != "") {
+                var targetRoster:DataProvider;
+
+                if(leagueCB.selectedItem.label == "Southern") {
+                    targetRoster = southernRoster;
+                }
+                else {
+                    targetRoster = northernRoster;
+                }
+    
+                targetRoster.addItem( { Name: nameTI.text, Goals: goalsTI.text } );
+                
+                var worldRoster:DataProvider = southernRoster.clone();
+                worldRoster.merge(northernRoster);
+                worldRoster.sortOn("Goals", Array.NUMERIC | Array.DESCENDING);
+                southernRoster.sortOn("Goals", Array.NUMERIC | Array.DESCENDING);
+                northernRoster.sortOn("Goals", Array.NUMERIC | Array.DESCENDING);
+                
+                world.dataProvider = worldRoster;
+                
+                nameTI.text = "";
+                goalsTI.text = "";
+            }
+        }        
+
+        private function createDataGrids():void {
+            southern = new DataGrid();
+            northern = new DataGrid();
+            world = new DataGrid();
+            southern.move(10,100);
+            northern.move(180,100);
+            world.move(350,100);
+            southern.setSize(170, 250);
+            northern.setSize(170, 250);
+            world.setSize(170, 250);
+            southern.columns = 
+            northern.columns = 
+            world.columns = [ "Name", "Goals" ];
+            southern.dataProvider = southernRoster;
+            northern.dataProvider = northernRoster;            
+            addChild(southern);
+            addChild(northern);
+            addChild(world);
+
+            var northernLabel:Label = new Label();
+            northernLabel.autoSize = TextFieldAutoSize.LEFT;
+            northernLabel.text = "Southern Hemisphere";
+            northernLabel.move(10,75);
+            addChild(northernLabel);
+            var southernLabel:Label = new Label();
+            southernLabel.autoSize = TextFieldAutoSize.LEFT;
+            southernLabel.text = "Northern Hemisphere";
+            southernLabel.move(180,75);
+            addChild(southernLabel);
+            var majorLabel:Label = new Label();
+            majorLabel.autoSize = TextFieldAutoSize.LEFT;
+            majorLabel.text = "World";
+            majorLabel.move(350,75);
+            addChild(majorLabel);
+        }
+    }
+}</pre></div><script type="text/javascript" language="javascript">
+<!--
+
+				AC_FL_RunContent(
+
+					"src", "examples/DataProviderExample",
+
+					"width", "100%",
+
+					"height", "400px",
+
+					"salign", "TL",
+
+					"id", "example1",
+
+					"quality", "high",
+
+					"bgcolor", "",
+
+					"name", "example1",
+
+					"flashvars","",
+
+					"allowScriptAccess","sameDomain",
+
+					"type", "application/x-shockwave-flash",
+
+					"pluginspage", "http://www.macromedia.com/go/getflashplayer"
+
+				);
+
+			--></script>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 12:59 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 12:59 PM GMT-07:00 -->

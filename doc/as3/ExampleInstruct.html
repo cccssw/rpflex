@@ -1,0 +1,72 @@
+<!--livedocs:no-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="print.css" type="text/css" media="print">
+<title>Using examples in the ActionScript 3.0 Language and Components Reference (ActionScript 3.0)</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="asdoc.js"></script><script type="text/javascript" language="javascript" src="cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+
+				asdocTitle = 'Using examples in the ActionScript 3.0 Language and Components Reference - ActionScript 3.0 Language and Components Reference';
+
+				var baseRef = '';
+
+				window.onload = configPage;
+
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">ActionScript 3.0 Language and Components Reference</td><td align="center" class="titleTableSearch">
+<form onsubmit="this.term.value = this.termPrefix.value + &quot;\&quot;&quot; + this.search_text.value + &quot;\&quot;&quot;;" action="" method="get" target="adbe_window" class="searchForm">
+<input type="hidden" value="" name="loc" class="hidden"><input type="hidden" value="" name="termPrefix" class="hidden"><input type="hidden" value="" name="term" class="hidden"><input type="hidden" value="" name="area" class="hidden"><input type="text" title="" value="" name="search_text" id="search-livedocs"> <input value="Search" name="action" type="submit">
+</form>
+</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('all-classes.html')" href="package-summary.html">All Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('all-classes.html')" href="class-summary.html">All Classes</a>&nbsp;|&nbsp;<a href="language-elements.html">Language Elements</a>&nbsp;| <a onclick="loadClassListFrame('index-list.html')" href="all-index-Symbols.html">Index</a>
+<br>&nbsp;|&nbsp;<a href="appendixes.html">Appendixes</a>&nbsp;|&nbsp;<a href="conventions.html">Conventions</a>&nbsp;|&nbsp;<a href="index.html?ExampleInstruct.html&amp;all-classes.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1"> No Frames </a></td><td rowspan="3" align="right" class="titleTableLogo"><img class="logoImage" src="images/logo.jpg" alt=" Adobe Logo " title=" Adobe Logo "></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">  </td><td align="right" id="subNav" class="titleTableSubNav" colspan="2"></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="3">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("  "); titleBar_setSubNav(false,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+
+--></script>
+<div class="MainContent">
+		<div style="height:15px;" width="100%"></div>
+		<p>The ActionScript 3.0 Language and Components Reference supports several Adobe products, including Flash CS3 and Flex 2. The content covers application programming interfaces (APIs) that are specific to ActionScript and that may be implemented differently depending on the authoring tool you are using. Therefore, to test and use the example code in the ActionScript 3.0 Language and Components Reference, you need to know the implementation for the authoring tool you are using. For example, the ActionScript 3.0 Language and Components Reference contains some examples that use a class structure (such as the flash.ui.ContextMenu class example) and other examples that do not (such as the flash.display.DisplayObjectContainer.mouseChildren property example). Flex Builder users can test the ContextMenu class example by pasting it directly into an ActionScript Project. (For MXML-based projects the class structure examples often need some additional Flex-specific code.) Flash authoring users need to paste that content into a class file to test it. The directions for each authoring tool are as follows:</p>
+        
+        <p><strong>Flash CS3 instructions</strong></p>
+        
+        <p>You can paste the examples that do not use a class structure into the Actions panel for the first layer of the first frame of the main timeline and test them using the Control &gt; Test Movie menu option. For the examples that use a class structure, follow these steps:</p>
+        <ol><li>Paste the class example code into a new AS file and give the file the same name as the primary class (for example: ContextMenuExample.as).</li>
+        <li>Create and save a new empty FLA file in the same directory as the AS file.</li>
+        <li>In the Properties tab of the Property inspector enter the class name of the primary class for the example in the Document class text box (for example: ContextMenuExample).</li>
+        <li>Save your changes to the FLA file.</li>
+        <li>Test the movie using the Control &gt; Test Movie menu option.</li></ol>
+        
+        <p><strong>Flex Builder instructions</strong></p>
+        
+        <p>You can paste examples that do not use a class structure into the <code>mx:Script</code> tag contents of your MXML application. The simplest way to test the examples that use a class structure is to paste them into an ActionScript Project as follows:</p>
+        <ol><li>Select the File &gt; New &gt; ActionScript Project menu option.</li>
+        <li>For the Project Name, provide the name of the primary class (for example: ContextMenuExample).</li>
+        <li>Flex Builder creates an ActionScript file based on the ActionScript Project template. Erase any default template content in the file.</li>
+        <li>Paste the entire example, including package and import statements into the ActionScript file.</li>
+        <li>Test the example using either the Run or Debug command.</li></ol>
+        <p><strong>Note:</strong> If you test ActionScript examples that use the <code>addChild()</code> ActionScript method with Flash Player display objects (like a text field) within an MXML application, you will need to attach the code to a Flex UIComponent instead of adding the Flash Player display object.</p> 
+		<div style="height:20px;" width="100%"></div>
+    <center class="copyright"> &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. <br>Tue Mar 18 2008, 1:10 PM GMT-07:00 </center>
+</div>
+</body>
+</html>
+<!-- &copy; 2004-2007 Adobe Systems Incorporated. All rights reserved. Tue Mar 18 2008, 1:10 PM GMT-07:00 -->

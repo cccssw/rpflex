@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:controls="com.loning.image.controls.*"
+		xmlns:image="com.loning.image.*"
+		creationComplete="creationCompleteHandler(event)" dataChange="dataChangeHandler(event)"
+		overlayControls="true" title="{resourceManager.getString('view','faceRectangleViewTitle')}">
+	
+	<fx:Script>
+		<![CDATA[
+			import com.loning.image.FaceDetector;
+			
+			import mx.events.FlexEvent;
+			private var detector:FaceDetector;
+			protected function nextButton_clickHandler(event:MouseEvent):void
+			{
+				this.data.rectangles = this.faceRectangleImage.rectangles;
+				this.navigator.pushView(
+					FaceProcessView,this.data);
+			}
+			
+			protected function creationCompleteHandler(event:FlexEvent):void
+			{
+				this.faceRectangleImage.source=data.bitmapData;
+				this.faceRectangleImage.rectangles=data.rectangles;
+			}
+			
+			protected function dataChangeHandler(event:FlexEvent):void
+			{
+				if(data.rectangles==null){
+					if(detector==null)
+						detector=new FaceDetector();
+					trace("detector face");
+					if(detector.detect(data.bitmapData)){
+						data.rectangles=detector.rects;
+					}
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<s:layout>
+		<s:BasicLayout>
+			
+		</s:BasicLayout>
+	</s:layout>
+	<s:actionContent>
+		<s:Button id="nextButton" label="{resourceManager.getString('view','next')}" click="nextButton_clickHandler(event)" styleName="" />
+		
+	</s:actionContent>
+	<s:Image scaleMode="stretch" smooth="false" source="@Embed('assets/ui/rpphoto_bg.png')" width="100%" height="100%"/>
+	<s:VGroup width="100%" height="90%" verticalAlign="middle" horizontalAlign="center">
+		<s:HGroup width="80%" horizontalAlign="right">
+			<s:Image source="@Embed('assets/ui/Helpnotice.png')"/>
+		</s:HGroup>
+		
+		<controls:FaceRectangleImage id="faceRectangleImage" width="96%" height="{this.width*0.75}">
+		</controls:FaceRectangleImage>
+	</s:VGroup>
+</s:View>

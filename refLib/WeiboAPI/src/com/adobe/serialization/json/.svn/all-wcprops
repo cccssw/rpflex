@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json
+END
+JSONParseError.as
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONParseError.as
+END
+JSONDecoder.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONDecoder.as
+END
+JSONTokenizer.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONTokenizer.as
+END
+JSONEncoder.as
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONEncoder.as
+END
+JSON.as
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSON.as
+END
+JSONToken.as
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONToken.as
+END
+JSONTokenType.as
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/src/com/adobe/serialization/json/JSONTokenType.as
+END
